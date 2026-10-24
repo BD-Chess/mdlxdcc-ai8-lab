@@ -1,0 +1,33 @@
+{
+  "schema_version": "8z-control.v0.1",
+  "title": "BD Arena Morning Delta",
+  "generated_at": "2026-09-13T08:59:34+02:00",
+  "previous_successful_refresh": "2026-09-12T22:39:43+02:00",
+  "source_boundary": "CHATGPT PROJECT CHATS ONLY; PROJECT FILES MAY CORROBORATE",
+  "mode": "DAILY_PROJECT_CHAT_REFRESH",
+  "message": "Two material arena-state changes since previous refresh: legacy Materials A3 completed; AI8 Wake Lab entered the register as a BUILD workstream.",
+  "changes": [
+    {
+      "timestamp": "2026-09-13T08:59:34+02:00",
+      "arena_id": "materials-a3-legacy",
+      "old_status": "RUNNING",
+      "new_status": "DONE",
+      "old_value": "Near end of 72h budget at 1,662 epochs / 3,324 candidates",
+      "new_value": "BD confirmed the legacy arena finished and released its two CPU workers",
+      "evidence": "Direct project-chat completion confirmation",
+      "source_project_chat": "8zMaterials v0.2.0",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-13T08:59:34+02:00",
+      "arena_id": "ai8-wake-lab-v01",
+      "old_status": null,
+      "new_status": "BUILD",
+      "old_value": null,
+      "new_value": "R8 architecture ACCEPT; exact R6 TRI-MODE builder mandate assigned; runtime acceptance not yet verified",
+      "evidence": "Direct project-chat architecture review and builder assignment",
+      "source_project_chat": "AI8 Wake Lab — R6 TRI-MODE BUILDER",
+      "confidence": "HIGH"
+    }
+  ]
+}

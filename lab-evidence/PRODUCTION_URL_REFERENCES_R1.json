@@ -1,0 +1,2487 @@
+[
+  {
+    "path": "APSV.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "docs/RESULT_FROM_GPT_WORK_20261021_ANDALUZIJA_CORRECTIONS_R1.json",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "docs/RESULT_FROM_GPT_WORK_20261021_ANDALUZIJA_ROADS_R1.json",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "docs/omnicpq-pwa/README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "docs/sudoku-play-learn-phase-a-20260928.md",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "functions/bd-o-medication-clock.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "functions/chess-gemini.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "functions/chess-lab-gemini.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "functions/gemini.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "functions/lib/dualframe/service.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1,
+      "https://www.mdlxdcc.org": 1,
+      "https://mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "functions/lib/mdlxdcc-guide/runtime.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2,
+      "https://mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/8Z/8Z_compression.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/8Z/8zip.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/8Z/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/8ZT/BD_8Z_Trading_Book.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/8ZT/index.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/8zMaterials.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/8zS/index-o.html",
+    "references": {
+      "https://remarkable-sopapillas-d3e79a.netlify.app": 2
+    }
+  },
+  {
+    "path": "public/AI8/AI8_ArenaLoop.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/AI8/AI8_Arena_Foundry.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/AI8/ai8_map.json",
+    "references": {
+      "https://www.mdlxdcc.org": 24
+    }
+  },
+  {
+    "path": "public/AI8/api-check-core.js",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/AI8/api-check.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/AI8/arenaloop_public_status.json",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/AI8/arenaloop_public_status.schema.json",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/AI8/arenaloop_releases.json",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/AI8/browser-loops.html",
+    "references": {
+      "https://bd-chess.github.io": 8
+    }
+  },
+  {
+    "path": "public/AI8/cli-loops.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/AI8/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/AI8/knowledge.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/Art/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD-work-at-a-glance.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/8z_shield_landing.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/AC.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/AC_AA.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/AI8_Architecture.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/AI8_Reasoning.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/AI_storm_feedback_1.md",
+    "references": {
+      "https://chessbest.org": 7
+    }
+  },
+  {
+    "path": "public/BD/AI_storm_feedback_2.md",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9,
+      "https://chessbest.org": 13
+    }
+  },
+  {
+    "path": "public/BD/BDR.html",
+    "references": {
+      "https://www.mdlxdcc.org": 5
+    }
+  },
+  {
+    "path": "public/BD/BD_8ZRP.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_8ZRP_nu3496_status.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_8ZRP_v1_0.html",
+    "references": {
+      "https://chessbest.org": 3
+    }
+  },
+  {
+    "path": "public/BD/BD_8ZRP_v1_1.html",
+    "references": {
+      "https://chessbest.org": 3
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_AI_Storm_Challenge.html",
+    "references": {
+      "https://chessbest.org": 4
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_DCC7_Testbed.html",
+    "references": {
+      "https://chessbest.org": 17
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_DCC_Meta_Architecture.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_DCC_Recursive.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_Flip4M_DCC.html",
+    "references": {
+      "https://chessbest.org": 5
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_Reasoning.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_Resonance_Hybrid_Protocol.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_Trading_Book.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_ssMDL_DCC.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_8Z_ssMDL_DCC_Challenge.html",
+    "references": {
+      "https://chessbest.org": 6
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHP.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHP_Story.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHPm.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHPm_How_LLMs_Work_Case.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHPm_v1_6_1.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/BD/BD_AIM3_RHPr.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_CCH_Consciousness_Field.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_CCH_Foundations.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/BD/BD_CCH_Science.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/BD/BD_CFH_CSH_Speculative_Sandbox.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_Evaluation_Protocol.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/BD/BD_Idea_Atlas_AI_Reviews.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_Sudoku_Phase0.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_TSP_5_ARENAS.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_TSP_6_ARENAS.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_Trading_Hub.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_Trading_Research_Atlas.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio.html",
+    "references": {
+      "https://chessbest.org": 12
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio_NCI1.html",
+    "references": {
+      "https://chessbest.org": 15
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio_NCI2.html",
+    "references": {
+      "https://chessbest.org": 14
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio_NCI3.html",
+    "references": {
+      "https://chessbest.org": 14
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio_NCI4.html",
+    "references": {
+      "https://chessbest.org": 14
+    }
+  },
+  {
+    "path": "public/BD/BD_portfolio_OK.html",
+    "references": {
+      "https://chessbest.org": 13
+    }
+  },
+  {
+    "path": "public/BD/MDLxDCC.html",
+    "references": {
+      "https://chessbest.org": 7
+    }
+  },
+  {
+    "path": "public/BD/O/assets/impulz-hpc-ai/slaif-povzetek.html",
+    "references": {
+      "https://bd-chess.github.io": 11
+    }
+  },
+  {
+    "path": "public/BD/O/impulz-2026.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/BD/O/impulz-hpc-ai.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2,
+      "https://bd-chess.github.io": 12
+    }
+  },
+  {
+    "path": "public/BD/O/izleti/andaluzija-2027.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/BD/O/izleti/andaluzija-planner.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/BD/O/strategija-trg-trading.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/RHP_AUTO_v0_1_CANDIDATE.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/RHP_CLASSIC_v2_8_SOURCE.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/RouteSignal_Prompt_Method_Study.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9
+    }
+  },
+  {
+    "path": "public/BD/TSP_6_ARENAS_EVIDENCE_20260911.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/BD/Ukraine_Armed_Armistice.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/BD/Ukraine_Armed_Armistice_SLO.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/BD/Ukraine_Armed_Armistice_open.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/BD/bd.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9,
+      "https://chessbest.org": 13
+    }
+  },
+  {
+    "path": "public/BD/private-trading/BBSH.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/Birds/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 7
+    }
+  },
+  {
+    "path": "public/Birds/the-flying-salami.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/F4M/BD_8Z_Flip4M_DCC.html",
+    "references": {
+      "https://chessbest.org": 5
+    }
+  },
+  {
+    "path": "public/F4M/BD_8Z_Flip4M_DCC1.html",
+    "references": {
+      "https://chessbest.org": 5
+    }
+  },
+  {
+    "path": "public/F4M/BD_8Z_Flip4M_DCC2.html",
+    "references": {
+      "https://chessbest.org": 11
+    }
+  },
+  {
+    "path": "public/F4M/f4m/document.html",
+    "references": {
+      "https://chessbest.org": 11
+    }
+  },
+  {
+    "path": "public/F4M/f4m/index.html",
+    "references": {
+      "https://chessbest.org": 11
+    }
+  },
+  {
+    "path": "public/F4M/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/F4M/new/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/LO/8Z-FE_report.html",
+    "references": {
+      "https://chessbest.org": 5
+    }
+  },
+  {
+    "path": "public/LO/8Z_DNA_FASTA.html",
+    "references": {
+      "https://chessbest.org": 8
+    }
+  },
+  {
+    "path": "public/LO/8Z_FASTA_Manifest.html",
+    "references": {
+      "https://chessbest.org": 6
+    }
+  },
+  {
+    "path": "public/LO/index.html",
+    "references": {
+      "https://chessbest.org": 8
+    }
+  },
+  {
+    "path": "public/MDLxDCC_PUBLIC_PRIOR_ART_SEARCH_LOG_20260903.md",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/Mix/SCORING_PROMPT_FOR_ALL_MODELS2.md",
+    "references": {
+      "https://www.MDLxDCC.org": 1,
+      "https://www.mdlxdcc.org": 29,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-05-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-05-original-log.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-05-original.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-05-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-06-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-06-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-07-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-07-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-08-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-08-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S1-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S1-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S2-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S2-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S3-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-09-S3-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S1-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S1-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S2-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S2-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S3-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-10-S3-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S1-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S1-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S2-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S2-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S3-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-11-S3-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S1-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S1-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S2-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S2-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S3-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-12-S3-pre-format-R1.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-13-S2-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-14-S1-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-15-S3-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-16-S1-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-17-S2-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-18-S1-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-19-S1-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-20-S3-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-21-S3-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-22-S2-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-23-S3-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10-24-S1-story.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-2026-10.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-archive.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-daily.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-log.html",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-story-the-garden-that-kept-summer-sl.html",
+    "references": {
+      "https://bd-chess.github.io": 3
+    }
+  },
+  {
+    "path": "public/Nara/Nara-AI-story-the-garden-that-kept-summer.html",
+    "references": {
+      "https://bd-chess.github.io": 2
+    }
+  },
+  {
+    "path": "public/Nara/dualframe-lab/account-login.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://mdlxdcc.org": 1,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/dualframe-lab/api-client.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/Nara/dualframe-lab/index.html",
+    "references": {
+      "https://bd-chess.github.io": 2,
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/Nara/dualframe-lab/showcase.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/Nara/episode-01-ordinary-light.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/Nara/episode-02-the-answer-that-belonged-to-no-one.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/Nara/episode-03-what-must-be-allowed-to-fall.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/Nara/illuminara-episode-01-let-me-leave-angry.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/Nara/illuminara-visual-series.html",
+    "references": {
+      "https://bd-chess.github.io": 37
+    }
+  },
+  {
+    "path": "public/Nara/illuminara.html",
+    "references": {
+      "https://www.mdlxdcc.org": 7
+    }
+  },
+  {
+    "path": "public/Nara/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 12,
+      "https://bd-chess.github.io": 8
+    }
+  },
+  {
+    "path": "public/Nara/nara.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/OmniCPQ/extension/manifest.json",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/OmniCPQ/extension/worker.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/S/8zS1.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/8zS2.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/8zSudoku.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/app.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/S/index1.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/index2.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/legacy.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/S/new/app.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/S/old/index.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/SLO/Krozenje_talentov.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/Start/app.js",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/Start/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/Trip/TripOpti.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/Trip/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/Trip/new/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/acp/AC_01_Flagship.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/acp/AC_02_Operational_Bridge.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/acp/AC_Atlas.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/acp/AC_CCH_Authority_Map.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/acp/CCH_Science_Review_Dossier.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/acp/Reality.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/acp/RealityPhysics.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/acp/RealityQA.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/acp/index-acp.html",
+    "references": {
+      "https://www.mdlxdcc.org": 23
+    }
+  },
+  {
+    "path": "public/acp/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 33
+    }
+  },
+  {
+    "path": "public/ai/skills/dgte-advisor/SKILL.md",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/ai/skills/dgte-advisor/references/sources.md",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/ai/skills/mdlxdcc-guide/references/site-map.md",
+    "references": {
+      "https://www.mdlxdcc.org": 26
+    }
+  },
+  {
+    "path": "public/assets/mdlxdcc-guide/guide.js",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/assets/mdlxdcc-guide/routes.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/c/AI8_MoM_Outreach.html",
+    "references": {
+      "https://www.mdlxdcc.org": 7
+    }
+  },
+  {
+    "path": "public/c/MDLxDCC_Outreach.html",
+    "references": {
+      "https://www.mdlxdcc.org": 7
+    }
+  },
+  {
+    "path": "public/c/MDLxDCC_Public_Prior_Art_Log.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/c/Mind-of-Minds.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/c/Sudoku_R3L1_Live_Snapshot_20260904.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/c/before-agi.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/consciousness-research.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/continue-this-work.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/governed-entropy.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/human-ai-continuity.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/mind-of-minds.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/c/soul-voyage.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/technical-core.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/c/work-and-method.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/chess-lab/8zc-about.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/8zc-help.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/engines/PUBLIC_FREE_OPERATIONS.md",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 13
+    }
+  },
+  {
+    "path": "public/chess-lab/js/8zc-sim-core.js",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/old/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 11
+    }
+  },
+  {
+    "path": "public/chess-lab/old/robots.txt",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/chess-lab/research/dcc-move-click.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/gemini-endpoint.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/chess-lab/research/lab-integration.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/library-review-e2e.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/r11-dcc-link-score.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/r8-browser-smoke.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/source-context-integration.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/tournament-ui.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess-lab/research/workspace-clock.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess/8zc-about.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/8zc-help.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/engines/PUBLIC_FREE_OPERATIONS.md",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 13
+    }
+  },
+  {
+    "path": "public/chess/js/8zc-sim-core.js",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/chess/research/dcc-move-click.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/gemini-endpoint.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/chess/research/lab-integration.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/library-review-e2e.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/r11-dcc-link-score.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess/research/r8-browser-smoke.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/chess/research/source-context-integration.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/tournament-ui.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/chess/research/workspace-clock.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "public/crp/8zCoding.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/8z_MDLxDCC.html",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/crp/AC.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/crp/AC_AA.html",
+    "references": {
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/crp/AI8_Architecture.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9,
+      "https://chessbest.org": 2
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation.html",
+    "references": {
+      "https://www.mdlxdcc.org": 17
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_CouncilSeed_v0_3_REDACTED_PUBLIC.html",
+    "references": {
+      "https://www.mdlxdcc.org": 18
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1.html",
+    "references": {
+      "https://www.mdlxdcc.org": 17
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1.md",
+    "references": {
+      "https://www.mdlxdcc.org": 15
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1_CHANGE_LEDGER.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1_README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1_SITE_INTEGRATION_README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_1_VALIDATION.json",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2.html",
+    "references": {
+      "https://www.mdlxdcc.org": 17
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2.md",
+    "references": {
+      "https://www.mdlxdcc.org": 15
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2_CHANGE_LEDGER.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2_README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2_SITE_INTEGRATION_README.md",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_2_VALIDATION.json",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/crp/AI8_Conscious_Love_Valuation_v0_4_REDACTED_PUBLIC.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_God_Mode.html",
+    "references": {
+      "https://www.mdlxdcc.org": 34
+    }
+  },
+  {
+    "path": "public/crp/AI8_Reasoning 2.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Reasoning.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/crp/AI8_Sudoku_R6.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/APSV.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/BD_8Z_Reasoning.html",
+    "references": {
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/crp/BD_Idea_Atlas_AI_Reviews.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/CodeCapsules.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/Compression_Access.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/DGTE.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/MDLxDCC-Reasoning-Traces.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/crp/MDLxDCC.html",
+    "references": {
+      "https://chessbest.org": 7
+    }
+  },
+  {
+    "path": "public/crp/Maglev_Assisted_Takeoff.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/crp/Modular_Hydrofoils.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/crp/Nature_Blood_Silicon.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/RouteSignal_Prompt_Method_Study.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9
+    }
+  },
+  {
+    "path": "public/crp/SeedBank.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/crp/TalkingToAliens.html",
+    "references": {
+      "https://www.mdlxdcc.org": 24
+    }
+  },
+  {
+    "path": "public/crp/ToE-origin.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/ToE.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/dgte-bd-r1.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/crp/dgte-bd-r2-max.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/dgte-bd-r2-xhigh.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/dgte-bd-r2.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/index-CRP.html",
+    "references": {
+      "https://www.mdlxdcc.org": 19
+    }
+  },
+  {
+    "path": "public/crp/index-crp.html",
+    "references": {
+      "https://www.mdlxdcc.org": 19
+    }
+  },
+  {
+    "path": "public/crp/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/crp/lab.html",
+    "references": {
+      "https://www.mdlxdcc.org": 25,
+      "https://chessbest.org": 10
+    }
+  },
+  {
+    "path": "public/crp/projects-are-evidence.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "public/evidence/MDLxDCC_EVIDENCE_LEDGER_20260907.json",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/evidence/MDLxDCC_PRIOR_EVIDENCE_v1_1_20260907.md",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "public/i.html",
+    "references": {
+      "https://www.mdlxdcc.org": 15,
+      "https://chessbest.org": 10
+    }
+  },
+  {
+    "path": "public/i_site_audit.json",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "public/index-acp.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck1.html",
+    "references": {
+      "https://www.mdlxdcc.org": 11
+    }
+  },
+  {
+    "path": "public/index-bck10.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck11.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck12.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck13.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck14.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck15.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck16.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck17.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck18.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck19.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck2.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck20.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck21.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck3.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck4.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck5.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck6.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck7.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck8.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bck9.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-bd.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-chess.html",
+    "references": {
+      "https://chessbest.org": 4
+    }
+  },
+  {
+    "path": "public/index-crp.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-intro-bck1.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9
+    }
+  },
+  {
+    "path": "public/index-intro-bck2.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/index-intro.html",
+    "references": {
+      "https://www.mdlxdcc.org": 9,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/index-main.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-n.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index-search.html",
+    "references": {
+      "https://www.mdlxdcc.org": 7
+    }
+  },
+  {
+    "path": "public/index-todo.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "public/index.bck22.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.bck23.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.bck24.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.bck25.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.bck26.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.bck27.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "public/indexp.html",
+    "references": {
+      "https://www.mdlxdcc.org": 42,
+      "https://chessbest.org": 5
+    }
+  },
+  {
+    "path": "public/lab.html",
+    "references": {
+      "https://www.mdlxdcc.org": 25,
+      "https://chessbest.org": 10
+    }
+  },
+  {
+    "path": "public/llms-full.txt",
+    "references": {
+      "https://www.mdlxdcc.org": 34
+    }
+  },
+  {
+    "path": "public/llms.txt",
+    "references": {
+      "https://www.mdlxdcc.org": 21
+    }
+  },
+  {
+    "path": "public/news/slovenia.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/news/world.html",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/robots.txt",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "public/w/index.html",
+    "references": {
+      "https://www.mdlxdcc.org": 4,
+      "https://chessbest.org": 1
+    }
+  },
+  {
+    "path": "scripts/audit-andaluzija-dualframe-20261021.py",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "scripts/build-news.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "scripts/dualframe-prod-stage.mjs",
+    "references": {
+      "https://bd-chess.github.io": 3
+    }
+  },
+  {
+    "path": "scripts/flip4m_violet/verify_240.py",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "scripts/flip4m_violet/verify_241.py",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "scripts/nara-daily.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "scripts/nara-format-editions.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "scripts/omnicpq/build-browser-extension.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "scripts/repair-andaluzija-dualframe-pwa-20261021.py",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "scripts/wl_acceptance_once.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "scripts/wl_legacy_probe.py",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "scripts/wl_observe_control.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "scripts/wl_rules_guard.py",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/andaluzija-acceptance.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 6
+    }
+  },
+  {
+    "path": "tests/andaluzija-ai.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "tests/andaluzija-corrections.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/andaluzija-page.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "tests/andaluzija-roads-live-smoke.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/api-check.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/bd-home-links-browser.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/chess-pwa-integration.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/chess-top-picks-pwa.test.cjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/cli-loops-inbox.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "tests/cli-loops-submit.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "tests/dfc-text-live-browser.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-account-bridge.test.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1,
+      "https://mdlxdcc.org": 1,
+      "http://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-account-client.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://bd-chess.github.io": 2
+    }
+  },
+  {
+    "path": "tests/dualframe-account-identity.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 4,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-account-runtime.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 4,
+      "http://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-account-usage-service.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-album.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-enhancement-service.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 5
+    }
+  },
+  {
+    "path": "tests/dualframe-native-output.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "tests/dualframe-private-owner.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-pwa-live-smoke.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-session.test.mjs",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-sync-browser.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "tests/dualframe-sync-server.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-tenant-isolation.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/dualframe-v3.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 6,
+      "https://bd-chess.github.io": 3
+    }
+  },
+  {
+    "path": "tests/glance-trip.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "tests/landing-header-search.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1,
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tests/mdlxdcc-guide-access.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "tests/mdlxdcc-guide-client.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 4
+    }
+  },
+  {
+    "path": "tests/mdlxdcc-guide.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 5
+    }
+  },
+  {
+    "path": "tests/mdlxdcc-root-pwa.test.cjs",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "tests/omnicpq/browser-r6.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 5
+    }
+  },
+  {
+    "path": "tests/omnicpq/demo-r4.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "tests/omnicpq/ux-r6.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/sudoku-ui-harness.cjs",
+    "references": {
+      "https://mdlxDcc.org": 1
+    }
+  },
+  {
+    "path": "tests/trip-gemini.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 3
+    }
+  },
+  {
+    "path": "tests/trip-lab16.test.mjs",
+    "references": {
+      "https://www.mdlxdcc.org": 1
+    }
+  },
+  {
+    "path": "tests/wl_live_test.py",
+    "references": {
+      "https://www.mdlxdcc.org": 2
+    }
+  },
+  {
+    "path": "tools/dualframe-ai-lab/server.py",
+    "references": {
+      "https://bd-chess.github.io": 1
+    }
+  },
+  {
+    "path": "tools/dualframe-ai-lab/test_server.py",
+    "references": {
+      "https://bd-chess.github.io": 2
+    }
+  },
+  {
+    "path": "tools/promote-chess-lab-20260928.py",
+    "references": {
+      "https://www.mdlxdcc.org": 10
+    }
+  }
+]

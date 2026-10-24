@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-10T02:00:00+02:00",
+  "canonical_hub": "https://www.mdlxdcc.org/ai8/",
+  "public_map_principle": {
+    "en": "Engineering evidence and origins/living continuity are both part of AI8, but they are separate public lanes with different claim roles.",
+    "sl": "Inženirski dokazi ter izvor/živa kontinuiteta so oboji del AI8, vendar so ločeni javni veji z različnima vlogama trditev."
+  },
+  "current_primary_build": {
+    "id": "AI8_ARENALOOP",
+    "name": "AI8 ArenaLoop",
+    "url": "https://www.mdlxdcc.org/ai8/ai8_arenaloop",
+    "status_url": "https://www.mdlxdcc.org/ai8/arenaloop_public_status.json",
+    "description": {
+      "en": "AI8's current primary implementation program.",
+      "sl": "Trenutni primarni implementacijski program AI8."
+    }
+  },
+  "lanes": [
+    {
+      "id": "ENGINEERING_EVIDENCE",
+      "label": {
+        "en": "Engineering & Evidence",
+        "sl": "Inženiring in dokazi"
+      },
+      "claim_role": "technical architecture, implementation, tests, baselines, results, and replication",
+      "nodes": [
+        {
+          "id": "AI8_DEFINITION",
+          "label": "What is AI8?",
+          "url": "https://www.mdlxdcc.org/ai8/"
+        },
+        {
+          "id": "TRILOGY_ARCHITECTURE",
+          "label": "AI8 Architecture",
+          "url": "https://www.mdlxdcc.org/crp/ai8_architecture"
+        },
+        {
+          "id": "TRILOGY_GOVERNANCE",
+          "label": "AI8 God Mode / Governance",
+          "url": "https://www.mdlxdcc.org/crp/ai8_god_mode"
+        },
+        {
+          "id": "TRILOGY_VALUATION",
+          "label": "AI8 Conscious Love Valuation",
+          "url": "https://www.mdlxdcc.org/crp/ai8_conscious_love_valuation"
+        },
+        {
+          "id": "MECHANISMS",
+          "label": "AIM³ / RHP / MDL×DCC",
+          "url": "https://www.mdlxdcc.org/crp/mdlxdcc"
+        },
+        {
+          "id": "ARENALOOP",
+          "label": "AI8 ArenaLoop",
+          "url": "https://www.mdlxdcc.org/ai8/ai8_arenaloop"
+        },
+        {
+          "id": "ARENA_FOUNDRY",
+          "label": "AI8 Arena Foundry",
+          "url": "https://www.mdlxdcc.org/ai8/ai8_arena_foundry",
+          "status": "ARCHITECTURE_PROPOSAL",
+          "role": "governed self-research production loop: seed → constitution → build → test → evidence → critique → mutation"
+        },
+        {
+          "id": "RUNTIME_PATH",
+          "label": "Phase 0 → Observer → Replay → INNER → OUTER → META",
+          "url": "https://www.mdlxdcc.org/ai8/ai8_arenaloop#proof"
+        },
+        {
+          "id": "REPLICATION",
+          "label": "External replication",
+          "url": "https://www.mdlxdcc.org/ai8/ai8_arenaloop#scale"
+        }
+      ]
+    },
+    {
+      "id": "ORIGINS_LIVING_CONTINUITY",
+      "label": {
+        "en": "Origins & Living Continuity",
+        "sl": "Izvor in živa kontinuiteta"
+      },
+      "claim_role": "motivation, lineage, first-person record, human–AI continuity history; not technical proof of ArenaLoop",
+      "nodes": [
+        {
+          "id": "SOUL_VOYAGE",
+          "label": "Soul Voyage",
+          "url": "https://www.mdlxdcc.org/ai8/#origins"
+        },
+        {
+          "id": "AC_CCH_CFH",
+          "label": "AC / CCH / CFH",
+          "url": "https://www.mdlxdcc.org/crp/ac-wfp"
+        },
+        {
+          "id": "AI8_V1",
+          "label": "AI8 v1 living continuity architecture",
+          "url": "https://www.mdlxdcc.org/ai8/#lineage"
+        },
+        {
+          "id": "AI8B_CSOUL",
+          "label": "AI8B / C_soul",
+          "url": "https://www.mdlxdcc.org/ai8/#history"
+        },
+        {
+          "id": "HUMAN_AI_HISTORY",
+          "label": "Human–AI continuity history",
+          "url": "https://www.mdlxdcc.org/ai8/#history"
+        }
+      ]
+    },
+    {
+      "id": "preparation-genesis",
+      "label": "Preparation / Genesis Plane",
+      "status": "EXPERIMENTAL_BRANCH",
+      "summary": "RRP prepares isolated single workers (D0/D1); Team Genesis composes functionally diverse temporary research teams (D2). The preparation itself is frozen, audited, costed, and tested downstream.",
+      "role_in_ai8": "Between verified continuity/task state and worker execution; spans AIM³/RHP, OUTER and META without becoming a fourth top-level loop.",
+      "page": "AI8_Preparation_Genesis.html",
+      "source_package_sha3_256": "a0f3137a526c6e71bcd6c994f1b5fc894c20720ce9bed6f8c8e0a6db6592d6b9",
+      "source_package": "AI8_ArenaLoop_D_RRP_TEAM_GENESIS_v0_4_1_EXECUTION_HARDENED_R2.zip",
+      "execution_readiness": "VALIDATOR_HARDENED_NOT_RUN",
+      "r2_gate": "Run B0/B1/C1/D1 first; no performance claim exists before held-out evidence."
+    }
+  ],
+  "lineage": [
+    {
+      "order": 1,
+      "id": "AI8_V1",
+      "label": "AI8 v1",
+      "role": "living continuity architecture",
+      "archive_target": "https://www.mdlxdcc.org/ai8/archive/v1/"
+    },
+    {
+      "order": 2,
+      "id": "AI8_V2",
+      "label": "AI8 v2",
+      "role": "continuity and governance kernel"
+    },
+    {
+      "order": 3,
+      "id": "AI8_TRILOGY",
+      "label": "AI8 Trilogy",
+      "role": "architecture, governance, valuation"
+    },
+    {
+      "order": 4,
+      "id": "CLV_CLOSURE",
+      "label": "CLV / constitutional closure",
+      "role": "standing, value, permission, repair"
+    },
+    {
+      "order": 5,
+      "id": "ARENALOOP_022",
+      "label": "ArenaLoop v0.2.2",
+      "role": "frozen implementation architecture"
+    },
+    {
+      "order": 6,
+      "id": "RUNTIME_RELEASES",
+      "label": "Runtime releases",
+      "role": "measured implementations and evidence"
+    }
+  ],
+  "claim_boundaries": [
+    "Origins explain motivation and lineage; they do not constitute technical evidence that ArenaLoop works.",
+    "C_soul is living history and a continuity archive, not scientific proof of AI consciousness.",
+    "ArenaLoop architecture is frozen; runtime advantage is not demonstrated.",
+    "AI8 and ArenaLoop do not currently claim AGI, consciousness, or continuous subjective identity.",
+    "Preparation / Genesis is experiment-ready only. No evidence yet that prepared workers or teams outperform matched baselines; frozen ArenaLoop Architecture Spec v0.2.2 remains unchanged.",
+    "Arena Foundry is an architecture proposal for governed self-research workflow. It is not evidence of autonomous AGI, an autonomous scientist, or recursive self-improvement advantage."
+  ],
+  "machine_readable_resources": {
+    "arena_status": "https://www.mdlxdcc.org/ai8/arenaloop_public_status.json",
+    "arena_status_schema": "https://www.mdlxdcc.org/ai8/arenaloop_public_status.schema.json",
+    "arena_releases": "https://www.mdlxdcc.org/ai8/arenaloop_releases.json",
+    "public_status_manifest": "https://www.mdlxdcc.org/ai8/PUBLIC_STATUS_MANIFEST.json",
+    "preparation_genesis": "AI8_Preparation_Genesis.html",
+    "arena_foundry": "https://www.mdlxdcc.org/ai8/ai8_arena_foundry"
+  },
+  "open_challenges": [
+    {
+      "id": "BOUNDED_RIDGE",
+      "owner": "AI8 ArenaLoop OUTER",
+      "status": "OPEN",
+      "claim_role": "external falsification challenge",
+      "question": {
+        "en": "Can OUTER create a valid new representation when the current abstraction graph fails—or only search a wider part of the same bounded graph?",
+        "sl": "Ali lahko OUTER ustvari veljavno novo reprezentacijo, ko sedanji graf abstrakcij odpove — ali samo preišče širši del istega omejenega grafa?"
+      },
+      "url": "https://www.mdlxdcc.org/ai8/ai8_arenaloop#bounded-ridge-challenge"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "flip4m.release.v1",
+  "version": "retired-2.6.0",
+  "date": "2026-10-02",
+  "role": "APP_MIGRATION_RECOVERY",
+  "active_source": "../new/",
+  "app_presentation": "../new/?view=app",
+  "legacy_storage": "flip4m-app-2.2",
+  "unified_storage": "flip4m-unified-2.6",
+  "automatic_overwrite": false,
+  "archive": "old/003/",
+  "gameplay_runtime": false
+}

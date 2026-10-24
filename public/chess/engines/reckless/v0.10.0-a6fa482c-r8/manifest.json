@@ -1,0 +1,150 @@
+{
+  "schema": "CHESSBEST_BROWSER_ENGINE_MANIFEST_V1",
+  "engine": "Reckless",
+  "version": "0.10.0-dev-a6fa482c-r8.1",
+  "engine_source_commit": "a6fa482c7d46fb81831573f10be396f20a5efdb5",
+  "browser_source_commit": "a64199fbd26251914120a8fa6d08c89fa3ac50d6",
+  "license": "AGPL-3.0-only",
+  "compiler": "rustc 1.93.0 (254b59607 2026-01-19)",
+  "wasm_bindgen": "0.2.123",
+  "target": "wasm32-unknown-unknown",
+  "features": [
+    "simd128",
+    "single-thread"
+  ],
+  "rust_source_modified": false,
+  "nnue": {
+    "name": "v60-7f587dfb.nnue",
+    "sha256": "7f587dfb1fe5d74d53909328afa6fd51650c8c7f45907602db7fbb1e52948c61"
+  },
+  "combined_wasm": {
+    "bytes": 64453431,
+    "sha256": "928fcba02a40cd317660c99b5b278782d915c45aaf128778e9da535e37cd450f",
+    "parts": [
+      "reckless_bg.wasm.part0",
+      "reckless_bg.wasm.part1",
+      "reckless_bg.wasm.part2",
+      "reckless_bg.wasm.part3"
+    ]
+  },
+  "files": {
+    "LICENSE": {
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    "SOURCE.md": {
+      "bytes": 4859,
+      "sha256": "cb30f10e4c4d9ea629d867e6f3985b92c64216115010e94c9507b86cfd56c4df"
+    },
+    "adapter.mjs": {
+      "bytes": 14778,
+      "sha256": "548422bd3a6f8c008987b94dd3c6f917c3804af1d25ec0f71be6b532ab29da56"
+    },
+    "build.sh": {
+      "bytes": 2320,
+      "sha256": "be104051674d5379cfc0c187903b0df11fb058c4550b0c82281a35b01ee06ec3"
+    },
+    "package.json": {
+      "bytes": 153,
+      "sha256": "f03033b0e945ade17e8c4b2b27ffc5d749b7242d240f4b5c699074fe251083c7"
+    },
+    "reckless-engine.js": {
+      "bytes": 10131,
+      "sha256": "d6514e1c72079ec252aa49059fba5f825368af702ac2f34e0cdc3927c2f51da5"
+    },
+    "reckless-worker.js": {
+      "bytes": 16555,
+      "sha256": "2b4777fd7300443edb50f894bb5480c070b1046b6c4153fc49333a8c265324ef"
+    },
+    "reckless.d.ts": {
+      "bytes": 3289,
+      "sha256": "a95d6aefe853e6474311ef8dbb08c779e8a711a81e0383301af9eba552e83988"
+    },
+    "reckless.js": {
+      "bytes": 13217,
+      "sha256": "f074b6d9c11429d30386d87c74431a6decec5c469cd3f1a64519590e828fd05f"
+    },
+    "reckless_bg.wasm.d.ts": {
+      "bytes": 1604,
+      "sha256": "5d1a882139ea3f28c954c1d70f902ef5a445bfc8456863b830dd6492d0e18ef5"
+    },
+    "reckless_bg.wasm.part0": {
+      "bytes": 20971520,
+      "sha256": "ef419f9533a3ca6befdaf860df7daf8448ebb5c738dcf91888f7fe3fc00b5b92"
+    },
+    "reckless_bg.wasm.part1": {
+      "bytes": 20971520,
+      "sha256": "d0f9262d52f35e16ecbdff3ba35bbc4fecb77f56b787e6bf04b208d9aa21a00b"
+    },
+    "reckless_bg.wasm.part2": {
+      "bytes": 20971520,
+      "sha256": "8cc99def572888b6ec9d25411b352b498aafbc712885eb8a330a2744686723a5"
+    },
+    "reckless_bg.wasm.part3": {
+      "bytes": 1538871,
+      "sha256": "c7919a681cc4d1c0e088614c31581356bb1b606a273bf2f4747dfef66f20ab3f"
+    },
+    "test-browser.cjs": {
+      "bytes": 4655,
+      "sha256": "e9ff5d781d637f56cb9a27e87b3450d6d0c9ad8dd53968820ac4d7a2460d389e"
+    },
+    "reckless-corresponding-source.tar.gz.part00": {
+      "bytes": 20971520,
+      "sha256": "547a3554d38b8146e9de596f2a17ec870855824ae887f62b0d4104d8dea3b0b2"
+    },
+    "reckless-corresponding-source.tar.gz.part01": {
+      "bytes": 20971520,
+      "sha256": "24146718556c15b555d1abc2f9654e50e32544d4ec0928530bd8023d836f6a09"
+    },
+    "reckless-corresponding-source.tar.gz.part02": {
+      "bytes": 11601606,
+      "sha256": "1df9ba68131fbfc34cbd1e9783fcf211e672ddb84e9ff95f10af2f8d492ac34b"
+    },
+    "source-download.html": {
+      "bytes": 3734,
+      "sha256": "fc779f8bf8a239fe167c95653a7a1a8fdcf5227dd1de45683847e886472831e0"
+    }
+  },
+  "verification": {
+    "real_wasm_smoke": "PASS; 9/9 upstream package/worker/real-WASM tests",
+    "real_browser_smoke": "PASS; Chromium: timed MultiPV, depth, White/Black perspective, mate, combined depth/time first limit wins, infinite stop, signal cancellation",
+    "public_url_smoke": "PENDING_ROOT_DEPLOY",
+    "adapter_revision": "P2: deterministic legality/rank/bound/request-ID regressions; actual unchanged WASM CPU1/10s/3PV exercised. Historical browser smoke below belongs to the initial native package."
+  },
+  "source_archive_exclusions": {
+    "reason": "Unused target-specific precompiled Windows link libraries; offered compiler host Linux and target WebAssembly. All source/manifest/license notices retained. Redundant compiled WASM is omitted from the source archive and distributed separately as the identical four runtime chunks; all build inputs retained.",
+    "files": [
+      "engine/vendor/windows_aarch64_gnullvm/lib/libwindows.0.52.0.a",
+      "engine/vendor/windows_aarch64_msvc/lib/windows.0.52.0.lib",
+      "engine/vendor/windows_i686_gnu/lib/libwindows.0.52.0.a",
+      "engine/vendor/windows_i686_gnullvm/lib/libwindows.0.52.0.a",
+      "engine/vendor/windows_i686_msvc/lib/windows.0.52.0.lib",
+      "engine/vendor/windows_x86_64_gnu/lib/libwindows.0.52.0.a",
+      "engine/vendor/windows_x86_64_gnullvm/lib/libwindows.0.52.0.a",
+      "engine/vendor/windows_x86_64_msvc/lib/windows.0.52.0.lib",
+      "chessbest-browser/reckless_bg.wasm"
+    ]
+  },
+  "source_archive": {
+    "name": "reckless-corresponding-source.tar.gz",
+    "bytes": 53544646,
+    "sha256": "3a323fc7116c34eb6715a0313315d15a388ce45d104c964f6a0cb0f213442f1e",
+    "parts": [
+      "reckless-corresponding-source.tar.gz.part00",
+      "reckless-corresponding-source.tar.gz.part01",
+      "reckless-corresponding-source.tar.gz.part02"
+    ],
+    "download_page": "source-download.html"
+  },
+  "source_overlay": {
+    "revision": "2026-10-15-P2",
+    "files": [
+      "adapter.mjs",
+      "reckless-engine.js"
+    ],
+    "tests": "../../../research/reckless-adapter.test.cjs",
+    "application": "Replace original browser copies in the unchanged native source archive; build.sh copies these current files. No WASM/network rebuild.",
+    "testsSHA256": "cfa9e81585b5d3927daf312de3ecfa39bff0a352f54a51b0c236ae22a711ddf0",
+    "browserSmoke": "test-browser.cjs (loads the distributed chess validator explicitly)"
+  }
+}

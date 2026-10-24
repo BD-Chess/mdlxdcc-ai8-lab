@@ -1,0 +1,51 @@
+{
+  "schema": "mdlxdcc.root-pwa.release.v2",
+  "release_id": "root-20261024-r6",
+  "canonical_entry": "index.html",
+  "manifest": "manifest.webmanifest",
+  "service_worker": "sw.js",
+  "service_worker_scope": "./index.html",
+  "manifest_scope": "./",
+  "manifest_start_url": "./index.html",
+  "fallback_url": "index.html",
+  "legacy_redirects": [
+    "PWA/",
+    "PWA/index.html",
+    "index-pwa.html"
+  ],
+  "architecture": "Site navigation PWA: same-origin pages under the site root stay in the installed app. The service worker and offline cache remain landing-only; /PWA/ remains a compatibility route.",
+  "cache_policy": {
+    "root_navigation": "index.html network-first, no-store request, offline cache fallback; bare directory URL normalized to index.html by the page",
+    "public_shell_and_gallery": "network-first, no-store request, offline cache fallback",
+    "unrelated_routes": "not intercepted",
+    "root_cache_prefix": "mdlxdcc-landing-pwa:",
+    "image_cache_limit": 24
+  },
+  "core_shell_assets": [
+    "index.html",
+    "manifest.webmanifest",
+    "pwa.js",
+    "pwa-release.json",
+    "PWA/icon-192.png",
+    "PWA/icon-512.png",
+    "PWA/apple-touch-icon.png",
+    "assets/mdlxdcc-guide/guide.css",
+    "assets/mdlxdcc-guide/guide.js",
+    "assets/mdlxdcc-guide/routes.mjs",
+    "assets/mdlxdcc-guide/tour.json",
+    "site-search-index.json",
+    "assets/ai8-vision/r2/vision-r4.css",
+    "assets/ai8-vision/r2/vision-r4.js",
+    "assets/human-middle/v5/human-middle-family-r1.css",
+    "assets/human-middle/v5/human-middle-series-r1.js",
+    "assets/human-middle/v5/human-middle-explanations-r1.js",
+    "assets/human-middle/v5/human-middle-r13-family.js"
+  ],
+  "git_reference": "BD-Chess/bd-chessdb@main; verify active source via deployment receipt, not this static file",
+  "previous_release": {
+    "schema": "mdlxdcc.root-pwa.release.v1",
+    "source_commit": "b6a1849b9036f8839a23e81c7441f6b7facec984",
+    "previous_release_git_blob_sha": "67f0407af5a7759a87f3f8dcbb293e02d0ddae16"
+  },
+  "notice": "This static descriptor does not prove that a separate Netlify host has deployed the release."
+}

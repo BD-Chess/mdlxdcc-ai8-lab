@@ -1,0 +1,61 @@
+{
+  "schema": "nara.daily.day.v1",
+  "id": "NARA-D-2026-10-14",
+  "date": "2026-10-14",
+  "published_at": "2026-10-14T19:20:25.416Z",
+  "regime": "THREE_STORY_CAPACITY_R8",
+  "cutoff_local": "20:30",
+  "featured_instance": "S1",
+  "selection_method": "Editorial story selection; current reader ratings are displayed separately.",
+  "story_count": 3,
+  "instances": [
+    {
+      "instance": "S1",
+      "id": "NARA-D-2026-10-14:S1",
+      "title": "THE WORD THAT HAD NO SECOND SPEAKER",
+      "combined": 74.5,
+      "display": 75,
+      "gpt": 82,
+      "claude": 67,
+      "record_file": "daily/records/2026-10-14/S1.json",
+      "record_sha256": "16c1d0dbe72235b77f9e753466dfe599ff2cf71a627033380bdd2ae904fb12ec",
+      "log_file": "daily/log/2026-10-14/S1.json",
+      "log_sha256": "d781646fd6db2ca44d467b0a7c47320d24547d3b9a3c3d458c6207b63b69bb0c",
+      "translation_file": "daily/translations/sl/2026-10-14/S1.json",
+      "translation_sha256": "f8ad816b7082830c11b9d26eeaaa476ae231039cedc31b99ce46a1b29a364053",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-14:S1"
+    },
+    {
+      "instance": "S2",
+      "id": "NARA-D-2026-10-14:S2",
+      "title": "THE QUICK PEOPLE OF THE PULSAR",
+      "combined": 73.0,
+      "display": 73,
+      "gpt": 82,
+      "claude": 64,
+      "record_file": "daily/records/2026-10-14/S2.json",
+      "record_sha256": "b3dacab51ca34cef12ed9c4439a70d253545abacc857a54e89120f7dd1060321",
+      "log_file": "daily/log/2026-10-14/S2.json",
+      "log_sha256": "5723e9417638a368de90b908e79a86d623a2f9f09daf5023be9201ebd9c6e4ec",
+      "translation_file": "daily/translations/sl/2026-10-14/S2.json",
+      "translation_sha256": "4f64728a9d5d0050e3c05f5afd0107e61f6c4d5079e222914034bc3cd30202cd",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-14:S2"
+    },
+    {
+      "instance": "S3",
+      "id": "NARA-D-2026-10-14:S3",
+      "title": "ADAEZE'S ORCHARD",
+      "combined": 70.0,
+      "display": 70,
+      "gpt": 78,
+      "claude": 62,
+      "record_file": "daily/records/2026-10-14/S3.json",
+      "record_sha256": "34712e498f8dc1a9ae1977e39124f71f144eebdf950f49545b508be39769ca83",
+      "log_file": "daily/log/2026-10-14/S3.json",
+      "log_sha256": "6efbbedf02b9a44d0d07ce8d34eae528af8abf69d6955c6a3255767fea655b16",
+      "translation_file": "daily/translations/sl/2026-10-14/S3.json",
+      "translation_sha256": "9272642379d1a601e4bbf59bed8bbbccc25771e3e79b06bc2cdf9355a7cfb7c5",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-14:S3"
+    }
+  ]
+}

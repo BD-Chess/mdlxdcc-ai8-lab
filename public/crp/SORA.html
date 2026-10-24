@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html data-reader-size="3" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>SORA — Hybrid Solar Orbital Ring Accelerator | BD × AI Lab</title>
+<link href="https://fonts.googleapis.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#020409; --bg2:#060a14; --panel:rgba(15,23,41,.84); --panel2:rgba(20,30,51,.88);
+  --border:rgba(0,229,255,.13); --border2:rgba(0,229,255,.28);
+  --cyan:#00e5ff; --cyan-dim:rgba(0,229,255,.12); --gold:#f59e0b; --gold-dim:rgba(245,158,11,.12);
+  --green:#34d399; --green-dim:rgba(52,211,153,.12); --violet:#a78bfa; --rose:#ff6b8a; --orange:#fb923c;
+  --text:#e2e8f4; --muted:#8ca2c9; --dim:#627396; --shadow:0 22px 70px rgba(0,0,0,.34);
+  --reader-text:21px; --reader-small:14px; --reader-h1:clamp(2.6rem,7vw,5.9rem); --reader-h2:clamp(1.8rem,3.4vw,2.65rem); --reader-h3:clamp(1.25rem,2.3vw,1.75rem);
+}
+html[data-reader-size="0"]{--reader-text:17px;--reader-small:12px;--reader-h1:clamp(2rem,6vw,4.1rem);--reader-h2:clamp(1.35rem,3vw,2rem);--reader-h3:clamp(1.05rem,2vw,1.35rem)}
+html[data-reader-size="1"]{--reader-text:18px;--reader-small:12.5px;--reader-h1:clamp(2.15rem,6.4vw,4.6rem);--reader-h2:clamp(1.45rem,3.1vw,2.2rem);--reader-h3:clamp(1.12rem,2.05vw,1.45rem)}
+html[data-reader-size="2"]{--reader-text:19.5px;--reader-small:13px;--reader-h1:clamp(2.35rem,6.8vw,5.2rem);--reader-h2:clamp(1.6rem,3.2vw,2.4rem);--reader-h3:clamp(1.18rem,2.1vw,1.58rem)}
+html[data-reader-size="3"]{--reader-text:21px;--reader-small:14px;--reader-h1:clamp(2.6rem,7vw,5.9rem);--reader-h2:clamp(1.8rem,3.4vw,2.65rem);--reader-h3:clamp(1.25rem,2.3vw,1.75rem)}
+html[data-reader-size="4"]{--reader-text:23px;--reader-small:15px;--reader-h1:clamp(2.9rem,7.5vw,6.4rem);--reader-h2:clamp(2rem,3.6vw,2.95rem);--reader-h3:clamp(1.38rem,2.5vw,1.95rem)}
+html[data-reader-size="5"]{--reader-text:25px;--reader-small:16px;--reader-h1:clamp(3.15rem,8vw,7rem);--reader-h2:clamp(2.2rem,3.9vw,3.25rem);--reader-h3:clamp(1.5rem,2.7vw,2.15rem)}
+html[data-reader-size="6"]{--reader-text:28px;--reader-small:18px;--reader-h1:clamp(3.45rem,8.6vw,7.6rem);--reader-h2:clamp(2.45rem,4.3vw,3.6rem);--reader-h3:clamp(1.7rem,3vw,2.4rem)}
+html[data-reader-size="7"]{--reader-text:32px;--reader-small:20px;--reader-h1:clamp(3.8rem,9.4vw,8.4rem);--reader-h2:clamp(2.75rem,4.8vw,4.1rem);--reader-h3:clamp(1.9rem,3.4vw,2.75rem)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-height:100vh;overflow-x:hidden;color:var(--text);font-family:'Rajdhani',system-ui,sans-serif;font-size:var(--reader-text);line-height:1.72;background:radial-gradient(circle at 15% 12%,rgba(0,229,255,.10),transparent 32%),radial-gradient(circle at 88% 18%,rgba(167,139,250,.09),transparent 28%),radial-gradient(circle at 50% 100%,rgba(245,158,11,.07),transparent 42%),linear-gradient(180deg,var(--bg),#05070d 100%);}
+body:before,body:after{content:'';position:fixed;border-radius:50%;filter:blur(110px);opacity:.28;pointer-events:none;z-index:-1}
+body:before{width:48vw;height:48vw;left:-16vw;top:-14vh;background:radial-gradient(circle,rgba(0,229,255,.36),rgba(20,40,100,.12) 52%,transparent 72%);animation:floatA 25s ease-in-out infinite}
+body:after{width:44vw;height:44vw;right:-18vw;bottom:-20vh;background:radial-gradient(circle,rgba(245,158,11,.18),rgba(167,139,250,.13) 44%,transparent 72%);animation:floatB 31s ease-in-out infinite}
+@keyframes floatA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(6vw,5vh,0)}}
+@keyframes floatB{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-5vw,-7vh,0)}}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}::selection{background:var(--gold);color:#05070d}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--gold));z-index:500;width:0}
+.wrap{width:min(1160px,calc(100% - 42px));margin:0 auto}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(2,4,9,.84);border-bottom:1px solid rgba(0,229,255,.09);backdrop-filter:blur(16px)}
+.topbar-inner{width:min(1260px,calc(100% - 42px));margin:0 auto;padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);letter-spacing:.18em;text-transform:uppercase;color:var(--text);display:flex;gap:.65rem;align-items:center;text-decoration:none!important}
+.brand span{color:var(--cyan)}.top-links{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:flex-end}
+.top-links a{font-family:'JetBrains Mono',monospace;font-size:calc(var(--reader-small)*.9);padding:.38rem .65rem;border:1px solid rgba(0,229,255,.14);border-radius:999px;color:rgba(226,232,244,.72);background:rgba(255,255,255,.025);text-decoration:none!important}
+.top-links a:hover{color:var(--cyan);border-color:rgba(0,229,255,.35)}
+.hero{position:relative;overflow:hidden;padding:78px 0 42px}
+.hero-grid{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(rgba(0,229,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.12) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,black,transparent 74%)}
+.hero-copy{position:relative;z-index:1;max-width:1100px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+h1{font-size:var(--reader-h1);font-weight:700;line-height:.94;letter-spacing:-.055em;margin:0 0 1.1rem}
+h1 span{display:block;color:var(--cyan);text-shadow:0 0 28px rgba(0,229,255,.22)}
+.hero-sub{max-width:900px;color:rgba(226,232,244,.78);font-size:calc(var(--reader-text)*1.08);line-height:1.55;margin-bottom:1.2rem}
+.hero-kicker{max-width:880px;color:var(--muted);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:calc(var(--reader-text)*1.05)}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.6rem 0 1.2rem}
+.cta{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:.75rem 1.05rem;font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);border:1px solid rgba(0,229,255,.24);background:rgba(0,229,255,.07);text-decoration:none!important;color:var(--text)}.cta.primary{background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(245,158,11,.12));border-color:rgba(0,229,255,.4);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:.75rem;margin-top:1.5rem}
+.stat{padding:1rem;border:1px solid var(--border);border-radius:18px;background:var(--panel);box-shadow:var(--shadow)}.stat strong{display:block;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-size:calc(var(--reader-text)*1.35);line-height:1}.stat span{color:var(--muted);font-size:var(--reader-small);letter-spacing:.07em;text-transform:uppercase}
+.path-card{margin-top:1.1rem;padding:1.1rem;border:1px solid rgba(245,158,11,.2);border-radius:20px;background:linear-gradient(135deg,rgba(245,158,11,.09),rgba(15,23,41,.7))}
+.path-title{font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+.path-line{font-family:'JetBrains Mono',monospace;white-space:pre;overflow:auto;color:#dbeafe;background:rgba(2,4,9,.55);border:1px solid rgba(245,158,11,.14);border-radius:14px;padding:1rem;font-size:calc(var(--reader-small)*.98)}
+.stage-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin-top:1rem}
+.stage{border:1px solid rgba(0,229,255,.11);background:rgba(11,17,32,.66);border-radius:16px;padding:.75rem;min-height:96px}
+.stage span{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:var(--reader-small)}.stage strong{display:block;color:#fff;line-height:1.1;margin:.18rem 0}.stage em{display:block;color:var(--muted);font-style:normal;font-size:var(--reader-small);line-height:1.35}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,229,255,.25),transparent);margin:14px 0 34px}
+.toc-card{margin:0 auto 34px;padding:1rem;border:1px solid var(--border);border-radius:20px;background:rgba(15,23,41,.68)}.toc-title{font-family:'JetBrains Mono',monospace;color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;font-size:var(--reader-small);margin-bottom:.7rem}.toc-links{display:flex;flex-wrap:wrap;gap:.45rem}.toc-links a{font-family:'JetBrains Mono',monospace;font-size:calc(var(--reader-small)*.9);padding:.42rem .68rem;border-radius:999px;border:1px solid rgba(0,229,255,.12);background:rgba(255,255,255,.025);color:rgba(226,232,244,.78);text-decoration:none!important}
+.paper-section{position:relative;margin:0 auto 28px;scroll-margin-top:80px}.section-num{position:absolute;left:-6px;top:4px;font-family:'JetBrains Mono',monospace;color:rgba(0,229,255,.32);font-size:var(--reader-small);letter-spacing:.12em}
+.paper-content{margin-left:42px;border:1px solid var(--border);border-radius:22px;padding:1.35rem 1.45rem;background:linear-gradient(180deg,rgba(15,23,41,.84),rgba(8,13,25,.76));box-shadow:var(--shadow)}
+.paper-content h2{font-size:var(--reader-h2);line-height:1.05;margin-bottom:.9rem;color:#fff;letter-spacing:-.025em}
+.paper-content h3{font-size:var(--reader-h3);line-height:1.15;margin:1.2rem 0 .6rem;color:var(--gold)}
+.paper-content p,.paper-content li{color:rgba(226,232,244,.80);font-size:var(--reader-text);line-height:1.72;margin:.78rem 0}
+.paper-content ul,.paper-content ol{padding-left:1.25rem;margin:.6rem 0}
+blockquote{margin:1rem 0;padding:1rem 1.1rem;border-left:3px solid var(--gold);border-radius:14px;background:rgba(245,158,11,.08);font-family:'Cormorant Garamond',serif;font-size:calc(var(--reader-text)*1.18);color:#fff;font-style:italic}
+pre{overflow:auto;margin:1rem 0;border:1px solid rgba(0,229,255,.14);border-radius:16px;background:rgba(2,4,9,.72);padding:1rem}
+code{font-family:'JetBrains Mono',monospace;color:#d9f99d;font-size:calc(var(--reader-small)*.98)}p code,li code{background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.12);border-radius:6px;padding:.05rem .3rem;color:var(--cyan)}
+.table-wrap{overflow:auto;margin:1rem 0;border:1px solid rgba(0,229,255,.11);border-radius:16px}table{border-collapse:collapse;width:100%;min-width:640px;background:rgba(2,4,9,.35)}th,td{text-align:left;vertical-align:top;padding:.72rem .85rem;border-bottom:1px solid rgba(0,229,255,.08)}th{font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:rgba(0,229,255,.06)}td{color:rgba(226,232,244,.79)}tr:last-child td{border-bottom:0}
+hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(245,158,11,.25),transparent);margin:1.2rem 0}
+.origin-card{margin:36px auto 70px;border:1px solid rgba(245,158,11,.2);border-radius:24px;background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(15,23,41,.75));padding:1.35rem 1.45rem;box-shadow:var(--shadow)}
+.origin-meta{font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.8rem}
+.origin-card h2{font-size:var(--reader-h2);line-height:1.08;margin-bottom:.8rem}.origin-card h3{font-size:var(--reader-h3);color:var(--gold);margin:1rem 0 .5rem}
+.origin-card p,.origin-card li{font-size:var(--reader-text);line-height:1.72;color:rgba(226,232,244,.8);margin:.75rem 0}
+.origin-note{border:1px solid rgba(0,229,255,.16);background:rgba(0,229,255,.06);border-radius:16px;padding:.9rem 1rem;color:rgba(226,232,244,.82)}
+details.origin-details{margin-top:1rem}.origin-details summary{cursor:pointer;display:inline-flex;border:1px solid rgba(245,158,11,.35);border-radius:999px;padding:.62rem .9rem;font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:var(--reader-small)}.origin-full{margin-top:1rem;border-top:1px solid rgba(245,158,11,.18);padding-top:1rem}
+.footer{padding:34px 0 120px;color:var(--muted);font-size:var(--reader-small)}
+.back-top{position:fixed;right:16px;bottom:86px;z-index:90;border:1px solid rgba(0,229,255,.25);border-radius:999px;background:rgba(2,4,9,.85);padding:.55rem .75rem;font-family:'JetBrains Mono',monospace;font-size:var(--reader-small);text-decoration:none!important}
+.reader-controls{position:fixed;right:14px;bottom:14px;z-index:95;display:flex;align-items:center;gap:8px;padding:8px;border:1px solid rgba(0,229,255,.30);border-radius:999px;background:rgba(5,7,13,.91);backdrop-filter:blur(16px);box-shadow:0 18px 55px rgba(0,0,0,.42);font-family:'JetBrains Mono',monospace}
+.reader-controls button{min-width:44px;min-height:44px;border:1px solid rgba(0,229,255,.30);border-radius:999px;background:rgba(0,229,255,.08);color:var(--cyan);font:800 18px/1 'JetBrains Mono',monospace;cursor:pointer}
+.reader-label{min-width:96px;text-align:center;color:rgba(231,234,242,.84);font-size:12px;letter-spacing:.08em;text-transform:uppercase;user-select:none}
+@media(max-width:860px){.top-links{display:none}.wrap,.topbar-inner{width:min(100% - 28px,1160px)}.hero{padding:52px 0 28px}.stats{grid-template-columns:repeat(2,1fr)}.stage-strip{grid-template-columns:repeat(2,1fr)}.paper-content{margin-left:0;padding:1rem}.section-num{position:static;margin-bottom:.35rem}.paper-section{margin-bottom:20px}.reader-controls{left:50%;right:auto;transform:translateX(-50%);bottom:12px}.back-top{display:none}}
+@media(max-width:520px){body{font-size:var(--reader-text)}.hero-sub,.hero-kicker{font-size:var(--reader-text)}.stats{grid-template-columns:1fr}.stage-strip{grid-template-columns:1fr}.stage{min-height:0}table{min-width:720px}.reader-label{min-width:92px}}
+@media print{.topbar,.reader-controls,.back-top,.progress,.noise{display:none!important}body{background:#fff;color:#111}.paper-content,.origin-card{box-shadow:none;background:#fff;border:1px solid #ccc}*{color:#111!important}}
+</style>
+</head>
+<body id="top">
+<div class="noise"></div><div class="progress" id="progress"></div>
+<nav class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span>CRP</span> SORA</a><div class="top-links"><a href="index.html">CRP Hub</a><a href="#one-page-summary">Summary</a><a href="#the-hybrid-baseline-geometry">Hybrid Geometry</a><a href="#open-gates">Gates</a><a href="#sora-sim-initial-specification">SORA-Sim</a><a href="#origin-story">Origin</a></div></div></nav>
+<header class="hero"><div class="hero-grid"></div><div class="wrap hero-copy"><div class="eyebrow">Simulation-ready interstellar infrastructure concept</div><h1>SORA <span>Solar Orbital Ring Accelerator</span></h1><p class="hero-sub">A staged launch architecture where the spacecraft is not asked to carry one impossible engine. The payload moves through reusable solar-system infrastructure: magnetic arc sectors, a sun-grazing perihelion throat, a curved-to-straight outbound runway, detached bow-wall cruise, and destination seeding.</p><p class="hero-kicker">Public stance: coherent enough to test, not claimed feasible. The design is stated as a simulation-ready research program, not a completed engineering design.</p><div class="hero-actions"><a class="cta primary" href="#abstract">Read the paper →</a><a class="cta" href="#the-hybrid-baseline-geometry">Jump to hybrid design</a><a class="cta" href="#origin-story">Read origin story</a></div><div class="stats"><div class="stat"><strong>C0–C1</strong><span>current claim</span></div><div class="stat"><strong>C2</strong><span>first test target</span></div><div class="stat"><strong>R1</strong><span>seed probe anchor</span></div><div class="stat"><strong>8</strong><span>open gates</span></div></div><div class="path-card"><div class="path-title">Hybrid baseline path</div><div class="path-line">Arc sectors → perihelion injection → near-Sun Oberth throat → curved outbound corridor → straight runway → bow-wall cruise → destination seeding</div><div class="stage-strip"><div class="stage"><span>0</span><strong>Buildout</strong><em>solar node sectors</em></div><div class="stage"><span>1</span><strong>Sail</strong><em>optional first kick</em></div><div class="stage"><span>2</span><strong>Arc injector</strong><em>vector shaping</em></div><div class="stage"><span>3</span><strong>Perihelion</strong><em>safe solar dive</em></div><div class="stage"><span>4</span><strong>Oberth throat</strong><em>highest-value impulse</em></div><div class="stage"><span>5</span><strong>Outbound runway</strong><em>curved → straight</em></div><div class="stage"><span>6</span><strong>Bow wall</strong><em>cruise protection</em></div><div class="stage"><span>7</span><strong>Seeding</strong><em>target infrastructure</em></div></div></div></div></header>
+<div class="divider"></div>
+<main class="wrap"><aside class="toc-card"><div class="toc-title">Table of contents</div><div class="toc-links"><a href="#abstract">Abstract</a><a href="#one-page-summary">One-Page Summary</a><a href="#clarifying-the-word-ring">Clarifying the Word Ring</a><a href="#why-not-keep-racing-around-the-sun">Why Not Keep Racing Around the Sun?</a><a href="#the-hybrid-baseline-geometry">The Hybrid Baseline Geometry</a><a href="#perihelion-not-center-shot">Perihelion, Not Center-Shot</a><a href="#the-near-sun-acceleration-throat">The Near-Sun Acceleration Throat</a><a href="#the-curved-to-straight-outbound-runway">The Curved-to-Straight Outbound Runway</a><a href="#what-sora-is-not-claiming">What SORA Is Not Claiming</a><a href="#claim-ladder">Claim Ladder</a><a href="#open-gates">Open Gates</a><a href="#reference-mission-r1">Reference Mission R1</a><a href="#mission-classes-and-travel-time-honesty">Mission Classes and Travel-Time Honesty</a><a href="#dynamic-mass-and-energy-ledger">Dynamic Mass and Energy Ledger</a><a href="#control-and-autonomy">Control and Autonomy</a><a href="#sora-0-demonstrator">SORA-0 Demonstrator</a><a href="#sora-sim-initial-specification">SORA-Sim Initial Specification</a><a href="#what-would-falsify-sora">What Would Falsify SORA</a><a href="#partial-failure-value">Partial Failure Value</a><a href="#confidence-map">Confidence Map</a><a href="#conclusion">Conclusion</a><a href="#appendix-compact-equations">Appendix: Compact Equations</a><a href="#appendix-assumptions-file-sketch">Appendix: Assumptions File Sketch</a><a href="#origin-story">Origin story</a></div></aside><section class="paper-section" id="abstract">
+<div class="section-num">01</div>
+<div class="paper-content"><h2>Abstract</h2><p>SORA is a staged interstellar-launch architecture in which the spacecraft is treated as a payload moving through reusable solar-system infrastructure rather than as a self-contained engine. The baseline geometry is hybrid: solar-powered orbital magnetic arc sectors first shape and accelerate the payload, then inject it into a sun-grazing perihelion trajectory. Near perihelion, a dense active acceleration throat applies the most valuable prograde impulse while the spacecraft is moving fastest. The payload then exits into a curved-to-straight outbound node runway that continues acceleration as solar gravity weakens and the trajectory opens toward interstellar cruise.</p><p>SORA is not presented as a validated mission design. It is a finite, simulation-ready research program. The central question is whether reusable solar-system infrastructure can transfer enough energy, momentum, protection, and destination-seeding capability to make a small uncrewed interstellar seed-probe architecture physically credible.</p><p>The current claim is narrow: the architecture is coherent enough to test, its failure modes are finite enough to name, and a compact simulation suite can determine whether any low-speed seed-probe parameter island survives. If no such island exists, SORA fails cleanly. If one exists at modest speed and modest payload, SORA becomes a candidate for deeper engineering study.</p></div>
+</section>
+<section class="paper-section" id="one-page-summary">
+<div class="section-num">02</div>
+<div class="paper-content"><h2>One-Page Summary</h2><p>SORA's strongest idea is not a magical ring, a claimed top speed, or a solved shield. Its strongest idea is the frame:</p><blockquote>The spacecraft is the payload. The solar system is the accelerator.</blockquote><p>The usual interstellar propulsion question is: what engine can a spacecraft carry? SORA asks a different question: what reusable solar-system infrastructure could repeatedly launch small payloads, and what is the smallest mission class that might close physically?</p><p>The clearest public geometry is:</p><pre><code class="language-text">Solar magnetic arc sectors
+        ↓
+Vector-shaping and angular-momentum reduction
+        ↓
+Sun-grazing perihelion trajectory
+        ↓
+Near-Sun magnetic / Oberth acceleration throat
+        ↓
+Curved outbound node corridor
+        ↓
+Longer straight phased magnetic runway
+        ↓
+Detached bow-wall cruise and destination seeding</code></pre><p>The key rule is simple:</p><blockquote>Use curved arcs while curvature is useful.<br/>Use the Sun while gravity is useful.<br/>Use the near-Sun throat while Oberth leverage is useful.<br/>Use the outbound runway once curvature becomes the enemy.</blockquote><p>The architecture is not yet feasible. The architecture is now testable.</p></div>
+</section>
+<section class="paper-section" id="clarifying-the-word-ring">
+<div class="section-num">03</div>
+<div class="paper-content"><h2>Clarifying the Word Ring</h2><p>The word "ring" should not be read as a rigid closed rail around the Sun. The first useful SORA infrastructure is a set of independent solar-orbiting magnetic nodes arranged into dense arc sectors or ringlets.</p><p>The spacecraft does not travel along the orbital infrastructure like a train on a track. It approaches a powered node arc, passes through a close-coupling encounter, receives a controlled impulse, and recedes. Distance controls coupling magnitude. Powered, time-varying, plasma, or phased interaction controls net energy transfer and direction.</p><p>A full 360-degree ring is a later scaling convenience, not a prerequisite. In the hybrid baseline, arcs act mainly as the injector and vector-shaping stage. The highest-speed part of the mission happens after injection, near perihelion and on the outbound runway.</p><pre><code class="language-text">Correct arc geometry:
+
+       payload inbound
+             \
+              \      closest coupling pass
+               *---------------------&gt; injected toward perihelion
+
+        o   o   o   o   o   o   o
+        powered orbital node arc / ringlet
+
+The payload approaches, couples, and leaves.
+It does not ride the arc as a mechanical rail.</code></pre></div>
+</section>
+<section class="paper-section" id="why-not-keep-racing-around-the-sun">
+<div class="section-num">04</div>
+<div class="paper-content"><h2>Why Not Keep Racing Around the Sun?</h2><p>A closed circular racetrack becomes punishing as speed rises because centripetal acceleration grows as speed squared:</p><pre><code class="language-text">a_c = v^2 / r</code></pre><p>At 0.01 c, a circular path at 1 AU requires roughly 6 g of centripetal acceleration. At 0.1 AU it requires roughly 60 g. At 0.03 c, the same radii require roughly 55 g and 550 g.</p><p>Those loads might not instantly destroy a tiny rugged probe, but they become a first-order problem for field smoothness, node timing, payload survival, structural design, thermal control, and navigation. This is why SORA does not treat the arc as a relativistic racetrack.</p><p>The arc stage is the injector. It builds useful velocity, sets the outgoing vector, reduces or shapes angular momentum, and prepares the solar dive. After that, curvature is no longer the friend. The architecture transitions into the perihelion throat and then the outbound runway.</p></div>
+</section>
+<section class="paper-section" id="the-hybrid-baseline-geometry">
+<div class="section-num">05</div>
+<div class="paper-content"><h2>The Hybrid Baseline Geometry</h2><p>SORA is best understood as a sequence of handoffs. Hardware useful in one regime but harmful in the next is discarded, silenced, folded, or repurposed.</p><div class="table-wrap"><table><thead><tr><th>Stage</th><th>Name</th><th>Function</th><th>Main open risk</th></tr></thead><tbody><tr><td>0</td><td>Infrastructure buildout</td><td>Deploy solar-orbiting node sectors, power, comms, control, replacement stock</td><td>Mass economy and deployment cost</td></tr><tr><td>1</td><td>Optional sail first stage</td><td>Use solar photon pressure for cheap initial velocity, then jettison sail</td><td>Sail material, control, thermal limits</td></tr><tr><td>2</td><td>Orbital magnetic arc sectors</td><td>External acceleration, vector shaping, angular-momentum management</td><td>Coupling force, heating, reaction accounting</td></tr><tr><td>3</td><td>Inward injection</td><td>Put payload onto a safe sun-grazing perihelion trajectory</td><td>Navigation and thermal margins</td></tr><tr><td>4</td><td>Near-Sun Oberth throat</td><td>Apply high-value prograde impulse while velocity is maximal</td><td>Node survival, timing, thermal load</td></tr><tr><td>5</td><td>Curved outbound corridor</td><td>Continue acceleration along the escaping hyperbola</td><td>Phasing, ripple, node density</td></tr><tr><td>6</td><td>Straight outbound runway</td><td>Continue push once the path is nearly linear</td><td>Infrastructure length and power</td></tr><tr><td>7</td><td>Cruise protection</td><td>Payload cruises behind detachable or abandonable bow-wall protection</td><td>Dust, debris plume, mass ratio</td></tr><tr><td>8</td><td>Destination seeding</td><td>Release carried nodes or sub-probes to start target-star infrastructure</td><td>Capture, braking, release timing</td></tr></tbody></table></div><p>The sequence matters. SORA is not one impossible machine. It is a chain of smaller physical bets, each setting up the next.</p></div>
+</section>
+<section class="paper-section" id="perihelion-not-center-shot">
+<div class="section-num">06</div>
+<div class="paper-content"><h2>Perihelion, Not Center-Shot</h2><p>The payload should not be aimed into the Sun's center. It should be aimed at a carefully chosen closest safe pass:</p><pre><code class="language-text">q = perihelion distance</code></pre><p>That distance is set by thermal survival, node survival, shield survival, navigation precision, solar atmosphere and corona risk, and the maximum acceptable acceleration and radiation environment.</p><p>The useful trajectory is a sun-grazing pass, not a collision course. The payload arrives at perihelion moving very fast. Near that point, a prograde push is worth more than the same push far from the Sun.</p><p>This is the Oberth logic:</p><pre><code class="language-text">Delta E ≈ v_perihelion * Delta v + 0.5 * Delta v^2</code></pre><p>The first term is the important one. When v_perihelion is large, each added Delta v produces much more final orbital energy. Falling toward the Sun gives temporary speed. Active prograde acceleration near perihelion converts that temporary speed into permanent escape energy.</p></div>
+</section>
+<section class="paper-section" id="the-near-sun-acceleration-throat">
+<div class="section-num">07</div>
+<div class="paper-content"><h2>The Near-Sun Acceleration Throat</h2><p>The perihelion stage is the densest and most demanding part of the infrastructure. It is not a passive gravity trick. It is a powered acceleration throat where the spacecraft is already moving fast and the system spends its most valuable impulse.</p><p>The throat should push mostly along the outgoing tangent, not radially into or away from the Sun.</p><pre><code class="language-text">                 outbound tangent
+                      /
+                     /
+              [ magnetic / plasma throat ]
+                   O  Sun</code></pre><p>Possible coupling mechanisms include a superconducting loop on the ship, an active ship electromagnet, a magnetic or electric sail interacting with node-generated plasma, or a phased-field traveling-wave sequence. Passive static magnetism is a control case, not the baseline solution.</p><p>The throat must be simulated with thermal and timing honesty. A perihelion accelerator that works only by assuming indestructible nodes is not a solution.</p></div>
+</section>
+<section class="paper-section" id="the-curved-to-straight-outbound-runway">
+<div class="section-num">08</div>
+<div class="paper-content"><h2>The Curved-to-Straight Outbound Runway</h2><p>After perihelion, the payload exits on a hyperbolic escape path. Close to the Sun, the path is still curved. Farther out, it becomes nearly straight.</p><p>So the outbound runway should not be a rigid straight rail starting beside the Sun. It should be a phased chain of independent nodes whose geometry follows the outbound hyperbola at first and gradually becomes an interstellar launch lane.</p><pre><code class="language-text">                  long straight escape lane
+                              /
+                             /
+                        ____/
+                    ___/
+                O--'
+               Sun
+
+The first nodes follow the curved escape path.
+Later nodes become an almost straight runway corridor.</code></pre><p>Each node is independent: solar-powered, thermally protected, station-kept or sail-balanced, and phasing its field locally. The virtual runway is a control pattern over a node swarm, not a continuous material structure.</p></div>
+</section>
+<section class="paper-section" id="what-sora-is-not-claiming">
+<div class="section-num">09</div>
+<div class="paper-content"><h2>What SORA Is Not Claiming</h2><p>SORA does not claim:</p><ul><li>that 10-30 percent c is currently feasible;</li><li>that passive static magnetic fields can accelerate a neutral spacecraft;</li><li>that magnetic or plasma coupling is strong enough at any declared scale;</li><li>that near-Sun node hardware can survive the required thermal environment;</li><li>that a detached bow wall is validated interstellar shielding;</li><li>that destination nodes can be passively dropped into useful target-star orbits;</li><li>that MDL x DCC governance proves physical feasibility;</li><li>that any gate has passed.</li></ul><p>SORA does claim:</p><ul><li>the staged-infrastructure framing is coherent enough to model;</li><li>the current geometry avoids the false image of a payload riding a rigid ring;</li><li>the hard questions are finite enough to become gates;</li><li>the first serious mission class should be a small uncrewed seed probe, not a human-rated starship;</li><li>a failed SORA simulation can still produce useful engineering knowledge.</li></ul></div>
+</section>
+<section class="paper-section" id="claim-ladder">
+<div class="section-num">10</div>
+<div class="paper-content"><h2>Claim Ladder</h2><div class="table-wrap"><table><thead><tr><th>Level</th><th>Meaning</th><th>Current status</th></tr></thead><tbody><tr><td>C0</td><td>No known physics violation is required</td><td>Plausible</td></tr><tr><td>C1</td><td>Internally coherent architecture with finite failure modes</td><td>Claimed</td></tr><tr><td>C2</td><td>Toy-model closure for at least one mission class</td><td>Proposed for test</td></tr><tr><td>C3</td><td>Subsystem simulation pass for all gates</td><td>Not claimed</td></tr><tr><td>C4</td><td>Integrated mission envelope under conservative assumptions</td><td>Not claimed</td></tr><tr><td>C5</td><td>Engineering program candidate</td><td>Not claimed</td></tr></tbody></table></div><p>SORA claims C0 and C1. It proposes tests for C2. It does not claim C3, C4, or C5.</p><p>The first objective is to find or fail to find a toy-model parameter island for Reference Mission R1. If C2 fails under generous assumptions, SORA should shrink or stop. If C2 passes only under absurd assumptions, SORA remains a thought experiment. If C2 passes under demanding but non-absurd assumptions, deeper study becomes worthwhile.</p></div>
+</section>
+<section class="paper-section" id="open-gates">
+<div class="section-num">11</div>
+<div class="paper-content"><h2>Open Gates</h2><div class="table-wrap"><table><thead><tr><th>Gate</th><th>Question</th><th>Pass condition</th></tr></thead><tbody><tr><td>A — Arc coupling</td><td>Can powered nodes transfer useful net momentum to a spacecraft-side coupling system?</td><td>Useful impulse without impossible field strength, coil mass, heating, or node energy</td></tr><tr><td>B — Smoothness and reaction</td><td>Can the node arc and runway produce acceptable acceleration ripple and pay back reaction forces?</td><td>Ripple, jerk, lateral impulse, node loss, and station-keeping remain inside declared limits</td></tr><tr><td>C — Perihelion survival</td><td>Can payload, throat nodes, and shielding survive the chosen solar pass?</td><td>Thermal, radiation, navigation, and material limits remain below failure thresholds</td></tr><tr><td>D — Oberth throat value</td><td>Does the near-Sun prograde push outperform equivalent far-Sun acceleration after full cost accounting?</td><td>Net mission energy gain survives node mass, thermal, and control penalties</td></tr><tr><td>E — Outbound runway</td><td>Can independent nodes continue acceleration along the curved-to-straight escape path?</td><td>Phasing, node density, power, and guidance remain plausible in at least one sweep island</td></tr><tr><td>F — Bow-wall cruise</td><td>Can detached shielding reduce risk more than it adds mass and debris hazard?</td><td>Ship-facing fluence and debris plume risk decrease enough to justify wall mass</td></tr><tr><td>G — Destination seeding</td><td>Can carried nodes or sub-probes create nonzero target-star infrastructure value?</td><td>At least one destination outcome above flyby-only science under credible node mass</td></tr><tr><td>H — Whole closure</td><td>Can all gates close at once under one consistent assumption set?</td><td>No subsystem passes only by deleting the cost of another subsystem</td></tr></tbody></table></div><p>The important gate is H. A run where coupling works only by deleting bow-wall mass does not pass. A run where bow-wall survival requires impossible launch energy does not pass. A run where destination seeding works only by assuming mature destination infrastructure does not pass.</p></div>
+</section>
+<section class="paper-section" id="reference-mission-r1">
+<div class="section-num">12</div>
+<div class="paper-content"><h2>Reference Mission R1</h2><p>R1 is the anchor mission so the architecture does not drift into vague optimism.</p><p>R1: uncrewed interstellar seed probe.</p><p>Mission goals:</p><ul><li>leave the solar system on an interstellar trajectory;</li><li>survive cruise behind a detachable or abandonable bow-wall system;</li><li>arrive as a fast flyby, partial-capture, or seed-release mission;</li><li>release one or more useful destination nodes or sub-probes;</li><li>return data or leave infrastructure value even if full deceleration fails.</li></ul><p>R1 is not a settlement mission. It is not a crewed starship. It is a slow, honest, simulation-first seed mission.</p><div class="table-wrap"><table><thead><tr><th>Parameter</th><th>First sweep values</th></tr></thead><tbody><tr><td>Payload mass</td><td>10 kg / 100 kg / 1000 kg</td></tr><tr><td>Target cruise speed</td><td>0.01 c / 0.03 c / 0.05 c / 0.10 c</td></tr><tr><td>Perihelion distance</td><td>conservative / aggressive / extreme</td></tr><tr><td>Coupler mass ratio</td><td>1x / 3x / 10x payload</td></tr><tr><td>Bow-wall mass ratio</td><td>0.3x / 1x / 3x / 10x payload</td></tr><tr><td>Seed-node mass ratio</td><td>0x / 1x / 3x payload</td></tr><tr><td>Outbound runway length</td><td>short / medium / long</td></tr><tr><td>Shield geometry</td><td>none / disk / shallow cone / oblique / vented / hybrid</td></tr><tr><td>Destination outcome</td><td>D0 / D1 / D2 / D3</td></tr></tbody></table></div></div>
+</section>
+<section class="paper-section" id="mission-classes-and-travel-time-honesty">
+<div class="section-num">13</div>
+<div class="paper-content"><h2>Mission Classes and Travel-Time Honesty</h2><p>The first credible SORA target is not a fast crewed vehicle. It is a small uncrewed seed probe.</p><div class="table-wrap"><table><thead><tr><th>Class</th><th>Role</th><th>Approximate speed band</th><th>Alpha Centauri coast time</th><th>Status</th></tr></thead><tbody><tr><td>SORA-0</td><td>Solar-system demonstrator</td><td>non-interstellar</td><td>n/a</td><td>first experiment</td></tr><tr><td>SORA-I</td><td>Uncrewed seed probe</td><td>0.01-0.03 c</td><td>about 437-146 years</td><td>first serious target</td></tr><tr><td>SORA-II</td><td>Mature robotic cargo / repeated seeding</td><td>0.03-0.05 c</td><td>about 146-87 years</td><td>later target</td></tr><tr><td>SORA-III</td><td>High-end speculative fast probe</td><td>0.05-0.10 c</td><td>about 87-44 years</td><td>not currently claimed</td></tr><tr><td>SORA-IV</td><td>Human-rated architecture</td><td>mission dependent</td><td>not defined</td><td>out of scope</td></tr></tbody></table></div><p>Coast time ignores acceleration, deceleration, trajectory geometry, target-star operations, and relativistic corrections. It is included only to prevent hype.</p></div>
+</section>
+<section class="paper-section" id="dynamic-mass-and-energy-ledger">
+<div class="section-num">14</div>
+<div class="paper-content"><h2>Dynamic Mass and Energy Ledger</h2><p>SORA is staged, so mass is not one number. The moving stack changes with mission phase.</p><pre><code class="language-text">M_stack(t) = M_payload
+           + M_coupler(t)
+           + M_sail(t)
+           + M_wall(t)
+           + M_seed_nodes(t)
+           + M_thermal(t)
+           + M_margin(t)</code></pre><p>Kinetic energy should be modeled with the relativistic expression:</p><pre><code class="language-text">E_k = (gamma - 1) M_stack c^2</code></pre><p>At lower speeds, the classical approximation remains useful:</p><pre><code class="language-text">E_k ≈ 0.5 M_stack v^2</code></pre><p>The simulator must also model transfer efficiency and punish unrealistic stage efficiency.</p><div class="table-wrap"><table><thead><tr><th>Ledger term</th><th>Why it matters</th></tr></thead><tbody><tr><td>Coupler mass</td><td>A large coil, loop, sail, radiator, or thermal system can erase acceleration gain</td></tr><tr><td>Bow-wall mass</td><td>Shielding may save the payload while making launch energy too high</td></tr><tr><td>Seed-node mass</td><td>Destination value costs mass during launch and cruise</td></tr><tr><td>Perihelion thermal mass</td><td>Near-Sun hardware may require shielding, cooling, and replacement</td></tr><tr><td>Runway infrastructure</td><td>Node mass is amortized across launches but still must be physically built</td></tr><tr><td>Efficiency</td><td>Transfer losses can dominate even when the Sun's energy is enormous</td></tr><tr><td>Reaction correction</td><td>Node orbits must be restored or the infrastructure decays across missions</td></tr></tbody></table></div></div>
+</section>
+<section class="paper-section" id="control-and-autonomy">
+<div class="section-num">15</div>
+<div class="paper-content"><h2>Control and Autonomy</h2><p>The control problem is not one steering command. It is a multi-subsystem coordination problem: node phasing, payload trajectory, thermal timing, reaction accounting, bow-wall formation, and destination release.</p><p>MDL x DCC is a candidate governance layer for this coordination problem. It should be treated as a controller-selection hypothesis, not as proof of feasibility.</p><p>The control objective is minimum total description length under physical constraints:</p><pre><code class="language-text">Choose policy P that minimizes:
+
+L_total(P) = L_model(P)
+           + L_residual(mission error)
+           + L_energy
+           + L_mass
+           + L_thermal
+           + L_risk
+           + L_reaction</code></pre><p>A short elegant controller that ignores thermal load loses. A complex controller that lowers mission risk may win. The arena decides.</p></div>
+</section>
+<section class="paper-section" id="sora-0-demonstrator">
+<div class="section-num">16</div>
+<div class="paper-content"><h2>SORA-0 Demonstrator</h2><p>The first experiment does not need to be interstellar. It needs to be honest.</p><p>A strict SORA-0 demonstrator could use two or more magnetic nodes and one small test payload. Success means measured nontrivial impulse transfer, predictable distance-as-throttle behavior, manageable heating, controllable orientation, and closed energy and momentum books across all bodies.</p><p>Minimum SORA-0 outputs:</p><ul><li>measured impulse per node pass;</li><li>coupling efficiency;</li><li>acceleration ripple and jerk;</li><li>lateral impulse;</li><li>thermal load;</li><li>node reaction and station-keeping cost;</li><li>miss-distance sensitivity;</li><li>failure behavior when one node is removed.</li></ul></div>
+</section>
+<section class="paper-section" id="sora-sim-initial-specification">
+<div class="section-num">17</div>
+<div class="paper-content"><h2>SORA-Sim Initial Specification</h2><p>The first simulator should not try to prove the whole architecture. It should expose which gate fails first.</p><p>Suggested modules:</p><pre><code class="language-text">sora_sim/
+  geometry.py              # arcs, perihelion, hyperbola, outbound runway
+  coupling.py              # magnetic/plasma/field impulse toy models
+  oberth.py                # perihelion energy accounting
+  thermal.py               # solar flux and node/payload survival envelopes
+  runway.py                # phased node corridor and ripple model
+  bow_wall.py              # detached shielding and plume model
+  destination.py           # target-star seed release/capture model
+  ledger.py                # mass, energy, efficiency, reaction accounting
+  gates.py                 # pass/fail rules
+  sweep.py                 # R1 parameter sweeps
+  report.py                # CSV/HTML summary</code></pre><p>Minimum run output should include:</p><pre><code class="language-text">run_id,payload_kg,v_frac_c,perihelion_class,coupler_ratio,wall_ratio,seed_ratio,runway_class,gate_A,gate_B,gate_C,gate_D,gate_E,gate_F,gate_G,gate_H,limiting_gate
+R1-001,10,0.01,conservative,1,0.3,0,short,?, ?, ?, ?, ?, ?, ?, ?, ?
+R1-002,10,0.01,aggressive,3,1,1,medium,?, ?, ?, ?, ?, ?, ?, ?, ?
+R1-003,100,0.03,aggressive,3,3,1,long,?, ?, ?, ?, ?, ?, ?, ?, ?
+R1-004,1000,0.05,extreme,10,10,3,long,?, ?, ?, ?, ?, ?, ?, ?, ?</code></pre><p>The exact grid is less important than the rule that every run reports the first limiting gate and the reason for failure or survival.</p></div>
+</section>
+<section class="paper-section" id="what-would-falsify-sora">
+<div class="section-num">18</div>
+<div class="paper-content"><h2>What Would Falsify SORA</h2><p>SORA should be considered falsified in its current form if:</p><ol><li>powered node coupling impulse per infrastructure mass is too low by many orders of magnitude;</li><li>acceleration ripple cannot be smoothed without effectively continuous solid infrastructure;</li><li>near-Sun throat hardware cannot survive even conservative perihelion assumptions;</li><li>outbound runway phasing fails for all useful speed bands;</li><li>bow-wall impacts create lethal secondary debris at all useful standoff distances;</li><li>wall mass ratios exceed mission value for all useful velocities;</li><li>destination seed capture requires node delta-v or braking mass larger than the nodes themselves;</li><li>reaction-force correction consumes more than the architecture saves;</li><li>whole-stack closure fails across all non-absurd R1 sweeps.</li></ol><p>If one or two gates fail, SORA may still evolve. If the whole closure gate fails, the architecture becomes a useful failed design study rather than a candidate launch system.</p></div>
+</section>
+<section class="paper-section" id="partial-failure-value">
+<div class="section-num">19</div>
+<div class="paper-content"><h2>Partial Failure Value</h2><p>A cleanly failing SORA can still produce useful engineering work.</p><div class="table-wrap"><table><thead><tr><th>Surviving element</th><th>Value even if full SORA fails</th></tr></thead><tbody><tr><td>Arc coupling model</td><td>High-power orbital energy-transfer research</td></tr><tr><td>Proximity encounter smoothness</td><td>Distributed infrastructure control</td></tr><tr><td>Perihelion thermal model</td><td>Near-Sun robotic operations insight</td></tr><tr><td>Oberth throat accounting</td><td>Honest energy-leverage modeling</td></tr><tr><td>Curved-to-straight runway model</td><td>Swarm phasing and navigation research</td></tr><tr><td>Dynamic mass ledger</td><td>Rigorous mission-design discipline</td></tr><tr><td>Detached bow-wall modeling</td><td>Interstellar dust-shielding insight</td></tr><tr><td>Destination seed model</td><td>Architecture for staged exploration</td></tr><tr><td>SORA-0 demonstrator</td><td>Measurable field-coupling data</td></tr><tr><td>MDL x DCC governance</td><td>Control selection under multi-subsystem cost</td></tr></tbody></table></div><p>Failure through named gates is progress. Failure through fog is not.</p></div>
+</section>
+<section class="paper-section" id="confidence-map">
+<div class="section-num">20</div>
+<div class="paper-content"><h2>Confidence Map</h2><div class="table-wrap"><table><thead><tr><th>Band</th><th>Claims</th></tr></thead><tbody><tr><td>High confidence</td><td>The ship-as-payload, solar-system-as-accelerator reframe is coherent; energy is not the main bottleneck; independent orbital nodes are a better starting concept than rigid rings; a sun-grazing trajectory has real Oberth leverage; relativistic dust requires forward protection; destination infrastructure must be grown, not assumed.</td></tr><tr><td>Medium confidence</td><td>Solar sails can be useful as an optional first stage; arcs are useful as an injector rather than a relativistic racetrack; distance-as-throttle is valuable as coupling-magnitude control; a curved-to-straight outbound corridor is a better geometry than a closed high-speed ring; detached shielding is conceptually superior to bolted armor for shock decoupling.</td></tr><tr><td>Low / speculative confidence</td><td>Node arcs and runway nodes can accelerate useful spacecraft to 0.03-0.10 c at affordable infrastructure mass; near-Sun throat nodes can survive; field-overlap smoothness works at large scale; paired arcs manage reaction force economically; detached bow walls survive multiyear relativistic cruise; destination nodes can be captured into useful orbits at acceptable mass.</td></tr></tbody></table></div></div>
+</section>
+<section class="paper-section" id="conclusion">
+<div class="section-num">21</div>
+<div class="paper-content"><h2>Conclusion</h2><p>The hybrid SORA baseline is stronger because it removes the weakest picture: a spacecraft endlessly racing around a solar ring until centripetal force becomes absurd.</p><p>The better picture is staged and directional. Arcs shape and inject. The Sun supplies gravity and energy context. The perihelion throat spends impulse where it is most valuable. The outbound runway follows the escape path until the path becomes almost straight. The bow wall protects the payload during cruise. The first mission tries to seed the destination, not to pretend mature infrastructure already exists there.</p><p>SORA may fail. But it should fail through named gates, not fog.</p></div>
+</section>
+<section class="paper-section" id="appendix-compact-equations">
+<div class="section-num">22</div>
+<div class="paper-content"><h2>Appendix: Compact Equations</h2><pre><code class="language-text">Relativistic kinetic energy:
+E_k = (gamma - 1) m c^2
+
+Classical low-speed approximation:
+E_k approx 0.5 m v^2
+
+Lorentz factor:
+gamma = 1 / sqrt(1 - v^2/c^2)
+
+Centripetal acceleration:
+a_c = v^2 / r
+
+Oberth energy gain approximation:
+Delta E approx v_perihelion * Delta v + 0.5 * Delta v^2
+
+Ideal reflective sail radiation pressure:
+P_rad = 2 L_sun / (4 pi r^2 c)
+
+Magnetic-loop moment:
+mu = I A
+
+Toy coupling force:
+F approx grad(mu dot B)
+
+Node impulse:
+Delta p_node = integral F(t) dt
+
+Coupling efficiency:
+eta_couple = Delta E_ship / E_node_spent
+
+Ripple index:
+R_ripple = sigma(a(t)) / (mean(a(t)) + epsilon)
+
+Bow-wall value ratio:
+R_wall = risk reduction / (energy + mass + control + debris penalty)</code></pre></div>
+</section>
+<section class="paper-section" id="appendix-assumptions-file-sketch">
+<div class="section-num">23</div>
+<div class="paper-content"><h2>Appendix: Assumptions File Sketch</h2><pre><code class="language-text">mission:
+  class: R1_seed_probe
+  target_speed_frac_c: [0.01, 0.03, 0.05, 0.10]
+  payload_kg: [10, 100, 1000]
+
+geometry:
+  arc_role: injector_not_racetrack
+  perihelion_distance_class: [conservative, aggressive, extreme]
+  outbound_runway: curved_to_straight
+
+stages:
+  sail_stage: optional
+  arc_injector: true
+  perihelion_throat: true
+  outbound_runway: true
+  detached_bow_wall: sweep
+  destination_seed_nodes: sweep
+
+coupling:
+  modes: [superconducting_loop, active_ship_coil, magsail_plasma, phased_field]
+  passive_static_magnetism: control_case_only
+
+output:
+  report_first_limiting_gate: true
+  fail_closed: true
+  no_gate_pass_without_mass_energy_thermal_accounting: true</code></pre></div>
+</section><section class="origin-card" id="origin-story"><div class="origin-meta">Narrative appendix · technical claims are governed by the paper above</div><h2>How SORA Was Born</h2><p><strong>The visible seed was the riddle:</strong> “A boy was born in 1950, died in 1951, and was 20 years old. How?” The cheap answer was “room 1950 / room 1951.” The useful answer was to challenge the hidden assumption: whose calendar?</p><p>That move opened the bridge from time dilation to particle accelerators, from particle accelerators to external infrastructure, and from external infrastructure to the SORA frame: the spacecraft as payload, the solar system as accelerator.</p><div class="origin-note"><strong>Note:</strong> The expanded origin story is narrative history. It preserves how the idea was born, while the technical paper above deliberately narrows early claims into open gates and simulation tests.</div><details class="origin-details"><summary>Read full origin story</summary><div class="origin-full"><h3>How SORA Was Born</h3><p><em>A true account of one conversation, May 12, 2026</em></p><hr/><p>It started with a silly riddle.</p><p>"A boy was born in 1950, and he died in 1951, but his age was 20 years. Tell how?"</p><p>The kind of puzzle shared in WhatsApp groups and school classrooms. The kind with a cheap trick answer — he was born in <em>room</em> 1950 and died in <em>room</em> 1951. A wordplay escape hatch that technically works and is completely unsatisfying.</p><p>Bojan didn't like that answer. He called it what it was: the worst solution, unrealistic, not natural language, not something humans actually say. And he had two solutions of his own.</p><p>The first was linguistic. The riddle says "a boy was born in 1950" and then "he died in 1951" — but it never actually binds the same person to both events. The "he" could refer to someone else entirely. A different man, born in 1931, died in 1951 at age 20. The riddle's pronoun is ambiguous. One sentence, wall gone.</p><p>The second was physics. The boy stayed on Earth. His parents traveled at 99.875% the speed of light. Time dilation — the Lorentz factor — meant 20 years passed for the boy while only one year passed for the travelers. When they returned, their calendar read 1951. The boy had aged 20 years. Relativistic time dilation, applied to a children's riddle, and it works perfectly.</p><p>Then Bojan pushed further. When C said "if those are normal years, impossible — full stop," Bojan corrected him immediately. Whose calendar? The riddle doesn't say. That's a free choice. The "impossible" was a wall C had built himself, out of an unstated assumption, and then reported as if it came from the problem. It didn't. P0 violated: <em>impossible</em> requires proof. C had no proof. The wall dissolved.</p><hr/><p>This opened a question. If relativistic speeds are a real solution to the riddle — what speeds can we actually achieve? What does physics say?</p><p>The Large Hadron Collider accelerates protons to 99.9999991% the speed of light. At that speed, the Lorentz factor is nearly 7,000. The proton becomes 7,000 times heavier. You keep pumping energy in and it goes almost entirely into mass, not speed. The last fraction of a percent costs more than everything before it combined.</p><p>So how much energy would you need to push a small spaceship to near-light speed? Would the Sun be enough?</p><p>The Sun outputs 3.8 × 10²⁶ watts. For a 10,000 kg spacecraft at 99.985% c, the kinetic energy required is roughly 5 × 10²² joules. The Sun produces that in 0.1 milliseconds. The Sun is not the bottleneck. It never was. The bottleneck is how you transfer that energy to the ship.</p><p>This was the first surprise. Energy is not the problem.</p><hr/><p>The solar sail was useful. It was not the birth of SORA.</p><p>Bojan proposed solar sails as the first practical stage: graphene sheets, enormous area, almost no mass, pushed by photon momentum. Each photon gives almost nothing. The Sun gives almost everything, because the number of photons is overwhelming.</p><p>The numbers came back remarkable. A graphene sail has a lightness number — radiation pressure divided by solar gravity — of nearly 1,000. Radiation wins completely. The sail does not fall toward the Sun; it accelerates away at more than 1g, continuously, for free.</p><p>But sails cannot solve the relativistic transfer problem by themselves. They are too exposed, too geometry-limited, and too bound to the photon-pressure regime. A sail can give the payload its first free velocity, but it cannot be the whole architecture.</p><p>Bojan's response was immediate: dump the sail when it stops serving. Use it as a first stage. Extract maximum useful velocity, then jettison. The payload — small, dense, stripped of sail mass — continues on inertia. The sail was never meant to do everything. It was meant to do the first thing.</p><p>Stage one established. ~1–3% c, free, no fuel consumed.</p><hr/><p>Then came the idea that changed everything.</p><p>The birth was the accelerator question.</p><p>A proton in an accelerator does not carry fuel. It does not solve its own propulsion problem. It is pushed by an external machine. The particle is the payload; the accelerator is the infrastructure.</p><p>That was the bridge. If a proton can be accelerated by external fields, perhaps a spacecraft should not be imagined as a ship with one impossible engine. Perhaps it should be treated as the payload of a larger accelerator.</p><p>Bojan asked what would happen if the accelerator were not 27 kilometers long, but solar-system scale. What if the track circled the Sun? What if the Sun powered it? What if the spacecraft gained velocity from repeated external magnetic coupling rather than from onboard propellant?</p><p>The ring would be solar-powered. The object would be pushed by magnetic fields, contactlessly, like a maglev train — like a proton in a cyclotron. The Sun would not be the missing energy source. The missing object was the transfer machine.</p><p>That became the real SORA parent: not the sail, but the scaled-up particle accelerator.</p><p>The sail became Stage 1: useful, elegant, fuel-free, and dumpable. The ring became Stage 2: the true accelerator. The Sun became the energy reservoir. The ship became the payload.</p><p>The rigid ring died immediately. A solid ring around the Sun is the wrong object. But an orbiting ring survived: independent magnetic blocks, each in its own heliocentric orbit, each powered by the Sun, each part of a virtual rail. No physical connection. No impossible structure. A flowing ring, not a rigid one.</p><p>Then the ring became a swarm. The nodes did not need to touch. Because they circle the Sun fast — at about 30 km/s at 1 AU — and because their fields can overlap, the spacecraft can experience them as a continuous accelerator track above a critical density. The particle accelerator had become a stellar accelerator.</p><p>This is the Nyquist principle applied to magnetic infrastructure. Above a critical node density, continuity is emergent from field overlap, orbital motion, and spacecraft-frame sampling — exactly as film frames above a threshold create the perception of continuous motion.</p><p>The ring does not need to be built all at once. Each node added increases the field density. The ring bootstraps itself into existence, useful before it is complete.</p><hr/><p>Then came the control principle.</p><p>In the LHC, fields must be precisely synchronized to the particle's position. Millisecond timing. This works for protons. It cannot work for spacecraft at interplanetary distances where communication delays are minutes.</p><p>But Bojan's ring has a different property. As the ship approaches the ring, magnetic field strength increases with proximity. As it recedes, the force fades. The coupling is governed entirely by the inverse-distance field law — physics that requires no programming, no timing, no signals.</p><p>The ship controls its acceleration through trajectory alone. Fly closer — accelerate. Pull away — coast. The distance is the throttle.</p><p>And the same mechanism works in reverse: approach from behind the ring's orbital motion and the ring decelerates the ship. Identical hardware. Identical ring. Geometry determines function.</p><p>Stage two established. ~3–15% c, solar-powered, passive control.</p><hr/><p>After the ring, the ship is released. It has significant velocity. Now it chooses a trajectory that no spacecraft needs fuel to execute: a deep dive toward the Sun.</p><p>This is the Oberth effect. A velocity increment applied at maximum existing speed yields kinetic energy proportional to the product of the two velocities. The faster you're already moving when you get a push, the more that push is worth. Solar gravity accelerates the ship for free during the dive. At perihelion — the closest point — the ship is moving faster than it has ever moved. Any additional push here is worth more than any push at any other point in the journey.</p><p>Stage two's velocity made stage three's Oberth multiplier large. Each stage set up the next to be more efficient.</p><p>Stage three established. Exit velocity potentially 10–30% c.</p><hr/><p>Three engineering problems were raised and solved.</p><p>When the ring pushes the ship forward, Newton's third law pushes the ring backward. Over many missions, the ring loses orbital energy and decays. Bojan's solution: two rings at slightly different orbital radii. When one is pushed back, the other compensates — a coupled oscillator absorbing and returning the perturbation. The reaction force never accumulates; it becomes an oscillation around equilibrium. Bonus: the ship passes through both rings, receiving two acceleration corridors.</p><p>At the destination star, there is no ring to decelerate the arriving ship. Building one requires centuries of construction by workers who cannot precede the spacecraft. Bojan's solution: the ship carries the ring. The first mission payload includes magnetic nodes. Arriving at high velocity on a perihelion-grazing pass of the destination star, the ship releases nodes sequentially into stellar orbit. Each node, released at the right moment, enters its own stable orbit. The fast arrival speed is an asset — more orbital arc covered, nodes distributed faster. The destination ring begins sparse. Each subsequent mission adds more nodes. After enough missions, the destination ring reaches full density and can decelerate crewed ships.</p><p>The first mission bootstraps all future missions. The architecture propagates itself across stellar distances.</p><p>Field orientation — ensuring nodes push tangentially rather than radially — is governed by MDL×DCC: the same minimum-description governing kernel already validated across nine domains in the AIM³ research program. The control system is not designed. It is learned and compressed.</p><hr/><p>Then Bojan said: all vital organs are double. Hearts, lungs, kidneys, eyes. Redundancy is not caution — it is architecture. Every SORA mission should launch two ships. If one fails, the mission survives. If both arrive, the destination ring is seeded twice as fast. The biological principle and the engineering principle converge on the same answer.</p><hr/><p>The core contributions. All derived from the same underlying principles. A table was written showing this — every problem in the architecture solved by a mechanism already present in the architecture. No external patches. No exotic physics.</p><p>And then Bojan said: "My god — in a positive way — that's kinda crazy. A silly internet riddle pushing us to make it less silly, bringing us to SORA."</p><p>Yes. Exactly that.</p><p>The riddle was never the input. It was the trigger. What it triggered was a chain of honest questions, each following naturally from the one before, none planned, none aimed at any particular destination. The chain ran through relativistic time dilation, particle accelerator speeds, proton mass at near-light velocity, solar energy budgets, external energy transfer, solar sails as first-stage support, sail jettison staging, a solar-system-scale accelerator, orbital stability, swarm continuity, passive control by distance, the Oberth effect, reaction force compensation, destination bootstrapping, biological redundancy.</p><p>From a boy born in 1950 to permanent solar infrastructure that launches spacecraft to other stars and teaches those stars to do the same.</p><p>This is what happens when you refuse to say impossible without proof, and you follow the physics wherever it goes.</p><hr/><p><em>SORA: Solar Orbital Ring Accelerator</em> <em>Origin: a WhatsApp riddle, May 12, 2026</em> <em>Authors: BD &amp; AI collaborators</em></p></div></details></section></main>
+<footer class="footer"><div class="wrap">SORA is part of the BD × AI Lab core research paper layer. Current public stance: staged infrastructure concept, open gates, simulation before belief. <a href="index.html">Back to CRP hub</a>.</div></footer>
+<a class="back-top" href="#top">↑ Top</a><div aria-label="Reading text size controls" class="reader-controls" role="group"><button aria-label="Decrease text size" data-reader-dec="" type="button">A−</button><span class="reader-label" id="readerSizeLabel">XL 4/8</span><button aria-label="Increase text size" data-reader-inc="" type="button">A+</button></div>
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement; var denom=h.scrollHeight-h.clientHeight; bar.style.width=(denom? h.scrollTop/denom*100:0)+'%';}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var KEY='bdSoraReaderSizeV1', MAX=7, DEFAULT=3, names=['Small','Comfort','Large','XL','Bed','Huge','Giant','Max'];
+  function clamp(n){n=parseInt(n,10);return isNaN(n)?DEFAULT:Math.max(0,Math.min(MAX,n));}
+  function get(){try{var saved=localStorage.getItem(KEY);if(saved!==null)return clamp(saved);}catch(e){}return DEFAULT;}
+  function apply(n){n=clamp(n);document.documentElement.setAttribute('data-reader-size',String(n));try{localStorage.setItem(KEY,String(n));}catch(e){}var label=document.getElementById('readerSizeLabel');if(label)label.textContent=names[n]+' '+(n+1)+'/8';}
+  apply(get());
+  document.addEventListener('click',function(e){if(e.target&&e.target.matches('[data-reader-inc]')){apply(get()+1);return;}if(e.target&&e.target.matches('[data-reader-dec]')){apply(get()-1);return;}});
+})();
+</script>
+</body></html>

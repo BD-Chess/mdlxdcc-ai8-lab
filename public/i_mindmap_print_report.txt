@@ -1,0 +1,1 @@
+Root homepage rebuilt as a crawler-friendly complete research map. Practical demos promoted first: ChessBest, Flip 4 Magnetic, Sudoku, Trip Optimizer. /i.html now redirects to canonical root. Printable i.pdf regenerated and render-verified as 10 pages.

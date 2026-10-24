@@ -1,0 +1,10 @@
+{
+  "release": "TS_CPQ_SO_PROTECTED_PWA_R3",
+  "protection": "8Z_SHIELD_WHOLE_PAGE_STANDALONE_PASSWORD",
+  "round_trip_plaintext_sha256": "1672b4f51acba6cf3838bb78b53199a0730bd6efd88bad1b56dcca5102052802",
+  "round_trip_byte_identical": true,
+  "password_plaintext_present_in_wrapper": false,
+  "removed_internal_warning": true,
+  "slovenian_fullscreen_ui": true,
+  "pwa_cache": "ts-cpq-so-protected-r3"
+}

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RHP — Question Opening · Resonance · Work | BD × AI Lab</title>
+<meta name="description" content="RHP is an adaptive reasoning protocol for hard problems: open the right questions when representation is at risk, preserve free Resonance, reframe late, test what survives, and harden execution only when needed.">
+<meta name="theme-color" content="#020409">
+<link rel="canonical" href="https://www.mdlxdcc.org/BD/BD_AIM3_RHP.html">
+<style>
+:root{
+ --bg:#020409;--bg2:#070b12;--surface:#0f1729;--surface2:#131d31;
+ --line:rgba(52,211,153,.14);--line2:rgba(52,211,153,.30);
+ --ink:#e7edf6;--muted:#8192ae;--soft:rgba(231,237,246,.75);
+ --green:#34d399;--cyan:#00e5ff;--gold:#f59e0b;--rose:#ff6b8a;--violet:#a78bfa;
+ --greenDim:rgba(52,211,153,.10);--cyanDim:rgba(0,229,255,.10);
+ --goldDim:rgba(245,158,11,.11);--roseDim:rgba(255,107,138,.10);
+ --radius:13px;--shadow:0 18px 54px rgba(0,0,0,.34);--max:1080px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:
+ radial-gradient(circle at 18% 7%,rgba(52,211,153,.11),transparent 29%),
+ radial-gradient(circle at 83% 58%,rgba(0,229,255,.06),transparent 28%),
+ var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:hover{text-decoration:none}
+code,pre,.mono{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--green),var(--cyan));z-index:1000;width:0}
+.topnav{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:13px;overflow:auto;white-space:nowrap;padding:13px 5vw;background:rgba(2,4,9,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.topnav a{font:12px/1.4 ui-monospace,Consolas,monospace;letter-spacing:.04em;color:var(--muted)}
+.topnav a:hover,.topnav .active{color:var(--green)}.sep{opacity:.25}
+.wrap{max-width:var(--max);width:calc(100% - 72px);margin:auto}
+.hero{padding:88px 0 58px;border-bottom:1px solid var(--line)}
+.eyebrow{font:11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:24px;height:1px;background:var(--cyan)}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(42px,6.7vw,76px);line-height:1.01;letter-spacing:-.05em;margin:19px 0 20px;max-width:900px}
+h1 em{font-style:italic;color:var(--green)}
+.hero .lead{font-size:clamp(18px,2.2vw,22px);line-height:1.72;color:var(--soft);max-width:880px;margin:0}
+.hero .lead strong{color:var(--ink);font-weight:600}
+.badges{display:flex;gap:9px;flex-wrap:wrap;margin:29px 0 0}
+.badge{font:10px/1.5 ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:999px;border:1px solid var(--line2);background:var(--greenDim);color:var(--green)}
+.badge.gold{color:var(--gold);border-color:rgba(245,158,11,.30);background:var(--goldDim)}
+.badge.rose{color:var(--rose);border-color:rgba(255,107,138,.30);background:var(--roseDim)}
+.meta{margin-top:22px;color:var(--muted);font-size:13px;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:28px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--line2);border-radius:9px;background:var(--surface);font-size:13px;font-weight:650}
+.btn:hover{filter:brightness(1.14)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#03110c}
+.btn.cyan{color:var(--cyan);border-color:rgba(0,229,255,.32);background:var(--cyanDim)}
+main{padding:48px 0 80px}
+section{padding:49px 0 8px;border-top:1px solid var(--line)}
+section:first-child{border-top:0;padding-top:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.14;letter-spacing:-.025em;margin:0 0 17px}
+h3{font-size:19px;line-height:1.3;margin:0 0 9px}
+p{color:var(--soft);margin:0 0 16px}
+.lead2{font-size:18px;max-width:900px;line-height:1.8}
+.kicker{font:10px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:23px 0}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{min-width:0;background:linear-gradient(180deg,rgba(15,23,41,.97),rgba(8,13,24,.97));border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card p:last-child{margin-bottom:0}.card ul{margin-bottom:0}
+.callout{margin:22px 0;border-left:3px solid var(--green);background:var(--greenDim);padding:18px 20px;border-radius:0 var(--radius) var(--radius) 0}
+.callout.cyan{border-left-color:var(--cyan);background:var(--cyanDim)}
+.callout.gold{border-left-color:var(--gold);background:var(--goldDim)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:25px 0}
+.node{padding:9px 13px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);font:12px/1.45 ui-monospace,Consolas,monospace}
+.node.q{color:var(--cyan);border-color:rgba(0,229,255,.36);background:var(--cyanDim)}
+.node.g{color:var(--green);border-color:rgba(52,211,153,.38);background:var(--greenDim)}
+.node.gold{color:var(--gold);border-color:rgba(245,158,11,.34);background:var(--goldDim)}
+.arrow{color:var(--muted)}
+ul{color:var(--soft);padding-left:22px}li{margin:7px 0}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);margin:22px 0}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--green);font:11px/1.4 ui-monospace,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}
+td{color:var(--soft);font-size:14px}tr:last-child td{border-bottom:0}
+details{border:1px solid var(--line);border-radius:var(--radius);background:rgba(7,11,18,.82);margin:12px 0}
+summary{cursor:pointer;padding:16px 18px;color:var(--ink);font-weight:650}
+details>div{padding:0 18px 18px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#010308;border:1px solid var(--line);border-radius:10px;padding:18px;color:#b8c7dd;font-size:12px;line-height:1.72}
+.invocation{position:relative;background:#010308;border:1px solid var(--line2);border-radius:var(--radius);padding:22px;margin:21px 0}
+.invocation pre{border:0;padding:0;margin:0;background:none;font-size:14px;color:var(--ink)}
+.copy{margin-top:16px;border:1px solid rgba(0,229,255,.30);background:var(--cyanDim);color:var(--cyan);border-radius:8px;padding:9px 13px;cursor:pointer;font:12px ui-monospace,Consolas,monospace}
+.copy:hover{filter:brightness(1.2)}
+.family{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:23px 0}
+.family a{display:block;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);padding:18px;min-height:150px}
+.family a:hover{border-color:var(--line2);background:var(--surface2)}
+.family .tag{font:10px/1.5 ui-monospace,Consolas,monospace;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em}
+.family h3{margin-top:10px}.family p{font-size:13px;margin-bottom:0;color:var(--muted)}
+.pilot{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.arm{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);padding:19px}
+.arm b{font:700 22px/1 ui-monospace,Consolas,monospace;display:block;margin-bottom:11px}
+.arm.a b{color:var(--muted)}.arm.b b{color:var(--green)}.arm.c b{color:var(--gold)}
+footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:13px}
+footer a{color:var(--green)}
+@media(max-width:900px){.family{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){
+ .wrap{width:calc(100% - 36px)}.hero{padding-top:58px}
+ .grid,.grid.three,.pilot,.family{grid-template-columns:1fr}
+ h1{font-size:43px}.hero .lead{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.topnav,.progress,.copy{display:none}body{background:#fff;color:#111}.wrap{width:100%;max-width:none}.card,.arm,.family a{box-shadow:none}p,td,li,.hero .lead{color:#333}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="topnav" aria-label="AIM3 protocol navigation">
+ <a href="./">BD × AI Lab</a><span class="sep">/</span>
+ <a href="./BD_AIM3.html">AIM³</a><span class="sep">/</span>
+ <a class="active" href="#">RHP</a><span class="sep">/</span>
+ <a href="./RHP.md">RHP.md</a><span class="sep">/</span>
+ <a href="./BD_AIM3_RHPm.html">RHPm · Prompt Builder</a><span class="sep">/</span>
+ <a href="./BD_AIM3_RHPr.html">RHPr</a><span class="sep">/</span>
+ <a href="../crp/AI8_Reasoning.html">8Z Reasoning</a>
+</nav>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="eyebrow">AIM³ · Resonance Hybrid Protocol</div>
+  <h1>Ask before you collapse.<br><em>Test before you believe.</em></h1>
+  <p class="lead"><strong>RHP is an adaptive reasoning protocol for hard problems.</strong> When the real risk is a bad representation, it opens the question space first. Then it protects free Resonance, reframes only after something has been learned, tests what survives, and adds Work controls only when execution or evidence actually requires them.</p>
+  <div class="badges">
+   <span class="badge">RHP 3.0-candidate R2</span>
+   <span class="badge">Standalone protocol</span>
+   <span class="badge gold">Q0 integrated</span>
+   <span class="badge rose">Not field validated</span>
+  </div>
+  <div class="hero-actions">
+   <a class="btn primary" href="#use">Use RHP</a>
+   <a class="btn" href="#architecture">Architecture</a>
+   <a class="btn cyan" href="./RHP.md">RHP.md · Full protocol →</a>
+   <a class="btn" href="./BD_AIM3_RHPm.html">RHPm · Prompt Builder →</a>
+  </div>
+  <p class="meta">Human architect / seed: <strong>Bojan Dobrečevič</strong> · developed with LLM collaborators · standalone RHP 3.0-candidate R2 · Seed Dreamer and pilot-control clarifications accepted in the MiraG ↔ MiraC peer-design pass · September 2026.</p>
+ </div>
+</header>
+
+<main class="wrap">
+<section id="architecture">
+ <div class="kicker">One surface · layered inside</div>
+ <h2>One command. The smallest sufficient machinery.</h2>
+ <p class="lead2">You should not have to choose between a “creative protocol” and a “work protocol” before the problem is understood. The public surface is simply <strong>RHP</strong>, and the complete governing source is one standalone <a href="./RHP.md"><strong>RHP.md</strong></a>. Internally it remains layered so reasoning, assurance and provider adaptation can be applied only where needed.</p>
+ <div class="grid three">
+  <div class="card">
+   <div class="kicker">Layer A</div><h3>RHP reasoning kernel</h3>
+   <p>Question Opening when representation is at risk, Dreamer/Child/Cartographer/Falsifier lenses, free Resonance, Bifurcation, late Reframing, Crystallize, Empiricist, Genome and skill extraction.</p>
+  </div>
+  <div class="card">
+   <div class="kicker">Layer B</div><h3>Work / assurance layer</h3>
+   <p>Capability checks, bounded candidate lanes, isolation/exposure records, evidence discipline, budget, verifier separation, artifact freeze, delivery and provenance—only when the task needs them.</p>
+  </div>
+  <div class="card">
+   <div class="kicker">Layer C</div><h3>Provider adapter</h3>
+   <p>The actual runtime facts: available tools, files, agents, isolation, web, code execution, costs and verification. No model label is treated as proof of capability.</p>
+  </div>
+ </div>
+ <div class="callout"><strong>Design rule:</strong> use the smallest projection that can still catch the named blind spot. A deterministic task does not need a council.</div>
+</section>
+
+<section>
+ <div class="kicker">The RHP flow</div>
+ <h2>Open → resonate → reframe → test → learn.</h2>
+ <div class="flow" aria-label="RHP flow">
+  <span class="node">Seed</span><span class="arrow">→</span>
+  <span class="node q">Q0 when needed</span><span class="arrow">→</span>
+  <span class="node">Question map</span><span class="arrow">→</span>
+  <span class="node g">Free Resonance</span><span class="arrow">→</span>
+  <span class="node g">Late Reframing</span><span class="arrow">→</span>
+  <span class="node">Crystallize</span><span class="arrow">→</span>
+  <span class="node gold">Empiricist / test</span><span class="arrow">→</span>
+  <span class="node q">Genome / next question</span>
+ </div>
+ <p>RHP is deliberately asymmetric. It expands early, but it does not stay vague forever. Ideas are allowed to remain different long enough to expose their real mechanisms; then tests, constraints and evidence decide what survives.</p>
+</section>
+
+<section id="q0">
+ <div class="kicker">Q0 · Question Opening</div>
+ <h2>The first mistake is often answering the wrong version of the problem.</h2>
+ <p class="lead2">Q0 is not a compulsory round of clever questions. It fires only when there is <strong>representation risk</strong>: a meaningful chance that the problem is framed in the wrong coordinates, assumptions, abstraction or causal direction.</p>
+ <div class="grid">
+  <div class="card">
+   <div class="kicker">Run Q0 when</div>
+   <ul>
+    <li>the request is materially under-framed or ambiguous;</li>
+    <li>another representation could change the search space;</li>
+    <li>a cross-domain structural bridge may matter;</li>
+    <li>a prior approach failed or collapsed into one attractor;</li>
+    <li>a carried <code>next_session_seed</code> deserves reopening;</li>
+    <li>the user explicitly asks for <code>questions first</code>.</li>
+   </ul>
+  </div>
+  <div class="card">
+   <div class="kicker">Do not run Q0 merely because</div>
+   <ul>
+    <li>the task is high-stakes;</li>
+    <li>the answer needs citations or strong verification;</li>
+    <li>the build is large;</li>
+    <li>the final artifact needs a separate verifier.</li>
+   </ul>
+   <p><strong>Assurance risk and representation risk are different axes.</strong></p>
+  </div>
+ </div>
+ <div class="callout cyan"><strong>Q0 rule:</strong> one question per active ideation function, no visible scoring, no early winner, no problem rewrite. The Cartographer maps the field; adoption waits.</div>
+</section>
+
+<section>
+ <div class="kicker">Questions without question theatre</div>
+ <h2>A question only matters if it can change the trajectory.</h2>
+ <p>RHP does not reward questions for sounding deep. A pure open question belongs in Q0; it does not replace the classic requirement to contribute a non-derivative idea during Resonance. A conjecture phrased as a question counts as an idea only when the content already states a mechanism or representation.</p>
+ <div class="grid">
+  <div class="card">
+   <div class="kicker">Pure question</div>
+   <h3>“What are we assuming?”</h3>
+   <p>Useful for opening the space. Not yet a mechanism.</p>
+  </div>
+  <div class="card">
+   <div class="kicker">Conjecture-question</div>
+   <h3>“What if the solver teaches the pyramid?”</h3>
+   <p>Grammatically a question; substantively already a proposed causal direction.</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="kicker">Resonance</div>
+ <h2>Freedom stays in the middle.</h2>
+ <p class="lead2">After Q0, RHP returns to ordinary free Resonance. There is no forced Question → Answer → Critique ceremony. Functions may build, challenge, bridge, contradict or ask again. The protocol protects difference without requiring theatrical disagreement.</p>
+ <div class="grid three">
+  <div class="card"><div class="kicker">Seed Dreamer + Dreamer Mode</div><h3>Transfer mechanisms</h3><p>In full RHP, one Seed Dreamer demonstrates naive questions and structural cross-domain transfer during the first three applicable Resonance rounds. After that it becomes ordinary; Dreamer Mode remains open to every function throughout.</p></div>
+  <div class="card"><div class="kicker">Child</div><h3>See it physically</h3><p>Fold it, move it, illuminate it, press it, listen to it. Break abstraction lock with embodied/geometric intuition.</p></div>
+  <div class="card"><div class="kicker">Falsifier</div><h3>Attack the load-bearing assumption</h3><p>Steelman the opposite. Preserve irreconcilable assumptions as Bifurcation Pairs until evidence can discriminate.</p></div>
+  <div class="card"><div class="kicker">Cartographer</div><h3>Map voids and bridges</h3><p>Track explored regions, missing territory, convergence and structural gaps—without becoming the judge.</p></div>
+  <div class="card"><div class="kicker">Crystallizer</div><h3>Compress what survived</h3><p>Turn an idea into its shortest useful formal statement. If it cannot compress, it is not yet understood.</p></div>
+  <div class="card"><div class="kicker">Empiricist</div><h3>Stop arguing. Test.</h3><p>After Crystallize, test surviving candidates and reasonable combinations instead of selecting the winner by rhetoric.</p></div>
+ </div>
+</section>
+
+<section>
+ <div class="kicker">Late Reframing</div>
+ <h2>Open early. Adopt late.</h2>
+ <p>Q0 proposes questions; it does not rewrite the problem. The late Reframing Gate sees the original seed, the Resonance field, and the questions that remained unengaged. Only then can a lower-complexity or better-grounded restatement replace the working formulation.</p>
+ <div class="callout gold"><strong>Why both?</strong> Early questions operate before evidence. Late Reframing operates after the field has learned something. They are different information states, not duplicate ceremonies.</div>
+</section>
+
+<section>
+ <div class="kicker">RHP Work</div>
+ <h2>Reason freely; harden execution proportionately.</h2>
+ <p class="lead2">RHP Work is not “the part that actually works”. Classic RHP already includes execution and testing. Work is the capability-aware assurance layer around that reasoning: freeze what matters, keep branch exposure honest, bound actions/cost, preserve raw candidates, and verify the delivered instance.</p>
+ <div class="flow">
+  <span class="node">Frozen objective</span><span class="arrow">→</span>
+  <span class="node q">R1q · question digest</span><span class="arrow">→</span>
+  <span class="node">candidate work</span><span class="arrow">→</span>
+  <span class="node g">R1_FREEZE / R1c</span><span class="arrow">→</span>
+  <span class="node">peer exposure</span>
+ </div>
+ <div class="grid">
+  <div class="card"><div class="kicker">No hindsight rewrite</div><p>When Q0 fires in partitioned Work, the question is checkpointed before candidate work starts. Later traces refer to that frozen digest, not to a prettier restatement written after success.</p></div>
+  <div class="card"><div class="kicker">Two useful controls</div><p>The Cold Challenger remains Q0-free. The Test Designer preregisters before Q0 output becomes visible. They preserve alternative framing and test independence.</p></div>
+ </div>
+ <p>When real isolation is unavailable, RHP does not pretend. Shared-context runs are labelled as shared and are not pooled with isolated runs as if they were the same treatment.</p>
+</section>
+
+<section>
+ <div class="kicker">Question learning</div>
+ <h2>Results should teach the system how to ask better next questions.</h2>
+ <p>The strongest version of the Question Laboratory is not a generator of more questions. It is a learning loop that retains only evidence-bound influence.</p>
+ <div class="table-wrap">
+  <table>
+   <thead><tr><th>Observed effect</th><th>Learning signal</th></tr></thead>
+   <tbody>
+    <tr><td>A frozen question precedes a visible representation change</td><td>Eligible</td></tr>
+    <tr><td>It changes a decision, branch transition or test definition</td><td>Eligible</td></tr>
+    <tr><td>It can be linked to an artifact diff or result path</td><td>Eligible</td></tr>
+    <tr><td>The system later says “this was the important question”</td><td><code>UNKNOWN</code> without trace</td></tr>
+   </tbody>
+  </table>
+ </div>
+ <p>Question-selection learning happens <strong>across sessions</strong>, not as self-confirming adaptation inside the same run.</p>
+</section>
+
+<section id="use">
+ <div class="kicker">Use it</div>
+ <h2>The front door stays short.</h2>
+ <p>Natural language remains valid. For a deliberate invocation, this is enough:</p>
+ <div class="invocation">
+<pre id="invoke">Use RHP.
+
+Outcome: [what I should receive]
+Sources: [files, links, connected sources, or none]
+Constraints: [what must be preserved or must not happen]
+Done when: [observable checks]</pre>
+  <button class="copy" id="copyBtn" type="button">Copy invocation</button>
+ </div>
+ <p>RHP chooses the smallest sufficient path. If you want the question field itself as the output, use <code>questions first</code>. If the request is rough and you mainly need a strong prompt for another session, use <strong>RHPm</strong>.</p>
+</section>
+
+<section>
+ <div class="kicker">RHP family</div>
+ <h2>Different tools for different bottlenecks.</h2>
+ <p>RHP 3.0 is self-contained: rough-request framing and Retrieval Escape are already inside <a href="./RHP.md"><strong>RHP.md</strong></a>. RHPm and RHPr remain useful focused companion tools, not runtime dependencies of RHP.</p>
+ <div class="family">
+  <a href="./BD_AIM3_RHPm.html"><div class="tag">Prompt forging</div><h3>RHPm · Prompt Builder</h3><p>Optional prompt-forging companion: turn a rough request into a strong, structured session prompt when you specifically want a reusable prompt artifact.</p></a>
+  <a href="./BD_AIM3_RHPr.html"><div class="tag">Retrieval anti-lock</div><h3>RHPr</h3><p>Optional focused anti-lock companion. Its core retrieval-escape logic is already integrated into standalone RHP 3.0.</p></a>
+  <a href="../crp/AI8_Reasoning.html"><div class="tag">Method spine</div><h3>8Z / AI8 Reasoning</h3><p>Seed → bridge → build → alternative explanation → kill test → result → transferable operator.</p></a>
+  <a href="./BD_AIM3.html"><div class="tag">System</div><h3>AIM³</h3><p>The wider human–AI continuity, coordination and research environment around these reasoning protocols.</p></a>
+ </div>
+</section>
+
+<section>
+ <div class="kicker">Validation boundary</div>
+ <h2>A strong architecture still has to earn its place.</h2>
+ <p class="lead2">The Question Opening extension is a converged design candidate, not a field-validated superiority claim. The first controlled test deliberately separates “questions help” from “an extra protected opening phase helps”.</p>
+ <div class="pilot">
+  <div class="arm a"><b>A</b><h3>Current RHP</h3><p>No Q0. Same task, model/runtime and total budget.</p></div>
+  <div class="arm b"><b>B</b><h3>RHP + Q0</h3><p>Triggered Question Opening when representation risk is frozen before the run.</p></div>
+  <div class="arm c"><b>C</b><h3>Placebo divergence</h3><p>Same protected opening budget, but an idea instead of a question. Classic: idea round 0. Partitioned: <code>R1i → candidate → R1c</code>.</p></div>
+ </div>
+ <div class="table-wrap">
+  <table>
+   <thead><tr><th>Pattern</th><th>What it would mean</th></tr></thead>
+   <tbody>
+    <tr><td>B &gt; C and B is non-inferior to A on deterministic correctness/cost</td><td>Evidence specific to the question form</td></tr>
+    <tr><td>B ≈ C &gt; A</td><td>Protected divergence / delayed commitment helps, not questions specifically</td></tr>
+    <tr><td>B ≈ C ≈ A</td><td>No detected Q0 benefit</td></tr>
+    <tr><td>B materially &lt; A/C</td><td>Q0 harms that task class or trigger</td></tr>
+   </tbody>
+  </table>
+ </div>
+ <p>For Q0, B uses <code>R1q → candidate → R1c</code>; C uses <code>R1i → candidate → R1c</code>. The opening budget is matched so the intended difference is <strong>question versus idea</strong>.</p>
+ <p><strong>Initial minimum:</strong> at least 3 fresh-session runs per arm per task, with no cross-run visibility and equal total budget.</p>
+ <p>No small pilot can establish universal superiority. The candidate advances only if the benefit survives cost, controls and multiple task families.</p>
+</section>
+
+<section>
+ <div class="kicker">Research status</div>
+ <h2>Open enough to discover. Bound enough to test.</h2>
+ <div class="grid">
+  <div class="card"><div class="kicker">Standalone R2 converged</div><p>The Q0 architecture was challenged across GPT and Claude branches; after restoring Seed Dreamer and the exact placebo-control shape, the standalone 3.0-candidate R2 consolidation is accepted as <code>CONVERGED_CANDIDATE</code>.</p></div>
+  <div class="card"><div class="kicker">Not canonical yet</div><p>The public page is a research candidate. Canonical promotion requires BD review and controlled evidence; the page does not self-authorize a protocol rewrite.</p></div>
+ </div>
+ <details>
+  <summary>Technical note: the Q0 / Work freeze boundary</summary>
+  <div>
+   <p><code>R1q</code> is a pre-candidate question checkpoint inside the existing Work Divergence Prelude. The existing normative <code>R1_FREEZE</code> remains the candidate/result freeze <code>R1c</code>. A future Work revision can carry the original <code>R1q</code> digest in the Branch Card's existing input digest/content-ID field so later question traces cannot quietly rewrite the original question.</p>
+  </div>
+ </details>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p><strong>RHP — Resonance Hybrid Protocol</strong> · BD × AI Lab · AIM³ · <a href="./RHP.md">RHP.md full source</a></p>
+  <p>Human architect / seed: Bojan Dobrečevič · LLM collaboration across multiple reasoning and review passes · candidate architecture updated 2026-09-23.</p>
+ </div>
+</footer>
+<script>
+(function(){
+ const p=document.getElementById('progress');
+ function progress(){const h=document.documentElement,den=h.scrollHeight-h.clientHeight;p.style.width=(den?Math.max(0,Math.min(100,100*h.scrollTop/den)):0)+'%'}
+ addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);progress();
+ const b=document.getElementById('copyBtn'),t=document.getElementById('invoke');
+ b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(t.textContent);b.textContent='Copied';setTimeout(()=>b.textContent='Copy invocation',1500)}catch(_){const r=document.createRange();r.selectNodeContents(t);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected — copy';}});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "schema_version": "8z-control.v0.1",
+  "title": "BD Arena Morning Delta",
+  "generated_at": "2026-09-12T17:18:51+02:00",
+  "previous_successful_refresh": "2026-09-12T09:01:47+02:00",
+  "source_boundary": "GPT PROJECT + VERIFIED GOOGLE DRIVE LIVE EXTRACTS",
+  "mode": "BD_AI8_VERIFIED_DRIVE_REFRESH",
+  "message": "Fresh verified Google Drive Home+Work evidence: six TSP lines are active; Sudoku HF4 acceptance and BDTA runtime are RUNNING; Materials and BBSH checkpoints advanced.",
+  "changes": [
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "8ztsp-r-v011-relational-native",
+      "old_status": null,
+      "new_status": "RUNNING",
+      "old_value": null,
+      "new_value": "Distinct v0.1.1 relational-native line restored as active on Work PC",
+      "evidence": "TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260912_154113_789517.zip",
+      "source_project_chat": "TSP & TSPES 2",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "sudoku-r6-proofatlas",
+      "old_status": "BUILD",
+      "new_status": "RUNNING",
+      "old_value": "HF2 build/confound review",
+      "new_value": "HF4 acceptance/selftest 258/443 with 0 failures/errors; long campaign not started",
+      "evidence": "SUDOKU_ACTIVE_ARENAS_LIVE_EXTRACTS_1_20260912_155706_361955.zip",
+      "source_project_chat": "Sudoku R6",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "bdta-v014",
+      "old_status": "BLOCKED",
+      "new_status": "RUNNING",
+      "old_value": "Open runtime incident",
+      "new_value": "Runtime repaired and RUNNING at 1,932/2,495 with 0 persistent errors; promotion gates still open",
+      "evidence": "TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_1_20260912_154426_921976.zip",
+      "source_project_chat": "BD Trading Atlas",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "materials-a3-legacy",
+      "old_status": "RUNNING",
+      "new_status": "RUNNING",
+      "old_value": "Legacy run retained as active",
+      "new_value": "Near 72h budget end at 1,662 epochs / 3,324 candidates / ~97.78%",
+      "evidence": "MATERIALS_ACTIVE_ARENAS_LIVE_EXTRACTS_2_20260912_155636_015738.zip",
+      "source_project_chat": "8zMaterials",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "materials-v020-native",
+      "old_status": "RUNNING",
+      "new_status": "RUNNING",
+      "old_value": "1,222 epochs / 39 historical F2 / 41 work-producing L2 selections",
+      "new_value": "next epoch 2,276 / 75 qualified F2 basins / 72 work-producing L2 selections / 0 promotions",
+      "evidence": "MATERIALS_ACTIVE_ARENAS_LIVE_EXTRACTS_2_20260912_155636_015738.zip",
+      "source_project_chat": "8zMaterials",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "bb-surfing-hedge",
+      "old_status": "RUNNING",
+      "new_status": "RUNNING",
+      "old_value": "14,084/20,160 behavior groups (69.861%)",
+      "new_value": "18,673/20,160 (92.624%); logical wallet 205,403/221,760; 0 persistent errors",
+      "evidence": "TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_1_20260912_155808_086574.zip",
+      "source_project_chat": "BB Surfing Hedge",
+      "confidence": "HIGH"
+    },
+    {
+      "timestamp": "2026-09-12T17:18:51+02:00",
+      "arena_id": "8ztsp-r-multiview",
+      "old_status": "RUNNING",
+      "new_status": "RUNNING",
+      "old_value": "0 completed visits / early snapshot",
+      "new_value": "Committed generation 2 and 8/64 proposals prove forward progress despite visits_completed=0",
+      "evidence": "TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260912_155656_303809.zip",
+      "source_project_chat": "TSP & TSPES 2",
+      "confidence": "HIGH"
+    }
+  ]
+}

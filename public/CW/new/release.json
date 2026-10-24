@@ -1,0 +1,19 @@
+{
+  "app_is_presentation_only": true,
+  "builder": "CW-UNIFIED-R1",
+  "generated_paths": [
+    "/CW/new/index.html",
+    "/CW/new/manifest.webmanifest",
+    "/CW/new/pwa.js",
+    "/CW/new/sw.js",
+    "/CW/new/release.json",
+    "/CW/new/icon.svg"
+  ],
+  "package_sha256": "d54cfda56bf06e5d89717a87372f02577a68753f761094924ccdc03f82bc73f2",
+  "release": "cw-lab-d54cfda56bf06e5d",
+  "schema": "bd.crosswords.lab.release.v1",
+  "source_commit": "e1957c02bb789ebb87fbba550617f8acc6cac833",
+  "source_path": "/CW/new/",
+  "source_v4_blob": "efc5203075ba935460bdb017d893a7c1c485da6c",
+  "storage_prefix": "8zCrosswords:LAB:v1:"
+}

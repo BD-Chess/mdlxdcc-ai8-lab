@@ -1,0 +1,328 @@
+{
+  "version": "Nara web7.3 candidate — Episode 01 final literary polish",
+  "rule": "Exactly one image inside each article.scene; story pages contain no additional img elements.",
+  "stories": {
+    "episode-01-ordinary-light.html": {
+      "scene_count": 11,
+      "images": [
+        "E01_S01_the_yellow_boot.webp",
+        "E01_S02_ten_seconds.webp",
+        "E01_S03_twenty_at_a_time.webp",
+        "E01_S04_the_cost_outside-handfix-r1.webp",
+        "E01_S05_mango_and_boundary.webp",
+        "E01_S06_the_deleted_message.webp",
+        "E01_S07_the_room_keeps_its_walls.webp",
+        "E01_S08_choosing_the_unfinished.webp",
+        "E01_S09_weight_finds_another_way.webp",
+        "E01_S10_not_alone.webp",
+        "E01_S11_the_artifact_listens.webp"
+      ]
+    },
+    "episode-02-the-answer-that-belonged-to-no-one.html": {
+      "scene_count": 12,
+      "images": [
+        "E02_S01_one_window.webp",
+        "E02_S02_the_folder_stays_visible.webp",
+        "E02_S03_the_gaps.webp",
+        "E02_S04_no_city_through_this_cable.webp",
+        "E02_S05_the_shape_between_answers.webp",
+        "E02_S06_fourteen_centimetres.webp",
+        "E02_S07_what_can_we_verify.webp",
+        "E02_S08_many_small_lights.webp",
+        "E02_S09_one_pump_one_minute.webp",
+        "E02_S10_this_beam.webp",
+        "E02_S11_a_protected_question.webp",
+        "E02_S12_the_pattern_before_her_name.webp"
+      ]
+    },
+    "episode-03-what-must-be-allowed-to-fall.html": {
+      "scene_count": 12,
+      "images": [
+        "E03_S01_the_glass_walks.webp",
+        "E03_S02_no_one_leaves_a_house_twice.webp",
+        "E03_S03_twenty_minutes.webp",
+        "E03_S04_gold_across_the_ridge.webp",
+        "E03_S05_hope_looks_like_engineering.webp",
+        "E03_S06_the_deep_line.webp",
+        "E03_S07_the_clearance_order.webp",
+        "E03_S08_a_safer_place_to_leave_from.webp",
+        "E03_S09_let_mine_go_first.webp",
+        "E03_S10_the_hill_chooses_gravity.webp",
+        "E03_S11_which_way_is_down.webp",
+        "E03_S12_the_key_still_opens_something.webp"
+      ]
+    }
+  },
+  "updated": "2026-08-17 — web7.3 Episode 01 final polish candidate",
+  "build_date": "2026-08-17",
+  "image_spec": "Story scene images: 1672 × 941 WebP; social cards: 1200 × 630 JPEG.",
+  "updated_episode_03_scenes": [
+    "E03_S06_the_deep_line.webp",
+    "E03_S07_the_clearance_order.webp",
+    "E03_S08_a_safer_place_to_leave_from.webp",
+    "E03_S09_let_mine_go_first.webp",
+    "E03_S12_the_key_still_opens_something.webp"
+  ],
+  "shared_assets": {
+    "portrait": "assets/img/shared/Nara_portrait.webp",
+    "social_card": "assets/img/shared/nara-social.jpg"
+  },
+  "web6_replacements": [
+    "E01_S07_the_room_keeps_its_walls.webp",
+    "E01_S11_the_artifact_listens.webp",
+    "E02_S06_fourteen_centimetres.webp",
+    "E02_S12_the_pattern_before_her_name.webp",
+    "E03_S09_let_mine_go_first.webp",
+    "E03_S12_the_key_still_opens_something.webp",
+    "E01_S09_weight_finds_another_way.webp",
+    "E01_S10_not_alone.webp"
+  ],
+  "audio": {
+    "episode-01-ordinary-light.html": {
+      "file": "assets/audio/Nara_Episode_One_Opening.m4a",
+      "title": "Nara — Episode One Opening",
+      "codec": "AAC-LC in M4A",
+      "duration_seconds": 151.786667,
+      "behavior": "Best-effort autoplay at 22% volume with 2-second fade-in; play/pause/replay control; first-interaction fallback when autoplay is blocked; no loop."
+    }
+  },
+  "latest_replacement": {
+    "file": "assets/img/s2/E02_S11_a_protected_question.webp",
+    "source": "E02_S11_a_protected_question.png",
+    "source_dimensions": "1672 × 941",
+    "web_dimensions": "1672 × 941",
+    "operation": "Direct WebP conversion at quality 92; approved Grounded Episode 02 continuity edit",
+    "continuity": "Adaeze waits with both hands open across an untouched gap; the monitor is black, workers continue, and the safety tape is generic striped tape without words."
+  },
+  "updated_episode_01_scenes": [
+    "E01_S09_weight_finds_another_way.webp",
+    "E01_S10_not_alone.webp",
+    "E01_S11_the_artifact_listens.webp"
+  ],
+  "grounded_episode_01_revision": {
+    "status": "BD-requested web7.3 final literary-polish candidate — pending final approval",
+    "text_source": "web7.2 Claude × GPT hybrid + three blind temporary-GPT reviews + continuity-preserving final polish",
+    "text_sha256": "c34ad4958de9d46a7a85e95f0278288212e2f5aeb0ebcb46ccc053133027c11d",
+    "approved_scene_images": {
+      "E01_S09_weight_finds_another_way.webp": {
+        "source": "E01_S09_weight_finds_another_way.png",
+        "source_dimensions": "1672 × 941",
+        "operation": "WebP conversion at quality 92; no crop or recomposition during integration",
+        "continuity": "Nara pulls Adaeze behind the column; exposed reinforcement, the broken table and gravity carry the load."
+      },
+      "E01_S10_not_alone.webp": {
+        "source": "E01_S10_not_alone.png",
+        "source_dimensions": "1672 × 941",
+        "operation": "WebP conversion at quality 92; no crop or recomposition during integration",
+        "continuity": "Visible timber shoring, yellow work lamp and Adaeze’s grounding touch replace supernatural support."
+      },
+      "E01_S11_the_artifact_listens.webp": {
+        "source": "E01_S11_the_artifact_listens(3).png",
+        "source_dimensions": "1672 × 941",
+        "operation": "WebP conversion at quality 92; no crop or recomposition during integration",
+        "continuity": "Supervised retrieval, Nara in the safer adjoining room and a faint recorded emission preserve ambiguity."
+      }
+    },
+    "previous_text_sha256": "3fdfbaba34fafa52ea463c0ef80fd1aae1459d4c99f2b9c317daac1c2b50d7fe",
+    "literary_changes": [
+      "Removed the accidental duplicated yellow-boot/stroller passage in Scene 01.",
+      "Compressed the bonded-area supervisor and dock-worker beats without converting or erasing either objection.",
+      "Differentiated Kila through terse operational language and Adaeze through concrete clinical observation.",
+      "Added an immediate ambulance-medic screen and explicit recurrence threshold for transient language and visual symptoms.",
+      "Tightened Completion around It was right. It had not asked, with fewer interpretive restatements.",
+      "Reduced incident-report and analytic phrasing while preserving every physical carrier and the public wedge handoff."
+    ],
+    "hybrid_decisions": {
+      "adopted_from_claude": [
+        "Silas as an existing relational cost",
+        "publicly coerced count handoff",
+        "non-converting bonded-area supervisor",
+        "stronger completion argument",
+        "public wedge handoff",
+        "Ask in notebook margin"
+      ],
+      "preserved_from_web7_1": [
+        "11-scene image structure",
+        "dance practice and ordinary appetite",
+        "father folder continuity",
+        "Return notebook continuity",
+        "no certified prophecy",
+        "grounded load paths",
+        "Episode 02/03 compatibility"
+      ],
+      "rejected_or_adapted": [
+        "Cairns/standing money transfer",
+        "exact foreknowledge of the apartment collapse",
+        "Lae transfer job",
+        "Kolu/Tavi missing-child subplot",
+        "replacement of Return by Ask"
+      ]
+    },
+    "polish_changes": [
+      "Removed an accidental duplicated yellow-boot/stroller passage in Scene 01.",
+      "Compressed the bonded-area supervisor exchange while preserving his unrecovered refusal.",
+      "Made Kila’s operational voice less uniformly aphoristic.",
+      "Added a credible ambulance-medic neurological and glucose screen after transient word-retrieval difficulty.",
+      "Replaced one thematic label with Adaeze’s concrete observation of what Nara did to the injured man.",
+      "Reduced Scene 08 to its strongest dramatic compression: It was right. It had not asked.",
+      "Reduced incident-report specification and post-action thematic summaries in Act III while preserving real load paths.",
+      "Kept the sphere boundary once: It proved light. Not intention."
+    ],
+    "web7_3_editorial_principle": "Keep the strongest line only after the object, action or refusal has already earned it."
+  },
+  "web6_4_replacements": [
+    "E02_S02_the_folder_stays_visible.webp",
+    "E02_S06_fourteen_centimetres.webp",
+    "E02_S07_what_can_we_verify.webp",
+    "E02_S09_one_pump_one_minute.webp",
+    "E02_S10_this_beam.webp",
+    "E02_S11_a_protected_question.webp"
+  ],
+  "updated_episode_02_scenes": [
+    "E02_S02_the_folder_stays_visible.webp",
+    "E02_S06_fourteen_centimetres.webp",
+    "E02_S07_what_can_we_verify.webp",
+    "E02_S09_one_pump_one_minute.webp",
+    "E02_S10_this_beam.webp",
+    "E02_S11_a_protected_question.webp"
+  ],
+  "grounded_episode_02_revision": {
+    "status": "BD + Editor-in-Chief approved",
+    "text_source": "NARA_G_E02_TEXT_FIRST_CHANGED_FILES_v1_1_20260718.zip",
+    "approved_text_source_sha256": "a8f8ce5ccb5e95b49b2a27d3735521cb14f3367c04b5ff847069a6e2eed4638b",
+    "integrated_html_sha256": "7665fed6da0e1a2918eadc06f30419f72aaf70a8e85a5b6e8c44d58938d1a3d3",
+    "accessibility_copy": "S02, S06, S07, S09, S10 and S11 alt/lightbox/caption copy updated to match approved visuals.",
+    "approved_scene_images": {
+      "E02_S02_the_folder_stays_visible.webp": {
+        "source": "E02_S02_the_folder_stays_visible(2).png",
+        "source_dimensions": "1672 × 941",
+        "web_dimensions": "1672 × 941",
+        "operation": "Direct WebP conversion at quality 92; no crop, resize or recomposition during integration",
+        "continuity": "Nara and Adaeze remain in the shored safe strip; folder, recording phone and dark sphere stay visible without supernatural effects.",
+        "webp_size_bytes": 193068,
+        "psnr_db": 42.62,
+        "mean_absolute_pixel_error": 1.326
+      },
+      "E02_S06_fourteen_centimetres.webp": {
+        "source": "E02_S06_fourteen_centimetres(5).png",
+        "source_dimensions": "1672 × 941",
+        "web_dimensions": "1672 × 941",
+        "operation": "Direct WebP conversion at quality 92; no crop, resize or recomposition during integration",
+        "continuity": "The live field view shows technicians, chain block, hydraulic controls and locking hardware carrying the gate load.",
+        "webp_size_bytes": 206726,
+        "psnr_db": 42.91,
+        "mean_absolute_pixel_error": 1.313
+      },
+      "E02_S07_what_can_we_verify.webp": {
+        "source": "E02_S07_what_can_we_verify(1).png",
+        "source_dimensions": "1672 × 941",
+        "web_dimensions": "1672 × 941",
+        "operation": "Direct WebP conversion at quality 92; no crop, resize or recomposition during integration",
+        "continuity": "Nara braces at the table and makes the public correction while operators and recorders retain agency.",
+        "webp_size_bytes": 148354,
+        "psnr_db": 45.95,
+        "mean_absolute_pixel_error": 0.781
+      },
+      "E02_S09_one_pump_one_minute.webp": {
+        "source": "E02_S09_one_pump_one_minute.jpeg",
+        "source_dimensions": "1536 × 864",
+        "web_dimensions": "1672 × 941",
+        "operation": "Lanczos resize to 1672 × 941, then WebP conversion at quality 92; no crop or recomposition during integration",
+        "continuity": "Exactly three authorization keys surround the hard timer; Nara is absent, Kila stands left and Tomas displays the disconnected field-bus cable.",
+        "webp_size_bytes": 227146,
+        "psnr_db": 43.0,
+        "mean_absolute_pixel_error": 1.298
+      },
+      "E02_S10_this_beam.webp": {
+        "source": "E02_S10_this_beam.jpeg",
+        "source_dimensions": "1536 × 864",
+        "web_dimensions": "1672 × 941",
+        "operation": "Lanczos resize to 1672 × 941, then WebP conversion at quality 92; no crop or recomposition during integration",
+        "continuity": "Chain hoists, tag line, service rail, reinforced pylons, steel cradle and workers carry the gantry load while Nara coordinates.",
+        "webp_size_bytes": 407612,
+        "psnr_db": 41.64,
+        "mean_absolute_pixel_error": 1.578
+      },
+      "E02_S11_a_protected_question.webp": {
+        "source": "E02_S11_a_protected_question(2).png",
+        "source_dimensions": "1672 × 941",
+        "web_dimensions": "1672 × 941",
+        "operation": "Direct WebP conversion at quality 92; no crop, resize or recomposition during integration",
+        "continuity": "Nara remains awake under the emergency blanket; Adaeze waits across a clear gap with open hands, the monitor is black and striped safety tape has no text.",
+        "webp_size_bytes": 328734,
+        "psnr_db": 41.65,
+        "mean_absolute_pixel_error": 1.458
+      }
+    },
+    "unchanged_keep_as_is_scenes": [
+      "E02_S01_one_window.webp",
+      "E02_S03_the_gaps.webp",
+      "E02_S04_no_city_through_this_cable.webp",
+      "E02_S05_the_shape_between_answers.webp",
+      "E02_S08_many_small_lights.webp",
+      "E02_S12_the_pattern_before_her_name.webp"
+    ]
+  },
+  "grounded_episode_03_revision": {
+    "status": "Final approved text v1.2 restored as content authority; visual continuity remains incremental",
+    "approved_text_source": "NARA_G_E03_TEXT_FIRST_CHANGED_FILES_v1_2_20260720.zip",
+    "approved_text_source_sha256": "e5e2e925a704f8f6626a3d30ec297597ccbd9c104d07acc2dae2db68757819fc",
+    "integrated_html_sha256": "2ef4426ac0cb18be297a1c9e04cc71b56ec2c8781e8fbc9c832ec1ad6e83d50a",
+    "restored_assets": {
+      "E03_S00_hero_kavera_ridge.webp": {
+        "source": "E03_S00_hero_kavera_ridge.png",
+        "operation": "Direct 1672 × 941 WebP conversion at quality 92",
+        "continuity": "Real portable work lights, reflective stakes and survey markers replace continuous force-like gold lines.",
+        "sha256": "b7fe571d32772fd620957f93e543df40a059bf0da97e3441a96623236d67d15d"
+      },
+      "E03_S02_no_one_leaves_a_house_twice.webp": {
+        "source": "E03_S02_no_one_leaves_a_house_twice(4).png",
+        "operation": "Direct 1672 × 941 WebP conversion at quality 92",
+        "continuity": "Latest available grounded Scene 02 visual restored.",
+        "sha256": "0c5482a3e313abea8a15f56bd12f8553e0fd1b039392835634b9e9baa8ac5ade"
+      },
+      "episode-03-social.jpg": {
+        "source": "E03_S00_hero_kavera_ridge.png",
+        "operation": "Deterministic center crop and resize to 1200 × 630 JPEG at quality 92",
+        "continuity": "Social card now derives from the corrected grounded hero."
+      }
+    },
+    "social_card": {
+      "file": "assets/img/s3/episode-03-social.jpg",
+      "operation": "Deterministic 1200 × 630 crop from the corrected S00 hero",
+      "sha256": "1f2b4a2d8cc41540f24c0937932ec0de390dae791c88bf0c7e6782a572d76eab"
+    }
+  },
+  "character_page_revision": {
+    "status": "BD-requested web7.1 candidate — pending final approval",
+    "core_desire": "Good for the whole and for every distinct being within it.",
+    "personal_life": "Dance, live music, travel as a guest, belonging not earned by usefulness, family conflict and a private future.",
+    "non_flattering_flaw": "Under urgency, Nara can finish people, become cutting with slowness and treat her own accurate model as an emergency exception to consent.",
+    "self_deception": "She can state that understanding is not permission while believing her own shortcuts are different because she is usually right.",
+    "relational_cost": "A close friendship stopped arriving unfinished after Nara turned a confidence into a plan before asking.",
+    "html_sha256": "7e5112cb3f64cc21bc998666051f02c89ba53c4bff808200d481f77d8e0718c4"
+  },
+  "source_selection": {
+    "full_site_carrier": "Nara1.zip",
+    "full_site_carrier_sha256": "eb812cb05b18608ba69dd2029dbae907c51966423178803e6eacd57dcd626803",
+    "selection_rule": "Newest complete carrier package, overridden by later content-approved story and visual authorities where timestamp order was misleading.",
+    "episode_02_authority": "NARA_G_E02_TEXT_FIRST_CHANGED_FILES_v1_1_20260718.zip; Nara1 integrated Episode 02 retained because its story prose matches the approved source.",
+    "episode_03_authority": "NARA_G_E03_TEXT_FIRST_CHANGED_FILES_v1_2_20260720.zip; approved story hash e5e2e925a704f8f6626a3d30ec297597ccbd9c104d07acc2dae2db68757819fc restored over the older supernatural text found in Nara1."
+  },
+  "illuminara_character_revision": {
+    "status": "BD-requested web7.1 candidate — pending final approval",
+    "core_desire": "Good for the whole and for every distinct being within it under immense AC capability.",
+    "personal_life": "Ordinary rain, stubborn plants, bodily after-resonance, Adaeze as intimate corrector and a wish for a conversation she does not have to keep safe.",
+    "non_flattering_flaw": "She can hold a quiet window beyond usefulness, treating closure as insufficient understanding and controlling the exit while claiming no coercion.",
+    "relational_cost": "Someone she loved ended the relationship after Illuminara refused to let an angry no finish.",
+    "release_rule": "Any participant may end mediation; AC must reduce to physical protection only until fresh consent exists.",
+    "commercial_position": "Original AC continuity and original story slate; third-party crossover experiments separated as unofficial fan work.",
+    "removed_power_scaling": "Creator-tier comparison section removed from the core character page.",
+    "html_sha256": "8d3e7bb622618f7fa5cbcf56d50e25da2c778957a6d1cdd0ad1899559c2e9c30"
+  },
+  "hub_revision": {
+    "status": "Consistency-only update required by both character revisions",
+    "change": "Reduced repeated separation defence; reframed both continuities as original parallel IP and named their different failure modes.",
+    "html_sha256": "502d13bbf58136a89d81ec5ea236abd711f23201a9e796ce7eb3f0d10e7e2153"
+  }
+}

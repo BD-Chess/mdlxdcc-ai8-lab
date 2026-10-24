@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Humanity — Deep Humanity: 300,000–20,000 BCE</title>
+<style>
+:root{
+  --bg:#05070d; --bg2:#090d18; --panel:#0d1324cc; --panel2:#121a31; --paper:#0b1020;
+  --line:#29314f; --line2:#3b456d; --text:#e7eaf2; --muted:#a4abc1; --dim:#69728f;
+  --gold:#f3c95b; --cyan:#69d7ff; --green:#57e39f; --rose:#ff6f91; --violet:#b69cff; --orange:#ffb36b;
+  --shadow:0 24px 80px rgba(0,0,0,.34);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--text); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size:17px; line-height:1.68; overflow-x:hidden;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(105,215,255,.14), transparent 35%),
+    radial-gradient(circle at 82% 12%, rgba(182,156,255,.12), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(87,227,159,.08), transparent 42%),
+    linear-gradient(180deg,#05070d 0%,#070911 42%,#04060a 100%);
+}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(95px);opacity:.33;pointer-events:none;z-index:-1}
+body:before{width:50vw;height:50vw;left:-18vw;top:-20vh;background:radial-gradient(circle,rgba(105,215,255,.38),rgba(30,60,150,.15) 52%,transparent 72%);animation:floatA 24s ease-in-out infinite}
+body:after{width:46vw;height:46vw;right:-20vw;bottom:-22vh;background:radial-gradient(circle,rgba(243,201,91,.18),rgba(182,156,255,.14) 45%,transparent 72%);animation:floatB 30s ease-in-out infinite}
+@keyframes floatA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(7vw,5vh,0)}}
+@keyframes floatB{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-6vw,-7vh,0)}}
+a{color:var(--cyan);text-decoration:none} a:hover{text-decoration:underline} ::selection{background:var(--gold);color:#06070c}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:1000;background:transparent}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold),var(--green));box-shadow:0 0 18px rgba(105,215,255,.35)}
+.topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(5,7,13,.86);border-bottom:1px solid rgba(105,215,255,.13)}
+.topbar-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 18px}.brand{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.68rem;color:var(--muted);border:1px solid rgba(105,215,255,.17);border-radius:999px;padding:4px 9px}.nav a:hover{color:var(--cyan);background:rgba(105,215,255,.08);text-decoration:none}
+.hero{max-width:1180px;margin:0 auto;padding:70px 18px 38px}.kicker{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--cyan);letter-spacing:.28em;text-transform:uppercase;font-size:.74rem;margin-bottom:16px}.hero h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.95;margin:0 0 18px;letter-spacing:-.055em}.hero h1 em{font-style:normal;color:var(--gold)}.subtitle{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--muted);max-width:820px}.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:26px 0 0}.metric{border:1px solid rgba(105,215,255,.14);background:linear-gradient(180deg,rgba(13,19,36,.75),rgba(9,13,24,.7));border-radius:14px;padding:14px 16px}.metric .n{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:1.4rem;color:var(--gold);font-weight:800}.metric .l{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.62rem;color:var(--dim);text-transform:uppercase;letter-spacing:.16em;margin-top:4px}.notice{margin-top:26px;border:1px solid rgba(243,201,91,.24);background:linear-gradient(135deg,rgba(243,201,91,.08),rgba(105,215,255,.05));border-left:4px solid var(--gold);border-radius:14px;padding:16px 18px;color:#f4edcf;max-width:920px}.notice strong{color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}.section-title{margin:28px 0 16px;display:flex;align-items:center;gap:12px}.section-title:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--line),transparent)}.section-title h2{font-size:1.35rem;margin:0;color:#fff}.toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:10px;margin-bottom:40px}.toc a{display:block;border:1px solid rgba(105,215,255,.13);background:rgba(13,19,36,.58);border-radius:12px;padding:12px 13px;color:var(--text);box-shadow:0 10px 26px rgba(0,0,0,.12)}.toc a:hover{text-decoration:none;border-color:rgba(105,215,255,.35);transform:translateY(-1px)}.toc .r{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.66rem;color:var(--cyan);letter-spacing:.08em}.toc .t{font-weight:800;margin-top:3px}.toc .f{font-size:.84rem;color:var(--muted);margin-top:4px}
+.a4-card{position:relative;margin:34px auto;border:1px solid rgba(105,215,255,.16);background:linear-gradient(180deg,rgba(13,19,36,.88),rgba(8,12,22,.96));border-radius:22px;box-shadow:var(--shadow);overflow:hidden;min-height:760px}.a4-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 12%,rgba(243,201,91,.08),transparent 34%),radial-gradient(circle at 8% 86%,rgba(105,215,255,.07),transparent 34%);pointer-events:none}.card-inner{position:relative;z-index:1;padding:34px clamp(22px,4vw,46px)}.card-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:1px solid rgba(105,215,255,.12);padding-bottom:14px;margin-bottom:22px}.card-num{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--gold);letter-spacing:.2em;font-size:.72rem;text-transform:uppercase}.range{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--cyan);font-size:.84rem}.confidence{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--dim);font-size:.64rem;text-transform:uppercase;letter-spacing:.14em}.a4-card h2{font-size:clamp(1.75rem,4vw,3.1rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.03em}.focus{font-size:1.02rem;color:var(--muted);font-style:italic;margin:0 0 18px}.story p{margin:.92em 0;color:rgba(231,234,242,.88)}.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}.mini{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:13px 14px;background:rgba(5,7,13,.36)}.mini .label{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.16em;margin-bottom:6px}.mini.good .label{color:var(--green)}.mini.bad .label{color:var(--rose)}.pattern{border:1px solid rgba(243,201,91,.22);border-radius:14px;padding:15px 16px;background:rgba(243,201,91,.06);margin-top:12px}.pattern b{color:var(--gold)}.bridge{border-left:3px solid var(--cyan);padding-left:14px;color:var(--muted);font-style:italic;margin-top:16px}.sources-inline{margin-top:20px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.7rem;color:var(--dim)}.src-ref{display:inline-flex;align-items:center;justify-content:center;min-width:2.2em;padding:.1em .45em;border:1px solid rgba(105,215,255,.25);border-radius:999px;margin-left:4px;color:var(--cyan)}.src-ref:hover{background:rgba(105,215,255,.1);text-decoration:none}
+.sources{margin:54px 0 80px;border:1px solid rgba(105,215,255,.14);background:rgba(13,19,36,.62);border-radius:18px;padding:22px}.sources h2{margin:0 0 8px}.source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}.source{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:13px 14px;background:rgba(5,7,13,.35)}.source .sid{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--gold);font-size:.72rem}.source a{display:block;font-weight:800;color:#fff;margin:3px 0}.source p{margin:.4em 0 0;color:var(--muted);font-size:.9rem}.footer-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:44px 0 90px}.footer-nav a{border:1px solid rgba(105,215,255,.18);border-radius:14px;padding:13px 16px;background:rgba(13,19,36,.64);color:var(--text)}.footer-nav a:hover{text-decoration:none;border-color:rgba(105,215,255,.38)}
+@media(max-width:720px){body{font-size:17.5px}.topbar-inner{align-items:flex-start;flex-direction:column}.split{grid-template-columns:1fr}.a4-card{min-height:auto}.card-top{flex-direction:column}.hero{padding-top:44px}.toc{grid-template-columns:1fr}}
+@media print{body{background:#fff;color:#111;font-size:12pt}.topbar,.progress,.hero,.section-title,.toc,.sources,.footer-nav{display:none}.wrap{max-width:none;padding:0}.a4-card{box-shadow:none;border:0;border-radius:0;background:#fff;color:#111;min-height:277mm;page-break-after:always;margin:0}.card-inner{padding:18mm}.story p,.mini,.bridge,.focus{color:#111}.mini,.pattern{border-color:#ccc;background:#fff}.a4-card:before{display:none}.range,.card-num,.src-ref{color:#111}.split{grid-template-columns:1fr 1fr}}
+
+/* === HISTORY MOBILE READER CONTROLS v0.6 START === */
+:root {
+  --hist-desktop-body:21px;
+  --hist-reader-body:25.5px;
+  --hist-reader-text:25.5px;
+  --hist-reader-small:17.5px;
+  --hist-reader-h1:56px;
+  --hist-reader-h2:40px;
+  --hist-reader-h3:30px;
+  --hist-reader-card-pad-x:22px;
+}
+html[data-reader-size="0"] { --hist-desktop-body:17px; --hist-reader-body:20px; --hist-reader-text:20px; --hist-reader-small:14px; --hist-reader-h1:40px; --hist-reader-h2:29px; --hist-reader-h3:23px; --hist-reader-card-pad-x:16px; }
+html[data-reader-size="1"] { --hist-desktop-body:18px; --hist-reader-body:21.5px; --hist-reader-text:21.5px; --hist-reader-small:15px; --hist-reader-h1:45px; --hist-reader-h2:32px; --hist-reader-h3:25px; --hist-reader-card-pad-x:18px; }
+html[data-reader-size="2"] { --hist-desktop-body:19px; --hist-reader-body:23px; --hist-reader-text:23px; --hist-reader-small:16px; --hist-reader-h1:50px; --hist-reader-h2:35px; --hist-reader-h3:27px; --hist-reader-card-pad-x:20px; }
+html[data-reader-size="3"] { --hist-desktop-body:21px; --hist-reader-body:25.5px; --hist-reader-text:25.5px; --hist-reader-small:17.5px; --hist-reader-h1:56px; --hist-reader-h2:40px; --hist-reader-h3:30px; --hist-reader-card-pad-x:22px; }
+html[data-reader-size="4"] { --hist-desktop-body:23px; --hist-reader-body:28px; --hist-reader-text:28px; --hist-reader-small:19px; --hist-reader-h1:62px; --hist-reader-h2:45px; --hist-reader-h3:34px; --hist-reader-card-pad-x:24px; }
+html[data-reader-size="5"] { --hist-desktop-body:25px; --hist-reader-body:31px; --hist-reader-text:31px; --hist-reader-small:20.5px; --hist-reader-h1:68px; --hist-reader-h2:50px; --hist-reader-h3:37px; --hist-reader-card-pad-x:26px; }
+html[data-reader-size="6"] { --hist-desktop-body:27px; --hist-reader-body:34px; --hist-reader-text:34px; --hist-reader-small:22px; --hist-reader-h1:74px; --hist-reader-h2:55px; --hist-reader-h3:40px; --hist-reader-card-pad-x:28px; }
+html[data-reader-size="7"] { --hist-desktop-body:29px; --hist-reader-body:38px; --hist-reader-text:38px; --hist-reader-small:24px; --hist-reader-h1:82px; --hist-reader-h2:62px; --hist-reader-h3:45px; --hist-reader-card-pad-x:30px; }
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body { font-size:var(--hist-desktop-body,21px) !important; }
+.reader-controls { position:fixed; right:max(12px,env(safe-area-inset-right)); bottom:max(14px,env(safe-area-inset-bottom)); z-index:2147483000; display:flex; align-items:center; gap:8px; padding:8px; border:1px solid rgba(105,215,255,.28); border-radius:999px; background:rgba(5,7,13,.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 18px 55px rgba(0,0,0,.42); color:#e7eaf2; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"JetBrains Mono",monospace; }
+.reader-controls button { min-width:44px; min-height:44px; border:1px solid rgba(105,215,255,.28); border-radius:999px; background:rgba(105,215,255,.08); color:#69d7ff; font:800 18px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,"JetBrains Mono",monospace; cursor:pointer; touch-action:manipulation; }
+.reader-controls button:hover,.reader-controls button:focus-visible { outline:none; background:rgba(105,215,255,.18); border-color:rgba(105,215,255,.55); }
+.reader-controls .reader-label { min-width:96px; text-align:center; color:rgba(231,234,242,.82); font-size:12px; letter-spacing:.08em; text-transform:uppercase; user-select:none; }
+@media(max-width:760px) {
+  body { font-size:var(--hist-reader-body) !important; line-height:1.78 !important; padding-bottom:92px; }
+  .wrap,.wrapper { padding-left:16px !important; padding-right:16px !important; }
+  p,li,.subtitle,.notice,.warning,.callout,.card p,.panel p,.source p,.stat,.hero-stat,.part-body,.file-line,.state p,.story p,.focus,.pattern,.bridge,.mini div:last-child,.gb,.narrative,.card-list .focus { font-size:var(--hist-reader-text) !important; line-height:1.76 !important; }
+  .nav a,.brand,.kicker,.eyebrow,.range,.card-num,.confidence,.card-top,.stat-label,.part-num,.part-meta,.source a,.sid,.sources-inline,code,.tag,.label,.tr,.toc-card .tr { font-size:var(--hist-reader-small) !important; line-height:1.55 !important; letter-spacing:.08em !important; }
+  h1,.hero-title { font-size:var(--hist-reader-h1) !important; line-height:.98 !important; letter-spacing:-.045em !important; }
+  h2,.a4-card h2,.era-card h2 { font-size:var(--hist-reader-h2) !important; line-height:1.06 !important; }
+  h3 { font-size:var(--hist-reader-h3) !important; line-height:1.12 !important; }
+  .a4-card,.era-card { max-width:100% !important; min-height:auto !important; padding:28px var(--hist-reader-card-pad-x) 32px !important; border-radius:14px !important; }
+  .split,.goodbad,.intro-grid,.hero-grid { grid-template-columns:1fr !important; }
+  .card-list,.toc-grid,.grid,.source-grid { grid-template-columns:1fr !important; }
+  .card-list li,.toc-card,.card,.source,.panel,.stat,.hero-stat { padding:15px 16px !important; }
+  .topbar-inner { gap:8px !important; }
+  .reader-controls { left:50%; right:auto; transform:translateX(-50%); bottom:max(12px,env(safe-area-inset-bottom)); padding:8px 10px; }
+  .reader-controls button { min-width:48px; min-height:48px; font-size:20px; }
+  .reader-controls .reader-label { min-width:112px; font-size:13px; }
+}
+@media(max-width:430px) { .wrap,.wrapper { padding-left:14px !important; padding-right:14px !important; } .hero { padding-left:0 !important; padding-right:0 !important; } .reader-controls { gap:6px; } .reader-controls .reader-label { min-width:102px; } }
+@media print { .reader-controls { display:none !important; } }
+/* === HISTORY MOBILE READER CONTROLS v0.6 END === */
+
+
+
+
+/* === HISTORY v0.16 READER TRUST / NAV PATCH START === */
+.reader-trust-bar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0}.reader-trust-bar a,.reader-trust-bar span{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(105,215,255,.18);border-radius:999px;padding:6px 10px;color:var(--muted);background:rgba(105,215,255,.05);text-decoration:none}.reader-trust-bar a:hover{color:var(--cyan);border-color:rgba(105,215,255,.5)}
+.card-jump{margin:20px auto 10px;padding:12px 14px;border:1px solid rgba(105,215,255,.14);border-radius:16px;background:rgba(13,19,36,.72);display:flex;align-items:center;gap:10px;flex-wrap:wrap}.card-jump label{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}.card-jump select{flex:1;min-width:260px;background:#070b14;color:var(--text);border:1px solid rgba(105,215,255,.24);border-radius:10px;padding:10px 12px;font-size:1rem}.card-jump .tiny-link{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;color:var(--cyan)}
+.back-top{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:calc(max(14px,env(safe-area-inset-bottom)) + 66px);z-index:2147482999;border:1px solid rgba(243,201,91,.28);border-radius:999px;background:rgba(5,7,13,.84);color:var(--gold);padding:9px 12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;box-shadow:0 16px 44px rgba(0,0,0,.36)}.back-top:hover{background:rgba(243,201,91,.10);text-decoration:none;color:#fff}
+.people{margin:42px auto;padding:26px 22px;border:1px solid rgba(243,201,91,.20);border-radius:22px;background:linear-gradient(180deg,rgba(13,19,36,.88),rgba(6,9,17,.74));box-shadow:var(--shadow,0 24px 80px rgba(0,0,0,.32))}.people h2{margin-top:0}.people-note{color:var(--muted);max-width:900px}.person-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:16px}.person-card{border:1px solid rgba(105,215,255,.10);border-radius:14px;background:rgba(5,7,13,.38);padding:13px 14px}.person-card b{display:block;color:#fff;font-size:1.02rem;line-height:1.25}.person-card small{display:block;color:var(--gold);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;margin:3px 0 6px}.person-card p{margin:.2em 0;color:var(--muted);font-size:.94rem;line-height:1.55}.people-disclaimer{margin-top:14px;color:var(--dim);font-size:.92rem;border-top:1px solid rgba(105,215,255,.10);padding-top:12px}
+.scope-note,.trust-note,.scenario-bridge,.falsifiability,.alt-futures{border:1px solid rgba(105,215,255,.18);border-left:4px solid var(--cyan);border-radius:16px;padding:17px 19px;background:rgba(105,215,255,.06);color:var(--muted);margin:18px 0}.scope-note strong,.trust-note strong,.scenario-bridge strong,.falsifiability strong,.alt-futures strong{color:#fff}.falsifiability{border-color:rgba(87,227,159,.24);border-left-color:var(--green);background:rgba(87,227,159,.06)}.alt-futures{border-color:rgba(255,111,145,.24);border-left-color:var(--rose);background:rgba(255,111,145,.06)}
+.search-box{margin:20px 0 18px;padding:16px;border:1px solid rgba(105,215,255,.18);border-radius:18px;background:rgba(13,19,36,.72)}.search-box label{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}.search-box input{width:100%;background:#070b14;color:var(--text);border:1px solid rgba(105,215,255,.25);border-radius:12px;padding:13px 14px;font-size:1rem}.search-status{margin-top:8px;color:var(--dim);font-size:.9rem}.toc-part.is-hidden,.card-list li.is-hidden{display:none!important}.ready-pill{background:rgba(87,227,159,.10);border:1px solid rgba(87,227,159,.24);color:var(--green);border-radius:999px;padding:3px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}.scenario-pill{background:rgba(255,111,145,.10);border:1px solid rgba(255,111,145,.25);color:var(--rose);border-radius:999px;padding:3px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:760px){.back-top{right:50%;transform:translateX(50%);bottom:calc(max(12px,env(safe-area-inset-bottom)) + 72px);font-size:.68rem;padding:7px 10px}.people{padding:20px 15px}.person-grid{grid-template-columns:1fr}.card-jump{margin-left:14px!important;margin-right:14px!important}.card-jump select{min-width:100%}}
+@media print{body{background:#fff!important;color:#111!important}.topbar,.progress,.reader-controls,.back-top,.card-jump,.hero,.intro,.contents,.footer-nav{display:none!important}.wrap,.wrapper{max-width:none!important;padding:0!important}.a4-card{background:#fff!important;color:#111!important;box-shadow:none!important;border:0!important;border-radius:0!important;page-break-after:always;break-after:page}.a4-card *,.people *,.sources *{color:#111!important}.people,.sources{background:#fff!important;border:1px solid #ccc!important;box-shadow:none!important;break-inside:avoid}.person-card{background:#fff!important;border:1px solid #ddd!important}.mini,.pattern,.bridge,.focus{background:#fff!important;color:#111!important;border-color:#ccc!important}.src-ref,a{color:#111!important;text-decoration:underline!important}}
+/* === HISTORY v0.16 READER TRUST / NAV PATCH END === */
+
+
+/* === HISTORY v0.16 PUBLIC RELEASE POLISH START === */
+.version-badge{display:inline-flex;align-items:center;border:1px solid rgba(87,227,159,.28);border-radius:999px;background:rgba(87,227,159,.08);color:var(--green,#57e39f);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;margin-left:8px}.tag-strip{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 14px}.tag-strip span{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(105,215,255,.16);border-radius:999px;background:rgba(105,215,255,.05);padding:4px 8px}.balance-note,.fast-path,.omissions-note,.climate-thread{border:1px solid rgba(105,215,255,.18);border-left:4px solid var(--cyan,#69d7ff);border-radius:16px;padding:17px 19px;background:rgba(105,215,255,.06);color:var(--muted);margin:18px auto}.balance-note strong,.fast-path strong,.omissions-note strong,.climate-thread strong{color:#fff}.fast-path{border-left-color:var(--gold,#f3c95b);background:rgba(243,201,91,.06)}.fast-path .fast-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.fast-path .fast-links a{border:1px solid rgba(243,201,91,.25);border-radius:999px;padding:6px 10px;color:var(--gold,#f3c95b);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;text-decoration:none}.fast-path .fast-links a:hover{background:rgba(243,201,91,.11);color:#fff}.climate-thread{border-left-color:var(--green,#57e39f);background:rgba(87,227,159,.06)}
+@media print{body{background:#fff!important;color:#111!important}.topbar,.progress,.reader-controls,.back-top,.hero,.footer-nav{display:none!important}.contents,.sources,.people{display:block!important}.contents{page-break-before:always;break-before:page}.sources{page-break-before:always;break-before:page}.wrap,.wrapper{max-width:none!important;padding:0!important}.a4-card{background:#fff!important;color:#111!important;box-shadow:none!important;border:0!important;border-radius:0!important;page-break-after:always;break-after:page}.a4-card *,.people *,.sources *,.contents *{color:#111!important}.people,.sources,.contents{background:#fff!important;border:1px solid #ccc!important;box-shadow:none!important;break-inside:avoid}.person-card,.source{background:#fff!important;border:1px solid #ddd!important}.mini,.pattern,.bridge,.focus,.balance-note,.fast-path,.omissions-note,.climate-thread{background:#fff!important;color:#111!important;border-color:#ccc!important}.src-ref,a{color:#111!important;text-decoration:underline!important}}
+/* === HISTORY v0.16 PUBLIC RELEASE POLISH END === */
+
+
+
+/* === HISTORY MOBILE HEADER v0.16.7 START === */
+.mobile-topbar,.mobile-menu-panel,.mobile-menu-backdrop{display:none;}
+@media (max-width:700px){
+  :root{--mobile-hist-header-h:104px;}
+  html{scroll-padding-top:calc(var(--mobile-hist-header-h) + 14px)!important;}
+  body{padding-top:calc(var(--mobile-hist-header-h) + env(safe-area-inset-top,0px))!important;}
+  .topbar{display:none!important;}
+  .mobile-topbar{
+    display:block;position:fixed;top:0;left:0;right:0;z-index:9990;
+    padding:calc(env(safe-area-inset-top,0px) + 9px) 12px 10px;
+    background:rgba(5,7,13,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(105,215,255,.20);
+    box-shadow:0 10px 38px rgba(0,0,0,.36);
+  }
+  .mobile-topbar:before{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--green),var(--gold));opacity:.88;}
+  .mobile-title{
+    display:block;padding:0 0 8px 0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:clamp(18px,5vw,25px);font-weight:800;line-height:1.05;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)!important;text-decoration:none!important;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .mobile-title:visited,.mobile-title:hover,.mobile-title:focus{color:var(--cyan)!important;text-decoration:none!important;}
+  .mobile-actions{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;}
+  .mobile-navbtn{
+    min-height:42px;padding:9px 11px;border:1px solid rgba(105,215,255,.22);border-radius:999px;
+    background:rgba(11,17,32,.66);color:var(--text)!important;text-decoration:none!important;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(13px,3.4vw,16px);font-weight:700;
+    letter-spacing:.05em;line-height:1;display:flex;align-items:center;justify-content:center;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+  }
+  .mobile-prev{justify-content:flex-start;}
+  .mobile-next{justify-content:flex-end;}
+  .mobile-menu-toggle{color:var(--gold)!important;cursor:pointer;}
+  .mobile-disabled{opacity:.38;pointer-events:none;}
+  .mobile-menu-backdrop{position:fixed;inset:0;z-index:9980;background:rgba(0,0,0,.48);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
+  body.mobile-menu-open .mobile-menu-backdrop{display:block;}
+  .mobile-menu-panel{
+    position:fixed;z-index:9991;top:calc(var(--mobile-hist-header-h) + env(safe-area-inset-top,0px) + 8px);left:12px;right:12px;
+    max-height:calc(100vh - var(--mobile-hist-header-h) - env(safe-area-inset-top,0px) - 28px);overflow:auto;
+    padding:14px;border:1px solid rgba(105,215,255,.26);border-radius:22px;
+    background:linear-gradient(180deg,rgba(9,13,24,.98),rgba(5,7,13,.98));
+    box-shadow:0 24px 90px rgba(0,0,0,.62);
+  }
+  body.mobile-menu-open .mobile-menu-panel{display:block;}
+  .mobile-menu-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(105,215,255,.14);}
+  .mobile-menu-head span{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold);font-size:14px;letter-spacing:.18em;text-transform:uppercase;}
+  .mobile-menu-head button{width:38px;height:38px;border-radius:999px;border:1px solid rgba(105,215,255,.22);background:rgba(255,255,255,.03);color:var(--text);font-size:24px;line-height:1;}
+  .mobile-menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+  .mobile-menu-grid a{
+    min-height:44px;padding:11px 12px;border:1px solid rgba(105,215,255,.18);border-radius:14px;
+    background:rgba(18,26,49,.78);color:var(--text)!important;text-decoration:none!important;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;font-weight:700;letter-spacing:.04em;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+  }
+  .mobile-menu-grid a:active{transform:scale(.985);border-color:rgba(105,215,255,.45);}
+  .reader-controls{bottom:calc(78px + env(safe-area-inset-bottom,0px))!important;}
+  #top,.hero,.card,.a4-card,section[id],article[id],.people-section,.sources{scroll-margin-top:calc(var(--mobile-hist-header-h) + 18px)!important;}
+}
+@media (max-width:420px){
+  .mobile-navbtn{padding-left:9px;padding-right:9px;font-size:13px;}
+  .mobile-menu-grid{grid-template-columns:1fr;}
+}
+@media (min-width:701px){
+  .mobile-topbar,.mobile-menu-panel,.mobile-menu-backdrop{display:none!important;}
+}
+@media print{
+  .mobile-topbar,.mobile-menu-panel,.mobile-menu-backdrop{display:none!important;}
+  body{padding-top:0!important;}
+}
+/* === HISTORY MOBILE HEADER v0.16.7 END === */
+</style>
+
+
+<!-- v0.17.0 bilingual/conflict layer -->
+<style id="hist-bilingual-conflict-style">
+  .hist-lang-sl{display:none!important}
+  body.hist-lang-sl .hist-lang-en{display:none!important}
+  body.hist-lang-sl .hist-lang-sl{display:block!important}
+  body.hist-lang-sl span.hist-lang-sl{display:inline!important}
+  body.hist-lang-sl .hist-lang-inline.hist-lang-sl{display:inline!important}
+  .hist-lang-toggle,.hist-war-jump{
+    position:fixed;right:14px;z-index:1003;border:1px solid rgba(105,215,255,.28);
+    background:rgba(5,7,13,.82);color:var(--text,#e7eaf2);border-radius:999px;
+    padding:8px 12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;letter-spacing:.08em;text-decoration:none;box-shadow:0 12px 40px rgba(0,0,0,.28);
+    backdrop-filter:blur(14px);cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .hist-lang-toggle{bottom:14px}
+  .hist-war-jump{bottom:56px;color:var(--gold,#f3c95b)}
+  .hist-lang-toggle:hover,.hist-war-jump:hover{transform:translateY(-1px);border-color:rgba(243,201,91,.55);background:rgba(13,19,36,.92);text-decoration:none}
+  .hist-war-layer{max-width:1120px;margin:70px auto 54px;padding:0 18px;position:relative;z-index:2}
+  .hist-war-shell{border:1px solid rgba(255,111,145,.22);border-radius:22px;background:linear-gradient(135deg,rgba(255,111,145,.08),rgba(105,215,255,.045)),rgba(13,19,36,.74);box-shadow:0 24px 80px rgba(0,0,0,.28);overflow:hidden}
+  .hist-war-head{padding:26px 26px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .hist-war-kicker{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--rose,#ff6f91);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+  .hist-war-title{font-size:clamp(1.65rem,3vw,2.55rem);line-height:1.08;margin:0;color:#fff;letter-spacing:-.04em}
+  .hist-war-sub{max-width:880px;color:var(--muted,#9ca6c1);font-size:1.02rem;margin:10px 0 0;line-height:1.68}
+  .hist-war-body{padding:22px 26px 26px}
+  .hist-war-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+  .hist-war-card{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(5,7,13,.38);padding:16px 17px}
+  .hist-war-card h3{margin:.1rem 0 .45rem;color:#fff;font-size:1.12rem;letter-spacing:-.02em}
+  .hist-war-card p{margin:.4rem 0;color:var(--muted,#9ca6c1);line-height:1.62}
+  .hist-war-card ul{margin:.55rem 0 0 1.1rem;padding:0;color:var(--muted,#9ca6c1)}
+  .hist-war-card li{margin:.28rem 0}
+  .hist-war-note{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--dim,#68728f);font-size:.78rem;line-height:1.7;margin-top:18px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+  @media(max-width:760px){.hist-lang-toggle,.hist-war-jump{right:10px;padding:7px 10px;font-size:11px}.hist-war-layer{padding:0 14px;margin:46px auto}.hist-war-head,.hist-war-body{padding:18px}.hist-war-grid{grid-template-columns:1fr}}
+  @media print{.hist-lang-toggle,.hist-war-jump{display:none!important}.hist-lang-sl{display:block!important}.hist-war-shell{border-color:#ccc;background:#fff;box-shadow:none}.hist-war-card{background:#f8f8f8;border-color:#ddd}}
+</style>
+<script id="hist-bilingual-conflict-script">
+(function(){
+  const KEY='humanityHistoryLanguageV1';
+  function apply(lang){
+    const sl = lang === 'sl';
+    document.documentElement.lang = sl ? 'sl' : 'en';
+    if(document.body){document.body.classList.toggle('hist-lang-sl', sl); if(document.getElementById('sl-summary')) document.body.classList.add('hist-sl-page');}
+    const btn=document.getElementById('histLangToggle');
+    if(btn){btn.setAttribute('aria-pressed', sl ? 'true':'false'); btn.setAttribute('title', sl ? 'Switch to English':'Preklopi v slovenščino');}
+  }
+  window.histSetLang=function(lang){localStorage.setItem(KEY, lang);apply(lang);}
+  window.histToggleLang=function(){const cur=localStorage.getItem(KEY)==='sl'?'en':'sl';window.histSetLang(cur);}
+  document.addEventListener('DOMContentLoaded',function(){apply(localStorage.getItem(KEY)||'en');});
+})();
+</script>
+
+
+<style id="hist-sl-summary-style">
+  .hist-sl-summary{display:none!important;max-width:1120px;margin:42px auto 34px;padding:0 18px;position:relative;z-index:2}
+  body.hist-lang-sl .hist-sl-summary{display:block!important}
+  body.hist-lang-sl.hist-sl-page main > section:not(.hist-sl-summary):not(.hist-war-layer),
+  body.hist-lang-sl.hist-sl-page main > div:not(.hist-sl-summary):not(.hist-war-layer),
+  body.hist-lang-sl.hist-sl-page main > article:not(.hist-sl-summary):not(.hist-war-layer){display:none!important}
+  .hist-sl-summary .sl-box{border:1px solid rgba(105,215,255,.22);border-radius:22px;background:linear-gradient(135deg,rgba(105,215,255,.07),rgba(243,201,91,.045)),rgba(13,19,36,.78);box-shadow:0 24px 80px rgba(0,0,0,.26);padding:26px}
+  .hist-sl-summary .sl-kicker{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--cyan,#69d7ff);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:9px}
+  .hist-sl-summary h1,.hist-sl-summary h2{margin:.2rem 0 .7rem;color:#fff;font-size:clamp(1.7rem,3.5vw,3rem);line-height:1.05;letter-spacing:-.05em}
+  .hist-sl-summary p{color:var(--muted,#9ca6c1);font-size:1.06rem;line-height:1.72;margin:.8rem 0}
+  .hist-sl-summary .sl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+  .hist-sl-summary .sl-card{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(5,7,13,.35);padding:15px 16px;color:var(--muted,#9ca6c1)}
+  .hist-sl-summary .sl-card strong{display:block;color:#fff;margin-bottom:.3rem;font-size:1.05rem}
+  .hist-sl-summary .sl-note{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.78rem;color:var(--dim,#68728f);line-height:1.7}
+</style>
+
+<!-- HISTORY PWA v1 START -->
+<meta name="theme-color" content="#05070d"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="History"/>
+<link rel="manifest" href="./manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="./icon-180.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"/>
+<link rel="stylesheet" href="./pwa.css"/>
+<script src="./pwa.js" defer></script>
+<!-- HISTORY PWA v1 END -->
+</head>
+<body id="top">
+
+<div class="progress"><span id="progressBar"></span></div>
+<nav class="topbar">
+<div class="topbar-inner"><div class="hist-lang-switch" role="group" aria-label="Language"><button type="button" data-hist-lang="en" onclick="histSetLang('en')">EN</button><span aria-hidden="true">|</span><button type="button" data-hist-lang="sl" onclick="histSetLang('sl')">SL</button></div>
+<a aria-label="Humanity History" class="brand" href="index.html">Humanity History</a>
+<div class="nav"><a aria-label="Method" href="methodology.html">Method</a><a aria-label="Timeline" href="timeline.html">Timeline</a><a aria-label="Glossary" href="glossary.html">Glossary</a><a aria-label="About" href="about.html">About</a>
+<a aria-label="← Contents" href="index.html">← Contents</a>
+<a aria-label="Cards" href="#cards">Cards</a>
+<a aria-label="People" href="#people">People</a><a aria-label="Sources" href="#sources">Sources</a>
+<a aria-label="Next chapter →" href="02_ice_age_transition_20000_10000_bce.html">Next chapter →</a>
+</div>
+</div>
+</nav>
+<!-- === HISTORY MOBILE HEADER v0.16.7 START === -->
+<div class="mobile-menu-backdrop" data-mobile-menu-close aria-hidden="true"></div>
+<header class="mobile-topbar" aria-label="Mobile navigation"><div class="hist-lang-switch" role="group" aria-label="Language"><button type="button" data-hist-lang="en" onclick="histSetLang('en')">EN</button><span aria-hidden="true">|</span><button type="button" data-hist-lang="sl" onclick="histSetLang('sl')">SL</button></div>
+  <a class="mobile-title" href="index.html" aria-label="Back to Humanity History contents">01 · Deep Humanity</a>
+  <div class="mobile-actions" role="navigation" aria-label="Mobile chapter navigation">
+    <a class="mobile-navbtn mobile-prev" href="index.html">← Previous</a>
+    <button class="mobile-navbtn mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel">Menu</button>
+    <a class="mobile-navbtn mobile-next" href="02_ice_age_transition_20000_10000_bce.html">Next →</a>
+  </div>
+</header>
+<aside class="mobile-menu-panel" id="mobile-menu-panel" aria-label="Mobile menu" aria-hidden="true">
+  <div class="mobile-menu-head"><span>Menu</span><button type="button" data-mobile-menu-close aria-label="Close menu">×</button></div>
+  <div class="mobile-menu-grid">
+<a href="methodology.html">Method</a>
+<a href="timeline.html">Timeline</a>
+<a href="glossary.html">Glossary</a>
+<a href="about.html">About</a>
+<a href="index.html">← Contents</a>
+<a href="#cards">Cards</a>
+<a href="#people">People</a>
+<a href="#sources">Sources</a>
+  </div>
+</aside>
+<!-- === HISTORY MOBILE HEADER v0.16.7 END === -->
+
+<header class="hero">
+<div class="kicker">Part 01 · factual history · adaptive resolution</div>
+<h1>Deep Humanity:<br/><em>the animal who became symbolic</em></h1>
+<p class="subtitle">From roughly 300,000 to 20,000 BCE, humanity is not yet empire, agriculture, writing or state. It is small bands, deep memory, tools, fire, art, kinship, migration, loss — and the slow birth of a symbolic species.</p>
+<div class="hero-grid">
+<div class="metric"><div class="n">14</div><div class="l">A4 history cards</div></div>
+<div class="metric"><div class="n">20k</div><div class="l">years per card</div></div>
+<div class="metric"><div class="n">300k→20k</div><div class="l">BCE / approximate</div></div>
+<div class="metric"><div class="n">low→high</div><div class="l">evidence density</div></div>
+</div>
+<div class="notice"><strong>Truth boundary:</strong> deep prehistory cannot honestly be written century by century. These cards use responsible inference from fossils, tools, genetics, climate and art. Where evidence is thin, the card says so. This is not myth-making; it is a realistic story built around known anchors and marked uncertainty.</div>
+</header><section class="fast-path wrap"><strong>Fast path through Deep Humanity:</strong> this chapter is now compressed to 14 stronger 20,000-year cards. Readers who want the densest anchors can jump straight to the high-signal later cards.<div class="fast-links"><a href="#card-07">Herto / old edge</a><a href="#card-10">other humans</a><a href="#card-11">meaning in objects</a><a href="#card-12">great dispersal</a><a href="#card-13">Sahul / art</a><a href="#card-14">Ice-age imagination</a></div></section>
+<nav aria-label="Jump to a card" class="card-jump wrap"><label for="cardJump">Jump</label><select id="cardJump" onchange="if(this.value){location.hash=this.value;this.selectedIndex=0}"><option value="">Jump to card…</option><option value="#card-01">Card 01 · 300,000–280,000 BCE · Bodies like us, not yet history</option><option value="#card-02">Card 02 · 280,000–260,000 BCE · Stone, fire, and external memory</option><option value="#card-03">Card 03 · 260,000–240,000 BCE · Climate as sculptor</option><option value="#card-04">Card 04 · 240,000–220,000 BCE · The invisible revolution</option><option value="#card-05">Card 05 · 220,000–200,000 BCE · Continuity under pressure</option><option value="#card-06">Card 06 · 200,000–180,000 BCE · More human in many Africas</option><option value="#card-07">Card 07 · 180,000–160,000 BCE · Herto and the old edge</option><option value="#card-08">Card 08 · 160,000–140,000 BCE · Coasts, food maps, fragile abundance</option><option value="#card-09">Card 09 · 140,000–120,000 BCE · Warm windows and old roads</option><option value="#card-10">Card 10 · 120,000–100,000 BCE · Humans among other humans</option><option value="#card-11">Card 11 · 100,000–80,000 BCE · Meaning in objects</option><option value="#card-12">Card 12 · 80,000–60,000 BCE · The narrow gate and the great dispersal</option><option value="#card-13">Card 13 · 60,000–40,000 BCE · Sahul, Eurasia, and the image-making species</option><option value="#card-14">Card 14 · 40,000–20,000 BCE · Relatives fade, ice-age imagination</option></select><a aria-label="Sources ↓" class="tiny-link" href="#sources">Sources ↓</a></nav>
+<main class="wrap">
+
+<section id="sl-summary" class="hist-sl-summary" lang="sl" data-added="v0.17.0-sl-summary">
+  <div class="sl-box">
+    <div class="sl-kicker">Slovenski zgoščeni pogled · SLO</div>
+    <h1>Globoka človeškost</h1>
+    <p>Začetek ni kraljestvo in ni država. Je dolgo obdobje teles, orodij, ognja, jezika, sorodstva in majhnih skupin, ki nosijo človeško prihodnost še brez zgodovine v klasičnem smislu.</p>
+    <div class="sl-grid"><div class="sl-card"><strong>Merilo</strong>Konflikt ostaja lokalno omejen; moč se še ne more razširiti v imperij.</div><div class="sl-card"><strong>Preboj</strong>Simboli, sodelovanje in učenje ustvarijo prenos med generacijami.</div><div class="sl-card"><strong>Lekcija</strong>Človek ni bil nikoli samo nasilje ali samo mir. Bil je prilagodljiv sistem pod pritiskom okolja.</div></div>
+    <div class="sl-note">To je slovenska zgoščena plast iste strani. Za celotno izvirno besedilo preklopi nazaj na EN; sloj konfliktov spodaj je dvojezičen in se preklaplja na isti strani.</div>
+  </div>
+</section>
+
+<div class="section-title"><h2>Chapter card map</h2></div>
+<section aria-label="Deep Humanity card map" class="toc">
+<a aria-label="300,000–280,000 BCE Bodies like us, not yet history Early Homo sapiens, African landscapes, survival before writing or remembered names." href="#card-01"><div class="r">300,000–280,000 BCE</div><div class="t">Bodies like us, not yet history</div><div class="f">Early Homo sapiens, African landscapes, survival before writing or remembered names.</div></a>
+<a aria-label="280,000–260,000 BCE Stone, fire, and external memory Tools and hearths as memory outside the body." href="#card-02"><div class="r">280,000–260,000 BCE</div><div class="t">Stone, fire, and external memory</div><div class="f">Tools and hearths as memory outside the body.</div></a>
+<a aria-label="260,000–240,000 BCE Climate as sculptor Wet/dry swings, movement pressure, ecological intelligence." href="#card-03"><div class="r">260,000–240,000 BCE</div><div class="t">Climate as sculptor</div><div class="f">Wet/dry swings, movement pressure, ecological intelligence.</div></a>
+<a aria-label="240,000–220,000 BCE The invisible revolution Gesture, voice, teaching, trust, betrayal and shared attention." href="#card-04"><div class="r">240,000–220,000 BCE</div><div class="t">The invisible revolution</div><div class="f">Gesture, voice, teaching, trust, betrayal and shared attention.</div></a>
+<a aria-label="220,000–200,000 BCE Continuity under pressure Small populations, bottlenecks, resilience and the long survival test." href="#card-05"><div class="r">220,000–200,000 BCE</div><div class="t">Continuity under pressure</div><div class="f">Small populations, bottlenecks, resilience and the long survival test.</div></a>
+<a aria-label="200,000–180,000 BCE More human in many Africas Eastern African anchors, regional worlds, no single simple origin." href="#card-06"><div class="r">200,000–180,000 BCE</div><div class="t">More human in many Africas</div><div class="f">Eastern African anchors, regional worlds, no single simple origin.</div></a>
+<a aria-label="180,000–160,000 BCE Herto and the old edge Fossils, large-animal butchery, sophisticated tools and mortality awareness." href="#card-07"><div class="r">180,000–160,000 BCE</div><div class="t">Herto and the old edge</div><div class="f">Fossils, large-animal butchery, sophisticated tools and mortality awareness.</div></a>
+<a aria-label="160,000–140,000 BCE Coasts, food maps, fragile abundance Shellfish, shorelines, seasonal memory and regional skill." href="#card-08"><div class="r">160,000–140,000 BCE</div><div class="t">Coasts, food maps, fragile abundance</div><div class="f">Shellfish, shorelines, seasonal memory and regional skill.</div></a>
+<a aria-label="140,000–120,000 BCE Warm windows and old roads Interglacial opportunities, route experiments and uncertain dispersals." href="#card-09"><div class="r">140,000–120,000 BCE</div><div class="t">Warm windows and old roads</div><div class="f">Interglacial opportunities, route experiments and uncertain dispersals.</div></a>
+<a aria-label="120,000–100,000 BCE Humans among other humans Neanderthals, Denisovans, early contact, mixture and rivalry." href="#card-10"><div class="r">120,000–100,000 BCE</div><div class="t">Humans among other humans</div><div class="f">Neanderthals, Denisovans, early contact, mixture and rivalry.</div></a>
+<a aria-label="100,000–80,000 BCE Meaning in objects Pigments, ornaments, marks, fishing tools and identity carried by things." href="#card-11"><div class="r">100,000–80,000 BCE</div><div class="t">Meaning in objects</div><div class="f">Pigments, ornaments, marks, fishing tools and identity carried by things.</div></a>
+<a aria-label="80,000–60,000 BCE The narrow gate and the great dispersal Resilience, symbolic worlds, and durable expansion out of Africa." href="#card-12"><div class="r">80,000–60,000 BCE</div><div class="t">The narrow gate and the great dispersal</div><div class="f">Resilience, symbolic worlds, and durable expansion out of Africa.</div></a>
+<a aria-label="60,000–40,000 BCE Sahul, Eurasia, and the image-making species Sea crossings, cold worlds, Denisovan/Neanderthal mixture, early visual storytelling." href="#card-13"><div class="r">60,000–40,000 BCE</div><div class="t">Sahul, Eurasia, and the image-making species</div><div class="f">Sea crossings, cold worlds, Denisovan/Neanderthal mixture, early visual storytelling.</div></a>
+<a aria-label="40,000–20,000 BCE Relatives fade, ice-age imagination Neanderthal disappearance, cave art, eyed needles, shelters and Last Glacial Maximum pressure." href="#card-14"><div class="r">40,000–20,000 BCE</div><div class="t">Relatives fade, ice-age imagination</div><div class="f">Neanderthal disappearance, cave art, eyed needles, shelters and Last Glacial Maximum pressure.</div></a>
+</section>
+<div class="section-title" id="cards"><h2>A4 cards</h2></div>
+<article class="a4-card" id="card-01">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 01 · Deep Humanity</div><div class="range">300,000–280,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>Bodies like us, not yet history</h2>
+<p class="focus">Early Homo sapiens, African landscapes, survival before writing or remembered names.</p>
+<div class="story"><p>The book begins before nations, before farms, before temples, before any named person. At this depth of time, early Homo sapiens were already present in Africa. They were not suddenly modern in the full cultural sense, but the biological frame was recognizably ours: a face moving toward modern form, a brain still changing, hands capable of fine work, and bodies built for long movement through unstable landscapes.</p><p>Jebel Irhoud in Morocco remains the strongest early anchor for this opening. Its fossils and associated Middle Stone Age tools point to a pan-African emergence rather than one simple birthplace. Humanity did not begin as a single neat line. It began as scattered populations, mixing traits, climates, technologies and survival habits across a continent.</p><p>The good: a flexible animal appeared, able to learn, cooperate, remember and adapt. The bad: nothing about that potential guaranteed survival. Early humans were few, fragile, exposed to hunger, injury, predators, childbirth, infection and climate instability. The first human power was not domination. It was staying alive together.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>A flexible body-mind package: skilled hands, social learning, endurance, adaptable foraging and expanding symbolic potential.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>No safety net. A dry season, a wound, a failed birth or a broken group could erase continuity.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Humanity begins as vulnerability plus adaptation, not as mastery.</div>
+<div class="bridge">Bridge: The next card asks how this fragile species kept continuity before writing: through stone, fire, imitation and group memory.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a> <a aria-label="S2" class="src-ref" href="#src-S2">S2</a> <a aria-label="S3" class="src-ref" href="#src-S3">S3</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-02">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 02 · Deep Humanity</div><div class="range">280,000–260,000 BCE</div></div>
+<div class="confidence">evidence density: low→medium</div>
+</div>
+<h2>Stone, fire, and external memory</h2>
+<p class="focus">Tools and hearths as memory outside the body.</p>
+<div class="story"><p>Across these long millennia, most human knowledge left no direct trace. Songs vanished. Gestures vanished. Grandparents vanished. What survives is harder material: stone tools, cut marks, heat-altered objects, and the pattern of repeated skill. Stone remembers hands better than language does.</p><p>A tool is not only a sharp edge. It is stored procedure. Someone learned what rock breaks well, where to strike, how to hold the core, how to teach the next hand. Fire did something similar. It extended the day, made some foods safer, warmed the body, guarded night, and gathered attention into circles where stories and planning could thicken.</p><p>The good: skill became portable. The bad: technology also sharpened conflict and dependence. A group that lost access to good stone, fuel, water or teaching could fall behind fast. Culture was already becoming a survival system — and survival systems can fail.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Technique could outlive one body through imitation, practice and shared material routines.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>The same intelligence that made tools could make weapons, traps, exclusion and dominance more efficient.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> External memory starts before writing. The first archive is gesture repeated into matter.</div>
+<div class="bridge">Bridge: Once tools and fire help carry continuity, climate becomes the next great selector of which continuities survive.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a> <a aria-label="S2" class="src-ref" href="#src-S2">S2</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-03">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 03 · Deep Humanity</div><div class="range">260,000–240,000 BCE</div></div>
+<div class="confidence">evidence density: low</div>
+</div>
+<h2>Climate as sculptor</h2>
+<p class="focus">Wet/dry swings, movement pressure, ecological intelligence.</p>
+<div class="story"><p>Deep prehistory is not a straight corridor. It is a weather machine. Lakes rise and disappear. Grasslands expand, then retreat. Deserts open and close routes. Animals move, and humans must follow, wait, adapt or die. The human story here is mostly ecological: knowing when to move, when to stay, what to eat, what to avoid, and how to remember a place that may not be the same next generation.</p><p>This period cannot be filled honestly with named events. Its importance lies in pressure. Climate instability likely rewarded flexible foragers, social memory, broad diets, tool variation and the ability to read many landscapes rather than specialize too narrowly.</p><p>The good: instability trained adaptability. The bad: instability also made life harsh. Groups that seemed secure for generations could be forced into conflict or migration by changes no one controlled. Nature was not background; it was an active author.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Flexible behavior became valuable: broad diets, mobility, memory of water and social sharing across risk.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Scarcity could turn neighbors into rivals and make children pay for ecological shifts they did not cause.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Before politics, climate was governance. It constrained choices and rewarded adaptive minds.</div>
+<div class="bridge">Bridge: Repeated environmental pressure makes social coordination more important; the invisible revolution is not one invention, but better minds in groups.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a> <a aria-label="S4" class="src-ref" href="#src-S4">S4</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-04">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 04 · Deep Humanity</div><div class="range">240,000–220,000 BCE</div></div>
+<div class="confidence">evidence density: low</div>
+</div>
+<h2>The invisible revolution</h2>
+<p class="focus">Gesture, voice, teaching, trust, betrayal and shared attention.</p>
+<div class="story"><p>The most important changes in this interval may be almost invisible archaeologically. A better throw leaves no fossil. A better warning call leaves no fossil. A shared rule, a remembered route, a joke, a taboo, a kinship obligation, a healing practice — these shape survival but rarely survive as objects.</p><p>Human groups were becoming denser with social information. Children needed long apprenticeship. Adults had to coordinate hunting, gathering, defense, care and mating without written law. The group itself became a thinking system: many eyes, many memories, many fears, many motives.</p><p>The good: cooperation made weak bodies powerful. The bad: the same social intelligence enabled manipulation, punishment, exclusion and revenge. Humanity’s moral double edge appears early: the species that can care deeply can also wound deliberately.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Shared attention let groups teach, coordinate, protect children and preserve hard-won ecological knowledge.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Trust created the possibility of betrayal; social memory could preserve grievance as well as wisdom.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Human intelligence is social before it is institutional.</div>
+<div class="bridge">Bridge: Once groups carry more memory, continuity itself becomes the problem: how to survive bottlenecks, conflict and scarcity without collapsing.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-05">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 05 · Deep Humanity</div><div class="range">220,000–200,000 BCE</div></div>
+<div class="confidence">evidence density: low</div>
+</div>
+<h2>Continuity under pressure</h2>
+<p class="focus">Small populations, bottlenecks, resilience and the long survival test.</p>
+<div class="story"><p>A modern reader wants milestones. Deep time often gives something harder: endurance. Many human groups likely lived and disappeared without leaving recognizable evidence. Others carried small improvements forward: a better edge, a remembered plant, a safer camp, a story about danger, a rule about marriage or sharing.</p><p>The population size of early Homo sapiens was not civilization-scale. It was scattered, local, exposed. That makes the survival of the lineage remarkable. Humanity passed through a long filter in which most experiments vanished and only some combinations of body, culture and ecology continued.</p><p>The good: resilience became a species trait. The bad: resilience was purchased through death, loss and forgetting. Most early human worlds are unrecoverable. We are descended from survivors, but the silence around them is enormous.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>The species learned to carry continuity through repeated ecological and social shocks.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Deep time is full of vanished bands, lost languages, failed routes and dead children who left no archive.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Survival is selection plus memory. What cannot be remembered must be rediscovered or lost.</div>
+<div class="bridge">Bridge: Around the next intervals, the fossil record gives clearer eastern African anchors and a more visibly human face.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a> <a aria-label="S4" class="src-ref" href="#src-S4">S4</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-06">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 06 · Deep Humanity</div><div class="range">200,000–180,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>More human in many Africas</h2>
+<p class="focus">Eastern African anchors, regional worlds, no single simple origin.</p>
+<div class="story"><p>By this broad window, the human fossil record becomes easier to connect with specific anchors. Omo Kibish in Ethiopia is now dated with a minimum age around 233 thousand years, placing anatomically modern humans deep in eastern Africa. The point is not that one valley “invented” humanity. The point is that Africa contained multiple connected human worlds.</p><p>These people lived across deserts, coasts, rivers, savannas, woodlands and highlands. Different ecologies would have favored different knowledge: fish and shellfish here, game tracking there, plant cycles elsewhere, stone sources elsewhere. Humanity was already many local solutions carried by one species.</p><p>The good: diversity of environments made human culture more flexible. The bad: regional isolation could also trap groups, create vulnerability, and make contact with strangers dangerous or transformative.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Multiple African landscapes trained multiple ways of being human.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Local success could become local fragility when climate or neighbors changed.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> There is no single human center. The human story is networked from the beginning.</div>
+<div class="bridge">Bridge: Fossils, tools and butchered animals soon make care, violence and skill easier to glimpse in the record.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S4" class="src-ref" href="#src-S4">S4</a> <a aria-label="S1" class="src-ref" href="#src-S1">S1</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-07">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 07 · Deep Humanity</div><div class="range">180,000–160,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>Herto and the old edge</h2>
+<p class="focus">Fossils, large-animal butchery, sophisticated tools and mortality awareness.</p>
+<div class="story"><p>The Herto fossils in Ethiopia, around 160 thousand years old, make this part of the story more concrete. They show humans close to us, with tools and evidence of large-animal processing nearby. These people were not abstractions. They cut, carried, ate, guarded, feared and taught.</p><p>Some Herto remains also suggest postmortem handling of bodies, though interpretation must stay cautious. Even the possibility matters. It hints at attention to the dead: not just disposal, but relation. A human body may have been becoming more than biological remains; it may have become memory, kin, sign, obligation.</p><p>The good: technical skill and social meaning deepened. The bad: butchery and mortality stand together. Human life expanded through killing animals, managing danger, and facing death. Culture did not remove brutality; it organized it.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Stone technology, large-game processing and possible mortuary attention show growing technical and symbolic depth.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Life depended on violence toward animals and constant exposure to death, injury and grief.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Meaning grows beside mortality. Care for the dead may be one of the first mirrors of personhood.</div>
+<div class="bridge">Bridge: The next card widens from fossils to lifeways: coasts, food maps and fragile abundance.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S5" class="src-ref" href="#src-S5">S5</a> <a aria-label="S4" class="src-ref" href="#src-S4">S4</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-08">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 08 · Deep Humanity</div><div class="range">160,000–140,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>Coasts, food maps, fragile abundance</h2>
+<p class="focus">Shellfish, shorelines, seasonal memory and regional skill.</p>
+<div class="story"><p>In parts of Africa, shorelines offered food that could be gathered with knowledge rather than chased with speed: shellfish, fish, coastal plants, seabirds, stranded animals. The Smithsonian summary notes shellfish use around this broad depth of time. Such lifeways matter because coasts are memory-rich environments: tides, seasons, tools, hazards and routes.</p><p>Abundance here was never simple. A coast can feed a group, but it can also disappear under sea-level change or become crowded when inland environments fail. The human advantage was not just finding food; it was remembering rhythms and teaching them.</p><p>The good: broader diets and ecological knowledge made survival less dependent on one prey or one landscape. The bad: dependence on local abundance made groups vulnerable when water, coastlines or animal populations shifted.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Diet breadth, coastal knowledge and seasonal memory increased resilience.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Fragile abundance could become conflict when routes closed or resources thinned.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> A landscape becomes human when it is mapped by shared memory.</div>
+<div class="bridge">Bridge: Warm climate windows and old corridors create chances for movement, but movement does not always become lasting expansion.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S1" class="src-ref" href="#src-S1">S1</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-09">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 09 · Deep Humanity</div><div class="range">140,000–120,000 BCE</div></div>
+<div class="confidence">evidence density: low→medium</div>
+</div>
+<h2>Warm windows and old roads</h2>
+<p class="focus">Interglacial opportunities, route experiments and uncertain dispersals.</p>
+<div class="story"><p>Warmer periods opened routes that colder or drier periods could close. Humans may have pushed beyond familiar ranges in pulses, then retreated, mixed, vanished or left thin traces. This is one reason deep migration history is difficult: expansion is not a single arrow. It is an experiment repeated under changing climate.</p><p>The human gift was not only walking. It was social movement: carrying fire, tools, kinship rules, language-like communication, food knowledge and identity into places where old habits did not fully apply. Every successful migration was a test of portability.</p><p>The good: humans learned to make home in unfamiliar worlds. The bad: moving into new ecologies could mean starvation, conflict with other humans, disease exposure, or failed adaptation. Expansion was costly before it was triumphant.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Movement widened human possibility and tested whether culture could travel.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Many dispersals likely failed or left no direct descendants; exploration could kill as easily as save.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Expansion is not destiny. It is a risky experiment in portable continuity.</div>
+<div class="bridge">Bridge: As humans moved, they entered a world already inhabited by other human forms.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S6" class="src-ref" href="#src-S6">S6</a> <a aria-label="S1" class="src-ref" href="#src-S1">S1</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-10">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 10 · Deep Humanity</div><div class="range">120,000–100,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>Humans among other humans</h2>
+<p class="focus">Neanderthals, Denisovans, early contact, mixture and rivalry.</p>
+<div class="story"><p>By this wide interval, Homo sapiens were not the only humans on Earth. Neanderthals lived across parts of western Eurasia. Denisovans, known mostly through genetics and sparse fossils, were present in Asia. Earlier contacts between lineages may have already occurred, and later genetic evidence shows that contact was not rare enough to be irrelevant.</p><p>This matters morally and imaginatively. “Humanity” was once plural. There were other people with tools, bodies, minds, families and survival strategies. When groups met, possibilities included avoidance, violence, imitation, exchange, mating, disease and absorption.</p><p>The good: contact could enrich populations and technologies. The bad: contact could also destroy. Our ancestors were not alone in the human family, and the later survival of Homo sapiens came with the disappearance or absorption of close relatives.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Different human lineages exchanged genes and perhaps techniques, widening the biological and cultural story.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Plural humanity included competition, displacement and eventual loss of other human worlds.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> The word “human” was once a family, not a single surviving branch.</div>
+<div class="bridge">Bridge: Objects now begin to speak more clearly: pigments, beads and marks show identity carried outside the body.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S8" class="src-ref" href="#src-S8">S8</a> <a aria-label="S6" class="src-ref" href="#src-S6">S6</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-11">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 11 · Deep Humanity</div><div class="range">100,000–80,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>Meaning in objects</h2>
+<p class="focus">Pigments, ornaments, marks, fishing tools and identity carried by things.</p>
+<div class="story"><p>Around this depth of time, material culture begins to show symbolic intensity more clearly. Pigments, beads, engraved ochre, special objects and later fishing tools point to minds doing more than immediate survival. Objects could mark identity, memory, beauty, ritual, exchange or group belonging.</p><p>Blombos Cave is one of the key anchors slightly later in this broad arc, with engraved ochre around 77–75 thousand years ago. But the deeper point is wider: humans were learning to make things that carried meaning beyond direct utility. A shell or mark could say “we,” “mine,” “this matters,” or “remember.”</p><p>The good: symbolic objects increased group identity, long-distance recognition and shared imagination. The bad: symbols can also divide. Once marks define belonging, they can also define outsiders.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Meaning became portable: pigment, ornament and mark allowed identity to travel with the body.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Symbolic identity can strengthen cooperation inside the group while sharpening exclusion outside it.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> A symbol compresses a social world into matter.</div>
+<div class="bridge">Bridge: The next card enters a narrower gate: survival, possible bottlenecks and the start of the durable planetary dispersal.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S10" class="src-ref" href="#src-S10">S10</a> <a aria-label="S1" class="src-ref" href="#src-S1">S1</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-12">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 12 · Deep Humanity</div><div class="range">80,000–60,000 BCE</div></div>
+<div class="confidence">evidence density: medium</div>
+</div>
+<h2>The narrow gate and the great dispersal</h2>
+<p class="focus">Resilience, symbolic worlds, and durable expansion out of Africa.</p>
+<div class="story"><p>The 80–60 thousand BCE window is one of the great hinges of human history. Some older models emphasized bottlenecks; newer evidence complicates any simple story. But the broad truth holds: by the end of this interval, humans were moving in ways that would become durably planetary.</p><p>The expansion out of Africa was not just a population movement. It was a package of bodies, tools, social rules, symbolic habits, ecological knowledge and risk tolerance. Groups could carry a world inside them: not in books, but in memory, language, ornaments, rituals, kinship and technique.</p><p>The good: humanity became capable of becoming many-worlded. The bad: the same expansion began the long sequence of ecological shocks, megafaunal pressure, and encounters that would reshape other species and other humans.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Culture became portable enough to survive major movement across continents.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Expansion increased pressure on ecosystems and other populations, even before states and empires existed.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> A species becomes planetary when memory travels better than habitat.</div>
+<div class="bridge">Bridge: By 60–40 thousand BCE, humans reached Sahul and Eurasian worlds while art and interbreeding entered the record more strongly.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S6" class="src-ref" href="#src-S6">S6</a> <a aria-label="S7" class="src-ref" href="#src-S7">S7</a> <a aria-label="S8" class="src-ref" href="#src-S8">S8</a> <a aria-label="S10" class="src-ref" href="#src-S10">S10</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-13">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 13 · Deep Humanity</div><div class="range">60,000–40,000 BCE</div></div>
+<div class="confidence">evidence density: high</div>
+</div>
+<h2>Sahul, Eurasia, and the image-making species</h2>
+<p class="focus">Sea crossings, cold worlds, Denisovan/Neanderthal mixture, early visual storytelling.</p>
+<div class="story"><p>This card is one of the strongest in deep prehistory. Evidence from Madjedbebe in northern Australia points to human occupation by about 65 thousand years ago, meaning people reached Sahul — the Ice Age continent including Australia and New Guinea — through movement that required coastal skill and sea crossing.</p><p>In Eurasia, humans encountered and mixed with Neanderthals and Denisovans. Genetic evidence places major Neanderthal ancestry in non-African humans from interbreeding roughly 47–65 thousand years ago. At the same time, the symbolic record becomes more visible. Indonesian cave art, including very early narrative imagery by at least 51.2 thousand years ago, shows visual storytelling far from Europe.</p><p>The good: humans became astonishingly adaptive — sailors, migrants, artists, cold-weather survivors. The bad: expansion accelerated contact, competition and ecological disruption. The image-making species was also a species that could transform every place it entered.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Human culture crossed seas, survived new climates, mixed with other humans and made images that still speak.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Planetary expansion brought extinction pressure, rivalry and the beginning of irreversible ecological change.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> Art is not decoration after survival. It is part of how survival becomes a world.</div>
+<div class="bridge">Bridge: The next card closes deep humanity with Ice Age intensity: relatives fade, clothing and shelters improve, and imagination deepens under cold pressure.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S7" class="src-ref" href="#src-S7">S7</a> <a aria-label="S8" class="src-ref" href="#src-S8">S8</a> <a aria-label="S9" class="src-ref" href="#src-S9">S9</a> <a aria-label="S12" class="src-ref" href="#src-S12">S12</a></div>
+</div>
+</article>
+<article class="a4-card" id="card-14">
+<div class="card-inner">
+<div class="card-top">
+<div><div class="card-num">Card 14 · Deep Humanity</div><div class="range">40,000–20,000 BCE</div></div>
+<div class="confidence">evidence density: high</div>
+</div>
+<h2>Relatives fade, ice-age imagination</h2>
+<p class="focus">Neanderthal disappearance, cave art, eyed needles, shelters and Last Glacial Maximum pressure.</p>
+<div class="story"><p>Between 40 and 20 thousand BCE, the human world becomes visually and emotionally easier for us to recognize. Neanderthals disappear as a distinct population around the earlier part of this window, though part of them remains in living genomes. Cave art, personal ornaments, music-like objects, tailored clothing, shelters and long-distance materials show a species increasingly wrapped in culture.</p><p>Eyed needles appear by roughly 40 thousand years ago in some regions, making tight clothing and social display more possible. The Last Glacial Maximum, roughly 26.5–19 thousand years ago, tightened the planet’s cold belt. Survival required not only bodies and tools, but stored memory: where animals moved, how hides were worked, how children were warmed, where groups could gather, when danger was coming.</p><p>The good: culture became warmth, identity and imagination. The bad: Ice Age scarcity could intensify conflict, hunger and pressure on animals. Humanity had become deeply creative, but creativity had not abolished suffering.</p></div>
+<div class="split">
+<div class="mini good"><div class="label">Good</div><div>Clothing, shelter, art, ritual and technical skill made survival possible near the cold edge.</div></div>
+<div class="mini bad"><div class="label">Bad</div><div>Cold, scarcity and competition punished failure harshly and likely intensified pressure on animals and rival groups.</div></div>
+</div>
+<div class="pattern"><b>Deep pattern:</b> When environment tightens, culture becomes both warmth and weapon.</div>
+<div class="bridge">Bridge: Next: 20,000–10,000 BCE, where climate loosens, coastlines move, megafauna decline, and the road toward agriculture opens.</div>
+<div class="sources-inline">Evidence anchors: <a aria-label="S8" class="src-ref" href="#src-S8">S8</a> <a aria-label="S9" class="src-ref" href="#src-S9">S9</a> <a aria-label="S13" class="src-ref" href="#src-S13">S13</a> <a aria-label="S14" class="src-ref" href="#src-S14">S14</a> <a aria-label="S15" class="src-ref" href="#src-S15">S15</a></div>
+</div>
+</article>
+<section class="people wrap" id="people"><h2>People who shaped this period</h2><p class="people-note">Names are scarce or absent in this period, so this section names roles and surviving traces rather than pretending certainty.</p><div class="person-grid"><div class="person-card"><b>Anonymous fire keepers</b><small>survival / culture</small><p>kept warmth, cooking, protection, and night conversation alive across deep time.</p></div><div class="person-card"><b>Anonymous toolmakers</b><small>technology</small><p>turned stone, bone, wood, hide, and pigment into external memory for the hand.</p></div><div class="person-card"><b>Anonymous healers</b><small>care</small><p>learned plants, wounds, birth, pain, grief, and the fragile social medicine of small groups.</p></div><div class="person-card"><b>Anonymous storytellers</b><small>symbolic mind</small><p>carried maps, taboos, ancestors, dangers, humor, and identity before writing existed.</p></div><div class="person-card"><b>Anonymous mothers and fathers</b><small>continuity</small><p>kept children alive through climate swings, hunger, predators, and migration shock.</p></div><div class="person-card"><b>Anonymous artists</b><small>meaning</small><p>left pigments, marks, ornaments, and gestures that show the mind reaching beyond survival.</p></div><div class="person-card"><b>Anonymous scouts and migrants</b><small>planetary expansion</small><p>walked into new ecologies and made humanity a species of many worlds.</p></div><div class="person-card"><b>Lost rival humans</b><small>encounter / inheritance</small><p>Neanderthal and Denisovan lineages shaped our genes and remind us that sapiens was not alone.</p></div></div><p class="people-disclaimer">This is a selective memory layer, not a complete ranking. It makes the era personal without turning history into hero worship.</p></section>
+<section class="sources" id="sources">
+<h2>Evidence anchors and source map</h2>
+<p>These sources anchor the factual spine. The narrative also uses cautious inference about daily life where direct evidence cannot exist. Dates are approximate and may shift as new fossils, genomes and dating methods appear.</p>
+<div class="source-grid">
+<div class="source" id="src-S1">
+<div class="sid">S1</div>
+<a aria-label="Smithsonian Human Origins — Homo sapiens" href="https://humanorigins.si.edu/evidence/human-fossils/species/homo-sapiens" rel="noopener" target="_blank">Smithsonian Human Origins — Homo sapiens</a>
+<p>Homo sapiens in Africa from about 300,000 years ago; climate instability; hunting/gathering; shellfish by 164 ka and fishing tools by 90 ka.</p>
+</div>
+<div class="source" id="src-S2">
+<div class="sid">S2</div>
+<a aria-label="Nature — Jebel Irhoud and pan-African Homo sapiens" href="https://www.nature.com/articles/nature22336" rel="noopener" target="_blank">Nature — Jebel Irhoud and pan-African Homo sapiens</a>
+<p>Jebel Irhoud fossils dated 315 ± 34 ka; mosaic modern/archaic features; whole-continent emergence model.</p>
+</div>
+<div class="source" id="src-S3">
+<div class="sid">S3</div>
+<a aria-label="Natural History Museum — Oldest Homo sapiens fossils in Morocco" href="https://www.nhm.ac.uk/discover/news/2017/june/oldest-known-homo-sapiens-fossils-discovered-in-morocco.html" rel="noopener" target="_blank">Natural History Museum — Oldest Homo sapiens fossils in Morocco</a>
+<p>Jebel Irhoud remains and associated stone tools dated roughly 350,000–280,000 years ago; mixed modern and archaic traits.</p>
+</div>
+<div class="source" id="src-S4">
+<div class="sid">S4</div>
+<a aria-label="Nature — Age of Omo I fossils" href="https://www.nature.com/articles/s41586-021-04275-8" rel="noopener" target="_blank">Nature — Age of Omo I fossils</a>
+<p>Omo I minimum age revised to 233 ± 22 ka; Herto commonly around 160–155 ka.</p>
+</div>
+<div class="source" id="src-S5">
+<div class="sid">S5</div>
+<a aria-label="UC Berkeley — Herto skulls and tools" href="https://newsarchive.berkeley.edu/news/media/releases/2003/06/11_idaltu.shtml" rel="noopener" target="_blank">UC Berkeley — Herto skulls and tools</a>
+<p>Herto fossils around 160 ka; sophisticated stone technology; butchery of large mammals.</p>
+</div>
+<div class="source" id="src-S6">
+<div class="sid">S6</div>
+<a aria-label="National Geographic Education — Out of Africa" href="https://education.nationalgeographic.org/resource/their-footsteps-human-migration-out-africa/" rel="noopener" target="_blank">National Geographic Education — Out of Africa</a>
+<p>Evidence summary placing durable modern human expansion out of Africa broadly between 60,000 and 90,000 years ago.</p>
+</div>
+<div class="source" id="src-S7">
+<div class="sid">S7</div>
+<a aria-label="Nature — Human occupation of northern Australia by 65 ka" href="https://www.nature.com/articles/nature22968" rel="noopener" target="_blank">Nature — Human occupation of northern Australia by 65 ka</a>
+<p>Madjedbebe evidence for human occupation around 65,000 years ago, including stone tools, ochres, reflective additives, and ground-edge axes.</p>
+</div>
+<div class="source" id="src-S8">
+<div class="sid">S8</div>
+<a aria-label="Max Planck Society — Neandertals" href="https://www.mpg.de/neandertals" rel="noopener" target="_blank">Max Planck Society — Neandertals</a>
+<p>Neanderthal DNA in present-day humans outside Africa from interbreeding around 47,000–65,000 years ago; Denisovan ancestry in Papua New Guinea.</p>
+</div>
+<div class="source" id="src-S9">
+<div class="sid">S9</div>
+<a aria-label="Nature — Early modern human genomes and Neanderthal admixture" href="https://www.nature.com/articles/s41586-024-08420-x" rel="noopener" target="_blank">Nature — Early modern human genomes and Neanderthal admixture</a>
+<p>Modern humans in Europe more than 45 ka; overlap with Neanderthals; Neanderthal disappearance around 40 ka; shared admixture event about 45–49 ka.</p>
+</div>
+<div class="source" id="src-S10">
+<div class="sid">S10</div>
+<a aria-label="Smithsonian — Blombos ocher plaque" href="https://humanorigins.si.edu/evidence/behavior/recording-information/blombos-ocher-plaque" rel="noopener" target="_blank">Smithsonian — Blombos ocher plaque</a>
+<p>Organized markings on ocher plaque from Blombos Cave, South Africa, about 77,000–75,000 years old.</p>
+</div>
+<div class="source" id="src-S11">
+<div class="sid">S11</div>
+<a aria-label="Nature — Rock art from at least 67,800 years ago in Sulawesi" href="https://www.nature.com/articles/s41586-025-09968-y" rel="noopener" target="_blank">Nature — Rock art from at least 67,800 years ago in Sulawesi</a>
+<p>Laser-ablation U-series minimum age of 67.8 ka for a hand stencil in Southeast Sulawesi / Muna Island.</p>
+</div>
+<div class="source" id="src-S12">
+<div class="sid">S12</div>
+<a aria-label="Nature — Narrative cave art in Indonesia by 51,200 years ago" href="https://www.nature.com/articles/s41586-024-07541-7" rel="noopener" target="_blank">Nature — Narrative cave art in Indonesia by 51,200 years ago</a>
+<p>Leang Karampuang narrative composition, at least 51.2 ka; early representational art and visual storytelling.</p>
+</div>
+<div class="source" id="src-S13">
+<div class="sid">S13</div>
+<a aria-label="UNESCO — Chauvet-Pont d’Arc decorated cave" href="https://whc.unesco.org/en/list/1426/" rel="noopener" target="_blank">UNESCO — Chauvet-Pont d’Arc decorated cave</a>
+<p>Early pictorial drawings in Chauvet-Pont d’Arc, sealed for millennia and associated with the Aurignacian period.</p>
+</div>
+<div class="source" id="src-S14">
+<div class="sid">S14</div>
+<a aria-label="Science Advances — Paleolithic eyed needles and dress" href="https://www.science.org/doi/10.1126/sciadv.adp2887" rel="noopener" target="_blank">Science Advances — Paleolithic eyed needles and dress</a>
+<p>Eyed needles appear by about 40 ka in Siberia, about 38 ka in the Caucasus, and later in East Asia and Europe.</p>
+</div>
+<div class="source" id="src-S15">
+<div class="sid">S15</div>
+<a aria-label="PNAS — Last Glacial Maximum framing" href="https://www.pnas.org/doi/10.1073/pnas.2206742119" rel="noopener" target="_blank">PNAS — Last Glacial Maximum framing</a>
+<p>Uses 26.5–19 ka as the Last Glacial Maximum frame; useful climate boundary for the final cards of this chapter.</p>
+</div></div>
+</section>
+<nav class="footer-nav">
+<a aria-label="← Back to history index" href="index.html">← Back to history index</a>
+<a aria-label="Next: Ice Age Transition · 20,000–10,000 BCE →" href="02_ice_age_transition_20000_10000_bce.html">Next: Ice Age Transition · 20,000–10,000 BCE →</a>
+</nav>
+
+<section id="conflicts" class="hist-war-layer" data-added="v0.17.0-conflicts-slo">
+  <div class="hist-war-shell">
+    <div class="hist-war-head">
+      <div class="hist-war-kicker">Conflict / War Layer · v0.17</div>
+      <div class="hist-lang-en"><h2 class="hist-war-title">Before war: violence without states</h2><p class="hist-war-sub">This era probably contained violence, revenge, raiding, and group tension, but not yet the large, bureaucratic war systems of later history. Conflict existed as local pressure, not as imperial machinery.</p></div><div class="hist-lang-sl" lang="sl"><h2 class="hist-war-title">Pred vojno: nasilje brez držav</h2><p class="hist-war-sub">Ta doba je verjetno vsebovala nasilje, maščevanje, plenjenje in napetosti med skupinami, ne pa še velikih birokratskih vojnih sistemov poznejše zgodovine. Konflikt je obstajal kot lokalni pritisk, ne kot imperialni stroj.</p></div>
+    </div>
+    <div class="hist-war-body">
+      <div class="hist-war-grid">
+        <div class="hist-war-card">
+<div class="hist-lang-en"><h3>Scale</h3><p>Mostly interpersonal violence, small-group raids, revenge cycles, and territorial pressure around food, mates, prestige, and safe routes.</p></div><div class="hist-lang-sl" lang="sl"><h3>Merilo</h3><p>Pretežno osebno nasilje, manjši napadi, maščevalni krogi ter pritisk za hrano, partnerje, ugled in varne poti.</p></div>
+</div><div class="hist-war-card">
+<div class="hist-lang-en"><h3>Evidence pattern</h3><p>The record is fragmentary: trauma on bones, rare massacre sites, defensive behavior, and ethnographic analogies. Absence of evidence is not evidence of peace.</p></div><div class="hist-lang-sl" lang="sl"><h3>Vzorec dokazov</h3><p>Zapis je razdrobljen: poškodbe na kosteh, redka mesta pokolov, obrambno vedenje in etnografske primerjave. Manj dokazov ne pomeni nujno miru.</p></div>
+</div><div class="hist-war-card">
+<div class="hist-lang-en"><h3>Why it matters</h3><p>The key point is not that early humans were peaceful or brutal. It is that conflict was constrained by small scale. The later problem is scale amplification.</p></div><div class="hist-lang-sl" lang="sl"><h3>Zakaj je pomembno</h3><p>Bistvo ni, da so bili zgodnji ljudje miroljubni ali brutalni. Bistvo je, da je bil konflikt omejen z majhnim merilom. Poznejši problem je ojačanje merila.</p></div>
+</div>
+      </div>
+      <div class="hist-war-note"><div class="hist-lang-en">This is a compact conflict layer, not a full military history. It marks where organized violence shaped the era and why it matters for the long arc of human coordination.</div><div class="hist-lang-sl" lang="sl">To je zgoščen sloj konfliktov, ne celotna vojaška zgodovina. Označi, kje je organizirano nasilje oblikovalo dobo in zakaj je pomembno za dolg lok človeškega usklajevanja.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+const bar = document.getElementById('progressBar');
+function onScroll(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+  bar.style.width = pct + '%';
+}
+document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+<!-- HISTORY MOBILE READER CONTROLS v0.6 START -->
+<a aria-label="Back to top" class="back-top" href="#top">↑ Top</a>
+<div aria-label="Reading text size controls" class="reader-controls" role="group">
+<button aria-label="Decrease text size" data-reader-dec="" title="Decrease text size" type="button">A−</button>
+<span class="reader-label" id="readerSizeLabel">XL 4/8</span>
+<button aria-label="Increase text size" data-reader-inc="" title="Increase text size" type="button">A+</button>
+</div>
+<script>
+(function() {
+  var KEY='humanityHistoryReaderSizeV2';
+  var max=7;
+  var defaultLevel=3;
+  var names=['Small','Comfort','Large','XL','Bed','Huge','Giant','Max'];
+  function clamp(n) {
+    n=parseInt(n,10);
+    return isNaN(n) ? defaultLevel : Math.max(0, Math.min(max,n));
+  }
+  function get() {
+    try {
+      var saved=localStorage.getItem(KEY);
+      if(saved!==null) return clamp(saved);
+    } catch(e) {}
+    return defaultLevel;
+  }
+  function apply(n) {
+    n=clamp(n);
+    document.documentElement.setAttribute('data-reader-size', String(n));
+    try { localStorage.setItem(KEY,String(n)); } catch(e) {}
+    var label=document.getElementById('readerSizeLabel');
+    if(label) label.textContent=names[n]+' '+(n+1)+'/8';
+  }
+  apply(get());
+  document.addEventListener('click', function(e) {
+    if(e.target && e.target.matches('[data-reader-inc]')) apply(get()+1);
+    if(e.target && e.target.matches('[data-reader-dec]')) apply(get()-1);
+  });
+})();
+</script>
+<!-- HISTORY MOBILE READER CONTROLS v0.6 END -->
+
+
+<!-- === HISTORY MOBILE HEADER v0.16.7 SCRIPT START === -->
+<script>
+(function(){
+  function closeMenu(){
+    document.body.classList.remove('mobile-menu-open');
+    document.querySelectorAll('.mobile-menu-toggle').forEach(function(btn){btn.setAttribute('aria-expanded','false');});
+    document.querySelectorAll('.mobile-menu-panel').forEach(function(panel){panel.setAttribute('aria-hidden','true');});
+  }
+  function openMenu(){
+    document.body.classList.add('mobile-menu-open');
+    document.querySelectorAll('.mobile-menu-toggle').forEach(function(btn){btn.setAttribute('aria-expanded','true');});
+    document.querySelectorAll('.mobile-menu-panel').forEach(function(panel){panel.setAttribute('aria-hidden','false');});
+  }
+  document.addEventListener('click',function(ev){
+    var toggle=ev.target.closest&&ev.target.closest('.mobile-menu-toggle');
+    if(toggle){ev.preventDefault();document.body.classList.contains('mobile-menu-open')?closeMenu():openMenu();return;}
+    if(ev.target.closest&&ev.target.closest('[data-mobile-menu-close]')){ev.preventDefault();closeMenu();return;}
+    if(ev.target.closest&&ev.target.closest('.mobile-menu-panel a')){closeMenu();}
+  });
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')closeMenu();});
+})();
+</script>
+<!-- === HISTORY MOBILE HEADER v0.16.7 SCRIPT END === -->
+
+</body>
+</html>

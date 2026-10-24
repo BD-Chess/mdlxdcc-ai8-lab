@@ -1,0 +1,98 @@
+{
+  "schema": "nara.format.edition.artwork.v5",
+  "edition_id": "NARA-D-2026-10-05@25901ac11d0e9cbad0961bcee265209eaf0960cc0ddbf34ff156e4935a40d233:FORMAT-R1:a0637867ad84df8fa9ac875ef6e50b38d1164bc948302eed2cc048b75e1aa366",
+  "story_id": "NARA-D-2026-10-05",
+  "date": "2026-10-05",
+  "format_revision": "R1",
+  "en_content_sha256": "a0637867ad84df8fa9ac875ef6e50b38d1164bc948302eed2cc048b75e1aa366",
+  "sl_content_sha256": "ea5c5f62c2da8bbb7785527208b381ff2f32a3e6a584055face9f7bedb033d16",
+  "images": [
+    {
+      "scene": 1,
+      "source_after_paragraph": 16,
+      "after_paragraph_en": 18,
+      "after_paragraph_sl": 18,
+      "paragraph_sha256_en": "40ec1feb2061076162f2f9af1688ebe3138caa37514b9f2c2afe79f83f748cd2",
+      "paragraph_sha256_sl": "84f103c6faf62c9839ff2210c063633d1c9193c277d1bfb164837323c500e64b",
+      "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_01_red-line_v2.webp",
+      "width": 1919,
+      "height": 1080,
+      "sha256": "848d1aa92559d049dff1dfaed0139b19adacb600f33f5c438d1f9eb1e0e2250e",
+      "alt_en": "Lio pulls the red-thread manual cut-off as Illuminara redirects a hot fragment into the ceramic catch-bed at Dock Four.",
+      "alt_sl": "Lio potegne ročico z rdečo nitjo, Illuminara pa preusmeri razžarjeni odlomek v keramično lovilno korito.",
+      "moment_id": "moment-01",
+      "variants": {
+        "L_HD": {
+          "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_01_red-line_v2.webp",
+          "width": 1919,
+          "height": 1080,
+          "sha256": "848d1aa92559d049dff1dfaed0139b19adacb600f33f5c438d1f9eb1e0e2250e"
+        },
+        "P_HD": {
+          "src": "assets/img/daily/2026-10-05/R1-responsive/moment-01-P-HD-R1.webp",
+          "width": 1080,
+          "height": 1920,
+          "sha256": "30d94641897944f444a8988d31e6562cd6fcaca8cfcd9298275648f57fddbd6f"
+        }
+      }
+    },
+    {
+      "scene": 3,
+      "source_after_paragraph": 9,
+      "after_paragraph_en": 11,
+      "after_paragraph_sl": 11,
+      "paragraph_sha256_en": "1782cbf1b09fb55619a695bc6800646631c362a75363e26d2f628d7b45efd892",
+      "paragraph_sha256_sl": "a0479aafb9cd4e321835599ca2a20ff3d7aee37c08d0c468ad2ee16031d16970",
+      "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_02_the_hour_nobody_owned.webp",
+      "width": 1919,
+      "height": 1080,
+      "sha256": "33023b5831d70889850ed05d3e09a55c58f63b9f27b0f91491cd7f1c31d5c944",
+      "alt_en": "Sey, Illuminara and Ruun compare engineering plans as they realise both keepers claimed the same hour.",
+      "alt_sl": "Sey, Illuminara in Ruun primerjajo inženirske načrte, ko spoznajo, da sta si obe strani lastili isto uro.",
+      "moment_id": "moment-02",
+      "variants": {
+        "L_HD": {
+          "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_02_the_hour_nobody_owned.webp",
+          "width": 1919,
+          "height": 1080,
+          "sha256": "33023b5831d70889850ed05d3e09a55c58f63b9f27b0f91491cd7f1c31d5c944"
+        },
+        "P_HD": {
+          "src": "assets/img/daily/2026-10-05/R1-responsive/moment-02-P-HD-R1.webp",
+          "width": 1080,
+          "height": 1920,
+          "sha256": "cd0bad2ca341ed55a49ff7ec42907d9697374a19df7508ae68ff88b2867ff592"
+        }
+      }
+    },
+    {
+      "scene": 5,
+      "source_after_paragraph": 20,
+      "after_paragraph_en": 21,
+      "after_paragraph_sl": 21,
+      "paragraph_sha256_en": "7d3128a129514649954578f28a589aa94140a385a8bdaff92db1bf468e0e54ea",
+      "paragraph_sha256_sl": "be40b788c0e4ec28f255af261cbb9d15ad1bd84bddf52c73a88241cfedcc1fa9",
+      "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_03_a_centurys_work.webp",
+      "width": 1919,
+      "height": 1080,
+      "sha256": "3c00fc3d88bfd12a9167727313032fc9967f97971bbc65007dbf7df11044dd51",
+      "alt_en": "Sey, Illuminara and Ruun laugh together beside a notebook during their century of work.",
+      "alt_sl": "Sey, Illuminara in Ruun se ob zvezku skupaj nasmehnejo med stoletjem skupnega dela.",
+      "moment_id": "moment-03",
+      "variants": {
+        "L_HD": {
+          "src": "assets/img/daily/2026-10-05/HD/Nara_2026-10-05_The_Window_That_Ate_a_Century_03_a_centurys_work.webp",
+          "width": 1919,
+          "height": 1080,
+          "sha256": "3c00fc3d88bfd12a9167727313032fc9967f97971bbc65007dbf7df11044dd51"
+        },
+        "P_HD": {
+          "src": "assets/img/daily/2026-10-05/R1-responsive/moment-03-P-HD-R1.webp",
+          "width": 1080,
+          "height": 1920,
+          "sha256": "3ae1338310aabe12e1ae51450937db5975f628994f471805d1f748052a08775b"
+        }
+      }
+    }
+  ]
+}

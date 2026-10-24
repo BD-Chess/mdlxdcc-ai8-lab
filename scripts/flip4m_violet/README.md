@@ -1,0 +1,41 @@
+# Flip4M Petrol LAB / APP
+
+Version 2.4.1-petrol, 2026-09-30. Design: Bojan Dobrečevič (BD); implementation and verification: GPT. Existing engine authorship is preserved in source.
+
+## Scope
+
+Approved Petrol Night + Gold family design for `public/F4M/new/` and `public/F4M/app/`, one shared engine in `_shared/petrol-2.4.1/`, and a non-destructive legacy `PWA/` migration. CURRENT, PREVIOUS, ChessBest and Sudoku are unchanged by this release. Board size is user-selectable (Standard / Large / Max), with Max as the default; Standard preserves the 2.2 geometry. No Water/Laser, native app or TestFlight change.
+
+## Rebuild / bounded verification
+
+From repository root:
+
+```
+python scripts/flip4m_violet/build.py --public public
+python -m pip install playwright==1.57.0
+python -m playwright install chromium
+python scripts/flip4m_violet/verify.py --public public --out flip4m-evidence
+```
+
+Build verifies donor Git blob hashes before writes. It reads CURRENT 2.1.2-smart-time and preserves existing rules, search and Sim modules. Maintain templates here, then rebuild; do not independently edit generated channels. Future runtime changes require a new immutable shared directory and cache version. Retain assets referenced by supported open clients.
+
+## Evidence
+
+Prior Violet bounded Chromium CI: 97/97 checks; this Petrol revision adds targeted palette and board-scale checks, no page JavaScript errors. Run 36646466838, source/test commit ad017325deea055b1ba15212dc2640a7517b5bd3, generated verified commit d3a616917cf5b197981606ef9e4a366d160bcbd1. Tests cover gameplay/Undo, actual AI Worker, save/import/readback, APP widths and resize, both offline channels, failed-save update refusal, another tab not reloading, and legacy copy/refusal/export. CI uses disposable browser profiles. This is engineering evidence, not engine-strength evidence. Physical iPhone/Safari installation acceptance has not been performed.
+
+## Channel safety
+
+LAB retains `flip4m-lab-2.1` data; APP uses `flip4m-app-2.2`. Preferences are isolated, with one-time read-only LAB preference migration. PWA scopes and caches are channel-specific. Updates pause and verify persistence before activation; other tabs are not forcibly reloaded. Legacy migration never overwrites an existing LAB checkpoint and leaves old data/export available.
+
+Production note: Petrol 2.3.0 was merged as `eefdcf256217798fcbd9d340b1f6c598f49744b8`; this follow-up commit intentionally triggers the normal GitHub Pages pipeline because the squash message inherited a historical `[skip ci]` token.
+
+Petrol 2.3.1 desktop APP preview: the phone is vertically centered in the viewport below the preview header, matching the established ChessBest/8zSudoku preview rhythm. The HTML/root canvas now carries the same Petrol background through the full viewport so no lower grey band appears. Phone-browser APP layout is unchanged.
+
+## 2.4.0 compact rim and AI vs AI
+
+Visible magnetic caps stay outside the board; larger transparent tap targets are enabled only for legal magnetic placement. Owner color and remaining lifetime stay readable after rotation. The existing demo policy now appears under New game / Opponent with separate Red/Yellow Classical or DCC choices. Uses the existing single scheduler, stop/pause, journal and save validation. Run `python scripts/flip4m_violet/verify_240.py` for targeted geometry and demo tests; it writes bounded evidence after each check.
+
+
+## 2.4.1 Smart Time v2
+
+Before this change, the complete APP 2.4.0 root snapshot was copied byte-identically to `public/F4M/app/old/001/` and merged to main separately. Smart Time v2 preserves Beginner/Casual/Challenge/Master. For Grandmaster/Champion, the first two moves of each side stay fast; from that side's third move onward the budget is based on ply, legal branching, threats, active magnets and remaining tools rather than mainly piece occupancy. Grandmaster uses a 15 s post-opening / 30 s mid-late floor up to 60 s; Champion uses 25 s / 55 s up to 120 s. Complex tactical positions are driven toward 45–60 s and 90–120 s respectively. Forced moves and proven results may finish early. Classical and AI+DCC share the same analyzer budget.

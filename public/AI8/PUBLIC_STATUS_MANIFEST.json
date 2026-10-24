@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "project": "AI8 ArenaLoop",
+  "manifest_type": "READ_ONLY_PUBLIC_STATUS_EXPORT",
+  "generated_at": "2026-08-16T14:59:53+02:00",
+  "generator_version": "ai8-public-export-0.2.2-preparation-genesis-r2",
+  "release_channel": "REVIEW",
+  "hash_algorithm": "SHA3-256",
+  "frozen_architecture": {
+    "path": "AI8/AI8_ArenaLoop.md",
+    "sha3_256": "4d8c5c9b91cce6cb80d5165493276c6d16346f7248536d02dd903ae1ec53aaa9"
+  },
+  "files": [
+    {
+      "path": "AI8/AI8_ArenaLoop.html",
+      "bytes": 80095,
+      "sha3_256": "e0077e6de5098397cccca4760639d6cfaec777d95333b0a8b399e3bfd2152ca6"
+    },
+    {
+      "path": "AI8/AI8_ArenaLoop.md",
+      "bytes": 155578,
+      "sha3_256": "4d8c5c9b91cce6cb80d5165493276c6d16346f7248536d02dd903ae1ec53aaa9"
+    },
+    {
+      "path": "AI8/FINAL_FREEZE_RECORD.md",
+      "bytes": 1716,
+      "sha3_256": "56e9b01a89ede5ba3834e2c549475fad643841dbd9af9c687b8c4f530f4ffa01"
+    },
+    {
+      "path": "AI8/ai8_map.json",
+      "bytes": 7023,
+      "sha3_256": "89b67d746effa946e598fa9b5f9c565776aa63348dcecbfa06ff6b2296dc6037"
+    },
+    {
+      "path": "AI8/arenaloop_public_status.json",
+      "bytes": 25464,
+      "sha3_256": "74677955231740c68d38a10210ceb33b724aaa9ab68e304a56add20eabfeb57b"
+    },
+    {
+      "path": "AI8/arenaloop_public_status.schema.json",
+      "bytes": 17144,
+      "sha3_256": "a6338fe1b0f06a98566e2e3bf153e2862c426e7f1da79b7a2517356b31e18786"
+    },
+    {
+      "path": "AI8/arenaloop_releases.json",
+      "bytes": 20067,
+      "sha3_256": "43a65d2d2080f5ad535ed4bdfbccba637407d0d737cf01557205c634fbc67277"
+    },
+    {
+      "path": "AI8/index.html",
+      "bytes": 67593,
+      "sha3_256": "3dd77b1968c80a4b7aa37983be8f5469313775ea137f29cc952455a0d9f77e36"
+    },
+    {
+      "path": "AI8/AI8_Preparation_Genesis.html",
+      "bytes": 7150,
+      "sha3_256": "6ffa24193b8e6332863191d4d50293f32ebdeee09a830bd7bfd3cc406d9ad6ca"
+    },
+    {
+      "path": "AI8/AI8_PREPARATION_GENESIS_INTEGRATION_NOTE.md",
+      "bytes": 2552,
+      "sha3_256": "c670bdba8737d20cab7c2015f63195aae05edb9db72da2dc2855cf789ef6a4ff"
+    },
+    {
+      "path": "AI8/PREPARATION_GENESIS_R2_PROVENANCE_VALIDATION.md",
+      "bytes": 1178,
+      "sha3_256": "01bf80bf1c8fc403ca3c325a580fc8d94b2ded9e52a1896a46244f686b988ce8"
+    },
+    {
+      "path": "AI8/README_FIRST.md",
+      "bytes": 1003,
+      "sha3_256": "b8c80d5b94e790b4a59b0579d5cc2b11c6b584eedf64570150ef93658b156214"
+    }
+  ],
+  "canonical_state_warning": "This manifest binds the public export only. Canonical implementation state remains in verified local ledgers, contracts, gate records, and release records.",
+  "validation": {
+    "status_schema": "PASS",
+    "architecture_sha3": "4d8c5c9b91cce6cb80d5165493276c6d16346f7248536d02dd903ae1ec53aaa9",
+    "architecture_bytes": 155578,
+    "privacy_flags": "PASS",
+    "role_separation": "PASS",
+    "html_projection_hooks": "PASS",
+    "experimental_branch_boundary": "PASS",
+    "source_package_sha3": "a0f3137a526c6e71bcd6c994f1b5fc894c20720ce9bed6f8c8e0a6db6592d6b9",
+    "source_package_name": "AI8_ArenaLoop_D_RRP_TEAM_GENESIS_v0_4_1_EXECUTION_HARDENED_R2.zip",
+    "r2_package_gate": "PASS",
+    "r2_active_schema_count": 25,
+    "r2_integration_tests": "20/20 PASS",
+    "r2_complete_fixtures": "C1,D2,P2_MATCHED"
+  },
+  "package_scope_note": "This AI8_v2 package contains the /AI8/ directory payload. The Preparation / Genesis material is an experimental companion branch and does not rewrite the frozen Architecture Spec v0.2.2.",
+  "provenance_micro_sync": {
+    "status": "PASS",
+    "reason": "Canonical Preparation / Genesis execution source advanced to execution-hardened R2; the executable validator now enforces mandatory schemas, complete artifact chains, direct evidence and real negative tests. Architecture and claim boundary remain unchanged.",
+    "source_package": "AI8_ArenaLoop_D_RRP_TEAM_GENESIS_v0_4_1_EXECUTION_HARDENED_R2.zip",
+    "source_package_sha3_256": "a0f3137a526c6e71bcd6c994f1b5fc894c20720ce9bed6f8c8e0a6db6592d6b9",
+    "parent_release": "website-0.2.2-preparation-genesis-r1-provenance-sync",
+    "release": "website-0.2.2-preparation-genesis-r2-execution-hardening-sync"
+  },
+  "release_lineage": {
+    "status": "PASS",
+    "append_only": true,
+    "historical_r1_sync_recorded": true,
+    "current_r2_sync_recorded": true,
+    "current_release": "website-0.2.2-preparation-genesis-r2-execution-hardening-sync"
+  }
+}

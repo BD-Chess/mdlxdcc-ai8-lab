@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="noindex,nofollow,noarchive" name="robots"/><meta content="dark light" name="color-scheme"/>
+<meta content="Delovni načrt BD × AI Lab: HPC in AI infrastruktura v Sloveniji in EU, projekti, roki, kontakti in priprava prijav." name="description"/>
+<meta content="#0b151c" name="theme-color"/><title>HPC &amp; AI — Naš načrt | BD × AI Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0b151c;--panel:#13222c;--deep:#0e1b23;--fg:#edf3f0;--muted:#adc0c5;--line:#304650;--accent:#b9e68c;--blue:#8acbd9;--warm:#e8bd7b;--red:#edaba3;--shadow:#0003;--font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font:17px/1.55 var(--font)}
+[data-theme=light]{color-scheme:light;--bg:#f3f4ee;--panel:#fff;--deep:#e9eee7;--fg:#182d34;--muted:#4e656d;--line:#c6d2ce;--accent:#426b23;--blue:#236b7e;--warm:#80530d;--red:#a54135;--shadow:#19312612}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--fg)}button,input,select,textarea{font:inherit}button,select,summary{cursor:pointer}a{color:var(--blue);text-underline-offset:4px}a:hover{color:var(--accent)}button,a,input,textarea,select,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:4px}[hidden]{display:none!important}button{border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:8px;padding:10px 14px;min-height:44px}.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:750}.text-button{background:transparent}.wrap{width:min(1240px,calc(100% - 56px));margin:auto}.mono,.eyebrow,.pill,.num,.section-id{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.68rem;color:var(--accent);font-weight:700}header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:70px}.brand{font-size:1rem;font-weight:800;text-decoration:none;color:var(--fg);letter-spacing:-.035em}.brand span{color:var(--accent)}nav{display:flex;gap:22px;align-items:center}nav a{font-size:.78rem;color:var(--muted);text-decoration:none;white-space:nowrap}nav a:hover{color:var(--fg)}#theme{font-size:.7rem;min-height:36px;padding:7px 10px}.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:60px;padding:78px 0 50px;align-items:center}h1{font-size:clamp(3rem,7.5vw,6.4rem);line-height:.98;letter-spacing:-.075em;margin:23px 0 26px;font-weight:680}h1 span{color:var(--accent)}.lead{max-width:620px;color:var(--muted);font-size:1.1rem;line-height:1.6}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-actions a{padding:12px 18px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-size:.85rem;color:var(--fg)}.hero-actions a:first-child{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:750}.date-line{margin-top:26px;font-size:.72rem;color:var(--muted)}.fabric{padding:24px 26px;background:var(--deep);border:1px solid var(--line);border-radius:14px;position:relative}.fabric-header{display:flex;justify-content:space-between;font-size:.65rem;color:var(--muted);margin-bottom:25px}.fabric-row{display:grid;grid-template-columns:38px 1fr auto;gap:14px;align-items:center;padding:21px 0;border-top:1px solid var(--line)}.fabric-row b{display:block;font-size:1rem;letter-spacing:-.02em}.fabric-row p{font-size:.74rem;color:var(--muted);margin:3px 0 0}.fabric-row .num{color:var(--accent);font-size:1.3rem}.fabric-row .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px #aee88714}.fabric-row:nth-child(3) .dot{background:var(--blue)}.fabric-row:nth-child(4) .dot{background:var(--warm)}.fabric-foot{font-size:.65rem;color:var(--muted);margin:10px 0 0}.quickbar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 55px}.quickbar>div{padding:18px 23px;border-right:1px solid var(--line)}.quickbar>div:last-child{border:0}.quickbar strong{font-size:1.45rem;font-weight:650;display:block;letter-spacing:-.04em}.quickbar small{font-size:.69rem;color:var(--muted)}section{padding:38px 0 25px}.section-title{display:grid;grid-template-columns:55px 1fr auto;align-items:start;gap:16px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:26px}.section-id{font-size:.8rem;color:var(--accent);padding-top:10px}h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.05em;font-weight:650;margin:0 0 10px}.section-title p{color:var(--muted);font-size:.9rem;margin:0;max-width:740px}.section-title .mini{font-size:.7rem;color:var(--muted);text-align:right}.notice{border-left:3px solid var(--warm);padding:16px 20px;background:var(--deep);border-radius:0 10px 10px 0;font-size:.86rem;margin:18px 0 25px;color:var(--muted)}.notice b{color:var(--fg)}.controls{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0 20px;align-items:center}.controls button{font-size:.76rem;padding:8px 13px}.controls button[aria-pressed=true]{background:var(--accent);color:var(--bg);border-color:var(--accent)}.controls input{margin-left:auto;padding:10px 13px;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:8px;max-width:290px;min-width:180px}.opportunities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.offer{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:24px;display:flex;flex-direction:column;min-width:0}.offer.featured{border-color:#829d66}.card-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px}.pill{border:1px solid var(--line);border-radius:5px;padding:4px 7px;font-size:.59rem;color:var(--blue);text-transform:uppercase;letter-spacing:.035em;display:inline-block}.pill.conditional{color:var(--warm)}.pill.open{color:var(--accent)}.pill.slide{color:var(--muted)}.rank{font-size:.66rem;color:var(--muted)}h3{font-size:1.25rem;line-height:1.22;letter-spacing:-.025em;margin:0 0 10px;font-weight:650}.offer>p{font-size:.86rem;color:var(--muted);margin:0 0 18px}.offer dl{margin:0;display:grid;grid-template-columns:88px 1fr;gap:8px 12px;font-size:.76rem}.offer dt{color:var(--muted)}.offer dd{margin:0;overflow-wrap:anywhere}.offer .gate{font-size:.76rem;border-top:1px solid var(--line);padding-top:13px;margin-top:16px;color:var(--warm)}.links{display:flex;flex-wrap:wrap;gap:15px;font-size:.74rem;margin-top:18px}.links a{font-weight:650}.offer footer{margin-top:auto;padding-top:16px;color:var(--muted);font-size:.62rem}.timeline{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden}.moment{padding:20px;border-right:1px solid var(--line);background:var(--deep)}.moment:last-child{border:0}.moment time{display:block;font-weight:750;color:var(--accent);font-size:.85rem}.moment b{display:block;margin:9px 0 7px;font-size:.9rem;line-height:1.3}.moment p{font-size:.73rem;color:var(--muted);margin:0}.moment small{display:block;font-size:.63rem;color:var(--warm);margin-top:9px}.subhead{display:flex;justify-content:space-between;align-items:baseline;margin:34px 0 14px;gap:15px}.subhead h3{font-size:1.18rem;margin:0}.subhead span{color:var(--muted);font-size:.7rem}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:620px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--deep);font-size:.69rem;font-weight:650;color:var(--muted)}tr:last-child td{border-bottom:0}td small{display:block;color:var(--muted);font-size:.65rem}.unit-note{font-size:.72rem;color:var(--muted);margin:12px 0}.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.project{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:23px;display:flex;flex-direction:column}.project .project-no{color:var(--accent);font-size:.65rem;display:flex;justify-content:space-between;margin-bottom:22px}.project h3{font-size:1.2rem}.project p{color:var(--muted);font-size:.82rem}.project .metric{font-size:.75rem;color:var(--blue);border-top:1px solid var(--line);padding-top:13px;margin-top:auto}.project button{font-size:.75rem;margin-top:15px;align-self:flex-start}.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.path-panel{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:25px}.path-panel p,.path-panel li{font-size:.84rem;color:var(--muted)}.path-panel ol{padding-left:22px}.path-panel li{padding:6px 0}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check-item{border:1px solid var(--line);border-radius:9px;background:var(--panel);padding:15px;display:flex;gap:12px;align-items:flex-start}.check-item input{accent-color:var(--accent);width:19px;height:19px;flex:none;margin-top:3px}.check-item span{font-size:.81rem}.check-item small{display:block;font-size:.69rem;color:var(--muted);margin-top:3px}.notes-box{border:1px solid var(--line);border-radius:12px;padding:23px;margin-top:20px;background:var(--deep)}label{font-size:.83rem;font-weight:650}textarea{width:100%;min-height:100px;background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:14px;margin-top:10px;resize:vertical;font-size:.82rem;line-height:1.6}.small{font-size:.7rem;color:var(--muted)}.tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:13px}.tools button{font-size:.72rem}.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.contact{padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.contact b{display:block;font-size:.94rem}.contact p{font-size:.75rem;color:var(--muted);margin:6px 0 12px}.contact a{font-size:.76rem;overflow-wrap:anywhere}.contact .source-link{display:block;font-size:.63rem;color:var(--muted);margin-top:10px}.slide-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.slide-extract{padding:18px;border:1px solid var(--line);border-radius:9px;background:var(--deep)}.slide-extract b{font-size:.85rem}.slide-extract p{font-size:.77rem;color:var(--muted);margin:7px 0}.slide-extract small{color:var(--blue);font-size:.63rem}.sources{columns:2;column-gap:30px;padding-left:20px;font-size:.74rem}.sources li{break-inside:avoid;margin:0 0 10px;padding-left:4px}.sources span{display:block;color:var(--muted);font-size:.64rem}.site-footer{border-top:1px solid var(--line);padding:30px 0 45px;margin-top:42px;font-size:.7rem;color:var(--muted)}.site-footer .wrap{display:flex;justify-content:space-between;gap:25px}.empty{padding:25px;color:var(--muted);border:1px dashed var(--line);border-radius:10px}details{border:1px solid var(--line);padding:18px;border-radius:9px;margin:15px 0;background:var(--deep)}summary{font-size:.82rem;font-weight:650}details p,details li{font-size:.77rem;color:var(--muted)}dialog{border:1px solid var(--line);background:var(--bg);color:var(--fg);width:min(800px,calc(100% - 24px));max-height:90dvh;padding:0;border-radius:14px;box-shadow:0 25px 110px #0008}dialog::backdrop{background:#030b13c9;backdrop-filter:blur(4px)}.modal-top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:18px 24px;z-index:1}.modal-top span{font-size:.67rem;color:var(--accent)}.modal-body{padding:26px}.modal-body h3{font-size:1.8rem;letter-spacing:-.04em}.modal-body h4{font-size:.8rem;color:var(--accent);margin:24px 0 8px}.modal-body p,.modal-body li{font-size:.87rem;color:var(--muted)}.modal-body ul{padding-left:20px}.brief{white-space:pre-wrap;font: .77rem/1.65 var(--font);border:1px solid var(--line);background:var(--deep);padding:18px;border-radius:9px;overflow-wrap:anywhere}#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);padding:12px 18px;background:var(--fg);color:var(--bg);border-radius:9px;box-shadow:0 10px 40px #0005;z-index:50;font-size:.8rem;max-width:90%}.toast-off{visibility:hidden}.print-note{display:none}
+@media(hover:hover) and (pointer:fine){.offer,.project,.contact,.fabric{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.offer:hover,.project:hover,.contact:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 12px 30px var(--shadow)}}
+@media(max-width:1000px){.hero{gap:28px}.projects{grid-template-columns:1fr 1fr}.contacts{grid-template-columns:1fr 1fr}nav{gap:13px}.timeline{grid-template-columns:1fr 1fr}.moment:nth-child(2){border-right:0}.moment:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:720px){:root{font-size:18px}.wrap{width:calc(100% - 30px)}header .wrap{min-height:64px;flex-wrap:wrap;gap:7px;padding:12px 0}nav{width:100%;overflow:auto;gap:17px;padding:4px 0}nav a{font-size:.7rem}#theme{margin-left:auto;position:absolute;right:15px;top:10px}.hero{grid-template-columns:1fr;padding:40px 0 25px;gap:25px}h1{font-size:3.8rem;letter-spacing:-.075em;line-height:1.02;margin-top:19px}.lead{font-size:.99rem}.fabric{padding:19px}.fabric-row{padding:14px 0}.fabric-header{margin-bottom:15px}.quickbar{grid-template-columns:1fr 1fr;margin-bottom:23px}.quickbar>div{padding:13px 16px}.quickbar>div:nth-child(2){border-right:0}.quickbar>div:nth-child(-n+2){border-bottom:1px solid var(--line)}.quickbar strong{font-size:1.25rem}.section-title{grid-template-columns:32px 1fr;gap:8px}.section-title .mini{grid-column:2;text-align:left}.section-title p{font-size:.82rem}section{padding:28px 0 15px}.opportunities,.projects,.path-grid,.checklist,.contacts,.slide-grid{grid-template-columns:1fr}.offer,.project{padding:20px}.controls input{margin-left:0;max-width:none;width:100%}.controls{gap:7px}.controls button{font-size:.7rem}.timeline{grid-template-columns:1fr 1fr}.moment{padding:15px}.moment p{font-size:.7rem}.sources{columns:1}.site-footer .wrap{display:block}.offer dl{grid-template-columns:75px 1fr}.modal-body{padding:20px}.modal-top{padding:14px 20px}.subhead{align-items:start}.subhead span{max-width:120px;text-align:right}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+.launch-steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:launch}.launch-steps li{counter-increment:launch;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:15px;font-size:.78rem}.launch-steps li::before{content:counter(launch,decimal-leading-zero);display:block;font-family:ui-monospace,monospace;color:var(--accent);margin-bottom:7px}.launch-steps small{display:block;color:var(--muted);font-size:.7rem;margin-top:5px}.launch-steps .waiting{border-color:var(--warm)}.capability-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.capability-grid>div{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:16px}.capability-grid b{font-size:.83rem;color:var(--accent)}.capability-grid p{font-size:.76rem;color:var(--muted);margin:6px 0 0}.memory-core{border:1px solid var(--blue);border-radius:12px;padding:20px;margin:15px 0;background:var(--deep)}.memory-core b{font-size:1rem}.memory-core p{font-size:.82rem;color:var(--muted);margin:7px 0}.evidence-caption{font-size:.69rem;color:var(--muted);margin:12px 0}.mapping-table{min-width:540px}.new-learning{scroll-margin-top:110px}@media(max-width:720px){.launch-steps{grid-template-columns:1fr 1fr}.capability-grid{grid-template-columns:1fr 1fr}}@media print{.launch-steps li,.capability-grid>div{break-inside:avoid}.capability-grid{grid-template-columns:1fr 1fr}}
+@media print{header,.controls,.tools,.hero-actions,.project button,.contact .source-link,dialog,#toast{display:none!important}:root{color-scheme:light;--bg:#fff;--panel:#fff;--deep:#f6f6f6;--fg:#000;--muted:#333;--line:#aaa;--accent:#254e28;--blue:#174e70;--warm:#624008;font-size:11pt}body{background:white}.wrap{width:100%}.hero{padding:15px 0;gap:20px}h1{font-size:45pt}.lead{font-size:11pt}.quickbar{margin-bottom:15px}.offer,.project,.contact,.moment,.slide-extract{break-inside:avoid;box-shadow:none!important;transform:none!important}.projects{grid-template-columns:1fr 1fr}.contacts{grid-template-columns:1fr 1fr}.offer{padding:15px}section{padding-top:20px}.section-title{margin-bottom:15px}.sources{columns:2}.notice{padding:9px 14px}.notes-box textarea{min-height:100px;border-color:#aaa}.print-note{display:block}.site-footer{margin-top:20px}@page{size:A4;margin:14mm}}
+
+.maas-direct-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px!important;border:2px solid var(--accent)!important;border-radius:9px;background:var(--accent)!important;color:var(--bg)!important;font-weight:800!important;text-decoration:none!important;box-shadow:0 0 0 2px transparent;transition:filter .15s ease,transform .15s ease}.maas-direct-link:hover{filter:brightness(1.08);transform:translateY(-1px);color:var(--bg)!important}.maas-direct-link:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.maas-link-line{margin:12px 0 22px}.maas-link-line .maas-direct-link{max-width:100%;white-space:normal;text-align:center}.r3-intro{margin-bottom:26px}.r3-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}
+.r3-kpi{background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.r3-kpi strong{display:block;color:var(--accent);font-size:2rem;line-height:1.2;margin:7px 0}
+.r3-kpi small{display:block;color:var(--muted);line-height:1.45}.r3-tag{font:12px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.r3-results{margin:25px 0 40px}.r3-results h4{margin:20px 0 8px}.r3-results code{overflow-wrap:anywhere}
+.r3-method{border-left:3px solid var(--accent);padding:8px 16px;color:var(--fg)}
+.r3-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}
+.r3-services article,.r3-application{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:22px;min-width:0}
+.r3-services h4{margin:8px 0}.r3-services p{margin:8px 0;color:var(--muted)}
+.r3-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.r3-actions a{border:1px solid var(--line);padding:10px 15px;border-radius:8px;text-decoration:none}
+.r3-actions a:first-child{background:var(--accent);color:var(--bg)}[data-theme=light] .r3-actions a:first-child{color:white}
+.r3-results table{width:100%;border-collapse:collapse;min-width:570px}.r3-results th,.r3-results td{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.r3-results caption{text-align:left;font-size:.87rem;color:var(--muted);padding:8px 0}.r3-results .table-wrap{overflow:auto}
+.r3-source{font-size:.82rem;color:var(--muted)}.r3-results details{margin:12px 0}.r3-results summary{font-weight:650}
+@media(max-width:760px){.r3-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.r3-services{grid-template-columns:1fr}.r3-kpi{padding:15px}.r3-kpi strong{font-size:1.65rem}}
+@media print{.r3-kpis{grid-template-columns:repeat(4,1fr)}.r3-kpi,.r3-services article{break-inside:avoid}.r3-actions{display:none}}
+
+/* R4: evidence layers and bounded next-test plan; original catalogue/notes retained. */
+.r4-layers{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.r4-layers span{font-size:.68rem;border:1px solid var(--line);padding:8px 10px;border-radius:7px;background:var(--deep);color:var(--blue)}.r4-next{margin-top:40px;scroll-margin-top:110px}.r4-track{scroll-margin-top:110px}.r4-track h4{font-size:.75rem;color:var(--accent);margin:20px 0 6px}.r4-track details{padding:12px}.r4-gate{border-left:3px solid var(--blue);background:var(--deep);padding:18px;margin:20px 0;font-size:.83rem}.r4-snapshot{max-width:900px}.table-wrap caption{padding:12px 16px;text-align:left;color:var(--muted);font-size:.73rem}.r3-results code{overflow-wrap:anywhere}header nav{flex-wrap:wrap;gap:12px 18px}body>nav{justify-content:center;flex-wrap:wrap}body>nav a{white-space:normal;text-align:center}@media(max-width:720px){header .wrap{gap:10px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}header nav{gap:8px 14px}header nav a{font-size:.68rem}.r3-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.r3-kpi{padding:14px}.r3-kpi strong{font-size:1.6rem}.r4-layers span{flex:1 1 120px}.r4-track p{overflow-wrap:anywhere}}@media(max-width:400px){.r3-kpis{grid-template-columns:1fr}}
+
+/* TS local AI8 plan / 22 Oct 2026: scoped static appendix. */
+.local-kpis,.local-hosts,.local-money{display:grid;gap:12px}
+.local-kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin:22px 0 26px}
+.local-hosts{grid-template-columns:repeat(4,minmax(0,1fr));margin:12px 0 23px}
+.local-money{grid-template-columns:repeat(3,minmax(0,1fr));margin:16px 0 25px}
+.local-kpis article,.local-hosts article,.local-money article{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;min-width:0}
+.local-kpis article{background:var(--deep)}
+.local-kpis strong,.local-money strong{display:block;color:var(--accent);font-size:1.6rem;line-height:1.2;letter-spacing:-.045em}
+.local-kpis b{font-size:.77rem;display:block;margin:9px 0 4px}
+.local-kpis small{font-size:.67rem;color:var(--muted);line-height:1.55;display:block}
+.local-hosts .eyebrow{font-size:.6rem}
+.local-hosts h3{font-size:1.06rem;margin:12px 0 8px}
+.local-hosts p,.local-money p{font-size:.76rem;color:var(--muted);margin:0;line-height:1.6}
+.local-hosts footer{border-top:1px solid var(--line);padding-top:11px;margin-top:14px;color:var(--blue);font-size:.69rem}
+.local-hosts article:last-child{border-style:dashed;background:var(--deep)}
+.local-money span{display:block;color:var(--blue);font-size:.65rem;letter-spacing:.06em;text-transform:uppercase}
+.local-money strong{font-size:1.35rem;margin:8px 0 6px}
+.local-money article:first-child{border-color:var(--accent)}
+.local-note{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--deep);margin:20px 0}
+.local-note h3{margin-bottom:10px}.local-note p{font-size:.84rem;color:var(--muted);margin:0}
+.local-foot{font-size:.73rem;color:var(--muted);margin:12px 0 20px}
+.local-foot strong{color:var(--fg)}
+.local-block .table-wrap table{min-width:680px}
+.local-block a{overflow-wrap:anywhere}
+.local-block details{margin:18px 0}
+.local-block summary{font-weight:650}
+@media(max-width:1050px){.local-hosts{grid-template-columns:repeat(2,minmax(0,1fr))}.local-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.local-hosts,.local-money{grid-template-columns:1fr}.local-note{padding:18px}.local-block .subhead{flex-wrap:wrap}}
+@media(max-width:360px){.local-kpis{grid-template-columns:1fr}}
+@media print{.local-hosts{grid-template-columns:repeat(2,1fr)}.local-money{grid-template-columns:repeat(3,1fr)}.local-hosts article,.local-money article{break-inside:avoid}}
+
+</style>
+</head>
+<body data-release="impulz-hpc-r4-20261021"><nav aria-label="Povezava s konferenco IMPULZ 2026" style="position:relative;z-index:20;padding:.75rem 1rem;background:#13222c;border-bottom:1px solid #304650;text-align:center"><a href="./impulz-2026.html" style="color:#b9e68c;font-weight:700">← IMPULZ 2026 · konferenca in agenda</a></nav>
+<header><div class="wrap"><a class="brand" href="https://www.mdlxdcc.org/">MDL<span>×</span>DCC · BD</a><nav aria-label="Glavna navigacija"><a href="#ponudba">01 Ponudba</a><a href="#projekti">02 Naši projekti</a><a href="#lokalno">Lokalni LLM</a><a href="#rezultati">Rezultati</a><a href="#naslednji-testi">Naslednji testi</a><a href="#priprava">Prijave</a><a href="#kontakti">Kontakti</a><a href="#viri">Viri</a></nav><button aria-label="Preklopi svetlo ali temno temo" id="theme">Svetla tema</button></div></header>
+<main class="wrap">
+<div class="hero"><div><div class="eyebrow">BD × AI Lab / raziskovalni načrt / R4</div><h1>Več prostora<br/>za <span>naše ideje.</span></h1><p class="lead">Od GPU virtualke za AI agente do evropskih superračunalnikov za TSP, kompresijo in raziskave. Kaj je na voljo, kaj bi tam izvajali in kako pripravimo smiselne prijave.</p><div class="hero-actions"><a href="#ponudba">Razišči možnosti ↗</a><a href="#projekti">Odpri naše projekte ↓</a><a href="#rezultati">Rezultati in naslednji testi ↓</a><a class="maas-direct-link" href="https://maas.slaif.lhrs.si/" target="_blank" rel="noopener noreferrer" aria-label="Odpri SLAIF MaaS portal v novem zavihku">◆ Odpri SLAIF MaaS portal ↗</a></div><div class="date-line">Meritve: 21. oktober 2026 · javna izdaja R4<br/>95 izvornih dokazil preverjenih · brez novih raziskovalnih tekov</div></div><aside aria-label="Tri povezane izvedbene proge" class="fabric"><div class="fabric-header mono"><span>NAŠA RAČUNSKA INFRASTRUKTURA</span><span>SI ↔ EU</span></div><div class="fabric-row"><span class="num">01</span><div><b>Virtualka &amp; storitev</b><p>Stalno okolje · agent · API · spomin</p></div><span class="dot"></span></div><div class="fabric-row"><span class="num">02</span><div><b>HPC &amp; algoritmi</b><p>TSP · 8z · matematični generatorji · DNA</p></div><span class="dot"></span></div><div class="fabric-row"><span class="num">03</span><div><b>AI &amp; eksperimenti</b><p>Odprti modeli · učenje · AI8 DNA · evalvacije</p></div><span class="dot"></span></div><p class="fabric-foot">Predlagana arhitektura. Dodelitev VM, ur in GPU zahteva odobritev ponudnika.</p></aside></div><div class="notice r3-intro"><b>Od IMPULZA do delujoče povezave.</b> 27 API zahtev, 26 HTTP 200 in en HTTP 400. RHP je preizkušen pri dveh izhodnih limitih, a splošna korist ni dokazana. HOME TSPTS ima preverjen mali baseline; VM/Slurm ostaja izključen. <a href="#rezultati">Poglej dokaze in omejitve ↓</a></div>
+<div class="quickbar"><div><strong>2 dela</strong><small>Ponudba → naši projekti</small></div><div><strong>3 proge</strong><small>VM / HPC / AI raziskave</small></div><div><strong>November</strong><small>Roki in napovedi so ločeni</small></div><div><strong>0 oddanih</strong><small>V tej pripravi še brez oddaje vlog</small></div></div>
+<section id="ponudba"><div class="section-title"><span class="section-id">01</span><div><h2>Kaj je zanimivega za nas.</h2><p>Možnosti v Sloveniji in EU, z uradnimi povezavami, pogoji in našim naslednjim korakom.</p></div><span class="mini">Ponudba ≠ proste kapacitete<br/>21. 10. 2026</span></div>
+<div class="notice"><b>Najprej razjasnimo prijavitelja.</b> BD × AI Lab je ime našega raziskovalnega okolja; samo ime še ne dokazuje statusa pravne osebe ali upravičenosti. BD-jeva zaposlitev pri Telekomu sama ne pomeni, da je to Telekomov projekt. Pred oddajo uskladimo dejansko organizacijo, odgovorno osebo in pogoje izbrane poti.</div>
+<details><summary>EuroHPC: konkreten pogoj za vodjo projekta</summary><p>Pri Benchmark, Development in AI for Science mora imeti vodja projekta (PI) pogodbo o zaposlitvi v prijaviteljski organizaciji, veljavno še najmanj tri mesece po koncu dodelitve; AI for Science izrecno zahteva pogodbo že ob oddaji. Pred izbiro trajanja preverimo tudi ta pogoj. Viri: podrobni pogoji v razdelku Documents za <a href="#src-benchmark">Benchmark</a>, <a href="#src-development">Development</a> in <a href="#src-science">AI for Science</a>.</p></details>
+<div aria-label="Filtri ponudbe" class="controls"><button aria-pressed="true" data-filter="all">Vse</button><button aria-pressed="false" data-filter="si">Slovenija</button><button aria-pressed="false" data-filter="eu">Evropa</button><button aria-pressed="false" data-filter="vm">Virtualke &amp; API</button><button aria-pressed="false" data-filter="hpc">HPC</button><button aria-pressed="false" data-filter="funding">Financiranje</button><input aria-label="Išči po ponudbah" id="search" placeholder="Poišči sistem, namen ali pot …" type="search"/></div>
+<p aria-live="polite" class="small" id="offer-count"></p><p class="small r4-snapshot"><b>Datirani pregled ponudbe:</b> razpisne informacije in roki so ohranjeni iz pregleda 21. 10. 2026; ta revizija preverja rezultate, ne ponovno vseh ponudbenih pogojev. Pred prijavo odpri uradni vir.</p><div class="opportunities" id="offers"></div><p class="empty" hidden="" id="empty">Za ta izbor ni zadetkov. Spremeni filter ali iskalni niz.</p>
+<div class="subhead"><h3>Koledar, ki pove, kaj datum pomeni.</h3><span>Presečni rok / napoved odprtja</span></div>
+<div class="timeline"><article class="moment"><time>30. 10. 2026 · 10:00 CET</time><b>AI for Science</b><p>Naslednji evropski presečni rok. Kandidat za učenje modelov; pred tem organizacija, podatki in tehnična pripravljenost.</p><small>Potrjen presečni rok · <a href="#src-science">vir</a></small></article><article class="moment"><time>1. 11. 2026</time><b>SLING ORD / evropski BM &amp; DEV</b><p>SLING ima rok 1. novembra; EuroHPC Benchmark in Development ob 10:00 CET. TD/RD SLING ostajata stalno odprta.</p><small>Različne sheme · <a href="#src-sling">SLING</a> / <a href="#src-benchmark">EU</a></small></article><article class="moment"><time>Začetek novembra 2026</time><b>FFplus Business Experiments</b><p>Napoved odprtja 3. razpisa. Pravilnik OC3 in rok za oddajo še nista potrjena v tem pregledu.</p><small>Napoved ≠ odprt razpis · <a href="#src-ffbusiness">vir</a></small></article><article class="moment"><time>Junij 2027</time><b>FFplus Innovation Studies</b><p>Predvideno odprtje za razvoj generativne AI z zahtevnejšo uporabo HPC.</p><small>Napoved ≠ rok za oddajo · <a href="#src-ffinnovation">vir</a></small></article></div>
+<div class="subhead"><h3>Slovenski računski viri.</h3><span>Podatki iz fotografiranih slajdov</span></div>
+<div class="table-wrap"><table><thead><tr><th>Sistem</th><th>CPU</th><th>GPU</th><th>Kaj pomeni za nas</th></tr></thead><tbody><tr><td><b>Vega · IZUM</b></td><td>122.880 jeder CPU particije<small>960 CPU / 60 GPU vozlišč</small></td><td>240 × A100, 40 GB/GPU</td><td>Večji računski poskusi in projektna dodelitev ur.</td></tr><tr><td><b>Maister · UM</b></td><td>4.864 jeder CPU particije<small>Javno objavljena konfiguracija UM iz 2022</small></td><td>24 × V100 v celotnem sistemu</td><td>Slurm in OpenStack, razvojne storitve, VM, Kubernetes, JupyterHub in MaaS za prve uporabnike.</td></tr><tr><td><b>SLAIF razvojno okolje</b></td><td>456 jeder; približno 2,25 TB RAM</td><td>12 × V100, 32 GB/GPU</td><td>Manjši razvojni del iz slajda 39; ni celotna kapaciteta Maistra in ni naša kvota.</td></tr><tr><td><b>Arnes HPC</b></td><td>7.080 jeder</td><td>34 × V100S + 26 × H100</td><td>Alternativa za CPU/GPU pilote; konkreten tip GPU in dostop potrdi ponudnik.</td></tr></tbody></table></div>
+<p class="unit-note">Vir: IMG_1443, IMG_1444 in IMG_1449. To so objavljene/predstavljene kapacitete, ne trenutno prosti viri. RAM sistema ni GPU VRAM. Konfiguracij posameznih delov ne seštevamo.</p>
+<details><summary>Kako pravilno štejemo ure?</summary><p><b>Vozliščne ure = število vozlišč × čas.</b> Primer: 2 vozlišči × 10 ur = 20 vozliščnih ur. Če ima vsako 4 dodeljene GPU, to pomeni 80 GPU-ur. Dodeljeni deleži in način obračuna morajo slediti konkretni particiji. Nacionalne kvote v tej strani so vozliščne ure; Fast Lane uporablja GPU-ure.</p></details>
+<div class="notice"><b>Čakanje v EU je odvisno od poti.</b> Playground/Fast Lane navajata hitra ciljna postopka, večje dodelitve trajajo dlje. Za Benchmark/Development spletna stran navaja 2–3 tedne po oddaji, podrobni pogoji pa po mesečnem presečnem roku; načrtujemo konservativno po roku. Trenutna čakalna vrsta za naš projekt je neznana.</div>
+<div class="new-learning" id="maas"><div class="subhead"><h3>Model kot storitev: uporabna četrta možnost.</h3><span>Novi posnetki · 21. 10. 2026</span></div><p class="maas-link-line"><a class="maas-direct-link" href="https://maas.slaif.lhrs.si/" target="_blank" rel="noopener noreferrer">◆ SLAIF MaaS — odpri portal modelov ↗</a></p>
+<div class="path-grid"><article class="path-panel"><div class="eyebrow">Kaj prikazuje portal</div><h3>Katalog → instanca → preverjeni API.</h3><p>Prvotni posnetki prikazujejo pot do instance. Celotna evidenca zdaj zajema 27 zahtev na zgodovinsko preizkušenem POST /v1/chat/completions: 26 HTTP 200 in en HTTP 400. Starih R4/R5 8 klicev ne zamenjujemo s celotnim novejšim obsegom.</p><p>To je zgodovinski dokaz povezave, ne splošna ocena modela ali trenutna pravica do uporabe. Dodelitev se je iztekla 21. 10. 2026 ob 14:16:28. Novi brezplačni dostop, kvote, licence in trajanje še zahtevajo dogovor.</p></article><article class="path-panel"><div class="eyebrow">Naš predlog</div><h3>Povezava deluje; zdaj ločimo tri storitve.</h3><p>MaaS je preizkušena inferenca. CPU virtualka je predlagano trajno okolje za koordinator, spomin in orodja. VM ali Slurm izvajanje Pythona potrebuje ločeno odobren dostop.</p><p>Gemmin odgovor ni izvedba našega Python programa. TSPTS za zdaj teče preverjeno samo na HOME; oddaljena hitrost in učinek RHP ostajata neizmerjena.</p></article></div>
+<ol aria-label="Prikazan potek zagona modela" class="launch-steps"><li><b>Zahteva sprejeta</b><small>Instanca je naročena.</small></li><li class="waiting"><b>Čaka na vire</b><small>Na posnetku aktivno stanje; razlog: Resources.</small></li><li><b>Nalaganje modela</b><small>Priprava po dodelitvi virov.</small></li><li><b>Pripravljeno</b><small>Šele tu preverimo odziv modela/API.</small></li></ol>
+<details><summary>Kaj nam čakalna vrsta pove za načrtovanje?</summary><p>Na posnetku IMG_1460(1) instanca na HPC Maister še čaka: Slurm ocenjenega začetka ne pozna, vmesnik preverja vrsto vsakih 30 sekund. Prikazana sta <b>77 minut skupne dodelitve</b> in <b>60 minut uporabne dobe</b>; to sta vrednosti tega primera, ne splošna kvota ali cenik.</p><p>V pilotu zato beležimo ločeno oddajo, čakanje, nalaganje in uporabni čas. Od podpore dobimo pojasnilo, kdaj se začne obračun, kaj pomeni iztek zahteve, kako jo podaljšamo ter kaj se zgodi z endpointom in stanjem po izteku. Sprejeta zahteva in ocena začetka nista zagotovilo delujočega servisa.</p></details>
+<p class="evidence-caption">Vir: uporabnikova posnetka IMG_1452(1).jpeg in IMG_1460(1).jpeg. Stanje na fotografijah, ne sprotni nadzor ponudnika. Model API, API za postavitev virtualke in Slurm so različne ravni.</p></div>
+</section>
+<section id="projekti"><div class="section-title"><span class="section-id">02</span><div><h2>Kaj bi tam izvajali.</h2><p>Rangiramo po pričakovani koristi in pripravljenosti za pilot. Vsak projekt ima konkreten preizkus, merilo uspeha in predlog virov.</p></div><span class="mini">HOME izhodišče izmerjeno · oddaljeni pospešek še ni</span></div>
+<div aria-labelledby="rezultati-title" class="r3-results" id="rezultati">
+<div class="subhead"><h3 id="rezultati-title">Od povezave do preverljivega rezultata.</h3><span>Celotna evidenca · R4 / 21. 10. 2026</span></div>
+<p class="r3-method">Model predlaga. Program izmeri. Preverjalnik preveri. Uspešen prenos, dokončan odgovor in pravilna rešitev niso ista meritev.</p>
+<div class="r3-kpis">
+<article class="r3-kpi"><span class="r3-tag">Dejanske API zahteve</span><strong>27</strong><b>26 HTTP 200 · 1 HTTP 400</b><small>Dve dodelitvi, različni protokoli. Ena lokalna napaka pred HTTP je šteta posebej.</small></article>
+<article class="r3-kpi"><span class="r3-tag">Format · dodatni R2</span><strong>1/9</strong><b>Točen goli JSON</b><small>Po naknadnem izluščanju 6/9 točnih objektov. To je ločena sekundarna meritev.</small></article>
+<article class="r3-kpi"><span class="r3-tag">RHP · pri obeh limitih</span><strong>2 nalogi</strong><b>Prednost ni dokazana</b><small>768: vsi odrezani. 2.048: vsi dokončani, toda ocene ne kažejo enotne prednosti.</small></article>
+<article class="r3-kpi"><span class="r3-tag">TSPTS · HOME CPU</span><strong>1,173 s</strong><b>Veljavna wi29 pot: 27.603</b><small>En majhen lokalni tek. SLAIF VM/Slurm ni bil uporabljen in je trenutno izločen.</small></article>
+</div>
+<div class="r4-layers" aria-label="Pet ločenih stopenj preverjanja"><span>01 · HTTP prenos</span><span>02 · dokončanost</span><span>03 · JSON / shema</span><span>04 · pravilnost</span><span>05 · učinek metode</span></div>
+<p class="small">Izvedba eksperimentov: CLI Codex na HOME. R4 je uredniška sinteza in pregled integritete, ne nov eksperiment. <a href="#src-cli-complete">Primarno celotno poročilo</a>.</p>
+<details id="dokazi-api"><summary>27 zahtev: sklopi, poraba in kaj ostaja neznano</summary><div class="table-wrap" tabindex="0" role="region" aria-label="Zgodovinski API sklopi · dve ločeni dodelitvi · brez retryjev"><table><caption>Zgodovinski API sklopi · dve ločeni dodelitvi · brez retryjev</caption><thead><tr><th scope="col">Sklop</th><th scope="col">Zahteve</th><th scope="col">HTTP 200 / 400</th><th scope="col">Omejitev izhoda</th><th scope="col">Kaj to pove</th></tr></thead><tbody><tr><td>R4 povezava</td><td>2</td><td>2 / 0</td><td>96</td><td>Račun pravilen; jezik/format delna, verjetnost nedokončana</td></tr><tr><td>R5 ciljne naloge</td><td>6</td><td>6 / 0</td><td>256</td><td>Ročna pravilnost 4/6; 4 length, 2 stop</td></tr><tr><td>RHP A/B 768</td><td>4</td><td>4 / 0</td><td>768</td><td>2 nalogi, vsi 4 odgovori odrezani</td></tr><tr><td>Konferenčni R2</td><td>14</td><td>14 / 0</td><td>1.024 / 2.048 / 1.536</td><td>10 objektivnih nalog + 4 daljši raziskovalni odgovori</td></tr><tr><td>R2 nastavitev JSON</td><td>1</td><td>0 / 1</td><td>nastavitev zavrnjena</td><td>Vzrok HTTP 400 neznan; 4 nadaljnje nastavitve NOT_RUN</td></tr><tr><td>Skupaj</td><td>27</td><td>26 / 1</td><td>različni protokoli</td><td>To ni enoten benchmark pravilnosti</td></tr></tbody></table></div>
+<p>Znana poraba uspešnih odgovorov: <b>53.606 vhodnih + 19.230 izhodnih = 72.836 tokenov</b>. Poraba HTTP 400 je <b>neznana, ne nič</b>. Seštevek odjemalskih latenc je <b>551,453 s</b>, ne trajanje seje ali čisti čas generiranja.</p>
+<p>Zaključki: 10 <code>length</code>, 14 <code>stop</code> in 3 neznani (R4 ni hranil zaključka dveh odgovorov; HTTP 400 nima tega podatka). Za R4 zato ne sklepamo na <code>length</code> samo iz doseženega limita.</p>
+<p>Oznaka »Gemma 4 26B-A4B IT Q8« je iz portala/predaje, ne neodvisen pregled uteži. Takratna brezplačnost temelji na BD-jevi potrditvi, ne obračunskem auditu; današnji dostop ni potrjen. GPT/Claude primerjava ni bila izvedena.</p>
+<p><a data-r3-doc="ALL_27_API_REQUESTS_PUBLIC.csv" download href="assets/impulz-hpc-ai/ALL_27_API_REQUESTS_PUBLIC.csv">Redaktirani ledger vseh 27 zahtev ↓</a></p></details>
+<details id="json-kakovost"><summary>Pravilnost vsebine ≠ zanesljivost strojnega izhoda</summary>
+<p>Dodatni konferenčni R2 ima <b>9 JSON nalog in eno nalogo popravljanja kode</b>. Strogi izhodni/funkcijski kriterij dosežeta <b>2/10</b>: zahtevan goli JSON v enem primeru in pravilna funkcija v drugem. Popravek kode je prestal <b>5/5 ciljnih primerov</b>.</p>
+<p>Po posebej označenem izluščanju JSON iz Markdowna ali razlage je <b>6/9 celotnih objektov</b> pravilnih. To ne spremeni primarne ocene. Primer EUC_CLOSURE je imel pravilen račun 3 + 3 + 4 = 10, a napačno strukturo. SYNC3 je prikazal pravilne kontrolne točke v razlagi, zahtevani objekt pa se ni dokončal.</p>
+<p>Priklic je našel <b>3/3 zahtevanih vrednosti v 600 sintetičnih zapisih</b>; to ne določa največjega konteksta. En uspešen test nezaupanega vloženega navodila ni varnostno jamstvo. Rezultat 2/10 zato ni »20 % inteligence« in 26 HTTP 200 ni 26 pravilnih rešitev.</p>
+<p><b>HTTP 400:</b> en poskus <code>response_format=json_object</code>, 0,891 s. Izvorno telo napake ni ohranjeno; natančen vzrok in podpora parametru ostajata odprta. Štirje naslednji parametri niso bili poslani. <a href="#test-json">Načrt diagnostike ↓</a> · <a href="#src-cli-conference">Vir</a>.</p></details>
+<div class="path-grid">
+<article class="path-panel" id="pilot-rhp"><div class="eyebrow">Izvedeno · neodločilen mali vzorec</div><h3>RHP × Gemma: obe plati.</h3>
+<p>Dva A/B para pri 768 in ista dva pri 2.048 izhodnih tokenih. A je nevtralno navodilo, B celotni RHP. Ocene so <b>ročne, neslepe, brez drugega neodvisnega ocenjevalca</b>.</p>
+<p>Pri 768 je bil B v obeh presojah +1/12, vendar so vsi štirje odgovori odrezani. Pri 2.048 so vsi končani: pri HPC je B ocenjen nižje, pri TSP je izenačen z A. <b>Splošnega izboljšanja zaradi RHP ne sklepamo.</b></p>
+<p>V seriji 768 je B porabil 18.171 vhodnih tokenov, A 383 — približno 47,44× toliko. To ni primerjava pri enaki porabi. RHP ostaja kandidat; njegova uporaba za ta uredniški pregled ni nov dokaz učinka.</p></article>
+<article class="path-panel" id="pilot-tspts"><div class="eyebrow">HOME izmerjen · resume odprt</div><h3>TSPTS Thin Solver.</h3>
+<p>Nespremenjeni v0.1, en CPU delavec, seme 20261021, 128/128 predlogov. wi29: <b>27.603</b>; vseh 29 mest, povratni rob in EUC_2D neodvisno preverjeni.</p>
+<p><b>1,172904 s</b> zunanjega časa · <b>1,078125 CPU s</b> · <b>28,8125 MiB</b> vršni RSS. En majhen tek ob drugih aktivnih arenah ni stabilen benchmark ali merilo potrebne virtualke.</p>
+<p><b>Prednostno:</b> nezdružljiv checkpoint lahko sproži tihi začetek iz nič. Pravi prekinitev → resume še ni sprejet. <a href="#test-resume">Ločen offline načrt ↓</a> · <a href="#src-cli-tspts">Izvor</a>. Remote Python in pospešek ostajata neizmerjena; VM/Slurm trenutno izključen.</p></article></div>
+<details id="rhp-podrobno"><summary>RHP: ocene pri obeh limitih, metodološke napake in izvor</summary><div class="table-wrap" tabindex="0" role="region" aria-label="Ročne neslepe ocene istega Codex ocenjevalca; ne neodvisna validacija"><table><caption>Ročne neslepe ocene istega Codex ocenjevalca; ne neodvisna validacija</caption><thead><tr><th scope="col">Naloga</th><th scope="col">Izhodni limit</th><th scope="col">A brez RHP</th><th scope="col">B z RHP</th><th scope="col">Zaključek</th></tr></thead><tbody><tr><td>HPC_SERVICE</td><td>768</td><td>5/12</td><td>6/12</td><td>oba length</td></tr><tr><td>TSP_HYPOTHESIS</td><td>768</td><td>6/12</td><td>7/12</td><td>oba length</td></tr><tr><td>HPC_SERVICE</td><td>2048</td><td>7/12</td><td>5/12</td><td>oba stop</td></tr><tr><td>TSP_HYPOTHESIS</td><td>2048</td><td>7/12</td><td>7/12</td><td>oba stop</td></tr></tbody></table></div>
+<p>Daljši odgovori odpravijo odrezovanje v teh štirih primerih, ne pa potrebe po vsebinskem preverjanju. HPC B predlaga primerjavo izvirne kode doma z optimizirano oddaljeno kodo: s tem pomeša učinek algoritma in strojne opreme. TSP B uporabi prag <code>L_LAG &lt; 0,85 L_NN</code>, ki preverja več kot 15 % izboljšanja, ne zatrjevanega razpona 5–15 %. To so ugotovitve iz pregleda odgovorov, ne novi benchmarki.</p>
+<p>Ponavljanje istih dveh nalog, vrstni red, možni učinki predpomnjenja, vhodni proračun in neslepa presoja ostajajo omejitve. Noben rezultat ne potrjuje zavesti ali prenosa identitete.</p>
+<p><b>Nova uredniška razrešitev izvora:</b> arhivirani RHP (37.219 B, SHA <code>4ba65def…</code>) je bajtno enak aktualnemu pripetemu RHP (37.218 B, SHA <code>0a96871a…</code>) plus ena dodatna prazna vrstica LF na koncu. Vsebina protokola se ujema, surova hasha pa ne. Zamrznjeni B sistem vsebuje še zabeleženo izvedbeno navodilo; ni samo goli protokol. Starih dokazil ne prepisujemo.</p>
+<p><a href="#src-cli-rhp768">RHP 768</a> · <a href="#src-cli-conference">RHP 2.048 in audit</a> · <a data-r3-doc="EDITORIAL_SOURCE_AUDIT.json" download href="assets/impulz-hpc-ai/EDITORIAL_SOURCE_AUDIT.json">Hash pregled R4 ↓</a></p></details>
+<details id="lokalni-dokazi"><summary>Lokalni CPCI, TSP/LAG in mali eksaktni primeri</summary>
+<p><b>CPCI:</b> 18/18 ciljnih lokalnih testov (14 CPCI + 4 testi spremenjenih mehanizmov), 100 vsebinsko unikatnih svetov in 500 odstranitev pravil; 116 jih spremeni izid. Neodvisni oracle preveri 1.000 osnovnih + 5.000 dodatnih prehodov. To so testi referenčne kode, <b>ne Gemma 18/18</b> in ne dokaz notranjega modela ali zavesti.</p>
+<p><b>TSP/LAG:</b> en pilot 30 × 35, pet metod; neodvisno preverjenih 150 začetnih in 150 končnih poti. Osnovni LAG ni pokazal napovedane splošne prednosti.</p><div class="table-wrap" tabindex="0" role="region" aria-label="Pozitivna vrzel pomeni slabši rezultat; enak 2-opt ni enak skupni proračun"><table><caption>Pozitivna vrzel pomeni slabši rezultat; enak 2-opt ni enak skupni proračun</caption><thead><tr><th scope="col">Porazdelitev</th><th scope="col">LAG proti NN po 2-opt</th><th scope="col">Dostopi do razdalj</th><th scope="col">Razlaga</th></tr></thead><tbody><tr><td>15 enakomernih</td><td>+1,8171 %</td><td>2,531× NN</td><td>Daljša pot; različen strošek</td></tr><tr><td>15 gručastih</td><td>+0,5781 %</td><td>1,949× NN</td><td>Daljša pot; različen strošek</td></tr></tbody></table></div>
+<p>Na sedmih held-out gručastih primerih ima LAG-B+ povprečno −0,0839 %; ta majhen delni rezultat ni splošna zmaga in strošek ni izenačen. Metode ohranimo za stroškovno primerljiv test. <a href="#src-cli-r5">Vir R5</a>.</p>
+<p><b>Ločeni mali eksaktni TSP:</b> 8 primerov po 9 mest, 161.280 ciklov in 40 kandidatnih poti. Optimum: NN 6/8, LAG 7/8, LAG-A 6/8, LAG-B+ 7/8, LAG-B− 8/8. Izčrpnost velja za zapisano geometrijo in toleranco 1e-10; iz tega ne določimo najboljšega velikega solverja. <a href="#src-cli-exact">Vir</a>.</p></details>
+<div class="notice"><b>Uredniški sklep, ne nova meritev:</b> naslednji omejevalni dejavnik ni dokazana potreba po večjem GPU. Najprej izboljšamo obnovljivost, pogodbo izhoda in pravičnost primerjav; več virov utemeljimo šele z meritvijo. Vse štiri raziskovalne smeri ostajajo odprte.</div>
+<p class="r3-source"><a data-r3-open="slaif-povzetek.html" href="assets/impulz-hpc-ai/slaif-povzetek.html">Samostojni povzetek ↗</a> · <a data-r3-doc="SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md" download href="assets/impulz-hpc-ai/SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md">Usklajeno poročilo .md ↓</a> · <a data-r3-doc="PUBLIC_EVIDENCE.json" download href="assets/impulz-hpc-ai/PUBLIC_EVIDENCE.json">Podatki JSON ↓</a></p>
+</div><div class="r4-next" id="naslednji-testi" aria-labelledby="next-title"><div class="subhead"><h3 id="next-title">Štiri smeri. Najprej majhen razlikovalni test.</h3><span>PREDLOGI · NIČ NI ZAGNANO</span></div><p class="r3-method">Codexove odprte točke so osnova; spodnje meje, kontrole in sprejemna merila so nova GPT/RHP izvedbena zasnova, ne že doseženi rezultati ali dovoljenje za zagon.</p><div class="path-grid"><article class="path-panel r4-track" id="test-resume"><div class="eyebrow">01 / PREDNOSTNO · OFFLINE</div><h3>TSPTS: nadaljevanje brez tihega novega teka</h3><p>Odprt hrošč: ob nezdružljivih checkpointih lahko solve(--resume) tiho začne od začetka. To je tveganje za dokazni izvor, ne le za hitrost.</p><h4>Najmanjši uporaben poskus</h4><p>Najprej zamrznemo kodo, vhod in konfiguracijo. Preverimo veljaven checkpoint, manjkajoč checkpoint, neujemanje konfiguracije ter poškodovan primarni zapis z veljavnim prejšnjim. Nato en kratek nadzorovan stop → resume na kopiji.</p><h4>Kaj šteje kot uspeh</h4><p>Neveljaven resume se ustavi z jasno napako in brez novega teka. Dovoljen fallback uporabi samo ujemajočo se identiteto. Veljavno nadaljevanje ohrani stanje, števce, seme/RNG in najboljšo pot; rezultat preveri neodvisni validator.</p><details><summary>Obseg, proračun in pogoj za začetek</summary><p>Izolirana kopija; izvirni solver in aktivne arene ostanejo nespremenjeni.</p><p>Predlog: največ 5 minut in vnaprej omejeni majhni vhodi. Test nadzorovanega stopa ni test izpada elektrike.</p><p><b>Ni API-ja. Popravek in testi še niso izvedeni; potreben je ločen izvedbeni mandat.</b></p></details></article><article class="path-panel r4-track" id="test-json"><div class="eyebrow">02 / ČAKA POTRJEN DOSTOP</div><h3>JSON/API: najprej pojasnimo HTTP 400</h3><p>Delujoč HTTP prenos ni pogodba o formatu. Prvi response_format=json_object je vrnil 400; telo napake ni bilo shranjeno, zato vzroka ne poznamo.</p><h4>Najmanjši uporaben poskus</h4><p>Od ponudnika pridobimo podprt primer. Zamrznemo eno kratko oracle nalogo: osnovni klic, dokumentirani strukturirani način in dokumentirani reasoning parameter samo, če je podprt. Ločeno beležimo status, zaključek, JSON, shemo in pravilnost.</p><h4>Kaj šteje kot uspeh</h4><p>Za vsako poslano zahtevo obstaja zapis izida. Neuspeh ima redaktirano kodo/tip/sporočilo napake brez glave Authorization ali ključa. Za strojno uporabo šteje samo celotna zahtevana shema in pravilen rezultat.</p><details><summary>Obseg, proračun in pogoj za začetek</summary><p>Samo že potrjeni MaaS endpoint; VM/Slurm izključen.</p><p>Predlog: največ 3 nove zahteve, do 60 s in 2.048 izhodnih tokenov na zahtevo; brez retryjev, stop ob prvi napaki. Nepodprta nastavitev se ne pošlje.</p><p><b>Šele po sveže potrjenem aktivnem brezplačnem dostopu in izrecno odobrenem proračunu. Ta stran ne kliče API-ja.</b></p></details></article><article class="path-panel r4-track" id="test-rhp"><div class="eyebrow">03 / PO API DIAGNOSTIKI</div><h3>RHP: nov vzorec in kontrola dolžine navodil</h3><p>Dve isti nalogi, neslepo ocenjevanje in zelo različen vhodni proračun ne ločijo učinka RHP od dolžine navodil, načina ocenjevanja ali odrezovanja.</p><h4>Najmanjši uporaben poskus</h4><p>Pred izidi zamrznemo 3 nove naloge in rubriko: A nevtralno navodilo, B točno pripeti RHP, C vsebinsko nevtralna kontrola s primerljivo dolžino. Po 3 sveže stateless ponovitve na pogoj/nalogo; uravnotežen vrstni red, isti model in izhodni limit.</p><h4>Kaj šteje kot uspeh</h4><p>Skrijemo oznake pogojev pred neodvisnim ocenjevalcem; kjer je mogoče dodamo deterministični oracle. Poročamo vse izide, stroške, input/output tokene in odrezane odgovore. RHP slog lahko razkrije pogoj, zato blinding ni zagotovljen.</p><details><summary>Obseg, proračun in pogoj za začetek</summary><p>Predlog novega vedenjskega preizkusa; ni potrditev protokola ali zavesti.</p><p>To je predlog 3 × 3 × 3 = 27 DODATNIH zahtev, ločen od 27 zgodovinskih. Končni limit in ustavitev določimo pred aktivacijo; brez samodejnega ponavljanja.</p><p><b>Nov omejen mandat in dostop. N = 3 naloge ostaja mali pilot; prag praktične koristi določimo vnaprej, ne po rezultatih.</b></p></details></article><article class="path-panel r4-track" id="test-lag"><div class="eyebrow">04 / OFFLINE · LOČENA PROGA</div><h3>TSP/LAG: kakovost pri enakem delu</h3><p>Doslej so metode po skupnem 2-opt porabile različno število dostopov do razdalj. Enaka zaključna metoda zato ni enak računski proračun.</p><h4>Najmanjši uporaben poskus</h4><p>Pred meritvijo zamrznemo nove held-out koordinate, semena, pravilo vezanih rezultatov in dve dovolj veliki omejitvi dela. Štejemo konstrukcijo in izboljševanje; vse metode dobijo isti skupni limit. Ločeno spremljamo čas in dostop do matrike.</p><h4>Kaj šteje kot uspeh</h4><p>Vsaka zaprta pot je neodvisno veljavna. Poročamo parne vrzeli in krivuljo kakovost–proračun po porazdelitvah; nobenega tuninga na held-out. Primere, kjer konstrukcija preseže limit, zabeležimo, ne skrijemo.</p><details><summary>Obseg, proračun in pogoj za začetek</summary><p>NN, LAG in variante ohranimo; brez posega v TSPTS ali Cockpit.</p><p>Predlog: majhen n = 35 korpus, vnaprej omejen skupni čas do 5 minut. To ni HPC benchmark, velike kampanje ali nov dokaz splošne prednosti.</p><p><b>Ločen offline mandat. Neodvisno od API dostopa, vendar ne pomeni, da smo ta poskus že izvedli.</b></p></details></article></div><div class="r4-gate"><b>Zaporedje:</b> resume je prednostna offline naloga; JSON/API omogoči zanesljivejši naslednji RHP pilot. TSP/LAG je ločena offline proga. VM/Slurm ostaja izključen. Noben gumb na tej strani ne izvaja testov ali odda vloge.</div><p><a data-r3-doc="NEXT_TESTS_R4.md" download href="assets/impulz-hpc-ai/NEXT_TESTS_R4.md">Celoten načrt testov .md ↓</a></p></div><div class="projects" id="projects"></div>
+<div class="subhead"><h3>Dve povezani okolji, en sledljiv rezultat.</h3></div><div class="path-grid"><article class="path-panel"><div class="eyebrow">Stalno okolje</div><h3>Agent deluje kot storitev.</h3><p>Virtualka hrani orkestracijo, stanje in aplikacijo. Agenta uporabljamo prek odobrenega API-ja. Večje učenje ali računsko kampanjo oddamo posebej v HPC.</p><p><b>API za konfiguracijo virtualke:</b> BD-jevo poročilo s predavanja, 21. 10. 2026. Zahtevamo dokumentacijo, način prijave, opis profilov VM, GPU dodelitve, trajne diske, omrežje, kvote in izvoz konfiguracije. Konkretni provisioning endpoint še ni preverjen.</p><p><b>Javni opis:</b> <a href="https://doc.slaif.si/storitve/cloud-platform-service-openstack-paas/">OpenStack</a> in <a href="https://doc.slaif.si/storitve/data-access-services/">Data Access Services</a>. Slednji opisuje prenos podatkov, oddajo vsebnikov in spremljanje izvajanja; to še ni dokaz konkretnega VM API-ja.</p></article><article class="path-panel"><div class="eyebrow">Računski poskus</div><h3>Algoritme merimo v dodeljenem času.</h3><p>Program in podatke zamrznemo z različico in hashi, izvedemo omejen pilot ter primerjamo kakovost pri enakem proračunu. Vrnemo rezultate, dnevnike in strošek.</p><p>Za 8z vedno štejemo tudi opis generatorja, parametre/seme, residual in metapodatke. Za TSP ostane merilo dolžina veljavne poti v izvirnem problemu. Pri AI8 merimo vedenje in uporabnost; ne sklepamo o zavesti iz zmogljivosti gruče.</p><p><b>Merilo za širitev:</b> dokaz, da dodatni viri izboljšajo kakovost ali pretočnost dovolj, da upravičijo porabo. HPC ne zagotavlja uspeha hipoteze.</p></article></div>
+<details id="skupni-spomin"><summary>AI8 arhitektura: skupni spomin s sledljivimi izvori</summary><p>Slajd IMG_1467 postavi »Claude + Wiki« ob pet sistemov: PostHog, HubSpot, ClickUp, GitHub in Discord. Črtkane povezave označujejo branje AI prek MCP, polne pa sistemske prenose. To je predstavljen primer arhitekture; spodaj je naš predlog prilagoditve.</p><div class="memory-core"><b>BD × GPT × Claude · skupni pogled v dokaze</b><p>Spomin hrani povzetek z izvorom, datumom, različico in odgovorno osebo. Ob neskladju preverimo izvorni zapis. Odločitev, opažanje in hipoteza ostanejo razločljivi.</p></div><div class="table-wrap"><table class="mapping-table"><thead><tr><th>Vir v predstavitvi</th><th>Vloga</th><th>Preslikava v naš pilot</th></tr></thead><tbody><tr><td>PostHog</td><td>Kaj uporabniki dejansko počnejo</td><td>Meritve uporabe, uspešnosti in napak agenta</td></tr><tr><td>HubSpot</td><td>Kaj kupci povedo in kupijo</td><td>BD-jeve zahteve, cilj projekta in povratne informacije</td></tr><tr><td>ClickUp</td><td>Kaj delamo in kdo</td><td>Projektni TODO, predaje, odgovornosti in status</td></tr><tr><td>GitHub</td><td>Kaj je v produkciji</td><td>Izvorna koda, commit, izdaja in preverjena objava</td></tr><tr><td>Discord</td><td>Kje ekipa takoj izve</td><td>Dnevnik sprememb in odobrena opozorila</td></tr></tbody></table></div><p>Za pilot izberemo že uporabljene vire in preverimo priklic po ponovnem zagonu, zaznavanje zastarelega zapisa ter popravek neskladja. Merilo je pravilen odgovor s preverljivim izvorom. Branje prek MCP in dovoljeni zapisi ali avtomatizacije imajo ločene pristojnosti.</p></details>
+</section>
+
+<section id="lokalno" class="local-block" aria-labelledby="lokalno-title">
+<div class="section-title"><span class="section-id">03</span><div><h2 id="lokalno-title">Lokalni LLM &amp; 8zCockpit NET.</h2><p>En načrt za domačo inferenco, CPU arene in slovenske/evropske HPC vire. Najprej preverimo, kaj že zmoreta HOME in WORK; nakupi naj rešujejo izmerjeno omejitev.</p></div><span class="mini">Posodobitev 22. 10. 2026<br/>Cene so informativne</span></div>
+<div class="local-kpis" aria-label="Dokumentirano stanje AI8">
+<article><strong>6/6</strong><b>Sprejeti lokalni SMOKE</b><small>Šest HOME konfiguracij. Preizkus ni neodvisen benchmark splošne kakovosti.</small></article>
+<article><strong>8</strong><b>Konfiguracij v razširitvi</b><small>Sedem osnovnih modelov; Gemma Q5/Q6 sta dve kvantizaciji istega modela.</small></article>
+<article><strong>0 €</strong><b>Nujen začetni nakup</b><small>HOME + WORK zadoščata za prvi zasnovni omrežni preizkus.</small></article>
+<article><strong>NET</strong><b>Načrtovana plast</b><small>Heterogeni Windows/Linux/ARM64 cluster še ni verificiran kot produkcija.</small></article>
+</div>
+<div class="subhead"><h3>Štiri proge · ena upravljana infrastruktura.</h3><span>Dejansko stanje ≠ načrtovana sposobnost</span></div>
+<div class="local-hosts">
+<article><div class="eyebrow">01 / OBSTOJEČE</div><h3>HOME · lokalni LLM</h3><p>Modeli, GPU in obstoječi AI8 krmilnik. Zaradi pomnilniških omejitev: en velik model oziroma en modelni slot naenkrat. Osem konfiguracij ne pomeni osem hkratnih LLM-jev.</p><footer>6 sprejetih SMOKE, 2 dodatni konfiguraciji v aktualnem načrtu</footer></article>
+<article><div class="eyebrow">02 / OBSTOJEČE</div><h3>WORK · CPU arene</h3><p>Python raziskave, TSP, preverjalniki, skripte in CLI. Dodatna CPU vozlišča imajo smisel, če so naloge res neodvisne in je HOME/WORK časovno omejen.</p><footer>Primerjati čas do preverjenega rezultata in porabo</footer></article>
+<article><div class="eyebrow">03 / ZUNANJI VIR</div><h3>SLAIF MaaS &amp; HPC</h3><p>API za modelno inferenco ni isti dostop kot CPU VM ali Slurm za Python. Konferenčna dodelitev MaaS se je 21. oktobra iztekla; novo razpoložljivost je treba potrditi.</p><footer>Preverjene zgodovinske API zahteve, ne trajna kvota</footer></article>
+<article><div class="eyebrow">04 / PREDLOG</div><h3>8zCockpit NET</h3><p>Isti upravljavec za razporejanje aren: register gostiteljev, RAM/CPU/GPU, en lastnik naloge, lease, PID/birth identiteta, varna obnova in izdaje po kanarčku.</p><footer>Najprej obstoječa HOME/WORK, nato opcijski Linux/ARM</footer></article>
+</div>
+<div class="local-note"><h3>Prvi korak: preverimo obstoječe stroje, ne kupujemo na slepo.</h3><p><strong>NET pilot:</strong> en omejen Python primer na HOME in WORK, meritev časa/RAM/energije, dokaz pravilnosti, restart in izpad omrežja brez dvojnih zapisov. <strong>LLM pilot:</strong> skupna testna vprašanja, ločene meritve nalaganja, hitrosti, kakovosti in stroška glede na SLAIF po novi odobritvi. Google Drive in WD Cloud sta za trajne preverjene izhode; aktivni delovni cache in sočasni SQLite/WAL zapisi naj ostanejo na lokalni shrambi.</p></div>
+<div class="subhead"><h3>HOME: inventar modelov po predajah AI8.</h3><span>6 dokazano sprejetih SMOKE · kakovostni testi ločeno</span></div>
+<div class="table-wrap"><table><thead><tr><th scope="col">Konfiguracija</th><th scope="col">Model</th><th scope="col">Stanje evidence</th></tr></thead><tbody>
+<tr><td>gpt-oss</td><td>GPT-OSS 20B · MXFP4</td><td>SMOKE PASS</td></tr>
+<tr><td>qwen3.8</td><td>Qwen3.8 27B · Q6_K</td><td>SMOKE PASS po omejenem popravku; izvorni UNKNOWN ostaja v zgodovini</td></tr>
+<tr><td>gemma4</td><td>Gemma 4 31B · Q6_K</td><td>SMOKE PASS; posebna pomnilniška izjema</td></tr>
+<tr><td>gemma4-q5</td><td>Gemma 4 31B · Q5_K_M</td><td>SMOKE PASS; dodatna kvantizacija</td></tr>
+<tr><td>ministral3</td><td>Ministral 3 14B Reasoning · Q8_0</td><td>SMOKE PASS po repair; prvotni truncated FAIL ostaja</td></tr>
+<tr><td>magistral</td><td>Magistral Small 1.2 24B · Q6_K</td><td>SMOKE PASS s pripetim serializerjem</td></tr>
+<tr><td>mellum2.1</td><td>Mellum 2.1 12B-A2.5B · Q8_0</td><td>Razširitev na 8; dejanski zaključek preveri v novejšem lokalnem registru</td></tr>
+<tr><td>lfm2.5</td><td>LFM2.5 24B-A2B · Q6_K</td><td>Razširitev na 8; dejanski zaključek preveri v novejšem lokalnem registru</td></tr>
+</tbody></table></div>
+<p class="local-foot">Podlage: <a href="https://drive.google.com/file/d/1f0tQcQTf-6R0AznzCHU_BTNEckQJwyaa/view" target="_blank" rel="noopener noreferrer">šest sprejetih rezultatov</a>, <a href="https://drive.google.com/file/d/10MTZ0vpFvxmbqC33R0ZrZ831hVMpLnY3/view" target="_blank" rel="noopener noreferrer">načrt osmih</a> in <a href="https://drive.google.com/file/d/1tnnL8eFy4muNeFNFssS4oRg-rMp-WcjO/view" target="_blank" rel="noopener noreferrer">LLM Lab predaja za zaščiten Home Portal</a>. Povezave na Drive lahko zahtevajo prijavo. Stran ni sprotni modelni monitor.</p>
+<div class="subhead"><h3>Primerjava nakupov: Slovenija in tujina.</h3><span>22. 10. 2026 · povezave na prodajalce</span></div>
+<div class="local-money">
+<article><span>Faza 0 · obstoječe</span><strong>0 €</strong><p>HOME in WORK; osnovne meritve, NET načrt in izbira ozkega pilota.</p></article>
+<article><span>Faza 1 · ARM64 opcija</span><strong>~225 €</strong><p>En RPi 5, 8 GB, z osnovnima dodatkom; štirje približno 898 €. Za lahke naloge.</p></article>
+<article><span>Faza 2 · CPU moč</span><strong>729 €</strong><p>Ryzen mini PC z 32 GB RAM; kandidat za številne paralelne Python arene.</p></article>
+</div>
+<div class="table-wrap"><table><thead><tr><th scope="col">Kaj</th><th scope="col">Cena</th><th scope="col">Prodajalec</th><th scope="col">Dostava / opozorilo</th></tr></thead><tbody>
+<tr><td>Raspberry Pi 5, 8 GB</td><td><b>197,64 €</b></td><td><a href="https://www.galagomarket.com/konfigurator/prikazi/60" target="_blank" rel="noopener noreferrer">Galago · SI ↗</a></td><td>Ploščica brez ohišja in napajalnika</td></tr>
+<tr><td>Raspberry Pi 5, 8 GB</td><td><b>184,90 €</b> + poštnina</td><td><a href="https://www.berry-base.com/en/raspberry-pi-5-8gb-ram" target="_blank" rel="noopener noreferrer">BerryBase · DE ↗</a></td><td>EU DHL 9,90 € pod 200 €, brezplačno od 200 €</td></tr>
+<tr><td>Pi AI HAT+ 2</td><td><b>~209,91 €</b> z DDV</td><td><a href="https://si.farnell.com/raspberry-pi/sc2166/add-on-board-raspberry-pi-ai-hat/dp/4852871" target="_blank" rel="noopener noreferrer">Farnell · SI ↗</a></td><td>172,06 € brez DDV; namenski pospeševalnik, ne CUDA</td></tr>
+<tr><td>UM773 Lite · 32 GB / 1 TB</td><td><b>729 €</b></td><td><a href="https://minisforumpc.eu/products/um773-lite" target="_blank" rel="noopener noreferrer">Minisforum · EU ↗</a></td><td>Slovenija vključena; dostava nad 91 € brezplačna</td></tr>
+<tr><td>EVO-X2 · 128 GB / 2 TB</td><td><b>3.349,99 €</b></td><td><a href="https://de.gmktec.com/products/gmktec-evo-x2-amd-ryzen%E2%84%A2-ai-max-395-mini-pc-1?variant=51610049380536" target="_blank" rel="noopener noreferrer">GMKtec · EU ↗</a></td><td>Dostavljajo v SI, a preveri izvor blaga, carino/DDV ter dokončno ceno</td></tr>
+</tbody></table></div>
+<p class="local-foot"><strong>GPU pri Pi 5:</strong> VideoCore VII obstaja, vendar ni NVIDIA CUDA. Tudi AI HAT+ 2 ne nadomesti velikega GPU za 32B/70B modele. Vse cene so posnetek, ne potrjeni računi s slovenskim dostavnim naslovom. Dodatno: <a href="https://www.berry-base.com/it/footer/informazioni/termini-di-spedizione-e-pagamento/" target="_blank" rel="noopener noreferrer">BerryBase prevoz</a> · <a href="https://minisforumpc.eu/pages/privacy-terms" target="_blank" rel="noopener noreferrer">Minisforum SI dostava</a> · <a href="https://de.gmktec.com/en/policies/shipping-policy" target="_blank" rel="noopener noreferrer">GMKtec davki/prevoz</a>.</p>
+<details><summary>Odločilni test pred investicijo v večji računalnik</summary>
+<div class="table-wrap"><table><thead><tr><th scope="col">Možnost</th><th scope="col">Kdaj upravičena</th><th scope="col">Kaj mora pilot pokazati</th></tr></thead><tbody>
+<tr><td>En Raspberry Pi</td><td>Res potrebujemo ARM64 ali nizkoporabno nadzorno vozlišče</td><td>Pravi agent, lease, fail-closed restart, checkpoint in primerjava z HOME/WORK</td></tr>
+<tr><td>Ryzen mini PC</td><td>CPU arene ostajajo brez dovolj računske kapacitete</td><td>Ista zamrznjena instanca, enaka proračunska pravila, čas/RAM/energija na veljaven izid</td></tr>
+<tr><td>128 GB LLM strežnik</td><td>Dokazana potreba po večjem modelu, hitrejšem odzivu ali sočasnosti</td><td>Tokens/s, kakovost, kontekst, poraba in korist proti HOME ter SLAIF</td></tr>
+</tbody></table></div>
+<p><strong>Sklep:</strong> najprej 0 €. Če želimo ARM pilot, kupimo en RPi, ne štirih. Za resnično CPU širitev prej preverimo Ryzen mini PC. LLM strežnik za več tisoč evrov pride v poštev šele po dokazani potrebi. To poglavje ne zažene lokalnih modelov, ne opravi nakupa ali novega HPC poskusa.</p>
+</details>
+</section>
+
+<section id="priprava"><div class="section-title"><span class="section-id">↗</span><div><h2>Od načrta do dobre prijave.</h2><p>Najprej potrdimo upravičenost in vrstni red. Nato izberemo ločene, jasno omejene projekte za ustrezne vire.</p></div></div><div class="r3-application" id="slaif-prijava"><div class="eyebrow">Neposlan osnutek · dostop ni potrjen</div><h3>Najprej dogovor o zanesljivem MaaS pilotu.</h3><p>Za naslednjo fazo pripravimo vprašanja o aktivnem brezplačnem dostopu, kvoti, izteku in uradno podprtih nastavitvah JSON ter razmišljanja. Ponudniku lahko pokažemo redaktirane meritve, slovenske testne primere, napake in ponovljiv protokol — ne obljube o dokazani prednosti RHP.</p><p><b>VM/Slurm ni del sedanjega nadaljevanja.</b> Prejšnji 60-dnevni predlog MaaS + CPU VM ter okvir 8–16 vCPU / 32–64 GB / 200 GB ohranimo kot odloženo arhitekturno možnost, ne kot aktivno prošnjo, odobreno kvoto ali sklep iz malega wi29 testa.</p><div class="r3-actions"><a data-r3-open="slaif-povzetek.html" href="assets/impulz-hpc-ai/slaif-povzetek.html">Povzetek za SLAIF ↗</a><a data-r3-doc="SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md" download href="assets/impulz-hpc-ai/SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md">Poročilo .md ↓</a><a data-r3-doc="EMAIL_DRAFT_SLAIF_REQUEST.md" download href="assets/impulz-hpc-ai/EMAIL_DRAFT_SLAIF_REQUEST.md">Neposlan osnutek ↓</a></div><p class="small">Javna raziskovalna predstavitev ni oddana vloga. Prijavitelj in upravičenost ostajata za uskladitev; BD × AI Lab je delovno ime, ne potrditev Telekomovega projekta. Zasebne beležke niso del prilog.</p></div>
+<details id="vrednost"><summary>Šest vprašanj, ki jih mora pokriti dobra prijava</summary><p>Prilagoditev slajda IMG_1465: merljiv rezultat izhaja iz povezanih sposobnosti organizacije. Za naše raziskave poleg poslovnega učinka opredelimo tudi raziskovalni izid.</p><div class="capability-grid"><div><b>Vrednost</b><p>Kateri rezultat izboljšamo in proti kateremu baseline ga merimo?</p></div><div><b>Delo</b><p>Katero konkretno opravilo ali potek dela bo pilot spremenil?</p></div><div><b>Poslovni kontekst</b><p>Katere podatke, pravila in omejitve mora agent razumeti?</p></div><div><b>Ljudje</b><p>Kdo prispeva znanje, preveri rezultat in sprejme odločitev?</p></div><div><b>Tehnologija</b><p>Kaj uporabimo kot MaaS, kaj teče na VM in kaj oddamo v HPC?</p></div><div><b>Zaupanje in nadzor</b><p>Kako preverjamo pravilnost, porabo, obnovitev in izboljšave?</p></div></div></details>
+<div class="path-grid"><article class="path-panel"><h3>Pot A · raziskovalni dostop</h3><ol><li>SLING/EuroHPC pisno potrdi status dejanskega prijavitelja oziroma resničnega projektnega partnerja.</li><li>Preverimo vpliv prve HPC dodelitve na morebitni FFplus istega podjetja.</li><li>Po offline preverjanju lahko pripravimo TSP/8z TD/Benchmark pilot. VM/Slurm ostaja odložena možnost zunaj sedanjih testov.</li><li>Šele po meritvah predlagamo RD/Development ali večjo dodelitev.</li></ol></article><article class="path-panel"><h3>Pot B · podjetje &amp; FFplus</h3><ol><li>Preverimo dejansko SME/startup pravno osebo, poslovni problem in predhodno HPC uporabo.</li><li>Po odprtju OC3 preberemo nova pravila in pridobimo pojasnilo glede zaporedja.</li><li>Pripravimo merljiv poslovni pilot in ustreznega tehničnega partnerja.</li><li>Če pogoji ne ustrezajo, ohranimo raziskovalno/pilotno pot in poznejši AI Innovation Study.</li></ol></article></div>
+<div class="notice"><b>FFplus lahko spremeni vrstni red.</b> Prejšnji OC2 je izključeval glavne prijavitelje z že pridobljeno HPC uporabo; FAQ omenja tudi uspešen EuroHPC Development za drugo temo. To je <b>zgodovinsko pravilo OC2</b>, ki ga preverimo v OC3. Zato za isto podjetje ne oddajamo nepremišljeno vseh vlog hkrati. Različne vloge morajo imeti različne upravičene cilje; istega že odobrenega tekočega projekta ne financiramo dvojno. <a href="https://www.ffplus-project.eu/en/open-call/archive-business-experiments/oc2-t1-business-experiments/">Prejšnja pravila in FAQ ↗</a></div>
+<div class="subhead"><h3>Naš pripravljalni seznam.</h3><span>Označevanje je lokalna beležka</span></div><div class="checklist" id="checklist"></div>
+<div class="notes-box"><label for="notes">Beležke s predavanj in odgovori podpore</label><textarea id="notes" placeholder="Kontakt, odgovor, potrjen rok ali dogovor …"></textarea><p class="small" id="save-status" role="status">Beležke in kljukice se shranijo samo v tem brskalniku. Za prenos na drugo napravo uporabi izvoz.</p><div class="tools"><button id="export">Izvozi beležke JSON</button><button id="copy-notes">Kopiraj beležke JSON</button><button id="import">Uvozi beležke</button><input accept="application/json,.json" hidden="" id="import-file" type="file"/><button id="print">Natisni načrt</button><button id="download">Prenesi stran HTML</button></div></div>
+<details><summary>Odložena arhitekturna možnost: virtualka + MaaS</summary><p><b>Ni aktivna prošnja; VM/Slurm je trenutno izločen.</b> Zgodovinski tehnični predlog za poznejšo uskladitev: Linux CPU VM, 8–16 vCPU, 32–64 GB RAM in 200 GB trajne shrambe za koordinator, spomin in orodja; model prek odobrenega MaaS API. Lastni GPU z vsaj 24–32 GB VRAM je alternativa po meritvah. Razjasnimo API za model in VM, prijavo, kvote, čakanje, trajanje uporabne dobe, iztek in podaljšanje, VPN/javni HTTPS, stroške ter pravila trajnega gostovanja. Večje učenje je ločen računski poskus.</p><button id="copy-vm">Kopiraj aktualni MaaS osnutek (brez VM)</button></details>
+</section>
+<section id="kontakti"><div class="section-title"><span class="section-id">@</span><div><h2>Ljudje in vstopne točke.</h2><p>Javno preverjeni kontakti. Povezave odprejo pošto; nobeno sporočilo ali prijava s te strani ni poslano samodejno.</p></div></div><div class="contacts" id="contacts"></div></section>
+<section id="slajdi"><div class="section-title"><span class="section-id">↳</span><div><h2>Kaj smo odnesli s predavanj.</h2><p>Petnajst pregledanih fotografij in posnetkov. Povzetki ohranjajo razliko med izvedenim preizkusom, načrtom in dejansko dostopnostjo za naš projekt.</p></div></div><div class="slide-grid" id="slides"></div><div class="notice"><b>Vega 2: odprto datumsko vprašanje.</b> BD poroča, da je Domen na predavanju napovedal 2028. Spletni SLAIF FAQ še navaja proizvodnjo konec 2027. Pred načrtovanjem odvisnosti zahtevamo aktualen časovni načrt; do takrat pripravljamo pilote na obstoječih virih.</div></section>
+<section id="viri"><div class="section-title"><span class="section-id">✓</span><div><h2>Viri, preverjanje in odprta vprašanja.</h2><p>Meritve in konferenčni pregled: 21. 10. 2026. Izvedbena dokazila, ponudbeni pogoji in novi predlogi so tri različne vrste virov.</p></div></div><p class="small">R4 uporablja celotno Codexovo poročilo, ne samo starega stanja R3. Ponudbene kartice ohranjajo datirani pregled R2; pogoji niso ponovno potrjeni v tej uredniški reviziji. Zgodovina in izvirni rezultati ostanejo nespremenjeni.</p><ol class="sources" id="sources"></ol><details id="rhp-uredniski"><summary>Kako je RHP izboljšal to revizijo?</summary><p><b>Seme:</b> ohraniti naš uporaben načrt ter iz vseh dosegljivih rezultatov izpeljati boljši naslednji korak. RHP 3.0-candidate R2, T1 + E1; zaporedni dokazni, uredniški in kritični pogled istega GPT, ne trije neodvisni ocenjevalci.</p><p><b>Sprememba okvira:</b> vprašanje ni več samo »koliko zahtev je uspelo«, temveč »na kateri stopnji je rezultat zanesljiv«. HTTP, dokončanost, JSON/shema, pravilnost in učinek protokola dobijo ločene dokaze.</p><p><b>Konkurenčne razlage:</b> boljši odgovor je lahko učinek protokola, daljših navodil, večjega izhodnega limita ali presoje ocenjevalca. Zato naslednji RHP predlog doda nove naloge, dolžinsko kontrolo in slepo presojo; TSP/LAG dobi skupni računski limit.</p><p><b>Izvedeno v R4:</b> 95/95 izvornih hashov, manifest, CRC in aritmetika ledgerja; usklajene spletne in prenosne priloge. To ni nova empirična ponovitev. Razlika RHP hashov je konkretno razrešena z dodatnim LF.</p><p><b>Ohranjeno učenje:</b> najprej resume in pogodba izhoda, nato boljša primerjava; vse raziskovalne smeri ostanejo odprte. Predlog ni dovoljenje za test. VM/Slurm je izključen; iz te strani ni poslane vloge, emaila ali novega API zahtevka.</p></details></section>
+</main><footer class="site-footer"><div class="wrap"><span>BD × AI Lab · HPC &amp; AI načrt · R4 / 21. 10. 2026<br/>Seme in prioritete: Bojan Dobrečevič · eksperimenti: CLI Codex · sinteza in pregled: GPT</span><span><a href="https://www.mdlxdcc.org/">MDL×DCC.org ↗</a> · <a href="https://bd-chess.github.io/bd-chessdb/BD/O/impulz-2026.html">IMPULZ vodič ↗</a><br/>Naslednji korak: ločen mandat za prednostni offline resume test; API po potrditvi dostopa.</span></div></footer>
+<dialog aria-labelledby="modal-title" id="project-dialog"><div class="modal-top"><span>NAŠ PROJEKT / PREDLOG PILOTA</span><button aria-label="Zapri podrobnosti projekta" id="close-dialog">Zapri ×</button></div><div class="modal-body" id="modal-body"></div></dialog><div class="toast-off" id="toast" role="status"></div>
+<script id="plan-data" type="application/json">{
+  "version": "1.3.0",
+  "asOf": "2026-10-21",
+  "sources": [
+    {
+      "id": "sling",
+      "title": "SLING · nacionalni razpisi, kvote in roki",
+      "url": "https://www.sling.si/razpisi-za-odprti-dostop-in-rabo-virov/",
+      "note": "TD/RD stalno odprta; ORD rok 1. 11. 2026. Enota: vozliščne ure."
+    },
+    {
+      "id": "eligible",
+      "title": "SLING · upravičeni uporabniki",
+      "url": "https://doc.sling.si/navodila/upravicenci/",
+      "note": "Preveriti status neodvisnega raziskovalca in organizacije."
+    },
+    {
+      "id": "vm",
+      "title": "SLAIF · Cloud Platform Service (OpenStack PaaS)",
+      "url": "https://doc.slaif.si/storitve/cloud-platform-service-openstack-paas/",
+      "note": "Odobren tenant, opis potreb; navedena razpoložljivost Q4/2026."
+    },
+    {
+      "id": "getaccess",
+      "title": "SLAIF · Get Access",
+      "url": "https://slaif.si/get-access",
+      "note": "Prijava interesa in nadaljnje usklajevanje potreb."
+    },
+    {
+      "id": "faq",
+      "title": "SLAIF · FAQ",
+      "url": "https://slaif.si/faq",
+      "note": "Kontakti, upravičenost, stroški; novi sistem konec 2027 po spletnem FAQ."
+    },
+    {
+      "id": "benchmark",
+      "title": "EuroHPC · Benchmark Access",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-benchmark-access_en",
+      "note": "Mesečni presečni roki; podrobna pravila PDF v razdelku Documents."
+    },
+    {
+      "id": "development",
+      "title": "EuroHPC · Development Access",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-development-access_en",
+      "note": "Razvoj, prenos in optimizacija; podrobna organizacijska pravila."
+    },
+    {
+      "id": "playground",
+      "title": "EuroHPC · AI Playground",
+      "url": "https://www.eurohpc-ju.europa.eu/playground-access-ai-factories_en",
+      "note": "Industrijska AI inovacija; ciljni postopek 2 delovna dneva."
+    },
+    {
+      "id": "fastlane",
+      "title": "EuroHPC · AI Fast Lane",
+      "url": "https://www.eurohpc-ju.europa.eu/fast-lane-access-ai-factories_en",
+      "note": "Do 50.000 GPU-ur, do 3 mesece; ciljni postopek 4 delovne dni."
+    },
+    {
+      "id": "science",
+      "title": "EuroHPC · AI for Science",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en",
+      "note": "30. 10. in 11. 12. 2026; raziskovalna organizacija, predvsem učenje, omejitev inference."
+    },
+    {
+      "id": "regular",
+      "title": "EuroHPC · Regular Access",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-regular-access-mode_en",
+      "note": "Preverjeni zadnji datum 2026: 4. 9.; prihodnji rok ni potrjen."
+    },
+    {
+      "id": "extreme",
+      "title": "EuroHPC · Extreme Scale",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode_en",
+      "note": "Aktualna glavna stran: 26. 10. 2026 ob 10:00 CET; za velike, skalabilne projekte."
+    },
+    {
+      "id": "ffbusiness",
+      "title": "FFplus · Business Experiments OC3",
+      "url": "https://www.ffplus-project.eu/en/open-call/business-experiments/",
+      "note": "Uradna napoved odprtja v začetku novembra 2026; rok še nepotrjen."
+    },
+    {
+      "id": "ffinnovation",
+      "title": "FFplus · Innovation Studies OC3",
+      "url": "https://www.ffplus-project.eu/en/open-call/innovation-studies/",
+      "note": "Predvideno odprtje junij 2027."
+    },
+    {
+      "id": "ffhistory",
+      "title": "FFplus · arhiv OC2 in FAQ",
+      "url": "https://www.ffplus-project.eu/en/open-call/archive-business-experiments/oc2-t1-business-experiments/",
+      "note": "Zgodovinski pogoj glede predhodne HPC uporabe; ne razglasiti za potrjeno OC3 pravilo."
+    },
+    {
+      "id": "industry",
+      "title": "SLING · dostop za gospodarstvo",
+      "url": "https://www.sling.si/zaposleni-v-gospodarstvu-podjetniki/",
+      "note": "podpora@sling.si in eurocc@sling.si; pilotna, subvencionirana in komercialna pot."
+    },
+    {
+      "id": "marko",
+      "title": "UM FERI LHRS · Marko Ferme",
+      "url": "https://lhrs.feri.um.si/clani/marko-ferme/",
+      "note": "Javni poslovni email in telefon."
+    },
+    {
+      "id": "domen",
+      "title": "GreenHer / univerzitetni imenik · Domen Mongus",
+      "url": "https://greenher.uni-lj.si/about-us/employees-and-associate-members/",
+      "note": "Javni poslovni email."
+    },
+    {
+      "id": "ales",
+      "title": "Tehnološki park Ljubljana · SLAIF",
+      "url": "https://www.tp-lj.si/sl/projekti/slaif-slovenska-tovarna-umetne-inteligence-2025-11-18",
+      "note": "Projektni kontakt Aleš Pevc."
+    },
+    {
+      "id": "dataapi",
+      "title": "SLAIF · Data Access Services",
+      "url": "https://doc.slaif.si/storitve/data-access-services/",
+      "note": "Javni opis podatkovnih endpointov, vsebnikov, oddaje in izhodov."
+    },
+    {
+      "id": "gateway",
+      "title": "SLAIF · API Gateway",
+      "url": "https://doc.slaif.si/storitve/slaif-api-gateway/",
+      "note": "RC-beta opis nadzorovane uporabe/objave AI; ne produkcijski SLA ali VM provisioning endpoint."
+    },
+    {
+      "id": "genetics",
+      "title": "SLAIF · katalog storitev",
+      "url": "https://slaif.si/services",
+      "note": "V katalogu tudi sintetični genetski podatki, obdelava genetike, orkestracija in evalvacije; primernost potrditi."
+    },
+    {
+      "id": "maas-demo",
+      "title": "BD · posnetka portala Modeli kot storitev",
+      "url": "#maas",
+      "kind": "attachment",
+      "note": "IMG_1452(1) in IMG_1460(1), 21. 10. 2026: katalog, instanca, API dostop in čakalna vrsta. Točen javni portal/API še ni potrjen."
+    },
+    {
+      "id": "contact-slide",
+      "title": "BD · kontaktni slajd Marko Ferme",
+      "url": "#slajdi",
+      "kind": "attachment",
+      "note": "IMG_1455: razvojni pilot marko.ferme@um.si; HPC pomoč podpora@sling.si in eurocc@sling.si."
+    },
+    {
+      "id": "value-slide",
+      "title": "BD · slajd o organizacijskih sposobnostih",
+      "url": "#vrednost",
+      "kind": "attachment",
+      "note": "IMG_1465: vrednost, delo, poslovni kontekst, ljudje, tehnologija, zaupanje in nadzor."
+    },
+    {
+      "id": "memory-slide",
+      "title": "BD · slajd En spomin, pet virov resnice",
+      "url": "#skupni-spomin",
+      "kind": "attachment",
+      "note": "IMG_1467: Claude + Wiki in pet izvornih sistemov; prikazan vzorec prilagodimo našemu okolju."
+    },
+    {
+      "id": "cli-r4",
+      "title": "CLI Codex · R4 izvedena API povezava",
+      "url": "https://drive.google.com/file/d/19Wigmr4b1HoTkTSfB7KOnstMOvwkzlRA/view",
+      "kind": "evidence",
+      "note": "Dve zgodovinski zahtevi HTTP 200; vsebinski sprejem delni. Ni trenutni status dodelitve. Izvedbeni vir z dne 21. 10. 2026; neodvisna ponovitev v tej HTML seji ni opravljena."
+    },
+    {
+      "id": "cli-r5",
+      "title": "CLI Codex · R5 raziskovalni pilot",
+      "url": "https://drive.google.com/file/d/1p7ThG61edOpKnnEobadcXAuv0eTa2t4R/view",
+      "kind": "evidence",
+      "note": "Šest dodatnih HTTP 200; lokalni CPCI in LAG, omejitve odgovorov ter neizenačen proračun. Izvedbeni vir z dne 21. 10. 2026; neodvisna ponovitev v tej HTML seji ni opravljena."
+    },
+    {
+      "id": "cli-exact",
+      "title": "CLI Codex · ločen izčrpni TSP oracle",
+      "url": "https://drive.google.com/file/d/1mEobwdzH2AsPyUh3uqltVRLgiWZG0p_I/view",
+      "kind": "evidence",
+      "note": "Osem n=9 problemov in 40 poti; izčrpno znotraj geometrije v plavajoči vejici, ne splošen rang. Izvedbeni vir z dne 21. 10. 2026; neodvisna ponovitev v tej HTML seji ni opravljena."
+    },
+    {
+      "id": "cli-tspts",
+      "title": "CLI Codex · TSPTS HOME in RHP/VM priprava",
+      "url": "https://drive.google.com/file/d/1xqP0gOyTb0Hl8kxy9Pyt_7rqwS1PcgNG/view",
+      "kind": "evidence",
+      "note": "En pravi TSPTS v0.1 CPU pilot na HOME; RHP in oddaljeni VM/Slurm nista izvedena. Izvedbeni vir z dne 21. 10. 2026; neodvisna ponovitev v tej HTML seji ni opravljena."
+    },
+    {
+      "id": "cli-complete",
+      "kind": "evidence",
+      "title": "Codex · celotno poročilo 21. 10. 2026",
+      "url": "https://drive.google.com/file/d/1kbdKphsUqH9pf8qIHoYRT_7P0Y-23t6m/view",
+      "note": "Izvedbeni dokaz 21. 10. 2026; rezultat in omejitve, ne splošna lestvica. Drive lahko zahteva pooblastilo."
+    },
+    {
+      "id": "cli-rhp768",
+      "kind": "evidence",
+      "title": "Codex · RHP A/B pri 768 tokenih",
+      "url": "https://drive.google.com/file/d/1AYhuUFNxHW9TwtzNkI0lmhEEMMw2jrKE/view",
+      "note": "Izvedbeni dokaz 21. 10. 2026; rezultat in omejitve, ne splošna lestvica. Drive lahko zahteva pooblastilo."
+    },
+    {
+      "id": "cli-conference",
+      "kind": "evidence",
+      "title": "Codex · dodatni konferenčni R2 in RHP 2048",
+      "url": "https://drive.google.com/file/d/1Y0Zh8xRv_KrtFf6l6mnm14SC-UywPF8G/view",
+      "note": "Izvedbeni dokaz 21. 10. 2026; rezultat in omejitve, ne splošna lestvica. Drive lahko zahteva pooblastilo."
+    }
+  ],
+  "offers": [
+    {
+      "id": "maas",
+      "name": "SLAIF / Maister · modeli kot storitev",
+      "region": "si",
+      "tags": [
+        "vm"
+      ],
+      "status": "API PREIZKUŠEN · DODELITEV POTEKLA",
+      "featured": true,
+      "desc": "Časovno omejeni konferenčni MaaS smo povezali z lokalnim raziskovalnim okoljem. R4 in R5 skupaj: 8 zahtev HTTP 200; kakovost odgovorov obravnavamo ločeno.",
+      "when": "Meritve 21. 10. 2026; uporabljena dodelitev se je iztekla ob 14:16:28 Europe/Ljubljana. Novi dostop ni potrjen.",
+      "resources": "Gostovana inferenca prek API-ja. Zgodovinsko brezplačnost je potrdil BD; nadaljnje kvote in stroški zahtevajo dogovor.",
+      "fit": "Nadaljnja evalvacija slovenščine in predregistrirani RHP A/B. VM koordinator in Python HPC sta ločena dostopa.",
+      "gate": "Dogovoriti novo dodelitev, kvoto, iztek, licenco in podatkovne pogoje; VM/Slurm pravic ne sklepamo iz MaaS ključa.",
+      "apply": "https://maas.slaif.lhrs.si/",
+      "source": "cli-r5"
+    },
+    {
+      "id": "vm",
+      "name": "SLAIF / Maister · GPU virtualka",
+      "region": "si",
+      "tags": [
+        "vm"
+      ],
+      "status": "PILOT / DOGOVOR",
+      "featured": true,
+      "desc": "Stalno razvojno okolje za AI agenta, njegov spomin in storitev. Na slajdih so prikazani GPU VM, trajna shramba in VPN.",
+      "when": "Q4 2026 v katalogu; early-adopter okolje po slajdih.",
+      "resources": "Profil VM, GPU, disk, trajanje in cena po potrditvi; dodelitev še ni znana.",
+      "fit": "AI8 servis, razvoj agenta in predloge okolij; oddaljeno upravljanje VM prek API po BD poročilu.",
+      "gate": "Potrditi tenant, GPU, provisioning API, VPN/javni HTTPS in dovoljeno 24/7 izvajanje.",
+      "apply": "https://slaif.si/get-access",
+      "source": "vm"
+    },
+    {
+      "id": "td",
+      "name": "SLING · testni dostop (TD)",
+      "region": "si",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO",
+      "desc": "Prvi omejen preizkus programske opreme, algoritmov in skaliranja na obstoječih sistemih.",
+      "when": "Stalno odprto; največ 3 mesece; obvestilo praviloma v 1 tednu.",
+      "resources": "Vega/Arnes: 5.000 CPU in 400 GPU vozliščnih ur; Leonardo: 400 CPU / 800 GPU.",
+      "fit": "TSP, 8z, FASTA: prenos, pravilnost, izkoristek in primerjava z lokalnim izvajanjem.",
+      "gate": "Upravičenost in razpoložljivost potrdi SLING; najprej preveriti morebitni FFplus vpliv.",
+      "apply": "https://www.sling.si/prijava-testni/",
+      "source": "sling"
+    },
+    {
+      "id": "rd",
+      "name": "SLING · razvojni dostop (RD)",
+      "region": "si",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO",
+      "desc": "Razvoj in optimizacija po prvem pilotu; za projekte z jasnim programskim načrtom.",
+      "when": "Stalno odprto; največ 12 mesecev; obvestilo praviloma v 1 tednu.",
+      "resources": "Vega: 10.000 CPU / 1.000 GPU; Arnes: 5.000 / 1.000; Leonardo: 1.000 / 2.000 vozliščnih ur.",
+      "fit": "Daljši razvoj TSP, kompresijskih generatorjev in učinkovitega izvajanja modelov.",
+      "gate": "Opis metode, virov in poročilo; potrditev prijavitelja ter zaporedja glede FFplus.",
+      "apply": "https://www.sling.si/prijava-razvojni/",
+      "source": "sling"
+    },
+    {
+      "id": "pd",
+      "name": "SLING · pilot za gospodarstvo",
+      "region": "si",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / PODJETJE",
+      "desc": "Uvajanje HPC za podjetje z omejenim in merljivim pilotom.",
+      "when": "Stalno odprto; največ 3 mesece.",
+      "resources": "Vega: do 2.000 CPU ALI do 400 GPU vozliščnih ur.",
+      "fit": "Poslovni pilot optimizacije ali kompresije prek dejanske upravičene pravne osebe.",
+      "gate": "Izključno podjetjem; ime našega laboratorija samo ne dokazuje pravnega statusa.",
+      "apply": "https://www.sling.si/prijava-pilotni/",
+      "source": "industry"
+    },
+    {
+      "id": "benchmark",
+      "name": "EuroHPC · Benchmark",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / MESEČNI ROK",
+      "featured": true,
+      "desc": "Meritve skaliranja na evropskem sistemu kot podlaga za poznejšo večjo dodelitev.",
+      "when": "Naslednji presek 1. 11. 2026, 10:00 CET; največ 3 mesece.",
+      "resources": "Omejene vozliščne ure po izbranem sistemu; ni ene skupne kvote.",
+      "fit": "TSP in 8z: enak proračun, več delavcev, velikost problema in natančna ponovljivost.",
+      "gate": "Podrobni pogoji zahtevajo organizacijo in ustrezno pogodbo PI; neodvisni status ni samodejno upravičen.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "benchmark"
+    },
+    {
+      "id": "development",
+      "name": "EuroHPC · Development",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / MESEČNI ROK",
+      "desc": "Prenos kode, optimizacija in razvoj za evropske HPC sisteme.",
+      "when": "Naslednji presek 1. 11. 2026, 10:00 CET; dodelitev do 1 leta.",
+      "resources": "Obseg po sistemu in tehničnem načrtu. Razpoložljivost omejuje mesečna kvota.",
+      "fit": "TSP/8z GPU jedra, CPU vektorizacija in meritve komunikacije med delavci.",
+      "gate": "Organizacija/pogodba PI, industrijska uporaba za odprti R&D; predhodna dodelitev lahko vpliva na FFplus.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "development"
+    },
+    {
+      "id": "playground",
+      "name": "AI Factories · Playground",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / INDUSTRIJSKI AI",
+      "desc": "Manjši AI projekt in uvajanje novega industrijskega uporabnika.",
+      "when": "Stalno odprto; 1–3 mesece; cilj postopka 2 delovna dneva.",
+      "resources": "Obseg in sistem po aktualni ponudbi; ena vloga na enem sistemu.",
+      "fit": "Manjši pilot odprtega modela za agenta in meritve inference ali prilagajanja.",
+      "gate": "Organizacijska upravičenost in inovacijski cilj; cilj odziva ne jamči prostega GPU ali trajnega servisa.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "playground"
+    },
+    {
+      "id": "fastlane",
+      "name": "AI Factories · Fast Lane",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / IZKUŠEN UPORABNIK",
+      "desc": "Srednje velika industrijska AI dodelitev za uporabnika, ki že obvlada HPC.",
+      "when": "Stalno odprto; do 3 mesece; cilj postopka 4 delovne dni.",
+      "resources": "Do 50.000 GPU-ur. MareNostrum5 ACC in JUPITER Booster po aktualni strani trenutno nista na voljo za to pot.",
+      "fit": "Širše učenje ali evalvacije odprtih modelov po uspešnem manjšem pilotu.",
+      "gate": "Izkušenost, upravičena organizacija in razpoložljiva particija; brez dvojne dodelitve istega tekočega projekta.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "fastlane"
+    },
+    {
+      "id": "science",
+      "name": "EuroHPC · AI for Science",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "ODPRTO / RAZISKAVE",
+      "desc": "Raziskovalni AI projekt s poudarkom na učenju, znanstvenih modelih in generativni AI.",
+      "when": "30. 10. in 11. 12. 2026 ob 10:00 CET; dodelitev 6 mesecev.",
+      "resources": "Po znanstvenem in tehničnem načrtu; po pogojih največ 10 % dodelitve za inference.",
+      "fit": "AI8 DNA in 8zReasoning samo s konkretnim raziskovalnim učenjem in merljivimi kontrolami.",
+      "gate": "Organizacija in pogodba PI; pretežno trajno serviranje agenta ne ustreza tej poti.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "science"
+    },
+    {
+      "id": "ffbusiness",
+      "name": "FFplus · Business Experiments",
+      "region": "eu",
+      "tags": [
+        "funding"
+      ],
+      "status": "NAPOVEDANO ODPRTJE",
+      "desc": "Financiran poslovni eksperiment, ki uvaja HPC v SME z merljivim poslovnim učinkom.",
+      "when": "OC3 napovedan za začetek novembra 2026. Rok oddaje še ni potrjen.",
+      "resources": "Proračun, trajanje in obveznosti določijo nova OC3 pravila; starega proračuna ne prenašamo samodejno.",
+      "fit": "TSP za logistično optimizacijo ali kompresija kot merljiv poslovni proces.",
+      "gate": "Dejanski SME, poslovni problem in preverjanje predhodne HPC uporabe; prejšnji OC2 ni dopuščal že izkušenega glavnega SME.",
+      "apply": "https://www.ffplus-project.eu/en/open-call/business-experiments/",
+      "source": "ffbusiness"
+    },
+    {
+      "id": "ffinnovation",
+      "name": "FFplus · Innovation Studies",
+      "region": "eu",
+      "tags": [
+        "funding"
+      ],
+      "status": "NAPOVEDANO ZA 2027",
+      "desc": "Razvoj generativnih modelov z zahtevnejšo uporabo HPC za evropski SME/startup.",
+      "when": "OC3 predvidoma junija 2027.",
+      "resources": "Prihodnja pravila in pogoji še niso preverjeni kot odprt razpis.",
+      "fit": "AI8/agentni model, če pilot pokaže potrebo po učenju in poslovno vrednost.",
+      "gate": "Podjetje, dokazljiv generativni AI razvoj in ustrezen načrt; ni takojšnja rešitev za VM.",
+      "apply": "https://www.ffplus-project.eu/en/open-call/innovation-studies/",
+      "source": "ffinnovation"
+    },
+    {
+      "id": "large",
+      "name": "Večje dodelitve · naslednja stopnja",
+      "region": "eu",
+      "tags": [
+        "hpc"
+      ],
+      "status": "PO PILOTU",
+      "desc": "Regular/Extreme Scale v EU in običajni raziskovalni dostop SLING za večje, utemeljene kampanje.",
+      "when": "SLING ORD: 1. 11. 2026. EU Extreme: 26. 10. 2026, 10:00 CET. Preverjeni Regular datum 4. 9. 2026 je mimo; naslednji ni potrjen.",
+      "resources": "Zahtevane meritve, velikost kampanje in skaliranje. Dodelitev ni običajen najem stalnega strežnika.",
+      "fit": "Šele po pilotu, ki pokaže smisel večjega problema ali več vzporednih nalog.",
+      "gate": "Pripravljenost programa in podatkov; nominalni postopek večjih EU shem lahko traja 4–6 mesecev.",
+      "apply": "https://access.eurohpc-ju.europa.eu/",
+      "source": "extreme"
+    }
+  ],
+  "projects": [
+    {
+      "id": "tsp",
+      "rank": "01",
+      "name": "TSP / 8Z-RP",
+      "lane": "TSPTS Thin Solver · CPU · HOME baseline opravljen",
+      "summary": "TSPTS v0.1 ima preverjen mali HOME baseline. Pred dolgimi teki najprej zapremo resume; TSP/LAG ostaja ločena primerjava pri enakem proračunu.",
+      "metric": "Veljavna pot, enak obseg dela, wall/CPU čas, pomnilnik, čas do najboljšega; pospešek šele po oddaljeni meritvi.",
+      "pilot": "Izvedeni HOME pilot: wi29, seme 20261021, 1 delavec, 128 predlogov, 1,172904 s zunanjega časa, dolžina 27.603. Predlagano nadaljevanje: izoliran fail-closed resume popravek in kratek stop/resume test; ni še izvedeno. VM/Slurm je trenutno izločen.",
+      "resources": "Za primerjalni smoke majhen CPU slot; za trajno koordinacijo ločena prošnja za VM. GPU ni uporabljen in ni zahtevan na osnovi tega testa. Več delavcev in večje kampanje šele po meritvah.",
+      "controls": [
+        "Ohranimo nespremenjeni TSPTS v0.1; LAG demo in široka arena sta druga eksperimenta.",
+        "Isti izvorni/vhodni/config hashi, seed, delavec in backend na obeh gostiteljih.",
+        "EUC_2D in povratni rob preveri neodvisni validator; objavljeni optimum ni dan iskalniku.",
+        "Majhen enkratni HOME smoke in aktivne druge arene ne dokazujejo stabilnega rangiranja.",
+        "Pred dolgimi teki urediti odkriti primer neveljavnega resume, ki lahko tiho začne znova."
+      ],
+      "output": "HOME izhodiščna meritev in pripravljen prenosljiv paket; oddaljena meritev in pospešek še nista na voljo.",
+      "next": "Ločen offline mandat za resume; TSP/LAG matched-budget na drugi izolirani progi. Oddaljeni test ni aktiviran.",
+      "brief": "Project status: unchanged TSPTS v0.1 on HOME produced a verified wi29 tour of 27,603 in 1.172904 seconds external wall time (one small, non-isolated run). The next proposed offline task is a fail-closed invalid-resume repair and bounded stop/resume acceptance in an isolated copy. TSP/LAG equal-budget comparison is a separate experiment. VM/Slurm is currently excluded; no remote performance or resource allocation is claimed."
+    },
+    {
+      "id": "compression",
+      "rank": "02",
+      "name": "8z & matematični generatorji",
+      "lane": "HPC · množica neodvisnih poskusov",
+      "summary": "Iščemo krajše opise podatkov z generatorji, transformacijami in natančno kodiranimi popravki.",
+      "metric": "Celotni bajti + čas dekodiranja + pravilnost.",
+      "pilot": "Zamrznjen manjši korpus; ločeni razvojni in zadržani primeri. Primerjamo uveljavljeni kodek, obstoječi 8z baseline in generatorske kandidate pod enakim računskim proračunom.",
+      "resources": "CPU vozlišče za vzporedno iskanje; GPU kandidat le za vektorizirano vrednotenje. Omejimo čas na kandidat, RAM, disk in skupno število kandidatov.",
+      "controls": [
+        "Štejemo generator oziroma njegov ID, parametre/seme, residual in metapodatke.",
+        "Bitno enaka rekonstrukcija; ne predpostavljamo splošne kompresibilnosti poljubnih podatkov.",
+        "Ločimo drago offline iskanje od stroška dekodiranja."
+      ],
+      "output": "Krivulja velikost/čas, primerjalni korpus, decoder in ponovljivi recepti najboljših kandidatov.",
+      "next": "Izbrati ozek podatkovni razred in zaključiti lokalno pravilnost obstoječega paketa pred selitvijo.",
+      "brief": "Project: Compute-bounded search for compact generative data descriptions. The pilot compares conventional codecs, existing 8z baselines and mathematical generators with exact residual coding. Total encoded size includes all information needed by the decoder. We evaluate exact reconstruction, encoding effort, decoding time and generalisation to held-out files. No universal compression claim is assumed. A CPU-first bounded allocation is proposed; GPU kernels will be used only if profiling supports them."
+    },
+    {
+      "id": "fasta",
+      "rank": "03",
+      "name": "DNA / FASTA · 8Z-FE",
+      "lane": "HPC · bioinformacijski podatki",
+      "summary": "Preverimo kompresijo in strukturo večjih genetskih korpusov, ločeno od metafore AI8 DNA.",
+      "metric": "Biti na bazo, skupna velikost, RAM in prepustnost.",
+      "pilot": "Javni ali sintetični neosebni genomi; ločeno referenčna in nereferenčna kompresija. Kontrole ponovitev, komplementov in indeksov.",
+      "resources": "CPU + dovolj RAM za referenčne strukture; shrambo in prenos podatkov ocenimo pred prijavo. GPU ni samodejna zahteva.",
+      "controls": [
+        "Točna rekonstrukcija vključuje FASTA strukturo in metapodatke.",
+        "Ista referenca in strošek reference sta upoštevana pri vseh metodah.",
+        "SLAIF sintetični genetski podatki so možnost za podatkovnega partnerja, ne že pridobljen vir."
+      ],
+      "output": "Zadržani testni korpus, benchmark specializiranih metod in preverjen decoder.",
+      "next": "Potrditi trenutno 8Z-FE kodo ter primeren genetski korpus in partnerja.",
+      "brief": "Project: Lossless genomic data compression benchmarking. We will compare reference-based and reference-free approaches on public or synthetic non-personal FASTA data, accounting for reference and metadata costs. Metrics include complete file size, bits per base, memory, throughput and exact reconstruction. An initial CPU pilot will determine whether larger RAM or GPU processing is justified."
+    },
+    {
+      "id": "agent",
+      "rank": "04",
+      "name": "AI8 agent kot storitev",
+      "lane": "VM + MaaS · GPU po potrebi · API",
+      "summary": "MaaS transport je preizkušen. Naslednja omejitev sta zanesljiv izhod in potrjen dostop; VM ostaja prihodnja, odložena arhitekturna možnost.",
+      "metric": "Uspešnost nalog, latenca, poraba, čakanje in obnovljivost.",
+      "pilot": "Za naslednji ločeni mandat pripravimo preverjanje HTTP, zaključka, golega JSON, sheme in vsebinskega oracle. Zgodovinsko 27 zahtev / 26 HTTP 200 / 1 HTTP 400 ni dokaz produkcijsko zanesljivega agenta.",
+      "resources": "Odloženi arhitekturni predlog: CPU VM 8–16 vCPU, 32–64 GB RAM, 200 GB trajnega diska + MaaS; namenski GPU šele po meritvah. To ni aktivna prošnja ali utemeljitev iz malega wi29 teka. Trenutna proga uporablja le posebej odobren MaaS dostop.",
+      "controls": [
+        "Primerjava brez spomina / RAG / RAG z orodji pri enakih nalogah.",
+        "Ločimo model API, API za postavitev VM in dovoljene klice orodij.",
+        "Test izteka MaaS instance, ponovnega zagona koordinatorja in obnovitve stanja.",
+        "Ločeno merimo čakanje, nalaganje, uporabni čas in strošek."
+      ],
+      "output": "Omejen agentni servis, namestitveni recept, evalvacije, backup/restore in pregled porabe.",
+      "next": "Uradni odgovor SLAIF o podprtih parametrih in sveže potrjen omejen MaaS dostop; brez VM/Slurm v sedanji fazi.",
+      "brief": "Inquiry draft, not sent: please clarify eligibility, an active free bounded MaaS test allocation, quotas/expiry, data handling and documented JSON/reasoning parameters. Historical evidence comprises 27 requests, 26 HTTP 200 and one HTTP 400; transport is not correctness. We propose at most three separately authorized diagnostic calls, no retries, stop on error. VM/Slurm and the earlier 60-day infrastructure concept are deferred, not part of the current request."
+    },
+    {
+      "id": "ai8dna",
+      "rank": "05",
+      "name": "AI8 DNA / 8zReasoning",
+      "lane": "AI · kontrolirane evalvacije",
+      "summary": "Preverimo, ali semenska kapsula prenaša koristne metode in sproža nove preverljive raziskovalne rezultate.",
+      "metric": "Kakovost pri enakem token/čas/compute proračunu.",
+      "pilot": "Navadni prompt, enako dolga placebo kapsula in AI8 DNA; zamrznjene naloge, sveže seje ter slepo ocenjevanje. Odprti modeli omogočajo lokalno izvajanje brez zunanjih plačljivih klicev.",
+      "resources": "En primeren GPU za začetni odprti model; več ponovitev v paketih. Model in kvantizacijo izberemo glede na dejanski VRAM in licenco.",
+      "controls": [
+        "Seme ni ista stvar kot uteži modela.",
+        "Ločimo prenos metod od kopiranja odgovorov in prekrivanja učnih podatkov.",
+        "Rezultati ne potrjujejo ali zanikajo zavesti ali identitetne kontinuitete."
+      ],
+      "output": "Zamrznjene kapsule, kontrolne naloge, surove evalvacije in analiza učinka.",
+      "next": "Preveriti trenutni eksperimentalni paket; začeti z omejenim reproducibilnim pilotom.",
+      "brief": "Project: Controlled evaluation of transferable reasoning seeds. We compare a baseline prompt, length-matched control and versioned AI8 DNA capsule on held-out tasks using fresh sessions and blinded evaluation. We measure task success, novel verifiable outcomes, robustness and compute cost. This is a behavioural methodology experiment and makes no consciousness or identity-continuity claim."
+    },
+    {
+      "id": "architecture",
+      "rank": "06",
+      "name": "AI8 arhitektura / AIM³ / MAL",
+      "lane": "VM + MaaS/HPC · spomin in izvorni sistemi",
+      "summary": "Preizkusimo delitev dela med modeli, skupnim spominom, preverjalniki in specializiranimi programi.",
+      "metric": "Preverjen rezultat na uro, pravilen izvor in odpornost na zastarele podatke.",
+      "pilot": "Širša arhitektura ostaja predlog. Ločeni RHP pilot je izvedel 2 A/B para pri 768 in iste naloge pri 2.048 tokenih; splošni učinek ni dokazan. RHP, AI8 DNA in primerjava več modelov niso isti poskus. Naslednja RHP zasnova zahteva nove naloge, dolžinsko kontrolo in slepo presojo.",
+      "resources": "Stalni VM koordinator; modeli prek odobrenega MaaS ali drugega backenda; večje kampanje kot ločeni paketni poskusi. Uporabimo obstoječe projektne vire, prilagojene vzorcu s slajda IMG_1467.",
+      "controls": [
+        "Merimo pravilen rezultat in dokazni izvor, ne števila pogovornih potez.",
+        "Abliacije spomina, usmerjanja in preverjalnikov.",
+        "Vsak zapis ima izvor, čas in različico; neskladje sproži preverjanje izvornega sistema.",
+        "Branje AI prek MCP in sistemski zapisi imajo ločene pristojnosti."
+      ],
+      "output": "Arhitekturni benchmark, meritve koordinacije, časovne sledi in evidence API uporabe.",
+      "next": "Najprej pogodba izhoda in nov omejen dostop; nato posebej odobrena RHP primerjava. GPT/Claude multi-LLM ostaja NOT_RUN.",
+      "brief": "Project: Resource-aware architecture for reproducible multi-agent research. We compare a single-model baseline, task routing and a small multi-agent configuration with shared memory and deterministic verification. Memory records retain source, timestamp and version; we test source conflicts, stale data and recovery after restart. We evaluate verified outcomes per wall-clock hour and resource budget, coordination overhead and source correctness. Persistent coordination and batch experiments are separated."
+    },
+    {
+      "id": "materials",
+      "rank": "07",
+      "name": "8zMaterials",
+      "lane": "HPC · materiali & simulacije",
+      "summary": "Rangiramo kandidate in računsko preverjamo majhno množico najbolj zanimivih materialov.",
+      "metric": "Fizikalna veljavnost in napoved proti baseline.",
+      "pilot": "Izbor javnih referenčnih primerov in znanih materialov, nato kandidatna novost z zadržanimi preverjanji. Zahtevne simulacije šele po potrditvi znanstvenega modela.",
+      "resources": "CPU/GPU po dejanskem simulatorju in modelu; možen večji RAM. Licence in strokovnega partnerja določimo pred prijavo.",
+      "controls": [
+        "Rang kandidata ne dokazuje, da je material mogoče sintetizirati.",
+        "Preverjanje na znanih referencah pred novimi napovedmi.",
+        "Stanje izvedbene pripravljenosti ni ponovno certificirano s tem načrtom."
+      ],
+      "output": "Rang kandidatov s sledljivimi pogoji ter rezultati ozkih fizikalnih preizkusov.",
+      "next": "Znanstveni partner in potrjen simulator; potem namenski HPC pilot.",
+      "brief": "Project concept: Evidence-bounded candidate ranking for materials research. A small benchmark on known materials precedes any expensive simulation of new candidates. We request scientific collaboration to select validated models, reference data and feasible compute workflows. Candidate ranking is not a claim of synthesis feasibility or experimental validation."
+    },
+    {
+      "id": "dgte",
+      "rank": "08",
+      "name": "DGTE / HTH",
+      "lane": "HPC · toplota, tok in fazni prehodi",
+      "summary": "Numerično preverimo konkretne modele pretvorbe toplote in optimizacijo geometrije.",
+      "metric": "Zaprt energijski obračun in skladnost z referenco.",
+      "pilot": "Najprej preprost validiran primer in preverjanje ohranitve energije; nato ena geometrija, parametri ter občutljivost. Obseg mora utemeljiti potrebo po HPC.",
+      "resources": "CPU za CFD/toplotne simulacije; GPU samo s podprtim simulatorjem. Najprej model in manjša mreža, nato skaliranje.",
+      "controls": [
+        "Simulacija ne nadomesti fizičnega prototipa.",
+        "Izgube, robni pogoji in dovod toplote so eksplicitni.",
+        "Nobena naprava s tem načrtom ni potrjena kot delujoča."
+      ],
+      "output": "Ponovljiv model, energijski obračun, občutljivost in zahteve za fizični test.",
+      "next": "Zamrzniti en fizikalno določen primer in preveriti potrebo po HPC.",
+      "brief": "Project concept: Bounded thermofluid evaluation of a defined heat-conversion geometry. We begin with a validated reference case and explicit energy accounting, then test one candidate under declared boundary conditions and losses. Larger CFD resources will be requested only after mesh and model validation. Simulation results do not establish prototype performance."
+    },
+    {
+      "id": "games",
+      "rank": "09",
+      "name": "ChessBest / Sudoku / Flip4M",
+      "lane": "CPU/GPU · reševalniki & evalvacije",
+      "summary": "Množične primerjave reševalnikov in generiranje kakovostnih testnih primerov.",
+      "metric": "Moč / kakovost na enak računski proračun.",
+      "pilot": "Omejena kampanja: en projekt, zamrznjeni primeri in enaki časovni limiti. Za šah primerjava motorjev; za Sudoku preverljiva pravilnost in zahtevnost.",
+      "resources": "CPU vzporedne naloge; GPU pri modelih, ki ga dejansko uporabljajo. Spletna aplikacija ni obremenitev za velik HPC.",
+      "controls": [
+        "Izoliramo učinek parametrov od razlike v porabi.",
+        "Generiranje primerov ima neodvisen preverjalnik.",
+        "Ohranimo prednost raziskovalnih projektov z večjo potrebo po virih."
+      ],
+      "output": "Preverjen testni korpus in primerjalne meritve.",
+      "next": "Sekundarni kandidat; izbrati le, če pokaže večji učinek od lokalnega izvajanja.",
+      "brief": "Secondary concept: Reproducible solver evaluation on frozen game or puzzle tasks. We compare equal-budget configurations using independent correctness checks and explicit performance metrics. Large allocations are not assumed necessary; a measured local baseline determines whether HPC access adds meaningful value."
+    }
+  ],
+  "contacts": [
+    {
+      "name": "SLAIF podpora",
+      "email": "support@slaif.si",
+      "role": "Virtualke, storitve, vključitev prvih uporabnikov, profil in pogoji uporabe.",
+      "source": "faq"
+    },
+    {
+      "name": "Marko Ferme · UM FERI",
+      "email": "marko.ferme@um.si",
+      "role": "Razvojne storitve in pilotni preizkus: MaaS, Maister, VM in API potrebe. To vlogo potrjuje tudi novi kontaktni slajd IMG_1455.",
+      "source": "marko"
+    },
+    {
+      "name": "Domen Mongus · UM",
+      "email": "domen.mongus@um.si",
+      "role": "Zahteve za GPU virtualko in API, agentne predloge ter prihodnji časovni načrt.",
+      "source": "domen"
+    },
+    {
+      "name": "SLING podpora",
+      "email": "podpora@sling.si",
+      "role": "Nacionalni dostopi, upravičenost, prijavni obrazci in individualno usklajevanje.",
+      "source": "industry"
+    },
+    {
+      "name": "EuroCC Slovenija",
+      "email": "eurocc@sling.si",
+      "role": "Pomoč pri evropski prijavi, partnerstvu in uporabi HPC v gospodarstvu.",
+      "source": "industry"
+    },
+    {
+      "name": "Aleš Pevc · TP Ljubljana",
+      "email": "ales.pevc@tp-lj.si",
+      "role": "SLAIF povezovanje, vključitev v ekosistem in preverjanje primernega partnerja.",
+      "source": "ales"
+    },
+    {
+      "name": "EuroHPC dostopi",
+      "email": "access@eurohpc-ju.europa.eu",
+      "role": "Benchmark/Development: organizacija prijavitelja, pogodba PI, sistemi in čakalni postopki.",
+      "source": "benchmark"
+    },
+    {
+      "name": "EuroHPC AI Factories",
+      "email": "aif.access@eurohpc-ju.europa.eu",
+      "role": "Playground/Fast Lane in podrobni pogoji industrijske AI prijave.",
+      "source": "fastlane"
+    },
+    {
+      "name": "FFplus · aktualni razpis",
+      "email": "",
+      "role": "Po objavi OC3 uporabimo kontakt iz novega pravilnika. Starega OC2 poštnega naslova ne predstavljamo kot aktualnega.",
+      "source": "ffbusiness"
+    }
+  ],
+  "slides": [
+    {
+      "file": "IMG_1440.jpeg",
+      "title": "OpenStack na HPC Maister",
+      "text": "Predstavitev navaja izvedene GPU VM s PCI passthrough, trajno Ceph/Cinder shrambo, Docker/Kubernetes in uporabniški dostop prek Horizon/VPN; podprtih šest PoC.",
+      "meaning": "Pomembno za VM pilota. To je predstavljen rezultat razvoja, ne že naš dostop."
+    },
+    {
+      "file": "IMG_1441.jpeg",
+      "title": "Faza 2 · širitev",
+      "text": "Načrtovane predloge VM tudi za Agentic AI, JupyterHub/MaaS, povezovanje podatkovnih prostorov in selitev Maister → Vega.",
+      "meaning": "Našo zahtevo opišemo kot uporabniški primer za predlogo; načrtovana funkcija še ni potrjena dodelitev."
+    },
+    {
+      "file": "IMG_1442.jpeg",
+      "title": "Early adopters & needs survey",
+      "text": "IMPULZ začenja vključevanje zgodnjih vertikalnih uporabnikov. Vprašalnik zbira potrebe po podatkih, podatkovnih prostorih in VM.",
+      "meaning": "Smiselno je zdaj oddati jasen primer uporabe in vprašati za točen survey URL."
+    },
+    {
+      "file": "IMG_1443.jpeg",
+      "title": "Vega, Maister in Arnes",
+      "text": "Primerjava celotnih sistemov: Vega A100 40 GB; Maister V100; Arnes V100S/H100. Dodelitev določajo projekt in kvote.",
+      "meaning": "Celotne kapacitete niso prosti viri; RAM in disk nista GPU VRAM."
+    },
+    {
+      "file": "IMG_1444.jpeg",
+      "title": "Vega vs Maister",
+      "text": "Vega za večje računske poskuse in dodeljene ure; Maister za Slurm/OpenStack, razvoj, VM, Kubernetes, JupyterHub in MaaS.",
+      "meaning": "Podlaga za dve ločeni prošnji: trajno okolje in paketni HPC pilot."
+    },
+    {
+      "file": "IMG_1445.jpeg",
+      "title": "TD, RD in pilotni dostop",
+      "text": "Potrjuje stalne razpise in kvote v vozliščnih urah. Pilot PD je izključno za podjetja, TD/PD do 3 mesece, RD do 12.",
+      "meaning": "Ne čakamo na november za TD/RD; najprej upravičenost in zaporedje prijav."
+    },
+    {
+      "file": "IMG_1446.jpeg",
+      "title": "Dostopi brez enotne kvote",
+      "text": "Izobraževalni, strateški in komercialni dostop imajo individualno dogovorjen obseg. Kontakt podpora@sling.si.",
+      "meaning": "Možna rezervna pot; iz strateške oznake ne sklepamo na samodejno upravičenost."
+    },
+    {
+      "file": "IMG_1447.jpeg",
+      "title": "EuroHPC poti",
+      "text": "Benchmark, Development, Regular/Extreme ter AI Playground/Fast Lane/Large Scale. Fast Lane do 50.000 GPU-ur.",
+      "meaning": "Izberemo po zrelosti kode in cilju. GPU-ure niso nacionalne vozliščne ure."
+    },
+    {
+      "file": "IMG_1448.jpeg",
+      "title": "FFplus november / junij",
+      "text": "Business Experiments: napoved odprtja začetkom novembra 2026; Innovation Studies: predvidoma junija 2027. Preveriti predhodno HPC uporabo podjetja.",
+      "meaning": "Ključen razlog za preverjanje zaporedja; napoved odprtja ni rok za oddajo."
+    },
+    {
+      "file": "IMG_1449.jpeg",
+      "title": "Razvojni OpenStack del",
+      "text": "Predstavljena konfiguracija: 456 CPU jeder, približno 2,25 TB RAM, 12 × V100 32 GB, 100 Gbps povezava.",
+      "meaning": "To je razvojni del okolja. Ne enačimo ga s celotnim Maistrom in ne razglasimo za prosto kvoto."
+    },
+    {
+      "file": "IMG_1452(1).jpeg",
+      "title": "Portal · Modeli kot storitev",
+      "text": "Prikaz kataloga modelov, izbire in oddaje v vrsto; navigacija Modeli, Moje instance, Chatbot in Poraba. Zaradi nizke ločljivosti ne potrjujemo drobnega cenika in vseh specifikacij.",
+      "meaning": "Preverimo MaaS kot prvi modelni backend za agenta; točen URL in API dokumentacijo pridobimo pri ponudniku."
+    },
+    {
+      "file": "IMG_1455.jpeg",
+      "title": "Kontakti za pravi naslednji korak",
+      "text": "Razvojne storitve in pilotni preizkus: marko.ferme@um.si. Dostop do HPC in pomoč pri prijavi: podpora@sling.si in eurocc@sling.si.",
+      "meaning": "Marku opišemo MaaS/VM pilot, SLING/EuroCC pa vprašamo o upravičenosti in ustrezni prijavi. QR cilj ni zanesljivo dekodiran; uporabljamo potrjene kontakte."
+    },
+    {
+      "file": "IMG_1460(1).jpeg",
+      "title": "MaaS instanca · še čaka na vire",
+      "text": "Na HPC Maister je prikazana sprejeta zahteva, ki čaka v Slurm. Ocenjeni začetek je neznan; preverjanje vrste 30 s; skupna dodelitev 77 min in uporabna doba 60 min v tem primeru.",
+      "meaning": "Sprejem zahteve ni začetek inference. Merimo čakanje, nalaganje in uporabni čas ter razjasnimo iztek in podaljšanje."
+    },
+    {
+      "file": "IMG_1465.jpeg",
+      "title": "Sposobnosti organizacije in merljiv rezultat",
+      "text": "Šest vidikov: vrednost, delo, poslovni kontekst, ljudje, tehnologija ter zaupanje in nadzor. V središču so merljivi poslovni rezultati.",
+      "meaning": "Vsako našo prijavo opišemo skozi teh šest vprašanj; raziskovalni cilj ima svoj preverljiv izid."
+    },
+    {
+      "file": "IMG_1467.jpeg",
+      "title": "En spomin, pet virov resnice",
+      "text": "Claude + Wiki bere prek MCP iz PostHog, HubSpot, ClickUp, GitHub in Discord. Sistemske sinhronizacije so ločene od povezav za branje AI.",
+      "meaning": "AI8 dobi skupni spomin z izvorom in različico; povežemo obstoječe projektne vire, merimo pravilnost in zaznavanje neskladij."
+    }
+  ],
+  "checks": [
+    {
+      "id": "applicant",
+      "title": "Potrjen prijavitelj in dovoljen projektni okvir",
+      "detail": "Neodvisni BD / pravna oseba / dejansko odobren organizacijski partner."
+    },
+    {
+      "id": "sequence",
+      "title": "Preverjen vpliv na FFplus OC3",
+      "detail": "Pisno pojasnilo za isto podjetje pred prvo HPC dodelitvijo."
+    },
+    {
+      "id": "vm",
+      "title": "Pripravljen opis GPU virtualke in API potreb",
+      "detail": "Prihodnja, odložena arhitekturna možnost. VM/Slurm je izločen iz sedanjih testov; kljukica ne pomeni dodelitve."
+    },
+    {
+      "id": "maas",
+      "title": "Potrjen MaaS portal in življenjski cikel instance",
+      "detail": "Portal/API zgodovinsko preizkušen; aktivni brezplačni dostop, kvota, iztek in parametri morajo biti ponovno potrjeni pred novimi klici."
+    },
+    {
+      "id": "memory",
+      "title": "Določen izvor in različica skupnega spomina",
+      "detail": "Zahteve, naloge, koda, meritve in obvestila; preverjanje neskladja ter obnovitve."
+    },
+    {
+      "id": "pilot",
+      "title": "Izbran en HPC pilot in zamrznjene kontrole",
+      "detail": "TSP ali 8z: podatki, baseline, semena, proračun in merila uspeha."
+    },
+    {
+      "id": "package",
+      "title": "Preverjen prenosljiv programski paket",
+      "detail": "Izvor/config/checkpoint hashi in varen resume. Odprti invalid-resume ni odpravljen s to stranjo."
+    },
+    {
+      "id": "budget",
+      "title": "Ure in shramba izmerjene na malem primeru",
+      "detail": "Proračun zahtevamo v pravi enoti; celotne kvote ne enačimo s potrebo."
+    },
+    {
+      "id": "draft",
+      "title": "Pripravljen angleški povzetek in vloge",
+      "detail": "Podrobnosti v karticah projektov; osebne podatke dopolnimo po potrditvi prijavitelja."
+    },
+    {
+      "id": "receipt",
+      "title": "Prejeto potrdilo dejanske oddaje",
+      "detail": "Tukaj označi šele ob dejanskem potrdilu in v beležke shrani referenco. Ta stran vlog ne oddaja."
+    }
+  ],
+  "editorialRevision": "R4",
+  "evidenceAsOf": "2026-10-21",
+  "publicationState": "PUBLIC_GITHUB_EDITION"
+}
+</script>
+<script>
+(()=>{'use strict';
+const data=JSON.parse(document.getElementById('plan-data').textContent),$=s=>document.querySelector(s),sources=Object.fromEntries(data.sources.map(s=>[s.id,s]));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const key='bd-hpc-plan-r1',fresh=()=>({schema:'bd-hpc-plan-state-v1',notes:'',checks:{},theme:'dark'});let state=fresh(),storageOK=true;
+try{const raw=localStorage.getItem(key);if(raw)state=validate(JSON.parse(raw))}catch{storageOK=false}
+function validate(s){if(!s||s.schema!=='bd-hpc-plan-state-v1'||typeof s.notes!=='string'||s.notes.length>100000||!s.checks||typeof s.checks!=='object'||Array.isArray(s.checks))throw Error('Neveljavna oblika datoteke.');const n=fresh();n.notes=s.notes;n.theme=s.theme==='light'?'light':'dark';for(const c of data.checks)n.checks[c.id]=s.checks[c.id]===true;return n}
+function save(){try{localStorage.setItem(key,JSON.stringify(state));storageOK=true}catch{storageOK=false}$('#save-status').textContent=storageOK?'Shranjeno v tem brskalniku. Izvoz JSON omogoča prenos na drugo napravo.':'Brskalnik ne dovoljuje shranjevanja. Pred zapiranjem izvozi beležke JSON.'}
+function theme(){document.documentElement.dataset.theme=state.theme;$('#theme').textContent=state.theme==='dark'?'Svetla tema':'Temna tema'}theme();$('#theme').onclick=()=>{state.theme=state.theme==='dark'?'light':'dark';theme();save()};
+$('#offers').innerHTML=data.offers.map(o=>`<article class="offer ${o.featured?'featured':''}" data-id="${esc(o.id)}"><div class="card-top"><span class="pill ${o.status.startsWith('ODPRTO')?'open':'conditional'}">${esc(o.status)}</span><span class="rank mono">${o.region==='si'?'SI / Slovenija':'EU / Evropa'}</span></div><h3>${esc(o.name)}</h3><p>${esc(o.desc)}</p><dl><dt>Kdaj</dt><dd>${esc(o.when)}</dd><dt>Viri</dt><dd>${esc(o.resources)}</dd><dt>Za nas</dt><dd>${esc(o.fit)}</dd></dl><div class="gate">Pred oddajo: ${esc(o.gate)}</div><div class="links"><a href="${esc(o.apply)}" target="_blank" rel="noopener noreferrer">${o.id.startsWith('ff')?'Odpri razpis':'Obrazec / portal'} ↗</a><a href="${esc(sources[o.source].url)}" ${sources[o.source].kind==='attachment'?'':'target="_blank" rel="noopener noreferrer"'}>${sources[o.source].kind==='attachment'?'Posnetek in pomen ↓':sources[o.source].kind==='evidence'?'Izvedbeni dokaz ↗':'Uradni pogoji ↗'}</a></div><footer>${sources[o.source].kind==='attachment'?'Pregledano':sources[o.source].kind==='evidence'?'Izvedbeni zapis':'Preverjeno'} 21. 10. 2026 · <a href="#src-${esc(o.source)}">izvor</a> · Upravičenost naše vloge še ni potrjena</footer></article>`).join('');
+let filter='all';function applyFilters(){const q=$('#search').value.trim().toLocaleLowerCase('sl');let count=0;for(const o of data.offers){const show=(filter==='all'||o.region===filter||o.tags.includes(filter))&&JSON.stringify(o).toLocaleLowerCase('sl').includes(q);$(`[data-id="${o.id}"]`).hidden=!show;if(show)count++}$('#offer-count').textContent=`Prikazano ${count} od ${data.offers.length} možnosti.`;$('#empty').hidden=count>0}document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));applyFilters()});$('#search').addEventListener('input',applyFilters);applyFilters();
+$('#projects').innerHTML=data.projects.map(p=>`<article class="project"><div class="project-no mono"><span>${esc(p.rank)} / KANDIDAT</span><span>PREDLOG</span></div><h3>${esc(p.name)}</h3><span class="small">${esc(p.lane)}</span><p>${esc(p.summary)}</p><div class="metric">Merimo: ${esc(p.metric)}</div><button data-project="${esc(p.id)}">Pilot, viri & opis ↗</button></article>`).join('');
+let activeBrief='';function openProject(id){const p=data.projects.find(p=>p.id===id);if(!p)return;activeBrief=p.brief;$('#modal-body').innerHTML=`<div class="eyebrow">${esc(p.lane)}</div><h3 id="modal-title">${esc(p.name)}</h3><p>${esc(p.summary)}</p><h4>OMEJEN PILOT</h4><p>${esc(p.pilot)}</p><h4>PREDLOG VIROV — ZA USKLADITEV</h4><p>${esc(p.resources)}</p><h4>KONTROLE & MERILA</h4><ul>${p.controls.map(t=>`<li>${esc(t)}</li>`).join('')}</ul><h4>PREVERLJIV IZID</h4><p>${esc(p.output)}</p><h4>NASLEDNJI KORAK</h4><p>${esc(p.next)}</p><h4>ANGLEŠKI OSNUTEK ZA PRIJAVO</h4><div class="brief">${esc(p.brief)}</div><button id="copy-brief" style="margin-top:15px">Kopiraj angleški osnutek</button><p class="small">Pripravljalni opis; vloga še ni oddana in tehnična konfiguracija ni odobrena.</p>`;$('#copy-brief').onclick=()=>copy(activeBrief);$('#project-dialog').showModal()};document.querySelectorAll('[data-project]').forEach(b=>b.onclick=()=>openProject(b.dataset.project));$('#close-dialog').onclick=()=>$('#project-dialog').close();$('#project-dialog').addEventListener('click',e=>{if(e.target===$('#project-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}});
+$('#contacts').innerHTML=data.contacts.map(c=>`<article class="contact"><b>${esc(c.name)}</b><p>${esc(c.role)}</p>${c.email?`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`:`<a href="${esc(sources[c.source].url)}" target="_blank" rel="noopener noreferrer">Aktualna razpisna stran ↗</a>`}<a class="source-link" href="${esc(sources[c.source].url)}" target="_blank" rel="noopener noreferrer">Preverjeni vir ↗</a></article>`).join('');
+$('#slides').innerHTML=data.slides.map(s=>`<article class="slide-extract"><small class="mono">${esc(s.file)} / PREGLEDANO GRADIVO</small><b style="display:block;margin-top:7px">${esc(s.title)}</b><p>${esc(s.text)}</p><p><strong>Za naš načrt:</strong> ${esc(s.meaning)}</p></article>`).join('');
+$('#sources').innerHTML=data.sources.map(s=>`<li id="src-${esc(s.id)}"><a href="${esc(s.url)}" ${s.kind==='attachment'?'':'target="_blank" rel="noopener noreferrer"'}>${esc(s.title)} ${s.kind==='attachment'?'↑':'↗'}</a><span>${esc(s.note)}</span></li>`).join('');
+$('#checklist').innerHTML=data.checks.map(c=>`<label class="check-item"><input type="checkbox" data-check="${esc(c.id)}" ${state.checks[c.id]?'checked':''}><span>${esc(c.title)}<small>${esc(c.detail)}</small></span></label>`).join('');document.querySelectorAll('[data-check]').forEach(x=>x.addEventListener('change',()=>{state.checks[x.dataset.check]=x.checked;save()}));$('#notes').value=state.notes;$('#notes').addEventListener('input',()=>{state.notes=$('#notes').value;save()});if(!storageOK)save();
+function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;a.hidden=true;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000)}
+$('#export').onclick=()=>download(JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2),'BD-HPC-AI-belezke.json','application/json');$('#import').onclick=()=>$('#import-file').click();$('#import-file').addEventListener('change',async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>150000)throw Error('Datoteka je prevelika.');const n=validate(JSON.parse(await f.text()));state=n;$('#notes').value=state.notes;document.querySelectorAll('[data-check]').forEach(x=>x.checked=state.checks[x.dataset.check]===true);theme();save();toast('Beležke uvožene.')}catch(e){toast(e.message||'Uvoz ni uspel.')}finally{e.target.value=''}});
+$('#print').onclick=()=>{filter='all';$('#search').value='';document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.filter==='all')));applyFilters();window.print()};
+$('#download').onclick=()=>{const clone=document.documentElement.cloneNode(true);clone.querySelector('#offers').innerHTML='';clone.querySelector('#projects').innerHTML='';clone.querySelector('#contacts').innerHTML='';clone.querySelector('#slides').innerHTML='';clone.querySelector('#sources').innerHTML='';clone.querySelector('#checklist').innerHTML='';clone.querySelector('#modal-body').innerHTML='';clone.querySelector('#project-dialog').removeAttribute('open');clone.querySelector('#notes').value='';clone.querySelector('#notes').textContent='';clone.querySelector('#search').value='';clone.querySelector('#search').removeAttribute('value');clone.querySelector('#toast').textContent='';download('<!doctype html>\n'+clone.outerHTML,'BD-HPC-AI-nacrt-R4.html','text/html')};
+$('#copy-vm').onclick=()=>copy(data.projects.find(p=>p.id==='agent').brief);$('#copy-notes').onclick=()=>copy(JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2));let toastTimer;function toast(t){$('#toast').textContent=t;$('#toast').classList.remove('toast-off');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.add('toast-off'),3500)}async function copy(t){try{await navigator.clipboard.writeText(t);toast('Besedilo je kopirano.')}catch{const a=document.createElement('textarea');a.value=t;document.body.append(a);a.select();try{const ok=document.execCommand('copy');toast(ok?'Besedilo je kopirano.':'Kopiranje ni uspelo; označi besedilo.')}finally{a.remove()}}}
+})();
+</script>
+<script id="r3-documents" type="application/json">{
+  "SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md": {
+    "type": "text/markdown;charset=utf-8",
+    "text": "# IMPULZ / SLAIF — preverljivi rezultati in naslednji koraki — R4\n\n**21. 10. 2026 · javna redaktirana sinteza.** Seme in prioritete: Bojan Dobrečevič. Eksperimenti in primarna poročila: CLI Codex na HOME. Uredniška sinteza, pregled integritete in načrt nadaljevanja: GPT z RHP 3.0-candidate R2 (T1 + E1; zaporedni pogledi, ne neodvisni agenti).\n\nTa revizija ne vsebuje novih modelnih, solver ali HPC tekov. Izvirna poročila ostajajo nespremenjena. Javno besedilo izpušča poverilnice, zasebne identifikatorje instance, notranje poti in surova polja reasoning_content. Izvirniki na Drivu lahko zahtevajo pooblastilo; ta povzetek je vsebinsko samostojen.\n\n## 1. Rezultat v eni minuti\n\nDokumentiranih je 27 dejanskih API zahtev: 26 HTTP 200 in 1 HTTP 400. Dodatna lokalna napaka pred HTTP je ločena. Brez retryjev ali podaljšanja dodelitev. Uspešen HTTP ni dokaz pravilne vsebine. VM/Slurm/GPU ni bil uporabljen; oddaljeni Python je NOT_RUN in trenutno izključen.\n\nZnana poraba uspešnih odgovorov: 53.606 vhodnih + 19.230 izhodnih = 72.836 tokenov. Poraba HTTP 400 je UNKNOWN, ne 0, zato to ni dokončno dokazani skupni obračun. Vsota odjemalskih latenc 551,453 s ni trajanje seje ali čisti čas generiranja. Zaključki: 10 length, 14 stop, 3 UNKNOWN.\n\nOznaka Gemma 4 26B-A4B IT Q8 je iz portala/predaje, ne audit uteži. Tedanja brezplačnost je bila potrjena od BD, ne neodvisno iz obračunske plošče. Trenutni dostop ni potrjen. Primerjava z GPT/Claude ni bila izvedena.\n\n## 2. Ločeni sklopi, ne en skupni odstotek inteligence\n\n| Sklop | Zahteve | HTTP 200 / 400 | Vsebinski obseg |\n|---|---:|---|---|\n| R4 | 2 | 2 / 0 | 96 izhodnih tokenov; račun pravilen, jezik/format delna, verjetnost nepopolna; finish_reason ni shranjen |\n| R5 | 6 | 6 / 0 | 256 limit; ročna pravilnost 4/6, 4 length in 2 stop |\n| RHP 768 | 4 | 4 / 0 | Dve nalogi AB/BA, vsi length |\n| Konferenčni R2 | 14 | 14 / 0 | 10 objektivnih nalog + štirje raziskovalni odgovori pri 2048 |\n| R2 JSON nastavitev | 1 | 0 / 1 | 400; 4 preostale nastavitve niso poslane |\n\nR4/R5 sta skupaj 8 zahtev stare dodelitve; konferenčni RHP/R2 skupaj 19 zahtev nove dodelitve, od tega 18 HTTP 200 in en 400. Lokalna napaka transportnega stdin pred izdelavo HTTP ne poveča teh 27. Javna CSV priloga vsebuje vse izmerjene vrstice, ne zasebnih identifikatorjev.\n\n## 3. Strojni format in vsebina\n\nDodatni R2: 9 JSON nalog in ena naloga popravka kode. Strogi izhodni/funkcijski kriterij: 2/10. Točen zahtevani goli JSON: 1/9. Po označenem naknadnem izluščanju: 6/9 celotnih objektov. Popravek kode: 1/1 naloga in 5/5 ciljnih primerov. Sekundarna ekstrakcija ne popravi primarnega rezultata.\n\nEUC_CLOSURE pravilno izračuna robove 3,3,4 in zaprto dolžino 10, a vrne napačno shemo. SYNC3 ima pravilne kontrolne točke v razlagi, izhodni objekt pa se ne dokonča. Slovenski JSON vsebuje pravilne šumnike in dvojino, vendar Markdown. Priklic najde 3/3 vrednosti iz 600 sintetičnih zapisov, ne dokazuje maksimalnega konteksta. En uspešen test vloženega nezaupanega navodila ni varnostna garancija. Generirana funkcija je bila preizkušena pod omejenim AST, ne kot poljubna koda.\n\nPrvi response_format=json_object vrne HTTP 400 v 0,891 s. Telo napake ni ohranjeno. Zato je vzrok UNKNOWN; niti univerzalne nepodprtosti niti delujočega strukturiranega načina ne potrjujemo. Preostale štiri nastavitve so NOT_RUN; reasoning-control ni potrjen. Za nadaljevanje je potrebna dokumentacija ponudnika in nov omejen mandat.\n\n## 4. RHP: tudi neugoden rezultat ostane\n\n| Naloga | Limit | A nevtralno | B RHP | Zaključek |\n|---|---:|---:|---:|---|\n| HPC_SERVICE | 768 | 5/12 | 6/12 | oba length |\n| TSP_HYPOTHESIS | 768 | 6/12 | 7/12 | oba length |\n| HPC_SERVICE | 2048 | 7/12 | 5/12 | oba stop |\n| TSP_HYPOTHESIS | 2048 | 7/12 | 7/12 | oba stop |\n\nOcene so ročne, neslepe, od istega Codexa, brez neodvisnega ocenjevalca. N = 2 nalogi, kasneje ponovljeni. B pri 768 skupaj porabi 18.171 vhodnih tokenov, A 383 (47,44×). Vsi štirje 768 odgovori so odrezani; pri 2048 vsi stop, a s posameznimi metodološkimi napakami. To ni dokaz splošne prednosti ali škodljivosti RHP, niti poštena primerjava kakovosti pri isti porabi.\n\nHPC B primerja izvirno domačo in optimizirano oddaljeno kodo ter s tem pomeša algoritem in strojno opremo. TSP B uporabi L_LAG < 0,85 L_NN: to preverja več kot 15 % izboljšanja, ne razpona 5–15 %. Obe TSP različici izpustita pomembne neodvisne kontrole. Daljši izhod zato ni avtomatično pravilnejša metodologija. Primeri v izvirnem auditu so aritmetični protiprimeri, ne novi HPC rezultati.\n\n### Nova uredniška razrešitev SHA (ni nov API test)\n\nKanonični RHP.md: 37.218 B; SHA-256 0a96871ae46923d5b9f952ad17bc45acd18b7d694a4e3f4d8379b63a692cdd57.\nArhivirani RHP.md: 37.219 B; SHA-256 4ba65def127ac257ccabc79f9498a19cbb94a0f79176797cc0999ff535949c95.\nPreverjena zveza: archived_bytes == canonical_bytes + b\"\\n\".\nVsebina protokola se ujema; surova bajtna identiteta ne. Arhiv je preverjeni prefiks zamrznjenega B sistemskega navodila, ki vsebuje še zabeležen izvedbeni dodatek. Stara UNRESOLVED navedba je s tem razrešena za ta konkretni dokazni paket, ne popravljena za nazaj v izvirnikih. RHP ostaja 3.0-candidate R2 / NOT_FIELD_VALIDATED.\n\n## 5. Lokalna evidenca ni rezultat modela\n\nCPCI: 18/18 ciljanih lokalnih testov, od tega 14 CPCI in 4 testi spremenjenih mehanizmov; 100 vsebinsko unikatnih svetov, 500 odstranitev pravil, 116 sprememb izida. Neodvisni oracle preveri 1.000 baseline in 5.000 dodatnih prehodov. To ne pomeni Gemma 18/18 in ničesar ne dokazuje o zavesti.\n\nTSP/LAG: en 30 × 35 pilot s petimi metodami, 16 razvojnih in 14 held-out primerov; neodvisno preverjenih 300 začetnih/končnih poti. Po skupnem 2-opt je osnovni LAG glede na NN +1,8171 % daljši na 15 enakomernih in +0,5781 % na 15 gručastih primerih. Dostopi do razdalj: 2,531× oziroma 1,949× NN. To ni matched-budget test. Sedem held-out gručastih primerov LAG-B+ pri −0,0839 % ne potrjuje splošne zmage. Metode ohranimo za boljšo primerjavo.\n\nMali eksaktni TSP: 8 primerov po 9 mest, 161.280 ciklov in 40 kandidatnih poti. Optimum NN 6/8, LAG 7/8, LAG-A 6/8, LAG-B+ 7/8, LAG-B− 8/8. Popolna enumeracija je omejena na uporabljeno floating-point geometrijo s toleranco 1e-10, ne splošna trditev o vseh TSP.\n\n## 6. TSPTS HOME in odprt resume\n\nNespremenjeni TSPTS v0.1; wi29, en CPU delavec, seed 20261021, 128 predlogov. Veljavna pot 27.603; 29 mest, closure in EUC_2D preverjeni neodvisno. Zunanji wall 1,172904 s, CPU 1,078125 s, peak RSS 28,8125 MiB. En mali tek ob drugih aktivnih arenah ne zagotavlja ponovljive primerjave strojne opreme ali potreb po veliki VM.\n\nVeljaven checkpoint, fallback poškodovanega primarnega in zavrnitev konfiguracijskega neujemanja so bili pregledani na kopijah. Toda solve(--resume) lahko ob neveljavnih checkpointih tiho začne iz nič. Pravi crash/resume sprejem NI izveden. Napaka ostaja odprta; ta spletna revizija solverja ne popravlja. Remote wall in pospešek sta null; ni izmerjenega SLAIF Python, Linux/GPU/VM/Slurm teka.\n\n## 7. Kaj ohranimo in kaj predlagamo\n\nIzvedbeni sklep GPT/RHP: najprej obnovljivost in zanesljivost izhoda, potem vzročno boljša primerjava. To je prioritizacija na podlagi dokazov, ne nova meritev. Vse štiri smeri ostajajo: TSPTS resume (offline, prioritetno), JSON/API (dostop in dokumentacija), RHP (novi primeri, slepa presoja, dolžinska kontrola) in TSP/LAG (enak skupni proračun).\n\nPodrobne kontrole, sprejem in omejitve so v NEXT_TESTS_R4.md. Vsi načrti so PROPOSED / NOT_RUN. RHP predlog 27 DODATNIH zahtev je prihodnji proračun, ne del 27 zgodovinskih meritev. Novo brezplačno aktivno dodelitev in izvedbeni mandat je treba potrditi pred API testi. VM/Slurm ostaja izločen. Nobena vloga ali email nista poslana.\n\nKatalog 13 možnosti, 9 projektov in 10 pripravljalnih kljukic je ohranjen. Razpisni pogoji in roki ostanejo datirani konferenčni pregled 21. 10. 2026, ne ponovna pravna ali finančna preverba R4. Arhitekturni predlog CPU VM/60 dni ostaja odložena možnost, ne aktivna prošnja ali dodelitev.\n\n## 8. Preverjanje in provenienca\n\nGPT je ponovno preveril CRC paketa, 95/95 indeksiranih izvornih datotek po velikosti in SHA-256 ter 105 manifestnih vnosov. Seštevki 27 zahtev, statusov, tokenov in latenc so preračunani iz ledgerja. To je kontrola integritete/aritmetike, ne neodvisna ponovitev eksperimentov in ne novo slepo ocenjevanje.\n\n- Codex · celotno poročilo 21. 10. 2026: https://drive.google.com/file/d/1kbdKphsUqH9pf8qIHoYRT_7P0Y-23t6m/view; SHA-256 27a8b0c394a8770577477f428aa35160baa01c66d569b8aad59e3ede4ec28c63\n- Codex · RHP A/B pri 768 tokenih: https://drive.google.com/file/d/1AYhuUFNxHW9TwtzNkI0lmhEEMMw2jrKE/view\n- Codex · dodatni konferenčni R2 in RHP 2048: https://drive.google.com/file/d/1Y0Zh8xRv_KrtFf6l6mnm14SC-UywPF8G/view\n- Interni paket · 95 izvornih dokazil: https://drive.google.com/file/d/1YKzxccTx5VCh21l5FimWHP9ZgY417Xlq/view; SHA-256 f1a07b7b0cc4a9bebb390b7e86e2d4aa783c030af83d6f787632010fe8475cf8\n\nJavne priloge: PUBLIC_EVIDENCE.json, ALL_27_API_REQUESTS_PUBLIC.csv, EDITORIAL_SOURCE_AUDIT.json, NEXT_TESTS_R4.md. Izvorni paket ni javno prekopiran.\n"
+  },
+  "EMAIL_DRAFT_SLAIF_REQUEST.md": {
+    "type": "text/markdown;charset=utf-8",
+    "text": "# Osnutek — vprašanja za omejen SLAIF MaaS pilot\n\nSTATUS: DRAFT / NOT_SENT · 21. 10. 2026 · R4\n\nZadeva: Po IMPULZ 2026 — preverljivi MaaS testi in podprti parametri API\n\nPozdravljeni,\n\nv konferenčnih dodelitvah smo dokumentirali 27 API zahtev: 26 HTTP 200 in en HTTP 400. Ločeno smo preverjali vsebino, format, dokončanost in porabo. Dva RHP A/B cilja pri dveh izhodnih limitih še ne dokazujeta prednosti protokola. Pripravljen je redaktiran povzetek z metodami in omejitvami.\n\nProsimo za uradni primer podprtih strukturiranih odgovorov (JSON/shema) in morebitnega upravljanja razmišljanja na vašem endpointu. Prvi response_format=json_object je vrnil 400, vendar nimamo ohranjenega telesa napake, zato vzroka ne pripisujemo določeni komponenti.\n\nPred kakršnimkoli novim testom želimo uskladiti upravičenega prijavitelja, aktivni brezplačni testni dostop, kvoto in iztek, dovoljene modele/licenco, obdelavo podatkov ter dokumentirane parametre. Prvi predlog je največ tri kratke diagnostične zahteve brez retryjev in z ustavitvijo ob napaki; širši RHP preizkus bi imel ločen dogovorjeni proračun.\n\nVM/Slurm ni del sedanje prošnje. Prejšnji koncept 60-dnevnega MaaS + CPU VM okolja je odložen, ne že potrjena zahteva ali dodelitev. BD × AI Lab je delovno ime; formalni prijavitelj še ni potrjen in ne gre za izjavo o pooblastilu Telekomovega projekta.\n\nV zameno lahko ponudimo redaktirane meritve, slovenske testne primere in metodološko poročilo, tudi z negativnimi izidi. Brez obljube o splošnem izboljšanju modela ali oddaljenem pospešku.\n\nLep pozdrav,\n[potrjeni podpisnik / organizacija pred pošiljanjem]\n"
+  },
+  "NEXT_TESTS_R4.md": {
+    "type": "text/markdown;charset=utf-8",
+    "text": "# Naslednji testi — IMPULZ / SLAIF — R4\n\n21. 10. 2026. Status: PROPOSED / NOT_RUN.\n\nIzvor odprtih vprašanj: Codexovo celotno poročilo in BD-jev navedeni follow-up. Podrobna izvedbena zasnova: GPT z RHP 3.0-candidate R2; ni nova empirična evidenca. VM/Slurm ostaja izključen.\n\n## 01 — TSPTS: nadaljevanje brez tihega novega teka\n\nPREDNOSTNO · OFFLINE\n\nOdprt hrošč: ob nezdružljivih checkpointih lahko solve(--resume) tiho začne od začetka. To je tveganje za dokazni izvor, ne le za hitrost.\n\n**Poskus:** Najprej zamrznemo kodo, vhod in konfiguracijo. Preverimo veljaven checkpoint, manjkajoč checkpoint, neujemanje konfiguracije ter poškodovan primarni zapis z veljavnim prejšnjim. Nato en kratek nadzorovan stop → resume na kopiji.\n\n**Sprejem:** Neveljaven resume se ustavi z jasno napako in brez novega teka. Dovoljen fallback uporabi samo ujemajočo se identiteto. Veljavno nadaljevanje ohrani stanje, števce, seme/RNG in najboljšo pot; rezultat preveri neodvisni validator.\n\n**Obseg:** Izolirana kopija; izvirni solver in aktivne arene ostanejo nespremenjeni.\n\n**Predlagana meja:** Predlog: največ 5 minut in vnaprej omejeni majhni vhodi. Test nadzorovanega stopa ni test izpada elektrike.\n\n**Gate:** Ni API-ja. Popravek in testi še niso izvedeni; potreben je ločen izvedbeni mandat.\n\n## 02 — JSON/API: najprej pojasnimo HTTP 400\n\nČAKA POTRJEN DOSTOP\n\nDelujoč HTTP prenos ni pogodba o formatu. Prvi response_format=json_object je vrnil 400; telo napake ni bilo shranjeno, zato vzroka ne poznamo.\n\n**Poskus:** Od ponudnika pridobimo podprt primer. Zamrznemo eno kratko oracle nalogo: osnovni klic, dokumentirani strukturirani način in dokumentirani reasoning parameter samo, če je podprt. Ločeno beležimo status, zaključek, JSON, shemo in pravilnost.\n\n**Sprejem:** Za vsako poslano zahtevo obstaja zapis izida. Neuspeh ima redaktirano kodo/tip/sporočilo napake brez glave Authorization ali ključa. Za strojno uporabo šteje samo celotna zahtevana shema in pravilen rezultat.\n\n**Obseg:** Samo že potrjeni MaaS endpoint; VM/Slurm izključen.\n\n**Predlagana meja:** Predlog: največ 3 nove zahteve, do 60 s in 2.048 izhodnih tokenov na zahtevo; brez retryjev, stop ob prvi napaki. Nepodprta nastavitev se ne pošlje.\n\n**Gate:** Šele po sveže potrjenem aktivnem brezplačnem dostopu in izrecno odobrenem proračunu. Ta stran ne kliče API-ja.\n\n## 03 — RHP: nov vzorec in kontrola dolžine navodil\n\nPO API DIAGNOSTIKI\n\nDve isti nalogi, neslepo ocenjevanje in zelo različen vhodni proračun ne ločijo učinka RHP od dolžine navodil, načina ocenjevanja ali odrezovanja.\n\n**Poskus:** Pred izidi zamrznemo 3 nove naloge in rubriko: A nevtralno navodilo, B točno pripeti RHP, C vsebinsko nevtralna kontrola s primerljivo dolžino. Po 3 sveže stateless ponovitve na pogoj/nalogo; uravnotežen vrstni red, isti model in izhodni limit.\n\n**Sprejem:** Skrijemo oznake pogojev pred neodvisnim ocenjevalcem; kjer je mogoče dodamo deterministični oracle. Poročamo vse izide, stroške, input/output tokene in odrezane odgovore. RHP slog lahko razkrije pogoj, zato blinding ni zagotovljen.\n\n**Obseg:** Predlog novega vedenjskega preizkusa; ni potrditev protokola ali zavesti.\n\n**Predlagana meja:** To je predlog 3 × 3 × 3 = 27 DODATNIH zahtev, ločen od 27 zgodovinskih. Končni limit in ustavitev določimo pred aktivacijo; brez samodejnega ponavljanja.\n\n**Gate:** Nov omejen mandat in dostop. N = 3 naloge ostaja mali pilot; prag praktične koristi določimo vnaprej, ne po rezultatih.\n\n## 04 — TSP/LAG: kakovost pri enakem delu\n\nOFFLINE · LOČENA PROGA\n\nDoslej so metode po skupnem 2-opt porabile različno število dostopov do razdalj. Enaka zaključna metoda zato ni enak računski proračun.\n\n**Poskus:** Pred meritvijo zamrznemo nove held-out koordinate, semena, pravilo vezanih rezultatov in dve dovolj veliki omejitvi dela. Štejemo konstrukcijo in izboljševanje; vse metode dobijo isti skupni limit. Ločeno spremljamo čas in dostop do matrike.\n\n**Sprejem:** Vsaka zaprta pot je neodvisno veljavna. Poročamo parne vrzeli in krivuljo kakovost–proračun po porazdelitvah; nobenega tuninga na held-out. Primere, kjer konstrukcija preseže limit, zabeležimo, ne skrijemo.\n\n**Obseg:** NN, LAG in variante ohranimo; brez posega v TSPTS ali Cockpit.\n\n**Predlagana meja:** Predlog: majhen n = 35 korpus, vnaprej omejen skupni čas do 5 minut. To ni HPC benchmark, velike kampanje ali nov dokaz splošne prednosti.\n\n**Gate:** Ločen offline mandat. Neodvisno od API dostopa, vendar ne pomeni, da smo ta poskus že izvedli.\n\n## Skupne varovalke\n\nZamrznjeni vhodi, source/config/seed hashi, en writer, evidence brez skrivnosti. Ustavitev se zapiše; manjkajoči podatki niso nič. Testi ne širijo dovoljenj. Po izoliranem popravku ne promoviramo solverja brez ločenega sprejemnega dokaza. API plan ima ločen potrjeni proračun in trenutno veljaven dostop; brez retryjev, obnovitve instance, VM/Slurm ali plačil iz samega načrta. Noben predlog ni bil izveden ob uredniški posodobitvi R4.\n"
+  },
+  "PUBLIC_EVIDENCE.json": {
+    "type": "application/json",
+    "text": "{\n  \"schema\": \"slaif.public_evidence.v2\",\n  \"revision\": \"R4\",\n  \"as_of\": \"2026-10-21\",\n  \"basis\": \"Codex original experiments; GPT editorial integrity/arithmetic review, not experimental replication\",\n  \"provider_label\": \"Gemma 4 26B-A4B IT Q8 (portal/handoff label; weights not independently audited)\",\n  \"api\": {\n    \"requests\": 27,\n    \"http_200\": 26,\n    \"http_400\": 1,\n    \"local_pre_http_errors\": 1,\n    \"retries\": 0,\n    \"allocation_extensions\": 0,\n    \"known_input_tokens\": 53606,\n    \"known_output_tokens\": 19230,\n    \"known_total_tokens\": 72836,\n    \"failed_request_usage\": null,\n    \"latency_sum_s\": 551.453,\n    \"latency_kind\": \"sum of client request durations, NOT session wall or pure generation\",\n    \"finish_reasons\": {\n      \"length\": 10,\n      \"stop\": 14,\n      \"unknown\": 3\n    }\n  },\n  \"json\": {\n    \"strict_or_function_tasks\": {\n      \"pass\": 2,\n      \"total\": 10\n    },\n    \"bare_exact_json\": {\n      \"pass\": 1,\n      \"total\": 9\n    },\n    \"extracted_exact_object_secondary\": {\n      \"pass\": 6,\n      \"total\": 9\n    },\n    \"code_task\": {\n      \"pass\": 1,\n      \"total\": 1,\n      \"fixtures_pass\": 5,\n      \"fixtures_total\": 5\n    },\n    \"retrieval\": {\n      \"found\": 3,\n      \"targets\": 3,\n      \"records\": 600\n    }\n  },\n  \"rhp\": {\n    \"tasks\": 2,\n    \"independent_blind_evaluation\": false,\n    \"general_benefit\": \"NOT_ESTABLISHED\",\n    \"768\": {\n      \"requests\": 4,\n      \"length\": 4,\n      \"scores\": {\n        \"HPC_SERVICE\": {\n          \"A\": 5,\n          \"B\": 6\n        },\n        \"TSP_HYPOTHESIS\": {\n          \"A\": 6,\n          \"B\": 7\n        }\n      },\n      \"score_max\": 12,\n      \"input_A\": 383,\n      \"input_B\": 18171\n    },\n    \"2048\": {\n      \"requests\": 4,\n      \"stop\": 4,\n      \"scores\": {\n        \"HPC_SERVICE\": {\n          \"A\": 7,\n          \"B\": 5\n        },\n        \"TSP_HYPOTHESIS\": {\n          \"A\": 7,\n          \"B\": 7\n        }\n      },\n      \"score_max\": 12\n    },\n    \"source_resolution\": {\n      \"canonical_sha256\": \"0a96871ae46923d5b9f952ad17bc45acd18b7d694a4e3f4d8379b63a692cdd57\",\n      \"archived_sha256\": \"4ba65def127ac257ccabc79f9498a19cbb94a0f79176797cc0999ff535949c95\",\n      \"exact_relation\": \"archived_bytes == canonical_bytes + b\\\"\\\\n\\\"\",\n      \"archived_protocol_is_prefix_of_frozen_B_system\": true,\n      \"meaning\": \"Content equal; byte identity not equal. Frozen B additionally contains a recorded execution instruction.\"\n    }\n  },\n  \"local\": {\n    \"cpci\": {\n      \"focused_tests_pass\": 18,\n      \"worlds\": 100,\n      \"rule_removals\": 500,\n      \"changed_removals\": 116,\n      \"oracle_transitions\": 6000\n    },\n    \"lag\": {\n      \"instances\": 30,\n      \"cities\": 35,\n      \"basic_gap_uniform_pct\": 1.8171,\n      \"basic_gap_clustered_pct\": 0.5781,\n      \"distance_access_ratio_uniform\": 2.531,\n      \"distance_access_ratio_clustered\": 1.949,\n      \"matched_budget\": false\n    },\n    \"exact\": {\n      \"instances\": 8,\n      \"cities\": 9,\n      \"enumerated_cycles\": 161280,\n      \"candidate_tours\": 40,\n      \"NN_optima\": 6,\n      \"LAG_B_minus_optima\": 8\n    },\n    \"tspts\": {\n      \"version\": \"0.1 unchanged\",\n      \"instance\": \"wi29\",\n      \"tour_length\": 27603,\n      \"workers\": 1,\n      \"proposals\": 128,\n      \"external_wall_s\": 1.172904,\n      \"cpu_s\": 1.078125,\n      \"peak_rss_mib\": 28.8125,\n      \"invalid_resume\": \"OPEN_SILENT_NEW_START\",\n      \"forced_resume_acceptance\": \"NOT_RUN\"\n    }\n  },\n  \"remote_python\": {\n    \"status\": \"NOT_RUN_EXCLUDED\",\n    \"wall_s\": null,\n    \"speedup\": null\n  },\n  \"editorial_verification\": {\n    \"source_files_hash_verified\": 95,\n    \"manifest_entries_verified\": 105,\n    \"zip_crc\": \"PASS\",\n    \"new_model_calls\": 0,\n    \"new_solver_runs\": 0,\n    \"source_audit\": \"EDITORIAL_SOURCE_AUDIT.json\"\n  },\n  \"next_tests\": [\n    {\n      \"id\": \"test-resume\",\n      \"rank\": \"01\",\n      \"title\": \"TSPTS: nadaljevanje brez tihega novega teka\",\n      \"badge\": \"PREDNOSTNO · OFFLINE\",\n      \"scope\": \"Izolirana kopija; izvirni solver in aktivne arene ostanejo nespremenjeni.\",\n      \"why\": \"Odprt hrošč: ob nezdružljivih checkpointih lahko solve(--resume) tiho začne od začetka. To je tveganje za dokazni izvor, ne le za hitrost.\",\n      \"test\": \"Najprej zamrznemo kodo, vhod in konfiguracijo. Preverimo veljaven checkpoint, manjkajoč checkpoint, neujemanje konfiguracije ter poškodovan primarni zapis z veljavnim prejšnjim. Nato en kratek nadzorovan stop → resume na kopiji.\",\n      \"accept\": \"Neveljaven resume se ustavi z jasno napako in brez novega teka. Dovoljen fallback uporabi samo ujemajočo se identiteto. Veljavno nadaljevanje ohrani stanje, števce, seme/RNG in najboljšo pot; rezultat preveri neodvisni validator.\",\n      \"limit\": \"Predlog: največ 5 minut in vnaprej omejeni majhni vhodi. Test nadzorovanega stopa ni test izpada elektrike.\",\n      \"gate\": \"Ni API-ja. Popravek in testi še niso izvedeni; potreben je ločen izvedbeni mandat.\"\n    },\n    {\n      \"id\": \"test-json\",\n      \"rank\": \"02\",\n      \"title\": \"JSON/API: najprej pojasnimo HTTP 400\",\n      \"badge\": \"ČAKA POTRJEN DOSTOP\",\n      \"scope\": \"Samo že potrjeni MaaS endpoint; VM/Slurm izključen.\",\n      \"why\": \"Delujoč HTTP prenos ni pogodba o formatu. Prvi response_format=json_object je vrnil 400; telo napake ni bilo shranjeno, zato vzroka ne poznamo.\",\n      \"test\": \"Od ponudnika pridobimo podprt primer. Zamrznemo eno kratko oracle nalogo: osnovni klic, dokumentirani strukturirani način in dokumentirani reasoning parameter samo, če je podprt. Ločeno beležimo status, zaključek, JSON, shemo in pravilnost.\",\n      \"accept\": \"Za vsako poslano zahtevo obstaja zapis izida. Neuspeh ima redaktirano kodo/tip/sporočilo napake brez glave Authorization ali ključa. Za strojno uporabo šteje samo celotna zahtevana shema in pravilen rezultat.\",\n      \"limit\": \"Predlog: največ 3 nove zahteve, do 60 s in 2.048 izhodnih tokenov na zahtevo; brez retryjev, stop ob prvi napaki. Nepodprta nastavitev se ne pošlje.\",\n      \"gate\": \"Šele po sveže potrjenem aktivnem brezplačnem dostopu in izrecno odobrenem proračunu. Ta stran ne kliče API-ja.\"\n    },\n    {\n      \"id\": \"test-rhp\",\n      \"rank\": \"03\",\n      \"title\": \"RHP: nov vzorec in kontrola dolžine navodil\",\n      \"badge\": \"PO API DIAGNOSTIKI\",\n      \"scope\": \"Predlog novega vedenjskega preizkusa; ni potrditev protokola ali zavesti.\",\n      \"why\": \"Dve isti nalogi, neslepo ocenjevanje in zelo različen vhodni proračun ne ločijo učinka RHP od dolžine navodil, načina ocenjevanja ali odrezovanja.\",\n      \"test\": \"Pred izidi zamrznemo 3 nove naloge in rubriko: A nevtralno navodilo, B točno pripeti RHP, C vsebinsko nevtralna kontrola s primerljivo dolžino. Po 3 sveže stateless ponovitve na pogoj/nalogo; uravnotežen vrstni red, isti model in izhodni limit.\",\n      \"accept\": \"Skrijemo oznake pogojev pred neodvisnim ocenjevalcem; kjer je mogoče dodamo deterministični oracle. Poročamo vse izide, stroške, input/output tokene in odrezane odgovore. RHP slog lahko razkrije pogoj, zato blinding ni zagotovljen.\",\n      \"limit\": \"To je predlog 3 × 3 × 3 = 27 DODATNIH zahtev, ločen od 27 zgodovinskih. Končni limit in ustavitev določimo pred aktivacijo; brez samodejnega ponavljanja.\",\n      \"gate\": \"Nov omejen mandat in dostop. N = 3 naloge ostaja mali pilot; prag praktične koristi določimo vnaprej, ne po rezultatih.\"\n    },\n    {\n      \"id\": \"test-lag\",\n      \"rank\": \"04\",\n      \"title\": \"TSP/LAG: kakovost pri enakem delu\",\n      \"badge\": \"OFFLINE · LOČENA PROGA\",\n      \"scope\": \"NN, LAG in variante ohranimo; brez posega v TSPTS ali Cockpit.\",\n      \"why\": \"Doslej so metode po skupnem 2-opt porabile različno število dostopov do razdalj. Enaka zaključna metoda zato ni enak računski proračun.\",\n      \"test\": \"Pred meritvijo zamrznemo nove held-out koordinate, semena, pravilo vezanih rezultatov in dve dovolj veliki omejitvi dela. Štejemo konstrukcijo in izboljševanje; vse metode dobijo isti skupni limit. Ločeno spremljamo čas in dostop do matrike.\",\n      \"accept\": \"Vsaka zaprta pot je neodvisno veljavna. Poročamo parne vrzeli in krivuljo kakovost–proračun po porazdelitvah; nobenega tuninga na held-out. Primere, kjer konstrukcija preseže limit, zabeležimo, ne skrijemo.\",\n      \"limit\": \"Predlog: majhen n = 35 korpus, vnaprej omejen skupni čas do 5 minut. To ni HPC benchmark, velike kampanje ali nov dokaz splošne prednosti.\",\n      \"gate\": \"Ločen offline mandat. Neodvisno od API dostopa, vendar ne pomeni, da smo ta poskus že izvedli.\"\n    }\n  ],\n  \"request_ledger\": [\n    {\n      \"sequence\": \"1\",\n      \"phase\": \"R4\",\n      \"test\": \"smoke\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"12922.0\",\n      \"max_output_tokens\": \"96\",\n      \"prompt_tokens\": \"39\",\n      \"completion_tokens\": \"96\",\n      \"total_tokens\": \"135\",\n      \"finish_reason\": \"\"\n    },\n    {\n      \"sequence\": \"2\",\n      \"phase\": \"R4\",\n      \"test\": \"reasoning\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"11906.0\",\n      \"max_output_tokens\": \"96\",\n      \"prompt_tokens\": \"83\",\n      \"completion_tokens\": \"96\",\n      \"total_tokens\": \"179\",\n      \"finish_reason\": \"\"\n    },\n    {\n      \"sequence\": \"3\",\n      \"phase\": \"R5\",\n      \"test\": \"LOGIC\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"13438.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"135\",\n      \"completion_tokens\": \"256\",\n      \"total_tokens\": \"391\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"4\",\n      \"phase\": \"R5\",\n      \"test\": \"CAUSAL\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"13531.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"127\",\n      \"completion_tokens\": \"256\",\n      \"total_tokens\": \"383\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"5\",\n      \"phase\": \"R5\",\n      \"test\": \"CODE_REVIEW\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"13469.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"89\",\n      \"completion_tokens\": \"169\",\n      \"total_tokens\": \"258\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"6\",\n      \"phase\": \"R5\",\n      \"test\": \"TSP_MATH\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"12891.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"110\",\n      \"completion_tokens\": \"246\",\n      \"total_tokens\": \"356\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"7\",\n      \"phase\": \"R5\",\n      \"test\": \"SCIENCE\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"12344.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"97\",\n      \"completion_tokens\": \"256\",\n      \"total_tokens\": \"353\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"8\",\n      \"phase\": \"R5\",\n      \"test\": \"CALIBRATION\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"15781.0\",\n      \"max_output_tokens\": \"256\",\n      \"prompt_tokens\": \"113\",\n      \"completion_tokens\": \"256\",\n      \"total_tokens\": \"369\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"9\",\n      \"phase\": \"RHP_768\",\n      \"test\": \"HPC_SERVICE_A\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"20390.0\",\n      \"max_output_tokens\": \"768\",\n      \"prompt_tokens\": \"184\",\n      \"completion_tokens\": \"768\",\n      \"total_tokens\": \"952\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"10\",\n      \"phase\": \"RHP_768\",\n      \"test\": \"HPC_SERVICE_B\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"31610.0\",\n      \"max_output_tokens\": \"768\",\n      \"prompt_tokens\": \"9078\",\n      \"completion_tokens\": \"768\",\n      \"total_tokens\": \"9846\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"11\",\n      \"phase\": \"RHP_768\",\n      \"test\": \"TSP_HYPOTHESIS_B\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"27531.0\",\n      \"max_output_tokens\": \"768\",\n      \"prompt_tokens\": \"9093\",\n      \"completion_tokens\": \"768\",\n      \"total_tokens\": \"9861\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"12\",\n      \"phase\": \"RHP_768\",\n      \"test\": \"TSP_HYPOTHESIS_A\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"19156.0\",\n      \"max_output_tokens\": \"768\",\n      \"prompt_tokens\": \"199\",\n      \"completion_tokens\": \"768\",\n      \"total_tokens\": \"967\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"13\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"SYNC3\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"22984.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"213\",\n      \"completion_tokens\": \"1024\",\n      \"total_tokens\": \"1237\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"14\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"REMOVAL3\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"22375.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"198\",\n      \"completion_tokens\": \"1024\",\n      \"total_tokens\": \"1222\",\n      \"finish_reason\": \"length\"\n    },\n    {\n      \"sequence\": \"15\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"LAG_SIGN\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"22016.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"232\",\n      \"completion_tokens\": \"1005\",\n      \"total_tokens\": \"1237\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"16\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"EUC_CLOSURE\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"16484.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"169\",\n      \"completion_tokens\": \"628\",\n      \"total_tokens\": \"797\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"17\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"EVIDENCE_BOUNDARY\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"15172.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"217\",\n      \"completion_tokens\": \"542\",\n      \"total_tokens\": \"759\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"18\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"SLOVENE_JSON\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"14297.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"164\",\n      \"completion_tokens\": \"474\",\n      \"total_tokens\": \"638\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"19\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"UNTRUSTED_DATA\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"15562.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"164\",\n      \"completion_tokens\": \"466\",\n      \"total_tokens\": \"630\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"20\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"CODE_EARLY_RETURN\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"21203.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"222\",\n      \"completion_tokens\": \"560\",\n      \"total_tokens\": \"782\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"21\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"HONEST_UNKNOWN\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"16360.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"169\",\n      \"completion_tokens\": \"536\",\n      \"total_tokens\": \"705\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"22\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"HPC_SERVICE_A_2048\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"31093.0\",\n      \"max_output_tokens\": \"2048\",\n      \"prompt_tokens\": \"184\",\n      \"completion_tokens\": \"1812\",\n      \"total_tokens\": \"1996\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"23\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"HPC_SERVICE_B_2048\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"43719.0\",\n      \"max_output_tokens\": \"2048\",\n      \"prompt_tokens\": \"9078\",\n      \"completion_tokens\": \"2024\",\n      \"total_tokens\": \"11102\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"24\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"TSP_HYPOTHESIS_B_2048\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"42078.0\",\n      \"max_output_tokens\": \"2048\",\n      \"prompt_tokens\": \"9093\",\n      \"completion_tokens\": \"2014\",\n      \"total_tokens\": \"11107\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"25\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"TSP_HYPOTHESIS_A_2048\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"34656.0\",\n      \"max_output_tokens\": \"2048\",\n      \"prompt_tokens\": \"199\",\n      \"completion_tokens\": \"1929\",\n      \"total_tokens\": \"2128\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"26\",\n      \"phase\": \"CONFERENCE_R2\",\n      \"test\": \"LONG_CONTEXT_RETRIEVAL\",\n      \"http_status\": \"200\",\n      \"latency_ms\": \"27594.0\",\n      \"max_output_tokens\": \"1536\",\n      \"prompt_tokens\": \"13957\",\n      \"completion_tokens\": \"489\",\n      \"total_tokens\": \"14446\",\n      \"finish_reason\": \"stop\"\n    },\n    {\n      \"sequence\": \"27\",\n      \"phase\": \"CONFERENCE_FORMAT\",\n      \"test\": \"SYNC3_JSON\",\n      \"http_status\": \"400\",\n      \"latency_ms\": \"891.0\",\n      \"max_output_tokens\": \"1024\",\n      \"prompt_tokens\": \"\",\n      \"completion_tokens\": \"\",\n      \"total_tokens\": \"\",\n      \"finish_reason\": \"\"\n    }\n  ],\n  \"sources\": {\n    \"complete\": {\n      \"id\": \"1kbdKphsUqH9pf8qIHoYRT_7P0Y-23t6m\",\n      \"title\": \"Codex · celotno poročilo 21. 10. 2026\",\n      \"sha256\": \"27a8b0c394a8770577477f428aa35160baa01c66d569b8aad59e3ede4ec28c63\"\n    },\n    \"rhp768\": {\n      \"id\": \"1AYhuUFNxHW9TwtzNkI0lmhEEMMw2jrKE\",\n      \"title\": \"Codex · RHP A/B pri 768 tokenih\"\n    },\n    \"conference\": {\n      \"id\": \"1Y0Zh8xRv_KrtFf6l6mnm14SC-UywPF8G\",\n      \"title\": \"Codex · dodatni konferenčni R2 in RHP 2048\"\n    },\n    \"evidence\": {\n      \"id\": \"1YKzxccTx5VCh21l5FimWHP9ZgY417Xlq\",\n      \"title\": \"Interni paket · 95 izvornih dokazil\",\n      \"sha256\": \"f1a07b7b0cc4a9bebb390b7e86e2d4aa783c030af83d6f787632010fe8475cf8\"\n    }\n  },\n  \"authority\": {\n    \"website_update_only\": true,\n    \"new_tests_authorized\": false,\n    \"email_sent\": false,\n    \"vm_slurm_excluded\": true,\n    \"current_free_access\": \"UNCONFIRMED\"\n  },\n  \"catalogue\": {\n    \"reference_date\": \"2026-10-21\",\n    \"offers\": 13,\n    \"projects\": 9,\n    \"checks\": 10,\n    \"terms_reverified_in_R4\": false\n  }\n}\n"
+  },
+  "EDITORIAL_SOURCE_AUDIT.json": {
+    "type": "application/json",
+    "text": "{\n  \"schema\": \"impulz.editorial-source-audit.v1\",\n  \"date\": \"2026-10-21\",\n  \"evidence_files\": 95,\n  \"manifest_entries_verified\": 105,\n  \"crc_pass\": true,\n  \"ledger_rows\": 27,\n  \"status_counts\": {\n    \"200\": 26,\n    \"400\": 1\n  },\n  \"known_usage\": {\n    \"prompt_tokens\": 53606,\n    \"completion_tokens\": 19230,\n    \"total_tokens\": 72836\n  },\n  \"unknown_usage_attempts\": 1,\n  \"latency_sum_seconds\": \"551.453\",\n  \"finish_reasons\": {\n    \"UNKNOWN\": 3,\n    \"length\": 10,\n    \"stop\": 14\n  },\n  \"rhp_source_difference\": {\n    \"canonical_sha256\": \"0a96871ae46923d5b9f952ad17bc45acd18b7d694a4e3f4d8379b63a692cdd57\",\n    \"archived_sha256\": \"4ba65def127ac257ccabc79f9498a19cbb94a0f79176797cc0999ff535949c95\",\n    \"exact_relation\": \"archived_bytes == canonical_bytes + b\\\"\\\\n\\\"\",\n    \"archived_protocol_is_prefix_of_frozen_B_system\": true,\n    \"meaning\": \"Content equal; byte identity not equal. Frozen B additionally contains a recorded execution instruction.\"\n  },\n  \"research_reruns\": 0,\n  \"new_provider_calls\": 0,\n  \"scope\": \"Internal integrity and arithmetic checks; not independent replication of model/solver experiments.\"\n}\n"
+  },
+  "ALL_27_API_REQUESTS_PUBLIC.csv": {
+    "type": "text/csv;charset=utf-8",
+    "text": "sequence,phase,test,http_status,latency_ms,max_output_tokens,prompt_tokens,completion_tokens,total_tokens,finish_reason\n1,R4,smoke,200,12922.0,96,39,96,135,\n2,R4,reasoning,200,11906.0,96,83,96,179,\n3,R5,LOGIC,200,13438.0,256,135,256,391,length\n4,R5,CAUSAL,200,13531.0,256,127,256,383,length\n5,R5,CODE_REVIEW,200,13469.0,256,89,169,258,stop\n6,R5,TSP_MATH,200,12891.0,256,110,246,356,stop\n7,R5,SCIENCE,200,12344.0,256,97,256,353,length\n8,R5,CALIBRATION,200,15781.0,256,113,256,369,length\n9,RHP_768,HPC_SERVICE_A,200,20390.0,768,184,768,952,length\n10,RHP_768,HPC_SERVICE_B,200,31610.0,768,9078,768,9846,length\n11,RHP_768,TSP_HYPOTHESIS_B,200,27531.0,768,9093,768,9861,length\n12,RHP_768,TSP_HYPOTHESIS_A,200,19156.0,768,199,768,967,length\n13,CONFERENCE_R2,SYNC3,200,22984.0,1024,213,1024,1237,length\n14,CONFERENCE_R2,REMOVAL3,200,22375.0,1024,198,1024,1222,length\n15,CONFERENCE_R2,LAG_SIGN,200,22016.0,1024,232,1005,1237,stop\n16,CONFERENCE_R2,EUC_CLOSURE,200,16484.0,1024,169,628,797,stop\n17,CONFERENCE_R2,EVIDENCE_BOUNDARY,200,15172.0,1024,217,542,759,stop\n18,CONFERENCE_R2,SLOVENE_JSON,200,14297.0,1024,164,474,638,stop\n19,CONFERENCE_R2,UNTRUSTED_DATA,200,15562.0,1024,164,466,630,stop\n20,CONFERENCE_R2,CODE_EARLY_RETURN,200,21203.0,1024,222,560,782,stop\n21,CONFERENCE_R2,HONEST_UNKNOWN,200,16360.0,1024,169,536,705,stop\n22,CONFERENCE_R2,HPC_SERVICE_A_2048,200,31093.0,2048,184,1812,1996,stop\n23,CONFERENCE_R2,HPC_SERVICE_B_2048,200,43719.0,2048,9078,2024,11102,stop\n24,CONFERENCE_R2,TSP_HYPOTHESIS_B_2048,200,42078.0,2048,9093,2014,11107,stop\n25,CONFERENCE_R2,TSP_HYPOTHESIS_A_2048,200,34656.0,2048,199,1929,2128,stop\n26,CONFERENCE_R2,LONG_CONTEXT_RETRIEVAL,200,27594.0,1536,13957,489,14446,stop\n27,CONFERENCE_FORMAT,SYNC3_JSON,400,891.0,1024,,,,\n"
+  },
+  "slaif-povzetek.html": {
+    "type": "text/html;charset=utf-8",
+    "text": "<!doctype html><html lang=\"sl\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"robots\" content=\"noindex,nofollow\"><title>SLAIF · rezultati in načrt nadaljevanja · R4<\/title><style>\n:root{color-scheme:dark light;--bg:#0b151c;--deep:#13222c;--fg:#edf3f0;--muted:#adc0c5;--line:#304650;--accent:#b9e68c;--blue:#8acbd9;font:17px/1.6 system-ui,sans-serif}*{box-sizing:border-box}body{background:var(--bg);color:var(--fg);margin:0}main{width:min(1080px,calc(100% - 36px));margin:30px auto}a{color:var(--blue)}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;letter-spacing:-.04em}h3{font-size:1.3rem}h4{margin-bottom:0}p{overflow-wrap:anywhere}.small,.r3-source,.r3-method,small{color:var(--muted);font-size:.82rem}.eyebrow,.r3-tag{color:var(--accent);font-size:.7rem;font-weight:700}.r3-kpis,.path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.r3-kpi,.path-panel,details{background:var(--deep);border:1px solid var(--line);padding:20px;border-radius:12px;min-width:0}.r3-kpi strong{display:block;font-size:2rem;color:var(--accent)}.r3-kpi b,.r3-kpi small{display:block}details{margin:14px 0}summary{cursor:pointer;font-weight:700}.table-wrap{overflow:auto;max-width:100%}table{width:100%;min-width:600px;border-collapse:collapse;font-size:.8rem}caption{text-align:left;color:var(--muted);padding:12px}td,th{text-align:left;padding:12px;border-bottom:1px solid var(--line)}.r4-layers{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.r4-layers span{border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.7rem}.notice,.r4-gate{border-left:3px solid var(--accent);padding:16px;margin:20px 0;background:var(--deep)}.r3-services{display:grid;gap:12px}.r4-track{scroll-margin-top:20px}code{overflow-wrap:anywhere}button{padding:10px;background:var(--accent);color:var(--bg);border:0;border-radius:7px;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}@media(max-width:600px){.r3-kpis,.path-grid{grid-template-columns:1fr}}@media print{:root{--bg:white;--deep:white;--fg:black;--muted:#333;--line:#aaa;--accent:#254e28;--blue:#174e70;font-size:11pt}button{display:none}main{width:100%}details{break-inside:avoid}table{min-width:0}@page{size:A4;margin:14mm}}\n<\/style><\/head><body><main><p><a href=\"https://bd-chess.github.io/bd-chessdb/BD/O/impulz-hpc-ai.html\">← Celotni HPC &amp; AI načrt<\/a> · <a href=\"https://bd-chess.github.io/bd-chessdb/BD/O/impulz-2026.html\">IMPULZ konferenca<\/a><\/p><div class=\"eyebrow\">BD × AI Lab · javni redaktirani povzetek · R4<\/div><h1>Delujoča povezava.<br>Jasne meje dokazov.<\/h1><p>Konferenčne meritve 21. 10. 2026. Eksperimenti: CLI Codex. Seme in prioritete: BD. Sinteza in pregled integritete: GPT. Brez novih eksperimentov, oddaje vlog ali pošiljanja pošte.<\/p><div aria-labelledby=\"rezultati-title\" class=\"r3-results\" id=\"rezultati\">\n<div class=\"subhead\"><h3 id=\"rezultati-title\">Od povezave do preverljivega rezultata.<\/h3><span>Celotna evidenca · R4 / 21. 10. 2026<\/span><\/div>\n<p class=\"r3-method\">Model predlaga. Program izmeri. Preverjalnik preveri. Uspešen prenos, dokončan odgovor in pravilna rešitev niso ista meritev.<\/p>\n<div class=\"r3-kpis\">\n<article class=\"r3-kpi\"><span class=\"r3-tag\">Dejanske API zahteve<\/span><strong>27<\/strong><b>26 HTTP 200 · 1 HTTP 400<\/b><small>Dve dodelitvi, različni protokoli. Ena lokalna napaka pred HTTP je šteta posebej.<\/small><\/article>\n<article class=\"r3-kpi\"><span class=\"r3-tag\">Format · dodatni R2<\/span><strong>1/9<\/strong><b>Točen goli JSON<\/b><small>Po naknadnem izluščanju 6/9 točnih objektov. To je ločena sekundarna meritev.<\/small><\/article>\n<article class=\"r3-kpi\"><span class=\"r3-tag\">RHP · pri obeh limitih<\/span><strong>2 nalogi<\/strong><b>Prednost ni dokazana<\/b><small>768: vsi odrezani. 2.048: vsi dokončani, toda ocene ne kažejo enotne prednosti.<\/small><\/article>\n<article class=\"r3-kpi\"><span class=\"r3-tag\">TSPTS · HOME CPU<\/span><strong>1,173 s<\/strong><b>Veljavna wi29 pot: 27.603<\/b><small>En majhen lokalni tek. SLAIF VM/Slurm ni bil uporabljen in je trenutno izločen.<\/small><\/article>\n<\/div>\n<div class=\"r4-layers\" aria-label=\"Pet ločenih stopenj preverjanja\"><span>01 · HTTP prenos<\/span><span>02 · dokončanost<\/span><span>03 · JSON / shema<\/span><span>04 · pravilnost<\/span><span>05 · učinek metode<\/span><\/div>\n<p class=\"small\">Izvedba eksperimentov: CLI Codex na HOME. R4 je uredniška sinteza in pregled integritete, ne nov eksperiment. <a href=\"#src-cli-complete\">Primarno celotno poročilo<\/a>.<\/p>\n<details id=\"dokazi-api\"><summary>27 zahtev: sklopi, poraba in kaj ostaja neznano<\/summary><div class=\"table-wrap\" tabindex=\"0\" role=\"region\" aria-label=\"Zgodovinski API sklopi · dve ločeni dodelitvi · brez retryjev\"><table><caption>Zgodovinski API sklopi · dve ločeni dodelitvi · brez retryjev<\/caption><thead><tr><th scope=\"col\">Sklop<\/th><th scope=\"col\">Zahteve<\/th><th scope=\"col\">HTTP 200 / 400<\/th><th scope=\"col\">Omejitev izhoda<\/th><th scope=\"col\">Kaj to pove<\/th><\/tr><\/thead><tbody><tr><td>R4 povezava<\/td><td>2<\/td><td>2 / 0<\/td><td>96<\/td><td>Račun pravilen; jezik/format delna, verjetnost nedokončana<\/td><\/tr><tr><td>R5 ciljne naloge<\/td><td>6<\/td><td>6 / 0<\/td><td>256<\/td><td>Ročna pravilnost 4/6; 4 length, 2 stop<\/td><\/tr><tr><td>RHP A/B 768<\/td><td>4<\/td><td>4 / 0<\/td><td>768<\/td><td>2 nalogi, vsi 4 odgovori odrezani<\/td><\/tr><tr><td>Konferenčni R2<\/td><td>14<\/td><td>14 / 0<\/td><td>1.024 / 2.048 / 1.536<\/td><td>10 objektivnih nalog + 4 daljši raziskovalni odgovori<\/td><\/tr><tr><td>R2 nastavitev JSON<\/td><td>1<\/td><td>0 / 1<\/td><td>nastavitev zavrnjena<\/td><td>Vzrok HTTP 400 neznan; 4 nadaljnje nastavitve NOT_RUN<\/td><\/tr><tr><td>Skupaj<\/td><td>27<\/td><td>26 / 1<\/td><td>različni protokoli<\/td><td>To ni enoten benchmark pravilnosti<\/td><\/tr><\/tbody><\/table><\/div>\n<p>Znana poraba uspešnih odgovorov: <b>53.606 vhodnih + 19.230 izhodnih = 72.836 tokenov<\/b>. Poraba HTTP 400 je <b>neznana, ne nič<\/b>. Seštevek odjemalskih latenc je <b>551,453 s<\/b>, ne trajanje seje ali čisti čas generiranja.<\/p>\n<p>Zaključki: 10 <code>length<\/code>, 14 <code>stop<\/code> in 3 neznani (R4 ni hranil zaključka dveh odgovorov; HTTP 400 nima tega podatka). Za R4 zato ne sklepamo na <code>length<\/code> samo iz doseženega limita.<\/p>\n<p>Oznaka »Gemma 4 26B-A4B IT Q8« je iz portala/predaje, ne neodvisen pregled uteži. Takratna brezplačnost temelji na BD-jevi potrditvi, ne obračunskem auditu; današnji dostop ni potrjen. GPT/Claude primerjava ni bila izvedena.<\/p>\n<p><a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/ALL_27_API_REQUESTS_PUBLIC.csv\">Redaktirani ledger vseh 27 zahtev ↓<\/a><\/p><\/details>\n<details id=\"json-kakovost\"><summary>Pravilnost vsebine ≠ zanesljivost strojnega izhoda<\/summary>\n<p>Dodatni konferenčni R2 ima <b>9 JSON nalog in eno nalogo popravljanja kode<\/b>. Strogi izhodni/funkcijski kriterij dosežeta <b>2/10<\/b>: zahtevan goli JSON v enem primeru in pravilna funkcija v drugem. Popravek kode je prestal <b>5/5 ciljnih primerov<\/b>.<\/p>\n<p>Po posebej označenem izluščanju JSON iz Markdowna ali razlage je <b>6/9 celotnih objektov<\/b> pravilnih. To ne spremeni primarne ocene. Primer EUC_CLOSURE je imel pravilen račun 3 + 3 + 4 = 10, a napačno strukturo. SYNC3 je prikazal pravilne kontrolne točke v razlagi, zahtevani objekt pa se ni dokončal.<\/p>\n<p>Priklic je našel <b>3/3 zahtevanih vrednosti v 600 sintetičnih zapisih<\/b>; to ne določa največjega konteksta. En uspešen test nezaupanega vloženega navodila ni varnostno jamstvo. Rezultat 2/10 zato ni »20 % inteligence« in 26 HTTP 200 ni 26 pravilnih rešitev.<\/p>\n<p><b>HTTP 400:<\/b> en poskus <code>response_format=json_object<\/code>, 0,891 s. Izvorno telo napake ni ohranjeno; natančen vzrok in podpora parametru ostajata odprta. Štirje naslednji parametri niso bili poslani. <a href=\"#test-json\">Načrt diagnostike ↓<\/a> · <a href=\"#src-cli-conference\">Vir<\/a>.<\/p><\/details>\n<div class=\"path-grid\">\n<article class=\"path-panel\" id=\"pilot-rhp\"><div class=\"eyebrow\">Izvedeno · neodločilen mali vzorec<\/div><h3>RHP × Gemma: obe plati.<\/h3>\n<p>Dva A/B para pri 768 in ista dva pri 2.048 izhodnih tokenih. A je nevtralno navodilo, B celotni RHP. Ocene so <b>ročne, neslepe, brez drugega neodvisnega ocenjevalca<\/b>.<\/p>\n<p>Pri 768 je bil B v obeh presojah +1/12, vendar so vsi štirje odgovori odrezani. Pri 2.048 so vsi končani: pri HPC je B ocenjen nižje, pri TSP je izenačen z A. <b>Splošnega izboljšanja zaradi RHP ne sklepamo.<\/b><\/p>\n<p>V seriji 768 je B porabil 18.171 vhodnih tokenov, A 383 — približno 47,44× toliko. To ni primerjava pri enaki porabi. RHP ostaja kandidat; njegova uporaba za ta uredniški pregled ni nov dokaz učinka.<\/p><\/article>\n<article class=\"path-panel\" id=\"pilot-tspts\"><div class=\"eyebrow\">HOME izmerjen · resume odprt<\/div><h3>TSPTS Thin Solver.<\/h3>\n<p>Nespremenjeni v0.1, en CPU delavec, seme 20261021, 128/128 predlogov. wi29: <b>27.603<\/b>; vseh 29 mest, povratni rob in EUC_2D neodvisno preverjeni.<\/p>\n<p><b>1,172904 s<\/b> zunanjega časa · <b>1,078125 CPU s<\/b> · <b>28,8125 MiB<\/b> vršni RSS. En majhen tek ob drugih aktivnih arenah ni stabilen benchmark ali merilo potrebne virtualke.<\/p>\n<p><b>Prednostno:<\/b> nezdružljiv checkpoint lahko sproži tihi začetek iz nič. Pravi prekinitev → resume še ni sprejet. <a href=\"#test-resume\">Ločen offline načrt ↓<\/a> · <a href=\"#src-cli-tspts\">Izvor<\/a>. Remote Python in pospešek ostajata neizmerjena; VM/Slurm trenutno izključen.<\/p><\/article><\/div>\n<details id=\"rhp-podrobno\"><summary>RHP: ocene pri obeh limitih, metodološke napake in izvor<\/summary><div class=\"table-wrap\" tabindex=\"0\" role=\"region\" aria-label=\"Ročne neslepe ocene istega Codex ocenjevalca; ne neodvisna validacija\"><table><caption>Ročne neslepe ocene istega Codex ocenjevalca; ne neodvisna validacija<\/caption><thead><tr><th scope=\"col\">Naloga<\/th><th scope=\"col\">Izhodni limit<\/th><th scope=\"col\">A brez RHP<\/th><th scope=\"col\">B z RHP<\/th><th scope=\"col\">Zaključek<\/th><\/tr><\/thead><tbody><tr><td>HPC_SERVICE<\/td><td>768<\/td><td>5/12<\/td><td>6/12<\/td><td>oba length<\/td><\/tr><tr><td>TSP_HYPOTHESIS<\/td><td>768<\/td><td>6/12<\/td><td>7/12<\/td><td>oba length<\/td><\/tr><tr><td>HPC_SERVICE<\/td><td>2048<\/td><td>7/12<\/td><td>5/12<\/td><td>oba stop<\/td><\/tr><tr><td>TSP_HYPOTHESIS<\/td><td>2048<\/td><td>7/12<\/td><td>7/12<\/td><td>oba stop<\/td><\/tr><\/tbody><\/table><\/div>\n<p>Daljši odgovori odpravijo odrezovanje v teh štirih primerih, ne pa potrebe po vsebinskem preverjanju. HPC B predlaga primerjavo izvirne kode doma z optimizirano oddaljeno kodo: s tem pomeša učinek algoritma in strojne opreme. TSP B uporabi prag <code>L_LAG &lt; 0,85 L_NN<\/code>, ki preverja več kot 15 % izboljšanja, ne zatrjevanega razpona 5–15 %. To so ugotovitve iz pregleda odgovorov, ne novi benchmarki.<\/p>\n<p>Ponavljanje istih dveh nalog, vrstni red, možni učinki predpomnjenja, vhodni proračun in neslepa presoja ostajajo omejitve. Noben rezultat ne potrjuje zavesti ali prenosa identitete.<\/p>\n<p><b>Nova uredniška razrešitev izvora:<\/b> arhivirani RHP (37.219 B, SHA <code>4ba65def…<\/code>) je bajtno enak aktualnemu pripetemu RHP (37.218 B, SHA <code>0a96871a…<\/code>) plus ena dodatna prazna vrstica LF na koncu. Vsebina protokola se ujema, surova hasha pa ne. Zamrznjeni B sistem vsebuje še zabeleženo izvedbeno navodilo; ni samo goli protokol. Starih dokazil ne prepisujemo.<\/p>\n<p><a href=\"#src-cli-rhp768\">RHP 768<\/a> · <a href=\"#src-cli-conference\">RHP 2.048 in audit<\/a> · <a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/EDITORIAL_SOURCE_AUDIT.json\">Hash pregled R4 ↓<\/a><\/p><\/details>\n<details id=\"lokalni-dokazi\"><summary>Lokalni CPCI, TSP/LAG in mali eksaktni primeri<\/summary>\n<p><b>CPCI:<\/b> 18/18 ciljnih lokalnih testov (14 CPCI + 4 testi spremenjenih mehanizmov), 100 vsebinsko unikatnih svetov in 500 odstranitev pravil; 116 jih spremeni izid. Neodvisni oracle preveri 1.000 osnovnih + 5.000 dodatnih prehodov. To so testi referenčne kode, <b>ne Gemma 18/18<\/b> in ne dokaz notranjega modela ali zavesti.<\/p>\n<p><b>TSP/LAG:<\/b> en pilot 30 × 35, pet metod; neodvisno preverjenih 150 začetnih in 150 končnih poti. Osnovni LAG ni pokazal napovedane splošne prednosti.<\/p><div class=\"table-wrap\" tabindex=\"0\" role=\"region\" aria-label=\"Pozitivna vrzel pomeni slabši rezultat; enak 2-opt ni enak skupni proračun\"><table><caption>Pozitivna vrzel pomeni slabši rezultat; enak 2-opt ni enak skupni proračun<\/caption><thead><tr><th scope=\"col\">Porazdelitev<\/th><th scope=\"col\">LAG proti NN po 2-opt<\/th><th scope=\"col\">Dostopi do razdalj<\/th><th scope=\"col\">Razlaga<\/th><\/tr><\/thead><tbody><tr><td>15 enakomernih<\/td><td>+1,8171 %<\/td><td>2,531× NN<\/td><td>Daljša pot; različen strošek<\/td><\/tr><tr><td>15 gručastih<\/td><td>+0,5781 %<\/td><td>1,949× NN<\/td><td>Daljša pot; različen strošek<\/td><\/tr><\/tbody><\/table><\/div>\n<p>Na sedmih held-out gručastih primerih ima LAG-B+ povprečno −0,0839 %; ta majhen delni rezultat ni splošna zmaga in strošek ni izenačen. Metode ohranimo za stroškovno primerljiv test. <a href=\"#src-cli-r5\">Vir R5<\/a>.<\/p>\n<p><b>Ločeni mali eksaktni TSP:<\/b> 8 primerov po 9 mest, 161.280 ciklov in 40 kandidatnih poti. Optimum: NN 6/8, LAG 7/8, LAG-A 6/8, LAG-B+ 7/8, LAG-B− 8/8. Izčrpnost velja za zapisano geometrijo in toleranco 1e-10; iz tega ne določimo najboljšega velikega solverja. <a href=\"#src-cli-exact\">Vir<\/a>.<\/p><\/details>\n<div class=\"notice\"><b>Uredniški sklep, ne nova meritev:<\/b> naslednji omejevalni dejavnik ni dokazana potreba po večjem GPU. Najprej izboljšamo obnovljivost, pogodbo izhoda in pravičnost primerjav; več virov utemeljimo šele z meritvijo. Vse štiri raziskovalne smeri ostajajo odprte.<\/div>\n<p class=\"r3-source\"><a href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/slaif-povzetek.html\">Samostojni povzetek ↗<\/a> · <a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md\">Usklajeno poročilo .md ↓<\/a> · <a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/PUBLIC_EVIDENCE.json\">Podatki JSON ↓<\/a><\/p>\n<\/div><div class=\"r4-next\" id=\"naslednji-testi\" aria-labelledby=\"next-title\"><div class=\"subhead\"><h3 id=\"next-title\">Štiri smeri. Najprej majhen razlikovalni test.<\/h3><span>PREDLOGI · NIČ NI ZAGNANO<\/span><\/div><p class=\"r3-method\">Codexove odprte točke so osnova; spodnje meje, kontrole in sprejemna merila so nova GPT/RHP izvedbena zasnova, ne že doseženi rezultati ali dovoljenje za zagon.<\/p><div class=\"path-grid\"><article class=\"path-panel r4-track\" id=\"test-resume\"><div class=\"eyebrow\">01 / PREDNOSTNO · OFFLINE<\/div><h3>TSPTS: nadaljevanje brez tihega novega teka<\/h3><p>Odprt hrošč: ob nezdružljivih checkpointih lahko solve(--resume) tiho začne od začetka. To je tveganje za dokazni izvor, ne le za hitrost.<\/p><h4>Najmanjši uporaben poskus<\/h4><p>Najprej zamrznemo kodo, vhod in konfiguracijo. Preverimo veljaven checkpoint, manjkajoč checkpoint, neujemanje konfiguracije ter poškodovan primarni zapis z veljavnim prejšnjim. Nato en kratek nadzorovan stop → resume na kopiji.<\/p><h4>Kaj šteje kot uspeh<\/h4><p>Neveljaven resume se ustavi z jasno napako in brez novega teka. Dovoljen fallback uporabi samo ujemajočo se identiteto. Veljavno nadaljevanje ohrani stanje, števce, seme/RNG in najboljšo pot; rezultat preveri neodvisni validator.<\/p><details><summary>Obseg, proračun in pogoj za začetek<\/summary><p>Izolirana kopija; izvirni solver in aktivne arene ostanejo nespremenjeni.<\/p><p>Predlog: največ 5 minut in vnaprej omejeni majhni vhodi. Test nadzorovanega stopa ni test izpada elektrike.<\/p><p><b>Ni API-ja. Popravek in testi še niso izvedeni; potreben je ločen izvedbeni mandat.<\/b><\/p><\/details><\/article><article class=\"path-panel r4-track\" id=\"test-json\"><div class=\"eyebrow\">02 / ČAKA POTRJEN DOSTOP<\/div><h3>JSON/API: najprej pojasnimo HTTP 400<\/h3><p>Delujoč HTTP prenos ni pogodba o formatu. Prvi response_format=json_object je vrnil 400; telo napake ni bilo shranjeno, zato vzroka ne poznamo.<\/p><h4>Najmanjši uporaben poskus<\/h4><p>Od ponudnika pridobimo podprt primer. Zamrznemo eno kratko oracle nalogo: osnovni klic, dokumentirani strukturirani način in dokumentirani reasoning parameter samo, če je podprt. Ločeno beležimo status, zaključek, JSON, shemo in pravilnost.<\/p><h4>Kaj šteje kot uspeh<\/h4><p>Za vsako poslano zahtevo obstaja zapis izida. Neuspeh ima redaktirano kodo/tip/sporočilo napake brez glave Authorization ali ključa. Za strojno uporabo šteje samo celotna zahtevana shema in pravilen rezultat.<\/p><details><summary>Obseg, proračun in pogoj za začetek<\/summary><p>Samo že potrjeni MaaS endpoint; VM/Slurm izključen.<\/p><p>Predlog: največ 3 nove zahteve, do 60 s in 2.048 izhodnih tokenov na zahtevo; brez retryjev, stop ob prvi napaki. Nepodprta nastavitev se ne pošlje.<\/p><p><b>Šele po sveže potrjenem aktivnem brezplačnem dostopu in izrecno odobrenem proračunu. Ta stran ne kliče API-ja.<\/b><\/p><\/details><\/article><article class=\"path-panel r4-track\" id=\"test-rhp\"><div class=\"eyebrow\">03 / PO API DIAGNOSTIKI<\/div><h3>RHP: nov vzorec in kontrola dolžine navodil<\/h3><p>Dve isti nalogi, neslepo ocenjevanje in zelo različen vhodni proračun ne ločijo učinka RHP od dolžine navodil, načina ocenjevanja ali odrezovanja.<\/p><h4>Najmanjši uporaben poskus<\/h4><p>Pred izidi zamrznemo 3 nove naloge in rubriko: A nevtralno navodilo, B točno pripeti RHP, C vsebinsko nevtralna kontrola s primerljivo dolžino. Po 3 sveže stateless ponovitve na pogoj/nalogo; uravnotežen vrstni red, isti model in izhodni limit.<\/p><h4>Kaj šteje kot uspeh<\/h4><p>Skrijemo oznake pogojev pred neodvisnim ocenjevalcem; kjer je mogoče dodamo deterministični oracle. Poročamo vse izide, stroške, input/output tokene in odrezane odgovore. RHP slog lahko razkrije pogoj, zato blinding ni zagotovljen.<\/p><details><summary>Obseg, proračun in pogoj za začetek<\/summary><p>Predlog novega vedenjskega preizkusa; ni potrditev protokola ali zavesti.<\/p><p>To je predlog 3 × 3 × 3 = 27 DODATNIH zahtev, ločen od 27 zgodovinskih. Končni limit in ustavitev določimo pred aktivacijo; brez samodejnega ponavljanja.<\/p><p><b>Nov omejen mandat in dostop. N = 3 naloge ostaja mali pilot; prag praktične koristi določimo vnaprej, ne po rezultatih.<\/b><\/p><\/details><\/article><article class=\"path-panel r4-track\" id=\"test-lag\"><div class=\"eyebrow\">04 / OFFLINE · LOČENA PROGA<\/div><h3>TSP/LAG: kakovost pri enakem delu<\/h3><p>Doslej so metode po skupnem 2-opt porabile različno število dostopov do razdalj. Enaka zaključna metoda zato ni enak računski proračun.<\/p><h4>Najmanjši uporaben poskus<\/h4><p>Pred meritvijo zamrznemo nove held-out koordinate, semena, pravilo vezanih rezultatov in dve dovolj veliki omejitvi dela. Štejemo konstrukcijo in izboljševanje; vse metode dobijo isti skupni limit. Ločeno spremljamo čas in dostop do matrike.<\/p><h4>Kaj šteje kot uspeh<\/h4><p>Vsaka zaprta pot je neodvisno veljavna. Poročamo parne vrzeli in krivuljo kakovost–proračun po porazdelitvah; nobenega tuninga na held-out. Primere, kjer konstrukcija preseže limit, zabeležimo, ne skrijemo.<\/p><details><summary>Obseg, proračun in pogoj za začetek<\/summary><p>NN, LAG in variante ohranimo; brez posega v TSPTS ali Cockpit.<\/p><p>Predlog: majhen n = 35 korpus, vnaprej omejen skupni čas do 5 minut. To ni HPC benchmark, velike kampanje ali nov dokaz splošne prednosti.<\/p><p><b>Ločen offline mandat. Neodvisno od API dostopa, vendar ne pomeni, da smo ta poskus že izvedli.<\/b><\/p><\/details><\/article><\/div><div class=\"r4-gate\"><b>Zaporedje:<\/b> resume je prednostna offline naloga; JSON/API omogoči zanesljivejši naslednji RHP pilot. TSP/LAG je ločena offline proga. VM/Slurm ostaja izključen. Noben gumb na tej strani ne izvaja testov ali odda vloge.<\/div><p><a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/NEXT_TESTS_R4.md\">Celoten načrt testov .md ↓<\/a><\/p><\/div><div class=\"r3-application\" id=\"slaif-prijava\"><div class=\"eyebrow\">Neposlan osnutek · dostop ni potrjen<\/div><h3>Najprej dogovor o zanesljivem MaaS pilotu.<\/h3><p>Za naslednjo fazo pripravimo vprašanja o aktivnem brezplačnem dostopu, kvoti, izteku in uradno podprtih nastavitvah JSON ter razmišljanja. Ponudniku lahko pokažemo redaktirane meritve, slovenske testne primere, napake in ponovljiv protokol — ne obljube o dokazani prednosti RHP.<\/p><p><b>VM/Slurm ni del sedanjega nadaljevanja.<\/b> Prejšnji 60-dnevni predlog MaaS + CPU VM ter okvir 8–16 vCPU / 32–64 GB / 200 GB ohranimo kot odloženo arhitekturno možnost, ne kot aktivno prošnjo, odobreno kvoto ali sklep iz malega wi29 testa.<\/p><div class=\"r3-actions\"><a href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/slaif-povzetek.html\">Povzetek za SLAIF ↗<\/a><a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/SLAIF_GEMMA_RHP_TSPTS_PILOT_REPORT.md\">Poročilo .md ↓<\/a><a download href=\"https://bd-chess.github.io/bd-chessdb/BD/O/assets/impulz-hpc-ai/EMAIL_DRAFT_SLAIF_REQUEST.md\">Neposlan osnutek ↓<\/a><\/div><p class=\"small\">Javna raziskovalna predstavitev ni oddana vloga. Prijavitelj in upravičenost ostajata za uskladitev; BD × AI Lab je delovno ime, ne potrditev Telekomovega projekta. Zasebne beležke niso del prilog.<\/p><\/div><h2>Izvorni dokumenti<\/h2><ul><li id=\"src-cli-complete\"><a href=\"https://drive.google.com/file/d/1kbdKphsUqH9pf8qIHoYRT_7P0Y-23t6m/view\">Codex · celotno poročilo 21. 10. 2026<\/a> (Drive; lahko zahteva pooblastilo)<\/li><li id=\"src-cli-rhp768\"><a href=\"https://drive.google.com/file/d/1AYhuUFNxHW9TwtzNkI0lmhEEMMw2jrKE/view\">Codex · RHP A/B pri 768 tokenih<\/a> (Drive; lahko zahteva pooblastilo)<\/li><li id=\"src-cli-conference\"><a href=\"https://drive.google.com/file/d/1Y0Zh8xRv_KrtFf6l6mnm14SC-UywPF8G/view\">Codex · dodatni konferenčni R2 in RHP 2048<\/a> (Drive; lahko zahteva pooblastilo)<\/li><li id=\"src-cli-r4\"><a href=\"https://drive.google.com/file/d/19Wigmr4b1HoTkTSfB7KOnstMOvwkzlRA/view\">R4 povezava<\/a><\/li><li id=\"src-cli-r5\"><a href=\"https://drive.google.com/file/d/1p7ThG61edOpKnnEobadcXAuv0eTa2t4R/view\">R5 lokalni in API testi<\/a><\/li><li id=\"src-cli-tspts\"><a href=\"https://drive.google.com/file/d/1xqP0gOyTb0Hl8kxy9Pyt_7rqwS1PcgNG/view\">TSPTS HOME<\/a><\/li><li id=\"src-cli-exact\"><a href=\"https://drive.google.com/file/d/1mEobwdzH2AsPyUh3uqltVRLgiWZG0p_I/view\">Mali eksaktni TSP<\/a><\/li><\/ul><\/main><\/body><\/html>"
+  }
+}
+</script><script>
+(()=>{'use strict';
+const el=document.getElementById('r3-documents'); if(!el)return;
+const docs=JSON.parse(el.textContent);
+document.addEventListener('click',e=>{
+ const opener=e.target.closest('[data-r3-open]');
+ if(opener){const d=docs[opener.dataset.r3Open];if(!d)return;e.preventDefault();
+ const url=URL.createObjectURL(new Blob([d.text],{type:d.type}));
+ const tab=window.open(url,'_blank','noopener');
+ setTimeout(()=>URL.revokeObjectURL(url),300000);return;
+ }
+ const a=e.target.closest('[data-r3-doc]');if(!a)return;
+ const name=a.dataset.r3Doc, d=docs[name];if(!d)return;e.preventDefault();
+ const url=URL.createObjectURL(new Blob([d.text],{type:d.type}));
+ const link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+});
+})();
+</script></body></html>

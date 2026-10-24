@@ -1,0 +1,61 @@
+{
+  "schema": "nara.daily.day.v1",
+  "id": "NARA-D-2026-10-16",
+  "date": "2026-10-16",
+  "published_at": "2026-10-16T19:13:44Z",
+  "regime": "THREE_STORY_CAPACITY_R8",
+  "cutoff_local": "20:30",
+  "featured_instance": "S1",
+  "selection_method": "Editorial story selection; current reader ratings are displayed separately.",
+  "story_count": 3,
+  "instances": [
+    {
+      "instance": "S1",
+      "id": "NARA-D-2026-10-16:S1",
+      "title": "FOUR KILOMETRES OF THIN ICE",
+      "combined": 69.0,
+      "display": 69,
+      "gpt": 76,
+      "claude": 62,
+      "record_file": "daily/records/2026-10-16/S1.json",
+      "record_sha256": "e396191f9becac435de85ed109057c2bed4909d824b5e05d361b9507ad7d49bf",
+      "log_file": "daily/log/2026-10-16/S1.json",
+      "log_sha256": "aaf643520e453a3c96cf2cfc13cec0a330c85a6841cdf23946b3b3e955b74bd6",
+      "translation_file": "daily/translations/sl/2026-10-16/S1.json",
+      "translation_sha256": "0f1cb327d3f2fefd50c4108a1aba875ab1b6eb3d51d9e930c27a210cbdb19e40",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-16:S1"
+    },
+    {
+      "instance": "S2",
+      "id": "NARA-D-2026-10-16:S2",
+      "title": "THE COUGH THAT FOLLOWED THE BELLS",
+      "combined": 71.0,
+      "display": 71,
+      "gpt": 76,
+      "claude": 66,
+      "record_file": "daily/records/2026-10-16/S2.json",
+      "record_sha256": "03d53e96909a25d393ed22a6a4cc74d35009498bfea6c14b847017a83ec6ba2f",
+      "log_file": "daily/log/2026-10-16/S2.json",
+      "log_sha256": "e8636c5311acbbceefdff43937157a40e83e1203aef56cf36d8263a8b0aa40d2",
+      "translation_file": "daily/translations/sl/2026-10-16/S2.json",
+      "translation_sha256": "922e46f2a5a49618609405783baa1a6f7e18e0e257565e3b551ad38bcfaf366b",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-16:S2"
+    },
+    {
+      "instance": "S3",
+      "id": "NARA-D-2026-10-16:S3",
+      "title": "THE DAY WREN WAS RIGHT",
+      "combined": 68.0,
+      "display": 68,
+      "gpt": 74,
+      "claude": 62,
+      "record_file": "daily/records/2026-10-16/S3.json",
+      "record_sha256": "e329dae226793bcc89558b305e1dc246d78a6a1f1e974c1a73c5b2db2002935e",
+      "log_file": "daily/log/2026-10-16/S3.json",
+      "log_sha256": "5a03c0284a0bfa243ec4b1242a5848b27ce6da92dd301d7ee4e6439dc7043612",
+      "translation_file": "daily/translations/sl/2026-10-16/S3.json",
+      "translation_sha256": "eb80c937de85ecf84dbdc8514e10ee9c33814139531a2ed25636d7d3efae14b3",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-16:S3"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "nara.daily.day.v1",
+  "id": "NARA-D-2026-10-15",
+  "date": "2026-10-15",
+  "published_at": "2026-10-15T19:29:50.273Z",
+  "regime": "THREE_STORY_CAPACITY_R8",
+  "cutoff_local": "20:30",
+  "featured_instance": "S3",
+  "selection_method": "Editorial story selection; current reader ratings are displayed separately.",
+  "story_count": 2,
+  "instances": [
+    {
+      "instance": "S2",
+      "id": "NARA-D-2026-10-15:S2",
+      "title": "THE WHALE THAT CARRIED A WEATHER FRONT",
+      "combined": 75.0,
+      "display": 75,
+      "gpt": 82,
+      "claude": 68,
+      "record_file": "daily/records/2026-10-15/S2.json",
+      "record_sha256": "3dafacc9e9341e5ba6a47dbc3edc8acbd5f67c9a8419b2232e4414583e076ab8",
+      "log_file": "daily/log/2026-10-15/S2.json",
+      "log_sha256": "1d29c3cc46060f4339ce794c3b4650b28995547fe6b9a2a9d90aa612fbb3139d",
+      "translation_file": "daily/translations/sl/2026-10-15/S2.json",
+      "translation_sha256": "1028a89f44ae471af62cf348a780752f9ff75fca1a1f9da5d143c8e5a973a93c",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-15:S2"
+    },
+    {
+      "instance": "S3",
+      "id": "NARA-D-2026-10-15:S3",
+      "title": "ADAEZE AND THE EMPTY CHAIR",
+      "combined": 71.5,
+      "display": 72,
+      "gpt": 79,
+      "claude": 64,
+      "record_file": "daily/records/2026-10-15/S3.json",
+      "record_sha256": "7777cb73629e7e67caa80f489ee7b7f3b3815e3a08ede0e1e4896ca05f6be03a",
+      "log_file": "daily/log/2026-10-15/S3.json",
+      "log_sha256": "2da7f717f0c823f06958c4c37309988897697241141a50549a605540abe8690f",
+      "translation_file": "daily/translations/sl/2026-10-15/S3.json",
+      "translation_sha256": "1bdcdb004a431623d80fe2b82fa8f145bc2d562385728d188dec77dfdc343de3",
+      "monthly_anchor": "Nara-AI-2026-10.html#NARA-D-2026-10-15:S3"
+    }
+  ]
+}

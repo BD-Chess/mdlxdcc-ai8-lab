@@ -1,0 +1,22 @@
+{
+  "schema_version": "8z-control.v0.1",
+  "title": "BD Arena Morning Delta",
+  "generated_at": "2026-09-12T22:39:43+02:00",
+  "previous_successful_refresh": "2026-09-12T17:18:51+02:00",
+  "source_boundary": "GPT PROJECT EXACT UPLOAD + VERIFIED GOOGLE DRIVE LIVE EXTRACTS",
+  "mode": "BD_AI8_EXACT_PROJECT_SUDOKU_REFRESH",
+  "message": "Exact final Sudoku HF4 extract: bounded master acceptance and P1/P2/P3 pilots PASS; arena moved RUNNING → STANDBY. The long scientific campaign remains NOT_STARTED.",
+  "changes": [
+    {
+      "timestamp": "2026-09-12T22:39:43+02:00",
+      "arena_id": "sudoku-r6-proofatlas",
+      "old_status": "RUNNING",
+      "new_status": "STANDBY",
+      "old_value": "HF4 acceptance/selftest 258/443 with 0 failures/errors",
+      "new_value": "Master 5/5 PASS; selftest 444/444 (441 PASS, 3 allowed SKIP); smoke 4/4 PASS; P1/P2/P3 PASS; long campaign executions 0; scientific_final=false",
+      "evidence": "HF3_ALL_LIVE_1789236581472973300.zip",
+      "source_project_chat": "Sudoku R6",
+      "confidence": "HIGH"
+    }
+  ]
+}

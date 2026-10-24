@@ -1,0 +1,40 @@
+{
+  "changes": [
+    {
+      "arena": "TSP DEV2.4 — NU3496 Hard-Tail",
+      "arena_id": "tsp-dev24-nu3496",
+      "before": "Generation 31,914 · 509,699 proposals · best 96,780",
+      "now": "Generation 38,988 · 622,681 proposals · best still 96,780",
+      "type": "PROGRESS / NO NEW BEST"
+    },
+    {
+      "arena": "BD-RPHS — UY734",
+      "arena_id": "bd-rphs-uy734",
+      "before": "W4 best 79,374 · cycle 154 · 1,234 chunks",
+      "now": "W4 best 79,320 · cycle 174 · 1,393 chunks",
+      "type": "VERIFIED IMPROVEMENT"
+    },
+    {
+      "arena": "BB Surfing Hedge / SOL Neutral Lock",
+      "arena_id": "bb-surfing-hedge",
+      "before": "RUNNING · 18,673/20,160 behavior groups",
+      "now": "DONE · v0.1.3 complete · audits PASS · 11/11 NO_POSITIVE_VALIDATED_MAINLINE",
+      "type": "COMPLETION / NEGATIVE VALIDATION"
+    },
+    {
+      "arena": "BD Trading Atlas",
+      "arena_id": "bdta-v014",
+      "before": "1,932/2,495 complete",
+      "now": "2,119/2,495 complete · 376 pending · 0 task-status errors",
+      "type": "PROGRESS"
+    }
+  ],
+  "generated_at": "2026-09-18T09:13:51+02:00",
+  "last_successful_refresh": "2026-09-16T09:00:31+02:00",
+  "message": "3 material arena-state changes since previous refresh.",
+  "mode": "DAILY_PROJECT_CHAT_REFRESH",
+  "previous_successful_refresh": "2026-09-15T09:16:37+02:00",
+  "schema_version": "8z-control.v0.1",
+  "source_boundary": "CHATGPT PROJECT CHATS ONLY; PROJECT FILES MAY CORROBORATE",
+  "title": "BD Arena Morning Delta"
+}

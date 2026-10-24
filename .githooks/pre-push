@@ -1,0 +1,8 @@
+#!/bin/sh
+case "$2" in
+  https://github.com/BD-Chess/mdlxdcc-ai8-lab.git|git@github.com:BD-Chess/mdlxdcc-ai8-lab.git)
+    exit 0 ;;
+  *)
+    echo 'AI8 lab: push target is outside this laboratory.' >&2
+    exit 1 ;;
+esac

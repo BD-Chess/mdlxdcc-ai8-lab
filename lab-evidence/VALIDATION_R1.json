@@ -1,0 +1,16 @@
+{
+  "schema": "ai8.lab-validation.v1",
+  "source_sha": "89276ce7bcaa975127e1263dd23ddf94f451699c",
+  "status": "PASS",
+  "source_files_verified": 5189,
+  "source_bytes_hashed": 1594565300,
+  "text_files_scanned": 3649,
+  "errors": [],
+  "not_run": [
+    "full application tests",
+    "browser acceptance",
+    "research",
+    "benchmarks",
+    "deployment"
+  ]
+}

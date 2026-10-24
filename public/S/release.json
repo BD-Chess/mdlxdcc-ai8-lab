@@ -1,0 +1,22 @@
+{
+  "schema": "8ZSUDOKU_CHANNEL_RELEASE_V2",
+  "channel": "CURRENT",
+  "release_id": "4fc9ff58fab93a81449a6d772a527e2fc7fe5632243aab8639b57c0e4e77e405",
+  "engine_revision": "0.3.0",
+  "source_policy": "SAME_CHANNEL_NO_GAME_COPY",
+  "assets_sha256": {
+    "index.html": "e0589f0b88e6a6391f2ac79b3b92e7917055c482e51e522f6d7a79d0620bfe4c",
+    "manifest.webmanifest": "9c2f843e6e1ea992d951944ca665b575494bb8ecf1dc16572dbe3723608f8efe",
+    "_pwa/client.js": "8d8213622b67fd5b8d8f0819466df6c397036e803ed5414ba6b8555e9065672d",
+    "_pwa/i18n.js": "a72594e73f198bd46b7b3d347ebcff57506436c7e63fab29244b0fcea87c31cb",
+    "_pwa/shell.css": "c2c4f904e9ddd3558aad392e1a76d75efbd380e20a8e9eb270ffac85955216f9",
+    "_pwa/icon-180.png": "7b37fd37188cdabb964280c0894731403609d361fe84ee86e23d4a9132e5b2aa",
+    "_pwa/icon-192.png": "3b1c7cbba4868a6dcbf32fb0d50475185445950a1cafa11ab2d556aa894d2cfb",
+    "_pwa/icon-512.png": "85649c7a4201e274818dbc808530794ffacb3828195b04d01e69b6686769fdbc",
+    "current/index.html": "e5af3f7345fd506ec3d59a811fc482ae19204334809171b595a4898618c6c3ba",
+    "current/promotion.json": "341e000adb4071e7c06476ff92045329c7ed00ec0c64af1532a6248a133f4a15",
+    "app.html": "a004da88bccc50afc80a7c0bbdc55db528b90b2cdb34c82ad5a675ef2c2834d4"
+  },
+  "worker_runtime_sha256": "3dccbe472f27c944c16d2ff7ab55ea571c07a072a90d2f46a14c35069a5addd4",
+  "worker_sha256": "83a4eb73803c229c1212acfc9ab190c7e7e3b9eae8e8e22658672950196b1e39"
+}

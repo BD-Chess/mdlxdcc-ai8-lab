@@ -1,0 +1,278 @@
+{
+  "schema": "bd.dfc.public-comic.v1",
+  "story_id": "CMARVEL_01",
+  "version": 1,
+  "access": "PUBLIC_RND_PREVIEW",
+  "pages": [
+    {
+      "page_id": "CM_01",
+      "file": "assets/CM_01.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "fa1b62a0c1fdf9416f5283c4a81ea06680c4201e84e95559ab75a320aad1394f",
+      "bytes": 438916
+    },
+    {
+      "page_id": "CM_02",
+      "file": "assets/CM_02.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "aaa9b18276e00acaaf42e06a75822849122b3c159b65934cbc4fa91de4d75c1c",
+      "bytes": 214698
+    },
+    {
+      "page_id": "CM_03",
+      "file": "assets/CM_03.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "290fd6df30094d9f45333c0f4c14e6a969edec86b5e33a519450b0a946a48ba3",
+      "bytes": 435974
+    },
+    {
+      "page_id": "CM_04",
+      "file": "assets/CM_04.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "1a7c1a7bcf1ea035bbd110c4f7b50d145875648e7b7403346006f17ee0fc8548",
+      "bytes": 466710
+    },
+    {
+      "page_id": "CM_05",
+      "file": "assets/CM_05.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "dd4b147099708ff8c27d26c0008ed3f9458afba575c075321f6a5dc040bb47cc",
+      "bytes": 399606
+    },
+    {
+      "page_id": "CM_06",
+      "file": "assets/CM_06.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "cc3dc24a9cf366c7074655070c95b9355aab448b7f716288a3bbf19518bd40b1",
+      "bytes": 428418
+    },
+    {
+      "page_id": "CM_07",
+      "file": "assets/CM_07.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "18c36228e1cc6b0d4744ac053c31056d95db1d118e22500ed35f50a9fe1dff9b",
+      "bytes": 405594
+    },
+    {
+      "page_id": "CM_08",
+      "file": "assets/CM_08.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "d85c9a958c5af852fdd8a4d2116769000c768c7d28069fb4da8e7ada3fb6828d",
+      "bytes": 241070
+    },
+    {
+      "page_id": "CM_09",
+      "file": "assets/CM_09.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "f4bac75da2e127443e61a0fc4ef4c09245865baf915e29750569b9f2b9bd67a2",
+      "bytes": 371282
+    },
+    {
+      "page_id": "CM_10",
+      "file": "assets/CM_10.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "a55ad2642c3bf744b555770c68988abd252647b173a8ac37286a2ff1916c4a54",
+      "bytes": 442794
+    },
+    {
+      "page_id": "CM_11",
+      "file": "assets/CM_11.webp",
+      "mime": "image/webp",
+      "width_px": 3840,
+      "height_px": 2160,
+      "sha256": "56d97fc715a717b5af8abc6bc24518b66df578e95851946351afc1c15dd79cb3",
+      "bytes": 267536
+    }
+  ],
+  "art_review": {
+    "schema": "bd.dfc.cmarvel.art-review.v1",
+    "version": 1,
+    "status": "UNREVIEWED",
+    "page_id": "CM_01",
+    "pair_count": 6,
+    "pairs": [
+      {
+        "panel_id": "CM01-P01-K01",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K01-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "a85fada3b432017e69ba9dff3ed75744c1b177147437b953064d50b01daf7d0b",
+          "bytes": 1465962,
+          "orientation": "P",
+          "candidate": "A02",
+          "source_sha256": "d8d0fd6c2f147b4de652ac7966b35345b2b9684c3f332dd5769f46b57c53f523",
+          "source_bytes": 7691396
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K01-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "7a996409f601716ff208db4aeffa03ffa93237aa937f2b067a953e09c66ef75d",
+          "bytes": 1266792,
+          "orientation": "L",
+          "candidate": "A02",
+          "source_sha256": "ea92468a07162616bf0509dd1a4e6f1cdb3744e3fcea4e9d409d7239b11f299b",
+          "source_bytes": 7155009
+        }
+      },
+      {
+        "panel_id": "CM01-P01-K02",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K02-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "ffa521b8c3e961d444b708ee3efa65b2325f5ce5901a8714884619d83d6b85df",
+          "bytes": 1193106,
+          "orientation": "P",
+          "candidate": "A01",
+          "source_sha256": "05435b8963b1a967d9609280b3cb64d5e81c36e0a2b070eb04f0598d7df3d440",
+          "source_bytes": 6940421
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K02-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "ca07e6b3ab51ba5b9323355ab789dee6c0d061a2d0d92f2fc53c202b92ee57e2",
+          "bytes": 1159368,
+          "orientation": "L",
+          "candidate": "A01",
+          "source_sha256": "9f0ae7b9a909f31050eeb2b5a6cf7526bd41a8d35741247bbce37bc25e6e679c",
+          "source_bytes": 6827211
+        }
+      },
+      {
+        "panel_id": "CM01-P01-K03",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K03-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "943de072bba7560ff864ab5c8774dfd7369fa74400d20cd0400382a37367c658",
+          "bytes": 1430198,
+          "orientation": "P",
+          "candidate": "A02",
+          "source_sha256": "fec7f07d568043be1afb05a8da0123aa091ee06b3ec01a69dc35dce2f11d8fb4",
+          "source_bytes": 7636145
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K03-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "f139e8a9c156d397d7fa736ccd6097f5894750693aaa6c3eae326a01ee22ede8",
+          "bytes": 1490028,
+          "orientation": "L",
+          "candidate": "A02",
+          "source_sha256": "e80bfff1d99ac36af43655bbc911494a8f067db7d36bfa19ca83a7eaf90cd985",
+          "source_bytes": 7939656
+        }
+      },
+      {
+        "panel_id": "CM01-P01-K04",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K04-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "d85bb3cad61e0c91225d026387b7fc637697b48f7a59699bcbea96ffb09a26ac",
+          "bytes": 1256818,
+          "orientation": "P",
+          "candidate": "A01",
+          "source_sha256": "9b9463586c6ee498f4c96452440168f9c02fc30d059579d5135bf549b0fe1013",
+          "source_bytes": 7136033
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K04-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "89204e5db5d4c1497d6c3679be18b3daa99e63808cac34e7d21d446267a73474",
+          "bytes": 1320906,
+          "orientation": "L",
+          "candidate": "A01",
+          "source_sha256": "98a3f41ba67c1c3d23656bdbf34dac654fdd8161024d6a8e5cd33ea2b97ce263",
+          "source_bytes": 7266908
+        }
+      },
+      {
+        "panel_id": "CM01-P01-K05",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K05-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "efefa7bf706453f1e83dbf5fb3c64e9a44125b367227e22b0c016df841baf876",
+          "bytes": 836216,
+          "orientation": "P",
+          "candidate": "A02",
+          "source_sha256": "885342818d4d392484b254980ed6dabd8dec4d27e2d6c2346d436b55d4dfcabe",
+          "source_bytes": 5901685
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K05-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "66730f2a1b4e0565d805a85f1f260c1b9ee6e970db103a695f023ce0edc23426",
+          "bytes": 1086200,
+          "orientation": "L",
+          "candidate": "A02",
+          "source_sha256": "9b02cf82c3cae197e6323040624bacc26e603a0eacf7c44cd497c2482bd39597",
+          "source_bytes": 6678174
+        }
+      },
+      {
+        "panel_id": "CM01-P01-K06",
+        "portrait": {
+          "file": "assets/review/CM01-P01-K06-P.webp",
+          "mime": "image/webp",
+          "width_px": 1584,
+          "height_px": 2816,
+          "sha256": "ca3f79fca6b498aefc6f0fe8401a0460c4e92a12eb120eaebb7873a74511e391",
+          "bytes": 776538,
+          "orientation": "P",
+          "candidate": "A01",
+          "source_sha256": "730c6ae2a87c0046fa3ab2474d4ffd23907846e00579ac46f1126c1d487f3f33",
+          "source_bytes": 5629585
+        },
+        "landscape": {
+          "file": "assets/review/CM01-P01-K06-L.webp",
+          "mime": "image/webp",
+          "width_px": 2816,
+          "height_px": 1584,
+          "sha256": "7744589ae653c99775104a96bba0bcac3d1a6286524441bdfc0eee79c2062334",
+          "bytes": 1041736,
+          "orientation": "L",
+          "candidate": "A02",
+          "source_sha256": "5f06b07a000e6fbc30e2c56e706bd402923f71b416d295dbc95134f88e80c57a",
+          "source_bytes": 6314317
+        }
+      }
+    ]
+  }
+}

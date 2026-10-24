@@ -1,0 +1,28 @@
+{
+  "changes": [
+    {
+      "arena": "8zMaterials — MDL×DCC Native Compact",
+      "arena_id": "materials-v020-native",
+      "before": "Public register still pointed to v0.2.0F at next epoch 2,276 · 75 F2 · 72 L2.",
+      "now": "Current v0.3.0C1HF2 compact W8 FORK1 is verified running through epoch 1,863 · 10,796 attempts · F2=110 · L2=454 · 8 CPU.",
+      "type": "VERSION / ACTIVE-LINEAGE CORRECTION"
+    },
+    {
+      "arena": "8zCockpit — Auto Live Extract & Bounded Control",
+      "arena_id": "8zcockpit-v020",
+      "before": "v0.2.0 TEST · 87/87 checks · local acceptance pending.",
+      "now": "v0.3.3-HF1 build PASS; parent v0.3.3 Home Windows PASS; Work Materials routing acceptance still pending.",
+      "type": "VERSION / BUILD + ACCEPTANCE"
+    }
+  ],
+  "generated_at": "2026-09-20T09:01:25+02:00",
+  "last_successful_refresh": "2026-09-20T09:01:25+02:00",
+  "message": "2 material project-state changes since previous refresh.",
+  "mode": "DAILY_REFRESH",
+  "previous_successful_refresh": "2026-09-20T01:00:00+02:00",
+  "schema_version": "8z-control.v0.1",
+  "source_boundary": "GPT PROJECT CHATS ONLY; PROJECT FILES MAY CORROBORATE",
+  "title": "BD Arena Morning Delta"
+}
+
+

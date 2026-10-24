@@ -1,0 +1,528 @@
+{
+  "family_order": [
+    "TSP",
+    "TSP / Product",
+    "TSP / Chess",
+    "Trading",
+    "Trading / Reasoning",
+    "Sudoku",
+    "Materials",
+    "AI8 / Research Infrastructure",
+    "AGI / Reasoning",
+    "Physics / Engineering",
+    "8Z / Compression"
+  ],
+  "freshness_observations": [
+    {
+      "evidence": "Verified Home TSP bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260918_014400_225678.zip; source files read-only and active solver processes unmodified by collector.",
+      "inference": "DEV2.4 committed work advanced without a better incumbent; RPHS W4 improved while the historical W6 null-control best remains lower.",
+      "observed_at": "2026-09-18T01:44:00.225678+02:00",
+      "scope": "TSP / DEV2.4 + RPHS",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Verified Home Trading bundle TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_2_20260918_014459_945304.zip; BBSH v0.1.3 RUN_COMPLETE=true; audits PASS; persistent errors 0.",
+      "inference": "The v0.1.3 engineering run is complete. 11/11 NO_POSITIVE_VALIDATED_MAINLINE is a negative validation result, not profitability evidence.",
+      "observed_at": "2026-09-18T01:45:00.064299+02:00",
+      "scope": "BB Surfing Hedge v0.1.3",
+      "status": "VERIFIED COMPLETE"
+    },
+    {
+      "evidence": "Verified Work Trading compact bundle TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_1_20260914_135827_433537.zip; TASK_STATUS contains 2,119 COMPLETE and 376 PENDING tasks, 0 task errors.",
+      "inference": "BDTA progress advanced to 84.93%, but release promotion gates remain false/open.",
+      "observed_at": "2026-09-14T13:58:27.788432+02:00",
+      "scope": "BD Trading Atlas v0.1.4-HF3",
+      "status": "VERIFIED PROGRESS"
+    },
+    {
+      "evidence": "GitHub main contains encrypted journal entry e000007 and the Legacy WL owner-only probe/transport; scheduled WL control witness run 11 completed SUCCESS and its observe job verified the production pause flag path.",
+      "inference": "The Legacy control/continuity repair is operationally evidenced. This is not evidence that the converged R6 system is live-accepted.",
+      "observed_at": "2026-09-13T12:52:08+02:00",
+      "scope": "AI8 Wake Lab Legacy",
+      "status": "VERIFIED"
+    },
+    {
+      "availability": "Master collector receipt and hash sidecar are in Google Drive; the ZIP binary was not located in Google Drive or OneDrive during this refresh.",
+      "bundle": "TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260913_114637_314251.zip",
+      "inference": "No TSP arena result or status is promoted from receipt-only evidence.",
+      "observed_at": "2026-09-13T11:46:55+02:00",
+      "scope": "TSP",
+      "sha256": "23aec6179c1ee4e9d6a82761d7a392a64cee79878f5c703dcd604922baf48b59",
+      "status": "CAPTURE_RECEIPT_ONLY"
+    },
+    {
+      "availability": "Master collector receipt and hash sidecar are in Google Drive; the ZIP binary was not located in Google Drive or OneDrive during this refresh.",
+      "bundle": "TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_2_20260913_114655_284056.zip",
+      "inference": "No Trading arena result or status is promoted from receipt-only evidence.",
+      "observed_at": "2026-09-13T11:46:55+02:00",
+      "scope": "Trading",
+      "sha256": "fba34b4dafec0eab9998471eb741f8d2ef4195edc4a9194275f1ae48f47ab6d3",
+      "status": "CAPTURE_RECEIPT_ONLY"
+    },
+    {
+      "evidence": "Project-chat report: e000013 EXACT_READBACK_PASS; Gmail wake enabled with last_run_time=null and no source=GMAIL_WEBHOOK STARTED/PASS receipt.",
+      "inference": "Legacy hourly fallback is alive. The Gmail event → subscription → platform Trigger → Work invocation path is not operationally proven.",
+      "observed_at": "2026-09-13",
+      "scope": "AI8 Wake Lab Legacy/event wake",
+      "status": "PARTIAL: FALLBACK VERIFIED / EVENT BLOCKED"
+    },
+    {
+      "evidence": "Project-chat v2.0 builder mandate for isolated /trip/new/ work plus BD-confirmed working baseline.",
+      "inference": "A BUILD stream exists; assignment alone is not RUNNING or completion evidence.",
+      "observed_at": "2026-09-13",
+      "scope": "Trip Optimizer MDL×DCC upgrade",
+      "status": "BUILD ASSIGNED"
+    },
+    {
+      "evidence": "Direct project-chat screenshot/report: five configured TSP targets alive; DEV2.4 generation 31,914 / 509,699 proposals; BD-RPHS cycle 154 / 1,234 chunks. v0.2 package reports 87/87 tests PASS.",
+      "inference": "The five monitored TSP processes were alive at observation. This does not prove Windows acceptance of the new bounded watchdog or update unshown numerical checkpoints.",
+      "observed_at": "2026-09-16",
+      "scope": "8zCockpit / Home TSP process health",
+      "status": "FIVE TARGETS ALIVE / V0.2 TEST PENDING"
+    },
+    {
+      "evidence": "Verified Home TSP bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260918_215735_311904.zip and Work TSP bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260918_213719_445994.zip; source archives CRC/hash verified by collector and parsed read-only.",
+      "inference": "DEV2.4, RPHS, relational-native v0.1.1 and MVC all advanced in committed work without a new solver-quality incumbent; claim status remains unchanged.",
+      "observed_at": "2026-09-18T22:56:00+02:00",
+      "scope": "TSP / DEV2.4 + RPHS + 8zTSP-R v0.1.1 + 8zTSP-R MVC",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Verified newest Home TSP bundle 20260920_004426 and Work TSP bundle 20260919_224934; Home Trading 20260920_004534 and Work Sudoku 20260920_003230 also inspected.",
+      "inference": "Material public deltas exist in four TSP lines; TSPES/Trading/Sudoku claim states unchanged.",
+      "observed_at": "2026-09-20T01:00:00+02:00",
+      "scope": "LE UPDATE / TSP + Trading + Sudoku",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Current 8zMaterials v0.3.0C1HF2 project log resumed the accepted compact W8 FORK1 at epoch 1,846 and advanced through epoch 1,863 with 10,796 attempts, F2=110 and L2=454.",
+      "inference": "The current Materials successor fork is directly RUNNING. Its lower epoch numbering is a lineage boundary, not a regression; screening evidence does not establish a stable material.",
+      "observed_at": "2026-09-20T00:24:49+02:00",
+      "scope": "8zMaterials v0.3.0C1HF2 / compact W8 FORK1",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Current 8zCockpit continuity pins v0.3.3-HF1 with all bounded build checks PASS; parent v0.3.3 Home Windows is accepted, while the HF1 Work Materials route remains pending.",
+      "inference": "The current Cockpit candidate is a tested hotfix, not yet a completed Work acceptance.",
+      "observed_at": "2026-09-19T22:08:52+02:00",
+      "scope": "8zCockpit",
+      "status": "BUILD PASS / WORK ACCEPTANCE PENDING"
+    },
+    {
+      "availability": "The 08:06 Home master receipt and SHA sidecars were present; the new TSP and Trading ZIP binaries were not yet present in the verified Drive folders at scan time.",
+      "evidence": "MASTER_LIVE_EXTRACT_RECEIPT_20260920_080633_662778.txt reports TSP PASS and Trading PASS.",
+      "inference": "No newer arena checkpoint is promoted from receipt/sidecar-only evidence.",
+      "observed_at": "2026-09-20T08:06:33+02:00",
+      "scope": "Home TSP + Trading Live Extract",
+      "status": "CAPTURE_RECEIPT_ONLY"
+    },
+    {
+      "evidence": "Verified complete Home bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260921_000441_256532.zip; parsed read-only.",
+      "inference": "DEV2.3, DEV2.4, MVC and RPHS advanced in committed work without a new listed incumbent.",
+      "observed_at": "2026-09-21T00:04:41+02:00",
+      "scope": "TSP / Home active arenas",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Direct Work 8zTSP-R v0.1.1 collector log through 00:45 local shows round 217, mu1979 instance 8/9, generation 1,732 and 13,856/13,888 proposals.",
+      "inference": "The relational-native line remains alive and distinct from MVC.",
+      "observed_at": "2026-09-21T00:45:19+02:00",
+      "scope": "8zTSP-R v0.1.1 relational-native",
+      "status": "VERIFIED RUNNING"
+    },
+    {
+      "evidence": "Materials collector log reports ROOT_BUDGET_EXHAUSTED at epoch 1,863 with checkpoint saved; Work master receipt reports TSP, Materials and Sudoku PASS with uploads.",
+      "inference": "Materials is a clean resumable STANDBY, while the Cockpit Work routing gate is complete.",
+      "observed_at": "2026-09-21T00:42:11+02:00",
+      "scope": "8zMaterials v0.3.0C1HF2 + 8zCockpit v0.3.3-HF1",
+      "status": "VERIFIED STOP / ACCEPTANCE PASS"
+    },
+    {
+      "evidence": "Verified Home TSP bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260922_080722_431759.zip and Work TSP bundle TSP_ACTIVE_ARENAS_LIVE_EXTRACTS_20260922_123102_971803.zip; parsed read-only.",
+      "inference": "DEV2.4, TSPES, RPHS, MVC and relational-native advanced in committed work; DEV2.3 heartbeat reconfirmed alive. TSPES lu980 improved to 11,352.",
+      "observed_at": "2026-09-22T12:31:02+02:00",
+      "scope": "TSP / six retained lineages",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Verified Work Materials bundle 8zMaterials_HF2_FORK1_LIVE_EXTRACT_20260922_124109_975911.zip; SHA-256 a3f616d5e6fa51b782b5ae0e83ea0d65cae05c23a57c4d685f9fd0959bd5b09d.",
+      "inference": "Fresh PARTIAL_HISTORY rich evidence reconfirms the frozen FORK1 at next_epoch 1863, F2=110, L2=454. This remains ML screening only.",
+      "observed_at": "2026-09-22T12:41:09+02:00",
+      "scope": "8zMaterials v0.3.0C1HF2 FORK1",
+      "status": "VERIFIED STANDBY"
+    },
+    {
+      "evidence": "Verified Work Sudoku bundle SUDOKU_ACTIVE_ARENAS_LIVE_EXTRACTS_1_20260922_124241_149645.zip.",
+      "inference": "Fresh capture reconfirms the bounded final: 467 runtime task IDs, master 5/5 PASS; long/protected scientific campaign executions remain 0 and scientific_final=false.",
+      "observed_at": "2026-09-22T12:42:41+02:00",
+      "scope": "Sudoku R6",
+      "status": "VERIFIED STANDBY"
+    },
+    {
+      "evidence": "Verified Home Trading bundle TRADING_ACTIVE_ARENAS_LIVE_EXTRACTS_2_20260922_080828_978906.zip.",
+      "inference": "BBSH v0.1.3 terminal state is unchanged and freshly reconfirmed: audits PASS, persistent errors 0, all 11 validation releases NO_POSITIVE_VALIDATED_MAINLINE.",
+      "observed_at": "2026-09-22T08:08:28+02:00",
+      "scope": "BB Surfing Hedge v0.1.3",
+      "status": "VERIFIED COMPLETE"
+    },
+    {
+      "evidence": "8zCockpit continuity R21 with before/after Work logs: Collector job 20260922T093502_126bcb3171; 52/52 upload copy operations successful; TSP, Materials and Sudoku PASS; Drive readback PASS; Trading intentionally not active on Work.",
+      "inference": "Home and Work supported Live Extract transport are end-to-end healthy. BD Trading Atlas must not remain operationally RUNNING from an older checkpoint merely because 376 tasks are pending.",
+      "observed_at": "2026-09-22T09:48:00+02:00",
+      "scope": "8zCockpit + Work operational state",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence": "Direct 8zCockpit status snapshots: Home observed 2026-09-22T08:12:36+02:00 with DEV2.3, DEV2.4, TSPES, RPHS and MVC ALIVE; Work observed 2026-09-22T12:46:48+02:00 with Materials W8 and 8zTSP-R v0.1.1 ALIVE.",
+      "inference": "Native process liveness supersedes older operational summaries. Materials is operationally RUNNING again in RUN_38 persistent INSPECT resume, while its scientific snapshot remains bounded at epoch 1,863 until new committed research evidence appears.",
+      "observed_at": "2026-09-22T12:46:48+02:00",
+      "scope": "8zCockpit direct process health / Home + Work",
+      "status": "VERIFIED RUNNING PROCESS STATE"
+    },
+    {
+      "evidence": "Home MASTER_LIVE_EXTRACT_RECEIPT_20260923_080810_892044.json: TSP PASS and Trading PASS; Materials SKIP because the current HF2/FORK1 line is not installed; Sudoku SKIP because no supported live-extract contract is installed.",
+      "inference": "Fresh Home capture artifacts were produced, but receipt/current-view evidence alone does not promote a newer scientific checkpoint. Existing verified TSP/Trading claims remain unchanged pending byte-level review of the new bundles.",
+      "observed_at": "2026-09-23T08:08:10+02:00",
+      "scope": "Home TSP + Trading / Live Extract capture",
+      "status": "CAPTURE_RECEIPT_ONLY"
+    },
+    {
+      "evidence": "Work MASTER_LIVE_EXTRACT_RECEIPT_20260923_095111_990336.json: TSP PASS, Materials PASS, Sudoku PASS; Trading SKIP because no supported/active Work Trading arena was detected. Materials bundle SHA-256 1259e6ce59511c8c258bb89bb375e8ed4f078b3a20643d5f80d6de28c375bb63.",
+      "inference": "Fresh Work capture artifacts were produced. No newer scientific result is promoted from receipt/current-view evidence alone; the 22 Sep rich-extract checkpoints remain the current verified scientific state.",
+      "observed_at": "2026-09-23T09:51:11+02:00",
+      "scope": "Work TSP + Materials + Sudoku / Live Extract capture",
+      "status": "CAPTURE_RECEIPT_ONLY"
+    }
+  ],
+  "generated_at": "2026-09-23T09:51:11+02:00",
+  "last_successful_refresh": "2026-09-23T09:51:11+02:00",
+  "machines": [
+    {
+      "active_arena_ids": [
+        "tsp-dev23-nu3496",
+        "8ztsp-r-multiview",
+        "tsp-dev24-nu3496",
+        "tspes-v0142",
+        "bd-rphs-uy734"
+      ],
+      "allocation_note": "Do not infer or rebalance GPU/CPU scheduling beyond direct arena evidence; do not interrupt stable active arenas solely to optimize allocation.",
+      "cpu_capacity": "~14 usable CPU workers",
+      "gpu": "NVIDIA RTX 3080 Laptop GPU",
+      "known_active_allocation": "Five Home TSP lineages are directly ALIVE in the 08:12 Cockpit snapshot: DEV2.3 cycle 26 / branch 3 / 178 variants; DEV2.4 generation 55,935 / 893,426 proposals; TSPES lu980 best 11,352; RPHS cycle 226 / 1,811 chunks; MVC generation 8 / 32 proposals.",
+      "machine": "Home PC"
+    },
+    {
+      "active_arena_ids": [
+        "8ztsp-r-v011-relational-native",
+        "materials-v020-native"
+      ],
+      "allocation_note": "Preferred for isolated build, test, and resume checks when capacity is available.",
+      "cpu_capacity": "~12 usable CPU workers",
+      "gpu": null,
+      "known_active_allocation": "12:46 Cockpit snapshot directly shows 8zTSP-R v0.1.1 and 8zMaterials v0.3.0C1HF2 W8 ALIVE. BD Trading Atlas remains STANDBY; Sudoku R6 remains STANDBY.",
+      "machine": "Work PC"
+    }
+  ],
+  "needs_bd": [],
+  "partial_update_at": "2026-09-23T09:51:11+02:00",
+  "partial_update_scope": "23 Sep operational freshness refresh from verified Home/Work master receipts. Capture pipeline state was updated without promoting receipt-only artifacts into scientific arena-state changes.",
+  "projects": [
+    {
+      "arena_ids": [
+        "tsp-dev23-nu3496",
+        "8ztsp-r-multiview",
+        "8ztsp-r-v011-relational-native",
+        "tsp-dev24-nu3496",
+        "tspes-v0142",
+        "bd-rphs-uy734"
+      ],
+      "last_change": "22 Sep direct Cockpit + rich evidence: DEV2.3 ALIVE at cycle 26 / branch 3 / 178 variants; DEV2.4 at generation 55,935 / 893,426 proposals; TSPES lu980 best 11,352; MVC generation 8 / 32; relational-native round 241 with process ALIVE; RPHS cycle 226 / 1,811 chunks.",
+      "next_action": "Protect all six live TSP lineages; preserve comparator/null-control provenance and require committed native evidence for scientific claims.",
+      "project": "TSP & TSPES",
+      "status": "RUNNING"
+    },
+    {
+      "arena_ids": [
+        "tspts-thin-solver"
+      ],
+      "last_change": "Current resume-safe comparator retained",
+      "next_action": "Use only the current family build when capacity opens.",
+      "project": "TSP Solver Family",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "8zchess-paired-ab",
+        "chesstsp"
+      ],
+      "last_change": "Paired runner remains to be located/built",
+      "next_action": "Build the paired runner before moving to the ChessTSP research sequence.",
+      "project": "ChessBest",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "sudoku-r6-proofatlas"
+      ],
+      "last_change": "22 Sep fresh Work extract reconfirms the bounded final: 467 runtime task IDs, master 5/5 PASS; protected/long scientific campaign executions remain 0 and scientific_final=false.",
+      "next_action": "Retain the bounded result and decide/design a separately identified long scientific campaign or successor; do not promote pilot evidence into a scientific superiority claim.",
+      "project": "Sudoku R6",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "materials-a3-legacy"
+      ],
+      "last_change": "BD directly confirmed the legacy A3 arena finished and released its two CPU workers; the final post-stop rich extract is not yet verified.",
+      "next_action": "Capture and retain the final rich extract; keep the completed legacy line as a comparator.",
+      "project": "8zMaterials",
+      "status": "DONE"
+    },
+    {
+      "arena_ids": [
+        "materials-v020-native"
+      ],
+      "last_change": "22 Sep 12:46 Work Cockpit status shows the v0.3.0C1HF2 W8 native process ALIVE in RUN_38 persistent INSPECT resume. The fresh rich scientific snapshot still ends at next_epoch 1,863 with F2=110, L2=454 and PARTIAL_HISTORY coverage.",
+      "next_action": "Leave the live W8 process undisturbed. Promote scientific progress only from a newer committed native checkpoint/extract; no stable-material claim.",
+      "project": "8zMaterials v0.3.0",
+      "status": "RUNNING"
+    },
+    {
+      "arena_ids": [
+        "bb-surfing-hedge"
+      ],
+      "last_change": "22 Sep fresh Home Trading extract reconfirms the completed v0.1.3 terminal state unchanged: audits PASS, persistent errors 0, all 11 validation releases NO_POSITIVE_VALIDATED_MAINLINE.",
+      "next_action": "Retain this as a completed negative/disciplining result; any successor should start from a new hypothesis with the same claim boundaries.",
+      "project": "BB Surfing Hedge",
+      "status": "DONE"
+    },
+    {
+      "arena_ids": [
+        "bb-hybrid-v040",
+        "bb-reanchor-v016",
+        "trading-arenas-v234",
+        "q1s-dets-full-rnd",
+        "trading-full-rnd-v241"
+      ],
+      "last_change": "Reanchor successor remains in build; authority lines preserved",
+      "next_action": "Audit the successor and resume only the same retained master where status warrants it.",
+      "project": "Trading",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "bdta-v014"
+      ],
+      "last_change": "22 Sep operational correction: no Trading arena was running on Work during the verified collector test. The last verified scientific cut remains 2,119/2,495 COMPLETE (84.93%), 376 pending.",
+      "next_action": "Keep the retained Atlas state in STANDBY. Resume deliberately only if this line is selected again; promotion gates and the SQLite/WAL/native close questions remain open.",
+      "project": "BD Trading Atlas",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "ac-wfp-v031a1"
+      ],
+      "last_change": "Rich3 checkpoint remains retained",
+      "next_action": "Make a status extract before spending compute.",
+      "project": "AC-WFP",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "apsv-v053-weekly",
+        "wfera-v052-master",
+        "kpa-v051"
+      ],
+      "last_change": "KPA v0.5.1 final completion confirmed",
+      "next_action": "Resume the retained weekly/master lines only after status checks.",
+      "project": "APSV",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "arc3-v055-r2",
+        "arc2-bridge-v02"
+      ],
+      "last_change": "Resumable ladder state retained",
+      "next_action": "Run status first; preserve existing runs and fall back to W1 if required.",
+      "project": "ARC-AGI",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "amr-v13-final"
+      ],
+      "last_change": "Existing runlog remains the authority",
+      "next_action": "Check runlog/process before any resume; never start fresh.",
+      "project": "AMR Arena",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "hsr-bdta-final"
+      ],
+      "last_change": "Final locked-holdout line closed",
+      "next_action": "Keep as evidence only.",
+      "project": "HSR / BDTA",
+      "status": "DONE"
+    },
+    {
+      "arena_ids": [
+        "hsr-pix-parity"
+      ],
+      "last_change": "Reports conflict on final branch identity",
+      "next_action": "Locate the final artifact before assigning any outcome.",
+      "project": "HSR / PiX",
+      "status": "UNCERTAIN"
+    },
+    {
+      "arena_ids": [
+        "mind-of-minds-r2"
+      ],
+      "last_change": "R2 package workstream remains open",
+      "next_action": "Complete and audit the R2 package without losing the baseline.",
+      "project": "Mind of Minds",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "nas"
+      ],
+      "last_change": "No current direct operational record located",
+      "next_action": "Recover the canonical project evidence before allocating compute.",
+      "project": "NAS",
+      "status": "UNCERTAIN"
+    },
+    {
+      "arena_ids": [
+        "dgte-v07"
+      ],
+      "last_change": "v0.7 builder prompt exists",
+      "next_action": "Build the W4 bench, then deepen only on signal.",
+      "project": "DGTE",
+      "status": "TEST"
+    },
+    {
+      "arena_ids": [
+        "sora"
+      ],
+      "last_change": "Current boundary remains a spec",
+      "next_action": "Formalize a runnable test boundary.",
+      "project": "SORA",
+      "status": "NEXT"
+    },
+    {
+      "arena_ids": [
+        "hth"
+      ],
+      "last_change": "Retained as the low-cost physical gate",
+      "next_action": "Enter through DGTE v0.7 bench evidence.",
+      "project": "HTH",
+      "status": "TEST"
+    },
+    {
+      "arena_ids": [
+        "mghb"
+      ],
+      "last_change": "Retained as a DGTE-family experiment",
+      "next_action": "Specify a bounded family experiment.",
+      "project": "MGHB",
+      "status": "NEXT"
+    },
+    {
+      "arena_ids": [
+        "8ziplab-v024"
+      ],
+      "last_change": "Comparison freeze remains pending",
+      "next_action": "Verify state then use the retained W1 comparison.",
+      "project": "8zipLab",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "rezip-v025b"
+      ],
+      "last_change": "Archive completion remains unproven",
+      "next_action": "Check status before resuming the same master.",
+      "project": "8zip",
+      "status": "STANDBY"
+    },
+    {
+      "arena_ids": [
+        "rss-routesignal-v06b"
+      ],
+      "last_change": "Final campaign closed",
+      "next_action": "Open a new control universe only with a new question.",
+      "project": "RSS / RouteSignal",
+      "status": "DONE"
+    },
+    {
+      "arena_ids": [
+        "mal-aim3-mental-arena"
+      ],
+      "last_change": "Native acceptance remains next",
+      "next_action": "Use a disposable acceptance environment; preserve the production install.",
+      "project": "MAL / AIM³",
+      "status": "TEST"
+    },
+    {
+      "arena_ids": [
+        "bdaa-redesign"
+      ],
+      "last_change": "Old branch was intentionally retired",
+      "next_action": "Build the new justified-cap architecture; do not revive the old branch.",
+      "project": "BDAA",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "8z-audio-image-v21"
+      ],
+      "last_change": "Roadmap retained after 8zip gates",
+      "next_action": "Open only after frozen corpus audits.",
+      "project": "8Z Audio / Image",
+      "status": "NEXT"
+    },
+    {
+      "arena_ids": [
+        "ai8-arena-foundry"
+      ],
+      "last_change": "Public v0.1 R1 architecture proposal added to 8Z Control",
+      "next_action": "Freeze a minimal constitution and Mission Guard; start with G0 replay before live automation.",
+      "project": "AI8 Arena Foundry",
+      "status": "NEXT"
+    },
+    {
+      "arena_ids": [
+        "ai8-wake-lab-v01"
+      ],
+      "last_change": "Legacy continuity advanced through e000013 with EXACT_READBACK_PASS. The Gmail wake remains enabled but has no run and no source=GMAIL_WEBHOOK receipt, localizing the open failure to the event subscription/trigger/invocation layer.",
+      "next_action": "Inspect the structured Gmail trigger/subscription and connection binding; preserve the healthy Legacy journal/validator path. Converged R6 remains BUILD until its own runtime acceptance.",
+      "project": "AI8 Wake Lab",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "trip-optimizer-mdlxdcc-v20"
+      ],
+      "last_change": "A v2.0 builder mandate was assigned for an isolated MDL×DCC experimental upgrade on /trip/new/; no completed build or runtime acceptance is yet verified.",
+      "next_action": "Implement and test the isolated core, preserve concurrent main changes, and return fair baseline comparisons before any promotion.",
+      "project": "Trip Optimizer",
+      "status": "BUILD"
+    },
+    {
+      "arena_ids": [
+        "8zcockpit-v020"
+      ],
+      "last_change": "22 Sep v0.3.3-HF3 + Materials LE2 end-to-end Work acceptance PASS: TSP, Materials and Sudoku passed; 52/52 upload copies succeeded; Trading SKIP was expected because no Trading arena was active.",
+      "next_action": "Retain v0.3.3-HF3 + Materials LE2 as the accepted baseline; no new Cockpit build is required from this result.",
+      "project": "8zCockpit",
+      "status": "DONE"
+    }
+  ],
+  "provenance_rule": "Newer direct evidence in ChatGPT project conversations overrides older summaries. Project files may corroborate; non-project sessions and orphan arenas are excluded.",
+  "schema_version": "8z-control.v0.1",
+  "source_boundary": "CURRENT GPT PROJECT EVIDENCE + VERIFIED GOOGLE DRIVE LIVE_EXTRACTS; ONEDRIVE/SHAREPOINT FALLBACK ONLY",
+  "source_register": "BD_MASTER_ARENA_REGISTER_LATEST.json",
+  "title": "BD — Project State"
+}

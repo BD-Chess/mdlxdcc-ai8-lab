@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BD Sync Momentum — SM Trader v2.0</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&amp;family=Playfair+Display:wght@400;700;900&amp;family=DM+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg-primary: #0a0c10; --bg-secondary: #12151c; --bg-tertiary: #1a1e28;
+  --bg-card: #161a24; --border: #2a2f3c; --border-accent: #3a4055;
+  --text-primary: #e8eaf0; --text-secondary: #8b93a6; --text-muted: #5a6275;
+  --accent-green: #00e676; --accent-red: #ff4757; --accent-blue: #448aff;
+  --accent-gold: #ffd740; --accent-purple: #b388ff; --accent-teal: #64ffda;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --sidebar-w: 320px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:15px; }
+body { background:var(--bg-primary); color:var(--text-primary); font-family:var(--font-body); line-height:1.5; -webkit-font-smoothing:antialiased; }
+::selection { background:var(--accent-blue); color:white; }
+::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+
+/* Login Gate */
+#loginGate { position:fixed; top:0; left:0; width:100%; height:100%; background:var(--bg-primary); z-index:9999; display:flex; justify-content:center; align-items:center; flex-direction:column; }
+#loginGate .login-box { background:var(--bg-secondary); border:1px solid var(--border); border-radius:10px; padding:40px 36px; text-align:center; max-width:360px; }
+#loginGate h2 { font-family:var(--font-display); font-size:22px; margin-bottom:6px; }
+#loginGate .sub { font-size:12px; color:var(--text-muted); margin-bottom:20px; font-family:var(--font-mono); }
+#loginGate input { width:100%; background:var(--bg-tertiary); border:1px solid var(--border); border-radius:6px; padding:10px 14px; color:var(--text-primary); font-family:var(--font-mono); font-size:14px; outline:none; text-align:center; letter-spacing:2px; }
+#loginGate input:focus { border-color:var(--accent-blue); }
+#loginGate .err { color:var(--accent-red); font-size:11px; margin-top:8px; min-height:16px; font-family:var(--font-mono); }
+.app-hidden { display:none !important; }
+
+.sidebar { position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh; background:var(--bg-secondary); border-right:1px solid var(--border); overflow-y:auto; z-index:100; display:flex; flex-direction:column; }
+.sidebar-brand { padding:20px 18px 16px; border-bottom:1px solid var(--border); }
+.sidebar-brand h1 { font-family:var(--font-mono); font-size:12px; font-weight:500; color:var(--accent-green); letter-spacing:2.5px; text-transform:uppercase; }
+.sidebar-brand .sub { font-size:11px; color:var(--text-muted); margin-top:3px; font-family:var(--font-mono); }
+.sidebar-content { flex:1; overflow-y:auto; padding:12px 0; }
+.sidebar-section { border-bottom:1px solid var(--border); padding:10px 16px 14px; }
+.section-title { font-family:var(--font-mono); font-size:9.5px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:10px; display:flex; align-items:center; gap:6px; cursor:pointer; user-select:none; }
+.section-title .arrow { transition:transform 0.2s; font-size:8px; }
+.section-title .arrow.collapsed { transform:rotate(-90deg); }
+.field { margin-bottom:8px; }
+.field label { display:block; font-size:10.5px; color:var(--text-secondary); margin-bottom:3px; font-family:var(--font-mono); letter-spacing:0.3px; }
+.field input, .field select, .field textarea { width:100%; background:var(--bg-tertiary); border:1px solid var(--border); border-radius:4px; padding:5px 8px; color:var(--text-primary); font-family:var(--font-mono); font-size:12px; outline:none; }
+.field input:focus, .field select:focus { border-color:var(--accent-blue); }
+.field textarea { resize:vertical; min-height:48px; font-size:11px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px; }
+.field-row .field { margin-bottom:0; }
+.field-row3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:8px; }
+.field-row3 .field { margin-bottom:0; }
+
+.btn { display:inline-flex; align-items:center; gap:5px; padding:6px 14px; border-radius:4px; font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:0.5px; cursor:pointer; border:1px solid; transition:all 0.15s; text-transform:uppercase; }
+.btn-go { background:#003322; color:var(--accent-green); border-color:#00664433; }
+.btn-go:hover { background:#004433; }
+.btn-stop { background:#331100; color:#ff8800; border-color:#66330033; }
+.btn-stop:hover { background:#442200; }
+.btn-reset { background:var(--bg-tertiary); color:var(--text-secondary); border-color:var(--border); }
+.btn-reset:hover { background:var(--bg-card); }
+.btn-sm { padding:4px 10px; font-size:10px; }
+.controls-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+
+.conn-dot { width:8px; height:8px; border-radius:50%; display:inline-block; margin-right:6px; }
+.conn-dot.live { background:var(--accent-green); box-shadow:0 0 6px var(--accent-green); }
+.conn-dot.idle { background:var(--accent-gold); box-shadow:0 0 6px var(--accent-gold); }
+.conn-dot.off  { background:var(--accent-red); box-shadow:0 0 6px var(--accent-red); }
+
+.sidebar-footer { padding:10px 16px; border-top:1px solid var(--border); font-size:10px; color:var(--text-muted); font-family:var(--font-mono); text-align:center; }
+
+.main { margin-left:var(--sidebar-w); padding:20px 24px 40px; min-height:100vh; }
+.header-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+.header-bar .title-group h2 { font-family:var(--font-display); font-size:24px; font-weight:700; }
+.header-bar .title-group .tagline { font-size:12px; color:var(--text-muted); margin-top:2px; }
+.prices { display:flex; gap:24px; align-items:baseline; }
+.price-tag .sym { font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; font-weight:600; }
+.price-tag .val { font-family:var(--font-mono); font-size:18px; font-weight:700; font-variant-numeric:tabular-nums; }
+
+.stats-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; margin-bottom:16px; }
+.stats-grid2 { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; margin-bottom:20px; }
+.stat-card { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:10px 12px; }
+.stat-card .sl { font-family:var(--font-mono); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
+.stat-card .sv { font-family:var(--font-mono); font-size:16px; font-weight:700; font-variant-numeric:tabular-nums; }
+.sv.green { color:var(--accent-green); } .sv.red { color:var(--accent-red); }
+.sv.teal { color:var(--accent-teal); } .sv.gold { color:var(--accent-gold); }
+.sv.blue { color:var(--accent-blue); } .sv.purple { color:var(--accent-purple); }
+
+.position-panel { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:14px 16px; margin-bottom:16px; min-height:60px; }
+.position-empty { font-family:var(--font-mono); font-size:12px; color:var(--text-muted); text-align:center; padding:10px; }
+.pos-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.pos-side { font-family:var(--font-mono); font-size:14px; font-weight:700; letter-spacing:1px; }
+.pos-side.long { color:var(--accent-green); } .pos-side.short { color:var(--accent-red); }
+.pos-pnl { font-family:var(--font-mono); font-size:16px; font-weight:700; }
+.pos-details { display:grid; grid-template-columns:repeat(3,1fr); gap:4px 16px; font-family:var(--font-mono); font-size:11px; color:var(--text-secondary); margin-bottom:8px; }
+.pos-bar { height:4px; background:var(--bg-tertiary); border-radius:2px; overflow:hidden; }
+.pos-bar-fill { height:100%; border-radius:2px; transition:width 0.3s; }
+.pos-modules { margin-top:8px; font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:flex; gap:12px; flex-wrap:wrap; }
+.pos-modules .mod-active { color:var(--accent-teal); }
+
+.chart-panel { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:14px 16px; margin-bottom:16px; position:relative; overflow:hidden; resize:vertical; min-height:200px; height:280px; max-height:600px; }
+.chart-panel .panel-title { font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; display:flex; justify-content:space-between; }
+.chart-canvas { width:100%; height:calc(100% - 30px); min-height:100px; }
+
+.logs-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.log-panel { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:14px 16px; overflow:auto; resize:vertical; min-height:120px; height:350px; }
+.log-panel .panel-title { font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; }
+.log-panel table { width:100%; border-collapse:collapse; font-family:var(--font-mono); font-size:11px; }
+.log-panel th { text-align:left; font-size:9px; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; padding:4px 6px; border-bottom:1px solid var(--border); }
+.log-panel td { padding:3px 6px; border-bottom:1px solid #1a1e2833; white-space:nowrap; }
+.empty-msg { text-align:center; color:var(--text-muted); font-family:var(--font-mono); font-size:11px; padding:16px; }
+
+.signal-entry { font-family:var(--font-mono); font-size:11px; padding:3px 0; border-bottom:1px solid #1a1e2833; }
+.signal-entry .st { color:var(--text-muted); margin-right:8px; font-size:10px; }
+.signal-entry.entry { color:var(--accent-blue); }
+.signal-entry.win { color:var(--accent-green); }
+.signal-entry.loss { color:var(--accent-red); }
+.signal-entry.trail { color:var(--accent-gold); }
+.signal-entry.system { color:var(--text-secondary); }
+.signal-entry.sync { color:var(--accent-teal); }
+.signal-entry.module { color:var(--accent-purple); }
+
+/* Help modal */
+.modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:500; display:none; justify-content:center; align-items:center; }
+.modal-overlay.active { display:flex; }
+.modal-box { background:var(--bg-secondary); border:1px solid var(--border); border-radius:10px; max-width:720px; max-height:85vh; overflow-y:auto; padding:32px; width:90%; }
+.modal-box h2 { font-family:var(--font-display); margin-bottom:12px; }
+.modal-box h3 { font-family:var(--font-mono); font-size:13px; color:var(--accent-teal); margin:16px 0 6px; letter-spacing:1px; }
+.modal-box p, .modal-box li { font-size:13px; line-height:1.6; color:var(--text-secondary); }
+.modal-box code { background:var(--bg-tertiary); padding:2px 6px; border-radius:3px; font-family:var(--font-mono); font-size:11px; }
+.help-tip { background:#00e67610; border-left:3px solid var(--accent-green); padding:8px 12px; margin:8px 0; border-radius:0 4px 4px 0; font-size:12px; color:var(--text-secondary); }
+
+/* Mobile */
+.hamburger { display:none; position:fixed; top:12px; left:12px; z-index:200; background:var(--bg-secondary); border:1px solid var(--border); border-radius:6px; padding:8px 10px; cursor:pointer; font-size:18px; color:var(--text-secondary); }
+@media (max-width:900px) {
+  .hamburger { display:block; }
+  .sidebar { transform:translateX(-100%); transition:transform 0.25s ease; z-index:300; }
+  .sidebar.open { transform:translateX(0); }
+  .main { margin-left:0; padding:16px 12px 40px; padding-top:52px; }
+  .stats-grid, .stats-grid2 { grid-template-columns:repeat(2,1fr) !important; gap:6px; }
+  .logs-grid { grid-template-columns:1fr; }
+  .header-bar { flex-direction:column; gap:10px; align-items:flex-start; }
+  .prices { flex-wrap:wrap; gap:12px; }
+}
+</style>
+<script src="../js/bd-password-manager.js" defer=""></script>
+</head>
+<body>
+<!-- ═══ LOGIN GATE ═══ -->
+<!-- login removed -->
+<div class="hamburger" onclick="toggleMobileSidebar()">☰</div>
+<!-- ═══ SIDEBAR ═══ -->
+<div class="sidebar" id="sidebarEl">
+<div class="sidebar-brand" style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<h1>Sync Momentum</h1>
+<div class="sub">Paper Trader v2.0 — by BD</div>
+</div>
+<a href="ZZ.html" style="font-family:var(--font-mono);font-size:10px;color:var(--accent-teal);text-decoration:none;border:1px solid var(--border);border-radius:4px;padding:4px 8px;white-space:nowrap" target="_blank" title="Open ZZ Trader">↗ ZZ</a>
+</div>
+<div class="sidebar-content">
+<!-- CONFIG & PRESETS -->
+<div class="sidebar-section">
+<div class="section-title"><span class="conn-dot off" id="connDot"></span> ⚡ Config &amp; Presets</div>
+<div class="field">
+<label>Config String (SM|...)</label>
+<textarea id="cfgPaste" placeholder="SM|S:2|D:0.040|IL:10|..." rows="2"></textarea>
+<div class="controls-row" style="margin-top:4px">
+<button class="btn btn-sm btn-go" onclick="importConfig()">⚡ Import</button>
+<button class="btn btn-sm btn-reset" onclick="exportConfig()">⤴ Export</button>
+<span id="cfgMsg" style="font-size:10px;font-family:var(--font-mono);margin-left:4px"></span>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label>Asset Class</label>
+<select id="p_assetClass" onchange="onPresetChange()">
+<option value="crypto_scalp">Crypto Scalp</option>
+<option value="crypto_swing">Crypto Swing</option>
+<option value="crypto_pos">Crypto Position</option>
+<option value="stocks">Stocks</option>
+<option value="forex">Forex</option>
+<option value="commodities">Commodities</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+<div class="field">
+<label>Style</label>
+<select id="p_style" onchange="onPresetChange()">
+<option value="safe">Safe</option>
+<option selected="" value="normal">Normal</option>
+<option value="aggressive">Aggressive</option>
+<option value="max">Max</option>
+</select>
+</div>
+</div>
+</div>
+<!-- CONTROLS -->
+<div class="sidebar-section">
+<div class="section-title" onclick="toggleSection(this)"><span class="arrow">▾</span> Controls</div>
+<div class="section-body">
+<div class="controls-row">
+<button class="btn btn-go" id="btnStart" onclick="handleStart()">▶ Start</button>
+<button class="btn btn-stop" id="btnStop" onclick="handleStop()" style="display:none">■ Stop</button>
+<button class="btn btn-reset" onclick="handleReset()">↺ Reset</button>
+<button class="btn" onclick="applyDefaults()" style="background:#1a1a30;color:var(--text-muted);border-color:#333;font-size:11px">⚙ Defaults</button>
+</div>
+<div class="controls-row" style="margin-top:4px">
+<button class="btn" disabled="" id="btnRecalc" onclick="recalculate()" style="background:#1a1030;color:var(--accent-gold);border-color:var(--accent-gold);font-size:11px">⟳ Recalc</button>
+<button class="btn btn-sm" onclick="exportReport()" style="background:#1a1040;color:var(--accent-purple);border-color:#3a206033">📋 Report</button>
+<button class="btn btn-sm" onclick="exportScreenshot()" style="background:#103030;color:var(--accent-teal);border-color:#20605033">📸 PNG</button>
+</div>
+<div id="connStatus" style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:6px">Disconnected</div>
+</div>
+</div>
+<!-- ACCOUNT & TRADING (user-level params — always visible) -->
+<div class="sidebar-section">
+<div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Account &amp; Trading</div>
+<div class="section-body" style="display:none">
+<div class="field-row3">
+<div class="field"><label>Equity ($)</label><input id="p_equity" step="1000" type="number" value="100000"/></div>
+<div class="field"><label>Trade ($)</label><input id="p_tradeSize" step="1000" type="number" value="100000"/></div>
+<div class="field"><label>Leverage</label><input id="p_leverage" max="500" min="1" type="number" value="100"/></div>
+</div>
+<div class="field-row3">
+<div class="field">
+<label>Direction</label>
+<select id="p_direction">
+<option selected="" value="both">Both</option>
+<option value="long">Long Only</option>
+<option value="short">Short Only</option>
+</select>
+</div>
+<div class="field">
+<label>Exchange</label>
+<select id="p_exchange" onchange="updateFeeDisplay()">
+<option selected="" value="binance">Binance</option>
+<option value="mexc">MEXC</option>
+<option value="okx">OKX</option>
+<option value="bybit">Bybit</option>
+<option value="bitget">Bitget</option>
+</select>
+</div>
+<div class="field"><label>Symbol</label><input id="p_symbol" value="BTCUSDT"/></div>
+</div>
+<div class="field-row3">
+<div class="field">
+<label>Timeframe</label>
+<select id="p_timeframe" onchange="onTfChange()">
+<option value="1">1s</option>
+<option selected="" value="60">1m</option>
+<option value="180">3m</option>
+<option value="300">5m</option>
+<option value="900">15m</option>
+<option value="1800">30m</option>
+<option value="3600">1h</option>
+<option value="14400">4h</option>
+<option value="28800">8h</option>
+<option value="43200">12h</option>
+<option value="86400">1D</option>
+</select>
+</div>
+<div class="field"><label>Hist. Bars</label><input id="p_histBars" max="50000" min="100" type="number" value="5000"/></div>
+<div class="field">
+<label>Fee Mode</label>
+<select id="p_feeMode" onchange="updateFeeDisplay()">
+<option selected="" value="auto">Auto</option>
+<option value="custom">Custom</option>
+<option value="off">Off</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label>Fee % (per side)</label><input id="p_fee" readonly="" step="0.001" type="number" value="0.040"/>
+</div>
+</div>
+</div>
+<!-- SYNC ENGINE (technical — collapsed) -->
+<div class="sidebar-section">
+<div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Sync Engine</div>
+<div class="section-body" style="display:none">
+<div class="field-row">
+<div class="field"><label>Sync Length (bars)</label><input id="p_syncLen" max="10" min="1" type="number" value="2"/></div>
+<div class="field"><label>Min Delta %</label><input id="p_minDelta" step="0.001" type="number" value="0.048"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Impulse Length</label><input id="p_impulseLen" max="50" min="3" type="number" value="10"/></div>
+<div class="field"><label>Impulse Factor</label><input id="p_impulseFactor" step="0.05" type="number" value="0.95"/></div>
+</div>
+</div>
+</div>
+<!-- EXIT SYSTEM (technical — collapsed) -->
+<div class="sidebar-section">
+<div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Exit System</div>
+<div class="section-body" style="display:none">
+<div class="field-row">
+<div class="field"><label>Stop Loss %</label><input id="p_slPct" step="0.001" type="number" value="0.037"/></div>
+<div class="field"><label>Take Profit %</label><input id="p_tpPct" step="0.01" type="number" value="1.26"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>BE Trigger %</label><input id="p_beTrigger" step="0.001" type="number" value="0.129"/></div>
+<div class="field"><label>Lock Fraction</label><input id="p_lockFrac" max="1" min="0" step="0.01" type="number" value="0.90"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>ATR Length</label><input id="p_atrLen" max="50" min="3" type="number" value="10"/></div>
+<div class="field"><label>Wiggle K</label><input id="p_wiggleK" step="0.1" type="number" value="1.2"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Min Wiggle %</label><input id="p_minWiggle" step="0.01" type="number" value="0.10"/></div>
+<div class="field"><label>Max Wiggle %</label><input id="p_maxWiggle" step="0.01" type="number" value="0.50"/></div>
+</div>
+</div>
+</div>
+<!-- MODULES (technical — collapsed) -->
+<div class="sidebar-section">
+<div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Modules</div>
+<div class="section-body" style="display:none">
+<div class="field-row">
+<div class="field"><label>MDL Regime</label><select id="p_useMDL"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label>DCC Adaptive</label><select id="p_useDCC"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>Circuit Breaker</label><select id="p_useCB"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
+<div class="field"><label>CB Loss Streak</label><input id="p_cbStreak" max="10" min="2" type="number" value="3"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>CB Pause Bars</label><input id="p_cbPause" max="500" min="1" type="number" value="120"/></div>
+<div class="field"><label>Cooldown</label><select id="p_useCooldown"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>CD Bars</label><input id="p_cdBars" max="50" min="1" type="number" value="5"/></div>
+<div class="field"><label>Equity Protection</label><select id="p_useEP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>EP DD Threshold %</label><input id="p_epDD" min="1" step="0.5" type="number" value="10"/></div>
+<div class="field"><label>EP Recovery %</label><input id="p_epRecov" min="0.5" step="0.5" type="number" value="3"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>SQS (Sync Quality)</label><select id="p_useSQS"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label>SQS Min Mult</label><input id="p_sqsMin" step="0.1" type="number" value="0.5"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>SQS Max Mult</label><input id="p_sqsMax" step="0.1" type="number" value="2.0"/></div>
+<div class="field"><label>Smart Invert</label><select id="p_useSI"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+</div>
+<div class="field-row">
+<div class="field"><label>SI Min Bars</label><input id="p_siMinBars" min="1" type="number" value="10"/></div>
+<div class="field"><label>SI Size Mult</label><input id="p_siSizeMult" step="0.1" type="number" value="0.8"/></div>
+</div>
+<div class="field-row">
+<div class="field"><label>VWAP Tilt</label><select id="p_useVWAP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label>VWAP Length</label><input id="p_vwapLen" max="100" min="5" type="number" value="20"/></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar-footer"><a href="ZZ.html" style="color:var(--accent-teal);text-decoration:none" target="_blank">↗ ZZ Trader</a> · SM v2.0 · v2.2 Engine · 8Z-Trading<br/>Bojan Dobrečevič © 2026</div>
+</div>
+<!-- ═══ MAIN AREA ═══ -->
+<div class="main" id="mainEl">
+<div class="header-bar">
+<div class="title-group">
+<h2>Sync Momentum</h2>
+<div class="tagline" id="headerTagline">Connect to start scanning • <span id="tickCount">0</span> ticks • <span id="barCount">0</span> bars<span id="replayProgress"></span></div>
+</div>
+<div class="prices">
+<div class="price-tag"><div class="sym">BTC</div><div class="val" id="priceBTC">—</div></div>
+<div class="price-tag"><div class="sym">ETH</div><div class="val" id="priceETH">—</div></div>
+<div class="price-tag"><div class="sym">SOL</div><div class="val" id="priceSOL">—</div></div>
+<button onclick="openHelp()" style="background:var(--bg-tertiary);border:1px solid var(--border);border-radius:50%;width:32px;height:32px;color:var(--accent-blue);font-weight:700;font-size:16px;cursor:pointer;font-family:var(--font-mono);flex-shrink:0" title="Help &amp; Documentation">?</button>
+</div>
+</div>
+<!-- Row 1: Performance -->
+<div class="stats-grid">
+<div class="stat-card"><div class="sl">Equity</div><div class="sv green" id="statEquity">$100,000</div></div>
+<div class="stat-card"><div class="sl">Return</div><div class="sv green" id="statReturn">0.00%</div></div>
+<div class="stat-card"><div class="sl">Trades</div><div class="sv blue" id="statTrades">0</div></div>
+<div class="stat-card"><div class="sl">Win Rate</div><div class="sv teal" id="statWinRate">—</div></div>
+<div class="stat-card"><div class="sl">Profit Factor</div><div class="sv gold" id="statPF">—</div></div>
+<div class="stat-card"><div class="sl">Max DD</div><div class="sv red" id="statMaxDD">0.00%</div></div>
+<div class="stat-card"><div class="sl">Fees Paid</div><div class="sv purple" id="statFees">$0</div></div>
+</div>
+<!-- Row 2: Config at a glance -->
+<div class="stats-grid2">
+<div class="stat-card"><div class="sl">Trade</div><div class="sv" id="statSize">$100K</div></div>
+<div class="stat-card"><div class="sl">Leverage</div><div class="sv" id="statLev">100x</div></div>
+<div class="stat-card"><div class="sl">Eff. Notional</div><div class="sv" id="statNotional">$1M</div></div>
+<div class="stat-card"><div class="sl">Preset</div><div class="sv" id="statPreset">CS/Agg</div></div>
+<div class="stat-card"><div class="sl">SL / TP</div><div class="sv" id="statSLTP">0.03/0.94</div></div>
+<div class="stat-card"><div class="sl">Timeframe</div><div class="sv" id="statTF">1m</div></div>
+<div class="stat-card"><div class="sl">Symbol</div><div class="sv" id="statSymbol">BTC @ Bin</div></div>
+</div>
+<!-- Position Panel -->
+<div class="position-panel">
+<div id="positionBody"><div class="position-empty">No open position</div></div>
+</div>
+<!-- Equity Chart -->
+<div class="chart-panel" id="chartPanel">
+<div class="panel-title"><span>Equity Curve</span><span id="timeSpan"></span></div>
+<canvas class="chart-canvas" id="eqChart"></canvas>
+</div>
+<!-- Logs -->
+<div class="logs-grid">
+<div class="log-panel">
+<div class="panel-title">Trade Log <span id="tradeCount">0</span></div>
+<table><thead><tr><th>Side</th><th>Entry</th><th>Exit</th><th>PnL $</th><th>%</th><th>Exit</th><th>Dur</th><th>Mult</th></tr></thead>
+<tbody id="tradeLog"><tr id="tradeEmpty"><td class="empty-msg" colspan="8">No trades yet</td></tr></tbody></table>
+</div>
+<div class="log-panel">
+<div class="panel-title">Signal Log</div>
+<div id="signalLogBody"><div class="empty-msg" id="sigEmpty">Waiting...</div></div>
+</div>
+</div>
+</div>
+<!-- ═══ HELP MODAL ═══ -->
+<div class="modal-overlay" id="helpModal" onclick="if(event.target===this)closeHelp()">
+<div class="modal-box">
+<h2>Sync Momentum — Paper Trader Help</h2>
+<h3>Signal Chain (Sacred — Never Modified)</h3>
+<p><code>longSignal = flat AND useLongs AND upSync AND upImpulse AND inWindow</code></p>
+<p><code>shortSignal = flat AND useShorts AND downSync AND downImpulse AND inWindow</code></p>
+<div class="help-tip">All modules are size multipliers only (except Smart Invert which flips direction). They NEVER block signals.</div>
+<h3>Sync Detection</h3>
+<p>BTC and ETH must both move ≥ minDelta% in the same direction over syncLen bars. This cross-correlation is the core edge.</p>
+<h3>Impulse Detection</h3>
+<p>Current bar's move must exceed impulseFactor × average absolute move over impulseLen bars. Filters out noise, catches real moves.</p>
+<h3>Exit System</h3>
+<p><strong>Stop Loss:</strong> Hard stop at slPct% from entry.<br/>
+<strong>Take Profit:</strong> Hard limit at tpPct% from entry.<br/>
+<strong>Breakeven Lock:</strong> Once peak PnL reaches beTriggerPct%, lock a floor at lockFrac × peak.<br/>
+<strong>ATR Trailing:</strong> After BE lock, trail with wiggleK × ATR(atrLen), clamped to [minWiggle, maxWiggle]%.</p>
+<h3>Modules</h3>
+<p><strong>MDL:</strong> 6 statistical generators compete. Cheapest explains price → regime detection.<br/>
+<strong>DCC:</strong> Regime stability → exploit (1.2x) or explore (0.5x).<br/>
+<strong>Circuit Breaker:</strong> N consecutive losses → pause trading.<br/>
+<strong>Cooldown:</strong> Reduce size for N bars after each exit.<br/>
+<strong>Equity Protection:</strong> Halt when drawdown exceeds threshold, resume on recovery.<br/>
+<strong>SQS:</strong> Sync quality score from magnitude + breadth + volume → size multiplier.<br/>
+<strong>Smart Invert:</strong> Flip direction when MDL regime contradicts signal.<br/>
+<strong>VWAP Tilt:</strong> Z-score of price vs session VWAP.</p>
+<h3>Config String</h3>
+<p>Format: <code>SM|S:2|D:0.040|IL:10|IF:0.75|SL:0.045|TP:0.940|...</code></p>
+<p>Import fills all parameters. Export copies the full state. Compatible with Python optimizer output.</p>
+<h3>Historical Bootstrap</h3>
+<p>On Start, fetches BTC + ETH + trading symbol candles from Binance REST API. All three are time-aligned and replayed through the engine before going live. Recalculate re-runs the stored data with new settings.</p>
+<h3>Multi-Exchange Support</h3>
+<p>Live feed from Binance, MEXC, OKX, Bybit, or Bitget. Historical data always from Binance REST.</p>
+<div style="text-align:right;margin-top:20px"><button class="btn btn-reset" onclick="closeHelp()">Close</button></div>
+</div>
+</div>
+<script>
+
+'use strict';
+var _engineReady = false;
+var historicalMode = false;
+var running = false;
+var ws = null, connected = false, ticks = 0;
+
+// ══════════════════════════════════════════════════════════════════════════════
+// AUTH
+// ══════════════════════════════════════════════════════════════════════════════
+const $=id=>document.getElementById(id);
+function toggleMobileSidebar(){
+  $('sidebarEl').classList.toggle('open');
+}
+function toggleSidebar(){ toggleMobileSidebar(); }
+function collapseSidebar(){ /* no-op on desktop, mobile handled by CSS */ }
+function expandSidebar(){ /* no-op on desktop */ }
+
+// ══════════════════════════════════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════════════════════════════════
+const fmt=(v,d=2)=>typeof v==='number'?v.toFixed(d):'—';
+const fmtUsd=v=>'$'+fmt(v);
+const ts=()=>new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+function getP(id){const el=$(id);if(!el)return '';if(el.tagName==='SELECT')return el.value;const n=parseFloat(el.value);return isNaN(n)?el.value:n;}
+function getPN(id){return parseFloat($(id)?.value)||0;}
+function getS(id){return $(id)?.value||'';}
+
+const EXCHANGE_FEES={binance:0.040,mexc:0.060,okx:0.050,bybit:0.055,bitget:0.050};
+function updateFeeDisplay(){
+  const mode=getP('p_feeMode');
+  if(mode==='auto'){$('p_fee').value=EXCHANGE_FEES[getP('p_exchange')]||0.04;$('p_fee').readOnly=true;}
+  else if(mode==='custom'){$('p_fee').readOnly=false;}
+  else{$('p_fee').value='0';$('p_fee').readOnly=true;}
+}
+function toggleSection(el){
+  const arrow=el.querySelector('.arrow');
+  const body=el.nextElementSibling;
+  if(!body)return;
+  const collapsed=body.style.display==='none';
+  body.style.display=collapsed?'':'none';
+  if(arrow)arrow.classList.toggle('collapsed',!collapsed);
+}
+function addLog(type,msg){
+  const body=$('signalLogBody');
+  if($('sigEmpty'))$('sigEmpty').remove();
+  const div=document.createElement('div');
+  div.className='signal-entry '+type;
+  div.innerHTML=`<span class="st">${ts()}</span>${msg}`;
+  body.insertBefore(div,body.firstChild);
+  while(body.children.length>300)body.removeChild(body.lastChild);
+}
+function openHelp(){$('helpModal').classList.add('active');}
+function closeHelp(){$('helpModal').classList.remove('active');}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PRESETS (from SO_sync_engine.py — 7 classes × 4 styles)
+// ══════════════════════════════════════════════════════════════════════════════
+const PRESETS = {
+  'crypto_scalp|safe':       {p_syncLen:3,p_minDelta:0.060,p_impulseLen:10,p_impulseFactor:1.10,p_slPct:0.040,p_tpPct:1.50,p_beTrigger:0.15,p_atrLen:10,p_wiggleK:1.2,p_minWiggle:0.10,p_maxWiggle:0.50,p_lockFrac:0.90},
+  'crypto_scalp|normal':     {p_syncLen:2,p_minDelta:0.048,p_impulseLen:10,p_impulseFactor:0.95,p_slPct:0.037,p_tpPct:1.26,p_beTrigger:0.129,p_atrLen:10,p_wiggleK:1.2,p_minWiggle:0.10,p_maxWiggle:0.50,p_lockFrac:0.90},
+  'crypto_scalp|aggressive': {p_syncLen:2,p_minDelta:0.032,p_impulseLen:10,p_impulseFactor:0.75,p_slPct:0.033,p_tpPct:0.94,p_beTrigger:0.101,p_atrLen:10,p_wiggleK:1.2,p_minWiggle:0.10,p_maxWiggle:0.50,p_lockFrac:0.90},
+  'crypto_scalp|max':        {p_syncLen:2,p_minDelta:0.015,p_impulseLen:8,p_impulseFactor:0.45,p_slPct:0.030,p_tpPct:0.50,p_beTrigger:0.06,p_atrLen:8,p_wiggleK:1.1,p_minWiggle:0.08,p_maxWiggle:0.40,p_lockFrac:0.90},
+
+  'crypto_swing|safe':       {p_syncLen:3,p_minDelta:0.200,p_impulseLen:10,p_impulseFactor:0.90,p_slPct:0.40,p_tpPct:1.50,p_beTrigger:0.60,p_atrLen:14,p_wiggleK:1.6,p_minWiggle:0.25,p_maxWiggle:1.20,p_lockFrac:0.90},
+  'crypto_swing|normal':     {p_syncLen:3,p_minDelta:0.300,p_impulseLen:12,p_impulseFactor:1.00,p_slPct:0.70,p_tpPct:2.50,p_beTrigger:1.00,p_atrLen:16,p_wiggleK:1.7,p_minWiggle:0.40,p_maxWiggle:1.80,p_lockFrac:0.90},
+  'crypto_swing|aggressive': {p_syncLen:2,p_minDelta:0.400,p_impulseLen:10,p_impulseFactor:1.10,p_slPct:1.00,p_tpPct:4.00,p_beTrigger:1.50,p_atrLen:20,p_wiggleK:1.8,p_minWiggle:0.70,p_maxWiggle:2.50,p_lockFrac:0.90},
+  'crypto_swing|max':        {p_syncLen:2,p_minDelta:0.400,p_impulseLen:10,p_impulseFactor:1.10,p_slPct:1.00,p_tpPct:4.00,p_beTrigger:1.50,p_atrLen:20,p_wiggleK:1.8,p_minWiggle:0.70,p_maxWiggle:2.50,p_lockFrac:0.90},
+
+  'crypto_pos|safe':       {p_syncLen:2,p_minDelta:0.60,p_impulseLen:14,p_impulseFactor:1.20,p_slPct:2.00,p_tpPct:8.00,p_beTrigger:3.00,p_atrLen:20,p_wiggleK:2.0,p_minWiggle:1.50,p_maxWiggle:4.00,p_lockFrac:0.90},
+  'crypto_pos|normal':     {p_syncLen:2,p_minDelta:0.60,p_impulseLen:14,p_impulseFactor:1.20,p_slPct:2.00,p_tpPct:8.00,p_beTrigger:3.00,p_atrLen:20,p_wiggleK:2.0,p_minWiggle:1.50,p_maxWiggle:4.00,p_lockFrac:0.90},
+  'crypto_pos|aggressive': {p_syncLen:2,p_minDelta:0.50,p_impulseLen:14,p_impulseFactor:1.10,p_slPct:2.50,p_tpPct:10.0,p_beTrigger:3.50,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:1.80,p_maxWiggle:5.00,p_lockFrac:0.90},
+  'crypto_pos|max':        {p_syncLen:2,p_minDelta:0.50,p_impulseLen:14,p_impulseFactor:1.10,p_slPct:2.50,p_tpPct:10.0,p_beTrigger:3.50,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:1.80,p_maxWiggle:5.00,p_lockFrac:0.90},
+
+  'stocks|safe':       {p_syncLen:3,p_minDelta:0.040,p_impulseLen:15,p_impulseFactor:0.90,p_slPct:0.15,p_tpPct:0.60,p_beTrigger:0.20,p_atrLen:14,p_wiggleK:1.5,p_minWiggle:0.08,p_maxWiggle:0.40,p_lockFrac:0.80},
+  'stocks|normal':     {p_syncLen:3,p_minDelta:0.250,p_impulseLen:20,p_impulseFactor:1.00,p_slPct:0.80,p_tpPct:3.00,p_beTrigger:1.20,p_atrLen:20,p_wiggleK:2.0,p_minWiggle:0.50,p_maxWiggle:2.00,p_lockFrac:0.75},
+  'stocks|aggressive': {p_syncLen:2,p_minDelta:0.500,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:1.50,p_tpPct:6.00,p_beTrigger:2.50,p_atrLen:20,p_wiggleK:2.5,p_minWiggle:0.80,p_maxWiggle:3.50,p_lockFrac:0.70},
+  'stocks|max':        {p_syncLen:2,p_minDelta:0.500,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:1.50,p_tpPct:6.00,p_beTrigger:2.50,p_atrLen:20,p_wiggleK:2.5,p_minWiggle:0.80,p_maxWiggle:3.50,p_lockFrac:0.70},
+
+  'forex|safe':       {p_syncLen:3,p_minDelta:0.025,p_impulseLen:15,p_impulseFactor:0.85,p_slPct:0.10,p_tpPct:0.40,p_beTrigger:0.15,p_atrLen:14,p_wiggleK:1.4,p_minWiggle:0.05,p_maxWiggle:0.25,p_lockFrac:0.85},
+  'forex|normal':     {p_syncLen:2,p_minDelta:0.060,p_impulseLen:20,p_impulseFactor:1.00,p_slPct:0.30,p_tpPct:1.00,p_beTrigger:0.40,p_atrLen:20,p_wiggleK:1.8,p_minWiggle:0.15,p_maxWiggle:0.80,p_lockFrac:0.78},
+  'forex|aggressive': {p_syncLen:2,p_minDelta:0.150,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:0.80,p_tpPct:3.00,p_beTrigger:1.20,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:0.40,p_maxWiggle:2.00,p_lockFrac:0.70},
+  'forex|max':        {p_syncLen:2,p_minDelta:0.150,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:0.80,p_tpPct:3.00,p_beTrigger:1.20,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:0.40,p_maxWiggle:2.00,p_lockFrac:0.70},
+
+  'commodities|safe':       {p_syncLen:3,p_minDelta:0.030,p_impulseLen:15,p_impulseFactor:0.85,p_slPct:0.12,p_tpPct:0.50,p_beTrigger:0.20,p_atrLen:14,p_wiggleK:1.4,p_minWiggle:0.06,p_maxWiggle:0.30,p_lockFrac:0.85},
+  'commodities|normal':     {p_syncLen:2,p_minDelta:0.150,p_impulseLen:20,p_impulseFactor:1.00,p_slPct:0.60,p_tpPct:2.00,p_beTrigger:0.80,p_atrLen:20,p_wiggleK:2.0,p_minWiggle:0.30,p_maxWiggle:1.50,p_lockFrac:0.75},
+  'commodities|aggressive': {p_syncLen:2,p_minDelta:0.300,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:1.00,p_tpPct:4.00,p_beTrigger:1.50,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:0.50,p_maxWiggle:2.50,p_lockFrac:0.70},
+  'commodities|max':        {p_syncLen:2,p_minDelta:0.300,p_impulseLen:20,p_impulseFactor:1.10,p_slPct:1.00,p_tpPct:4.00,p_beTrigger:1.50,p_atrLen:20,p_wiggleK:2.2,p_minWiggle:0.50,p_maxWiggle:2.50,p_lockFrac:0.70},
+};
+
+function onPresetChange(){
+  const ac=getP('p_assetClass'), st=getP('p_style');
+  const key=ac+'|'+st;
+  const p=PRESETS[key]; if(!p)return;
+  Object.entries(p).forEach(([id,v])=>{const el=$(id);if(el)el.value=v;});
+}
+function onTfChange(){
+  const tf=parseInt(getP('p_timeframe'));
+  if(tf<=180)$('p_assetClass').value='crypto_scalp';
+  else if(tf<=3600)$('p_assetClass').value='crypto_swing';
+  else $('p_assetClass').value='crypto_pos';
+  onPresetChange();
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// CONFIG STRING (SM| protocol)
+// ══════════════════════════════════════════════════════════════════════════════
+const CFG_KEYS = {
+  S:'p_syncLen', D:'p_minDelta', IL:'p_impulseLen', IF:'p_impulseFactor',
+  SL:'p_slPct', TP:'p_tpPct', BE:'p_beTrigger', AL:'p_atrLen',
+  WK:'p_wiggleK', WN:'p_minWiggle', WX:'p_maxWiggle', LF:'p_lockFrac',
+  SZ:'p_tradeSize', LV:'p_leverage', MD:'p_useMDL', DC:'p_useDCC',
+  CB:'p_useCB', EP:'p_useEP', SI:'p_useSI', SQ:'p_useSQS',
+  VW:'p_useVWAP', CD:'p_useCooldown', CB_LS:'p_cbStreak', CB_PB:'p_cbPause',
+  CD_B:'p_cdBars', EP_DD:'p_epDD', EP_RV:'p_epRecov',
+  SQ_MN:'p_sqsMin', SQ_MX:'p_sqsMax', SI_MB:'p_siMinBars', SI_SM:'p_siSizeMult',
+  VW_L:'p_vwapLen',
+};
+const CFG_KEYS_INV = Object.fromEntries(Object.entries(CFG_KEYS).map(([k,v])=>[v,k]));
+
+function importConfig(){
+  const raw=$('cfgPaste').value.trim();
+  if(!raw.startsWith('SM|')){showCfgMsg('⚠ Must start with SM|','var(--accent-red)');return;}
+  const parts=raw.split('|').slice(1); let applied=0;
+  parts.forEach(p=>{
+    const i=p.indexOf(':'); if(i<0)return;
+    const key=p.substring(0,i), val=p.substring(i+1);
+    if(key==='DR'){$('p_direction').value=val==='L'?'long':val==='S'?'short':'both';applied++;return;}
+    const fieldId=CFG_KEYS[key];
+    if(fieldId){const el=$(fieldId);if(el){el.value=val;applied++;}}
+  });
+  showCfgMsg(`✓ Applied ${applied} params`,'var(--accent-teal)');
+}
+function exportConfig(){
+  let s='SM';
+  for(const[key,fieldId] of Object.entries(CFG_KEYS)){
+    const el=$(fieldId); if(!el)continue;
+    s+='|'+key+':'+el.value;
+  }
+  const dir=getP('p_direction');
+  s+='|DR:'+(dir==='long'?'L':dir==='short'?'S':'B');
+  $('cfgPaste').value=s;
+  navigator.clipboard.writeText(s).then(()=>showCfgMsg('✓ Copied','var(--accent-green)')).catch(()=>showCfgMsg('✓ Exported','var(--accent-gold)'));
+}
+function showCfgMsg(msg,color){$('cfgMsg').textContent=msg;$('cfgMsg').style.color=color;setTimeout(()=>{$('cfgMsg').textContent='';},4000);}
+
+// ── Engine-locked stubs ──
+function handleStart() {
+  if(!_engineReady) { addLog('system','Engine locked. Enter access key below.'); return; }
+  if(typeof _doStartReal==='function') _doStartReal();
+}
+function handleStop() {
+  if(_engineReady && typeof _doStopReal==='function') _doStopReal();
+}
+function handleReset() {
+  if(!_engineReady) { addLog('system','Engine locked'); return; }
+  if(typeof _handleReset==='function') _handleReset();
+}
+function importConfig() {
+  if(!_engineReady) { addLog('system','Engine locked'); return; }
+  if(typeof _importConfig==='function') _importConfig();
+}
+function exportConfig() {
+  if(!_engineReady) { addLog('system','Engine locked'); return; }
+  if(typeof _exportConfig==='function') _exportConfig();
+}
+function exportReport() {
+  if(!_engineReady) { addLog('system','Engine locked'); return; }
+  if(typeof _exportReport==='function') _exportReport();
+}
+function exportScreenshot() {
+  if(!_engineReady) { addLog('system','Engine locked'); return; }
+  if(typeof _exportScreenshot==='function') _exportScreenshot();
+}
+
+function drawEquityChart() {
+  const canvas=$('eqChart'); if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  const dpr=window.devicePixelRatio||1;
+  const rect=canvas.getBoundingClientRect();
+  canvas.width=rect.width*dpr; canvas.height=rect.height*dpr;
+  ctx.scale(dpr,dpr);
+  ctx.fillStyle='rgba(0,229,255,0.05)';
+  ctx.fillRect(0,0,rect.width,rect.height);
+  ctx.fillStyle='rgba(0,229,255,0.3)';
+  ctx.font='12px "JetBrains Mono",monospace';
+  ctx.textAlign='center';
+  ctx.fillText(_engineReady?'Engine ready':'Engine locked — unlock to start',rect.width/2,rect.height/2);
+}
+
+
+
+</script>
+<script id="bd-access-data" type="application/json">{"schema":"BD_ACCESS_V1","path":"BD/SM_trader.html","pair":"2f50819cb0de76beb567d87e","kdf":{"name":"PBKDF2-SHA256","iterations":600000,"salt":"wJOP17acBQDLvAKBJCiB9aF5xIh5PDI4n4lXTXJCjUI="},"wrap":{"iv":"ksm16os0U6ohIaIc","cipher":"9lciQDS+L30iZ2wrX9Z3e0CPmq8Se8UDkBPO3e3bkWAvHqV44DJxb2W86tx7DpWr"},"units":[{"id":0,"kind":"engine","target":null,"iv":"8772Ip5QuoAujsgK","cipher":"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","aad":"BD_ACCESS_V1:BD/SM_trader.html:2f50819cb0de76beb567d87e:0:engine"}]}</script><script defer="" src="../js/bd-owner-access-v1.js"></script></body>
+</html>

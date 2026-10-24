@@ -1,0 +1,33 @@
+{
+  "changes": [
+    {
+      "arena": "TSP DEV2.4 — NU3496 Hard-Tail",
+      "arena_id": "tsp-dev24-nu3496",
+      "before": "Generation 23,442 · 374,483 proposals",
+      "now": "Alive · generation 31,914 · 509,699 proposals",
+      "type": "PROGRESS"
+    },
+    {
+      "arena": "BD-RPHS — UY734",
+      "arena_id": "bd-rphs-uy734",
+      "before": "Cycle 120 · 966 chunks",
+      "now": "Alive · cycle 154 · 1,234 chunks",
+      "type": "PROGRESS"
+    },
+    {
+      "arena": "8zCockpit — Bounded Watchdog",
+      "arena_id": "8zcockpit-v020",
+      "before": "HF2 recovery baseline · 5/5 alive",
+      "now": "v0.2.0 built · 87/87 PASS · Windows acceptance pending",
+      "type": "NEW TEST LINE"
+    }
+  ],
+  "generated_at": "2026-09-16T09:00:31+02:00",
+  "last_successful_refresh": "2026-09-16T09:00:31+02:00",
+  "message": "3 material arena-state changes since previous refresh.",
+  "mode": "DAILY_PROJECT_CHAT_REFRESH",
+  "previous_successful_refresh": "2026-09-15T09:16:37+02:00",
+  "schema_version": "8z-control.v0.1",
+  "source_boundary": "CHATGPT PROJECT CHATS ONLY; PROJECT FILES MAY CORROBORATE",
+  "title": "BD Arena Morning Delta"
+}

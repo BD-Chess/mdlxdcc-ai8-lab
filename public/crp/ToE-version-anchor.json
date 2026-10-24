@@ -1,0 +1,57 @@
+{
+  "schema": "bd.toe.versions_index_anchor.v1",
+  "anchored_at_utc": "2026-09-29T22:04:17Z",
+  "source": "private ToE Versions index",
+  "versions_index_schema": "bd.toe.versions_index.v2",
+  "versions_index_sha256": "b2193a39d091e2596673efde3d032b67fee20e4d0cc662e8bea06aa36d8c1f4e",
+  "reconciliation": {
+    "commits_without_bytes": 0,
+    "bytes_without_commit": 3,
+    "history_rewritten": "UNKNOWN_NOT_INFERRED_FROM_UNMATCHED_BYTES",
+    "note": "Historical reconciliation counters are retained from the prior anchor, not a fresh complete enumeration. v0.5.10 is incrementally verified from exact Git commit/blob and Drive snapshot/mirror readback. A pre-promotion v0.5.9 snapshot preserves observed bytes without inventing its original release timestamp."
+  },
+  "current_public_blobs": {
+    "ToE.html": "2ed469881eadf925a562f967065a1261b415aa55",
+    "ToE-origin.html": "5e3d12d7869db39c52c6e83f5e2569516ac34e21",
+    "ToE-daily.html": "b0196cfc997410c78b54911e9f1b8c9ff43c8cdd",
+    "ToE-log-2026-09.html": "b471c7c6a4fe3b7a7b6cfd5685eb87dfbc77f198"
+  },
+  "public_blobs_basis": "Theory at content commit f81ebebf0200227879849bc4aeaaf5ca98c8a4a0; other surfaces read in this review, without changing or asserting complete historical content coverage for the Log.",
+  "scope": "Integrity/drift anchor only; not a claim of protection against an actor able to rewrite all trusted locations.",
+  "scheduler_scope": "CARD_GATED_RESEARCH_LOOP__IDLE_DAILY__ACTIVE_HOURLY__DAILY_LOG_PARITY_RETIRED__THEORY_ORIGIN_NEVER_AUTOMATIC",
+  "scheduler_scope_basis": "Historical inherited description, not current task-state authority. No scheduler changed by this promotion.",
+  "architecture": "R12_VALUE_GATE__FOUR_PAGE__THEORY_GATED__DAILY_LOG_HISTORICAL",
+  "theory_version": "0.5.10",
+  "theory_commit": "f81ebebf0200227879849bc4aeaaf5ca98c8a4a0",
+  "record_layer": {
+    "authority_drive_id": "1XZjxcpbV2Y41opEj26fg53NM695K9u_6",
+    "daily_commit": "4b4acf4ce597bf3dd346fe765ba5874aa1761deb",
+    "log_commit": "84d6c135fcf1ce0f80676a5a675c03c6ca7d90a5",
+    "frontier_turn": 79,
+    "pre_r8_daily_snapshot_drive_id": "1OEvJYjcSx_ppGRUWQWg8Mv-QfLwFhnkP",
+    "pre_r8_daily_snapshot_sha256": "8039048a86cbba50eec14893713dd9753436bec5e547a3c46373e1f50fe69560",
+    "drive_mirror_sha256": {
+      "ToE-daily.html": "cf38e4c2eb78b8e7121f4bb1490877dcc9624501564cf41d1f047cc27ddebe04",
+      "ToE-log-2026-09.html": "3a6176ac8713774d122cb00f0c02e9d51365e9edb08d8ca3f8ee7306783cc6df"
+    },
+    "daily_activation_commit": "314bc74eaf0193d92edac4a8ec34ce6b57a143e4",
+    "daily_gui_parity": "A-/A/A+ + theme + EN/SL using shared toe-lang/toe-theme/toe-v05-size",
+    "status": "HISTORICAL_SURFACES__AUTO_PARITY_RETIRED__TURN0079_SNAPSHOT"
+  },
+  "latest_theory_snapshot": {
+    "drive_id": "1PXTCJ62OZyIRIADLw2DbYMYjEOMHjRsO",
+    "bytes": 160125,
+    "sha256": "b50bc9016aae956f9b003c1faf17fd3a94b3b58c7c4bdd9b4d4021262f55365e",
+    "readback": "PASS_EXACT_RAW_READBACK"
+  },
+  "latest_promotion": {
+    "topic": "T-COMP-2_NULL_CONTRAST",
+    "closure_turn": 122,
+    "sections": ["9", "14"],
+    "languages": ["en", "sl"],
+    "publication_state": "COMMITTED",
+    "live_state": "UNVERIFIED",
+    "research_reexecuted": false,
+    "note": "Distinct verified Sept29 recovery; conditional finite-benchmark outcome; peer same-code reproducibility is not second metric implementation. Other Daily recommendations were not promoted."
+  }
+}

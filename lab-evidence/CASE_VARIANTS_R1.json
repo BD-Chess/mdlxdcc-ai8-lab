@@ -1,0 +1,26 @@
+[
+  {
+    "source_path": "public/8ZT/BD_8z_publish.html",
+    "lab_path": "lab-evidence/case-variants/945a052f4b32859a1e0e0fffc12fe8a2064f07e0/BD_8z_publish.html"
+  },
+  {
+    "source_path": "public/BD/BD_8z_auth.html",
+    "lab_path": "lab-evidence/case-variants/17beaef62d98ddafd87bb8a729bd8598fc010fc9/BD_8z_auth.html"
+  },
+  {
+    "source_path": "public/BD/BD_8z_publish.html",
+    "lab_path": "lab-evidence/case-variants/edb5e9824887f1ef5256f52d9f658a143bbcdca9/BD_8z_publish.html"
+  },
+  {
+    "source_path": "public/BD/bd.html",
+    "lab_path": "lab-evidence/case-variants/8901460732b0b43ead08e5e02969937befc970e4/bd.html"
+  },
+  {
+    "source_path": "public/c/mind-of-minds.html",
+    "lab_path": "lab-evidence/case-variants/2cb785f4d5d886b00bccade8c2db2f60d322c25a/mind-of-minds.html"
+  },
+  {
+    "source_path": "public/crp/index-crp.html",
+    "lab_path": "lab-evidence/case-variants/0fc74f714aa380a236261f1161b0200407136e7b/index-crp.html"
+  }
+]

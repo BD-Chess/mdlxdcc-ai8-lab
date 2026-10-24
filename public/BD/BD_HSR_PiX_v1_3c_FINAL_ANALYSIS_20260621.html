@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="#0a1019" name="theme-color"/>
+<title>BD HSR PiX Arena v1.3c — Final Real-1m Deep Optimizer Analysis</title>
+<style>
+:root {
+    --bg-0: #070b11;
+    --bg-1: #0a111b;
+    --bg-2: #101a28;
+    --panel: rgba(15, 24, 37, 0.94);
+    --panel-soft: rgba(21, 32, 48, 0.78);
+    --text: #e8eef7;
+    --muted: #aab8ca;
+    --faint: #74839a;
+    --accent: #83c8ff;
+    --accent-2: #b7a2ff;
+    --accent-soft: rgba(131, 200, 255, 0.14);
+    --border: rgba(169, 196, 224, 0.17);
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+    --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(74, 120, 179, 0.20), transparent 36rem),
+        radial-gradient(circle at 92% 20%, rgba(125, 93, 190, 0.13), transparent 30rem),
+        linear-gradient(145deg, var(--bg-0), var(--bg-1) 46%, #080d14);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.72;
+    overflow-wrap: anywhere;
+}
+
+.page-shell {
+    width: min(100% - 32px, 980px);
+    margin: 0 auto;
+    padding: 48px 0 110px;
+}
+
+.source-label {
+    margin: 0 8px 12px;
+    color: var(--faint);
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.reader {
+    position: relative;
+    padding: clamp(30px, 6vw, 72px);
+    background: linear-gradient(180deg, rgba(18, 28, 43, 0.96), var(--panel));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+}
+
+.reader > :first-child { margin-top: 0; }
+.reader > :last-child { margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f7faff;
+    line-height: 1.2;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    scroll-margin-top: 1rem;
+}
+
+h1 {
+    margin: 0 0 1.1em;
+    font-size: clamp(2rem, 5.2vw, 3.35rem);
+    line-height: 1.05;
+    background: linear-gradient(115deg, #ffffff 8%, var(--accent) 58%, var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    margin: 2.2em 0 0.75em;
+    padding-bottom: 0.34em;
+    font-size: clamp(1.5rem, 3.4vw, 2.15rem);
+    border-bottom: 1px solid var(--border);
+}
+
+h3 { margin: 1.85em 0 0.65em; font-size: 1.35rem; color: #dcecff; }
+h4 { margin: 1.6em 0 0.55em; font-size: 1.15rem; color: #d8e5f5; }
+h5, h6 { margin: 1.4em 0 0.5em; color: var(--muted); }
+
+p { margin: 0 0 1.05em; }
+strong { color: #ffffff; font-weight: 750; }
+em { color: #d9e5f4; }
+del { color: var(--faint); }
+
+mark {
+    color: #fff4c7;
+    background: rgba(255, 205, 86, 0.20);
+    border-radius: 0.25em;
+    padding: 0.04em 0.22em;
+}
+
+a {
+    color: var(--accent);
+    text-decoration-color: rgba(131, 200, 255, 0.46);
+    text-underline-offset: 0.18em;
+}
+a:hover { color: #b8e1ff; text-decoration-color: currentColor; }
+a:focus-visible, button:focus-visible {
+    outline: 3px solid rgba(131, 200, 255, 0.72);
+    outline-offset: 3px;
+}
+
+ul, ol {
+    margin: 0 0 1.1em;
+    padding-left: 1.45em;
+}
+li { margin: 0.28em 0; padding-left: 0.18em; }
+li::marker { color: var(--accent); font-weight: 700; }
+
+blockquote {
+    margin: 1.55em 0;
+    padding: 1.05em 1.2em 1.05em 1.35em;
+    color: #d9e5f2;
+    background: linear-gradient(90deg, var(--accent-soft), rgba(131, 200, 255, 0.035));
+    border-left: 4px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+}
+blockquote > :last-child { margin-bottom: 0; }
+
+hr {
+    height: 1px;
+    margin: 2.5em 0;
+    border: 0;
+    background: linear-gradient(90deg, transparent, rgba(131, 200, 255, 0.55), transparent);
+}
+
+code, kbd, samp {
+    font-family: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+:not(pre) > code {
+    padding: 0.13em 0.38em;
+    color: #d6efff;
+    background: rgba(4, 10, 17, 0.62);
+    border: 1px solid var(--border);
+    border-radius: 0.38em;
+    font-size: 0.91em;
+}
+
+pre {
+    max-width: 100%;
+    margin: 1.45em 0;
+    padding: 1.1em 1.2em;
+    overflow: auto;
+    color: #dce8f7;
+    background: #060a10;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+    tab-size: 4;
+}
+pre code { font-size: 0.86rem; line-height: 1.58; }
+
+.table-wrap {
+    max-width: 100%;
+    margin: 1.5em 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background: rgba(5, 10, 16, 0.34);
+}
+th, td {
+    padding: 0.72em 0.85em;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    vertical-align: top;
+}
+th:last-child, td:last-child { border-right: 0; }
+tr:last-child td { border-bottom: 0; }
+th {
+    color: #f6f9ff;
+    background: rgba(131, 200, 255, 0.10);
+    text-align: left;
+}
+tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.018); }
+
+img, video, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.4em auto;
+    border-radius: 14px;
+}
+
+.task-list-item { list-style: none; margin-left: -1.2em; }
+input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+    margin: 0 0.45em 0 0;
+    accent-color: var(--accent);
+}
+
+.footnotes {
+    margin-top: 3em;
+    padding-top: 1.2em;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.font-controls {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 1000;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: rgba(7, 12, 19, 0.90);
+    border: 1px solid rgba(169, 196, 224, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(14px);
+}
+
+.font-controls button {
+    min-width: 52px;
+    min-height: 48px;
+    padding: 0 13px;
+    color: #f6f9ff;
+    background: linear-gradient(180deg, #1c2a3e, #121c2b);
+    border: 1px solid rgba(169, 196, 224, 0.20);
+    border-radius: 11px;
+    font: 800 0.98rem/1 system-ui, sans-serif;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+}
+.font-controls button:hover { background: linear-gradient(180deg, #263a54, #19283b); }
+.font-controls button:active { transform: translateY(1px); }
+
+@media (max-width: 700px) {
+    html { font-size: 21px; }
+    body { line-height: 1.68; }
+    .page-shell {
+        width: min(100% - 16px, 980px);
+        padding: 12px 0 104px;
+    }
+    .source-label { margin: 0 7px 8px; font-size: 0.64rem; }
+    .reader {
+        padding: 24px 18px 32px;
+        border-radius: 16px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.48rem; margin-top: 1.9em; }
+    h3 { font-size: 1.24rem; }
+    blockquote { margin-left: 0; margin-right: 0; padding: 0.9em 0.9em 0.9em 1em; }
+    pre { margin-left: -6px; margin-right: -6px; padding: 0.9em; }
+    .font-controls button { min-width: 56px; min-height: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+@media print {
+    html { font-size: 11pt !important; }
+    body { color: #111; background: #fff; }
+    .page-shell { width: 100%; padding: 0; }
+    .source-label, .font-controls { display: none !important; }
+    .reader { padding: 0; background: #fff; border: 0; border-radius: 0; box-shadow: none; }
+    h1, h2, h3, h4, h5, h6, strong, a { color: #000 !important; background: none !important; }
+    blockquote, pre, table { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<main class="page-shell">
+<div class="source-label">BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.md</div>
+<article class="reader" id="reader"><h1>BD HSR PiX Arena v1.3c — Final Real-1m Deep Optimizer Analysis</h1>
+<p><strong>Source:</strong> <code>LIVE_EXTRACT_HSR_PIX_REAL1M_V13_FOR_GPT_20260621_061652.zip</code> <strong>Status:</strong> COMPLETE — 300,000 / 300,000 tasks</p>
+<h2>Final headline</h2>
+<ul><li>10,000 candidate configurations; 60,000 candidate asset×cost rows and 240,000 matched-control rows.</li><li>4,785 candidate rows beat the best matched control by profile score: <strong>7.975%</strong>.</li><li>119 configurations achieved <strong>6/6</strong> score wins across BTC, ETH, SOL × zero and realistic costs: <strong>1.19%</strong> of the search.</li><li>Profile distribution: P0 13, P1 21, P2 22, P3 23, P4 26, P5 14.</li><li>All 115 configurations present at the 96.18% checkpoint remained; four new 6/6 configurations were added.</li></ul>
+<h2>Strongest results</h2>
+<ul><li>Raw ETH P5 leader: realistic-cost MTM <strong>+$1,736.20</strong>, realized <strong>+$1,434.52</strong>, fixed-$500 max drawdown <strong>67.75%</strong>.</li><li>Cross-asset P5 seed <code>t2000_m60_b2.76_flat5</code>: realistic MTM/realized BTC <strong>+$626.96/+494.43</strong>, ETH <strong>+$905.02/+483.18</strong>, SOL <strong>+$887.82/+475.19</strong>.</li><li>Strong P3 seed <code>t1600_m50_b1.5525_none</code>: minimum score lift <strong>+379.24</strong>, minimum candidate MTM <strong>+$399.48</strong> across six tests.</li><li>SOL P4 fixed-$500 stop breach still showed realistic-cost MTM <strong>+$2,175.88</strong> and realized <strong>+$816.64</strong>; preserve it for capital-truth replay.</li></ul>
+<h2>Important limits</h2>
+<ol><li>6/6 is based on <code>risk_profile_score</code>, not guaranteed raw-MTM dominance in every row.</li><li>Fixed $500 and profile-specific stop rules truncate paths; they do not determine whether a strategy is intrinsically good.</li><li><code>reanchor_target_separation_roe</code> was stored but not used; <code>mega_rescue_close_winner_on_trigger</code> was stored but not executed.</li><li>Winner-side pyramiding, staged winner scale-out and trailing were not tested.</li><li>One Jan–Jun 2026 interval is not endpoint/holdout proof. v1.4 needs wallet-neutral full paths, rolling windows, phenotype deduplication and paper/shadow validation.</li></ol>
+<h2>Folder transition</h2>
+<ul><li>Run <code>CLEAN_V13_KEEP_WARM_START_FOR_V14.bat</code> first in preview, then with <code>APPLY</code>.</li><li>Keep cleaned v1.3 as an immutable warm-start archive.</li><li>Install v1.4 in <code>D:\8Z\8z\BDH\v1.4</code>, not over v1.3.</li><li>Import <code>V14_WARM_START_FROM_V13.zip</code>; do not reuse v1.3c task IDs under changed semantics.</li></ul></article>
+</main>
+<div aria-label="Text size controls" class="font-controls" role="group">
+
+
+</div>
+
+<script id="bd-access-data" type="application/json">{"schema":"BD_ACCESS_V1","path":"BD/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html","pair":"2f2ebc0d32eef639fd7fad8c","kdf":{"name":"PBKDF2-SHA256","iterations":600000,"salt":"Y3XtQeoLn9IuhRvdRNE+h0quGm4oj4AWlZm4gKDJOmU="},"wrap":{"iv":"pByUb3BuIaXK/roD","cipher":"uHJ19d9l9995HBoy7P1G+a5HtVuSlWJgNHS6bU5vBCtDxBPO/GkXOrJS3A9ORgr6"},"units":[{"id":0,"kind":"document","target":null,"iv":"J1M1UTe0QJ3rdgqw","cipher":"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","aad":"BD_ACCESS_V1:BD/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html:2f2ebc0d32eef639fd7fad8c:0:document"}]}</script><script defer="" src="../js/bd-owner-access-v1.js"></script></body>
+</html>

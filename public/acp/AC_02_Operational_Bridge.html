@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ACP Bridge — Two Independent Routes from Origin to Test</title><meta content="A preserved old URL now serving as a superseded historical bridge, current routing page, and provenance link to evidence-first CCH science and the independent MDL×DCC engineering descendants." name="description"/><link href="https://www.mdlxdcc.org/acp/ac_02_operational_bridge" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #06060a;
+  --surface: #0d0d14;
+  --surface-2: #101019;
+  --surface-3: rgba(13,13,20,0.78);
+  --gold: #c9a84c;
+  --gold-dim: #8a6e2f;
+  --gold-glow: rgba(201,168,76,0.12);
+  --text: #e8e0d0;
+  --text-dim: #9a9080;
+  --white: #f5f0e8;
+  --accent: #4a7fa5;
+  --accent-dim: rgba(74,127,165,0.15);
+  --green: #5aa384;
+  --green-dim: rgba(90,163,132,0.14);
+  --rose: #b96d6d;
+  --rose-dim: rgba(185,109,109,0.14);
+  --violet: #8f78c9;
+  --violet-dim: rgba(143,120,201,0.14);
+  --line: rgba(201,168,76,0.15);
+  --line-strong: rgba(201,168,76,0.28);
+  --shadow: 0 20px 60px rgba(0,0,0,0.28);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(28,55,140,0.38), transparent 38%),
+    radial-gradient(circle at 88% 80%, rgba(14,72,52,0.32), transparent 36%),
+    radial-gradient(circle at 50% 50%, rgba(10,18,55,0.18), transparent 55%),
+    linear-gradient(170deg, #06070f 0%, #05080a 55%, #040a07 100%);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 21px;
+  line-height: 1.85;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+body::before {
+  width: 55vw; height: 55vw; left: -14vw; top: -12vh;
+  background: radial-gradient(circle, rgba(38,72,168,0.55), rgba(18,32,88,0.22) 52%, transparent 74%);
+  filter: blur(110px); opacity: 0.28; animation: floatA 24s ease-in-out infinite;
+}
+body::after {
+  width: 50vw; height: 50vw; right: -12vw; bottom: -18vh;
+  background: radial-gradient(circle, rgba(16,90,62,0.55), rgba(8,48,34,0.22) 52%, transparent 74%);
+  filter: blur(120px); opacity: 0.24; animation: floatB 30s ease-in-out infinite;
+}
+@keyframes floatA { 0%,100% { transform: translate3d(0,0,0);} 50% { transform: translate3d(7vw,6vh,0);} }
+@keyframes floatB { 0%,100% { transform: translate3d(0,0,0);} 50% { transform: translate3d(-6vw,-8vh,0);} }
+#grain {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.45;
+}
+#stars { position: fixed; inset: 0; pointer-events: none; z-index: 2; opacity: 0.45; }
+#progress {
+  position: fixed; top:0; left:0; height:2px; width:0; z-index: 100;
+  background: linear-gradient(90deg, var(--gold), #f1d385);
+  box-shadow: 0 0 18px rgba(201,168,76,0.45);
+}
+.topbar {
+  position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px);
+  background: rgba(6,7,12,0.78); border-bottom: 1px solid var(--line);
+}
+.topbar-inner {
+  max-width: 1240px; margin: 0 auto; padding: 14px 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+}
+.brand {
+  color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.22em; text-transform: uppercase; font-size: 12px;
+}
+.brand:hover { color: #e2c067; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.nav a {
+  text-decoration: none; color: var(--text-dim); border: 1px solid rgba(201,168,76,0.16);
+  padding: 5px 11px; border-radius: 999px; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.08em; background: rgba(255,255,255,0.01);
+}
+.nav a.active, .nav a:hover {
+  color: var(--gold); border-color: rgba(201,168,76,0.45); background: rgba(201,168,76,0.06);
+}
+.page {
+  position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 0 26px 120px;
+}
+.cover { padding: 90px 0 44px; text-align: center; max-width: 840px; margin: 0 auto; }
+.eyebrow {
+  color: var(--gold); opacity: 0.78; font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 18px;
+}
+h1 {
+  color: var(--white); font-weight: 300; font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.08; margin-bottom: 16px;
+}
+h1 em { color: var(--gold); font-style: italic; }
+.subtitle {
+  color: var(--text-dim); font-style: italic; font-size: 22px; max-width: 760px; margin: 0 auto 24px;
+}
+.byline { font-family: 'JetBrains Mono', monospace; color: var(--gold-dim); font-size: 11px; letter-spacing: 0.16em; }
+.series-badges {
+  display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin: 24px 0 0;
+}
+.badge {
+  border:1px solid rgba(201,168,76,0.18); border-radius:999px; padding:6px 12px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color: var(--text-dim); background: rgba(255,255,255,0.02);
+}
+.badge.good { border-color: rgba(90,163,132,0.34); color: #9fd0b9; background: var(--green-dim); }
+.badge.bridge { border-color: rgba(74,127,165,0.34); color: #aac8df; background: var(--accent-dim); }
+.badge.warn { border-color: rgba(185,109,109,0.34); color: #dfaaaa; background: var(--rose-dim); }
+.badge.violet { border-color: rgba(143,120,201,0.34); color: #d0c4f1; background: var(--violet-dim); }
+.rule { width: 88px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 24px auto 0; opacity: 0.55; }
+.layout { display:grid; grid-template-columns: minmax(0, 250px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.sidebar {
+  position: sticky; top: 82px; z-index: 4;
+}
+.card, .toc, .callout, .note-box, .table-wrap, .quote-box, .footer-nav {
+  background: linear-gradient(180deg, rgba(13,13,20,0.92), rgba(16,16,25,0.88));
+  border: 1px solid rgba(201,168,76,0.13); border-radius: 16px; box-shadow: var(--shadow);
+}
+.card { padding: 18px 18px 16px; margin-bottom: 14px; }
+.card h3, .toc-title, .mini-title {
+  color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+}
+.card h3 { margin-bottom: 12px; }
+.card p, .card li { font-size: 17px; line-height: 1.62; color: var(--text-dim); }
+.card ul { padding-left: 1.1em; }
+.card li { margin-bottom: 8px; }
+.toc { padding: 18px 22px; margin: 0 0 24px; }
+.toc-title { margin-bottom: 10px; }
+.toc ul { list-style: none; }
+.toc li { margin: 8px 0; color: var(--text-dim); }
+.toc a { color: var(--text-dim); text-decoration: none; }
+.toc a:hover { color: var(--gold); }
+.main { min-width: 0; }
+.chapter { margin: 0 0 66px; }
+.chapter-tag {
+  color: var(--gold); opacity: 0.72; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;
+}
+.chapter h2 {
+  color: var(--white); font-size: clamp(28px, 4.4vw, 42px); line-height: 1.18; font-weight: 400;
+  padding-bottom: 14px; margin-bottom: 24px; border-bottom: 1px solid var(--line);
+}
+.chapter h3 { color: var(--white); font-size: 28px; font-weight: 400; margin: 30px 0 14px; }
+p { margin: 0 0 20px; }
+p.lead { font-size: 23px; color: var(--white); }
+.callout, .note-box, .quote-box { padding: 22px 24px; margin: 26px 0; }
+.callout strong, .note-box strong, .quote-box strong { color: var(--gold); }
+.callout p:last-child, .note-box p:last-child, .quote-box p:last-child { margin-bottom: 0; }
+.callout.good { border-color: rgba(90,163,132,0.28); background: linear-gradient(180deg, rgba(10,24,19,0.82), rgba(13,24,20,0.76)); }
+.callout.warn { border-color: rgba(185,109,109,0.28); background: linear-gradient(180deg, rgba(26,14,14,0.82), rgba(24,15,15,0.76)); }
+.callout.bridge { border-color: rgba(74,127,165,0.28); background: linear-gradient(180deg, rgba(13,19,28,0.84), rgba(14,18,24,0.78)); }
+.callout.violet { border-color: rgba(143,120,201,0.28); background: linear-gradient(180deg, rgba(20,15,31,0.84), rgba(17,14,24,0.78)); }
+.pull {
+  margin: 34px 0; padding: 10px 0 10px 20px; border-left: 2px solid var(--gold); color: var(--gold);
+  font-size: 25px; line-height: 1.55; font-style: italic;
+}
+.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 28px; }
+.pill {
+  border: 1px solid rgba(201,168,76,0.18); background: rgba(201,168,76,0.05); border-radius: 999px;
+  padding: 7px 12px; color: var(--text-dim); font-size: 14px;
+}
+ul.clean, ol.clean { padding-left: 1.2em; margin: 18px 0 22px; }
+ul.clean li, ol.clean li { margin-bottom: 10px; }
+.table-wrap { overflow-x: auto; margin: 26px 0 30px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(201,168,76,0.08); }
+th { color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; background: rgba(201,168,76,0.04); }
+tr:last-child td { border-bottom: none; }
+.code {
+  font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.05);
+  padding: 2px 7px; border-radius: 7px; font-size: 0.9em;
+}
+.footer-nav { margin-top: 30px; padding: 18px 20px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.footer-nav a {
+  text-decoration:none; color: var(--text-dim); border:1px solid rgba(201,168,76,0.15); border-radius:999px; padding:8px 14px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+}
+.footer-nav a:hover { color: var(--gold); border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
+footer.doc-footer { max-width: 860px; margin: 0 auto; padding-top: 22px; border-top:1px solid var(--line); color: var(--text-dim); }
+footer.doc-footer p { font-size: 17px; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.index-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:18px; margin-top:28px; }
+.index-card {
+  display:block; text-decoration:none; color:inherit; padding:22px 22px 18px;
+  background: linear-gradient(180deg, rgba(13,13,20,0.92), rgba(16,16,25,0.88));
+  border:1px solid rgba(201,168,76,0.13); border-radius:16px; box-shadow: var(--shadow);
+}
+.index-card h2 { color: var(--white); font-weight: 400; font-size: 30px; margin: 8px 0 12px; }
+.index-card p { color: var(--text-dim); font-size: 18px; }
+.index-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-2px); transition: 0.2s ease; }
+.kicker { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color: var(--gold); opacity: 0.75; }
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+@media (max-width: 700px) {
+  body { font-size: 19px; }
+  .page { padding: 0 16px 90px; }
+  .cover { padding-top: 64px; }
+  .subtitle { font-size: 19px; }
+  .index-grid { grid-template-columns: 1fr; }
+}
+
+.claim-tag{display:inline-block;margin:0 8px 8px 0;padding:5px 9px;border-radius:999px;font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(201,168,76,.16);background:rgba(255,255,255,.02);color:var(--text-dim)}
+.claim-tag.core{border-color:rgba(90,163,132,.34);color:#9fd0b9;background:var(--green-dim)}
+.claim-tag.operational{border-color:rgba(74,127,165,.34);color:#aac8df;background:var(--accent-dim)}
+.claim-tag.spec{border-color:rgba(185,109,109,.34);color:#dfaaaa;background:var(--rose-dim)}
+.claim-tag.status{border-color:rgba(143,120,201,.34);color:#d0c4f1;background:var(--violet-dim)}
+.lead-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0 30px}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}}
+
+.status-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.status-pill{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(201,168,76,.25);border-radius:999px;padding:6px 10px;color:var(--gold);background:rgba(201,168,76,.06)}
+.route-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:22px 0}.route-card{background:var(--surface);border:1px solid var(--gold-line);border-radius:16px;padding:22px}.route-card h3{color:var(--gold);font-weight:500;font-size:28px;margin-bottom:10px}.route-card ol{padding-left:1.2em}.route-card li{margin:9px 0}.boundary{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:8px;padding:18px 20px;margin:18px 0}.boundary p{margin:7px 0}.route-card a,.authority-card a{color:var(--gold)}.authority-card{border:1px solid rgba(90,163,132,.35);background:rgba(90,163,132,.08);border-radius:14px;padding:18px 20px;margin:22px 0}.historical{border:1px dashed rgba(185,109,109,.5);background:rgba(185,109,109,.07);border-radius:14px;padding:20px;margin:22px 0}@media(max-width:760px){.route-grid{grid-template-columns:1fr}}
+
+/* Accessible skip link: visually hidden until keyboard focus. */
+.skip-link{position:fixed;left:12px;top:12px;z-index:10000;transform:translateY(-180%);padding:10px 14px;border-radius:6px;background:#fff;color:#000;font-family:Arial,sans-serif;font-size:14px;font-weight:700;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.skip-link:focus{transform:translateY(0)}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+</style>
+</head><body><a class="skip-link" href="#main-content">Skip to main content</a><div id="grain"></div><div id="progress"></div><div class="topbar"><div class="topbar-inner"><a class="brand" href="index.html">ACP / CCH</a><nav class="nav"><a href="#routes">Routes</a><a href="#authority">Authority</a><a href="#engineering">Engineering descendants</a><a href="#history">History</a><a href="AC_CCH_Authority_Map.html">Authority map</a></nav></div></div><div class="page"><header class="cover reveal"><div class="eyebrow">ACP BRIDGE · ROUTING AND PROVENANCE</div><h1>Two Independent Routes<br/><em>from Origin to Test</em></h1><p class="subtitle">The former single Operational Bridge has been split so ontology cannot borrow scientific authority and science does not require ontology.</p><div class="status-row"><span class="status-pill">SUPERSEDED SCIENTIFIC FORMULATION</span><span class="status-pill">HISTORICAL CONCEPTUAL BRIDGE</span><span class="status-pill">CURRENT ROUTING PAGE</span></div></header><main id="main-content"><section class="chapter reveal" id="routes"><div class="chapter-tag">I · Current routes</div><h2>Choose the question before the path</h2><div class="route-grid"><div class="route-card"><h3>Science-first route</h3><p><strong>Recommended for scientific reviewers.</strong></p><ol><li><a href="../BD/BD_CCH_Foundations.html">CCH Scientific Foundations</a> — empirical problem, primary evidence, conflicts, alternatives, and exact gap.</li><li><a href="../BD/BD_CCH_Science.html">CCH Science</a> — candidate mechanism, model classes, experiments, and falsifiers.</li><li><a href="CCH_Science_Review_Dossier.html">Science-only reviewer dossier / print route</a> — a compact routing summary; the two scientific pages remain authoritative.</li><li>Optional interpretation: <a href="AC_01_Flagship.html">AC Flagship</a> and <a href="../BD/BD_CCH_Consciousness_Field.html">CFH</a>.</li></ol><div class="boundary"><p><strong>What this route cannot prove:</strong> AC, CFH, phenomenality from a metric, or artificial consciousness.</p></div></div><div class="route-card"><h3>Ontology-and-origin route</h3><ol><li><a href="AC_01_Flagship.html">AC Flagship</a> — proposed ontology.</li><li><a href="../BD/BD_CCH_Consciousness_Field.html">CFH</a> — personal origin and speculative field language.</li><li><a href="../BD/BD_CCH_Foundations.html">Scientific Foundations</a> — independent empirical grounding.</li><li><a href="../BD/BD_CCH_Science.html">CCH Science</a> — independent local tests.</li></ol><div class="boundary"><p><strong>What this route cannot prove:</strong> that ontology is a premise of CCH, or that local CCH/DCC results validate AC/CFH.</p></div></div></div></section><section class="chapter reveal" id="authority"><div class="chapter-tag">II · Authority</div><h2>The current scientific bridge</h2><p><strong>X(t)</strong> is the current scientific candidate object: the primary candidate multidimensional state representation. It is not yet frozen for a claim-bearing test. <strong>Ω<sub>CCH</sub></strong> is a candidate preregistered target region, also not yet frozen. <strong>S*</strong> may fail independently of X(t); it is optional rather than authoritative.</p><div class="boundary"><p><strong>CCH does not require AC or CFH.</strong></p><p><strong>CCH success does not prove AC or CFH.</strong></p><p><strong>DCC, MDL×DCC, and AI8 success supports only the tested engineering claims.</strong></p><p><strong>Local bridge success does not prove AC unless AC supplies a distinct preregistered prediction.</strong></p></div><div class="authority-card"><strong>Canonical precedence</strong><p>Foundations and Science govern scientific claims; Flagship governs ontology; CFH records personal/speculative interpretation; this Bridge and the Atlas do not override them.</p><p><a href="AC_CCH_Authority_Map.html">Open the canonical authority map →</a></p></div></section><section class="chapter reveal" id="engineering"><div class="chapter-tag">III · Current technical descendants</div><h2>From historical bridge to independent engineering evidence</h2><p>The historical AC/CFH/CCH and claustrum-control inquiry generated a control question. That question was abstracted into the Digital Claustrum Controller, generalized as Dynamic Complexity / Compression Controller, and operationalized with MDL as MDL×DCC.</p><div class="callout good"><p><strong>DCC and MDL×DCC are not current scientific evidence for AC, CFH, or biological CCH.</strong> They are current technical descendants whose authority comes from their own code, solvers, arenas, baselines, ablations, negative results, measured outcomes, and cross-domain transfer tests.</p><p>One may reject the ontology and still have to evaluate the invention.</p></div><div class="index-grid"><a class="index-card" href="../crp/projects-are-evidence"><div class="kicker">Engineering evidence</div><h2>Projects Are Evidence. The Method Is the Value.</h2><p>Public route to the project-level evidence and claim boundaries.</p></a><a class="index-card" href="../crp/mdlxdcc"><div class="kicker">Working method</div><h2>MDL×DCC Domain Map</h2><p>Domain-bounded and cross-domain evidence for the technical method; not universal proof.</p></a><a class="index-card" href="../crp/mdlxdcc-reasoning-traces"><div class="kicker">Frontier next test · no result yet</div><h2>MDL×DCC Reasoning Trace Arena</h2><p>Preregistered test of process-side compression as an online signal for reasoning governance.</p></a></div><div class="boundary"><p><strong>Lineage:</strong> Soul Voyage / consciousness inquiry → AC / CFH / CCH → claustrum control question → DCC → MDL×DCC → working code and arenas → AIM³ / MAL / AI8 / ArenaLoop / Team Genesis.</p></div></section><section class="chapter reveal" id="history"><div class="chapter-tag">IV · Provenance</div><h2>The historical conceptual bridge</h2><div class="historical"><p>Earlier editions joined ontology, field interpretation, coherence/complexity language, and a scalar coupling idea on this one page. That formulation helped generate the later programme but is now a <strong>superseded scientific formulation</strong>.</p><p>The old scalar bridge is historical. Its formula is preserved only in the separately labelled <a href="../BD/BD_CFH_CSH_Speculative_Sandbox.html">CFH / CSH Speculative Sandbox</a>. It is not current CCH authority and does not measure AC or CF.</p></div><details class="historical"><summary><strong>Original pre-alignment source identity</strong></summary><p>SHA-256: <code>6f7325fec4aa9ab712085f18af5b86d3f315d19d2f9d28ecb1b41eb53ccce849</code><br/>SHA3-256: <code>ab756fbf35be90025919d8b0d741f601e92c315ecf08600b5bf7a47a6b6521b5</code></p><p>The source identity is preserved in the release ledger. Its scalar formula appears only in the separately labelled historical sandbox, not as active authority on this page.</p></details><p>The support/weakening/failure discipline is preserved: a local model must outperform simpler rivals under held-out tests, complexity penalties, calibration checks, and matched intervention budgets. Failure must be allowed without rewriting the target after outcomes are known.</p></section></main><footer class="footer reveal"><p><strong>Start with evidence if you are testing the science. Start with AC if you are examining the ontology. Do not use either path as proof of the other.</strong></p></footer></div><script>(function(){const p=document.getElementById('progress');const f=()=>{const h=document.documentElement;const d=h.scrollHeight-h.clientHeight;p.style.width=(d>0?(h.scrollTop/d)*100:0)+'%'};addEventListener('scroll',f,{passive:true});f();const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));})();</script></body></html>

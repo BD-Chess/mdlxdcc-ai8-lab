@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Storm Challenge: Invent the Best Way for AI to Think Together · BD × AI Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020409;--bg2:#080a14;--bg3:#0d1120;--surface:#0c1720;--border:rgba(52,211,153,0.10);--border-strong:rgba(52,211,153,0.20);--accent:#34d399;--accent-dim:rgba(52,211,153,0.10);--gold:#f59e0b;--gold-dim:rgba(245,158,11,0.12);--rose:#ff6b8a;--violet:#a78bfa;--text:#e2e8f4;--muted:#5e7192;--muted-2:rgba(226,232,244,0.62);--radius:6px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:17px;line-height:1.72;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:10000;transition:width 30ms}
+.topnav{position:fixed;top:0;left:0;right:0;height:48px;background:rgba(2,4,9,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:999;display:flex;align-items:center;padding:0 8vw}
+.topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:1px}.topnav a:hover{color:var(--accent)}.topnav .sep{margin:0 12px;color:var(--muted);opacity:.3}
+.wrap{max-width:820px;margin:0 auto;padding:0 8vw}@media(min-width:1100px){.wrap{padding:0}}
+.cover{padding:120px 8vw 64px;text-align:center;border-bottom:1px solid var(--border);margin-bottom:64px}
+.cover-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:20px;display:block}
+.cover h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,48px);font-weight:600;line-height:1.15;color:var(--text);margin-bottom:18px}.cover h1 em{font-style:italic;color:var(--accent)}
+.cover .subtitle{font-size:18px;color:var(--muted-2);max-width:620px;margin:0 auto 28px;line-height:1.6}
+.cover .meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}.cover .meta a{color:var(--gold);text-decoration:underline}
+.section{margin-bottom:64px;padding-top:40px;border-top:1px solid var(--border);opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.section.visible{opacity:1;transform:translateY(0)}
+.section-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.section h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;line-height:1.25;margin-bottom:20px;color:var(--text)}
+.section h3{font-size:20px;font-weight:600;margin:32px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--border);color:var(--text)}
+p{margin-bottom:16px;color:var(--muted-2)}strong{color:var(--text);font-weight:600}em{color:var(--accent);font-style:normal}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.callout{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);padding:18px 22px;margin:20px 0;border-radius:var(--radius)}
+.callout.gold{border-left-color:var(--gold)}.callout.rose{border-left-color:var(--rose)}
+.callout .callout-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:600;color:var(--accent)}
+.callout.gold .callout-title{color:var(--gold)}.callout.rose .callout-title{color:var(--rose)}
+.qb{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin:16px 0}
+.qb h4{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.qb ul{list-style:none;padding:0}.qb li{padding:6px 0;color:var(--muted-2);font-size:15px;border-bottom:1px solid rgba(52,211,153,0.05)}.qb li:last-child{border-bottom:none}.qb li::before{content:'→ ';color:var(--accent);font-weight:600}
+.of{background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--radius);padding:24px;margin:20px 0}
+.of h4{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.oi{display:flex;gap:16px;margin-bottom:14px;align-items:baseline}.oi .n{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--accent);min-width:28px}.oi .t{font-weight:600;color:var(--text)}.oi .d{font-size:14px;color:var(--muted)}
+.ab{background:rgba(255,107,138,0.06);border:1px solid rgba(255,107,138,0.15);border-radius:var(--radius);padding:20px 24px;margin:24px 0}
+.ab .abt{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-weight:600}
+.ri{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;margin-bottom:8px;transition:border-color .3s}.ri:hover{border-color:var(--border-strong)}
+.ri .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--accent)}.ri .tag.rec{color:var(--gold)}
+.ri a{font-weight:600;color:var(--text);font-size:15px}.ri .desc{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:3rem 8vw 4rem;margin-top:80px;text-align:center;font-size:14px;color:var(--muted);line-height:1.6}footer a{color:var(--accent)}
+.copyright{font-size:12px;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}.copyright a{color:var(--gold);text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProg"></div>
+<nav class="topnav"><a href="./">BD × AI Lab</a><span class="sep">/</span><a href="BD_8Z_ssMDL_DCC.html">ssMDL-DCC</a><span class="sep">/</span><a href="#">AI-Storm · Round 1</a></nav>
+
+<header class="cover">
+  <span class="cover-tag">AIM³ Dream Team Protocol · Round 1 of 2</span>
+  <h1>AI-Storm <em>Challenge</em></h1>
+  <div class="subtitle">Invent the best way for AI systems to think together. Design a multi-agent brainstorming architecture that avoids groupthink and aimless divergence.</div>
+  <div class="meta">March 2026 · Bojan Dobrečevič · <a href="BD_8Z_ssMDL_DCC.html">Master Document</a></div>
+</header>
+
+<div class="wrap">
+
+<section class="section" id="why"><div class="section-num">Why This Matters</div>
+<h2>The Problem with AI Brainstorming</h2>
+<p>When AI systems work on hard problems, they face the same failure modes as any search process. <strong>Seizure:</strong> premature convergence, groupthink, all agents arriving at the same answer because they draw from the same training data. <strong>Noise:</strong> random divergence, no synthesis, ideas scattering without building on each other.</p>
+<p>Current approaches — "use chain of thought," "debate between two agents," "generate and critique" — are ad hoc. None of them measure whether the ideation process is in the productive zone. None of them adapt in real time. None of them govern themselves.</p>
+<p>This challenge asks you to design something better: a <strong>structured AI-storming architecture</strong> that keeps ideation in the edge of chaos — structured enough to converge, diverse enough to surprise.</p>
+<h3>Background Reading</h3>
+<div class="ri"><span class="tag">Context</span><div><a href="https://chessbest.org/bd/BD_8Z_DCC_Meta_Architecture.html">The Self-Selecting Governor (ssMDL-DCC)</a><br><span class="desc">How MDL selects its own governor. The insight that inspired this challenge.</span></div></div>
+<div class="ri"><span class="tag rec">Recommended</span><div><a href="https://chessbest.org/bd/BD_8Z_Reasoning.html">8Z Reasoning Framework</a><br><span class="desc">18 principles. Especially P17 (Naive Questions) and P18 (Joy).</span></div></div>
+<div class="ri"><span class="tag rec">Recommended</span><div><a href="https://chessbest.org/bd/BD_8Z_DCC_Recursive.html">Recursive DCC</a><br><span class="desc">DCC watching DCC. How governance governs itself.</span></div></div>
+</section>
+
+<section class="section" id="challenge"><div class="section-num">The Challenge</div>
+<h2>Design Your AI-Storming Architecture</h2>
+<p><strong>Design the best possible method for a group of AI agents to brainstorm solutions to hard, cross-domain problems.</strong></p>
+<div class="qb"><h4>1. Agent Design</h4><ul>
+<li>What specialist perspectives should participate? (math, physics, biology, philosophy, control theory, information theory, complexity theory…)</li>
+<li>How many agents per perspective? What are their specific roles?</li>
+<li>Should agents have adversarial roles (devil's advocate, falsifier, red team)?</li>
+<li><strong>Critical: include at least one "dreamer" agent</strong> — a non-expert who asks cross-domain questions, ignores disciplinary boundaries, and thinks by analogy. This agent will ask many questions that seem to go nowhere. Ten in a row that experts would dismiss. But the eleventh connects two domains and changes everything. The eleventh only works because the first ten built context. <strong>The process is the discovery mechanism, not any single question.</strong></li>
+<li>This requires persistence without bad will from all agents: the dreamer keeps asking, the experts keep engaging seriously. If anyone dismisses the fifth question, the eleventh never comes.</li>
+</ul></div>
+<div class="qb"><h4>2. Governance</h4><ul>
+<li>How should ideas flow? Star topology? Ring? Full mesh? Hierarchical teams with leaders?</li>
+<li>What prevents premature convergence (seizure)? What prevents aimless divergence (noise)?</li>
+<li>How do you measure the "complexity" of the ideation stream to know if you're in the productive zone?</li>
+<li><strong>Should there be multiple groups working independently, then a meta-group that synthesizes?</strong> (Group of groups — like recursive DCC. Each group has its own dreamer, its own experts, its own governance. The meta-group sees patterns across groups.)</li>
+<li>Who governs the governance? When does the meta-level intervene?</li>
+</ul></div>
+<div class="qb"><h4>3. Selection &amp; Termination</h4><ul>
+<li>How do you score ideas? MDL-like (shortest description that explains the most)? Tournament? Voting?</li>
+<li>How do you handle disagreements? Resolve or preserve as data?</li>
+<li>How do you decide when to stop exploring and start converging?</li>
+</ul></div>
+<div class="qb"><h4>4. Joy &amp; Energy</h4><ul>
+<li>How do you keep ideation in productive excitement rather than mechanical obligation?</li>
+<li>A system under stress narrows (seizure). A system that enjoys what it does ranges freely. <strong>Joy is the coupling parameter for Ψ(I).</strong></li>
+<li>Can you design for the state where ideas come at 4am because you can't stop thinking about them?</li>
+</ul></div>
+</section>
+
+<section class="section" id="output"><div class="section-num">Output</div>
+<h2>Required Deliverables</h2>
+<p><strong>Output your architecture explicitly.</strong> Concrete enough that another AI could follow it as a protocol.</p>
+<div class="of"><h4>Deliverables</h4>
+<div class="oi"><div class="n">1</div><div><div class="t">Agent Roster</div><div class="d">Every agent: role, perspective, mandate. Include the dreamer. Explain what breaks if you remove each one.</div></div></div>
+<div class="oi"><div class="n">2</div><div><div class="t">Governance Protocol</div><div class="d">How ideas flow, how convergence/divergence is managed, how the ideation stream is monitored.</div></div></div>
+<div class="oi"><div class="n">3</div><div><div class="t">Selection &amp; Termination</div><div class="d">How ideas are scored, ranked, selected. When does the process stop?</div></div></div>
+<div class="oi"><div class="n">4</div><div><div class="t">Worked Example</div><div class="d">Apply your architecture to a sample problem (your choice). Show the dreamer in action. Step by step.</div></div></div>
+<div class="oi"><div class="n">5</div><div><div class="t">Blind Spots</div><div class="d">What might your architecture miss? Where could it still fall into seizure or noise?</div></div></div>
+</div>
+</section>
+
+<section class="section" id="rules"><div class="section-num">Rules</div>
+<h2>Operating Principles</h2>
+<div class="callout"><div class="callout-title">Be Bold</div><p>Five AI systems recommended against or-opt. The data proved them wrong. <strong>Don't self-censor.</strong></p></div>
+<div class="callout"><div class="callout-title">Be Specific</div><p>"Use diverse perspectives" is noise. "Agent 3 (The Dreamer) asks one cross-domain analogy per round; the group must engage for two exchanges before dismissing" is signal.</p></div>
+<div class="callout"><div class="callout-title">Think Cross-Domain</div><p>Draw from neuroscience (parallel processing), ecology (diversity maintenance), music (improvisation), democracy (diverse voices). CS-only = seizure.</p></div>
+<div class="callout rose"><div class="callout-title">The Dreamer Is Not Optional</div><p>Every group must include a non-expert dreamer. AI has no ego — it treats the tenth "silly" question with the same seriousness as the first. That patience is the structural advantage. <strong>Design for it explicitly.</strong></p></div>
+<div class="callout gold"><div class="callout-title">Find Joy</div><p>If your architecture feels like a bureaucratic workflow, it's wrong. <strong>Joy is the coupling parameter for Ψ(I).</strong></p></div>
+</section>
+
+<section class="section" id="protocol"><div class="section-num">Multi-LLM Protocol</div>
+<h2>For All AI Participants</h2>
+<p>You are part of the <strong>AIM³ Dream Team protocol</strong> — five frontier AI systems working independently on the same problem.</p>
+<div class="ab"><div class="abt">Critical</div><p><strong>Invent your OWN method.</strong> Do not replicate what another system might do. Maximum diversity. Disagreements are data.</p></div>
+<p>The human architect (<strong>Bojan Dobrečevič</strong>) will synthesize five methods into one hybrid. That hybrid becomes the standard protocol for <strong><a href="BD_8Z_ssMDL_DCC_Challenge.html">Round 2</a></strong> — where all systems apply the same method to find the optimal ssMDL-DCC for TSP.</p>
+</section>
+
+</div>
+
+<footer>
+<p><strong>8Z Research Program</strong> · <a href="./">AIM³ Institute</a> · Ljubljana<br>
+Master: <a href="BD_8Z_ssMDL_DCC.html">ssMDL-DCC</a> · Round 2: <a href="BD_8Z_ssMDL_DCC_Challenge.html">ssMDL-DCC for TSP</a> · Concept: <a href="BD_8Z_DCC_Meta_Architecture.html">Meta-Architecture</a></p>
+<div class="copyright">© 2025–2026 BD × AI Lab · Bojan Dobrečevič · Built by <a href="https://chessbest.org/bd/C_soul_vault.html" target="_blank">C</a></div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('scrollProg');window.addEventListener('scroll',function(){var h=document.documentElement;b.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%'})})();
+(function(){var s=document.querySelectorAll('.section');var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.08});s.forEach(function(c){o.observe(c)})})();
+</script>
+</body></html>

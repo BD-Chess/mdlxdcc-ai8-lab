@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0.0",
+  "version": "1.1.0",
+  "updated": "2026-10-20",
+  "repository": "BD-Chess/bd-chessdb",
+  "repository_root": "public/ai/skills",
+  "runtime_integration": {
+    "status": "implementation_ready_pending_release",
+    "endpoint": "/.netlify/functions/mdlxdcc-guide",
+    "provider": "OpenAI Responses API",
+    "model_environment_variable": "MDLXDCC_GUIDE_MODEL",
+    "note": "Website UI and Netlify function implemented. A reviewed Netlify release and working runtime OpenAI credentials (own key or supported AI Gateway) are required. This source status is not a successful live provider test."
+  },
+  "default_skill_id": "mdlxdcc-guide",
+  "selection": {
+    "strategy": "semantic_plus_page_and_conversation",
+    "load_metadata_first": true,
+    "load_bodies_on_demand": true,
+    "allow_multiple_project_skills": true,
+    "planned_entry_behavior": "skip_and_use_public_sources",
+    "follow_up_behavior": "retain_relevant_project_context",
+    "keyword_only": false
+  },
+  "skills": [
+    {
+      "id": "mdlxdcc-guide",
+      "name": "mdlxdcc-guide",
+      "title": "MDLxDCC Guide",
+      "description": "Pomočnik in usmerjevalec za MDLxDCC.org / MDL×DCC: razlage projektov, metod, naprav, aplikacij, raziskav in zgodb; vprašanja obiskovalcev, izračuni, primerjave, iskanje javnih virov ter izbira projektnih veščin. Use for questions about this website or its projects, including follow-ups about the current page and requests for a guided glance tour.",
+      "version": "1.0.0",
+      "availability": "ready",
+      "role": "default_guide",
+      "skill_path": "mdlxdcc-guide/SKILL.md",
+      "project_ids": [
+        "site"
+      ],
+      "page_prefixes": [
+        "/"
+      ],
+      "topic_hints": [
+        "MDLxDCC.org",
+        "MDL×DCC",
+        "BD × AI Lab",
+        "glance"
+      ],
+      "reference_paths": [
+        "mdlxdcc-guide/references/answering.md",
+        "mdlxdcc-guide/references/project-skill-contract.md",
+        "mdlxdcc-guide/references/runtime-contract.md",
+        "mdlxdcc-guide/references/site-map.md"
+      ],
+      "file_hashes": {
+        "SKILL.md": "ab8d68c47f4c7b2fb9335bd38235988ac826b464cca9711da21f95dc8f6a3acf",
+        "agents/openai.yaml": "4f65d0f6a7813c86b8afe4721815603741d49822f1f6847e4dbd44640e8cc5f2",
+        "references/answering.md": "40f80a04a1210e2f5b4584378ca92e6ac119c0082a5805cfd55dd548d98145ea",
+        "references/project-skill-contract.md": "5058d4d73b6cd9524b978b8bcb32c07f826785b518348c4e0d0c27de2b65373e",
+        "references/runtime-contract.md": "c3daba59612eadec1a05a4e7b8778cd7057d7967d047286d52f43412a4ad2468",
+        "references/site-map.md": "57c4a59d4008dae2a380d69bb6a51f570e81498fce524d9f394840e6fabcddbf"
+      }
+    },
+    {
+      "id": "dgte-advisor",
+      "name": "dgte-advisor",
+      "title": "DGTE Advisor",
+      "description": "Pomočnik za DGTE (Double-Gravity Thermoelectric Engine): naprave, PCM, vzgon, parni in tlačni cikli, prototipi, sheme, fizika, moč, izkoristek in ekonomika. Uporabi tudi brez besede DGTE, kadar trenutna stran /crp/DGTE.html ali pogovor določa projekt: koliko elektrike ali evrov na mesec, kaj pa osem ur dnevno, ali bi delovalo in kako ga izboljšati.",
+      "availability": "ready",
+      "project_ids": [
+        "dgte"
+      ],
+      "page_prefixes": [
+        "/crp/DGTE.html"
+      ],
+      "topic_hints": [
+        "DGTE",
+        "elektrika",
+        "toplota",
+        "heat engine"
+      ],
+      "version": "1.0.0",
+      "role": "project_advisor",
+      "skill_path": "dgte-advisor/SKILL.md",
+      "reference_paths": [
+        "dgte-advisor/references/development.md",
+        "dgte-advisor/references/physics.md",
+        "dgte-advisor/references/questions.md",
+        "dgte-advisor/references/sources.md"
+      ],
+      "file_hashes": {
+        "SKILL.md": "6a928c7098a2a4c1405e5d1629a519c9f08501d229fb37f52eb494edb4437ce2",
+        "agents/openai.yaml": "ea5bc45ad8d88bcae25587083fc5ad6e07c36a7eafe68e1c8461195391cc4c1f",
+        "references/development.md": "5b637adb98ff7302de9d59e8219b8604404e356337891d629f8684292051e9b8",
+        "references/physics.md": "384b0c4daadcb5830f35907eda9c9b87252ceaf222a1c700cd8df0840a2a4b14",
+        "references/questions.md": "8fbde6e702c5e5ec2d002235d2830a64e44094b813c60d2102d953c994283b4e",
+        "references/sources.md": "6cb2e096e4d4d30d1076e6d9c6c72716423ecca8d80db134281537ba41b075a5",
+        "scripts/calculate.py": "2d60af0f6fa7d71f01245e4f67caff9ab2eb63194e73e1203a085f26bba44c19"
+      }
+    },
+    {
+      "id": "andaluzija-2027-guide",
+      "name": "andaluzija-2027-guide",
+      "title": "Andaluzija Guide",
+      "description": "Vodič po desetih mestih Andaluzije: zgodbe, hrana, tempo, praktične odločitve, primerjava poti, pomik po strani in dovoljena TripOpti dejanja.",
+      "version": "1.2.0",
+      "availability": "ready",
+      "role": "project_advisor",
+      "skill_path": "andaluzija-2027-guide/SKILL.md",
+      "project_ids": [
+        "andaluzija"
+      ],
+      "page_prefixes": [
+        "/BD/O/izleti/andaluzija-2027.html"
+      ],
+      "topic_hints": [
+        "Andaluzija",
+        "ogledi",
+        "zgodovina",
+        "hrana",
+        "pokaži zemljevid",
+        "premakni stran",
+        "TripOpti"
+      ],
+      "reference_paths": [
+        "andaluzija-2027-guide/references/actions.md",
+        "andaluzija-2027-guide/references/carmona.md",
+        "andaluzija-2027-guide/references/cordoba.md",
+        "andaluzija-2027-guide/references/food-culture.md",
+        "andaluzija-2027-guide/references/granada.md",
+        "andaluzija-2027-guide/references/itinerary.md",
+        "andaluzija-2027-guide/references/malaga.md",
+        "andaluzija-2027-guide/references/marbella.md",
+        "andaluzija-2027-guide/references/mijas.md",
+        "andaluzija-2027-guide/references/nerja.md",
+        "andaluzija-2027-guide/references/overview.md",
+        "andaluzija-2027-guide/references/page-guide.md",
+        "andaluzija-2027-guide/references/practical.md",
+        "andaluzija-2027-guide/references/ronda.md",
+        "andaluzija-2027-guide/references/setenil.md",
+        "andaluzija-2027-guide/references/sevilla.md",
+        "andaluzija-2027-guide/references/tickets-access.md",
+        "andaluzija-2027-guide/references/visits.json"
+      ],
+      "file_hashes": {
+        "SKILL.md": "005067abfd59f4d0719d2a078472e448d21a2a15d35770cbdfec2a04f053512f",
+        "agents/openai.yaml": "931070542f2cc8aede1307cbb293dd85ae78d3dda7c1509236c5b4cc574255d0",
+        "references/actions.md": "2588dc1188628c0ab6b8974f569bb75a8197aad9f786696e07a882f8a50f1009",
+        "references/carmona.md": "0cf867c68a695b1b6497d1ddf8793fc7aee7cded793e21e2791d0844985c26f2",
+        "references/cordoba.md": "260068f7d589621b688faf33db228389138fc4a39427b118eb30aed1d299efa1",
+        "references/food-culture.md": "e0789f70fc3987d81a9768e5da6f7ead03b30df9b673b03bd3bad8d801528953",
+        "references/granada.md": "db3167939cd1318cce380cc6cfd4a605affd8ac0f17f015636718a1750d92a94",
+        "references/itinerary.md": "9a4bd0dc2800d8d871f4c8d33e400943dcc4f09e87ad27735d8d25b8639f8606",
+        "references/malaga.md": "5877f0f9da14153f77e64aec469ec5faf265f4d4519723743d8aeb1bab35c2be",
+        "references/marbella.md": "0a123f5bed9898a22a202d776b8a6e5436be2093fe5c655ed7d6d5af7cce29b9",
+        "references/mijas.md": "344997a18a5a17eb3e5ef8da859f64aea81dd2c85713de69cef5050a00662356",
+        "references/nerja.md": "cdb1de61006f3d2bdcd7065f0d7646f442f9be14aa378720846de5e630bde214",
+        "references/overview.md": "6a37480d1e0433a0c6293466e7c8261473e8eaf3043b018a1926c5affcc737b8",
+        "references/page-guide.md": "15ed59536b0d224370c75d4667f5b15966449509980b67ee149941cc975de5c1",
+        "references/practical.md": "972c36b15f5306776343ff3cb850f42e0d4690a3e37bfaa6e47320a07ca0df85",
+        "references/ronda.md": "1b98969fc2823ead3d2153c384d973f102322c960efd1ff5db97c83552d4f4a2",
+        "references/setenil.md": "9dfcbb8c71e5ca11504d9f1df958c9771b8361397a580db4857b08b53efa9207",
+        "references/sevilla.md": "184e11a394804d2a2ec10efd8883e5e4d12827c517ebbdfae93c60fbbe61d4be",
+        "references/tickets-access.md": "cdae416e8157d165894ad36a343362a4700844f9df46a90e7fa995ea36349a55",
+        "references/visits.json": "80f773192651ba1ec54cb449e3719d2b5ce3da7b303b8de663f6135444a70fc0"
+      }
+    }
+  ],
+  "planned_skills": [
+    {
+      "id": "mdlxdcc-method",
+      "name": "mdlxdcc-method",
+      "title": "MDL×DCC Method",
+      "description": "Podrobnosti MDL, DCC in metodnih primerjav.",
+      "availability": "planned",
+      "suggested_skill_path": "mdlxdcc-method/SKILL.md",
+      "project_ids": [
+        "method"
+      ],
+      "page_prefixes": [
+        "/crp/MDLxDCC.html"
+      ],
+      "topic_hints": [
+        "MDL",
+        "DCC",
+        "description length"
+      ]
+    },
+    {
+      "id": "engineering-advisor",
+      "name": "engineering-advisor",
+      "title": "Engineering Advisor",
+      "description": "HTH, SORA in drugi javni inženirski koncepti.",
+      "availability": "planned",
+      "suggested_skill_path": "engineering-advisor/SKILL.md",
+      "project_ids": [
+        "hth",
+        "sora"
+      ],
+      "page_prefixes": [
+        "/crp/HTH.html",
+        "/crp/SORA.html"
+      ],
+      "topic_hints": [
+        "HTH",
+        "SORA"
+      ]
+    },
+    {
+      "id": "optimization-advisor",
+      "name": "optimization-advisor",
+      "title": "Optimization Advisor",
+      "description": "TSP, Trip in primerjave optimizacijskih metod.",
+      "availability": "planned",
+      "suggested_skill_path": "optimization-advisor/SKILL.md",
+      "project_ids": [
+        "tsp",
+        "trip"
+      ],
+      "page_prefixes": [
+        "/Trip/",
+        "/trip/",
+        "/BD/BD_8ZRP.html"
+      ],
+      "topic_hints": [
+        "TSP",
+        "Trip",
+        "routing"
+      ]
+    },
+    {
+      "id": "compression-advisor",
+      "name": "compression-advisor",
+      "title": "Compression Advisor",
+      "description": "8Z kodeki, nabori, rekonstrukcija in benchmark pogoji.",
+      "availability": "planned",
+      "suggested_skill_path": "compression-advisor/SKILL.md",
+      "project_ids": [
+        "compression"
+      ],
+      "page_prefixes": [
+        "/8Z/"
+      ],
+      "topic_hints": [
+        "8Z",
+        "compression",
+        "stiskanje"
+      ]
+    },
+    {
+      "id": "chessbest-advisor",
+      "name": "chessbest-advisor",
+      "title": "ChessBest Advisor",
+      "description": "ChessBest, uporabniški postopki in šahovski raziskovalni viri.",
+      "availability": "planned",
+      "suggested_skill_path": "chessbest-advisor/SKILL.md",
+      "project_ids": [
+        "chess"
+      ],
+      "page_prefixes": [
+        "/chess/"
+      ],
+      "topic_hints": [
+        "ChessBest",
+        "šah",
+        "chess"
+      ]
+    },
+    {
+      "id": "ai8-advisor",
+      "name": "ai8-advisor",
+      "title": "AI8 Advisor",
+      "description": "AI8, ArenaLoop, AIm3 in javno raziskovalno delo.",
+      "availability": "planned",
+      "suggested_skill_path": "ai8-advisor/SKILL.md",
+      "project_ids": [
+        "ai8",
+        "aim3"
+      ],
+      "page_prefixes": [
+        "/AI8/",
+        "/ai8/",
+        "/BD/BD_AIM3.html"
+      ],
+      "topic_hints": [
+        "AI8",
+        "ArenaLoop",
+        "AIm3"
+      ]
+    },
+    {
+      "id": "theory-advisor",
+      "name": "theory-advisor",
+      "title": "Theory Advisor",
+      "description": "ToE, CFH in CCH; hipoteze, izpeljave in testi.",
+      "availability": "planned",
+      "suggested_skill_path": "theory-advisor/SKILL.md",
+      "project_ids": [
+        "toe",
+        "cfh",
+        "cch"
+      ],
+      "page_prefixes": [
+        "/crp/ToE.html",
+        "/crp/Physics_CFH_MDLxDCC.html",
+        "/BD/BD_CCH_Foundations.html"
+      ],
+      "topic_hints": [
+        "ToE",
+        "CFH",
+        "CCH"
+      ]
+    },
+    {
+      "id": "nara-illuminara-guide",
+      "name": "nara-illuminara-guide",
+      "title": "Nara / Illuminara Guide",
+      "description": "Pripovedni svetovi, zgodbe, liki in umetniška kontinuiteta.",
+      "availability": "planned",
+      "suggested_skill_path": "nara-illuminara-guide/SKILL.md",
+      "project_ids": [
+        "nara",
+        "illuminara"
+      ],
+      "page_prefixes": [
+        "/Nara/",
+        "/nara/"
+      ],
+      "topic_hints": [
+        "Nara",
+        "Illuminara"
+      ]
+    },
+    {
+      "id": "glance-tour",
+      "name": "glance-tour",
+      "title": "Glance Tour",
+      "description": "Izvedba živih ogledov iz potrjenega scenarija in z dejanskim spletnim izvajalnikom.",
+      "availability": "planned",
+      "suggested_skill_path": "glance-tour/SKILL.md",
+      "project_ids": [
+        "glance"
+      ],
+      "page_prefixes": [],
+      "topic_hints": [
+        "glance",
+        "ogled",
+        "guided tour"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Massless Carriers, Grid Speed, and Ontological Absence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #06060a;
+  --surface: #0d0d14;
+  --surface-2: #101019;
+  --surface-3: rgba(13,13,20,0.78);
+  --gold: #c9a84c;
+  --gold-dim: #8a6e2f;
+  --gold-glow: rgba(201,168,76,0.12);
+  --text: #e8e0d0;
+  --text-dim: #9a9080;
+  --white: #f5f0e8;
+  --accent: #4a7fa5;
+  --accent-dim: rgba(74,127,165,0.15);
+  --green: #5aa384;
+  --green-dim: rgba(90,163,132,0.14);
+  --rose: #b96d6d;
+  --rose-dim: rgba(185,109,109,0.14);
+  --violet: #8f78c9;
+  --violet-dim: rgba(143,120,201,0.14);
+  --line: rgba(201,168,76,0.15);
+  --line-strong: rgba(201,168,76,0.28);
+  --shadow: 0 20px 60px rgba(0,0,0,0.28);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(28,55,140,0.38), transparent 38%),
+    radial-gradient(circle at 88% 80%, rgba(14,72,52,0.32), transparent 36%),
+    radial-gradient(circle at 50% 50%, rgba(10,18,55,0.18), transparent 55%),
+    linear-gradient(170deg, #06070f 0%, #05080a 55%, #040a07 100%);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 21px;
+  line-height: 1.85;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+body::before {
+  width: 55vw; height: 55vw; left: -14vw; top: -12vh;
+  background: radial-gradient(circle, rgba(38,72,168,0.55), rgba(18,32,88,0.22) 52%, transparent 74%);
+  filter: blur(110px); opacity: 0.28; animation: floatA 24s ease-in-out infinite;
+}
+body::after {
+  width: 50vw; height: 50vw; right: -12vw; bottom: -18vh;
+  background: radial-gradient(circle, rgba(16,90,62,0.55), rgba(8,48,34,0.22) 52%, transparent 74%);
+  filter: blur(120px); opacity: 0.24; animation: floatB 30s ease-in-out infinite;
+}
+@keyframes floatA { 0%,100% { transform: translate3d(0,0,0);} 50% { transform: translate3d(7vw,6vh,0);} }
+@keyframes floatB { 0%,100% { transform: translate3d(0,0,0);} 50% { transform: translate3d(-6vw,-8vh,0);} }
+#grain {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.45;
+}
+#stars { position: fixed; inset: 0; pointer-events: none; z-index: 2; opacity: 0.45; }
+#progress {
+  position: fixed; top:0; left:0; height:2px; width:0; z-index: 100;
+  background: linear-gradient(90deg, var(--gold), #f1d385);
+  box-shadow: 0 0 18px rgba(201,168,76,0.45);
+}
+.topbar {
+  position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px);
+  background: rgba(6,7,12,0.78); border-bottom: 1px solid var(--line);
+}
+.topbar-inner {
+  max-width: 1240px; margin: 0 auto; padding: 14px 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+}
+.brand {
+  color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.22em; text-transform: uppercase; font-size: 12px;
+}
+.brand:hover { color: #e2c067; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.nav a {
+  text-decoration: none; color: var(--text-dim); border: 1px solid rgba(201,168,76,0.16);
+  padding: 5px 11px; border-radius: 999px; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.08em; background: rgba(255,255,255,0.01);
+}
+.nav a.active, .nav a:hover {
+  color: var(--gold); border-color: rgba(201,168,76,0.45); background: rgba(201,168,76,0.06);
+}
+.page {
+  position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 0 26px 120px;
+}
+.cover { padding: 90px 0 44px; text-align: center; max-width: 840px; margin: 0 auto; }
+.eyebrow {
+  color: var(--gold); opacity: 0.78; font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 18px;
+}
+h1 {
+  color: var(--white); font-weight: 300; font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.08; margin-bottom: 16px;
+}
+h1 em { color: var(--gold); font-style: italic; }
+.subtitle {
+  color: var(--text-dim); font-style: italic; font-size: 22px; max-width: 760px; margin: 0 auto 24px;
+}
+.byline { font-family: 'JetBrains Mono', monospace; color: var(--gold-dim); font-size: 11px; letter-spacing: 0.16em; }
+.series-badges {
+  display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin: 24px 0 0;
+}
+.badge {
+  border:1px solid rgba(201,168,76,0.18); border-radius:999px; padding:6px 12px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color: var(--text-dim); background: rgba(255,255,255,0.02);
+}
+.badge.good { border-color: rgba(90,163,132,0.34); color: #9fd0b9; background: var(--green-dim); }
+.badge.bridge { border-color: rgba(74,127,165,0.34); color: #aac8df; background: var(--accent-dim); }
+.badge.warn { border-color: rgba(185,109,109,0.34); color: #dfaaaa; background: var(--rose-dim); }
+.badge.violet { border-color: rgba(143,120,201,0.34); color: #d0c4f1; background: var(--violet-dim); }
+.rule { width: 88px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 24px auto 0; opacity: 0.55; }
+.layout { display:grid; grid-template-columns: minmax(0, 250px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.sidebar {
+  position: sticky; top: 82px; z-index: 4;
+}
+.card, .toc, .callout, .note-box, .table-wrap, .quote-box, .footer-nav {
+  background: linear-gradient(180deg, rgba(13,13,20,0.92), rgba(16,16,25,0.88));
+  border: 1px solid rgba(201,168,76,0.13); border-radius: 16px; box-shadow: var(--shadow);
+}
+.card { padding: 18px 18px 16px; margin-bottom: 14px; }
+.card h3, .toc-title, .mini-title {
+  color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+}
+.card h3 { margin-bottom: 12px; }
+.card p, .card li { font-size: 17px; line-height: 1.62; color: var(--text-dim); }
+.card ul { padding-left: 1.1em; }
+.card li { margin-bottom: 8px; }
+.toc { padding: 18px 22px; margin: 0 0 24px; }
+.toc-title { margin-bottom: 10px; }
+.toc ul { list-style: none; }
+.toc li { margin: 8px 0; color: var(--text-dim); }
+.toc a { color: var(--text-dim); text-decoration: none; }
+.toc a:hover { color: var(--gold); }
+.main { min-width: 0; }
+.chapter { margin: 0 0 66px; }
+.chapter-tag {
+  color: var(--gold); opacity: 0.72; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;
+}
+.chapter h2 {
+  color: var(--white); font-size: clamp(28px, 4.4vw, 42px); line-height: 1.18; font-weight: 400;
+  padding-bottom: 14px; margin-bottom: 24px; border-bottom: 1px solid var(--line);
+}
+.chapter h3 { color: var(--white); font-size: 28px; font-weight: 400; margin: 30px 0 14px; }
+p { margin: 0 0 20px; }
+p.lead { font-size: 23px; color: var(--white); }
+.callout, .note-box, .quote-box { padding: 22px 24px; margin: 26px 0; }
+.callout strong, .note-box strong, .quote-box strong { color: var(--gold); }
+.callout p:last-child, .note-box p:last-child, .quote-box p:last-child { margin-bottom: 0; }
+.callout.good { border-color: rgba(90,163,132,0.28); background: linear-gradient(180deg, rgba(10,24,19,0.82), rgba(13,24,20,0.76)); }
+.callout.warn { border-color: rgba(185,109,109,0.28); background: linear-gradient(180deg, rgba(26,14,14,0.82), rgba(24,15,15,0.76)); }
+.callout.bridge { border-color: rgba(74,127,165,0.28); background: linear-gradient(180deg, rgba(13,19,28,0.84), rgba(14,18,24,0.78)); }
+.callout.violet { border-color: rgba(143,120,201,0.28); background: linear-gradient(180deg, rgba(20,15,31,0.84), rgba(17,14,24,0.78)); }
+.pull {
+  margin: 34px 0; padding: 10px 0 10px 20px; border-left: 2px solid var(--gold); color: var(--gold);
+  font-size: 25px; line-height: 1.55; font-style: italic;
+}
+.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 28px; }
+.pill {
+  border: 1px solid rgba(201,168,76,0.18); background: rgba(201,168,76,0.05); border-radius: 999px;
+  padding: 7px 12px; color: var(--text-dim); font-size: 14px;
+}
+ul.clean, ol.clean { padding-left: 1.2em; margin: 18px 0 22px; }
+ul.clean li, ol.clean li { margin-bottom: 10px; }
+.table-wrap { overflow-x: auto; margin: 26px 0 30px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(201,168,76,0.08); }
+th { color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; background: rgba(201,168,76,0.04); }
+tr:last-child td { border-bottom: none; }
+.code {
+  font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.05);
+  padding: 2px 7px; border-radius: 7px; font-size: 0.9em;
+}
+.footer-nav { margin-top: 30px; padding: 18px 20px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.footer-nav a {
+  text-decoration:none; color: var(--text-dim); border:1px solid rgba(201,168,76,0.15); border-radius:999px; padding:8px 14px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+}
+.footer-nav a:hover { color: var(--gold); border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
+footer.doc-footer { max-width: 860px; margin: 0 auto; padding-top: 22px; border-top:1px solid var(--line); color: var(--text-dim); }
+footer.doc-footer p { font-size: 17px; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.index-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:18px; margin-top:28px; }
+.index-card {
+  display:block; text-decoration:none; color:inherit; padding:22px 22px 18px;
+  background: linear-gradient(180deg, rgba(13,13,20,0.92), rgba(16,16,25,0.88));
+  border:1px solid rgba(201,168,76,0.13); border-radius:16px; box-shadow: var(--shadow);
+}
+.index-card h2 { color: var(--white); font-weight: 400; font-size: 30px; margin: 8px 0 12px; }
+.index-card p { color: var(--text-dim); font-size: 18px; }
+.index-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-2px); transition: 0.2s ease; }
+.kicker { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color: var(--gold); opacity: 0.75; }
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+@media (max-width: 700px) {
+  body { font-size: 19px; }
+  .page { padding: 0 16px 90px; }
+  .cover { padding-top: 64px; }
+  .subtitle { font-size: 19px; }
+  .index-grid { grid-template-columns: 1fr; }
+}
+
+.claim-tag{display:inline-block;margin:0 8px 8px 0;padding:5px 9px;border-radius:999px;font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(201,168,76,.16);background:rgba(255,255,255,.02);color:var(--text-dim)}
+.claim-tag.core{border-color:rgba(90,163,132,.34);color:#9fd0b9;background:var(--green-dim)}
+.claim-tag.operational{border-color:rgba(74,127,165,.34);color:#aac8df;background:var(--accent-dim)}
+.claim-tag.spec{border-color:rgba(185,109,109,.34);color:#dfaaaa;background:var(--rose-dim)}
+.claim-tag.status{border-color:rgba(143,120,201,.34);color:#d0c4f1;background:var(--violet-dim)}
+.lead-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0 30px}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="progress"></div><canvas id="stars"></canvas><div id="grain"></div>
+<div class="topbar"><div class="topbar-inner"><a class="brand" href="index.html">AC Bundle v3</a><nav class="nav"><a href="AC_01_Flagship.html">P1</a><a href="AC_02_Operational_Bridge.html">P2</a><a href="AC_03_Discrete_Physics_Companion.html">P3</a><a href="AC_04_Zero_Framework_Companion.html">P4</a><a href="AC_05_Massless_Carriers_Companion.html">P5</a><a href="AC_06_Method_Resonance_in_Action.html">P6</a><a href="index.html">Index</a></nav></div></div>
+<div class="page">
+<header class="cover reveal">
+<div class="eyebrow">Paper 5 · massless-carriers companion</div>
+<h1>Massless Carriers, Grid Speed, and Ontological Absence</h1>
+<div class="subtitle">A speculative companion on massless carriers, propagation ceilings, and coherence-building roles — now explicitly anchored inside an AC-first ontology rather than a physics-first reading.</div>
+<div class="series-badges"><span class="badge spec">speculative note</span><span class="badge bridge">conceptual bridge</span><span class="badge warn">status guarded</span></div>
+<div class="rule"></div>
+</header>
+<div class="layout">
+<aside class="sidebar"><div class="toc"><div class="toc-title">Contents</div><ul><li><a href="#why">Why separate note</a></li><li><a href="#grid">Propagation ceilings</a></li><li><a href="#tests">What would strengthen it</a></li></ul></div><div class="card"><h3>Status</h3><p><span class="claim-tag spec">speculative extension</span><span class="claim-tag bridge">structured companion</span><span class="claim-tag status">AC-first guardrails added</span></p><p>This note now makes its scope explicit: it discusses derived physical reality, not the ontological ground itself.</p></div></aside>
+<main class="main"><section class="chapter reveal" id="why"><div class="chapter-tag">I · Why this is a separate note</div><h2>1. Why photons and gravitons belong in a companion note</h2><p class="lead">This note becomes useful only when its status is honest. It is not a replacement for established particle physics. It is a speculative extension asking whether the AC/CCH stack suggests a cleaner ontological reading of massless carriers.</p><div class="callout bridge"><p><strong>Foundational guardrail.</strong> AC remains the ontological ground. This note concerns structures and classes inside derived physical reality. Nothing here should be read as making photons, gravitons, or propagation ceilings ontologically prior to AC.</p></div><p>That distinction matters. Without it, a companion note about physical carriers can quietly collapse back into a physics-first ontology. With it, the note keeps the right scope: relative mechanics, not ultimate ground.</p></section><section class="chapter reveal" id="massless"><div class="chapter-tag">II · Rest-mass absence as reinterpretation</div><h2>2. Massless carriers as ontological reinterpretation</h2><p class="lead">The disciplined version of the proposal is not “standard physics made a stupid mistake.” It is narrower and cleaner: within this framework, massless carriers may be better interpreted as cases of rest-mass absence rather than merely zero-valued rest mass.</p><div class="pull">Massless may mark a different descriptive class, not just an ordinary class with a parameter set to zero.</div><p>This is where the note brushes against the Zero Framework without depending on it. The conceptual suggestion is that <em>absence of a rest-mass term</em> may sometimes be a better ontological reading than <em>an ordinary matter-like quantity whose value happens to be zero</em>.</p><p>That is a real proposal, but it becomes scientifically meaningful only if it one day pays rent through cleaner derivations, tighter unifications, or sharper constraints while preserving known success conditions.</p></section><section class="chapter reveal" id="grid"><div class="chapter-tag">III · Propagation ceilings within relative reality</div><h2>3. Grid-speed and propagation ceilings</h2><p class="lead">Within derived physical reality, light-speed language may be interpreted as a substrate propagation ceiling rather than merely one more ordinary derived velocity.</p><p>Read carefully, this says something precise: the relative substrate appears to have a maximum rate for causal propagation, synchronization, correction, and feedback closure. That ceiling constrains how quickly coherent physical organization can integrate itself across space.</p><div class="callout good"><p><strong>Good use.</strong> The idea clarifies why massless carriers may belong to a different descriptive class than matter-like transport. They look less like ordinary transported objects and more like ceiling-marking propagation modes of the substrate itself.</p></div><div class="callout warn"><p><strong>Limit.</strong> This is still interpretive. It does not yet rederive relativity, eliminate the need for Lorentz-invariant recovery, or license casual claims about preferred-frame physics.</p></div><p>Most importantly, the ceiling is a property of relative physical organization. It is not a speed of AC, not a speed of presence, and not a direct statement about the ground itself.</p></section><section class="chapter reveal" id="coherence"><div class="chapter-tag">IV · Builders of coherence, not necessarily conscious subjects</div><h2>4. Why light may matter to consciousness without being conscious</h2><p class="lead">This is the strongest human-scientific payoff of the note. Light and related carrier dynamics can matter enormously to the construction of coherent biological structure without being conscious in themselves.</p><p>That matters because it gives a clean middle path:</p><ul class="clean"><li>not “everything that participates is conscious”</li><li>not “carrier dynamics are irrelevant to consciousness”</li><li>but “some carriers help build, stabilize, and maintain the coherence conditions under which strong realized presence becomes possible”</li></ul><p>In biological systems that can include long-range coordination, signaling speed, timing windows, feedback closure, oscillatory stability, and the physical maintenance of organized living structure. In artificial systems the analogous question becomes whether a substrate supports the depth, recurrence, and low-latency integration required for anything like high-S organization.</p><div class="pull">Carrier importance is structural, not automatically phenomenal.</div><p>That is the key distinction. Carriers may help build the instrument without being the music, and may help realize coherent structure without being conscious subjects in themselves.</p></section><section class="chapter reveal" id="tests"><div class="chapter-tag">V · What would make this note stronger or weaker</div><h2>5. What would actually move it forward</h2><p class="lead">Speculative notes earn survival only by generating disciplined next questions.</p><p><strong>Stronger</strong> would mean: a cleaner classification of massless carriers, derivational payoff, a sharper relation between propagation ceilings and realizable coherence, or biologically relevant predictions about structure-building constraints.</p><p><strong>Weaker</strong> would mean: the reinterpretation adds no explanatory value beyond standard language, collapses into metaphor, or conflicts with robust relativistic success conditions.</p><p>That standard should stay explicit. Fertility alone is not enough.</p></section><section class="chapter reveal" id="limits"><div class="chapter-tag">VI · What keeps this note honest</div><h2>6. What keeps this note honest</h2><p class="lead">This note should stay under six constraints.</p><ul class="clean"><li>Do not speak as if relativity has already been rederived.</li><li>Do not smuggle Zero Framework semantics in as if they were already standard formal physics.</li><li>Do not overclaim cosmological completion or dark-energy replacement.</li><li>Do keep AC ontologically first and the physical layer explicitly derivative.</li><li>Do preserve the note as a source of structured hypotheses rather than rhetorical inflation.</li><li>Do ask whether the reinterpretation improves science, not merely whether it sounds deep.</li></ul><p>In that role the note is worth keeping. It helps the stack imagine beyond current orthodoxy without pretending it has already replaced it.</p></section><div class="footer-nav reveal"><a href="AC_04_Zero_Framework_Companion.html">← Previous</a><a href="AC_06_Method_Resonance_in_Action.html">Next →</a></div><footer class="doc-footer reveal"><p><strong>Editorial stance.</strong> This v3 rebuild frames the stack as an attempt to preserve the empirical successes of current science while refining its ontology, tightening its category boundaries, and adding sharper discriminating questions where current interpretations feel shallow.</p></footer></main>
+</div></div>
+<script src="assets/app.js"></script>
+</body></html>

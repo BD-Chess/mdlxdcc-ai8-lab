@@ -1,0 +1,12 @@
+[
+  {
+    "actual_length": 97050,
+    "declared_length": 97050,
+    "declared_length_matches": true,
+    "source_path": "/mnt/data/_tsp_live_143839/full_snapshot/dev2_cpu_gpu/out/nu3496_dev23_continuous_research/live_best_checkpoint.json",
+    "variant_id": "DEV23_C001_S43_B1920_P1_factory_best_ratchet_k10_improveonly",
+    "gap_pct": 0.9549369616776932,
+    "L_total": null,
+    "tour_sha256": "0928dfc9ce634da01d67351ccca1ee217d5b2a7bd3e17eaf611bd89093d9326a"
+  }
+]

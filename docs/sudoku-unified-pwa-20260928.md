@@ -1,0 +1,38 @@
+# 8zSudoku — LAB promoted to CURRENT
+
+BD explicitly requested promotion on 2026-09-28: CURRENT must match the released LAB before further LAB upgrades. Both now run the same complete Navigator / Play / Learn / Lab game, including EN/SL and desktop click-and-hold. The only app-byte transformation is the channel storage namespace (`ai8SudokuNavigatorV020` → `ai8SudokuCurrentV030`). This avoids one channel editing another channel’s development game; there is no legacy migration requirement.
+
+`public/S/current/promotion.json` pins the exact donor commit, source hash, resulting hash and transformation. CURRENT is an independent snapshot; the normal PWA package helper never copies later LAB game changes into CURRENT. Both top menus omit Install, and both channels remain directly installable through the browser. PREVIOUS remains the exact supplied 48,399-byte BD_Sudoku1.html.
+
+During this development phase, backward compatibility and old saved games are not release requirements, per BD’s latest explicit instruction. Do not add migration or preservation work merely to maintain old development saves. APP, draft PR #26 and TestFlight still require a new explicit BD approval before a native build.
+
+Promotion validation: targeted channel/package and CURRENT interaction checks; exact live hashes and publication SHA are recorded in the final project continuity. The old compressed payload/adapters remain inactive historical files and are absent from the CURRENT dependency package.
+
+---
+
+## Historical record before BD’s explicit promotion
+
+The following stable-payload statements describe the preceding release and are superseded by the promotion above.
+
+# 8zSudoku: install CURRENT and LAB in place
+
+BD approved this scope on 2026-09-28. Base main: `d81333434a8d0e0ccf674d4cac7b25c72957c64e`.
+
+CURRENT `/S/` and LAB `/S/new/` are independent installable channels. Their manifests, complete SHA-256 packages and worker cache namespaces are separate. The package helper consumes each channel's own source. It never promotes LAB or copies it into a separate PWA edition. BD subsequently supplied the authoritative original `BD_Sudoku1.html` (48,399 bytes). PREVIOUS `/S/old/index.html` now serves those exact bytes directly, without the later R6 HF3 research section. The later archive `/S/old/001/` remains preserved. The Slovenian view button is named Lab, as in English.
+
+Play/Learn center the board and move news, optional practice and one human status below it. Technical rating remains in Lab. EN/SL changes visible UI, help, tutorials and learning text, persists the choice and preserves machine values, game state and evidence. Historical research prose and technical identifiers retain their original language.
+
+CURRENT's compressed game payload and LAB's navigator-core are unchanged. CURRENT also gains mouse/pen hold-and-slide input and a read-only filled-cell magnifier, using the existing canonical input/Notes/Undo transactions and presentation-only geometry. Desktop click-and-hold now leaves a clickable number picker open after a stationary release in both channels; drag/release input and touch cancellation stay intact. LAB has no Install button in its top navigation; native browser installation remains available. CURRENT gains a separate validated session adapter (`8zSudokuCurrent.pwaSessionV1`). LAB retains its existing session/library namespace. An update reload requires a completed save, readback and a final state check; generation, animation, quota errors or concurrent writes block it. Other tabs are never automatically reloaded.
+
+The former `/S/PWA/` is a recovery entry with its original manifest identity and byte-identical frozen game. Existing installations and data are preserved. Export the old session and explicitly import it into LAB; verify the imported game before retiring the old installation. iOS may use separate storage containers. No automatic storage migration or deletion occurs.
+
+## Verification
+
+- `node scripts/build-sudoku-pwa.cjs --check`: all three complete packages reproduce exactly.
+- `NODE_PATH=./tests/sudoku/node_modules node --test tests/sudoku-pwa.test.cjs tests/sudoku-desktop-hold.test.cjs`: 21/21 targeted checks pass (about 16 seconds), including CURRENT hold input and LAB stationary-release input in Play/Learn/Lab.
+- Checks cover both deployment bases, offline dependency closure, request boundaries, mixed/failed installs, evicted assets, cache isolation, explicit activation, save failures, concurrent writers, Notes/Undo/Redo/timer restoration, language changes and tutorial/lesson state preservation.
+- `git diff --check` and JavaScript parsing pass.
+- These are bounded VM/jsdom/worker tests, not physical-device acceptance. Actual iPhone Home Screen installation, offline relaunch, VoiceOver and mobile zoom remain BD checks.
+- Live deployment SHA and public-byte/browser evidence are recorded in the project continuity after publication.
+
+Native APP, draft PR #26, TestFlight and other applications are outside this change. A fresh explicit BD approval is required before a native APP build.

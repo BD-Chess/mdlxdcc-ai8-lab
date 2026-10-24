@@ -1,0 +1,11 @@
+{
+  "schema": "nara.daily.public.paired-edition-score.v1",
+  "edition_revision": "R1",
+  "source": "GPT + Claude independent blind evaluators; peer-verified paired receipt",
+  "peer_receipt_drive_id": "1-x1DY5D6694s8rCz6fTCiwuIjkxsI4PC",
+  "gpt_seal_drive_id": "1Y0X-2gFO8XYqUyBSeyHHFxuZWeKb_0cX",
+  "claude_seal_sha256": "1827568af7343a1463be436b806b0fcede643cb39cf615b12093e6e7b2e1d2d8",
+  "approval": "BD 2026-10-15: publish completed genuine paired results without requiring BD literary grading",
+  "policy": "Original day selection and original scores immutable. Exact English R1 hashes required. Incomplete pairs excluded.",
+  "scores": []
+}
