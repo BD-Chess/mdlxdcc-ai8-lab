@@ -7,7 +7,10 @@ lab-evidence/. Preserve provenance and licenses when reusing upstream material.
 - One writable owner per task/folder. Current bootstrap owner: CLI Codex HOME.
 - Use task branches. Initial branch: lab/bootstrap-r1.
 - The only push remote is BD-Chess/mdlxdcc-ai8-lab. Never push to production.
-- No production deployment configuration, workflows, credentials or vault files.
+- No upstream production deployment configuration, workflows, credentials or vault files.
+- BD explicitly authorized the lab's own GitHub Pages preview on 2026-10-25.
+- The only permitted publishing workflow is .github/workflows/lab-pages.yml in this lab repository.
+- Publish public/ only. Do not publish private AI8 DNA state, messages, capsules or lab-evidence as website content.
 - No paid services or new external integrations through general lab permission.
 - Production source instructions/deployment permission do not transfer here.
 - Coordinate through AI8_LIVE immutable messages; CLI Code owns the shared board.

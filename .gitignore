@@ -4,7 +4,11 @@ __pycache__/
 node_modules/
 .git/
 .netlify/
-.github/
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/lab-pages.yml
+.pages-site/
 .env*
 **/rclone.conf
 **/*sef*

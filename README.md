@@ -21,8 +21,20 @@ The server binds only to loopback and serves public/ as static content.
 Its CSP blocks external resource connections, including hosted API calls;
 existing navigation links can still leave the lab. CDN-dependent features may
 need vendored dependencies. Backend-dependent features need separate lab services.
-There is no Pages or Netlify deployment for this private repository.
-GitHub Actions are disabled. The local pre-push hook permits only this lab remote.
+## Online lab
+
+BD requested a browsable GitHub Pages lab on 25 October 2026. The repository is
+public for Pages on the existing account plan. Its sole publishing workflow is
+AI8 Lab Pages; it never deploys to the original sites or uses their services.
+The local pre-push hook permits only this lab remote.
+
+The preview builds public/ into the /mdlxdcc-ai8-lab/ subpath, labels copied pages
+as experimental, and blocks outgoing provider connections. Large passive media
+and source downloads use immutable raw URLs in this same public repository;
+runtime code, models and engines remain in the size-bounded Pages artifact.
+Source pages are unchanged by preview preparation. The full source remains here.
+The __lab__/ entry explains the snapshot and links to the actual copied apps.
+Backend features still need separate lab services. No Netlify site is created.
 
 ## Verification
 
