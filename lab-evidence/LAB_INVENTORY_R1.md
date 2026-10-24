@@ -4,12 +4,11 @@ Source: BD-Chess/bd-chessdb @ `89276ce7bcaa975127e1263dd23ddf94f451699c`.
 GitHub recursive tree is complete; sizes are source blob bytes, not disk or history size.
 
 Source files: 5439; bytes: 1,616,907,829.
-Included files: 5189; bytes: 1,594,565,300.
-Excluded files: 250.
+Included files: 5192; bytes: 1,595,039,437.
+Excluded files: 247.
 
 ## Exclusions
 
-- credential-like marker; quarantined before first push: 3
 - encrypted or credential material: 130
 - upstream automation or generated metadata: 43
 - upstream executable release reference: 7

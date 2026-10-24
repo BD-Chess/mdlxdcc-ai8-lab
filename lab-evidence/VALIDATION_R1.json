@@ -2,9 +2,9 @@
   "schema": "ai8.lab-validation.v1",
   "source_sha": "89276ce7bcaa975127e1263dd23ddf94f451699c",
   "status": "PASS",
-  "source_files_verified": 5189,
-  "source_bytes_hashed": 1594565300,
-  "text_files_scanned": 3649,
+  "source_files_verified": 5192,
+  "source_bytes_hashed": 1595039437,
+  "text_files_scanned": 3652,
   "errors": [],
   "not_run": [
     "full application tests",
@@ -12,5 +12,14 @@
     "research",
     "benchmarks",
     "deployment"
-  ]
+  ],
+  "targeted_followup": {
+    "restored_files": 3,
+    "legacy_false_positive_hits": 24,
+    "guarded_hits": 0,
+    "synthetic_token_detection": "PASS",
+    "risk_anchor_exclusion": "PASS",
+    "scanner_syntax": "PASS"
+  },
+  "method": "Retained full PASS plus exact hashes and guarded marker scan of three restored pages"
 }

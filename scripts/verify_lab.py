@@ -13,7 +13,7 @@ MARKERS = {
     'OAuth literal': re.compile(r'''(?i)(client[_ -]?secret|refresh[_ -]?token)\s*[:=]\s*["'][^"']{12,}["']'''),
     'Google API key': re.compile('AI' + r'za[0-9A-Za-z_-]{35}'),
     'GitHub token': re.compile('gh' + r'[pousr]_[0-9A-Za-z]{30,}'),
-    'OpenAI token': re.compile('sk' + r'-(?:proj-|svcacct-)?[A-Za-z0-9_-]{40,}'),
+    'OpenAI token': re.compile(r'(?<![A-Za-z0-9_])' + 'sk' + r'-(?:proj-|svcacct-)?[A-Za-z0-9_-]{40,}'),
     'private key': re.compile('-----BEGIN ' + r'(?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
 }
 errors = []

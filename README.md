@@ -10,7 +10,8 @@ The original repository and production sites are unchanged by this export.
 Six case-distinct source variants cannot coexist at their original names on
 Windows. They are preserved byte-for-byte under lab-evidence/case-variants/;
 CASE_VARIANTS_R1.json maps them. Links to those variants need a later targeted
-repair. Three archival pages with credential-like markers were quarantined.
+repair. Three initially flagged archival pages were restored after cross-review
+confirmed HTML risk-anchor false positives; the scanner now enforces a token boundary.
 
 ## Local preview
 

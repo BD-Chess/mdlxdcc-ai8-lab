@@ -36323,6 +36323,27 @@
       "source_blob": "e18c81c4cab39063290b525d26d4c5950c9664f2",
       "bytes": 12703,
       "sha256": "2ea109277570229ea2fd6c2d515c0b9af6b9dcfd6f8b05c1d74bc2219824d8ec"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice.html",
+      "original_path": "public/BD/Ukraine_Armed_Armistice.html",
+      "source_blob": "e51b3aee3c9e2c2d6b38f2dd39984decde41dc13",
+      "bytes": 178898,
+      "sha256": "28e1124802681837350d00ca8ef9e20c69763ecbd3d65b28c7db2e0c3eb3e33c"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice_SLO.html",
+      "original_path": "public/BD/Ukraine_Armed_Armistice_SLO.html",
+      "source_blob": "b0f9af3ac1d81c068ec5213e79300bbdb53bca04",
+      "bytes": 182728,
+      "sha256": "2387ea9ebee7700e9dec960eade32d5a77bcadfa622dabb2a256bc3e9286b05a"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice_open.html",
+      "original_path": "public/BD/Ukraine_Armed_Armistice_open.html",
+      "source_blob": "6bd95b32a61ecf3bc0548be29b8beaa4bc676eb8",
+      "bytes": 112511,
+      "sha256": "d3e8752143356b1f873da32d84c38d6135edbf15e6c10a573e486318ff052352"
     }
   ]
 }

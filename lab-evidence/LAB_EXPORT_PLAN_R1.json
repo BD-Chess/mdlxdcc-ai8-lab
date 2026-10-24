@@ -46703,6 +46703,33 @@
       "size": 12703,
       "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/e18c81c4cab39063290b525d26d4c5950c9664f2",
       "lab_path": "tools/test-export-cli-loops.py"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e51b3aee3c9e2c2d6b38f2dd39984decde41dc13",
+      "size": 178898,
+      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/e51b3aee3c9e2c2d6b38f2dd39984decde41dc13",
+      "lab_path": "public/BD/Ukraine_Armed_Armistice.html"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice_SLO.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0f9af3ac1d81c068ec5213e79300bbdb53bca04",
+      "size": 182728,
+      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/b0f9af3ac1d81c068ec5213e79300bbdb53bca04",
+      "lab_path": "public/BD/Ukraine_Armed_Armistice_SLO.html"
+    },
+    {
+      "path": "public/BD/Ukraine_Armed_Armistice_open.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bd95b32a61ecf3bc0548be29b8beaa4bc676eb8",
+      "size": 112511,
+      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/6bd95b32a61ecf3bc0548be29b8beaa4bc676eb8",
+      "lab_path": "public/BD/Ukraine_Armed_Armistice_open.html"
     }
   ],
   "excluded": [
@@ -48928,33 +48955,6 @@
       "size": 7400,
       "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/101d1c121f4a29433caf0d19918e685091e823d0",
       "reason": "upstream executable release reference"
-    },
-    {
-      "path": "public/BD/Ukraine_Armed_Armistice.html",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "e51b3aee3c9e2c2d6b38f2dd39984decde41dc13",
-      "size": 178898,
-      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/e51b3aee3c9e2c2d6b38f2dd39984decde41dc13",
-      "reason": "credential-like marker; quarantined before first push"
-    },
-    {
-      "path": "public/BD/Ukraine_Armed_Armistice_SLO.html",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "b0f9af3ac1d81c068ec5213e79300bbdb53bca04",
-      "size": 182728,
-      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/b0f9af3ac1d81c068ec5213e79300bbdb53bca04",
-      "reason": "credential-like marker; quarantined before first push"
-    },
-    {
-      "path": "public/BD/Ukraine_Armed_Armistice_open.html",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "6bd95b32a61ecf3bc0548be29b8beaa4bc676eb8",
-      "size": 112511,
-      "url": "https://api.github.com/repos/BD-Chess/bd-chessdb/git/blobs/6bd95b32a61ecf3bc0548be29b8beaa4bc676eb8",
-      "reason": "credential-like marker; quarantined before first push"
     }
   ]
 }
