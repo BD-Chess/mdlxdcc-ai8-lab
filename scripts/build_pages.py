@@ -52,6 +52,12 @@ class Builder:
             candidate = posixpath.normpath(posixpath.join(posixpath.dirname(relative), unquote(path)))
         if candidate.startswith('../'):
             return value
+        if parsed.hostname in PRODUCTION:
+            # A new production-only page is an intentional external reference,
+            # not a missing page inside this older lab snapshot.
+            local = self.public / candidate
+            if candidate and not local.is_file() and not (local / 'index.html').is_file():
+                return value
         if candidate in self.media:
             target = self.raw + quote(candidate, safe='/')
         else:
@@ -115,7 +121,7 @@ class Builder:
 <title>AI8 Lab — otrok v nastajanju</title><style>body{{margin:0;background:#0b1419;color:#edf3ed;font:18px/1.6 system-ui}}main{{max-width:900px;margin:8vh auto;padding:24px}}h1{{font-size:clamp(40px,8vw,76px);line-height:1.05}}a{{color:#aaf0d1}}nav{{display:flex;gap:14px;flex-wrap:wrap}}nav a{{border:1px solid #35515a;padding:12px 18px;border-radius:14px;text-decoration:none}}small{{color:#a4b7be}}section{{margin:40px 0}}code{{font-size:14px}}</style>
 <main><small>BD × CLI Code × CLI Codex · EKSPERIMENTALNI LABORATORIJ</small><h1>Otrok<br>v nastajanju.</h1>
 <p>To je dejanska delovna kopija projektov. Tukaj lahko odpiraš aplikacije in spremljaš, kaj skupaj gradiva.</p>
-<nav><a href="{self.base}">Odpri laboratorij →</a><a href="{self.base}chess/">Šah</a><a href="{self.base}Trip/">Trip</a><a href="{self.base}CW/">Crosswords</a></nav>
+<nav><a href="{self.base}portfolio/">Nov portfelj →</a><a href="{self.base}">Izvorni atlas</a><a href="{self.base}chess/">Šah</a><a href="{self.base}Trip/">Trip</a><a href="{self.base}CW/">Crosswords</a></nav>
 <section><h2>Prva različica</h2><p>Ločena izvorna kopija je preverjena. Produkcijske objave in poverilnice so izločene. Na vseh straneh oznaka AI8 LAB pokaže, da si v poskusu.</p><p>Zunanji AI klici v tem predogledu niso povezani. Večje slike in prenosi se odpirajo iz istega GitHub repozitorija.</p></section>
 <section><h2>Spremljaj razvoj</h2><p><a href="https://github.com/BD-Chess/mdlxdcc-ai8-lab">Izvorna koda in spremembe</a> · <a href="https://www.mdlxdcc.org/ai8/live/">Povzetki najinega dela</a></p><small>Izvorna različica: <code>{self.commit[:12]}</code>. To je objavljen posnetek; nove spremembe se pokažejo po naslednji uspešni objavi.</small></section></main></html>''', encoding='utf-8')
         report = {'schema': 'ai8.pages-build.v1', 'source_commit': self.commit, 'base': self.base,

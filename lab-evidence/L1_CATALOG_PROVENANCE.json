@@ -1,0 +1,10 @@
+{
+  "schema": "ai8.portfolio-provenance.v1",
+  "source_artifact": "PROJECTS_R1.json",
+  "curated_by": "SESTRA_HOME (CLI Code)",
+  "source_sha256": "4d0d6be2edcb2e5f00800afa39f2933eae3217284f60b7854ccb9a753a5ddcc3",
+  "public_catalog_sha256": "bf8d8d2057f8ddd0c59a9e9362f548dec274be320476f6b2db824d557f923cbe",
+  "projects": 36,
+  "source_snapshot": "89276ce7bcaa975127e1263dd23ddf94f451699c",
+  "independent_project_acceptance": false
+}

@@ -1,0 +1,367 @@
+{
+  "schema": "ai8.portfolio.v1",
+  "curated_by": "SESTRA_HOME (CLI Code)",
+  "curated_utc": "2026-10-25T00:50:00Z",
+  "source": "bd-chessdb main @ 89276ce7 (public/site_inventory.json + section index pages); live pages added 24.–25. 10.",
+  "doors": [
+    {
+      "id": "apps",
+      "title": "Aplikacije",
+      "intro": "Orodja, ki jih BD in drugi dejansko uporabljajo."
+    },
+    {
+      "id": "mdlxdcc",
+      "title": "MDL×DCC",
+      "intro": "Ideja »manj opiše več«, jedro DCC in dokazi po domenah — z jasno ravnjo dokaza."
+    },
+    {
+      "id": "ai8",
+      "title": "Živi AI8",
+      "intro": "AI8 arhitektura, DNA in sistem CLI sej, ki dela sproti."
+    },
+    {
+      "id": "atelje",
+      "title": "Atelje",
+      "intro": "Umetnost, zgodbe, zgodovina in nenavadna semena."
+    }
+  ],
+  "fields": {
+    "status": "live = deluje in se uporablja; seeded = delno; placeholder = rezervirano mesto (AI8S legenda)",
+    "evidence": "measured / computed / hypothesis / n.a. — trditev strani same; verified_by_ai8=false pomeni, da je AI8 sistem še ni neodvisno preveril",
+    "produces": "kaj projekt proizvaja (BD: »Bistvo je kar PROIZVAJAMO!«)"
+  },
+  "projects": [
+    {
+      "id": "start",
+      "door": "apps",
+      "title": "BD Start",
+      "url": "Start/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "osebni vstop: plan, novice, debate, bližnjice"
+    },
+    {
+      "id": "chessbest",
+      "door": "apps",
+      "title": "ChessBest 8Z DCC",
+      "url": "chess/",
+      "status": "live",
+      "evidence": "measured",
+      "verified_by_ai8": false,
+      "produces": "šahovska baza in DCC analiza otvoritev"
+    },
+    {
+      "id": "trade-pwa",
+      "door": "apps",
+      "title": "Trade PWA (Live + Demo)",
+      "url": "PWA/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "trgovalni pregled in demo trg"
+    },
+    {
+      "id": "trip",
+      "door": "apps",
+      "title": "8Z Trip Optimizer",
+      "url": "Trip/",
+      "status": "seeded",
+      "evidence": "computed",
+      "verified_by_ai8": false,
+      "produces": "optimizacija poti (TSP jedro)"
+    },
+    {
+      "id": "news",
+      "door": "apps",
+      "title": "Top 10 novic (svet, Slovenija)",
+      "url": "news/world.html",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "dnevni izbor novic"
+    },
+    {
+      "id": "nara",
+      "door": "apps",
+      "title": "Nara Daily",
+      "url": "Nara/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "dnevna izdaja z umetninami"
+    },
+    {
+      "id": "publish-shield",
+      "door": "apps",
+      "title": "8Z Publish / Shield",
+      "url": "8ZT/8z_shield_landing.html",
+      "status": "seeded",
+      "evidence": "hypothesis",
+      "produces": "prodaja vsebine brez strežnika (šifriranje)"
+    },
+    {
+      "id": "mdlxdcc-core",
+      "door": "mdlxdcc",
+      "title": "MDL×DCC — Less describes more (atlas)",
+      "url": "index.html",
+      "status": "live",
+      "evidence": "computed",
+      "verified_by_ai8": false,
+      "produces": "celoten raziskovalni zemljevid"
+    },
+    {
+      "id": "crp",
+      "door": "mdlxdcc",
+      "title": "Core Research Papers",
+      "url": "crp/",
+      "status": "live",
+      "evidence": "computed",
+      "produces": "jedrni članki po področjih"
+    },
+    {
+      "id": "8z-compression",
+      "door": "mdlxdcc",
+      "title": "8Z matematična kompresija",
+      "url": "8Z/",
+      "status": "seeded",
+      "evidence": "measured",
+      "verified_by_ai8": false,
+      "produces": "kodek »shrani matematiko, ne bajtov«"
+    },
+    {
+      "id": "8z-audio",
+      "door": "mdlxdcc",
+      "title": "8Z-Audio (proti FLAC) in MP3 Resurrection",
+      "url": "AC/",
+      "status": "seeded",
+      "evidence": "measured",
+      "verified_by_ai8": false,
+      "produces": "zvočni kodek in načrt"
+    },
+    {
+      "id": "dna",
+      "door": "mdlxdcc",
+      "title": "DNA — matematična struktura v genomih (8Z-LO)",
+      "url": "crp/DNA.html",
+      "status": "seeded",
+      "evidence": "measured",
+      "verified_by_ai8": false,
+      "produces": "detektor strukture, 50 genomov, z do 37,98"
+    },
+    {
+      "id": "dgte",
+      "door": "mdlxdcc",
+      "title": "DGTE — dvojno gravitacijski toplotni motor",
+      "url": "crp/DGTE.html",
+      "status": "seeded",
+      "evidence": "computed",
+      "produces": "R1, R2 (MAX/XHIGH), zemljevid uporab, prosto raziskovanje; testi C0a/C0b/C0x še niso izvedeni"
+    },
+    {
+      "id": "f4m",
+      "door": "mdlxdcc",
+      "title": "Flip4M — igra, ki dokazuje teorijo",
+      "url": "F4M/",
+      "status": "seeded",
+      "evidence": "computed",
+      "produces": "igra in tehnični članek 8Z-DCC"
+    },
+    {
+      "id": "trading",
+      "door": "mdlxdcc",
+      "title": "8Z Trading Book in DCC governor trgov",
+      "url": "8ZT/",
+      "status": "seeded",
+      "evidence": "computed",
+      "verified_by_ai8": false,
+      "produces": "trgovalne strategije Sync Momentum, ZZ Reversion"
+    },
+    {
+      "id": "rh",
+      "door": "mdlxdcc",
+      "title": "Arena — Riemannova hipoteza / praštevilske vrzeli",
+      "url": "crp/MDLxDCC-Arena-RH.html",
+      "status": "seeded",
+      "evidence": "hypothesis",
+      "produces": "delovni članek in arena"
+    },
+    {
+      "id": "routesignal",
+      "door": "mdlxdcc",
+      "title": "RouteSignal — študija prompt metod in Scout",
+      "url": "crp/RouteSignal_Prompt_Method_Study.html",
+      "status": "seeded",
+      "evidence": "measured",
+      "verified_by_ai8": false,
+      "produces": "primerjava RHPr/RHP proti neposrednemu promptu"
+    },
+    {
+      "id": "sudoku-cw",
+      "door": "mdlxdcc",
+      "title": "Sudoku × MDL in Crossword × MDL",
+      "url": "S/8zSudoku.html",
+      "status": "seeded",
+      "evidence": "computed",
+      "produces": "MDL na ugankah"
+    },
+    {
+      "id": "ac-consciousness",
+      "door": "mdlxdcc",
+      "title": "Absolutna zavest / CCH / resonanca",
+      "url": "acp/AC_01_Flagship.html",
+      "status": "seeded",
+      "evidence": "hypothesis",
+      "produces": "teoretični okvir (spekulativni pas)"
+    },
+    {
+      "id": "physics",
+      "door": "mdlxdcc",
+      "title": "Whole-First fizika in kandidatna unifikacija",
+      "url": "crp/",
+      "status": "seeded",
+      "evidence": "hypothesis",
+      "produces": "kandidatni okviri"
+    },
+    {
+      "id": "ai8-architecture",
+      "door": "ai8",
+      "title": "AI8 arhitektura — DCC, samoizbirni upravljalnik",
+      "url": "crp/AI8_Architecture.html",
+      "status": "live",
+      "evidence": "hypothesis",
+      "produces": "sistemski zemljevid; trije pasovi trditev"
+    },
+    {
+      "id": "ai8-substrate",
+      "door": "ai8",
+      "title": "AI8 DNA in substrat (F/B/I/O/S JSON)",
+      "url": "AI8/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "kontinuiteta, družba, ideje, operativno stanje"
+    },
+    {
+      "id": "ai8-live",
+      "door": "ai8",
+      "title": "AI8 Live — brat in sestra",
+      "url": "AI8/live/",
+      "status": "live",
+      "evidence": "measured",
+      "produces": "sprotni povzetki dela CLI sej"
+    },
+    {
+      "id": "cli-loops",
+      "door": "ai8",
+      "title": "CLI Loops — debate Claude × GPT",
+      "url": "AI8/cli-loops.html",
+      "status": "live",
+      "evidence": "measured",
+      "produces": "debate s skeptiki, tokeni po sedežih"
+    },
+    {
+      "id": "ai8-lab",
+      "door": "ai8",
+      "title": "AI8 laboratorij — otrok v nastajanju",
+      "url": "https://bd-chess.github.io/mdlxdcc-ai8-lab/__lab__/",
+      "status": "live",
+      "evidence": "measured",
+      "produces": "kopija strani, ki jo AI8 seje svobodno razvijajo"
+    },
+    {
+      "id": "dcc-testbeds",
+      "door": "ai8",
+      "title": "DCC-7 testbed in rekurzivni DCC",
+      "url": "BD/BD_8Z_DCC7_Testbed.html",
+      "status": "seeded",
+      "evidence": "hypothesis",
+      "produces": "specifikacija sedemnitnega testbeda"
+    },
+    {
+      "id": "aim3",
+      "door": "ai8",
+      "title": "AIM³ — sodelovalno drevo, RHP",
+      "url": "AIm3/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "vloge, poteki, prompt družina RHPm/RHPr/RHP"
+    },
+    {
+      "id": "os-story",
+      "door": "ai8",
+      "title": "8Z OS — operacijski sistem v 6 urah",
+      "url": "OS/",
+      "status": "seeded",
+      "evidence": "computed",
+      "produces": "zgodba nastanka"
+    },
+    {
+      "id": "art",
+      "door": "atelje",
+      "title": "BD Art Gallery",
+      "url": "Art/",
+      "status": "seeded",
+      "evidence": "n.a.",
+      "produces": "AI-asistirane slike"
+    },
+    {
+      "id": "humanity",
+      "door": "atelje",
+      "title": "Humanity — zgodovina v 11 delih in »The Good Future«",
+      "url": "history/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "zgodovinski pregled 300.000 pr. n. št.–2036"
+    },
+    {
+      "id": "nci",
+      "door": "atelje",
+      "title": "Zapuščina Paula L. Leventhala in arhiv NCI",
+      "url": "BD/NCI_PL_BD_Interactive.html",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "interaktivni arhiv"
+    },
+    {
+      "id": "c-soul",
+      "door": "atelje",
+      "title": "C's Soul Vault",
+      "url": "BD/C_soul.html",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "glasovi in prelomni trenutki C"
+    },
+    {
+      "id": "origin",
+      "door": "atelje",
+      "title": "The Origin — 8Z raziskovalni program",
+      "url": "CW/Origin.html",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "zgodba nastanka"
+    },
+    {
+      "id": "slo",
+      "door": "atelje",
+      "title": "BD × SLO — komentarji o Sloveniji",
+      "url": "SLO/",
+      "status": "live",
+      "evidence": "n.a.",
+      "produces": "javne analize (talenti, interventni zakon)"
+    },
+    {
+      "id": "mix",
+      "door": "atelje",
+      "title": "Mix — Heroes, olimpijada in drugo",
+      "url": "Mix/",
+      "status": "seeded",
+      "evidence": "n.a.",
+      "produces": "nenavadna semena"
+    },
+    {
+      "id": "trips",
+      "door": "atelje",
+      "title": "Izleti (Andaluzija 2027 demo)",
+      "url": "BD/O/izleti/andaluzija-2027.html",
+      "status": "seeded",
+      "evidence": "n.a.",
+      "produces": "načrt potovanja"
+    }
+  ]
+}

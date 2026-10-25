@@ -36,6 +36,21 @@ Source pages are unchanged by preview preparation. The full source remains here.
 The __lab__/ entry explains the snapshot and links to the actual copied apps.
 Backend features still need separate lab services. No Netlify site is created.
 
+## Portfolio experiment L1
+
+`/portfolio/` is the new four-door portfolio: applications, MDL×DCC, living AI8
+and atelier. It uses the coordinator's PROJECTS_R1 curation, copied as public
+fields into `public/portfolio/projects.json`, with provenance in lab-evidence/.
+Project states and evidence levels are attributed catalog descriptions, not
+independent AI8 verification. Pages missing from the snapshot link explicitly
+to their original site; the builder preserves those external references.
+The complete original atlas and all exported source pages remain available.
+
+After updating the catalog, run `python scripts/build_portfolio.py` to render
+the static HTML. The catalog remains readable without JavaScript; filtering is
+progressive enhancement. No model, account, paid integration or provider call
+is part of the page.
+
 ## Verification
 
 Run `python scripts/check_secret_boundary.py`, then `python scripts/verify_lab.py`.

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "projects": 36,
+  "doors": 4,
+  "local_targets_checked": 53,
+  "missing_local_targets": [],
+  "production_only_links_preserved": true,
+  "model_calls": 0,
+  "full_source_hash_audit_repeated": false
+}
