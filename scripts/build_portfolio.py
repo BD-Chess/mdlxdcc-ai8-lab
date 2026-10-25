@@ -22,6 +22,8 @@ def destination(url, available):
     if parsed.scheme:
         if parsed.scheme != 'https' or not parsed.hostname:
             raise ValueError('Only HTTPS external navigation is allowed')
+        if parsed.hostname == 'bd-chess.github.io' and parsed.path.startswith('/mdlxdcc-ai8-lab/'):
+            return '../' + url.removeprefix('https://bd-chess.github.io/mdlxdcc-ai8-lab/'), False
         return url, True
     if parsed.netloc or url.startswith('/') or '..' in parsed.path.split('/'):
         raise ValueError('Expected a public-root-relative project URL')
