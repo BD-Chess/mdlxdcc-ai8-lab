@@ -106,13 +106,13 @@ html[data-lang="en"] .whybox.en,html[data-lang="sl"] .whybox.sl,html[data-lang="
         </div>
         <div class="grid two">
           <div class="card en"><h3>Runway magnetic lanes</h3><p>Flush, segmented linear modules are embedded in the first 2–2.5 km of a runway. Zone lengths can range from roughly 25–100 m and are ramped smoothly to avoid step changes.</p></div>
-          <div class="card en"><h3>Aircraft integration</h3><p>Candidate rings or plates would sit in wheel hubs or axle carriers. Material, magnetization, geometry and force direction remain unspecified; a passive ferromagnetic plate could be attracted toward the runway. New aircraft might offer room to optimize wheel count, bogie spacing and thermal management.</p></div>
+          <div class="card en"><h3>Aircraft integration</h3><p>Candidate rings or plates would sit in wheel hubs or axle carriers. Material, magnetization, geometry and force direction remain unspecified; a plain ferromagnetic part would be attracted toward the stronger field at the runway. Repulsive permanent magnets or induced-current conductors need distinct force, drag and heat tests. A hub-mounted element may sit far above the proposed 1–3 cm gap; measure the actual magnetic surfaces before sizing the field.</p></div>
           <div class="card en"><h3>Dual-mode operation</h3><p>At equipped airports MAT energizes only for identified departures. At all other airports, the aircraft behaves exactly like today.</p></div>
           <div class="card en"><h3>Operational boundary</h3><p>The proposed plan ramps the field down before V1. Rejected takeoffs during the active segment and field failures still require a braking and directional-control safety case.</p></div>
         </div>
         <div class="grid two sl">
           <div class="card"><h3>Magnetni pasovi v stezi</h3><p>Poravnani, segmentirani linearni moduli so vgrajeni v prvih 2–2,5 km steze. Cone so lahko dolge približno 25–100 m in imajo mehke prehode.</p></div>
-          <div class="card"><h3>Integracija na letalu</h3><p>Možni obroči ali plošče bi bili v pestih koles ali nosilcih osi. Material, magnetizacija, geometrija in smer sile še niso določeni; pasivno feromagnetno ploščo bi polje lahko privlačilo proti stezi. Nova letala bi morda omogočila prilagoditev števila koles, razmika bogijev in odvajanja toplote.</p></div>
+          <div class="card"><h3>Integracija na letalu</h3><p>Možni obroči ali plošče bi bili v pestih koles ali nosilcih osi. Material, magnetizacija, geometrija in smer sile še niso določeni; navaden feromagnetni del bi polje privlačilo proti močnejšemu polju v stezi. Odboj s trajnimi magneti ali induciranimi tokovi zahteva ločene meritve sile, upora in toplote. Element v pestu je lahko precej više od predlagane reže 1–3 cm; pred določitvijo polja je treba izmeriti dejanski magnetni površini.</p></div>
           <div class="card"><h3>Dvojni način delovanja</h3><p>Na opremljenih letališčih se MAT vklopi samo za prepoznane odhode. Na vseh drugih letališčih letalo deluje kot danes.</p></div>
           <div class="card"><h3>Operativna meja</h3><p>Načrt predvideva izklop polja pred V1. Zavrnjen vzlet med aktivnim segmentom in napake polja še potrebujejo varnostno analizo zaviranja ter smernega nadzora.</p></div>
         </div>
@@ -127,14 +127,16 @@ html[data-lang="en"] .whybox.en,html[data-lang="sl"] .whybox.sl,html[data-lang="
         <div class="callout bridge sl"><strong>Odločilni preizkus:</strong> Na istem obremenjenem kolesnem vozičku primerjaj MAT izklopljen in vklopljen pri enaki hitrosti in reži. Izmeri normalno silo na pnevmatiki, upor v smeri vožnje, električni vhod in toploto. Če zgornja meja merilne negotovosti pri razbremenitvi ostane pod 5 % v predvidenem območju, preizkušena geometrija ne doseže spodnjega cilja. Sila navzgor sama še ne dokazuje neto prihranka. Pri enaki obremenitvi in zahtevah za oprijem primerjaj optimizirane običajne pnevmatike in podvozje.</div>
         <ul class="clean en">
           <li>Benefits scale with lift fraction <span class="code">λ</span> and speed <span class="code">v</span> during the assisted ground run.</li>
-          <li>A modest <span class="code">λ = 0.10</span> cuts rolling losses by about 10% in the assisted segment.</li>
+          <li>A target <span class="code">λ = 0.10</span> would cut rolling losses by 10% in the assisted segment, if lift is achieved without added losses. Rolling resistance itself is only a small part of takeoff force.</li>
           <li>Fuel, distance, tire-wear and hot/high benefits are hypotheses requiring matched measurements. A brake-life benefit needs a separate mechanism and test.</li>
         </ul>
         <ul class="clean sl">
           <li>Koristi rastejo z deležem dviga <span class="code">λ</span> in hitrostjo <span class="code">v</span> med podprtim delom pospeševanja.</li>
-          <li>Zmeren <span class="code">λ = 0.10</span> zmanjša kotalne izgube za približno 10% v podprtem segmentu.</li>
+          <li>Cilj <span class="code">λ = 0.10</span> bi kotalne izgube v podprtem segmentu zmanjšal za 10 %, če bi bil dvig dosežen brez dodatnih izgub. Kotalni upor je sam le majhen del vzletne sile.</li>
           <li>Manjša poraba goriva, krajša razdalja, manjša obraba gum in večja rezerva v vročih/visokih pogojih so hipoteze za primerjalne meritve. Korist za zavore potrebuje ločen mehanizem in preizkus.</li>
         </ul>
+        <div class="callout bridge en"><strong>Illustrative scale:</strong> Assume a 70 t aircraft, rolling coefficient 0.010, average acceleration 1.56 m/s², negligible wing lift and 10% wheel-load relief over 1 km. The gross rolling-force reduction is about 0.69 kN, roughly 0.6% of acceleration plus rolling force; gross mechanical saving is 0.69 MJ (0.19 kWh). These are conditional calculations, not measured MAT or fuel savings. Aircraft-specific rolling resistance, wing lift, magnetic drag and grid input must be supplied before a net claim.</div>
+        <div class="callout bridge sl"><strong>Ilustrativni red velikosti:</strong> Predpostavimo 70 t letalo, koeficient kotaljenja 0,010, povprečni pospešek 1,56 m/s², zanemarljiv vzgon kril in 10 % razbremenitev koles na 1 km. Bruto zmanjšanje kotalne sile je približno 0,69 kN oziroma okoli 0,6 % sile za pospeševanje in kotaljenje; bruto mehanski prihranek je 0,69 MJ (0,19 kWh). To so pogojni računi, ne izmerjen MAT ali prihranek goriva. Pred trditvijo o neto koristi potrebujemo dejanski kotalni upor, vzgon kril, magnetni upor in vhod iz omrežja.</div>
       </section>
 
       <section id="safety" class="section">
