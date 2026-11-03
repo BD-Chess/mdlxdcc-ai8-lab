@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 from pathlib import Path
 import posixpath
 import re
@@ -22,6 +23,7 @@ CSS_URL = re.compile(r'''url\(\s*(?P<q>["']?)(?P<u>[^\s)'";]+)(?P=q)\s*\)''', re
 # In HTML, CSS url() is rewritten only inside <style> blocks and style="" attributes, never in scripts
 # (a case-insensitive url( match there broke URL.createObjectURL(...) and new URL(...)).
 STYLE_BLOCK = re.compile(r'(?P<open><style\b[^>]*>)(?P<body>.*?)(?P<close></style\s*>)', re.I | re.S)
+SRCSET = re.compile(r'''(?P<p>\bsrcset\s*=\s*)(?P<q>["'])(?P<v>[^"']*)(?P=q)''', re.I)
 STYLE_ATTR = re.compile(r'''(?P<p>\bstyle\s*=\s*)(?P<q>["'])(?P<v>.*?)(?P=q)''', re.I | re.S)
 SCRIPT_BLOCK = re.compile(r'(<script\b[^>]*>.*?</script\s*>)', re.I | re.S)
 ROOT_LITERAL = re.compile(r'''(?P<q>["'`])(?P<u>/(?!/)[^"'`\s\\<>]+)(?P=q)''')
@@ -77,6 +79,7 @@ class Builder:
     def rewrite(self, text: str, relative: str, suffix: str) -> str:
         if suffix in {'.html', '.htm', '.svg'}:
             text = ATTR.sub(lambda m: m['p'] + m['q'] + self.url(m['u'], relative) + m['q'], text)
+            text = SRCSET.sub(lambda m: m['p'] + m['q'] + self.srcset(m['v'], relative) + m['q'], text)
         css = lambda t: CSS_URL.sub(lambda m: 'url(' + m['q'] + self.url(m['u'], relative) + m['q'] + ')', t)
         if suffix in {'.html', '.htm'}:
             def styles(t):
@@ -89,6 +92,49 @@ class Builder:
         if suffix in {'.js', '.mjs', '.json', '.webmanifest', '.html', '.htm'}:
             text = ROOT_LITERAL.sub(lambda m: m['q'] + self.url(m['u'], relative, True) + m['q'], text)
         return text
+
+    def srcset(self, value: str, relative: str) -> str:
+        """Rewrite each candidate URL of a srcset; descriptors (1x, 480w) stay as they are."""
+        if 'data:' in value:
+            return value
+        parts = []
+        for candidate in value.split(','):
+            bits = candidate.strip().split(None, 1)
+            if not bits:
+                continue
+            parts.append(' '.join([self.url(bits[0], relative)] + bits[1:]))
+        return ', '.join(parts)
+
+    def forced_route_stubs(self, output: Path) -> list:
+        """Production forced rules (status ending in '!') shadow files that exist at the old path.
+        GitHub Pages would serve the shadowed file, so it is replaced by a redirect to the target."""
+        rules = json.loads((ROOT / 'scripts/lab_routes_r2.json').read_text(encoding='utf-8'))['rules']
+        # Exact-case lookup: on a case-insensitive file system (Windows, macOS) '/ai8/x' would match
+        # 'AI8/x.html' itself, and the stub would overwrite its own target (redirect loop).
+        # The listing holds the names as stored, so every OS behaves like the Linux CI build.
+        files = {p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file()}
+        def built(path):
+            rel = path.lstrip('/')
+            for cand in ([rel + 'index.html'] if rel == '' or rel.endswith('/') else [rel, rel + '.html', rel + '/index.html']):
+                if cand in files:
+                    return cand
+            return None
+        stubs = []
+        for rule in rules:
+            if not rule['status'].endswith('!'):
+                continue
+            source, target = built(rule['from']), built(rule['to'])
+            if (not source or not target or source == target or source in {s for s, _ in stubs}
+                    or os.path.samefile(output / source, output / target)):
+                continue
+            href = self.base + (target[:-len('index.html')] if target.endswith('index.html') else target)
+            (output / source).write_text(f'''<!doctype html><html lang="sl"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0;url={href}"><link rel="canonical" href="{href}"><title>AI8 Lab — preusmeritev</title>
+<script>location.replace({json.dumps(href)}+location.search+location.hash)</script>
+<p>Ta stran je preseljena (enako kot na glavni strani): <a href="{href}">{href}</a></p></html>''', encoding='utf-8')
+            stubs.append((source, href))
+        return stubs
 
     def write_404(self, output: Path) -> None:
         """GitHub Pages serves 404.html for every missing path: replay production routes and fix case."""
@@ -154,6 +200,7 @@ else{{t.textContent='Stran ni najdena.';m.textContent='Poti /'+r.path+' v labu n
         info.mkdir(exist_ok=True)
         (info / 'runtime.js').write_text(runtime, encoding='utf-8')
         (output / '.nojekyll').write_text('', encoding='utf-8')
+        stubs = self.forced_route_stubs(output)
         self.write_404(output)
         (output / 'robots.txt').write_text('User-agent: *\nDisallow: /\n', encoding='utf-8')
         (info / 'index.html').write_text(f'''<!doctype html><html lang="sl"><meta charset="utf-8">
@@ -167,7 +214,8 @@ else{{t.textContent='Stran ni najdena.';m.textContent='Poti /'+r.path+' v labu n
         report = {'schema': 'ai8.pages-build.v1', 'source_commit': self.commit, 'base': self.base,
                   'copied_source_files': copied, 'offloaded_media_files': len(self.media),
                   'offloaded_bytes': sum((self.public / path).stat().st_size for path in self.media),
-                  'offloaded_paths': sorted(self.media), 'provider_calls_connected': False}
+                  'offloaded_paths': sorted(self.media), 'provider_calls_connected': False,
+                  'forced_route_stubs': [{'path': p, 'to': h} for p, h in stubs]}
         report['published_bytes'] = sum(path.stat().st_size for path in output.rglob('*') if path.is_file())
         if report['published_bytes'] >= 950_000_000:
             raise RuntimeError(f"Pages artifact exceeds conservative size gate: {report['published_bytes']}")
