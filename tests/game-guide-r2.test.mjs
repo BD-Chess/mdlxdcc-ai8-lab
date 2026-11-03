@@ -84,12 +84,15 @@ test('R2 allowlist matches execution: optional tiered hints, reveal gate, skip a
   }
 });
 
-test('R2 rejected call returns exact allowed ids; one correction opens s6', async () => {
-  const h = harness([{ calls: [use('open_step', { id: 's5' })] }, { calls: [use('open_step', { id: 's6' })] }, { text: 'Preberi.' }]);
-  const events = await turn(h, request({ opened: ['s1', 's2', 's3'], learning: { asked: ['s2'], cards: { s2: { card: 'A', line: 'Kartica A' } } } }));
-  assertDone(events); assert.deepEqual(events.filter(e => e.type === 'action').map(a => a.id), ['s6']);
+test('R2 rejected hint call returns exact allowed ids; the reveal stays behind assessment', async () => {
+  // Since R3.6 an already assessed challenge opens its reveal without a provider round (covered in game-guide-r35),
+  // so the rejection path is exercised before the assessment.
+  const h = harness([{ calls: [use('open_step', { id: 's5' })] }, { text: 'Kaj se zgodi z vzgonom na vsaki strani?' }]);
+  const events = await turn(h, request({ opened: ['s1', 's2', 's3'], learning: { asked: ['s2'], cards: {} } }));
+  assertDone(events); assert.deepEqual(events.filter(e => e.type === 'action').map(a => a.id), []);
   const result = toolResults(h.seen[1].input).at(-1); assert.equal(result.ok, false); assert.equal(result.error, 'HINT_ON_REQUEST');
-  assert.deepEqual(result.allowed_open_steps, [{ id: 's6', kind: 'reveal' }]); assert.equal(h.seen.length, 3);
+  assert.deepEqual(result.allowed_open_steps, []); assert.deepEqual(result.reveal_after_assessment, { id: 's6', requires: 'assess_challenge', step: 's2' });
+  assert.equal(h.seen.length, 2);
 });
 
 test('R2 repeated invalid tools stop safely after initial call + one repair', async () => {

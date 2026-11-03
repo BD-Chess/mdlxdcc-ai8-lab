@@ -1,0 +1,57 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R2",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files (P0-1 stale guide tests after R3.6).",
+ "files": [
+  {
+   "path": "tests/game-guide-p0.test.mjs",
+   "source_sha256": "ec04fdd6c05c8e9555ec17859aacd7424e18a9ae592630392273bd33fa4ab2a5",
+   "lab_sha256": "b7d5ae73e7a1a0daf49fab2973613e668ae7d9934be15eb1f557051a2d2049cf",
+   "bytes": 14503,
+   "lab_prs": [
+    "#10"
+   ],
+   "lab_commits": [
+    "ec68a08"
+   ]
+  },
+  {
+   "path": "tests/game-guide.test.mjs",
+   "source_sha256": "632fb4f034e8b6505e2302fb141fd1c3f491efda0ab25cf20c4f71ea02402f13",
+   "lab_sha256": "4ae9b74cfde9b19bec233f7eb473fc5968a370f78b5c727bbfae90a18d32a0b6",
+   "bytes": 14250,
+   "lab_prs": [
+    "#10"
+   ],
+   "lab_commits": [
+    "ec68a08"
+   ]
+  },
+  {
+   "path": "tests/game-guide-r2.test.mjs",
+   "source_sha256": "fa6ab2e062eec38dd583a5980b60eda9ed69eae70658197514970ba69f85f15d",
+   "lab_sha256": "efe5c15825bb37aabf011c262dfe5cd44b008b80dbbcd29131194326f6db30e7",
+   "bytes": 10080,
+   "lab_prs": [
+    "#10"
+   ],
+   "lab_commits": [
+    "ec68a08"
+   ]
+  },
+  {
+   "path": "tests/browser-p0-smoke.mjs",
+   "source_sha256": "46d55a0500ed18c391ba8ad813bc040dd0564fa143f38fbe9f72c0ab876a9be4",
+   "lab_sha256": "9f7fedde874027f9a93d982feff78b800d5d369fdaee4dcb6f076d1c249ab854",
+   "bytes": 15303,
+   "lab_prs": [
+    "#10"
+   ],
+   "lab_commits": [
+    "ec68a08"
+   ]
+  }
+ ]
+}

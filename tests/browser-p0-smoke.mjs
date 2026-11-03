@@ -82,7 +82,7 @@ try{
  const firstReceipt=clientPosts.find(b=>b.continuation)?.receipts[0];assert.equal(firstReceipt.visible,true);assert.equal(firstReceipt.opened,'c1');
  assert.equal(await evaluate(`document.querySelector('#c1 h2').hasAttribute('data-gg-opened')`),true);
  assert.equal(await evaluate(`document.querySelector('[data-gg-start]').hidden`),true);
- assert.equal(await evaluate(`document.querySelector('.gg-message[data-role=assistant]').textContent`),'Na desni se je odprl nov korak. Preberi in mi povej, ko si pripravljen.');
+ assert.equal(await evaluate(`document.querySelector('.gg-message[data-role=assistant]').textContent`),'Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.');
  report.checks.push('both start buttons dispatch once; challenge opens through real handler; actual visible receipt; scroll/title glow; one-line invitation; exact input label; Invent default');
  for(let n=1;n<=5;n++){
   if(n>1)await compose('Naprej.');assert.equal(await evaluate(`document.getElementById('c${n}').hidden`),false);
