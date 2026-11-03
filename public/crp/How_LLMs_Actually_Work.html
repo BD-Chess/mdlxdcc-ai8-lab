@@ -44,7 +44,7 @@
   <div class="badgebar"><span class="badge">Claude + GPT hybrid</span><span class="badge">Not a magic mind</span><span class="badge">Not “just autocomplete”</span><span class="badge">EN default · SL option</span><span class="badge">June 2026</span><span class="badge">AI8 portal</span></div>
   <div class="langbar"><button class="langbtn active" id="btn-en" onclick="setLang('en')">EN</button><button class="langbtn" id="btn-sl" onclick="setLang('sl')">SL</button></div>
 </header>
-<nav class="navbar"><div class="navinner"><span class="nav-lang nav-en"><a href="#s1-en">1. Short</a><a href="#s2-en">2. Core</a><a href="#s3-en">3. Pretraining</a><a href="#s4-en">4. Post-training</a><a href="#s5-en">5. Inference</a><a href="#s6-en">6. System</a><a href="#s7-en">7. Memory</a><a href="#s8-en">8. Hallucinations</a><a href="#s9-en">9. Reasoning</a><a href="#s10-en">10. Multimodal</a><a href="#s11-en">11. Myths</a><a href="#s12-en">12. Method</a><a href="#s13-en">13. Better?</a><a href="#refs-en">Refs</a><a href="How_LLMs_Actually_Work_Comparison_Report.html">Scores</a></span><span class="nav-lang nav-sl" style="display:none"><a href="#s1-sl">1. Kratko</a><a href="#s2-sl">2. Jedro</a><a href="#s3-sl">3. Pretraining</a><a href="#s4-sl">4. Post-training</a><a href="#s5-sl">5. Inference</a><a href="#s6-sl">6. Sistem</a><a href="#s7-sl">7. Spomin</a><a href="#s8-sl">8. Halucinacije</a><a href="#s9-sl">9. Razmišljanje</a><a href="#s10-sl">10. Multimodalno</a><a href="#s11-sl">11. Miti</a><a href="#s12-sl">12. Metoda</a><a href="#s13-sl">13. Bolje?</a><a href="#refs-sl">Viri</a><a href="How_LLMs_Actually_Work_Comparison_Report.html">Ocene</a></span><button class="btn" type="button" onclick="setTech(true)">Open tech</button><button class="btn" type="button" onclick="setTech(false)">Close tech</button></div></nav>
+<nav class="navbar"><div class="navinner"><span class="nav-lang nav-en"><a href="#s1-en">1. Short</a><a href="#s2-en">2. Core</a><a href="#s3-en">3. Pretraining</a><a href="#s4-en">4. Post-training</a><a href="#s5-en">5. Inference</a><a href="#s6-en">6. System</a><a href="#s7-en">7. Memory</a><a href="#s8-en">8. Hallucinations</a><a href="#s9-en">9. Reasoning</a><a href="#s10-en">10. Multimodal</a><a href="#s11-en">11. Myths</a><a href="#s12-en">12. Method</a><a href="#s13-en">13. Better?</a><a href="#refs-en">Refs</a><a href="../BD/How_LLMs_Actually_Work_Comparison_Report.html">Scores</a></span><span class="nav-lang nav-sl" style="display:none"><a href="#s1-sl">1. Kratko</a><a href="#s2-sl">2. Jedro</a><a href="#s3-sl">3. Pretraining</a><a href="#s4-sl">4. Post-training</a><a href="#s5-sl">5. Inference</a><a href="#s6-sl">6. Sistem</a><a href="#s7-sl">7. Spomin</a><a href="#s8-sl">8. Halucinacije</a><a href="#s9-sl">9. Razmišljanje</a><a href="#s10-sl">10. Multimodalno</a><a href="#s11-sl">11. Miti</a><a href="#s12-sl">12. Metoda</a><a href="#s13-sl">13. Bolje?</a><a href="#refs-sl">Viri</a><a href="../BD/How_LLMs_Actually_Work_Comparison_Report.html">Ocene</a></span><button class="btn" type="button" onclick="setTech(true)">Open tech</button><button class="btn" type="button" onclick="setTech(false)">Close tech</button></div></nav>
 <main><article>
 <section class="lang active" data-lang="en">
 <h1 id="top-en">How LLMs Actually Work</h1>
@@ -60,7 +60,7 @@
 <p class="note">This still does not make the article infallible. Sources matter. Product details change. The claim is narrower: this method is a stronger public explainer workflow than one unaudited draft from one human or one model.</p>
 </details>
 <div class="callout">
-<p><strong>Method transparency:</strong> <a href="How_LLMs_Actually_Work_Comparison_Report.html">Open the multi‑LLM scoreboard and comparison report</a> to see the round-by-round scores, model feedback, and why the final hybrid changed across rounds.</p>
+<p><strong>Method transparency:</strong> <a href="../BD/How_LLMs_Actually_Work_Comparison_Report.html">Open the multi‑LLM scoreboard and comparison report</a> to see the round-by-round scores, model feedback, and why the final hybrid changed across rounds.</p>
 </div>
 
 <div class="freshness" id="freshness-en"><span class="mini-label">Freshness / calibration</span><p><strong>Last technical review: 2026-06-11.</strong> The stable core is tokenization, embeddings, attention, MLP/FFN blocks, residual streams, logits, and the pretraining/post-training distinction. The fast-changing layer is product memory, context windows, tool routing, safety policy, multimodal implementation, reasoning modes, and serving infrastructure.</p></div>
@@ -288,7 +288,7 @@ KV cache ≈ 2 × 80 × 8 × 128 × 128,000 × 2
 <a class="portal-card" href="./MDLxDCC-Arenas.html"><strong>MDL×DCC Arenas</strong><span>Practical arenas where these ideas are tested rather than only described.</span></a>
 <a class="portal-card" href="./MDLxDCC-Arena-NAS.html"><strong>NAS Arena</strong><span>Neural Architecture Search as an MDL×DCC evidence lane: sensors, laws, diagnostics, and fixed-budget governance tests.</span></a>
 <a class="portal-card" href="../8Z/index.html"><strong>8Z Project</strong><span>The broader 8Z project family: compression, arenas, and MDL-style candidate systems.</span></a>
-<a class="portal-card" href="How_LLMs_Actually_Work_Comparison_Report.html"><strong>Scoreboard for this article</strong><span>The multi‑LLM comparison report behind this page.</span></a>
+<a class="portal-card" href="../BD/How_LLMs_Actually_Work_Comparison_Report.html"><strong>Scoreboard for this article</strong><span>The multi‑LLM comparison report behind this page.</span></a>
 </div>
 <p class="note">These links are a portal into BD’s own architecture and experiments. They are not cited as external proof of standard machine-learning architecture; they are the added BD/AI8 layer proposed on top of today’s LLMs.</p>
 </details>
@@ -374,7 +374,7 @@ KV cache ≈ 2 × 80 × 8 × 128 × 128,000 × 2
 <p class="note">To članka še vedno ne naredi nezmotljivega. Viri so pomembni. Produktne podrobnosti se spreminjajo. Trditev je ožja: ta metoda je močnejši javni explainer workflow kot en nepreverjen osnutek enega človeka ali enega modela.</p>
 </details>
 <div class="callout">
-<p><strong>Transparentnost metode:</strong> <a href="How_LLMs_Actually_Work_Comparison_Report.html">Odpri multi‑LLM scoreboard in primerjalno poročilo</a>, kjer so vidne ocene po rundah, povratne informacije modelov in zakaj se je finalni hibrid spreminjal.</p>
+<p><strong>Transparentnost metode:</strong> <a href="../BD/How_LLMs_Actually_Work_Comparison_Report.html">Odpri multi‑LLM scoreboard in primerjalno poročilo</a>, kjer so vidne ocene po rundah, povratne informacije modelov in zakaj se je finalni hibrid spreminjal.</p>
 </div>
 
 <div class="freshness" id="freshness-sl"><span class="mini-label">Svežina / kalibracija</span><p><strong>Zadnji tehnični pregled: 2026-06-11.</strong> Stabilno jedro so tokenizacija, embeddingi, attention, MLP/FFN bloki, residual stream, logiti in razlika med pretrainingom in post-trainingom. Hitro spreminjajoča plast so produktni spomin, okna konteksta, usmerjanje orodij, varnostna pravila, multimodalna implementacija, reasoning načini in serving infrastruktura.</p></div>
@@ -597,7 +597,7 @@ KV cache ≈ 2 × 80 × 8 × 128 × 128,000 × 2
 <a class="portal-card" href="./MDLxDCC-Arenas.html"><strong>MDL×DCC Arenas</strong><span>Praktične arene, kjer se te ideje testirajo, ne samo opisujejo.</span></a>
 <a class="portal-card" href="./MDLxDCC-Arena-NAS.html"><strong>NAS Arena</strong><span>Neural Architecture Search kot MDL×DCC evidence lane: senzorji, zakoni, diagnostika in fixed-budget governance testi.</span></a>
 <a class="portal-card" href="../8Z/index.html"><strong>8Z Project</strong><span>Širša 8Z družina: kompresija, arene in MDL-style sistemi kandidatov.</span></a>
-<a class="portal-card" href="How_LLMs_Actually_Work_Comparison_Report.html"><strong>Scoreboard tega članka</strong><span>Multi‑LLM primerjalno poročilo za to stran.</span></a>
+<a class="portal-card" href="../BD/How_LLMs_Actually_Work_Comparison_Report.html"><strong>Scoreboard tega članka</strong><span>Multi‑LLM primerjalno poročilo za to stran.</span></a>
 </div>
 <p class="note">Te povezave so portal v BD-jevo lastno arhitekturo in eksperimente. Niso navedene kot zunanji dokaz standardne strojno‑učne arhitekture; so dodana BD/AI8 plast, predlagana nad današnjimi LLM-ji.</p>
 </details>
