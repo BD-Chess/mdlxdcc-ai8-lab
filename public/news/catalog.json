@@ -1,0 +1,64 @@
+{
+  "editions": [
+    {
+      "date": "2026-10-26",
+      "path": "days/2026-10-26.json",
+      "published_at": "2026-10-26T05:31:02.426398+00:00",
+      "revision": 1,
+      "sha256": "3998ca1deebfc4aabd10cf37e118717cdee7b5cb53fee3aa202e632c2eea86b3",
+      "story_count": 4
+    },
+    {
+      "date": "2026-10-27",
+      "path": "days/2026-10-27-r2.json",
+      "published_at": "2026-10-27T06:30:28.281717+00:00",
+      "revision": 2,
+      "sha256": "101ba18b4a8fc8e800cad1c8457160cd81b5defe8aecdb4559e354b017dd2c33",
+      "story_count": 9
+    },
+    {
+      "date": "2026-10-27",
+      "path": "days/2026-10-27-r4.json",
+      "published_at": "2026-10-27T09:01:30.920493+00:00",
+      "revision": 4,
+      "sha256": "c843ef8285eb0402b159ce0e3c9e3b4c83c716f812432d6a736e56c7d0af6093",
+      "story_count": 9
+    },
+    {
+      "date": "2026-10-28",
+      "path": "days/2026-10-28.json",
+      "published_at": "2026-10-28T05:23:20.124851+00:00",
+      "revision": 1,
+      "sha256": "699549aaaac01b3818fda40eb37c3292aa3fed794af038b99b95696d439cd662",
+      "story_count": 12
+    },
+    {
+      "date": "2026-10-29",
+      "path": "days/2026-10-29.json",
+      "published_at": "2026-10-29T11:24:49.365073+00:00",
+      "revision": 1,
+      "sha256": "101e87b35131b3423ef0856476a756615b7fd102c4689790bc8d48263bdb8b34",
+      "story_count": 6
+    },
+    {
+      "date": "2026-10-30",
+      "path": "days/2026-10-30.json",
+      "published_at": "2026-10-30T05:21:41.390217+00:00",
+      "revision": 1,
+      "sha256": "d825e3afe65290ba6656b1abda2827c0dcc5ac88f98123320f5c899a9d5db40e",
+      "story_count": 11
+    },
+    {
+      "date": "2026-10-31",
+      "path": "days/2026-10-31.json",
+      "published_at": "2026-10-31T05:22:37.257673+00:00",
+      "revision": 1,
+      "sha256": "678d72bce85911eea644b9c351639b918c3fd534db26cdf82947aeda88c5ca2b",
+      "story_count": 13
+    }
+  ],
+  "latest_published_date": "2026-10-31",
+  "schema_version": "ai8.news.catalog.v1",
+  "timezone": "Europe/Ljubljana",
+  "updated_at": "2026-10-31T05:22:37.257673+00:00"
+}

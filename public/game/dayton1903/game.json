@@ -1,0 +1,1500 @@
+{
+  "schema": "ai8.game.v1",
+  "slug": "dayton1903",
+  "title": "Dayton 1903",
+  "year": 1903,
+  "release": "R7.1",
+  "language": "sl",
+  "people_ids": [
+    "wright-brothers"
+  ],
+  "modes": {
+    "story": "beri s-korake story, reveal in epilogue; challenge in hint preskoči",
+    "invent": "pred vsakim reveal najprej challenge; hint samo na zahtevo igralca"
+  },
+  "acts": [
+    {
+      "act": 1,
+      "title": "Problem, ki ga nihče ne rešuje",
+      "date": "1899",
+      "place": "Dayton, Ohio"
+    },
+    {
+      "act": 2,
+      "title": "Tabele lažejo",
+      "date": "1900–1901",
+      "place": "Kitty Hawk, Severna Karolina, in Dayton"
+    },
+    {
+      "act": 3,
+      "title": "Letalo se zavrti v pesek",
+      "date": "jesen 1902",
+      "place": "Kill Devil Hills, Severna Karolina"
+    },
+    {
+      "act": 4,
+      "title": "Moč, ki je nihče ne zna izračunati",
+      "date": "zima 1902/03",
+      "place": "Dayton, Ohio"
+    },
+    {
+      "act": 5,
+      "title": "Pesek, veter in en poskus",
+      "date": "november–december 1903",
+      "place": "Kill Devil Hills, Severna Karolina"
+    }
+  ],
+  "key_commit": {
+    "alg": "sha3-256",
+    "rules": "PRAVILO20 v0.2",
+    "release": "R7.1",
+    "sha3": "2a0477959c7eb53b9cfaba410db73ab355c70ace1c1171b86adc2853ee084092"
+  },
+  "steps": [
+    {
+      "id": "s1",
+      "act": 1,
+      "kind": "story",
+      "title": "Prolog: Dayton 1899",
+      "for_agent": "Prolog. Igralca postavi v delavnico koles leta 1899: Lilienthal je umrl leta 1896, svet lovi vzgon in motor, Wilbur pa misli, da manjka nadzor. V načinu Zgodba nadaljuj na s6, v načinu Izumljaj z njim na s2.",
+      "sources_ref": [
+        1,
+        4,
+        8
+      ],
+      "refs": [
+        {
+          "ref": "s1.title",
+          "kind": "title",
+          "label": "Problem, ki ga nihče ne rešuje"
+        },
+        {
+          "ref": "s1.p1",
+          "kind": "p",
+          "label": "Si v delavnici koles Wright Cycle Company v Daytonu. Wilbur ima 32 let, Orville 27. Kolesa"
+        },
+        {
+          "ref": "s1.p2",
+          "kind": "p",
+          "label": "Tri leta prej, 9. avgusta 1896, je jadralnemu letalu Otta Lilienthala v Nemčiji upadel vzg"
+        },
+        {
+          "ref": "s1.p3",
+          "kind": "p",
+          "label": "Maja 1899 Wilbur piše Smithsonovemu inštitutu in prosi za gradivo o letenju. Dobi kup član"
+        },
+        {
+          "ref": "s1.p4",
+          "kind": "p",
+          "label": "Večina se ukvarja z dvema vprašanjema: kako dobiti dovolj vzgona in kako dobiti dovolj moč"
+        },
+        {
+          "ref": "s1.fig1",
+          "kind": "fig",
+          "label": "Otto Lilienthal med poletom, 1895."
+        },
+        {
+          "ref": "s1.fig2",
+          "kind": "fig",
+          "label": "Wilbur (levo) in Orville Wright,"
+        },
+        {
+          "ref": "s1.start",
+          "kind": "start",
+          "label": "Začniva igro"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "act": 1,
+      "kind": "challenge",
+      "title": "Kako pilot nadzoruje nagib?",
+      "for_agent": "Izziv brez oblike rešitve. Postavi ga samo z vprašanjem s strani in ne dodajaj sestavin rešitve (leva in desna stran, vzgon, kot, vrvice). Namig daj samo, če ga igralec zahteva ali reče, da je obtičal.",
+      "sources_ref": [
+        1,
+        5
+      ],
+      "question": "Kako bi pilotu dal nadzor nad nagibom levo in desno, ne da bi premikal svoje telo?",
+      "key_ideas": [
+        "nagib popravljaš z različnim vzgonom na levi in desni strani",
+        "vzgon spremeniš s kotom, pod katerim konec krila zadene zrak (kot pri pticah)",
+        "na obeh straneh nasprotno: ena več, druga manj",
+        "pilot to upravlja mehansko, z vrvicami ali žicami, krilo pa ostane trdno"
+      ],
+      "alternatives_ok": [
+        "gibljive ploskve na koncih kril (krilca) so pravilna drugačna pot; britanski patent iz leta 1868 je bil pozabljen, prevladala so po letu 1915"
+      ],
+      "anachronisms": [
+        "krilca kot uveljavljena rešitev pred letom 1904",
+        "žiroskopski stabilizator (Sperry, 1914)",
+        "hidravlika, servomotorji, elektronika",
+        "izraz »aileron«"
+      ],
+      "refs": [
+        {
+          "ref": "s2.title",
+          "kind": "title",
+          "label": "Kako pilot nadzoruje nagib?"
+        },
+        {
+          "ref": "s2.p1",
+          "kind": "p",
+          "label": "Sunek vetra nagne jadralno letalo na levo. Lilienthal bi zamahnil z nogami v desno, a večj"
+        },
+        {
+          "ref": "s2.q",
+          "kind": "q",
+          "label": "Kako bi pilotu dal nadzor nad nagibom levo in desno, ne da bi premikal svoje telo?"
+        },
+        {
+          "ref": "s2.answer",
+          "kind": "answer",
+          "label": "kam napisati odgovor"
+        }
+      ],
+      "key": {
+        "key_ideas": [
+          {
+            "id": "s2.k1",
+            "text": "nagib popravljaš z različnim vzgonom na levi in desni strani"
+          },
+          {
+            "id": "s2.k2",
+            "text": "vzgon spremeniš s kotom, pod katerim konec krila zadene zrak (kot pri pticah)"
+          },
+          {
+            "id": "s2.k3",
+            "text": "na obeh straneh nasprotno: ena več, druga manj"
+          },
+          {
+            "id": "s2.k4",
+            "text": "pilot to upravlja mehansko, z vrvicami ali žicami, krilo pa ostane trdno"
+          }
+        ],
+        "hints": [
+          {
+            "step_id": "s3",
+            "covers": [
+              "s2.k2"
+            ]
+          },
+          {
+            "step_id": "s4",
+            "covers": [
+              "s2.k2",
+              "s2.k3"
+            ]
+          },
+          {
+            "step_id": "s5",
+            "covers": [
+              "s2.k2",
+              "s2.k3",
+              "s2.k4"
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "s2.a1",
+            "opis": "gibljive ploskve na koncih kril (krilca) so pravilna drugačna pot; britanski patent iz leta 1868 je bil pozabljen, prevladala so po letu 1915",
+            "izid": "B"
+          }
+        ],
+        "anachronisms": [
+          {
+            "id": "s2.x1",
+            "sredstvo": "krilca kot uveljavljena rešitev pred letom 1904"
+          },
+          {
+            "id": "s2.x2",
+            "sredstvo": "žiroskopski stabilizator (Sperry, 1914)"
+          },
+          {
+            "id": "s2.x3",
+            "sredstvo": "hidravlika, servomotorji, elektronika"
+          },
+          {
+            "id": "s2.x4",
+            "sredstvo": "izraz »aileron«"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "act": 1,
+      "kind": "hint",
+      "title": "Namig 1: ptice",
+      "for_agent": "Najšibkejši namig: usmeri pogled na ptice. Nato vprašaj, kaj je igralec iz tega razbral.",
+      "sources_ref": [
+        5
+      ],
+      "for": "s2",
+      "tier": 1,
+      "refs": [
+        {
+          "ref": "s3.p1",
+          "kind": "p",
+          "label": "Opazuj ptice v vetru. Ko jih sunek nagne, ne premaknejo telesa. Kaj naredijo s konicami kr"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "act": 1,
+      "kind": "hint",
+      "title": "Namig 2: konice kril",
+      "for_agent": "Srednji namig: ptič spremeni kot konic, eno več, drugo manj.",
+      "sources_ref": [
+        5
+      ],
+      "for": "s2",
+      "tier": 2,
+      "refs": [
+        {
+          "ref": "s4.p1",
+          "kind": "p",
+          "label": "Ptič zasuka konico enega krila tako, da jo zrak zadene pod večjim kotom, konico drugega pa"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "act": 1,
+      "kind": "hint",
+      "title": "Namig 3: škatla",
+      "for_agent": "Močan namig: zasukana škatla. Skoraj razkrije rešitev, zato ga daj zadnjega.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s2",
+      "tier": 3,
+      "refs": [
+        {
+          "ref": "s5.p1",
+          "kind": "p",
+          "label": "Dvokrilnik je kot škatla: zgornje krilo, spodnje krilo in vmesni opornike. Vzemi dolgo kar"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "act": 1,
+      "kind": "reveal",
+      "title": "Zvijanje kril",
+      "for_agent": "Razkrij zvijanje kril (julij 1899, škatla za zračnico, zmaj 27. 7. 1899). Primerjaj z igralčevim predlogom po točkah: zadetek, drugače a deluje, boljše od zgodovine, zgrešeno.",
+      "sources_ref": [
+        1,
+        3,
+        5
+      ],
+      "for": "s2",
+      "refs": [
+        {
+          "ref": "s6.title",
+          "kind": "title",
+          "label": "Zvijanje kril"
+        },
+        {
+          "ref": "s6.p1",
+          "kind": "p",
+          "label": "Wilbur je dolgo opazoval ptice in sklepal, da se poravnajo tako, da spremenijo kot konic k"
+        },
+        {
+          "ref": "s6.p2",
+          "kind": "p",
+          "label": "To je postalo zvijanje kril. Dvokrilnik je povezan z opornicami in žicami kot most, zato o"
+        },
+        {
+          "ref": "s6.p3",
+          "kind": "p",
+          "label": "27. julija 1899 sta brata preizkusila zamisel na dvokrilnem zmaju z razponom 1,5 m. Wilbur"
+        },
+        {
+          "ref": "s6.fig1",
+          "kind": "fig",
+          "label": "Načelo zvijanja kril."
+        },
+        {
+          "ref": "s6.svg1",
+          "kind": "svg",
+          "label": "Zvijanje kril: škatla in dvokrilnik od zadaj"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "act": 2,
+      "kind": "story",
+      "title": "Kitty Hawk 1900–1901",
+      "for_agent": "Pripoved: izbira Kitty Hawka, jadralni letali 1900 in 1901, vzgon le tretjina izračunanega, Wilburjev obup na vlaku. Omeni, da se bo težava z obračanjem vrnila v 3. dejanju.",
+      "sources_ref": [
+        1,
+        3
+      ],
+      "refs": [
+        {
+          "ref": "s7.title",
+          "kind": "title",
+          "label": "Tabele lažejo"
+        },
+        {
+          "ref": "s7.p1",
+          "kind": "p",
+          "label": "Za poskuse z letalom za človeka potrebujeta močan in enakomeren veter, mehko podlago za pa"
+        },
+        {
+          "ref": "s7.p2",
+          "kind": "p",
+          "label": "Jadralno letalo iz leta 1900 ima razpon 5,3 m in tehta 24 kg. Večinoma ga spuščata kot zma"
+        },
+        {
+          "ref": "s7.p3",
+          "kind": "p",
+          "label": "Leta 1901 se vrneta z največjim jadralnim letalom, kar so jih kdaj preizkusili: razpon 6,7"
+        },
+        {
+          "ref": "s7.p4",
+          "kind": "p",
+          "label": "Na vlaku proti domu je Wilbur potrt in Orvillu reče, da človek ne bo letel še tisoč let."
+        },
+        {
+          "ref": "s7.fig1",
+          "kind": "fig",
+          "label": "Jadralno letalo 1901 med letom kot zmaj,"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "act": 2,
+      "kind": "challenge",
+      "title": "Kje je napaka?",
+      "for_agent": "Izziv o metodi. Igralec naj predlaga, kako ločiti napako v podatkih od napake v meritvi in kako dobiti zanesljive podatke. Štej vsako idejo nadzorovanega poskusa.",
+      "sources_ref": [
+        1,
+        3
+      ],
+      "question": "Kako ugotoviš, kje je napaka, in kako dobiš podatke o krilih, ki jim lahko zaupaš?",
+      "key_ideas": [
+        "primerjava v enakem in enakomernem vetru (nadzorovan poskus)",
+        "majhni modeli in umeten veter v zaprtem kanalu (vetrovnik)",
+        "merjenje razmerja sil proti referenčni ploščici, da se hitrost vetra okrajša",
+        "sistematično preizkusiti veliko oblik (ukrivljenost, razmerje dolžine in globine krila)",
+        "preveriti samo konstanto v enačbi za vzgon"
+      ],
+      "anachronisms": [
+        "elektronski senzorji sile, merilni lističi",
+        "računalniška simulacija ali CFD",
+        "Prandtlova teorija krila (1918)",
+        "profili NACA (1930-a)",
+        "merilnik z vročo žico"
+      ],
+      "refs": [
+        {
+          "ref": "s8.title",
+          "kind": "title",
+          "label": "Kje je napaka?"
+        },
+        {
+          "ref": "s8.p1",
+          "kind": "p",
+          "label": "Jadralno letalo nosi tretjino tega, kar napovedujejo izračuni. Napaka je lahko v Lilientha"
+        },
+        {
+          "ref": "s8.q",
+          "kind": "q",
+          "label": "Kako ugotoviš, kje je napaka, in kako dobiš podatke o krilih, ki jim lahko zaupaš?"
+        },
+        {
+          "ref": "s8.answer",
+          "kind": "answer",
+          "label": "kam napisati odgovor"
+        }
+      ],
+      "key": {
+        "key_ideas": [
+          {
+            "id": "s8.k1",
+            "text": "primerjava v enakem in enakomernem vetru (nadzorovan poskus)"
+          },
+          {
+            "id": "s8.k2",
+            "text": "majhni modeli in umeten veter v zaprtem kanalu (vetrovnik)"
+          },
+          {
+            "id": "s8.k3",
+            "text": "merjenje razmerja sil proti referenčni ploščici, da se hitrost vetra okrajša"
+          },
+          {
+            "id": "s8.k4",
+            "text": "sistematično preizkusiti veliko oblik (ukrivljenost, razmerje dolžine in globine krila)"
+          },
+          {
+            "id": "s8.k5",
+            "text": "preveriti samo konstanto v enačbi za vzgon"
+          }
+        ],
+        "hints": [
+          {
+            "step_id": "s9",
+            "covers": [
+              "s8.k1"
+            ]
+          },
+          {
+            "step_id": "s10",
+            "covers": [
+              "s8.k1",
+              "s8.k2"
+            ]
+          },
+          {
+            "step_id": "s11",
+            "covers": [
+              "s8.k3"
+            ]
+          }
+        ],
+        "alternatives": [],
+        "anachronisms": [
+          {
+            "id": "s8.x1",
+            "sredstvo": "elektronski senzorji sile, merilni lističi"
+          },
+          {
+            "id": "s8.x2",
+            "sredstvo": "računalniška simulacija ali CFD"
+          },
+          {
+            "id": "s8.x3",
+            "sredstvo": "Prandtlova teorija krila (1918)"
+          },
+          {
+            "id": "s8.x4",
+            "sredstvo": "profili NACA (1930-a)"
+          },
+          {
+            "id": "s8.x5",
+            "sredstvo": "merilnik z vročo žico"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9",
+      "act": 2,
+      "kind": "hint",
+      "title": "Namig 1: enak veter",
+      "for_agent": "Šibek namig: kako primerjati v enakem vetru.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s8",
+      "tier": 1,
+      "refs": [
+        {
+          "ref": "s9.p1",
+          "kind": "p",
+          "label": "Na sipini se veter spreminja iz sekunde v sekundo. Kako bi dve obliki krila primerjal v na"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "act": 2,
+      "kind": "hint",
+      "title": "Namig 2: lasten veter",
+      "for_agent": "Srednji namig: veter narediš sam, modeli so majhni.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s8",
+      "tier": 2,
+      "refs": [
+        {
+          "ref": "s10.p1",
+          "kind": "p",
+          "label": "Veter lahko narediš sam: majhen, enakomeren in v zaprtem prostoru. Krila so lahko majhni m"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "act": 2,
+      "kind": "hint",
+      "title": "Namig 3: referenčna ploščica",
+      "for_agent": "Močan namig: uravnoteženje proti ploščici, razmerje sil.",
+      "sources_ref": [
+        1,
+        10
+      ],
+      "for": "s8",
+      "tier": 3,
+      "refs": [
+        {
+          "ref": "s11.p1",
+          "kind": "p",
+          "label": "Če silo na model krila v istem vetru uravnovesiš s silo na ravno ploščico, postavljeno pra"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "act": 2,
+      "kind": "reveal",
+      "title": "Vetrovnik iz delavnice koles",
+      "for_agent": "Razkrij poskus s kolesom, vetrovnik (okt.–dec. 1901), tehtnice, okoli 200 modelov, Smeatonovo konstanto 0,0033. Grafikon je ponazoritev, ne meritev.",
+      "sources_ref": [
+        1,
+        3,
+        10
+      ],
+      "for": "s8",
+      "refs": [
+        {
+          "ref": "s12.title",
+          "kind": "title",
+          "label": "Vetrovnik iz delavnice koles"
+        },
+        {
+          "ref": "s12.p1",
+          "kind": "p",
+          "label": "Najprej sta naredila poskus s kolesom. Pred krmilo sta vodoravno pritrdila prosto vrteče s"
+        },
+        {
+          "ref": "s12.p2",
+          "kind": "p",
+          "label": "Med oktobrom in decembrom 1901 sta v delavnici zgradila vetrovnik: lesen kanal, dolg 1,8 m"
+        },
+        {
+          "ref": "s12.p3",
+          "kind": "p",
+          "label": "Preizkusila sta okoli 200 modelov kril, 38 od njih podrobno. Smeatonova konstanta je bila "
+        },
+        {
+          "ref": "s12.fig1",
+          "kind": "fig",
+          "label": "Replika vetrovnika"
+        },
+        {
+          "ref": "s12.fig2",
+          "kind": "fig",
+          "label": "Tehtnica za vzgon,"
+        },
+        {
+          "ref": "s12.fig3",
+          "kind": "fig",
+          "label": "Kako deluje vetrovnik."
+        },
+        {
+          "ref": "s12.svg1",
+          "kind": "svg",
+          "label": "Shema vetrovnika iz leta 1901 v stranskem pogledu"
+        },
+        {
+          "ref": "s12.fig4",
+          "kind": "fig",
+          "label": "Oblika podatkov v tabelah:"
+        },
+        {
+          "ref": "s12.svg2",
+          "kind": "svg",
+          "label": "Ponazoritev oblike podatkov: vzgon in upor enega modela krila glede na vpadni kot"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "act": 3,
+      "kind": "story",
+      "title": "Kopanje vodnjaka",
+      "for_agent": "Pripoved: jadralno letalo 1902 po tabelah iz vetrovnika, zibelka za boke, dve nepremični plavuti, simptom »kopanje vodnjaka«. Opiši simptom natančno, vzroka ne razkrivaj.",
+      "sources_ref": [
+        1,
+        3,
+        6
+      ],
+      "refs": [
+        {
+          "ref": "s13.title",
+          "kind": "title",
+          "label": "Letalo se zavrti v pesek"
+        },
+        {
+          "ref": "s13.p1",
+          "kind": "p",
+          "label": "Novo jadralno letalo je narejeno po tabelah iz vetrovnika: razpon 9,8 m, globina krila 1,5"
+        },
+        {
+          "ref": "s13.p2",
+          "kind": "p",
+          "label": "Letalo nosi, kot sta izračunala. Vendar se včasih zgodi tole: levo krilo se povesi, pilot "
+        },
+        {
+          "ref": "s13.fig1",
+          "kind": "fig",
+          "label": "Kaj vidiš na sipini."
+        },
+        {
+          "ref": "s13.svg1",
+          "kind": "svg",
+          "label": "Pogled od zgoraj: zvito krilo dobi več vzgona in več upora, letalo se zasuka"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "act": 3,
+      "kind": "challenge",
+      "title": "Zakaj se zavrti in kaj spremeniš?",
+      "for_agent": "Izziv: vzrok (upor zvitega krila) in rešitev (gibljivo smerno krmilo, povezano z zvijanjem). Priznaj tudi delne odgovore, npr. samo vzrok.",
+      "sources_ref": [
+        1,
+        6
+      ],
+      "question": "Zakaj se letalo zasuka in kaj spremeniš, da bo pilot nagib popravil varno?",
+      "key_ideas": [
+        "krilo z več vzgona ima tudi več upora, zato se nos zasuka proti njemu (neželeni zasuk)",
+        "nepremična plavut v drsenju vstran zasuk še poveča",
+        "smerno krmilo mora biti gibljivo",
+        "krmilo je povezano z zvijanjem kril ali ga pilot upravlja hkrati z njim (nadzor v treh oseh)"
+      ],
+      "anachronisms": [
+        "diferencialna ali Frisejeva krilca (1930-a)",
+        "dušilnik zasuka, avtopilot",
+        "izraz »koordinirani zavoj« kot naučeno pravilo"
+      ],
+      "refs": [
+        {
+          "ref": "s14.title",
+          "kind": "title",
+          "label": "Zakaj se zavrti in kaj spremeniš?"
+        },
+        {
+          "ref": "s14.p1",
+          "kind": "p",
+          "label": "Zvijanje kril dela, tabele držijo, letalo nosi. Pa vendar se letalo ob popravljanju nagiba"
+        },
+        {
+          "ref": "s14.q",
+          "kind": "q",
+          "label": "Zakaj se letalo zasuka in kaj spremeniš, da bo pilot nagib popravil varno?"
+        },
+        {
+          "ref": "s14.answer",
+          "kind": "answer",
+          "label": "kam napisati odgovor"
+        }
+      ],
+      "key": {
+        "key_ideas": [
+          {
+            "id": "s14.k1",
+            "text": "krilo z več vzgona ima tudi več upora, zato se nos zasuka proti njemu (neželeni zasuk)"
+          },
+          {
+            "id": "s14.k2",
+            "text": "nepremična plavut v drsenju vstran zasuk še poveča"
+          },
+          {
+            "id": "s14.k3",
+            "text": "smerno krmilo mora biti gibljivo"
+          },
+          {
+            "id": "s14.k4",
+            "text": "krmilo je povezano z zvijanjem kril ali ga pilot upravlja hkrati z njim (nadzor v treh oseh)"
+          }
+        ],
+        "hints": [
+          {
+            "step_id": "s15",
+            "covers": [
+              "s14.k1"
+            ]
+          },
+          {
+            "step_id": "s16",
+            "covers": [
+              "s14.k2",
+              "s14.k3"
+            ]
+          }
+        ],
+        "alternatives": [],
+        "anachronisms": [
+          {
+            "id": "s14.x1",
+            "sredstvo": "diferencialna ali Frisejeva krilca (1930-a)"
+          },
+          {
+            "id": "s14.x2",
+            "sredstvo": "dušilnik zasuka, avtopilot"
+          },
+          {
+            "id": "s14.x3",
+            "sredstvo": "izraz »koordinirani zavoj« kot naučeno pravilo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s15",
+      "act": 3,
+      "kind": "hint",
+      "title": "Namig 1: upor zvitega krila",
+      "for_agent": "Šibek namig: več vzgona pomeni tudi več upora na eni strani.",
+      "sources_ref": [
+        6
+      ],
+      "for": "s14",
+      "tier": 1,
+      "refs": [
+        {
+          "ref": "s15.p1",
+          "kind": "p",
+          "label": "Krilo, ki mu zvijanje poveča vzgon, se zraku tudi bolj upira. Kaj naredi večji upor na sam"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "act": 3,
+      "kind": "hint",
+      "title": "Namig 2: plavut kot vetrnica",
+      "for_agent": "Močnejši namig: kaj naredi nepremična plavut v drsenju in kaj bi naredila gibljiva.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s14",
+      "tier": 2,
+      "refs": [
+        {
+          "ref": "s16.p1",
+          "kind": "p",
+          "label": "Nepremična plavut se kot vetrnica vedno obrne proti zraku. Kaj naredi, ko letalo že drsi v"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "act": 3,
+      "kind": "reveal",
+      "title": "Gibljivo smerno krmilo",
+      "for_agent": "Razkrij Orvillovo gibljivo krmilo (2. 10. 1902) in Wilburjevo povezavo z zibelko, nadzor v treh oseh, patent marca 1903.",
+      "sources_ref": [
+        1,
+        3,
+        6
+      ],
+      "for": "s14",
+      "refs": [
+        {
+          "ref": "s17.title",
+          "kind": "title",
+          "label": "Gibljivo smerno krmilo: nadzor v treh oseh"
+        },
+        {
+          "ref": "s17.p1",
+          "kind": "p",
+          "label": "Krilo z več vzgona se je zraku tudi bolj upiralo, zato se je nos zasukal proti njemu, leta"
+        },
+        {
+          "ref": "s17.p2",
+          "kind": "p",
+          "label": "Ponoči 2. oktobra 1902 Orville premišljuje o tem. V dnevnik zapiše, da je »preštudiral nov"
+        },
+        {
+          "ref": "s17.p3",
+          "kind": "p",
+          "label": "S tem sta imela nadzor v vseh treh oseh: sprednje krmilo za nos gor in dol, zvijanje kril "
+        },
+        {
+          "ref": "s17.fig1",
+          "kind": "fig",
+          "label": "Wilbur v desnem zavoju z jadralnim letalom 1902,"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "act": 4,
+      "kind": "story",
+      "title": "Dayton, zima 1902/03",
+      "for_agent": "Pripoved: potrebna moč in potisk, ni lahkega motorja, ladijski vijaki po izkušnjah, Langleyjev dragi Aerodrome. Ne poimenuj propelerja kot rešitve.",
+      "sources_ref": [
+        1,
+        2,
+        8
+      ],
+      "refs": [
+        {
+          "ref": "s18.title",
+          "kind": "title",
+          "label": "Moč, ki je nihče ne zna izračunati"
+        },
+        {
+          "ref": "s18.p1",
+          "kind": "p",
+          "label": "Jadralno letalo leti in ga obvladata. Zdaj mora vzleteti z ravnih tal s svojo močjo. Izrač"
+        },
+        {
+          "ref": "s18.p2",
+          "kind": "p",
+          "label": "Pišeta več proizvajalcem motorjev, a nihče nima dovolj lahkega motorja. Ladjedelnice delaj"
+        },
+        {
+          "ref": "s18.p3",
+          "kind": "p",
+          "label": "Medtem Samuel Langley, tajnik Smithsonovega inštituta, z več kot 50.000 dolarji državnega "
+        },
+        {
+          "ref": "s18.facts",
+          "kind": "facts",
+          "label": "≈ 290 kg"
+        },
+        {
+          "ref": "s18.fig1",
+          "kind": "fig",
+          "label": "Rezervna lopatica ladijskega vijaka"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "act": 4,
+      "kind": "challenge",
+      "title": "Kako moč spremeniš v gibanje naprej?",
+      "for_agent": "Izziv: pogon, izračun vnaprej in postavitev. Ne vsiljuj propelerja. Drugačne poti, ki delujejo, oceni kot »drugače, a deluje« in jih primerjaj s propelerjem s številkami. Trak z lopaticami, ki delajo z vzgonom (kot LIFT-BELT), pohvali kot izvirno idejo, a ga ne potrdi kot delujočega, ker v praksi še ni preizkušen.",
+      "sources_ref": [
+        1,
+        2,
+        7
+      ],
+      "question": "Kako boš moč motorja spremenil v potisk naprej, kako boš to izračunal, preden kar koli zgradiš, in kako boš pogon postavil na letalo?",
+      "key_ideas": [
+        "propeler je vrteče se krilo, njegov vzgon kaže naprej",
+        "vsak košček lopatice izračunaš iz tabel vetrovnika (hitrost leta in hitrost vrtenja dasta smer zraka)",
+        "lopatica je zvita, ker konica teče hitreje kot del ob osi",
+        "en motor poganja velik in počasen propeler prek verige in zobnikov (tehnika koles)",
+        "dva propelerja v nasprotnih smereh izničita zasuk"
+      ],
+      "alternatives_ok": [
+        "en propeler deluje, če zasuk motorja izravnaš drugače (npr. s krmilom ali nesimetrijo krila)",
+        "trak z lopaticami, ki delajo z vzgonom (kot LIFT-BELT): izvirna ideja, pohvali jo, a je ne potrdi kot delujoče, ker v praksi še ni preizkušena; primerjaj s propelerjem s številkami"
+      ],
+      "anachronisms": [
+        "Betz-Prandtlova teorija propelerja (okoli 1920)",
+        "propeler s spremenljivim korakom (1920-a in 1930-a)",
+        "turbinski ali reaktivni motor",
+        "ogljikova vlakna, kompoziti",
+        "litij-ionske baterije"
+      ],
+      "refs": [
+        {
+          "ref": "s19.title",
+          "kind": "title",
+          "label": "Kako moč spremeniš v gibanje naprej?"
+        },
+        {
+          "ref": "s19.p1",
+          "kind": "p",
+          "label": "Recimo, da motor dobiš. Imaš delavnico koles, verige, zobnike, ležaje, smreko in svoje tab"
+        },
+        {
+          "ref": "s19.q",
+          "kind": "q",
+          "label": "Kako boš moč motorja spremenil v potisk naprej, kako boš to izračunal, preden kar koli zgr"
+        },
+        {
+          "ref": "s19.answer",
+          "kind": "answer",
+          "label": "kam napisati odgovor"
+        }
+      ],
+      "key": {
+        "key_ideas": [
+          {
+            "id": "s19.k1",
+            "text": "propeler je vrteče se krilo, njegov vzgon kaže naprej"
+          },
+          {
+            "id": "s19.k2",
+            "text": "vsak košček lopatice izračunaš iz tabel vetrovnika (hitrost leta in hitrost vrtenja dasta smer zraka)"
+          },
+          {
+            "id": "s19.k3",
+            "text": "lopatica je zvita, ker konica teče hitreje kot del ob osi"
+          },
+          {
+            "id": "s19.k4",
+            "text": "en motor poganja velik in počasen propeler prek verige in zobnikov (tehnika koles)"
+          },
+          {
+            "id": "s19.k5",
+            "text": "dva propelerja v nasprotnih smereh izničita zasuk"
+          }
+        ],
+        "hints": [
+          {
+            "step_id": "s20",
+            "covers": [
+              "s19.k2"
+            ]
+          },
+          {
+            "step_id": "s21",
+            "covers": [
+              "s19.k1"
+            ]
+          },
+          {
+            "step_id": "s22",
+            "covers": [
+              "s19.k3",
+              "s19.k5"
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "s19.a1",
+            "opis": "en propeler deluje, če zasuk motorja izravnaš drugače (npr. s krmilom ali nesimetrijo krila)",
+            "izid": "B"
+          },
+          {
+            "id": "s19.a2",
+            "opis": "trak z lopaticami, ki delajo z vzgonom (kot LIFT-BELT): izvirna ideja, pohvali jo, a je ne potrdi kot delujoče, ker v praksi še ni preizkušena; primerjaj s propelerjem s številkami",
+            "izid": "POHVALA_BREZ_POTRDITVE"
+          }
+        ],
+        "anachronisms": [
+          {
+            "id": "s19.x1",
+            "sredstvo": "Betz-Prandtlova teorija propelerja (okoli 1920)"
+          },
+          {
+            "id": "s19.x2",
+            "sredstvo": "propeler s spremenljivim korakom (1920-a in 1930-a)"
+          },
+          {
+            "id": "s19.x3",
+            "sredstvo": "turbinski ali reaktivni motor"
+          },
+          {
+            "id": "s19.x4",
+            "sredstvo": "ogljikova vlakna, kompoziti"
+          },
+          {
+            "id": "s19.x5",
+            "sredstvo": "litij-ionske baterije"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s20",
+      "act": 4,
+      "kind": "hint",
+      "title": "Namig 1: kaj že znaš izračunati",
+      "for_agent": "Šibek namig: vrni igralca k tabelam iz vetrovnika.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s19",
+      "tier": 1,
+      "refs": [
+        {
+          "ref": "s20.p1",
+          "kind": "p",
+          "label": "Kaj natanko sta izmerila v vetrovniku? Kateri del letala že znata izračunati vnaprej?"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "act": 4,
+      "kind": "hint",
+      "title": "Namig 2: krilo pokonci",
+      "for_agent": "Srednji namig: krilo pokonci in zavrteno. Razkrije obliko, zato ga ponudi šele po prošnji.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s19",
+      "tier": 2,
+      "refs": [
+        {
+          "ref": "s21.p1",
+          "kind": "p",
+          "label": "Kaj dela krilo, če ga postaviš pokonci in ga zavrtiš okoli osi?"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "act": 4,
+      "kind": "hint",
+      "title": "Namig 3: hitrost ob konici in zasuk",
+      "for_agent": "Močan namig: zvoj lopatice in zasuk motorja.",
+      "sources_ref": [
+        2
+      ],
+      "for": "s19",
+      "tier": 3,
+      "refs": [
+        {
+          "ref": "s22.p1",
+          "kind": "p",
+          "label": "Ali gre košček vrteče se lopatice ob konici skozi zrak enako hitro kot košček ob osi? In k"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "act": 4,
+      "kind": "reveal",
+      "title": "Propeler je vrteče se krilo",
+      "for_agent": "Razkrij Taylorjev motor, teorijo propelerja, zvoj (tabela je ponazoritev), izkoristek 66 % in več kot 75 %, postavitev z dvema verigama, prekrižano verigo, 23 : 8, 351 obr/min in 60 kg potiska.",
+      "sources_ref": [
+        1,
+        2,
+        7,
+        9
+      ],
+      "for": "s19",
+      "refs": [
+        {
+          "ref": "s23.title",
+          "kind": "title",
+          "label": "Propeler je vrteče se krilo"
+        },
+        {
+          "ref": "s23.p1",
+          "kind": "p",
+          "label": "Motor. Mehanik Charlie Taylor ga je v šestih tednih zgradil sam, po bratovih skicah. Imel "
+        },
+        {
+          "ref": "s23.p2",
+          "kind": "p",
+          "label": "Propeler. Po mesecih prepirov sta prišla do ključne misli: propeler je krilo, ki se giblje"
+        },
+        {
+          "ref": "s23.tab1",
+          "kind": "tab",
+          "label": "Pogled od zgoraj na letalo 1903: dva potisna propelerja za krili, en motor, dve verigi, en"
+        },
+        {
+          "ref": "s23.p3",
+          "kind": "p",
+          "label": "Propelerja sta bila iz treh plasti lepljene smreke, ročno izrezljana, s premerom 2,6 m. Ko"
+        },
+        {
+          "ref": "s23.p4",
+          "kind": "p",
+          "label": "Postavitev. Dva potisna propelerja sta stala zadaj, za krili, levo in desno od sredine. Mo"
+        },
+        {
+          "ref": "s23.fig1",
+          "kind": "fig",
+          "label": "Pogled od zgoraj, poenostavljeno."
+        },
+        {
+          "ref": "s23.svg1",
+          "kind": "svg",
+          "label": "Pogled od zgoraj na letalo 1903: dva potisna propelerja za krili, en motor, dve verigi, en"
+        },
+        {
+          "ref": "s23.fig2",
+          "kind": "fig",
+          "label": "Letalo 1903 od zadaj"
+        },
+        {
+          "ref": "s23.fig3",
+          "kind": "fig",
+          "label": "Motor, verige in pilot."
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "act": 5,
+      "kind": "story",
+      "title": "November in december 1903",
+      "for_agent": "Pripoved: počena pesta in gredi, Langleyjev neuspeh, met kovanca, neuspel poskus 14. 12. 1903.",
+      "sources_ref": [
+        1,
+        2,
+        8
+      ],
+      "refs": [
+        {
+          "ref": "s24.title",
+          "kind": "title",
+          "label": "Pesek, veter in en poskus"
+        },
+        {
+          "ref": "s24.p1",
+          "kind": "p",
+          "label": "Letalo ima razpon 12,3 m in tehta 274 kg, s pilotom okoli 340 kg. Koles nima, samo drsnike"
+        },
+        {
+          "ref": "s24.p2",
+          "kind": "p",
+          "label": "Medtem Langleyjev Aerodrome s pilotom dvakrat, oktobra in 8. decembra 1903, ob izstrelitvi"
+        },
+        {
+          "ref": "s24.p3",
+          "kind": "p",
+          "label": "14. decembra brata vržeta kovanec. Wilbur zmaga. Letalo vzleti po pobočju navzdol, a pilot"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "act": 5,
+      "kind": "challenge",
+      "title": "Kako vzletiš z ravnega peska?",
+      "for_agent": "Izziv: vzlet brez koles z ravnega peska. Štej idejo tirnice ali gladke podlage in idejo vzleta proti vetru. Katapult je pravilen, a zgodovinsko je prišel leta 1904.",
+      "sources_ref": [
+        1,
+        2
+      ],
+      "question": "Kako boš 340 kg težko letalo brez koles spravil v zrak z ravnega peska?",
+      "key_ideas": [
+        "gladka podlaga, ki jo prineseš s seboj (tirnica z vozičkom)",
+        "vzlet proti močnemu vetru, ker krilo nosi glede na hitrost zraka",
+        "pobočje ni nujno; ravna tla proti vetru so varnejša"
+      ],
+      "alternatives_ok": [
+        "katapult z utežjo (brata sta ga uvedla leta 1904)"
+      ],
+      "anachronisms": [
+        "asfaltirana vzletna steza",
+        "rakete za pomoč pri vzletu (1940-a)",
+        "pristajalno podvozje s tremi kolesi"
+      ],
+      "refs": [
+        {
+          "ref": "s25.title",
+          "kind": "title",
+          "label": "Kako vzletiš z ravnega peska?"
+        },
+        {
+          "ref": "s25.p1",
+          "kind": "p",
+          "label": "Letalo nima koles, motor ima samo 12 KM, pobočje pa se je izkazalo za nevarno. Ostane ravn"
+        },
+        {
+          "ref": "s25.q",
+          "kind": "q",
+          "label": "Kako boš 340 kg težko letalo brez koles spravil v zrak z ravnega peska?"
+        },
+        {
+          "ref": "s25.answer",
+          "kind": "answer",
+          "label": "kam napisati odgovor"
+        }
+      ],
+      "key": {
+        "key_ideas": [
+          {
+            "id": "s25.k1",
+            "text": "gladka podlaga, ki jo prineseš s seboj (tirnica z vozičkom)"
+          },
+          {
+            "id": "s25.k2",
+            "text": "vzlet proti močnemu vetru, ker krilo nosi glede na hitrost zraka"
+          },
+          {
+            "id": "s25.k3",
+            "text": "pobočje ni nujno; ravna tla proti vetru so varnejša"
+          }
+        ],
+        "hints": [
+          {
+            "step_id": "s26",
+            "covers": [
+              "s25.k1"
+            ]
+          },
+          {
+            "step_id": "s27",
+            "covers": [
+              "s25.k2"
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "s25.a1",
+            "opis": "katapult z utežjo (brata sta ga uvedla leta 1904)",
+            "izid": "B"
+          }
+        ],
+        "anachronisms": [
+          {
+            "id": "s25.x1",
+            "sredstvo": "asfaltirana vzletna steza"
+          },
+          {
+            "id": "s25.x2",
+            "sredstvo": "rakete za pomoč pri vzletu (1940-a)"
+          },
+          {
+            "id": "s25.x3",
+            "sredstvo": "pristajalno podvozje s tremi kolesi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s26",
+      "act": 5,
+      "kind": "hint",
+      "title": "Namig 1: podlaga",
+      "for_agent": "Šibek namig: podlaga, ki jo prineseš s seboj.",
+      "sources_ref": [
+        1
+      ],
+      "for": "s25",
+      "tier": 1,
+      "refs": [
+        {
+          "ref": "s26.p1",
+          "kind": "p",
+          "label": "Kolesa se v mehkem pesku udirajo, drsniki pa se drgnejo. Kakšno podlago bi lahko prinesel "
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "act": 5,
+      "kind": "hint",
+      "title": "Namig 2: veter v nos",
+      "for_agent": "Močnejši namig: hitrost zraka proti hitrosti po tleh.",
+      "sources_ref": [
+        2
+      ],
+      "for": "s25",
+      "tier": 2,
+      "refs": [
+        {
+          "ref": "s27.p1",
+          "kind": "p",
+          "label": "Krilo nosi glede na hitrost zraka, ne glede na hitrost po tleh. Kaj ti pri vzletu da močan"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "act": 5,
+      "kind": "reveal",
+      "title": "17. december 1903",
+      "for_agent": "Razkrij tirnico Junction Railroad, voziček, veter več kot 32 km/h, štiri lete (12 s in 37 m, zadnji 59 s in 260 m) in fotografijo J. T. Danielsa.",
+      "sources_ref": [
+        1,
+        2
+      ],
+      "for": "s25",
+      "refs": [
+        {
+          "ref": "s28.title",
+          "kind": "title",
+          "label": "17. december 1903, 10.35"
+        },
+        {
+          "ref": "s28.p1",
+          "kind": "p",
+          "label": "Brata sta s seboj prinesla 18 m dolgo tirnico iz lesenih tramičev, ki sta jo imenovala »Ju"
+        },
+        {
+          "ref": "s28.p2",
+          "kind": "p",
+          "label": "17. decembra je pihalo s povprečno več kot 32 km/h. Tirnico sta položila na ravna tla, obr"
+        },
+        {
+          "ref": "s28.p3",
+          "kind": "p",
+          "label": "Tisti dan sta letela štirikrat. Zadnji let je bil Wilburjev: 59 sekund in 260 m nad tlemi."
+        },
+        {
+          "ref": "s28.fig1",
+          "kind": "fig",
+          "label": "Prvi let, 17. 12. 1903, 10.35."
+        },
+        {
+          "ref": "s28.fig2",
+          "kind": "fig",
+          "label": "Vzlet s tirnice proti vetru."
+        },
+        {
+          "ref": "s28.svg1",
+          "kind": "svg",
+          "label": "Stranski pogled: tirnica, voziček in veter v nos"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "act": 5,
+      "kind": "epilogue",
+      "title": "Od 12 sekund do 38 minut",
+      "for_agent": "Epilog: Huffman Prairie, katapult, letalo 1905, Le Mans 1908, krilca po letu 1915, nadzor v treh oseh danes. Povabi igralca na LIFT-BELT (/crp/lift_belt_propulsor) kot sodobno pot. Igralčevih odgovorov ne citiraj na strani.",
+      "sources_ref": [
+        1,
+        5
+      ],
+      "refs": [
+        {
+          "ref": "s29.title",
+          "kind": "title",
+          "label": "Od 12 sekund do 38 minut"
+        },
+        {
+          "ref": "s29.p1",
+          "kind": "p",
+          "label": "Leta 1904 sta letela na pašniku Huffman Prairie pri Daytonu, kjer je pihalo veliko manj ko"
+        },
+        {
+          "ref": "s29.p2",
+          "kind": "p",
+          "label": "Letalo iz leta 1905 je bilo prvo zares uporabno letalo. Smerno krmilo je dobilo svojo roči"
+        },
+        {
+          "ref": "s29.p3",
+          "kind": "p",
+          "label": "8. avgusta 1908 je Wilbur na dirkališču pri Le Mansu v Franciji prvič letel javno in svet "
+        },
+        {
+          "ref": "s29.p4",
+          "kind": "p",
+          "label": "Kaj pa pogon? Brata sta izumila propeler kot vrteče se krilo. Ena sodobna pot iz te igre j"
+        },
+        {
+          "ref": "s29.fig1",
+          "kind": "fig",
+          "label": "Start s katapultom,"
+        },
+        {
+          "ref": "s29.fig2",
+          "kind": "fig",
+          "label": "Letalo 1905, 41. let,"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Wright brothers (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Wright_brothers"
+    },
+    {
+      "id": 2,
+      "title": "Wright Flyer (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Wright_Flyer"
+    },
+    {
+      "id": 3,
+      "title": "Wright Glider, jadralna letala 1900–1902 (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Wright_Glider"
+    },
+    {
+      "id": 4,
+      "title": "Otto Lilienthal (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Otto_Lilienthal"
+    },
+    {
+      "id": 5,
+      "title": "Wing warping (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Wing_warping"
+    },
+    {
+      "id": 6,
+      "title": "Adverse yaw (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Adverse_yaw"
+    },
+    {
+      "id": 7,
+      "title": "Charlie Taylor (mechanic) (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Charlie_Taylor_(mechanic)"
+    },
+    {
+      "id": 8,
+      "title": "Samuel Pierpont Langley (Wikipedia, angl.)",
+      "url": "https://en.wikipedia.org/wiki/Samuel_Pierpont_Langley"
+    },
+    {
+      "id": 9,
+      "title": "1903 Wright Flyer, National Air and Space Museum",
+      "url": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000"
+    },
+    {
+      "id": 10,
+      "title": "N. H. Randers-Pehrson, Pioneer Wind Tunnels (Smithsonian, 1935): risba tehtnice",
+      "url": "https://commons.wikimedia.org/wiki/File:Balance_des_fr%C3%A8res_Wright,_sch%C3%A9ma.png"
+    },
+    {
+      "id": "img:img/lilienthal_1895.jpg",
+      "title": "Otto Lilienthal gliding experiment, 1895 · Library of Congress · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:Otto_Lilienthal_gliding_experiment_LCCN2002722087.jpg"
+    },
+    {
+      "id": "img:img/wright_brothers_1905.jpg",
+      "title": "Wilbur in Orville Wright, 1905 · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:WrightBrothers.jpg"
+    },
+    {
+      "id": "img:img/glider1901_kite.jpg",
+      "title": "Jadralno letalo 1901 kot zmaj · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:1901_glider_being_flown_as_a_kite.jpg"
+    },
+    {
+      "id": "img:img/tunnel_replica.jpg",
+      "title": "Replika vetrovnika, Deutsches Museum · MLWatts · CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Wright_Brothers_Wind_Tunnel_Replica.jpg"
+    },
+    {
+      "id": "img:img/balance_drawing.jpg",
+      "title": "Risba tehtnice, Smithsonian 1935 · CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Balance_des_fr%C3%A8res_Wright,_sch%C3%A9ma.png"
+    },
+    {
+      "id": "img:img/glider1902_turn.jpg",
+      "title": "Jadralno letalo 1902 v desnem zavoju, 24. 10. 1902 · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:1902_Wright_glider_turns.jpeg"
+    },
+    {
+      "id": "img:img/ship_blade_aurora.jpg",
+      "title": "Lopatica ladijskega vijaka, križarka Aurora · Doomych · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:Cruiser_Aurora._The_spare_screw_propeller_blade.jpg"
+    },
+    {
+      "id": "img:img/flyer1903_rear.jpg",
+      "title": "Letalo 1903 od zadaj · Smithsonian NASM · CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:1903_Wright_Flyer_-_DPLA_-_913052369bd2468611aff158239166f4_(page_17).jpg"
+    },
+    {
+      "id": "img:img/flyer1903_engine.jpg",
+      "title": "Letalo 1903, motor in verige · Smithsonian NASM · CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:1903_Wright_Flyer_-_DPLA_-_913052369bd2468611aff158239166f4_(page_10).jpg"
+    },
+    {
+      "id": "img:img/firstflight_1903.jpg",
+      "title": "Prvi let, 17. 12. 1903 · Library of Congress · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:First_flight2.jpg"
+    },
+    {
+      "id": "img:img/catapult1905.jpg",
+      "title": "Start s katapultom, 23. 6. 1905 · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:CatapultWrightFlyer1905.jpg"
+    },
+    {
+      "id": "img:img/huffman1905_flight41.jpg",
+      "title": "Letalo 1905, 41. let · javna last",
+      "url": "https://commons.wikimedia.org/wiki/File:1905_Wright_Flyer_III_(flight_41).jpg"
+    }
+  ]
+}

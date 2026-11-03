@@ -16,9 +16,15 @@ MARKERS = {
     'OpenAI token': re.compile(r'(?<![A-Za-z0-9_])' + 'sk' + r'-(?:proj-|svcacct-)?[A-Za-z0-9_-]{40,}'),
     'private key': re.compile('-----BEGIN ' + r'(?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
 }
+# Removed work projects must not come back through links in content (REMOVALS_R1).
+REMOVED_REF = re.compile(r'''(?i)(?:href|src)\s*=\s*["'][^"']*(?:omnicpq|/TS/)|["']\.\./OmniCPQ/|/ai8/omnicpq-origin''')
 errors = []
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
-manifest = json.loads((ROOT / 'lab-evidence/SOURCE_MANIFEST_R1.json').read_text(encoding='utf-8'))
+# Later syncs from bd-chessdb add their own exclusions and a newer source manifest; older ones stay as history.
+for record in sorted((ROOT / 'lab-evidence').glob('SYNC_R*.json'), key=lambda p: int(p.stem.split('_R')[1])):
+    plan['excluded'] += json.loads(record.read_text(encoding='utf-8'))['excluded']
+latest = max((ROOT / 'lab-evidence').glob('SOURCE_MANIFEST_R*.json'), key=lambda p: int(p.stem.split('_R')[1]))
+manifest = json.loads(latest.read_text(encoding='utf-8'))
 # Explicit, BD-decided removals after the snapshot: absent is expected, presence is an error.
 removed = set()
 for record in sorted((ROOT / 'lab-evidence').glob('REMOVALS_R*.json')):
@@ -57,6 +63,8 @@ for path in ROOT.rglob('*'):
     for kind, pattern in MARKERS.items():
         if pattern.search(text):
             errors.append({'path': rel.as_posix(), 'kind': kind})
+    if not rel.as_posix().startswith(('lab-evidence/', 'reports/', 'scripts/sync_from_bdchessdb.py')) and REMOVED_REF.search(text):
+        errors.append({'path': rel.as_posix(), 'kind': 'link to removed work project'})
 report = {'schema': 'ai8.lab-validation.v1', 'source_sha': manifest['source_sha'],
           'status': 'PASS' if not errors else 'FAIL',
           'source_files_verified': len([e for e in manifest['files'] if e['path'] not in removed]),

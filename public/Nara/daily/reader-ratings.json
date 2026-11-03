@@ -28,7 +28,11 @@
     "NARA-D-2026-10-21": "NARA-D-2026-10-21:S3",
     "NARA-D-2026-10-22": "NARA-D-2026-10-22:S2",
     "NARA-D-2026-10-23": "NARA-D-2026-10-23:S3",
-    "NARA-D-2026-10-24": "NARA-D-2026-10-24:S1"
+    "NARA-D-2026-10-24": "NARA-D-2026-10-24:S1",
+    "NARA-D-2026-10-25": "NARA-D-2026-10-25:S2",
+    "NARA-D-2026-10-28": "NARA-D-2026-10-28:S1",
+    "NARA-D-2026-10-29": "NARA-D-2026-10-29:S1",
+    "NARA-D-2026-11-01": "NARA-D-2026-11-01:S1"
   },
   "stories": {
     "NARA-D-2026-10-11:S2": {
@@ -961,6 +965,108 @@
       "suggestions": {
         "claude": "Nobody said the sum. It lay on the planks between them like a fish.",
         "gpt": "Then she walked into Upper Wend, and no one said anything, because nothing larger could be said."
+      }
+    },
+    "NARA-D-2026-10-25:S1": {
+      "story_id": "NARA-D-2026-10-25:S1",
+      "title": "THE LITTLE GOD OF UNKEPT PROMISES",
+      "source_content_sha256": "95a340a10db92d6afdb5701b2d2e6685567b360782437900602113767235f383",
+      "gpt": 82,
+      "claude": 63,
+      "combined": 72.5,
+      "display": 73,
+      "comments": {
+        "claude": "A strong premise (a god who makes promises binding) and thoughtful dialogue about accountability and freedom. The Oren/Lio and Mina/Cal threads are humane. The middle gets heavy with procedural clauses and engineering detail, and the prose is dense and sometimes abstract. Resolution is earned but somewhat tidy.",
+        "gpt": "A vivid moral premise, urgent clock, and compassionate dialogue give the story emotional and intellectual pull. Its consent-based solution and Sef’s uneasy change are memorable, though dense procedural mechanics and repeated governance language may slow some pleasure readers before the rescue."
+      },
+      "suggestions": {
+        "claude": "Sef did not touch the seal. He also did not step away from it.",
+        "gpt": "Every promise is a bridge over the fact that another being may leave."
+      }
+    },
+    "NARA-D-2026-10-25:S2": {
+      "story_id": "NARA-D-2026-10-25:S2",
+      "title": "THE CHILD WHO OWNED THE EMERGENCY CHANNEL",
+      "source_content_sha256": "137867c5a58c7d67a2a0d0f3c8cf99ef8aaf7371295172be774a0b0870ba1f67",
+      "gpt": 86,
+      "claude": 62,
+      "combined": 74,
+      "display": 74,
+      "comments": {
+        "claude": "Strong premise and humane, dialogue-heavy negotiation; the child's roll call, the verification question, and the protocol fix are moving. Weakened by dense logistics and timestamps, a compressed middle, and a tidy resolution that dilutes the tension.",
+        "gpt": "A tense, lucid rescue plot turns procedural dialogue into humane drama: every rule change reveals character and makes accountability concrete. Emi's insistence on checkable action is memorable, and the ending preserves consequences. The prefatory synopsis slightly weakens suspense, while occasional schematic phrasing may feel over-engineered."
+      },
+      "suggestions": {
+        "claude": "Emi: \"Mama. The morning of the ninth. What did you leave on the stove?\" ... \"The good pot. The blue one. I left the lid off so you would be angry at me, not at the pot.\"",
+        "gpt": "When I hold the channel, they keep saying her name. The moment I let go, she is a rumour again, and nobody sends a crew to a rumour."
+      }
+    },
+    "NARA-D-2026-10-25:S3": {
+      "story_id": "NARA-D-2026-10-25:S3",
+      "title": "THE VISITORS WHO CAME AS WEATHER",
+      "source_content_sha256": "de5d358ededbb26e7b151b87fa52da951cf9f202f834be34279ca3c0999b68ae",
+      "gpt": 84,
+      "claude": 52,
+      "combined": 68,
+      "display": 68,
+      "comments": {
+        "claude": "Fresh premise (weather as delegation), humane stakes with sick children, dialogue-heavy, and a clean boundary-and-refusal resolution. But the technical procedure (millibars, wheels, membranes, timestamps) is dense and abstract, the dialogue is stiff, and the resolution is tidy and bureaucratic, which limits emotional pull.",
+        "gpt": "The vivid weather-bodied visitors, urgent medical stakes, and dialogue-driven negotiation strongly match the audience. The solution emerges through experiment, mutual revision, and enforceable consent rather than easy harmony, while lasting injuries prevent sentimentality. The opening synopsis slightly blunts suspense, and some technical exposition may slow readers."
+      },
+      "suggestions": {
+        "claude": "Jo lifted one hand from the blanket. His fingers trembled in the fog. It keeps saying warm.",
+        "gpt": "I know a lung is a weather that must not be entered whole."
+      }
+    },
+    "NARA-D-2026-10-28:S1": {
+      "story_id": "NARA-D-2026-10-28:S1",
+      "title": "THE LANDLORD WHO SOLD THE QUIET",
+      "source_content_sha256": "9641d453a3fe14fd1061ae206da8941dbf66909b7f53102bbee2701e84e0eada",
+      "gpt": 84,
+      "claude": 60,
+      "combined": 72,
+      "display": 72,
+      "comments": {
+        "claude": "A clever, satisfying acoustic-beat puzzle with a humane child at its centre and a non-villainous landlord, plus lots of dialogue. The ledger arithmetic and assembly-meeting policy detail in the middle are dense and slow the pace, and the resolution is tidy, but most readers will finish.",
+        "gpt": "A humane mystery with an immediate human stake, memorable acoustic mechanism, morally complex antagonist, and satisfying communal resolution. Strong dialogue keeps the technical premise alive. The detailed lease arithmetic and governance amendments slow the final third, but the child's counting motif and refusal of easy forgiveness carry most readers through."
+      },
+      "suggestions": {
+        "claude": "Forty-one Quiet-tier leases paid sixty-two parts in a hundred of the ring's air bill. Concert fees paid thirty-one, a part for every night the hall sold; the Quiet leases capped that",
+        "gpt": "Before. Quiet leases, 62. Gate, 31. Ordinary rents, 7. After, for twenty-four months. Quiet leases, 44. Gate, 40. An equal air share on every lease, 16."
+      }
+    },
+    "NARA-D-2026-10-29:S1": {
+      "story_id": "NARA-D-2026-10-29:S1",
+      "title": "THE MIDWIFE OF SECOND NAMES",
+      "source_content_sha256": "09826984d2e1ae4d1dd58c53a8b4f7225a2d49797ea41869aaf38cdc2fac9529",
+      "gpt": 84,
+      "claude": 55,
+      "combined": 69.5,
+      "display": 70,
+      "comments": {
+        "claude": "Strong stakes, countdown structure and an idea-driven privacy-versus-care dilemma with heavy dialogue suit these readers. But the middle is technical, procedural and over-engineered, the resolution is tidy and institutional, and the protagonist is a facilitator. Emotional beats (the hummed notes, Both Names) are memorable but sparse.",
+        "gpt": "The urgent medical countdown, morally serious conflict, and parents' concrete agency should keep the target audience engaged; the two-name premise and final held note are memorable. Dense procedural explanations of consent tokens, relays, and audit rules may feel schematic and slow some readers, but the design questions stay emotionally tethered to Kio and Nima."
+      },
+      "suggestions": {
+        "claude": "The screen read: COOPERATIVE CONSENT ABSENT. NO QUERY PERFORMED.",
+        "gpt": "Pel rebuilt the release gate while Sera counted aloud. On the second attack, one packet answered in two seconds and another in nine; both results appeared at twelve."
+      }
+    },
+    "NARA-D-2026-11-01:S1": {
+      "story_id": "NARA-D-2026-11-01:S1",
+      "title": "THE MOURNER WHO REMEMBERED TOMORROW",
+      "source_content_sha256": "bbfc24df2f89511dd9431bcd6e4cf0c41f870a7979ba945351f9f2d7fb830577",
+      "gpt": 90,
+      "claude": 72,
+      "combined": 81,
+      "display": 81,
+      "comments": {
+        "claude": "Strong premise, an emotionally real mourner, and dialogue-driven problem solving where the test design pays off in the hollow-liner reveal. The humane ending works. The middle's procedural detail (odds, sealed slips, masonry) may slow some readers, and the name-heavy cast is a mild barrier.",
+        "gpt": "The slow-glass mourner is an instantly memorable idea, and the dialogue turns a careful causal investigation into humane drama about consent, grief, and revisability. The middle grows slightly procedural as tests accumulate, but each test deepens character and earns the tender, unsentimental ending."
+      },
+      "suggestions": {
+        "claude": "Dov Haldane\nOne in three that it picked the right slip by luck, and amber's a one-in-six colour, so call it one in eighteen. I've seen better luck at a fair. A trick with a good conscience.",
+        "gpt": "By midnight it was fifteen for fifteen, and six for six on the things nobody had touched."
       }
     }
   }
