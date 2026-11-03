@@ -1,10 +1,10 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~20:50 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~21:15 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
 ## Merge order (stacked PRs)
 
-`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#10 → #21`, `#11 → #13 → #20`.
+`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#10 → #21 → #23`, `#24`, `#11 → #13 → #20`.
 
 ## Done (draft PRs, waiting for BD)
 
@@ -26,10 +26,12 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | #20 | Guide on phones: the latest reply is visible after every turn (0/41 → 41/41 turns at 360 px); also short desktop windows; regression test. **Production has the same bug, and the fix is ready to transfer** (the `follow()` hunk plus 2 CSS properties, without the #11 `LOG_UNAVAILABLE` line) | ★★★ BD: transfer? |
 | #21 | Lab tests runnable from a clean clone: 192 → 204/282 green, runner `tests/run_lab_suite.py` (0 unexpected failures), `tests/README.md`, `LAB_EXPECTED_FAILURES.json`; tests only | ★★ |
 | #22 | **PROPOSAL**: softer Tesla 1888 hints (7, each with old/new/reason), `key_commit` and SHA256SUMS recomputed with the reconstructed procedure; branches from #11 but is **not** in the merge chain | ★★ BD/author (Inventing-3-TESLA), hint by hint |
+| #23 | `browser-p0-smoke` on the current protocol: PASS (4 runs in a row), no check dropped, several stronger; portable browser path; the same rewrite applies to bd-chessdb unchanged | ★★ |
+| #24 | `tools/game_key_commit.py`: documents and verifies every game's `key_commit` and SHA256SUMS (Dayton dict form; Navier–Stokes and Tesla list form) | ★★ |
 
 ## In progress (lane L1, own worktrees)
 
-- Rewrite `tests/browser-p0-smoke.mjs` to the current protocol (on #21).
+- (nothing running right now)
 
 ## Decisions waiting for BD
 
