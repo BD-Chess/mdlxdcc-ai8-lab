@@ -1,4 +1,10 @@
-import { providerEnv } from '../mdlxdcc-guide/provider.mjs';
+import { providerEnv, providerRound } from '../mdlxdcc-guide/provider.mjs';
+
+// R4 cost: Claude receives the system prompt as text blocks with cache_control breakpoints
+// (systemBlocks); GPT and injected test rounds receive the same text as one string (system).
+// The shared transport itself is unchanged.
+export const gameProviderRound = ({ systemBlocks, ...args }) =>
+  providerRound(args.provider === 'claude' && Array.isArray(systemBlocks) ? { ...args, system: systemBlocks } : args);
 
 // Game-only configuration; the shared Guide/Andaluzija transport is unchanged.
 export function gameProviderKey(provider) {
