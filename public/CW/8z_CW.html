@@ -100,7 +100,7 @@ body::after{width:38vw;height:38vw;right:-10vw;bottom:-18vh;background:radial-gr
 <div class="header">
   <div class="logo">AIM³ <span>Lab</span> · Crossword</div>
   <div class="header-right">
-    <select class="lang-sel" id="langSel" onchange="switchLang(this.value)">
+    <select class="lang-sel" id="langSel" aria-label="Language / Jezik" onchange="switchLang(this.value)">
       <option value="sl">Slovenščina</option>
       <option value="en">English</option>
     </select>
@@ -134,7 +134,7 @@ body::after{width:38vw;height:38vw;right:-10vw;bottom:-18vh;background:radial-gr
       <button class="btn rose" onclick="generate(15,15,0.22)">15×15</button>
     </div>
     <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
-      <select id="engineSel" class="lang-sel" style="min-width:120px">
+      <select id="engineSel" aria-label="Engine" class="lang-sel" style="min-width:120px">
         <option value="simple">Simple</option>
         <option value="ac3" selected>AC-3 (v7)</option>
       </select>

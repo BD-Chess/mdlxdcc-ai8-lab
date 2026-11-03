@@ -176,7 +176,7 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 </div>
 <div class="field-row">
 <div class="field">
-<label>Asset Class</label>
+<label for="p_assetClass">Asset Class</label>
 <select id="p_assetClass" onchange="onPresetChange()">
 <option value="crypto_scalp">Crypto Scalp</option>
 <option value="crypto_swing">Crypto Swing</option>
@@ -188,7 +188,7 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 </select>
 </div>
 <div class="field">
-<label>Style</label>
+<label for="p_style">Style</label>
 <select id="p_style" onchange="onPresetChange()">
 <option value="safe">Safe</option>
 <option selected="" value="normal">Normal</option>
@@ -221,13 +221,13 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Account &amp; Trading</div>
 <div class="section-body" style="display:none">
 <div class="field-row3">
-<div class="field"><label>Equity ($)</label><input id="p_equity" step="1000" type="number" value="100000"/></div>
-<div class="field"><label>Trade ($)</label><input id="p_tradeSize" step="1000" type="number" value="100000"/></div>
-<div class="field"><label>Leverage</label><input id="p_leverage" max="500" min="1" type="number" value="100"/></div>
+<div class="field"><label for="p_equity">Equity ($)</label><input id="p_equity" step="1000" type="number" value="100000"/></div>
+<div class="field"><label for="p_tradeSize">Trade ($)</label><input id="p_tradeSize" step="1000" type="number" value="100000"/></div>
+<div class="field"><label for="p_leverage">Leverage</label><input id="p_leverage" max="500" min="1" type="number" value="100"/></div>
 </div>
 <div class="field-row3">
 <div class="field">
-<label>Direction</label>
+<label for="p_direction">Direction</label>
 <select id="p_direction">
 <option selected="" value="both">Both</option>
 <option value="long">Long Only</option>
@@ -235,7 +235,7 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 </select>
 </div>
 <div class="field">
-<label>Exchange</label>
+<label for="p_exchange">Exchange</label>
 <select id="p_exchange" onchange="updateFeeDisplay()">
 <option selected="" value="binance">Binance</option>
 <option value="mexc">MEXC</option>
@@ -244,11 +244,11 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <option value="bitget">Bitget</option>
 </select>
 </div>
-<div class="field"><label>Symbol</label><input id="p_symbol" value="BTCUSDT"/></div>
+<div class="field"><label for="p_symbol">Symbol</label><input id="p_symbol" value="BTCUSDT"/></div>
 </div>
 <div class="field-row3">
 <div class="field">
-<label>Timeframe</label>
+<label for="p_timeframe">Timeframe</label>
 <select id="p_timeframe" onchange="onTfChange()">
 <option value="1">1s</option>
 <option selected="" value="60">1m</option>
@@ -263,9 +263,9 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <option value="86400">1D</option>
 </select>
 </div>
-<div class="field"><label>Hist. Bars</label><input id="p_histBars" max="50000" min="100" type="number" value="5000"/></div>
+<div class="field"><label for="p_histBars">Hist. Bars</label><input id="p_histBars" max="50000" min="100" type="number" value="5000"/></div>
 <div class="field">
-<label>Fee Mode</label>
+<label for="p_feeMode">Fee Mode</label>
 <select id="p_feeMode" onchange="updateFeeDisplay()">
 <option selected="" value="auto">Auto</option>
 <option value="custom">Custom</option>
@@ -274,7 +274,7 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 </div>
 </div>
 <div class="field">
-<label>Fee % (per side)</label><input id="p_fee" readonly="" step="0.001" type="number" value="0.040"/>
+<label for="p_fee">Fee % (per side)</label><input id="p_fee" readonly="" step="0.001" type="number" value="0.040"/>
 </div>
 </div>
 </div>
@@ -283,12 +283,12 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Sync Engine</div>
 <div class="section-body" style="display:none">
 <div class="field-row">
-<div class="field"><label>Sync Length (bars)</label><input id="p_syncLen" max="10" min="1" type="number" value="2"/></div>
-<div class="field"><label>Min Delta %</label><input id="p_minDelta" step="0.001" type="number" value="0.048"/></div>
+<div class="field"><label for="p_syncLen">Sync Length (bars)</label><input id="p_syncLen" max="10" min="1" type="number" value="2"/></div>
+<div class="field"><label for="p_minDelta">Min Delta %</label><input id="p_minDelta" step="0.001" type="number" value="0.048"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>Impulse Length</label><input id="p_impulseLen" max="50" min="3" type="number" value="10"/></div>
-<div class="field"><label>Impulse Factor</label><input id="p_impulseFactor" step="0.05" type="number" value="0.95"/></div>
+<div class="field"><label for="p_impulseLen">Impulse Length</label><input id="p_impulseLen" max="50" min="3" type="number" value="10"/></div>
+<div class="field"><label for="p_impulseFactor">Impulse Factor</label><input id="p_impulseFactor" step="0.05" type="number" value="0.95"/></div>
 </div>
 </div>
 </div>
@@ -297,20 +297,20 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Exit System</div>
 <div class="section-body" style="display:none">
 <div class="field-row">
-<div class="field"><label>Stop Loss %</label><input id="p_slPct" step="0.001" type="number" value="0.037"/></div>
-<div class="field"><label>Take Profit %</label><input id="p_tpPct" step="0.01" type="number" value="1.26"/></div>
+<div class="field"><label for="p_slPct">Stop Loss %</label><input id="p_slPct" step="0.001" type="number" value="0.037"/></div>
+<div class="field"><label for="p_tpPct">Take Profit %</label><input id="p_tpPct" step="0.01" type="number" value="1.26"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>BE Trigger %</label><input id="p_beTrigger" step="0.001" type="number" value="0.129"/></div>
-<div class="field"><label>Lock Fraction</label><input id="p_lockFrac" max="1" min="0" step="0.01" type="number" value="0.90"/></div>
+<div class="field"><label for="p_beTrigger">BE Trigger %</label><input id="p_beTrigger" step="0.001" type="number" value="0.129"/></div>
+<div class="field"><label for="p_lockFrac">Lock Fraction</label><input id="p_lockFrac" max="1" min="0" step="0.01" type="number" value="0.90"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>ATR Length</label><input id="p_atrLen" max="50" min="3" type="number" value="10"/></div>
-<div class="field"><label>Wiggle K</label><input id="p_wiggleK" step="0.1" type="number" value="1.2"/></div>
+<div class="field"><label for="p_atrLen">ATR Length</label><input id="p_atrLen" max="50" min="3" type="number" value="10"/></div>
+<div class="field"><label for="p_wiggleK">Wiggle K</label><input id="p_wiggleK" step="0.1" type="number" value="1.2"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>Min Wiggle %</label><input id="p_minWiggle" step="0.01" type="number" value="0.10"/></div>
-<div class="field"><label>Max Wiggle %</label><input id="p_maxWiggle" step="0.01" type="number" value="0.50"/></div>
+<div class="field"><label for="p_minWiggle">Min Wiggle %</label><input id="p_minWiggle" step="0.01" type="number" value="0.10"/></div>
+<div class="field"><label for="p_maxWiggle">Max Wiggle %</label><input id="p_maxWiggle" step="0.01" type="number" value="0.50"/></div>
 </div>
 </div>
 </div>
@@ -319,40 +319,40 @@ body { background:var(--bg-primary); color:var(--text-primary); font-family:var(
 <div class="section-title" onclick="toggleSection(this)"><span class="arrow collapsed">▾</span> Modules</div>
 <div class="section-body" style="display:none">
 <div class="field-row">
-<div class="field"><label>MDL Regime</label><select id="p_useMDL"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
-<div class="field"><label>DCC Adaptive</label><select id="p_useDCC"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
+<div class="field"><label for="p_useMDL">MDL Regime</label><select id="p_useMDL"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_useDCC">DCC Adaptive</label><select id="p_useDCC"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
 </div>
 <div class="field-row">
-<div class="field"><label>Circuit Breaker</label><select id="p_useCB"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
-<div class="field"><label>CB Loss Streak</label><input id="p_cbStreak" max="10" min="2" type="number" value="3"/></div>
+<div class="field"><label for="p_useCB">Circuit Breaker</label><select id="p_useCB"><option value="0">OFF</option><option selected="" value="1">ON</option></select></div>
+<div class="field"><label for="p_cbStreak">CB Loss Streak</label><input id="p_cbStreak" max="10" min="2" type="number" value="3"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>CB Pause Bars</label><input id="p_cbPause" max="500" min="1" type="number" value="120"/></div>
-<div class="field"><label>Cooldown</label><select id="p_useCooldown"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_cbPause">CB Pause Bars</label><input id="p_cbPause" max="500" min="1" type="number" value="120"/></div>
+<div class="field"><label for="p_useCooldown">Cooldown</label><select id="p_useCooldown"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
 </div>
 <div class="field-row">
-<div class="field"><label>CD Bars</label><input id="p_cdBars" max="50" min="1" type="number" value="5"/></div>
-<div class="field"><label>Equity Protection</label><select id="p_useEP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_cdBars">CD Bars</label><input id="p_cdBars" max="50" min="1" type="number" value="5"/></div>
+<div class="field"><label for="p_useEP">Equity Protection</label><select id="p_useEP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
 </div>
 <div class="field-row">
-<div class="field"><label>EP DD Threshold %</label><input id="p_epDD" min="1" step="0.5" type="number" value="10"/></div>
-<div class="field"><label>EP Recovery %</label><input id="p_epRecov" min="0.5" step="0.5" type="number" value="3"/></div>
+<div class="field"><label for="p_epDD">EP DD Threshold %</label><input id="p_epDD" min="1" step="0.5" type="number" value="10"/></div>
+<div class="field"><label for="p_epRecov">EP Recovery %</label><input id="p_epRecov" min="0.5" step="0.5" type="number" value="3"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>SQS (Sync Quality)</label><select id="p_useSQS"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
-<div class="field"><label>SQS Min Mult</label><input id="p_sqsMin" step="0.1" type="number" value="0.5"/></div>
+<div class="field"><label for="p_useSQS">SQS (Sync Quality)</label><select id="p_useSQS"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_sqsMin">SQS Min Mult</label><input id="p_sqsMin" step="0.1" type="number" value="0.5"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>SQS Max Mult</label><input id="p_sqsMax" step="0.1" type="number" value="2.0"/></div>
-<div class="field"><label>Smart Invert</label><select id="p_useSI"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_sqsMax">SQS Max Mult</label><input id="p_sqsMax" step="0.1" type="number" value="2.0"/></div>
+<div class="field"><label for="p_useSI">Smart Invert</label><select id="p_useSI"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
 </div>
 <div class="field-row">
-<div class="field"><label>SI Min Bars</label><input id="p_siMinBars" min="1" type="number" value="10"/></div>
-<div class="field"><label>SI Size Mult</label><input id="p_siSizeMult" step="0.1" type="number" value="0.8"/></div>
+<div class="field"><label for="p_siMinBars">SI Min Bars</label><input id="p_siMinBars" min="1" type="number" value="10"/></div>
+<div class="field"><label for="p_siSizeMult">SI Size Mult</label><input id="p_siSizeMult" step="0.1" type="number" value="0.8"/></div>
 </div>
 <div class="field-row">
-<div class="field"><label>VWAP Tilt</label><select id="p_useVWAP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
-<div class="field"><label>VWAP Length</label><input id="p_vwapLen" max="100" min="5" type="number" value="20"/></div>
+<div class="field"><label for="p_useVWAP">VWAP Tilt</label><select id="p_useVWAP"><option selected="" value="0">OFF</option><option value="1">ON</option></select></div>
+<div class="field"><label for="p_vwapLen">VWAP Length</label><input id="p_vwapLen" max="100" min="5" type="number" value="20"/></div>
 </div>
 </div>
 </div>

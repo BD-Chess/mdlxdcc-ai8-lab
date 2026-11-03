@@ -170,9 +170,9 @@ details{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,
     <h3>300× leverage translation</h3>
     <p class="caption">ROE numbers look huge, but at 300× they correspond to tiny underlying price moves.</p>
     <div class="calc">
-      <div class="field"><label>Leverage</label><input id="lev" type="number" value="300" min="1" step="1" oninput="calcRoe()"></div>
-      <div class="field"><label>Loss trigger ROE %</label><input id="lossRoe" type="number" value="200" step="1" oninput="calcRoe()"></div>
-      <div class="field"><label>Profit/lock ROE %</label><input id="profitRoe" type="number" value="2" step="1" oninput="calcRoe()"></div>
+      <div class="field"><label for="lev">Leverage</label><input id="lev" type="number" value="300" min="1" step="1" oninput="calcRoe()"></div>
+      <div class="field"><label for="lossRoe">Loss trigger ROE %</label><input id="lossRoe" type="number" value="200" step="1" oninput="calcRoe()"></div>
+      <div class="field"><label for="profitRoe">Profit/lock ROE %</label><input id="profitRoe" type="number" value="2" step="1" oninput="calcRoe()"></div>
       <div><div class="output" id="roeOut">—</div><div class="caption">underlying move equivalents</div></div>
     </div>
   </div>

@@ -254,6 +254,7 @@ function renderGrid(){
         }
         const inp = document.createElement('input');
         inp.maxLength = 1;
+        inp.setAttribute('aria-label', `Row ${r + 1}, column ${c + 1}`);
         inp.value = playerGrid[r][c];
         inp.addEventListener('focus', () => setActive(r,c,dir));
         inp.addEventListener('click', () => setActive(r,c,dir));

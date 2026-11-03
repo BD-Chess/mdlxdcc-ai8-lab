@@ -147,12 +147,12 @@ html, body { height:100%; background:var(--bg); color:var(--text); font-family:'
     <div class="meta">8Z Research Program · AIM³ Institute · CCH Prediction P5 · DCC v3 Cross-Game Memory</div>
   </div>
   <div class="controls">
-    <div><label>Games</label><br><input type="number" id="cfgGames" value="100" min="2" max="1000" step="2"></div>
-    <div><label>Time/Move</label><br><select id="cfgTime"><option value="200">200ms</option><option value="500" selected>500ms</option><option value="1000">1s</option><option value="2000">2s</option><option value="5000">5s</option><option value="10000">10s</option><option value="20000">20s</option><option value="30000">30s</option></select></div>
-    <div><label>Flips</label><br><select id="cfgFlips"><option value="0">0</option><option value="2" selected>2</option><option value="3">3</option></select></div>
-    <div><label>Magnets</label><br><select id="cfgMags"><option value="0">0</option><option value="2" selected>2</option><option value="3">3</option></select></div>
-    <div><label>Strength</label><br><select id="cfgStr" onchange="syncStrTime()"><option value="1">1 · Blitz</option><option value="2">2 · Fast</option><option value="3" selected>3 · Strong</option><option value="4">4 · Expert</option><option value="5">5 · Max</option><option value="6">6 · Med-Deep</option><option value="7">7 · Serious</option><option value="8">8 · Deep</option><option value="9">9 · SF-feel</option></select></div>
-    <div><label>Mode</label><br><select id="cfgMode"><option value="rdcc">rDCC vs Classical</option><option value="baseline">Classical vs Classical</option></select></div>
+    <div><label for="cfgGames">Games</label><br><input type="number" id="cfgGames" value="100" min="2" max="1000" step="2"></div>
+    <div><label for="cfgTime">Time/Move</label><br><select id="cfgTime"><option value="200">200ms</option><option value="500" selected>500ms</option><option value="1000">1s</option><option value="2000">2s</option><option value="5000">5s</option><option value="10000">10s</option><option value="20000">20s</option><option value="30000">30s</option></select></div>
+    <div><label for="cfgFlips">Flips</label><br><select id="cfgFlips"><option value="0">0</option><option value="2" selected>2</option><option value="3">3</option></select></div>
+    <div><label for="cfgMags">Magnets</label><br><select id="cfgMags"><option value="0">0</option><option value="2" selected>2</option><option value="3">3</option></select></div>
+    <div><label for="cfgStr">Strength</label><br><select id="cfgStr" onchange="syncStrTime()"><option value="1">1 · Blitz</option><option value="2">2 · Fast</option><option value="3" selected>3 · Strong</option><option value="4">4 · Expert</option><option value="5">5 · Max</option><option value="6">6 · Med-Deep</option><option value="7">7 · Serious</option><option value="8">8 · Deep</option><option value="9">9 · SF-feel</option></select></div>
+    <div><label for="cfgMode">Mode</label><br><select id="cfgMode"><option value="rdcc">rDCC vs Classical</option><option value="baseline">Classical vs Classical</option></select></div>
     <button class="btn btn-start" id="btnStart" onclick="T.start()">▶ START</button>
     <button class="btn btn-stop" id="btnStop" onclick="T.stop()" style="display:none">■ STOP</button>
     <button class="btn" onclick="T.reset()">↺ RESET</button>
