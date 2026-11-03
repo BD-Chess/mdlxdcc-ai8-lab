@@ -22,13 +22,14 @@
   {
    "path": "public/assets/game-guide/game-guide.css",
    "source_sha256": "3e06f1f128b4a05542d89fe2dc076761871c2c1a42bc56d57902bf4437b35702",
-   "lab_sha256": "0965c1cca20546474d7ba36d17166a289d5fc881336bc8892f7311cbf9bc7f27",
-   "bytes": 9431,
+   "lab_sha256": "0aebbe6e8db5b9a87af98919c43d2a3c1bd7fe7e8aca4b85beadd5d817a83bdd",
+   "bytes": 9599,
    "lab_prs": [
     "#20"
    ],
    "lab_commits": [
-    "577b69f"
+    "577b69f",
+    "c5128c4"
    ]
   }
  ]
