@@ -16,6 +16,8 @@ MARKERS = {
     'OpenAI token': re.compile(r'(?<![A-Za-z0-9_])' + 'sk' + r'-(?:proj-|svcacct-)?[A-Za-z0-9_-]{40,}'),
     'private key': re.compile('-----BEGIN ' + r'(?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
 }
+# Removed work projects must not come back through links in content (REMOVALS_R1).
+REMOVED_REF = re.compile(r'''(?i)(?:href|src)\s*=\s*["'][^"']*(?:omnicpq|/TS/)|["']\.\./OmniCPQ/|/ai8/omnicpq-origin''')
 errors = []
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
 # Later syncs from bd-chessdb add their own exclusions and a newer source manifest; older ones stay as history.
@@ -61,6 +63,8 @@ for path in ROOT.rglob('*'):
     for kind, pattern in MARKERS.items():
         if pattern.search(text):
             errors.append({'path': rel.as_posix(), 'kind': kind})
+    if not rel.as_posix().startswith(('lab-evidence/', 'reports/', 'scripts/sync_from_bdchessdb.py')) and REMOVED_REF.search(text):
+        errors.append({'path': rel.as_posix(), 'kind': 'link to removed work project'})
 report = {'schema': 'ai8.lab-validation.v1', 'source_sha': manifest['source_sha'],
           'status': 'PASS' if not errors else 'FAIL',
           'source_files_verified': len([e for e in manifest['files'] if e['path'] not in removed]),

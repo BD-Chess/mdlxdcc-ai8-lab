@@ -7293,5 +7293,15 @@
    "sha256": "0507324acef9494b387021e78a0375bfb3992df9bff7c9cf93151377de4e5c1f",
    "bytes": 4282
   }
- ]
+ ],
+ "post_sync_cleanup": {
+  "date": "2026-11-03",
+  "reason": "Zora review of PR #7: OmniCPQ came back through content (links), not paths. Removed; verify_lab.py now fails on such links.",
+  "files": [
+   "public/AI8/about/index.html (section primer-omnicpq)",
+   "public/Start/app.js (default favorite, labels, hint, icon)",
+   "public/Start/index.html (2 shortcuts, hint)",
+   "tests/start-app-browser.cjs (asserts no OmniCPQ shortcut)"
+  ]
+ }
 }

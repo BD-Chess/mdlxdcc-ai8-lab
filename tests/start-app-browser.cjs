@@ -51,16 +51,13 @@ async function suite(browser, engine, url, mobile) {
     assert.match(await page.locator('#bs-live-news').textContent(), /Vir SI/);
     await page.locator('.bs-settings > summary').click();
     await open(page, '#bs-links-panel');
-    const omniLink = page.locator('#bs-omnicpq-link');
-    assert(await omniLink.isVisible(), 'OmniCPQ shortcut is visible');
-    assert.equal(await omniLink.getAttribute('href'), '../OmniCPQ/');
-    assert.match(await omniLink.innerText(), /AI pomočnik za OmniCPQ/);
+    // The lab carries no OmniCPQ (work project; REMOVALS_R1): no shortcut may point to it.
+    assert.equal(await page.locator('a[href*="OmniCPQ" i]').count(), 0, 'no OmniCPQ shortcut in the lab');
     await fit(page, name);
     assert(await page.locator('.bs-toolbar svg').count() >= 2, 'local icons rendered');
     await page.screenshot({ path: path.join(evidence, name + '-light.png'), fullPage: true });
     await page.locator('[data-lang="en"]').click();
     assert.match(await page.title(), /Your world/);
-    assert.match(await omniLink.innerText(), /AI assistant for OmniCPQ/);
     await page.locator('[data-theme="dark"]').click();
     assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
     for (let i = 0; i < 4; i++) await page.locator('#bs-scale-up').click();

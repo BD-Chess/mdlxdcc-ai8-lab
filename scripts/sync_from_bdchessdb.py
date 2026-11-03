@@ -57,6 +57,7 @@ MARKERS = {
 }
 TEXT = {'.py', '.md', '.txt', '.json', '.html', '.js', '.mjs', '.cjs', '.bat', '.cmd', '.ps1', '.yml', '.yaml',
         '.toml', '.ini', '.cfg', '.mts', '.ts', '.svg', '.xml', '.sql', '.css', '.webmanifest', '.csv', '.env', ''}
+REMOVED_REF = re.compile(r'''(?i)(?:href|src)\s*=\s*["'][^"']*(?:omnicpq|/TS/)|["']\.\./OmniCPQ/|/ai8/omnicpq-origin''')
 CRED_NAME = re.compile(r'(sef|vault|rclone\.conf)|\.(enc|age|gpg|pem|key|p12|pfx)([.-]|$)|^\.env', re.I)
 
 def exclusion(path):
@@ -103,6 +104,8 @@ for line in git(UP, 'diff', '--name-status', '--no-renames', SNAP, HEAD).splitli
         hit = [k for k, p in MARKERS.items() if p.search(text)]
         if hit:
             reason = 'credential marker in content: ' + ', '.join(hit)
+        elif REMOVED_REF.search(text):
+            rec['content_reference'] = 'links to a removed work project (REMOVALS_R1): clean the content before committing; verify_lab.py fails otherwise'
     if reason:
         rec.update(action='excluded', reason=reason)
         changes.append(rec); continue
@@ -158,6 +161,9 @@ for c in changes:
     if c['action'] == 'excluded':
         excluded_reasons[c['reason']] = excluded_reasons.get(c['reason'], 0) + 1
 print(json.dumps({'upstream_head': HEAD, 'changes': len(changes), 'summary': summary, 'excluded': excluded_reasons}, indent=1))
+for c in changes:
+    if c.get('content_reference'):
+        print('  CONTENT REFERENCE |', c['path'], '|', c['content_reference'])
 for c in changes:
     if c['action'].startswith(('conflict', 'merged', 'upstream-deleted')) or 'collision' in c.get('reason', '') or 'marker' in c.get('reason', ''):
         print(' ', c['action'], '|', c['path'], '|', c.get('reason', ''))
