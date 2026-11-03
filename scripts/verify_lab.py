@@ -19,12 +19,21 @@ MARKERS = {
 errors = []
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
 manifest = json.loads((ROOT / 'lab-evidence/SOURCE_MANIFEST_R1.json').read_text(encoding='utf-8'))
+# Explicit, BD-decided removals after the snapshot: absent is expected, presence is an error.
+removed = set()
+for record in sorted((ROOT / 'lab-evidence').glob('REMOVALS_R*.json')):
+    removed.update(row['path'] for row in json.loads(record.read_text(encoding='utf-8'))['removed_files'])
+for rel in sorted(removed):
+    if (ROOT / rel).exists():
+        errors.append({'path': rel, 'kind': 'removed path present'})
 for entry in plan['excluded']:
     replaced = {'AGENTS.md', 'README.md', '.gitignore'}
     if entry['path'] not in replaced and (ROOT / entry['path']).exists():
         errors.append({'path': entry['path'], 'kind': 'excluded upstream path present'})
 checked_bytes = 0
 for entry in manifest['files']:
+    if entry['path'] in removed:
+        continue
     path = ROOT / entry['path']
     if not path.is_file():
         errors.append({'path': entry['path'], 'kind': 'missing exported file'})
@@ -49,7 +58,9 @@ for path in ROOT.rglob('*'):
         if pattern.search(text):
             errors.append({'path': rel.as_posix(), 'kind': kind})
 report = {'schema': 'ai8.lab-validation.v1', 'source_sha': manifest['source_sha'],
-          'status': 'PASS' if not errors else 'FAIL', 'source_files_verified': len(manifest['files']),
+          'status': 'PASS' if not errors else 'FAIL',
+          'source_files_verified': len([e for e in manifest['files'] if e['path'] not in removed]),
+          'intentionally_removed': len(removed),
           'source_bytes_hashed': checked_bytes, 'text_files_scanned': text_count, 'errors': errors,
           'not_run': ['full application tests', 'browser acceptance', 'research', 'benchmarks', 'deployment']}
 (ROOT / 'lab-evidence/VALIDATION_R1.json').write_text(json.dumps(report, indent=2), encoding='utf-8')

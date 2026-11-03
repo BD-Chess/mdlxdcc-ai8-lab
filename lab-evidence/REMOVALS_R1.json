@@ -1,0 +1,389 @@
+{
+  "schema": "ai8.lab-removals.v1",
+  "removal_id": "R1-work-omnicpq-ts-20261103",
+  "decided_by": "BD",
+  "decided_on": "2026-11-03",
+  "reason": "Work projects OmniCPQ and TS are not part of the public AI8 lab. They remain only in BD-Chess/bd-chessdb.",
+  "scope": [
+    "public/OmniCPQ",
+    "public/TS",
+    "scripts/omnicpq",
+    "tests/omnicpq",
+    "functions/lib/omnicpq",
+    "functions/omnicpq-assistant.mjs",
+    "functions/omnicpq-auth.mjs",
+    "docs/omnicpq-pwa",
+    "supabase/migrations/20261022082313_omnicpq_runtime.sql",
+    "ops/releases/omnicpq-20261022.json"
+  ],
+  "removed_files": [
+    {
+      "path": "docs/omnicpq-pwa/LIVE_R4.md",
+      "sha256": "c184573355d0c734c17ae0a633c9b4c90ca534de64ff4e223eb3be83e9f2b9a7",
+      "bytes": 2391
+    },
+    {
+      "path": "docs/omnicpq-pwa/README.md",
+      "sha256": "8521b85b312e85e460b059b97edb344db2abc524c09964daa21cbe50ad348460",
+      "bytes": 8503
+    },
+    {
+      "path": "functions/lib/omnicpq/browser.mjs",
+      "sha256": "dbd2914f65a032c4d7a3a7ae3e875abe95df14797eb372ab6d4b80c78b933148",
+      "bytes": 4686
+    },
+    {
+      "path": "functions/lib/omnicpq/catalog.mjs",
+      "sha256": "03bb70a09e01b3f228f725771cae230321e9ffb2231b49b3757f112876fb6f94",
+      "bytes": 3782
+    },
+    {
+      "path": "functions/lib/omnicpq/identity.mjs",
+      "sha256": "66c06babfaf60eb1387a0dcaad3f97c5292312bfcb8a7bef36a0dae5715348a5",
+      "bytes": 711
+    },
+    {
+      "path": "functions/lib/omnicpq/instructions.mjs",
+      "sha256": "d1b0ff2f78f5bb862a9a04bcde22c8bc0b31c1c4e18347f75e38db4f14f22f5d",
+      "bytes": 3095
+    },
+    {
+      "path": "functions/lib/omnicpq/knowledge.mjs",
+      "sha256": "fad6b985d674727b6ab0ab35ca92d7cf0d9aeae9d14a0b76c2c2a964db6ce4fd",
+      "bytes": 20148
+    },
+    {
+      "path": "functions/lib/omnicpq/lifecycle.mjs",
+      "sha256": "b00eaf9465ba27d7d646d09d9cb76ea1c94c899bf90f5f759a2df4e495017c21",
+      "bytes": 8068
+    },
+    {
+      "path": "functions/lib/omnicpq/provider.mjs",
+      "sha256": "0789fd6f91f9cefe089f71f52340141dada708de4ba63efe6dc4c78f5751756b",
+      "bytes": 2801
+    },
+    {
+      "path": "functions/lib/omnicpq/runtime.mjs",
+      "sha256": "af559aa73be92a26f13e26b1dc109a051770a1fca3556941570a74806b73cd79",
+      "bytes": 6708
+    },
+    {
+      "path": "functions/lib/omnicpq/sealed-knowledge.mjs",
+      "sha256": "1e1d52a04195d3ae6de7d666853a8460164a2e0b93c2ba7de9e6c4770d5b3f8e",
+      "bytes": 2112
+    },
+    {
+      "path": "functions/lib/omnicpq/v15.mjs",
+      "sha256": "abeba5bdfb4c585390050601c355252680848665aeedda96f95d8ba205794def",
+      "bytes": 460
+    },
+    {
+      "path": "functions/omnicpq-assistant.mjs",
+      "sha256": "142b777cc116890232f1987a7110971ad41d46f63b792d17b4cd98c9c7ee1a3f",
+      "bytes": 12901
+    },
+    {
+      "path": "functions/omnicpq-auth.mjs",
+      "sha256": "bd4558f846d1d02ee18de8cbb55e59128ce6559ef0280b9af1b1f8116e7c5ffd",
+      "bytes": 4299
+    },
+    {
+      "path": "ops/releases/omnicpq-20261022.json",
+      "sha256": "caa486c56500d5d40f3477ca624ca19742fb1fff54f152064a145d5b2eb67569",
+      "bytes": 679
+    },
+    {
+      "path": "public/OmniCPQ/OmniCPQ_Browser_Bridge_R6.zip",
+      "sha256": "c92a4ebb2580aa194e356bcee5a6a03f27e74ab2ba38fa9706df57f274262b66",
+      "bytes": 19517
+    },
+    {
+      "path": "public/OmniCPQ/app.css",
+      "sha256": "0496b056d9f79c72be1e04b61046a28061fe6383470e705b9dfea4ea06c8a92f",
+      "bytes": 17370
+    },
+    {
+      "path": "public/OmniCPQ/app.mjs",
+      "sha256": "e3cf00ed936dbc106e6454afad4245b36c239459dfeec3bcb10a83fac70af163",
+      "bytes": 66604
+    },
+    {
+      "path": "public/OmniCPQ/browser-bridge.mjs",
+      "sha256": "ddcc9f6fa98804957db884628818e6f9e802940f768e2864bd0822f350ed373b",
+      "bytes": 2582
+    },
+    {
+      "path": "public/OmniCPQ/browser-extension-integrity.json",
+      "sha256": "ddd569fabd497a243376814877a769717a6063f81b02c34293a8077f0cff5166",
+      "bytes": 170
+    },
+    {
+      "path": "public/OmniCPQ/browser-help.html",
+      "sha256": "f37eacf7b05d9e72520ca17358c88d1dfb686aa86e17ec0223fdde9da6dc3db7",
+      "bytes": 3770
+    },
+    {
+      "path": "public/OmniCPQ/core.mjs",
+      "sha256": "55f46775295681aa129bfd2a29aeec65fad85559262ce8ec59967df40f223acd",
+      "bytes": 6972
+    },
+    {
+      "path": "public/OmniCPQ/extension/manifest.json",
+      "sha256": "548aecb79bda08b528260328a3974522eeb4434b56feacc030b82ee37a782eef",
+      "bytes": 1016
+    },
+    {
+      "path": "public/OmniCPQ/extension/page.mjs",
+      "sha256": "c7afb8df91c5a72e504ca47a22a6fd68ee81d51969a0d8fb419e8ba5bebee977",
+      "bytes": 6261
+    },
+    {
+      "path": "public/OmniCPQ/extension/popup.css",
+      "sha256": "5be23f42c92f536461d40184d7bb584c36b7e1dc6a1403245b02be6c9f19b0b5",
+      "bytes": 430
+    },
+    {
+      "path": "public/OmniCPQ/extension/popup.html",
+      "sha256": "be7fc6f8a4a3016b137f673a14c374f3ca91fd1bed95185c645c1fd8171d7836",
+      "bytes": 1168
+    },
+    {
+      "path": "public/OmniCPQ/extension/popup.mjs",
+      "sha256": "6aaffee21d4b6abbc5a3162ca90483996ef08695cfb43499d8f8cbe43fa8c36e",
+      "bytes": 1610
+    },
+    {
+      "path": "public/OmniCPQ/extension/worker.mjs",
+      "sha256": "3aff43bdf1f309cdef87e255ad8a8efb6184b84ba0398b6beb159e09f274a902",
+      "bytes": 5514
+    },
+    {
+      "path": "public/OmniCPQ/index.html",
+      "sha256": "ddfc560abe6ede96668b6c90d11ed4166114ae398553ad7761a5493dff745b40",
+      "bytes": 18787
+    },
+    {
+      "path": "public/OmniCPQ/lifecycle-validation.mjs",
+      "sha256": "49d9c2675fdcff47a58970f1c8940830b41f6f4619815039d0214a1d6eb1df98",
+      "bytes": 13993
+    },
+    {
+      "path": "public/OmniCPQ/manifest.webmanifest",
+      "sha256": "f8f6a57c6b1765d96cd0abbcb39ab9e4e0f3867bd238b0987c4b05edac168a47",
+      "bytes": 618
+    },
+    {
+      "path": "public/OmniCPQ/prompts-v15.mjs",
+      "sha256": "32ef820d6b4119a3c53f8bc5761618b6342a53476291f75ec295c18b648c633c",
+      "bytes": 8903
+    },
+    {
+      "path": "public/OmniCPQ/prompts.mjs",
+      "sha256": "b8ec3e98f3c972ca0d68dc2f0d3cc107d5444b5212f68255ce5dc3db9fa8d3f0",
+      "bytes": 10633
+    },
+    {
+      "path": "public/OmniCPQ/shell-integrity.json",
+      "sha256": "33d9d64925a7b7a2696ccf25f244a1b44911958cb5d9d786a31b0c1598233bc6",
+      "bytes": 1658
+    },
+    {
+      "path": "public/OmniCPQ/starters.mjs",
+      "sha256": "6ac0c198997d13e4b7665fad8765f44d6ff5f08b886637edfb53f0f77b956e43",
+      "bytes": 5662
+    },
+    {
+      "path": "public/OmniCPQ/sw.js",
+      "sha256": "2722dc1e256e57e3c14eb57dcd86352abb22eeafddf98641ef55ebab490eafc4",
+      "bytes": 2892
+    },
+    {
+      "path": "public/OmniCPQ/version.mjs",
+      "sha256": "3ed6ad748ba5c4892fc94d7d6a316942e204c5faef1976660915c95777b9514d",
+      "bytes": 114
+    },
+    {
+      "path": "public/TS/README.md",
+      "sha256": "29132cff9de6b5f9ea1fc272351a8d4085df7055721a6512e3af9d0b65f62f23",
+      "bytes": 721
+    },
+    {
+      "path": "public/TS/VERIFICATION.json",
+      "sha256": "53461eaefc197fea49093e1610462d66e6fe14638713a5cab92eb2e1f2e2f151",
+      "bytes": 406
+    },
+    {
+      "path": "public/TS/apple-touch-icon.png",
+      "sha256": "8a7720c67136d98b92132e312f45c7c2e83745f34dc01c805aafa2312ca4d3c3",
+      "bytes": 61559
+    },
+    {
+      "path": "public/TS/favicon-64.png",
+      "sha256": "dd6d1b6d34be5f9f1ce19edd7e698fa8dd9910bcb38b045a418180d097cab843",
+      "bytes": 9508
+    },
+    {
+      "path": "public/TS/icon-192.png",
+      "sha256": "1df9d0402071760084d6bbf3a645c160288e75d26adcded68e84b1e3b4994a4a",
+      "bytes": 68512
+    },
+    {
+      "path": "public/TS/icon-512.png",
+      "sha256": "de4a78644259db590ca81d7bf3dd614e29f5bcc46916749cd22e0c1bf906e087",
+      "bytes": 332690
+    },
+    {
+      "path": "public/TS/icon-maskable-512.png",
+      "sha256": "81255e53a7020496b532f4605234a0066dc14bc443abd6386cf3a4c71a892cb4",
+      "bytes": 194826
+    },
+    {
+      "path": "public/TS/index.html",
+      "sha256": "d6b1cef8c008156e90293abf7dda97a83ead474356ac75c237752737dcca8316",
+      "bytes": 13302
+    },
+    {
+      "path": "public/TS/manifest.webmanifest",
+      "sha256": "60b2d6efa272f8b994c62d1b6faae840a557e68d57019ac2c2af0e7af8f9172d",
+      "bytes": 777
+    },
+    {
+      "path": "public/TS/sw.js",
+      "sha256": "dbd087b69ba5c15c7269600be6f68a6fa08e03ef4259abe79311d9c9d3581aed",
+      "bytes": 1410
+    },
+    {
+      "path": "scripts/omnicpq/build-browser-extension.mjs",
+      "sha256": "e2fa1174e824ea44056e1d2535a11e9fb736eb918116eff15a4237148704b269",
+      "bytes": 3137
+    },
+    {
+      "path": "scripts/omnicpq/build-prompts.mjs",
+      "sha256": "01bd943f5638e89b40f539e23f12ee25c606250baca95671074c0125e8ca1ce3",
+      "bytes": 2712
+    },
+    {
+      "path": "scripts/omnicpq/build-shell.mjs",
+      "sha256": "f6bd307d2e25fe2ee29cf9231706b3843b1290610a6f070affa0d8db229f2160",
+      "bytes": 1398
+    },
+    {
+      "path": "scripts/omnicpq/check-function-bundles.mjs",
+      "sha256": "ba1ec767a3c5e1c79a7733fd74c5ff82d08ddc658ef0aa8fe56c67b050eec7e3",
+      "bytes": 834
+    },
+    {
+      "path": "scripts/omnicpq/icons.base64.json",
+      "sha256": "94d40ca04fc512fcb723b18c2ba825ecd4c586a3636db0dc4fae51d5e84dc6a5",
+      "bytes": 551466
+    },
+    {
+      "path": "scripts/omnicpq/materialize-icons.mjs",
+      "sha256": "249da9e4df8919c56b593f298c3be102ac3be3267e3523a7e10d8305233fa36a",
+      "bytes": 962
+    },
+    {
+      "path": "scripts/omnicpq/prepare-knowledge.mjs",
+      "sha256": "0243045e0df4a2aab306fab3ddf943c27d2b856627ed0fc7dada8219fb33bc89",
+      "bytes": 1989
+    },
+    {
+      "path": "scripts/omnicpq/preview.mjs",
+      "sha256": "7879000d6b74561e8d642369ba2f0cd59c952222f094fa1f1d04e6969bd6c803",
+      "bytes": 9717
+    },
+    {
+      "path": "scripts/omnicpq/runtime.sql",
+      "sha256": "d0022d90b9d8017d8e9cd9cb74c8292b618a7aee75dbdb35ba5469200792eef7",
+      "bytes": 9474
+    },
+    {
+      "path": "scripts/omnicpq/shell-contract.mjs",
+      "sha256": "1af89da9deec5e9f40e23e21b301857be6ff8e3a5f4e9f48715d35f6fbef5955",
+      "bytes": 351
+    },
+    {
+      "path": "scripts/omnicpq/use-private-inputs.mjs",
+      "sha256": "5fd5b1a8c692943e661057fc254c67293f19715d72a86ff0632a18111951fa1e",
+      "bytes": 1139
+    },
+    {
+      "path": "scripts/omnicpq/verify-shell.mjs",
+      "sha256": "fc15497b442e512063b2db6772762aed9618dce760f4e0f7b2e6e81005b08609",
+      "bytes": 2332
+    },
+    {
+      "path": "supabase/migrations/20261022082313_omnicpq_runtime.sql",
+      "sha256": "d0022d90b9d8017d8e9cd9cb74c8292b618a7aee75dbdb35ba5469200792eef7",
+      "bytes": 9474
+    },
+    {
+      "path": "tests/omnicpq/browser-r6.test.mjs",
+      "sha256": "e708eebe761335cd27db3b5c0dad500e728e63eefc833e1b57a92333860fa368",
+      "bytes": 19393
+    },
+    {
+      "path": "tests/omnicpq/catalog-r5.test.mjs",
+      "sha256": "ce3f9286a142d766bea53fa9437f763e605999cbc197baaadd72b5f01f993209",
+      "bytes": 3138
+    },
+    {
+      "path": "tests/omnicpq/contracts.test.mjs",
+      "sha256": "f0a8abdce3a9c381aeb81b2d6b44a8bdeb74d12f9de99a290d6d213128786f37",
+      "bytes": 17584
+    },
+    {
+      "path": "tests/omnicpq/coverage-r3.test.mjs",
+      "sha256": "246e32d1ceafbbbe5c082aa94920da7ec6669983bdb311b6bb796e44cf8ae3c7",
+      "bytes": 2717
+    },
+    {
+      "path": "tests/omnicpq/demo-r4.test.mjs",
+      "sha256": "c592aa6299c9a045020be4f5ef2c0ac9abb50d7cf6c9467cf1cbc91f8ea01d68",
+      "bytes": 6921
+    },
+    {
+      "path": "tests/omnicpq/lifecycle-r2.test.mjs",
+      "sha256": "7ceb0532c96bc0f04dcc8d3e6c4e80732d67c9bb0e907806fca33ab9ae6a0f7a",
+      "bytes": 11800
+    },
+    {
+      "path": "tests/omnicpq/preview-http-r2.test.mjs",
+      "sha256": "b82b986f2fb29b0be5e5490f8699fd213f0e3d8c415c9d6e1c03bc4fb1f87dc1",
+      "bytes": 3148
+    },
+    {
+      "path": "tests/omnicpq/privacy-comparison-r2.test.mjs",
+      "sha256": "dd25a1c1712ae6d8ceaed6281d39ddd07a70043e8666f3a7e303879c2e8f987d",
+      "bytes": 10359
+    },
+    {
+      "path": "tests/omnicpq/pwa-r6.test.mjs",
+      "sha256": "ec16770676be54e7e4337c8ffb34768e9800bd05d487b9c0ec639bd79fb43c96",
+      "bytes": 3830
+    },
+    {
+      "path": "tests/omnicpq/retrieval-r2.test.mjs",
+      "sha256": "d6fa6021c2f7ae07742a94baf205f24435e665040e08cef60399134d346275cf",
+      "bytes": 10810
+    },
+    {
+      "path": "tests/omnicpq/sealed-v15.test.mjs",
+      "sha256": "24317dde63dc23528dd31e105bfe19080abecf028be9f9ad992e208e5c396d43",
+      "bytes": 2107
+    },
+    {
+      "path": "tests/omnicpq/ui-r4.test.mjs",
+      "sha256": "dca20a201144df5d8ba2fb24c4c62da7784d0e5aa0b8f71416fd67bf5a0efd4e",
+      "bytes": 3679
+    },
+    {
+      "path": "tests/omnicpq/ux-r6.test.mjs",
+      "sha256": "855486db01ff5172ffd3713e9a4376e55975bc06344461dc2f867b2cb88d4fb8",
+      "bytes": 10186
+    }
+  ],
+  "removed_bytes": 1661956,
+  "history_note": "Removed from the working tree and the next Pages build only. Earlier commits of this public repository still contain these files until a separate, BD-approved history rewrite.",
+  "verification": "scripts/verify_lab.py treats these manifest paths as intentionally absent and fails if any reappears."
+}
