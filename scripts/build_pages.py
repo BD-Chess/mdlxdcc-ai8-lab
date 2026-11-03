@@ -13,7 +13,8 @@ from urllib.parse import quote, unquote, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PASSIVE = {'.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif', '.mp3', '.ogg', '.wav',
-           '.flac', '.mp4', '.webm', '.pdf', '.zip', '.gz', '.7z', '.tar', '.docx', '.pptx', '.xlsx'}
+           '.flac', '.mp4', '.webm', '.pdf', '.zip', '.gz', '.7z', '.tar', '.docx', '.pptx', '.xlsx',
+           '.ttf', '.otf', '.woff', '.woff2'}  # fonts: raw serves them with access-control-allow-origin: *
 TEXT = {'.html', '.htm', '.css', '.js', '.mjs', '.json', '.webmanifest', '.svg'}
 PRODUCTION = {'mdlxdcc.org', 'www.mdlxdcc.org', 'chessbest.org', 'www.chessbest.org'}
 ATTR = re.compile(r'''(?P<p>\b(?:href|src|poster|action|data-src|data-href)\s*=\s*)(?P<q>["'])(?P<u>[^"']*)(?P=q)''', re.I)
