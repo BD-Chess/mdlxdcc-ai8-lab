@@ -1,10 +1,10 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~19:00 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~19:40 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
 ## Merge order (stacked PRs)
 
-`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#11 → #13`.
+`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#11 → #13 → #20`.
 
 ## Done (draft PRs, waiting for BD)
 
@@ -23,10 +23,10 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | #16 | Audit A: `build_pages` broke JS on 73 pages (fixed); `404.html` router (501 links fixed, 210 point to production); compact lab badge | ★★★ |
 | #17 | Fonts moved out of the Pages artifact (877.6 → 828.0 MB) | ★★ |
 | #18 | Lab atlas header back to one row on phones (compact theme toggle) | ★★ |
+| #20 | Guide on phones: the latest reply is visible after every turn (0/41 → 41/41 turns at 360 px); also short desktop windows; regression test. **Production has the same bug, and the fix is ready to transfer** (the `follow()` hunk plus 2 CSS properties, without the #11 `LOG_UNAVAILABLE` line) | ★★★ BD: transfer? |
 
 ## In progress (lane L1, own worktrees)
 
-- Guide reply visibility on phones (`public/assets/game-guide`, on #13). The latest reply is 0% visible after each turn at 360 px. It probably affects production too; the report will say whether the fix is ready to transfer.
 - Lab tests green from a clean clone (tests only, on #10). Mechanical stale tests, `tests/README.md`, an expected-failures list.
 
 ## Decisions waiting for BD
@@ -35,10 +35,11 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 2. ★★★ **Vault/sealed manifests in #7:** keep them (as R1 did) or exclude them.
 3. ★★★ **OmniCPQ/TS back into the lab?** The read-only review was sent to Zarja (not in the repo). In short: partial import only, after redaction. Urgent in production: check the sharing of the Drive file named in the code.
 4. ★★ **R3.6 reveal behaviour:** after card A, *any* next message opens the reveal, including "Namig, prosim" or a new idea. Keep it, or require an explicit choice (code comment) plus a test.
-5. ★★ **One real measured game** per provider to confirm #14 (needs a key and BD's agreement).
-6. ★★ **Chess engine deduplication** in the Pages artifact (about −320 MB, medium risk, needs browser tests).
-7. ★ Playwright, fake-indexeddb, playwright-core and cryptography as declared dev dependencies (lockfile change).
-8. ★ An optional light theme toggle on all lab pages (716 pages are always dark).
+5. ★★★ **Transfer #20 to bd-chessdb** (the phone visibility fix; production has the same code). Also decide the phone panel layout (panel at 42% of the screen, input lower after a reply).
+6. ★★ **One real measured game** per provider to confirm #14 (needs a key and BD's agreement).
+7. ★★ **Chess engine deduplication** in the Pages artifact (about −320 MB, medium risk, needs browser tests).
+8. ★ Playwright, fake-indexeddb, playwright-core and cryptography as declared dev dependencies (lockfile change).
+9. ★ An optional light theme toggle on all lab pages (716 pages are always dark).
 
 ## Ideas, ranked (not started)
 
