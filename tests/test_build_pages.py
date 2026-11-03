@@ -41,4 +41,30 @@ with tempfile.TemporaryDirectory() as tmp:
     assert 'location.replace("/mdlxdcc-ai8-lab/lab.html"' in stub, stub
     assert {'path': 'crp/lab.html', 'to': '/mdlxdcc-ai8-lab/lab.html'} in report['forced_route_stubs'], report['forced_route_stubs']
     assert 'atlas' in pathlib.Path(tmp, 'out/index.html').read_text()
-print('build_pages rewrite tests: 11 passed')
+# Case-insensitive file systems (Windows, macOS): the forced rule '/ai8/x' -> '/AI8/x.html' must not
+# turn AI8/x.html into a redirect to itself. Simulated by making Path.is_file ignore case.
+_is_file = pathlib.Path.is_file
+def _ci_is_file(self):
+    if _is_file(self):
+        return True
+    path = pathlib.Path(self.anchor)
+    for part in self.parts[1:]:
+        match = [c for c in path.iterdir() if c.name.lower() == part.lower()] if path.is_dir() else []
+        if not match:
+            return False
+        path = match[0]
+    return _is_file(path)
+with tempfile.TemporaryDirectory() as tmp:
+    pub = pathlib.Path(tmp, 'public'); (pub / 'AI8').mkdir(parents=True)
+    (pub / 'AI8/cli-loops.html').write_text('<html><body>cli loops page</body></html>')
+    (pub / 'index.html').write_text('<html><body>atlas</body></html>')
+    pathlib.Path.is_file = _ci_is_file
+    try:
+        assert pathlib.Path(pub, 'ai8/cli-loops.html').is_file()  # the simulation is case-insensitive
+        report = bp.Builder(pub, '/mdlxdcc-ai8-lab/', 'c0ffee').build(pathlib.Path(tmp, 'out'))
+    finally:
+        pathlib.Path.is_file = _is_file
+    page = pathlib.Path(tmp, 'out/AI8/cli-loops.html').read_text()
+    assert 'cli loops page' in page and 'location.replace' not in page, page
+    assert not any(s['path'].lower() == 'ai8/cli-loops.html' for s in report['forced_route_stubs']), report['forced_route_stubs']
+print('build_pages rewrite tests: 14 passed')

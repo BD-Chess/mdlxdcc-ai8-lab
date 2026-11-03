@@ -16,14 +16,16 @@ Branch `cloud/lab-build-srcset-forced-20261103`, stacked on #17 → #16 (all `bu
      - `BD-work-at-a-glance.html` → `w/`.
      - 9 `BD/*.html` trading pages → their `BD/private-trading/` versions, which is what production serves at those URLs.
    - Identity rules (for example `/chess/` → `/chess/index.html`) are skipped.
+   - Files are looked up by their exact stored name (Zora review). On a case-insensitive file system (Windows, macOS), the old `is_file()` lookup matched `/ai8/cli-loops` to `AI8/cli-loops.html` itself, so a local build turned 4 pages into redirects to themselves (`AI8/cli-loops`, `AI8/model-results`, `AI8/api-check`, `BD/O/sef`). A `samefile` guard is a second safety net. The Linux CI build is unchanged.
 
 ## Verified
 
-- `python3 tests/test_build_pages.py`: **11/11**. New tests:
+- `python3 tests/test_build_pages.py`: **14/14**. New tests:
   - `srcset` with offloaded and local candidates;
   - `data:` sets are left alone;
-  - a mini build that writes the `crp/lab.html` stub and records it.
-- Full build: 827.5 MB (−0.5 MB, because the stubs are smaller than the pages they replace). 13 stubs; `srcset` counts as above.
+  - a mini build that writes the `crp/lab.html` stub and records it;
+  - a mini build on a simulated case-insensitive file system: `AI8/cli-loops.html` stays a page and no stub is recorded. The old lookup fails this test.
+- Full build: 827.5 MB (−0.5 MB, because the stubs are smaller than the pages they replace). 13 stubs; `srcset` counts as above. Rebuilt after the exact-case fix: the same 13 stubs and 827.5 MB.
 
 ## Note for BD
 

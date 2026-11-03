@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 from pathlib import Path
 import posixpath
 import re
@@ -108,10 +109,14 @@ class Builder:
         """Production forced rules (status ending in '!') shadow files that exist at the old path.
         GitHub Pages would serve the shadowed file, so it is replaced by a redirect to the target."""
         rules = json.loads((ROOT / 'scripts/lab_routes_r2.json').read_text(encoding='utf-8'))['rules']
+        # Exact-case lookup: on a case-insensitive file system (Windows, macOS) '/ai8/x' would match
+        # 'AI8/x.html' itself, and the stub would overwrite its own target (redirect loop).
+        # The listing holds the names as stored, so every OS behaves like the Linux CI build.
+        files = {p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file()}
         def built(path):
             rel = path.lstrip('/')
             for cand in ([rel + 'index.html'] if rel == '' or rel.endswith('/') else [rel, rel + '.html', rel + '/index.html']):
-                if (output / cand).is_file():
+                if cand in files:
                     return cand
             return None
         stubs = []
@@ -119,7 +124,8 @@ class Builder:
             if not rule['status'].endswith('!'):
                 continue
             source, target = built(rule['from']), built(rule['to'])
-            if not source or not target or source == target or source in {s for s, _ in stubs}:
+            if (not source or not target or source == target or source in {s for s, _ in stubs}
+                    or os.path.samefile(output / source, output / target)):
                 continue
             href = self.base + (target[:-len('index.html')] if target.endswith('index.html') else target)
             (output / source).write_text(f'''<!doctype html><html lang="sl"><meta charset="utf-8">
