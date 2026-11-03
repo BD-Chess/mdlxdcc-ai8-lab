@@ -21,12 +21,12 @@ async function localServer(){
 async function row(page,width){
  const boxes=await page.evaluate(()=>{
   const box=selector=>{const r=document.querySelector(selector).getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,right:r.right,cy:r.y+r.height/2};};
-  return {brand:box('.topbar .brand'),book:box('#book-link'),tools:box('.topbar .utilities'),header:box('.topbar'),controls:[...document.querySelectorAll('.topbar .utility')].map(el=>{const r=el.getBoundingClientRect();return {id:el.id||el.dataset.lang,x:r.x,y:r.y,w:r.width,h:r.height,right:r.right};})};
+  return {brand:box('.topbar .brand'),book:box('#book-link'),tools:box('.topbar .utilities'),header:box('.topbar'),controls:[...document.querySelectorAll('.topbar .utility')].filter(el=>el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return {id:el.id||el.dataset.lang,x:r.x,y:r.y,w:r.width,h:r.height,right:r.right};})};
  });
  assert.ok(Math.abs(boxes.brand.cy-boxes.tools.cy)<2,'One header row at '+width);
  assert.ok(boxes.brand.right<=boxes.tools.x+1,'Brand/toolbar do not overlap at '+width);
  assert.ok(boxes.book.x>=boxes.tools.x-1&&boxes.book.right<=boxes.tools.right+1,'Book icon sits in the top-right toolbar at '+width);
-  assert.equal(boxes.controls.length,8,'Seven toolbar controls plus the book icon');
+  assert.equal(boxes.controls.length,width<=768?8:9,'Seven toolbar controls plus the book icon (lab: both theme buttons above 768 px)');
  for(const c of boxes.controls){
   assert.ok(c.w>=24&&c.h>=40,'Usable hit area '+c.id+' at '+width);
   assert.ok(c.x>=0&&c.right<=width+1,'No clipped control '+c.id+' at '+width);
@@ -47,7 +47,7 @@ async function run(name,engine,url){
    for(const language of ['en','sl']){
     await page.locator('button[data-lang="'+language+'"]').click();
     for(const theme of ['dark','light']){
-     if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#theme').click();
+     if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#theme, .theme-buttons .utility[aria-pressed=false]').first().click();
      await page.locator('#font-value').click();
      layouts.push({width,language,theme,font:100,...await row(page,width)});
     }
@@ -59,7 +59,7 @@ async function run(name,engine,url){
   }
   await page.setViewportSize({width:402,height:874});
   await page.locator('button[data-lang="en"]').click();
-  if(await page.locator('html').getAttribute('data-theme')!=='dark')await page.locator('#theme').click();
+  if(await page.locator('html').getAttribute('data-theme')!=='dark')await page.locator('#theme, .theme-buttons .utility[aria-pressed=false]').first().click();
   if(evidence)await page.screenshot({path:path.join(evidence,name+'-mobile-402.png')});
   await page.locator('#search-open').click();
   // This global-only page proves that S actually loads the full index.
