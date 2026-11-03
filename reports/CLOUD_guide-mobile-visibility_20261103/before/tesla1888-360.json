@@ -1,0 +1,578 @@
+{
+ "slug": "tesla1888",
+ "width": 360,
+ "logFails": false,
+ "g3": false,
+ "turns": [
+  {
+   "send": "(start)",
+   "opened": [
+    "s1",
+    "s2"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "replySeenPct": 98,
+   "replyFitPct": 98,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s3"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 566,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s4"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 571,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s5"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 554,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s6"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 550,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: Ugotovi, da iskre nastajajo predvsem pri drsnem električnem stiku med ščetkami in komutatorjem, ne zaradi samega vrtenja.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 570,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: Ugotovi, da iskre nastajajo predvsem pri drsnem električnem stiku med ščetkami in komutatorjem, ne zaradi samega vrtenja. Razume, da komutator med vrtenjem spreminja električne povezave oziroma smer toka v navitjih, da motor ohranja uporabno vrtilno silo. Prepozna, da mehansko preklapljanje le izvaja potrebno obračanje toka, in začne iskati način, da bi se smer toka menjala brez drsnega stika (na primer z izmeničnim tokom, ki ga generator sam proizvaja); popolne rešitve v tem prizoru ni treba najti. Predlaga preverljiv poskus: naprava mora sama vztrajati v vrtenju, prenašati obremenitev ter pokazati manj iskrenja in segrevanja.",
+   "opened": [
+    "s7"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 552,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s8"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 565,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s9"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 552,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s10"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 544,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s11"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 543,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s12"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 533,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s13"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 554,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: Prepozna, da se mora magnetni vpliv glede na rotor premikati v želeni smeri, čeprav se njegov vir ne dotika rotorja.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 525,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: Prepozna, da se mora magnetni vpliv glede na rotor premikati v želeni smeri, čeprav se njegov vir ne dotika rotorja. Predlaga več nepremičnih električnih navitij oziroma elektromagnetov, razporejenih okrog prostora za rotor. Ugotovi, da morajo biti električne spremembe v posameznih navitjih časovno zamaknjene, tako da njihova skupna magnetna smer potuje okoli rotorja; ne zadošča istočasno nihanje vseh navitij. Razume, da vrstni red časovnih zamikov določa smer vrtenja skupnega magnetnega polja in predvideno smer pogona rotorja; če zaporedje obrne, se obrne tudi smer vrtenja.",
+   "opened": [
+    "s14"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 560,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s15"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 539,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s16"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 532,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s17"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 539,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s18"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 544,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s19"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 540,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s20"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 534,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s21"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 531,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: Če se magnetni vpliv premika glede na rotor, se razmere v rotorju spreminjajo, tudi kadar rotor na začetku miruje.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 548,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: Če se magnetni vpliv premika glede na rotor, se razmere v rotorju spreminjajo, tudi kadar rotor na začetku miruje. Spreminjajoči se magnetni vpliv v prevodnem rotorju povzroči električni tok po sklenjeni poti, zato rotor ne potrebuje zunanjega električnega priključka. Inducirani tok povzroči lasten magnetni odziv, ki skupaj z zunanjim poljem ustvari vrtilno silo v smeri gibanja polja. Za trajno ustvarjanje indukcijskega navora mora med poljem in rotorjem obstajati razlika hitrosti: rotor nekoliko zaostaja za poljem, saj bi pri enaki hitrosti idealni indukcijski navor izginil.",
+   "opened": [
+    "s22"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 556,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s23"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 558,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s24"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 562,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s25"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 588,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s26"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 562,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s27"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 555,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s28"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 528,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s29"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 530,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: Ugotovi, da je treba razliko med časovnima potekoma ustvariti v generatorju ali v posebnem električnem vezju; preprost razcep enega izhoda na dve enaki veji ne zadostuje.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 545,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: Ugotovi, da je treba razliko med časovnima potekoma ustvariti v generatorju ali v posebnem električnem vezju; preprost razcep enega izhoda na dve enaki veji ne zadostuje. Predlaga izvedljiv način nastanka dveh fazno različnih izhodov: dve ustrezno razporejeni navitji generatorja ali dve veji enega vira z različnimi električnimi lastnostmi. Pojasni vzrok faznega zamika: prostorsko zamaknjeni navitji pri vrtenju dosežeta vrhova inducirane napetosti ob različnih trenutkih; alternativno različni električni lastnosti vej povzročita različen časovni odziv tokov. Prepozna potrebo po sklenjenih tokovnih poteh in pravilno določi število vodnikov za izbrano izvedbo: štirje za dva neodvisna tokokroga, trije ob skupnem povratku ali dva ob ustvarjanju druge faze pri motorju. Prepozna praktični kompromis izbrane povezave: štirje vodniki pomenijo več bakra, skupni povratni vodnik nosi vsoto faznih tokov, lokalno ustvarjanje faznega zamika pa zahteva dodatne sestavne dele in lahko povzroča izgube. Pri enakih gostotah toka trije vodniki prihranijo le okoli 15 % bakra (1 + 1 + 1,41 = 3,41 proti 4), ker mora biti skupni vodnik približno 1,41-krat močnejši.",
+   "opened": [
+    "s30"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 5/5  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 571,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s31"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 527,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s32"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 570,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s33"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 523,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s34"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 561,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s35"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 553,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s36"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 556,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: Ugotovi, da dolga kovinska žica nasprotuje prehajanju toka in da se del električne energije spremeni v toploto; večji tok povzroča posebej velike izgube.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 538,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: Ugotovi, da dolga kovinska žica nasprotuje prehajanju toka in da se del električne energije spremeni v toploto; večji tok povzroča posebej velike izgube. Sklene, da lahko pri enaki preneseni moči zmanjša tok, če za pot po daljnovodu uporabi večjo električno napetost. Loči pogoje za prenos od pogojev za uporabo: pred dolgo potjo je koristno napetost zvišati, blizu uporabnikov pa jo znova znižati. Poišče način, kako prenesti energijo med dvema električnima vezjema prek spreminjajočega se magnetnega polja, in razume, da navitji omogočita spremembo napetosti brez neposredne električne povezave. Poleg nižje napetosti pri porabnikih navede vsaj dva elementa varne uporabe (izolacija vodnikov, varovalka ali zaščita pred preobremenitvijo, možnost odklopa, ozemljitev).",
+   "opened": [
+    "s37"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 5/5 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 587,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s38"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Neprijetna cena vrtenja · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Gibanje brez dotika · Kartica ",
+   "ms": 572,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  }
+ ],
+ "g3Probes": [],
+ "shots": [
+  {
+   "name": "01-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null,
+   "replyFitPct": null,
+   "replyPx": null,
+   "userSeenPct": null,
+   "pageY": 0
+  },
+  {
+   "name": "02-after-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 98,
+   "replyFitPct": 98,
+   "replyPx": 43,
+   "userSeenPct": 100,
+   "pageY": 1165
+  },
+  {
+   "name": "03-challenge-hints",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 43,
+   "userSeenPct": 0,
+   "pageY": 4070
+  },
+  {
+   "name": "04-assessed",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 87,
+   "userSeenPct": 0,
+   "pageY": 4353
+  },
+  {
+   "name": "05-reveal",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 87,
+   "userSeenPct": 0,
+   "pageY": 4353
+  },
+  {
+   "name": "06-end",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 395,
+   "userSeenPct": 0,
+   "pageY": 31334
+  }
+ ],
+ "modelRounds": 89,
+ "logEvents": 289,
+ "logStartErrors": 0,
+ "console": [],
+ "pageErrors": [],
+ "badResponses": [],
+ "screenshots": [
+  "tesla1888-360-01-start.jpg",
+  "tesla1888-360-02-after-start.jpg",
+  "tesla1888-360-03-challenge-hints.jpg",
+  "tesla1888-360-04-assessed.jpg",
+  "tesla1888-360-05-reveal.jpg",
+  "tesla1888-360-06-end.jpg"
+ ],
+ "findings": [
+  "latest reply 0% in view after »Naprej.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Moja zamisel: Ugotovi, da iskre nastajaj«",
+  "… and 36 more turns with the latest reply out of view"
+ ],
+ "logInfoAfterStart": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusAfterStart": "Razvoj · brez beleženja rezultatov.",
+ "revealOpenedBy": {
+  "s3": "Razlaga",
+  "s10": "Razlaga",
+  "s18": "Razlaga",
+  "s26": "Razlaga",
+  "s33": "Razlaga"
+ },
+ "allStepsOpened": true,
+ "missingSteps": [],
+ "finalReply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Neprijetna cena vrtenja · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Gibanje brez dotika · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Nevidna povezava · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Od izuma do uporabnega sistema · Kartica A · zgodovinska pot · mejniki 5/5  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Trideset kilometrov do mesta · Kartica A · zgodovinska pot · mejniki 5/5 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+ "logInfoEnd": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusEnd": "Razvoj · brez beleženja rezultatov.",
+ "cardLines": 5,
+ "layout": {
+  "vw": 360,
+  "sw": 360,
+  "images": 11,
+  "brokenImages": [],
+  "imgNoAlt": []
+ },
+ "turnMs": {
+  "count": 41,
+  "median": 552,
+  "max": 588
+ },
+ "replyFit": {
+  "min": 0,
+  "required": 60,
+  "turns": 42,
+  "below": 41
+ }
+}
