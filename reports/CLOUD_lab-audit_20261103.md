@@ -1,10 +1,10 @@
 # CLOUD lab audit (public site), 2026-11-03
 
-Branch `cloud/lab-audit-20261103`, stacked on #8. Lane L1: fixes were made only in `scripts/` and `tests/`. Findings in other lanes are reported, not fixed.
+Branch `cloud/lab-audit-20261103`, stacked on #8 (rebased on `cb589d1`, which contains the OmniCPQ cleanup). Lane L1: fixes were made only in `scripts/` and `tests/`. Findings in other lanes are reported, not fixed.
 
 ## Method
 
-- **Build:** `scripts/build_pages.py`, run locally on the state after sync R2 (#7/#8). The audit covered **735 pages**; OmniCPQ/TS are absent.
+- **Build:** `scripts/build_pages.py`, run locally on the state after sync R2 (#7/#8). The audit covered **735 pages**; OmniCPQ/TS are absent. The crawl ran before #7's cleanup commit `0a10249`, so `audit-data.json` still lists two broken links to the removed work project (`/ai8/omnicpq-origin/` and `OmniCPQ/`). Since this branch was rebased on #8 (`cb589d1`), neither link exists in the lab.
 - **Crawl:** Playwright Chromium visited every page at **360 px** (phone) and **768 px**. It recorded horizontal overflow and the offending element, console and page errors, failed same-origin requests, title, `lang`, viewport, `h1` count and missing alt.
 - **Accessibility:** **axe-core 4.10.2** ran at 768 px with tags `wcag2a`, `wcag2aa`, `wcag21a` and `wcag21aa`.
 - **Theme:** each page was rendered with the light and the dark color scheme, and the body backgrounds were compared.
