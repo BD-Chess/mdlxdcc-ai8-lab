@@ -1,0 +1,93 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R4",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files (R4 game guide cost: cacheable stable prompt prefix, Claude cache breakpoints, English internal instructions; tests updated only where they assert internal prompt text). New files outside the manifest: tests/game-guide-cost-r4.test.mjs, reports/CLOUD_guide-cost-r4_20261103.md, reports/CLOUD_guide-cost-r4_20261103/.",
+ "files": [
+  {
+   "path": "functions/game-guide.mjs",
+   "source_sha256": "fc8da5dc3ea97e0c486387fd9cbfe1fcaac79a8c9714a1765d7d052d8769ddb0",
+   "lab_sha256": "5ae7eca7f19d287db8e65e39c0c17304fea1a99efeff3b9c717f0c3820bbf7ba",
+   "bytes": 24043,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "functions/lib/game-guide/provider.mjs",
+   "source_sha256": "3f5f81cd9f6bfda10b6363fd29d6a0dfe52b5e14d63afed75e5cc0598036dad5",
+   "lab_sha256": "9f533f99478ac2ac240f38e6ce936e577035cba402477d67d2fcded0c882d96e",
+   "bytes": 1473,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "functions/lib/game-guide/runtime.mjs",
+   "source_sha256": "86dcd2984c1d267ce771c4c82a4a40d3b5c6a6512028526a584acf32355c6469",
+   "lab_sha256": "4fbbe8461199f1abdb58fb86fada00a308af12a682cc567abc7ec43c4664a400",
+   "bytes": 40219,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "tests/game-guide-p0.test.mjs",
+   "source_sha256": "ec04fdd6c05c8e9555ec17859aacd7424e18a9ae592630392273bd33fa4ab2a5",
+   "lab_sha256": "f750cbc5090570fd21cc57ab96254aa7f91e5cdab0e0a1011b6d74b6b8074044",
+   "bytes": 14598,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "tests/game-guide-r35.test.mjs",
+   "source_sha256": "63267e0db6a8a8bab860760f9717929a954eba84efb95d7ccaec174634fe3ec5",
+   "lab_sha256": "86132b13125c1a44349588437d6439c28d92b3ba5b2686ea9bcd8075e7854a07",
+   "bytes": 22478,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "tests/game-guide-r4fix.test.mjs",
+   "source_sha256": "535c60c0c0298f025e7ebba0ca071126c01a7bee63916d802cad30f5e3737594",
+   "lab_sha256": "45fd027878508e713b98c1609791b267991b7b66c791e7b785e28ee5290d83bc",
+   "bytes": 9691,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  },
+  {
+   "path": "tests/game-guide.test.mjs",
+   "source_sha256": "632fb4f034e8b6505e2302fb141fd1c3f491efda0ab25cf20c4f71ea02402f13",
+   "lab_sha256": "fd00e44682a64563ce8b98f31a929a532e1f031572adaeb6d8ac14c104d2d727",
+   "bytes": 14253,
+   "lab_prs": [
+    "cloud/guide-cost-r4-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  }
+ ]
+}

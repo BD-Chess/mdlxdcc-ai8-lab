@@ -104,7 +104,7 @@ test('development model follows challenge order, exposes no result tool and reje
   assert.equal(session.execute('open_step', { id: 's2' }).action.id, 's2');
   assert.equal(gameTools(true).some(t => t.name === 'mark_result'), false);
   assert.throws(() => session.execute('mark_result', { step: 's2', label: 'samostojno' }), /DEVELOPMENT_NO_RESULTS/);
-  assert.match(instructions(game, body), /učnega rezultata ne beležiš/);
+  assert.match(instructions(game, body), /do not record the learning result/);
 });
 
 for (const provider of ['claude', 'gpt']) test(`${provider}: shared real provider transport, budget reserve/settle, SSE tools and final text`, async () => {

@@ -57,7 +57,7 @@ test('at most two distinct missing-idea questions, separate turns; legacy asked 
 test('schema/prompt remove free card and old one-question rule; validation and persisted high-water metadata survive cleanLearning', () => {
   const tool=gameTools(false).find(x => x.name === 'assess_challenge');assert.equal(tool.parameters.properties.card,undefined);assert.equal(tool.parameters.properties.achieved.type,'array');
   assert.ok(Object.keys(tool.parameters.properties).every(k => tool.parameters.required.includes(k)));
-  const s=session();const prompt=instructions(game,s.snapshot(),s);assert.ok(!prompt.includes('največ enim'));assert.match(prompt,/največ dve/);
+  const s=session();const prompt=instructions(game,s.snapshot(),s);assert.ok(!prompt.includes('at most one'));assert.match(prompt,/at most two/);
   for (const extra of [{path:'partial'},{achieved:[ideas('s8')[0],ideas('s8')[0]]},{achieved:['invented']},{why:'x'.repeat(201)},{card:'A'},{advantages:[{kind:'other',text:'a'}]}]) assert.throws(() => s.execute('assess_challenge',assessment('s8',3,extra)),e => Boolean(e.details?.allowed && e.details?.rule));
   s.execute('assess_challenge',assessment());const resumed=session('s8',{learning:cleanLearning(s.learning)});resumed.execute('assess_challenge',assessment('s8',2));assert.equal(resumed.learning.cards.s8.score,3);assert.equal(resumed.learning.cards.s8.achieved.length,3);
 });

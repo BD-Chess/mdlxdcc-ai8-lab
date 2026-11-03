@@ -122,7 +122,8 @@ test('P1: A uses half-points, all five cards in coded summary, no negative point
 });
 test('grounding prompt and safe markdown subset; technical text is repaired', async () => {
   const prompt=instructions(game,request({opened:['s1','c1']}));
-  for(const text of ['UTEMELJENOST','SPRAŠUJ','STRAN nosi vsebino','PANEL samo pogovor','nikoli ne citiraj','največ dve na izziv','alternatives_ok']) assert.ok(prompt.includes(text),text);
+  // R4: internal instructions are English (player-facing text stays Slovenian).
+  for(const text of ['GROUNDING','ASK','The PAGE carries the content','the PANEL only the conversation','never quote','at most two per challenge','alternatives_ok']) assert.ok(prompt.includes(text),text);
   const html=safeMarkdown('**Krepko** *poševno* `**koda**`\n- ena\n- <img src=x onerror=alert(1)>\n1. dve\n<script>alert(1)</script>');
   assert.match(html,/<strong>Krepko<\/strong>/); assert.match(html,/<em>poševno<\/em>/); assert.match(html,/<code>\*\*koda\*\*<\/code>/); assert.match(html,/<ul>/); assert.match(html,/<ol>/); assert.ok(!/<(?:img|script)\b/.test(html));
   const h=harness([{text:'Odjemalec čaka na potrditev open_step c1.'},{text:'Kaj misliš ti?'}]); const r=await h.post(request({message:'Razvijava igro.'})); assert.equal(textOf(r.events),'Kaj misliš ti?');

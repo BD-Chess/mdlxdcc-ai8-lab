@@ -57,7 +57,8 @@ function provider(kind, script, logs = []) {
 const text = events => events.filter(e => e.type === 'delta').map(e => e.text).join('');
 const results = payloads => payloads.flatMap(p => (p.messages || p.input || []).flatMap(m => Array.isArray(m.content) ? m.content.filter(c => c.type === 'tool_result').map(c => JSON.parse(c.content)) : m.type === 'function_call_output' ? [JSON.parse(m.output)] : []));
 const clean = events => events.some(e => e.type === 'done' && !e.recovered) && !events.some(e => e.type === 'error');
-const prompt = payload => payload.system ?? payload.instructions;
+// R4: Claude receives the system prompt as cache_control text blocks; GPT as one string.
+const prompt = payload => { const system = payload.system ?? payload.instructions; return Array.isArray(system) ? system.map(b => b.text).join('') : system; };
 const context = payload => JSON.parse(prompt(payload).split('KONTEKST IGRE (podatki):\n')[1]);
 
 test('R3.5 P0 move 26: »… Namig prosim.« at the end of a question is a hint request and opens the next hint s20', () => {
@@ -114,7 +115,7 @@ for (const kind of ['claude', 'gpt']) test(`R3.5 ${kind}: moves 25–28 — ever
   const { h, events } = await play('move28', [{ call: ['assess_challenge', assess] }, { call: ['open_step', { id: 's23' }] }, { text: offer }]);
   const ctx = context(h.payloads[0]);
   assert.deepEqual(ctx.challenge_answers, ['move25', 'move26', 'move27', 'move28'].map((m, i) => ({ ref: `p${i + 1}`, text: observed[m].player_message })));
-  assert.equal(ctx.learning.answers, undefined); assert.match(prompt(h.payloads[0]), /VSA igralčeva sporočila izziva iz challenge_answers/);
+  assert.equal(ctx.learning.answers, undefined); assert.match(prompt(h.payloads[0]), /ALL of the player's messages for the challenge in challenge_answers/);
   const [assessed, reveal] = results([h.payloads.at(-1)]);
   assert.equal(assessed.card, 'none'); assert.equal(assessed.next, 'offer_continue_or_reveal'); assert.equal(assessed.reveal_on_player_choice.id, 's23');
   assert.ok(!assessed.allowed_open_steps.some(x => x.id === 's23'));
@@ -226,7 +227,7 @@ for (const kind of ['claude', 'gpt']) test(`R3.5 ${kind}: move 7 — a fixed inv
   assert.ok(clean(events)); assert.equal(h.payloads.length, 3); assert.deepEqual(events.filter(e => e.type === 'action').map(e => e.id), ['s7']);
   assert.equal(text(events), `${answer}\n\n${INVITE}`);
   assert.ok(logs.some(e => e.kind === 'error' && e.payload.code === 'QUESTION_UNANSWERED' && e.payload.suppressed));
-  assert.match(JSON.stringify(h.payloads[2]), /postavil vprašanje, ki še ni odgovorjeno/);
+  assert.match(JSON.stringify(h.payloads[2]), /asked a question in this message that is not answered yet/);
 });
 
 for (const kind of ['claude', 'gpt']) test(`R3.5 ${kind}: move 23 — post-opening prose that answers is kept before the invite line, no extra round`, async () => {
