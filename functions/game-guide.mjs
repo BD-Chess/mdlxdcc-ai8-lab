@@ -211,7 +211,7 @@ export function makeHandler({ accessFactory = authenticate, budgetFactory = crea
                 if (log) events.push({ kind: 'error', payload: { code: violation, suppressed: true } });
                 repair(violation === 'OPEN_STEP_REQUIRED' ? violation : 'TOOL_LIMIT');
                 // Do not echo rejected prose (which may contain a sealed answer) back into history.
-                input.push({ role: 'user', content: `Correct the move only once (${violation}). Transitions: ${JSON.stringify(session.transition())}. For a reveal, first assess_challenge if it is required, then open_step on an allowed id; do not open extra hints. Do not describe an opening without a call. Do not put technical terms or ids into the text for the player.` });
+                input.push({ role: 'user', content: `Correct the move only once (${violation}). Transitions: ${JSON.stringify(session.transition())}. For a reveal, first assess_challenge if it is required, then open_step on an allowed id; do not open extra hints. Do not describe an opening without a call. Write the text for the player in Slovenian, without technical terms or ids.` });
                 continue;
               }
               // P0-R3.5: the fixed invite line / card never replaces the answer to a player question.

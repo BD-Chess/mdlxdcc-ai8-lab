@@ -19,7 +19,7 @@ Branch `cloud/guide-cost-r4-20261103`, stacked on `cloud/p0-1-fix-20261103` (PR 
 |---|---|
 | `functions/lib/game-guide/runtime.mjs` | `promptParts()` builds the prompt from ordered parts. `instructions()` joins them, so the text the model receives is unchanged in meaning. `systemPrompt()` returns Claude blocks or the GPT string. The rules are translated to English: player-facing phrases, card formats and trigger words are kept in Slovenian, and a new explicit rule says that everything the player sees is in Slovenian, including the `ask_understanding` question and the `assess_challenge` why/advantages. The `sealed_key.warning` is in English. |
 | `functions/lib/game-guide/provider.mjs` | `gameProviderRound` passes the Claude system prompt as text blocks (`systemBlocks`) to the **unchanged** shared transport. GPT and injected test rounds get the same text as one string. |
-| `functions/game-guide.mjs` | Default round is `gameProviderRound`. It sends `system` (string) and `systemBlocks` (Claude). Three internal model-facing repair/notice messages are translated to English: two repair prompts and the "untrusted context" placeholder for Claude. Player-facing strings are unchanged. |
+| `functions/game-guide.mjs` | Default round is `gameProviderRound`. It sends `system` (string) and `systemBlocks` (Claude). Three internal model-facing repair/notice messages are translated to English: two repair prompts and the "untrusted context" placeholder for Claude. Both repair prompts that ask for player text now say "in Slovenian" (the move correction was added after Zora's review). Player-facing strings are unchanged. |
 | `tests/game-guide-cost-r4.test.mjs` (new) | Locks the cacheable layout (see "Verified by test"). |
 | `tests/game-guide-p0.test.mjs`, `-r35`, `-r4fix`, `game-guide.test.mjs` | **Updated only where they assert internal prompt text.** Slovenian rule phrases became their English equivalents. In r35, the payload-prompt helper now joins Claude's block array. No player-facing assertion changed. |
 | `reports/CLOUD_guide-cost-r4_20261103/` | `measure.mjs` (offline harness), `before.json`, `after.json`. These hold numbers only, no prompt text. |
@@ -58,6 +58,7 @@ Branch `cloud/guide-cost-r4-20261103`, stacked on `cloud/p0-1-fix-20261103` (PR 
   - The GPT `instructions` string equals the joined Claude text in every round. It starts with the same stable prefix, and its prefix up to the opened steps is append-only.
   - The context JSON deep-equals `modelContext()` in 5 game states. A card moves into the cached part only after its reveal is open.
   - The rules still name the Slovenian player-facing formats and say that player text is Slovenian.
+  - New test (Zora review): a first model round leaks `open_step` into the player text. For Claude and GPT the handler hides it, and the correction prompt in the next round requires Slovenian. A static guard checks both repair prompts. With the old correction text the test fails.
 - `python3 scripts/verify_lab.py`: **PASS**. `VALIDATION_R1.json` was restored before the commit.
 
 ## Offline measurement (method)

@@ -119,3 +119,33 @@ test('R4 prompt parts: the context is exactly modelContext(); frozen cards move 
   const prompt = instructions(game, validateBody({ slug: 'dayton1903', message: 'x' }));
   assert.match(prompt, /Everything the player sees is in Slovenian/); assert.match(prompt, /»Kartica B · tvoja pot · drugače, a deluje · 5\/5«/);
 });
+
+test('R4 repair turns: every correction that asks for player text requires Slovenian (English instructions)', async () => {
+  for (const provider of ['claude', 'gpt']) {
+    const payloads = [], base = fakeClient(provider, payloads);
+    let first = true; // round 1 leaks a tool name into the player text; the handler must correct it
+    const leak = { text: 'Zdaj pokličem open_step za s2.' };
+    const client = provider === 'claude'
+      ? { messages: { stream(payload) { if (first) { first = false; payloads.push(structuredClone(payload)); return { async *[Symbol.asyncIterator]() { yield { type: 'content_block_delta', delta: { type: 'text_delta', text: leak.text } }; }, finalMessage: async () => ({ content: [{ type: 'text', text: leak.text }], stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 } }) }; } return base.messages.stream(payload); } } }
+      : { responses: { async create(payload) { if (first) { first = false; payloads.push(structuredClone(payload)); return (async function* () { yield { type: 'response.output_text.delta', delta: leak.text }; yield { type: 'response.completed', response: { output: [{ type: 'message', role: 'assistant', content: [{ type: 'output_text', text: leak.text }] }], status: 'completed', usage: { input_tokens: 1, output_tokens: 1 } } }; })(); } return base.responses.create(payload); } } };
+    const handler = makeHandler({ accessFactory: async () => ({ role: 'owner', id: 'offline-cost-r4' }), configured: { claude: true, gpt: true },
+      continuationSecret: () => 'offline-cost-r4-secret-only-'.repeat(3), gameFactory: async () => structuredClone(game),
+      clientFactory: async () => client, budgetFactory: () => ({ reserve: async () => null, settle: async () => {} }), logStore: { start: async () => null } });
+    const response = await handler(new Request('https://www.mdlxdcc.org/.netlify/functions/game-guide', { method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ slug: 'dayton1903', provider, mode: 'IZUMLJAJ', protocol: 'game-guide-tools-v1', message: 'Začniva.', opened: ['s1'], learning: { asked: [], cards: {} }, history: [] }) }));
+    assert.equal(response.status, 200);
+    const shown = (await response.text()).split('\n\n').filter(Boolean).map(f => JSON.parse(f.slice(6))).filter(e => e.type === 'delta').map(e => e.text).join('');
+    assert.ok(!/open_step/.test(shown), shown);
+    assert.ok(payloads.length >= 2, `${provider}: no correction round`);
+    const items = payloads[1].messages ?? payloads[1].input;
+    const correction = items.findLast(m => m.role === 'user' && typeof m.content === 'string' && m.content.startsWith('Correct the move only once'));
+    assert.ok(correction, `${provider}: correction message missing`);
+    assert.match(correction.content, /in Slovenian/);
+  }
+  // Static guard: both injected corrections that ask for player-facing text name the language.
+  const source = await readFile(new URL('../functions/game-guide.mjs', import.meta.url), 'utf8');
+  for (const start of ['Correct the move only once', 'The player asked a question']) {
+    const line = source.split('\n').find(l => l.includes(start));
+    assert.ok(line && /in Slovenian/.test(line), start);
+  }
+});
