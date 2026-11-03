@@ -8,7 +8,7 @@
   "stale-harness": 14,
   "unknown": 10,
   "flaky": 1,
-  "stale-expectation": 16,
+  "stale-expectation": 15,
   "fixture-removed-upstream": 4,
   "current-lags-lab": 8,
   "not-a-test": 1,
@@ -225,11 +225,6 @@
    "file": "tests/bd-home-links-browser.cjs",
    "class": "webkit",
    "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
-  },
-  {
-   "file": "tests/browser-p0-smoke.mjs",
-   "class": "stale-expectation",
-   "reason": "scripted mock model predates the R3.3+ guide protocol (PR #10 notes this): it keeps calling ask_understanding after the handler answers UNKNOWN_IDEA ('call assess_challenge now'), hits ROUND_LIMIT, so r1 stays hidden"
   },
   {
    "file": "tests/chess-current-browser.cjs",
