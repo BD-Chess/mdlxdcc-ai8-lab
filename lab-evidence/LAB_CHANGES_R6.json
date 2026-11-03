@@ -1,0 +1,36 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R6",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files (guide panel: latest reply in view on phones). game-guide.js also keeps the #11 change (f988638).",
+ "files": [
+  {
+   "path": "public/assets/game-guide/game-guide.js",
+   "source_sha256": "f2460fe2948acf1353d3fe1d83d0ccaa68855430a716360d03f328de0b32ab9c",
+   "lab_sha256": "e2e0119261b7a65a5de4029377fabbb7aca45ac8f6f619c85a889bf20f774736",
+   "bytes": 32397,
+   "lab_prs": [
+    "#11",
+    "#20"
+   ],
+   "lab_commits": [
+    "f988638",
+    "577b69f"
+   ]
+  },
+  {
+   "path": "public/assets/game-guide/game-guide.css",
+   "source_sha256": "3e06f1f128b4a05542d89fe2dc076761871c2c1a42bc56d57902bf4437b35702",
+   "lab_sha256": "0aebbe6e8db5b9a87af98919c43d2a3c1bd7fe7e8aca4b85beadd5d817a83bdd",
+   "bytes": 9599,
+   "lab_prs": [
+    "#20"
+   ],
+   "lab_commits": [
+    "577b69f",
+    "c5128c4"
+   ]
+  }
+ ]
+}

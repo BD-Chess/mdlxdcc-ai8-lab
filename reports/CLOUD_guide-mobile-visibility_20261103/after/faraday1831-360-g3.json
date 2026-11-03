@@ -1,0 +1,752 @@
+{
+ "slug": "faraday1831",
+ "width": 360,
+ "logFails": false,
+ "g3": true,
+ "turns": [
+  {
+   "send": "(start)",
+   "opened": [
+    "s1",
+    "s2"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Ok, prebral. Zakaj pa tega ni odkril že kdo pred njim?",
+   "opened": [
+    "s3"
+   ],
+   "reply": "Tega podatka v zgodbi ni.Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 551,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "ms": 587,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s4"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 615,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "ms": 579,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s5"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 667,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s6"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 549,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Moja zamisel: Sila med polom magneta in žico deluje v krogu okoli žice: pol bi rad krožil okoli žice (in žica okoli pola).",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 628,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Razlaga: Sila med polom magneta in žico deluje v krogu okoli žice: pol bi rad krožil okoli žice (in žica okoli pola). Pri igli se učinka obeh polov izravnata, zato se igla samo obrne; delovati mora samo en pol (drugega umakni daleč, npr. pod gladino ali v podstavek). Gibljivi del mora biti prosto vrtljiv in ves čas v električnem stiku, npr. konec žice v živem srebru. Rezultat: žica kroži okoli magneta ali magnet okoli žice, neprekinjeno, dokler teče tok.",
+   "opened": [
+    "s7"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 624,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 53
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s8"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 568,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s9"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 644,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s10"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 567,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "ms": 600,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s11"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 524,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "ms": 576,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s12"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 531,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Moja zamisel: Ločen tokokrog z galvanometrom brez lastne baterije: vsak tok v njem bi bil nov.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 545,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Razlaga: Ločen tokokrog z galvanometrom brez lastne baterije: vsak tok v njem bi bil nov. Vir magnetizma čim bliže temu tokokrogu: magnet v tuljavi ali ob njej, ali dve vzporedni žici, v eni tok iz baterije. Pričakovanje tistega časa (tudi Faradayevo): stalen odklon igle, dokler sta magnet ali tok blizu, po zgledu Ørsteda.",
+   "opened": [
+    "s13"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 3/3  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+   "ms": 539,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 71
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s14"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 539,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s15"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 629,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s16"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 562,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "ms": 628,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s17"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 540,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "ms": 555,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s18"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 584,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s19"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 607,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Moja zamisel: Močnejši vir magnetizma: tuljava s tokom na mehkem železu (elektromagnet) ali magnetizem, zbran v železu.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 610,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Razlaga: Močnejši vir magnetizma: tuljava s tokom na mehkem železu (elektromagnet) ali magnetizem, zbran v železu. Občutljivejša zaznava: veliko ovojev v tuljavi, ki vodi do galvanometra, dobra izolacija, galvanometer dovolj daleč, da ga magnet ne moti, a da ga vidiš. Iglo je treba gledati MED dogajanjem, ob vklopu, izklopu ali premiku, ne po njem: učinek je kratek. Jedro: tok nastane ob SPREMEMBI magnetizma; stalno stanje ne da ničesar; ob vklopu in izklopu je smer nasprotna.",
+   "opened": [
+    "s20"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 619,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 49
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s21"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 552,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s22"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 575,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s23"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 553,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "ms": 575,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s24"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 582,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "ms": 553,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s25"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 600,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Moja zamisel: Spremembo magnetizma v tuljavi dobiš z gibanjem: magnet hitro potisneš v tuljavo ali ga izvlečeš.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 649,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Razlaga: Spremembo magnetizma v tuljavi dobiš z gibanjem: magnet hitro potisneš v tuljavo ali ga izvlečeš. Ob potiskanju noter in vlečenju ven igla skoči v nasprotni smeri. Ko magnet miruje, v tuljavi ali zunaj nje, igla ne kaže ničesar.",
+   "opened": [
+    "s26"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 3/3  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+   "ms": 626,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 91
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s27"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 563,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s28"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 589,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "ms": 554,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s29"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 575,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "ms": 611,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s30"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 536,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Moja zamisel: Neprekinjen tok zahteva neprekinjeno spreminjanje: gibanje, ki se ne konča, na primer vrtenje.",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 644,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Razlaga: Neprekinjen tok zahteva neprekinjeno spreminjanje: gibanje, ki se ne konča, na primer vrtenje. Prevodnik se vrti med poloma magneta, tako da gre ves čas mimo pola: bakren disk med poloma. Tok pobereš z drsnima stikoma, na osi in na robu diska. Aragov pojav: v vrtečem se bakrenem disku pod magnetom tečejo tokovi, ki s svojim magnetizmom vlečejo iglo.",
+   "opened": [
+    "s31"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+   "ms": 579,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "userSeenPct": 58
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s32"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Izziv: sila, ki ne vleče naravnost · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: zasnuj poskus",
+   "ms": 553,
+   "replySeenPct": 62,
+   "replyFitPct": 100,
+   "userSeenPct": 0
+  }
+ ],
+ "g3Probes": [
+  {
+   "kind": "S",
+   "at": "s2",
+   "send": "Ok, prebral. Zakaj pa tega ni odkril že kdo pred njim?",
+   "opened": [
+    "s3"
+   ],
+   "reply": "Tega podatka v zgodbi ni.Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "A",
+   "at": "s3",
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "modelRounds": 1,
+   "ok": true
+  },
+  {
+   "kind": "B",
+   "at": "s3",
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s4"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "C",
+   "at": "s3",
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "A",
+   "at": "s10",
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "modelRounds": 1,
+   "ok": true
+  },
+  {
+   "kind": "B",
+   "at": "s10",
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s11"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "C",
+   "at": "s10",
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "A",
+   "at": "s16",
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "modelRounds": 1,
+   "ok": true
+  },
+  {
+   "kind": "B",
+   "at": "s16",
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s17"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "C",
+   "at": "s16",
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "A",
+   "at": "s23",
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "modelRounds": 1,
+   "ok": true
+  },
+  {
+   "kind": "B",
+   "at": "s23",
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s24"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "C",
+   "at": "s23",
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "A",
+   "at": "s28",
+   "send": "Zanimivo. Koliko je pa to takrat stalo?",
+   "opened": [],
+   "reply": "Tega podatka v zgodbi ni. Kaj predlagaš?",
+   "modelRounds": 1,
+   "ok": true
+  },
+  {
+   "kind": "B",
+   "at": "s28",
+   "send": "Kako naj pa to naredim, saj nisem fizik? Namig prosim.",
+   "opened": [
+    "s29"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  },
+  {
+   "kind": "C",
+   "at": "s28",
+   "send": "Iz prvega namiga razumem samo del.",
+   "opened": [],
+   "reply": "Razumem. Povej mi svojo zamisel.",
+   "modelRounds": 2,
+   "ok": true
+  }
+ ],
+ "shots": [
+  {
+   "name": "01-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null,
+   "replyFitPct": null,
+   "replyPx": null,
+   "userSeenPct": null,
+   "pageY": 0
+  },
+  {
+   "name": "02-after-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "replyPx": 43,
+   "userSeenPct": 100,
+   "pageY": 992
+  },
+  {
+   "name": "03-challenge-hints",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "replyPx": 43,
+   "userSeenPct": 100,
+   "pageY": 3143
+  },
+  {
+   "name": "04-assessed",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "replyPx": 87,
+   "userSeenPct": 53,
+   "pageY": 3414
+  },
+  {
+   "name": "05-reveal",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 100,
+   "replyFitPct": 100,
+   "replyPx": 87,
+   "userSeenPct": 53,
+   "pageY": 3414
+  },
+  {
+   "name": "06-end",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 62,
+   "replyFitPct": 100,
+   "replyPx": 395,
+   "userSeenPct": 0,
+   "pageY": 19202
+  }
+ ],
+ "modelRounds": 92,
+ "logEvents": 292,
+ "logStartErrors": 0,
+ "console": [],
+ "pageErrors": [],
+ "badResponses": [],
+ "screenshots": [
+  "faraday1831-360-g3-01-start.jpg",
+  "faraday1831-360-g3-02-after-start.jpg",
+  "faraday1831-360-g3-03-challenge-hints.jpg",
+  "faraday1831-360-g3-04-assessed.jpg",
+  "faraday1831-360-g3-05-reveal.jpg",
+  "faraday1831-360-g3-06-end.jpg"
+ ],
+ "findings": [],
+ "logInfoAfterStart": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusAfterStart": "Razvoj · brez beleženja rezultatov.",
+ "revealOpenedBy": {
+  "s3": "Razlaga",
+  "s10": "Razlaga",
+  "s16": "Razlaga",
+  "s23": "Razlaga",
+  "s28": "Razlaga"
+ },
+ "allStepsOpened": true,
+ "missingSteps": [],
+ "finalReply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Izziv: sila, ki ne vleče naravnost · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: zasnuj poskus · Kartica A · zgodovinska pot · mejniki 3/3  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)Izziv: tok iz magnetizma · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: samo magnet in tuljava · Kartica A · zgodovinska pot · mejniki 3/3  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)Izziv: tok, ki teče ves čas · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+ "logInfoEnd": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusEnd": "Razvoj · brez beleženja rezultatov.",
+ "cardLines": 5,
+ "layout": {
+  "vw": 360,
+  "sw": 360,
+  "images": 10,
+  "brokenImages": [],
+  "imgNoAlt": []
+ },
+ "turnMs": {
+  "count": 45,
+  "median": 576,
+  "max": 667
+ },
+ "replyFit": {
+  "min": 100,
+  "required": 60,
+  "turns": 46,
+  "below": 0
+ }
+}

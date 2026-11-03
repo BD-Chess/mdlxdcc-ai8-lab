@@ -1,0 +1,511 @@
+{
+ "slug": "navierstokes1845",
+ "width": 360,
+ "logFails": false,
+ "g3": false,
+ "turns": [
+  {
+   "send": "(start)",
+   "opened": [
+    "s1",
+    "s2"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "replySeenPct": 98,
+   "replyFitPct": 98,
+   "userSeenPct": 100
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s3"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 549,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s4"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 545,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s5"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 541,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s6"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 591,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: v popolni tekočini sosednja delčka drug na drugega delujeta samo s tlakom, pravokotno na stik; sile vzdolž stika (trenja med plastmi) ni",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 602,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: v popolni tekočini sosednja delčka drug na drugega delujeta samo s tlakom, pravokotno na stik; sile vzdolž stika (trenja med plastmi) ni pri gladkem obtekanju je tok spredaj in zadaj zrcalen, zato se tlak spredaj in zadaj izniči (d'Alembertov paradoks) v resnični tekočini plasti, ki drsijo druga ob drugi, druga drugo vlečejo (notranje trenje, viskoznost) trenje je odvisno od razlike hitrosti sosednjih plasti, ne od hitrosti same: tekočina, ki se giblje kot celota, nima trenja",
+   "opened": [
+    "s7"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 556,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s8"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 597,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s9"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 534,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s10"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 540,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s11"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 517,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s12"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 573,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: strižna sila med plastmi je sorazmerna s tem, kako hitro se hitrost spreminja čez plasti (razlika hitrosti na razdaljo), s konstanto snovi",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 548,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: strižna sila med plastmi je sorazmerna s tem, kako hitro se hitrost spreminja čez plasti (razlika hitrosti na razdaljo), s konstanto snovi na delček deluje razlika sil na nasprotnih ploskvah, zato v enačbo pride sprememba te spremembe (drugi odvodi hitrosti) voda nima prednostne smeri, zato se prispevki vseh treh smeri seštejejo (vsota drugih odvodov, Laplaceov člen) z isto konstanto konstanto je treba izmeriti; za vsako tekočino je drugačna (voda, olje, zrak)",
+   "opened": [
+    "s13"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)",
+   "ms": 543,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s14"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 549,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s15"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 520,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s16"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 520,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s17"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 561,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: gibanje majhnega delčka razstaviš na premik, vrtenje kot celota in deformacijo (raztezanje, strig); trenje povzroča samo deformacija",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 537,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: gibanje majhnega delčka razstaviš na premik, vrtenje kot celota in deformacijo (raztezanje, strig); trenje povzroča samo deformacija napetost je sorazmerna s hitrostjo deformacije (pri počasnih spremembah), podobno kot je pri trdnini napetost sorazmerna z deformacijo tekočina je enaka v vseh smereh, zato ostaneta največ dve konstanti: ena za strig in ena za hitro stiskanje pri nestisljivi tekočini druga konstanta ne vpliva; ostane Navierova enačba, njena konstanta pa je zdaj merljiva viskoznost",
+   "opened": [
+    "s18"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+   "ms": 566,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s19"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 559,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s20"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 563,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s21"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 556,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s22"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 523,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: ob trdni steni tekočina miruje glede na steno in ne drsi (pogoj brez zdrsa)",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 551,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: ob trdni steni tekočina miruje glede na steno in ne drsi (pogoj brez zdrsa) v ravni ozki cevi je hitrost zato največja v sredini in nič ob steni (parabolični profil) pretok skozi ozko cev je sorazmeren s padcem tlaka in s četrto potenco polmera; to lahko izmeriš in primerjaš v širokih ceveh pri večjih hitrostih se napoved ne ujema, ker tok postane nemiren in vrtinčast; to je drug način toka",
+   "opened": [
+    "s23"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2)",
+   "ms": 599,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s24"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 546,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s25"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 575,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s26"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 563,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: pri zelo počasnem gibanju lahko vztrajnost tekočine zanemariš; ostane ravnovesje tlaka in trenja, enačba postane linearna",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 544,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: pri zelo počasnem gibanju lahko vztrajnost tekočine zanemariš; ostane ravnovesje tlaka in trenja, enačba postane linearna upor je sorazmeren z viskoznostjo, polmerom in hitrostjo, ne s kvadratom hitrosti natančen račun da upor 6π × viskoznost × polmer × hitrost majhne kapljice zato padajo zelo počasi (končna hitrost raste s kvadratom polmera); zato oblaki lebdijo",
+   "opened": [
+    "s27"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦✦ · 5/5 — Mehanizem je razložen. (z namigom 1)",
+   "ms": 561,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s28"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 522,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Namig, prosim.",
+   "opened": [
+    "s29"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.",
+   "ms": 544,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Moja zamisel: pri hitrem toku je trenje pomembno samo v tanki plasti ob površini (mejna plast)",
+   "opened": [],
+   "reply": "Zakaj bi to delovalo?",
+   "ms": 536,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Razlaga: pri hitrem toku je trenje pomembno samo v tanki plasti ob površini (mejna plast) upor večinoma ne izvira iz trenja ob površini, ampak iz široke sledi za žogico, kjer je tlak nizek (odtrganje toka) hrapavost oziroma jamice naredijo tok v mejni plasti nemiren; nemirna plast se drži površine dlje in se odtrga pozneje ožja sled pomeni manjši upor, zato žogica leti dlje",
+   "opened": [
+    "s30"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Kartica A · zgodovinska pot · mejniki 4/4 ✦✦✦ · 5/5 — Mehanizem je razložen. (z namigom 1)",
+   "ms": 547,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  },
+  {
+   "send": "Naprej.",
+   "opened": [
+    "s31"
+   ],
+   "reply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Izziv: upor, ki ga ni · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: trenje v enačbi · Kartica ",
+   "ms": 588,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "userSeenPct": 0
+  }
+ ],
+ "g3Probes": [],
+ "shots": [
+  {
+   "name": "01-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null,
+   "replyFitPct": null,
+   "replyPx": null,
+   "userSeenPct": null,
+   "pageY": 0
+  },
+  {
+   "name": "02-after-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 98,
+   "replyFitPct": 98,
+   "replyPx": 43,
+   "userSeenPct": 100,
+   "pageY": 1062
+  },
+  {
+   "name": "03-challenge-hints",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 43,
+   "userSeenPct": 0,
+   "pageY": 3306
+  },
+  {
+   "name": "04-assessed",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 87,
+   "userSeenPct": 0,
+   "pageY": 3557
+  },
+  {
+   "name": "05-reveal",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 87,
+   "userSeenPct": 0,
+   "pageY": 3557
+  },
+  {
+   "name": "06-end",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": 0,
+   "replyFitPct": 0,
+   "replyPx": 460,
+   "userSeenPct": 0,
+   "pageY": 20221
+  }
+ ],
+ "modelRounds": 78,
+ "logEvents": 246,
+ "logStartErrors": 0,
+ "console": [],
+ "pageErrors": [],
+ "badResponses": [],
+ "screenshots": [
+  "navierstokes1845-360-01-start.jpg",
+  "navierstokes1845-360-02-after-start.jpg",
+  "navierstokes1845-360-03-challenge-hints.jpg",
+  "navierstokes1845-360-04-assessed.jpg",
+  "navierstokes1845-360-05-reveal.jpg",
+  "navierstokes1845-360-06-end.jpg"
+ ],
+ "findings": [
+  "latest reply 0% in view after »Naprej.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Namig, prosim.«",
+  "latest reply 0% in view after »Moja zamisel: v popolni tekočini sosednj«",
+  "… and 30 more turns with the latest reply out of view"
+ ],
+ "logInfoAfterStart": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusAfterStart": "Razvoj · brez beleženja rezultatov.",
+ "revealOpenedBy": {
+  "s3": "Razlaga",
+  "s9": "Razlaga",
+  "s15": "Razlaga",
+  "s20": "Razlaga",
+  "s25": "Razlaga",
+  "s28": "Razlaga"
+ },
+ "allStepsOpened": true,
+ "missingSteps": [],
+ "finalReply": "Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.Izziv: upor, ki ga ni · Kartica A · zgodovinska pot · mejniki 4/4  · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: trenje v enačbi · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2, 3)Izziv: enačba brez molekul · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2)Izziv: ob steni · Kartica A · zgodovinska pot · mejniki 4/4 ✦ · 5/5 — Mehanizem je razložen. (z namigom 1, 2)Izziv: počasna krogla · Kartica A · zgodovinska pot · mejniki 4/4 ✦✦ · 5/5 — Mehanizem je razložen. (z namigom 1)Bonus: žogica za golf · Kartica A · zgodovinska pot · mejniki 4/4 ✦✦✦ · 5/5 — Mehanizem je razložen. (z namigom 1)",
+ "logInfoEnd": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusEnd": "Razvoj · brez beleženja rezultatov.",
+ "cardLines": 6,
+ "layout": {
+  "vw": 360,
+  "sw": 360,
+  "images": 12,
+  "brokenImages": [],
+  "imgNoAlt": []
+ },
+ "turnMs": {
+  "count": 35,
+  "median": 549,
+  "max": 602
+ },
+ "replyFit": {
+  "min": 0,
+  "required": 60,
+  "turns": 36,
+  "below": 35
+ }
+}
