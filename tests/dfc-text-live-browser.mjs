@@ -6,7 +6,7 @@ import {chromium} from 'playwright-core';
 import path from 'node:path';
 const expected=JSON.parse(await readFile('public/Nara/dualframe-lab/release.json','utf8'));
 const bases=['https://www.mdlxdcc.org/nara/dualframe-lab/','https://bd-chess.github.io/bd-chessdb/Nara/dualframe-lab/'];
-const out='browser-evidence/dfc-live';await mkdir(out,{recursive:true});
+const out=path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','browser-evidence/dfc-live');await mkdir(out,{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-background-networking']});const receipts=[];
 try{for(const [index,base]of bases.entries()){
  const context=await browser.newContext({serviceWorkers:'block',viewport:{width:402,height:874},hasTouch:true,deviceScaleFactor:1});const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));

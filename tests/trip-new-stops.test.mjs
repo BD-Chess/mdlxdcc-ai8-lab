@@ -12,7 +12,7 @@ function harness(geocode, fetcher) {
   const elements = new Map();
   const element = id => {
     if (!elements.has(id)) elements.set(id, {
-      setAttribute() {}, style: {}, dataset: {}, classList: { add() {}, remove() {}, toggle() {} }, checked: false,
+      setAttribute() {}, removeAttribute() {}, addEventListener() {}, style: {}, dataset: {}, classList: { add() {}, remove() {}, toggle() {} }, checked: false,
       value: '', innerHTML: '', textContent: '', appendChild() {}, replaceChildren() {}
     });
     return elements.get(id);
@@ -23,8 +23,10 @@ function harness(geocode, fetcher) {
   let nextTimer = 0, clock = 0;
   const google = { maps: { Geocoder: class { geocode(req, cb) { return geocode(req, cb); } } } };
   const context = vm.createContext({
+    // app.js reads location.hostname at load (PAGES_ONLY); a non-Pages host keeps server mode.
+    location: { hostname: 'www.mdlxdcc.org' },
     console, crypto:webcrypto, TextDecoder, google, window: { google }, fetch:fetcher, Map, Set, performance: {now: () => clock},
-    document: { body:{classList:{remove(){},toggle(){}}}, createElement: () => ({style:{}, dataset:{}, appendChild() {}, querySelector:()=>({dataset:{},textContent:''})}), getElementById: element, querySelector: () => element('panel'), querySelectorAll: () => [], addEventListener() {} },
+    document: { body:{classList:{remove(){},toggle(){}}}, createElement: () => ({style:{}, dataset:{}, appendChild() {}, append() {}, querySelector:()=>({dataset:{},textContent:''})}), createTextNode: text => ({ textContent: String(text) }), getElementById: element, querySelector: () => element('panel'), querySelectorAll: () => [], addEventListener() {} },
     localStorage: { setItem() {} },
     Worker: class { constructor() {workers.push(this);} postMessage(msg) {jobs.push(msg);} terminate() {this.terminated=true;} },
     setTimeout(fn, ms) { if (ms === 250) { queueMicrotask(fn); return 0; } const id = ++nextTimer; timerJobs.set(id, fn); return id; },
@@ -389,7 +391,7 @@ test('LAB adds one independent Deep Air row without comparing it to the road opt
   const el=()=>({children:[],style:{},dataset:{},classList:{remove(){}},appendChild(c){this.children.push(c);},replaceChildren(){this.children=[];}});
   const get=id=>{if(!elements.has(id))elements.set(id,el());return elements.get(id);};
   const workers=[];
-  const c=vm.createContext({console,window:{},document:{getElementById:get,addEventListener(){},createElement:el},Worker:class{constructor(){workers.push(this);}terminate(){this.stopped=true;}postMessage(m){this.message=m;}},setTimeout,clearTimeout});
+  const c=vm.createContext({console,location:{hostname:'www.mdlxdcc.org'},window:{},document:{getElementById:get,addEventListener(){},createElement:el,querySelectorAll:()=>[]},Worker:class{constructor(){workers.push(this);}terminate(){this.stopped=true;}postMessage(m){this.message=m;}},setTimeout,clearTimeout});
   vm.runInContext(readFileSync(new URL('../public/Trip/new/ui-text.js',import.meta.url),'utf8'),c);
   vm.runInContext(matrixSource,c);vm.runInContext(readFileSync(new URL('../public/Trip/new/brute-force.js',import.meta.url),'utf8'),c);
   vm.runInContext(source.replace(/\}\)\(\);\s*$/,`window.test={displayComparison,ensureAirComparison,clearComparison, setKey(k){comparisonKey=k;}};})();`),c);

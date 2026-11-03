@@ -2,7 +2,7 @@
 // Bounded real-browser presentation acceptance. External/provider traffic is blocked.
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium,webkit}=require('playwright');
-const out=path.resolve(process.env.MULTIAPP_EVIDENCE_DIR||'multiapp-evidence');fs.mkdirSync(out,{recursive:true});
+const out=path.resolve(process.env.MULTIAPP_EVIDENCE_DIR||path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','multiapp-evidence'));fs.mkdirSync(out,{recursive:true});
 const root=path.resolve('public'),report={cases:[],externalProviders:'BLOCKED: local unavailable (503) fixtures; no outbound provider request',physicalIPhone:'NOT_RUN'};
 const specs=[
  {name:'flip4m',route:'/F4M/new/',screen:'.device-screen',device:'.device',toolbar:'.preview-header',select:'#previewWidth'},

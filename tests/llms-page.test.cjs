@@ -58,8 +58,9 @@ test('shipped JSON matches the schema the page reads', () => {
   assert.ok(SRC.accepted.length >= 10 && SRC.rejected.length >= 1);
   assert.equal(SRC.accepted.length, META.counts.sources_accepted);
   // No raw scraped pages and nothing secret-looking in the shipped data.
-  for (const f of fs.readdirSync(DIR)) assert.ok(['index.html', 'meta_index.json', 'sources.json', 'commentary_sl.json'].includes(f), 'unexpected file ' + f);
-  const all = HTML + JSON.stringify(META) + JSON.stringify(SRC) + JSON.stringify(COM);
+  // chats.html (AI chat comparison) ships upstream since 5e28075; it is scanned like the rest.
+  for (const f of fs.readdirSync(DIR)) assert.ok(['index.html', 'chats.html', 'meta_index.json', 'sources.json', 'commentary_sl.json'].includes(f), 'unexpected file ' + f);
+  const all = HTML + fs.readFileSync(path.join(DIR, 'chats.html'), 'utf8') + JSON.stringify(META) + JSON.stringify(SRC) + JSON.stringify(COM);
   assert.equal(/sk-ant-|ghp_[A-Za-z0-9]{20}|AIza[0-9A-Za-z_-]{30}|BD_GDrive|rclone\.conf|refresh_token/.test(all), false);
 });
 

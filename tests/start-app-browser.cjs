@@ -5,7 +5,7 @@ const path = require('node:path');
 const http = require('node:http');
 const crypto = require('node:crypto');
 const { chromium, webkit } = require('playwright');
-const evidence = process.env.START_QA_EVIDENCE || path.resolve('start-qa-evidence');
+const evidence = process.env.START_QA_EVIDENCE || path.resolve(process.env.AI8_TEST_EVIDENCE_DIR || '.', 'start-qa-evidence');
 fs.mkdirSync(evidence, { recursive: true });
 const results = [];
 const key = 'bd-start-v1';

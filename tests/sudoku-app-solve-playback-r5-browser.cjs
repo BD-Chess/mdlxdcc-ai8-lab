@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium,webkit}=require('playwright');
-const out=process.env.SUDOKU_EVIDENCE_DIR||'sudoku-r5-evidence';fs.mkdirSync(out,{recursive:true});
+const out=process.env.SUDOKU_EVIDENCE_DIR||path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','sudoku-r5-evidence');fs.mkdirSync(out,{recursive:true});
 const root=path.resolve('public');let server;
 const puzzle=[...'530070000600195000098000060800060003400803001700020006060000280000419005000080079'].map(Number);
 function fixture(id,diff){const board=puzzle.slice();board[2]=1;const notes=Array.from({length:81},()=>[]);notes[3]=[2,6];notes[5]=[1,4,8];return{schema:'AI8_SUDOKU_NAV_SESSION_V1',version:'0.2.0',gameId:id,diff,puzzle,board,notes,time:12,rows:[],assistance:[],history:[],selectedCell:3,notesMode:true,timerRunning:false,lineage:{base:board,ops:[]},settings:{policy:'REAL',goal:'FLOW',target:1,deep:false}};}

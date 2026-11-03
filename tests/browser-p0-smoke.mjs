@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { makeHandler } from '../functions/game-guide.mjs';
 
-const root=fileURLToPath(new URL('../',import.meta.url)), evidence=path.join(root,'evidence');
+const root=fileURLToPath(new URL('../',import.meta.url)), evidence=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'evidence');
 const profile=path.join(evidence,`browser-profile-${process.pid}`);await mkdir(profile,{recursive:true});
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const game={schema:'ai8.game.v1',slug:'_fixture',title:'Pet mehanizmov',acts:[1,2,3,4,5].map(act=>({act})),steps:[

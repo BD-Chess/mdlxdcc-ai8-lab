@@ -12,7 +12,7 @@ const repo=fileURLToPath(new URL('..',import.meta.url));
 const publicRoot=path.join(repo,'public');
 const prefix='/Nara/dualframe-lab/';
 const base=prefix+'cmarvel-01/';
-const out=path.join(repo,'browser-evidence/cmarvel-public');
+const out=path.join(process.env.AI8_TEST_EVIDENCE_DIR||repo,'browser-evidence/cmarvel-public');
 await mkdir(out,{recursive:true});
 const checks={},errors=[],requests=[];
 const sha=value=>createHash('sha256').update(value).digest('hex');

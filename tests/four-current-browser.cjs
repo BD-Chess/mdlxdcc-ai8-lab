@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium,webkit}=require('playwright');
-const out=path.resolve(process.env.CURRENT_PROMOTION_EVIDENCE||'current-promotion-evidence');
+const out=path.resolve(process.env.CURRENT_PROMOTION_EVIDENCE||path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','current-promotion-evidence'));
 fs.mkdirSync(out,{recursive:true});
 const root=path.resolve('public'),report={schema:'four-current-acceptance-v1',cases:[],provider_calls:'BLOCKED',physical_device:'NOT_RUN'};
 const specs=[

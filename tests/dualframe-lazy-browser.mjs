@@ -5,7 +5,7 @@ import path from 'node:path';
 import {chromium} from 'playwright-core';
 const root=path.resolve(new URL('..',import.meta.url).pathname.replace(/^\/([A-Z]:)/,'$1'));
 const base='https://dualframe.test',app=base+'/public/Nara/dualframe-lab/';
-const browser=await chromium.launch({executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',headless:true});
+const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',headless:true});
 const results=[];
 try{
  for(const mobile of [false,true]){
@@ -36,8 +36,8 @@ try{
   if(mobile){await page.setViewportSize({width:852,height:393});await page.locator('#own-gallery .card-image').click();await page.waitForFunction(()=>document.querySelector('#viewer-image').dataset.orientation==='landscape');await page.locator('#viewer-close').click();}
   // App shell should launch with the local library when external reference/API calls are unavailable.
   assert.deepEqual(errors,[]);
-  const dir=path.join(root,'browser-evidence');await mkdir(dir,{recursive:true});await page.screenshot({path:path.join(dir,mobile?'mobile.png':'desktop.png'),fullPage:false});
+  const dir=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence');await mkdir(dir,{recursive:true});await page.screenshot({path:path.join(dir,mobile?'mobile.png':'desktop.png'),fullPage:false});
   results.push({device:mobile?'Windows Chrome iPhone-layout emulation':'Windows Chrome desktop',migration:'PASS',hash:seed.lh,metadata_only:true,orientation_swap:'PASS',download:'PASS',rename_reload:'PASS',delay:'PASS',page_errors:errors});await context.close();
  }
- await writeFile(path.join(root,'browser-evidence','receipt.json'),JSON.stringify(results,null,2));console.log(JSON.stringify(results));
+ await writeFile(path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence','receipt.json'),JSON.stringify(results,null,2));console.log(JSON.stringify(results));
 }finally{await browser.close();}

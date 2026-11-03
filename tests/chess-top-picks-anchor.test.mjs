@@ -6,14 +6,14 @@ import vm from 'node:vm';
 
 const read = path => readFileSync(new URL(path, import.meta.url), 'utf8');
 const context = { window: { addEventListener() {} } };
-vm.runInNewContext(read('../public/chess/new/js/chess.min.js'), context);
-vm.runInNewContext(read('../public/chess/new/js/8zc-study-core.js'), context);
-vm.runInNewContext(read('../public/chess/new/js/8zc-utils.js'), context);
+vm.runInNewContext(read('../public/chess-lab/js/chess.min.js'), context);
+vm.runInNewContext(read('../public/chess-lab/js/8zc-study-core.js'), context);
+vm.runInNewContext(read('../public/chess-lab/js/8zc-utils.js'), context);
 const { Chess, chessBestTopPickAnchor, chessBestTopPickTitle, chessBestTopPickResumeCursor } = context;
-const source = read('../public/chess/new/Games/GukeshD_Selected.pgn').split(/\n\s*\n(?=\[Event)/)[0];
-const catalog = JSON.parse(read('../public/chess/new/Games/ChessBest_Top_Picks.catalog.json'));
+const source = read('../public/chess-lab/Games/GukeshD_Selected.pgn').split(/\n\s*\n(?=\[Event)/)[0];
+const catalog = JSON.parse(read('../public/chess-lab/Games/ChessBest_Top_Picks.catalog.json'));
 const curatedByFile = new Map(catalog.collection_files.map(file => [
-  file, read('../public/chess/new/' + file).trim().split(/\n\s*\n(?=\[Event)/)
+  file, read('../public/chess-lab/' + file).trim().split(/\n\s*\n(?=\[Event)/)
 ]));
 const fileCursors = new Map();
 const curatedCases = catalog.cases.map(entry => {
@@ -118,7 +118,7 @@ test('catalog sources and evidence hashes match the shipped complete game lines'
     Object.values(value).forEach(item => checkEvidenceHashes(item, id));
   };
   for (const { entry, pgn } of curatedCases) {
-    const sourceText = read('../public/chess/new/' + entry.source.path);
+    const sourceText = read('../public/chess-lab/' + entry.source.path);
     assert.equal(digest(sourceText), entry.source.sha256, entry.id);
     const sourceParts = sourceText.trim().split(/\n\s*\n(?=\[Event)/);
     const original = parseGame(sourceParts[entry.source.game_index_1based - 1]);
@@ -134,11 +134,11 @@ test('catalog sources and evidence hashes match the shipped complete game lines'
     const played = moves[entry.anchor.ply_after];
     assert.equal(played.from + played.to + (played.promotion || ''), entry.anchor.played_uci, entry.id);
     checkEvidenceHashes(entry.evidence, entry.id);
-    if (entry.curated_source) assert.equal(digest(read('../public/chess/new/' + entry.curated_source.path)),
+    if (entry.curated_source) assert.equal(digest(read('../public/chess-lab/' + entry.curated_source.path)),
       entry.curated_source.sha256, entry.id);
   }
   for (const notice of catalog.license_notices) {
-    assert.equal(digest(read('../public/chess/new/' + notice.path)), notice.sha256, notice.path);
+    assert.equal(digest(read('../public/chess-lab/' + notice.path)), notice.sha256, notice.path);
   }
 });
 

@@ -23,6 +23,8 @@ function harness(geocode, fetcher) {
   let nextTimer = 0, clock = 0;
   const google = { maps: { Geocoder: class { geocode(req, cb) { return geocode(req, cb); } } } };
   const context = vm.createContext({
+    // app.js reads location.hostname at load (PAGES_ONLY); a non-Pages host keeps server mode.
+    location: { hostname: 'www.mdlxdcc.org' },
     console, crypto:webcrypto, TextDecoder, google, window: { google }, fetch:fetcher, Map, Set, performance: {now: () => clock},
     document: { body:{classList:{remove(){},toggle(){}}}, createElement: () => ({style:{}, dataset:{}, appendChild() {}, querySelector:()=>({dataset:{},textContent:''})}), getElementById: element, querySelector: () => element('panel'), querySelectorAll: () => [], addEventListener() {} },
     localStorage: { setItem() {} },

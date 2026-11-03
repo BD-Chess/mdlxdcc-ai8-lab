@@ -5,7 +5,8 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 const {Chess}=require('../public/chess-lab/js/chess.min.js');
 const Study=require('../public/chess-lab/js/8zc-study-core.js');
 const test=require('node:test');
-const chessRoot=require('node:path').resolve(__dirname,'../public/chess');
+const path=require('node:path');
+const chessRoot=path.resolve(__dirname,'../public/chess');
 for(const lane of [
  {name:'CURRENT',base:chessRoot,suffix:'/chess/'},
  {name:'LAB',base:path.resolve(__dirname,'../public/chess-lab'),suffix:'/chess-lab/'}

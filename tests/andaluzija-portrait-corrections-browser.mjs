@@ -4,7 +4,7 @@ import {createRequire} from 'node:module';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {server} from './andaluzija-local-server.mjs';
 const {chromium}=createRequire(import.meta.url)('playwright');
-const output='corrections-release-evidence';await mkdir(output,{recursive:true});
+const output=(process.env.AI8_TEST_EVIDENCE_DIR?process.env.AI8_TEST_EVIDENCE_DIR+'/':'')+'corrections-release-evidence';await mkdir(output,{recursive:true});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const base='http://127.0.0.1:'+server.address().port;
 const browser=await chromium.launch({headless:true,executablePath:process.env.ANDALUZIJA_TEST_CHROMIUM||'/usr/bin/google-chrome',args:['--no-sandbox','--disable-dev-shm-usage']});

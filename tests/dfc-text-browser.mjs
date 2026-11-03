@@ -6,7 +6,7 @@ import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright-core';
-const root=fileURLToPath(new URL('..',import.meta.url)),prefix='/Nara/dualframe-lab/',out=path.join(root,'browser-evidence/dfc-text');await mkdir(out,{recursive:true});
+const root=fileURLToPath(new URL('..',import.meta.url)),prefix='/Nara/dualframe-lab/',out=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence/dfc-text');await mkdir(out,{recursive:true});
 const edition=JSON.parse(await readFile(path.join(root,'public',prefix,'content/illuminara/edition.json'))),checks={},errors=[];let writes=0;
 const mime={'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.json':'application/json','.css':'text/css','.webmanifest':'application/manifest+json','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png'};
 const server=http.createServer(async(req,res)=>{try{const u=new URL(req.url,'http://localhost');if(u.pathname.startsWith('/api/df/')){if(req.method!=='GET')writes++;res.writeHead(u.pathname.endsWith('/capabilities')?200:401,{'content-type':'application/json'});res.end(JSON.stringify({version:'3.0-r4',models:[],providers:[],auth_configured:false,account_identity:{public_enabled:false}}));return;}const f=path.resolve(root,'public','.'+u.pathname+(u.pathname.endsWith('/')?'index.html':''));assert.ok(f.startsWith(path.join(root,'public')+path.sep));const b=await readFile(f);res.writeHead(200,{'content-type':mime[path.extname(f)]||'application/octet-stream','cache-control':'no-store'});res.end(b);}catch{res.writeHead(404);res.end('missing');}});
