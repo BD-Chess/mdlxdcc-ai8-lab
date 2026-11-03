@@ -19,6 +19,11 @@ MARKERS = {
 # Removed work projects must not come back through links in content (REMOVALS_R1).
 REMOVED_REF = re.compile(r'''(?i)(?:href|src)\s*=\s*["'][^"']*(?:omnicpq|/TS/)|["']\.\./OmniCPQ/|/ai8/omnicpq-origin''')
 errors = []
+# Intentional lab changes to exported files (LAB_CHANGES_R*): path -> accepted lab sha256 values.
+accepted = {}
+for record in sorted((ROOT / 'lab-evidence').glob('LAB_CHANGES_R*.json')):
+    for row in json.loads(record.read_text(encoding='utf-8'))['files']:
+        accepted.setdefault(row['path'], set()).add(row['lab_sha256'])
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
 # Later syncs from bd-chessdb add their own exclusions and a newer source manifest; older ones stay as history.
 for record in sorted((ROOT / 'lab-evidence').glob('SYNC_R*.json'), key=lambda p: int(p.stem.split('_R')[1])):
@@ -49,12 +54,12 @@ for entry in manifest['files']:
         for chunk in iter(lambda: stream.read(1024 * 1024), b''):
             digest.update(chunk)
             checked_bytes += len(chunk)
-    if digest.hexdigest() != entry['sha256']:
+    if digest.hexdigest() != entry['sha256'] and digest.hexdigest() not in accepted.get(entry['path'], ()):
         errors.append({'path': entry['path'], 'kind': 'source hash mismatch'})
 text_count = 0
 for path in ROOT.rglob('*'):
     rel = path.relative_to(ROOT)
-    if '.git' in rel.parts or not path.is_file() or path.suffix.lower() not in TEXT:
+    if '.git' in rel.parts or 'node_modules' in rel.parts or not path.is_file() or path.suffix.lower() not in TEXT:
         continue
     if path == Path(__file__).resolve() or rel.as_posix() == 'scripts/check_secret_boundary.py':
         continue
