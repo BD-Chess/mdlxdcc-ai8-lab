@@ -1,0 +1,45 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R10",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Proposed lab changes to exported source files (Tesla 1888: 7 hint texts rewritten so they guide instead of giving away key ideas; key_commit and SHA256SUMS recomputed). Content proposal for BD and the game author; not promoted.",
+ "files": [
+  {
+   "path": "public/game/tesla1888/index.html",
+   "source_sha256": "b90a7678736402ba969490e8452f137cb896b1b1e358e6f7e17192c3429c0cd7",
+   "lab_sha256": "c060247f16461db77f61eed97f35dd31a07287e32530f76ede251beacc343c2f",
+   "bytes": 68608,
+   "lab_prs": [
+    "#22"
+   ],
+   "lab_commits": [
+    "4d7120d"
+   ]
+  },
+  {
+   "path": "public/game/tesla1888/game.json",
+   "source_sha256": "b053151069752832bd63c2abbb31f8ab5ac4c1c97ce0d3d7c3314475e826e855",
+   "lab_sha256": "cc441ed4f1f1734ea5d626ce507f06382d2a83e0eac4d5dec447be98159ec5d9",
+   "bytes": 82974,
+   "lab_prs": [
+    "#22"
+   ],
+   "lab_commits": [
+    "4d7120d"
+   ]
+  },
+  {
+   "path": "public/game/tesla1888/SHA256SUMS.txt",
+   "source_sha256": "137d03fc74f1731938f067a53de1cdb16f2254cd6b15987694249c2e55048117",
+   "lab_sha256": "54df934c7d5ef778c4fc705207bfafd6a47b93023225d911b2d4ca1923509ac5",
+   "bytes": 1090,
+   "lab_prs": [
+    "#22"
+   ],
+   "lab_commits": [
+    "4d7120d"
+   ]
+  }
+ ]
+}
