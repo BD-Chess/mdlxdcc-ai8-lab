@@ -1,0 +1,21 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R3",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files (Tesla 1888 playtest fixes).",
+ "files": [
+  {
+   "path": "public/assets/game-guide/errors.mjs",
+   "source_sha256": "95d803bfcf4b2ef9e5cc97f33545a3871cbf7b42675df32e09bb19464bb99a85",
+   "lab_sha256": "ecf0b58d47473d35af5f91a1e74e355226a95d0ce48a89ba485db66d39e79f09",
+   "bytes": 1575,
+   "lab_prs": [
+    "cloud/tesla-playtest-20261103"
+   ],
+   "lab_commits": [
+    "(this branch)"
+   ]
+  }
+ ]
+}
