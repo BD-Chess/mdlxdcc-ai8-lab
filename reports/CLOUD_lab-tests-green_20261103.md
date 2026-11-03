@@ -62,6 +62,7 @@ In every row, the chess-lab twin passes on this base. The five aligned files are
   - It sets `AI8_TEST_EVIDENCE_DIR`, `CW_BASE_URL` (it starts `scripts/serve_lab.py` on a free port) and, with `--chromium`, the five browser variables.
   - It compares the results with the list. Unexpected failures make it exit 1, and listed files that now pass are reported.
   - Entries marked `skip` are not started without `--all`: 3 live production smokes and 1 server that never exits.
+  - Test output is decoded as UTF-8 with `errors='replace'` (Zora review). With `text=True` alone, Windows decodes with the ANSI code page: a test that prints `č` (bytes `c4 8d`) crashed the runner with `UnicodeDecodeError` under cp1252, and invalid bytes crashed it under UTF-8. Both cases now pass (reproduced with the old and the new runner on a two-line fixture). The expected-failures list and the `--out` file are also read and written as UTF-8.
 - **`tests/LAB_EXPECTED_FAILURES.json`** has 79 entries: the 78 failing files plus 1 flaky file. Each has a `class` and a `reason`.
 
 ### Evidence folders

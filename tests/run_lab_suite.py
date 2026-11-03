@@ -51,7 +51,7 @@ def main():
     ap.add_argument('--all', action='store_true', help='also start files marked skip')
     args = ap.parse_args()
 
-    expected = {row['file']: row for row in json.loads((ROOT / 'tests/LAB_EXPECTED_FAILURES.json').read_text())['files']}
+    expected = {row['file']: row for row in json.loads((ROOT / 'tests/LAB_EXPECTED_FAILURES.json').read_text(encoding='utf-8'))['files']}
     files = args.files or discover()
     skipped = [f for f in files if expected.get(f, {}).get('skip') and not args.all]
     files = [f for f in files if f not in skipped]
@@ -73,7 +73,9 @@ def main():
         started = time.time()
         cmd = ['node', '--test', f] if '.test.' in f else ['node', f]
         try:
-            r = subprocess.run(cmd, cwd=ROOT, env=env, capture_output=True, text=True, timeout=args.timeout)
+            # Explicit UTF-8: on Windows text=True alone decodes with the ANSI code page and crashes on test output.
+            r = subprocess.run(cmd, cwd=ROOT, env=env, capture_output=True, text=True,
+                               encoding='utf-8', errors='replace', timeout=args.timeout)
             out = r.stdout + r.stderr
             count = lambda k: int((re.search(rf'^# {k} (\d+)', out, re.M) or [0, 0])[1])
             return {'file': f, 'rc': r.returncode, 'pass': count('pass'), 'fail': count('fail'),
@@ -101,7 +103,7 @@ def main():
     for r in fixed:
         print('NOW PASSES (remove from LAB_EXPECTED_FAILURES.json)', r['file'])
     if args.out:
-        Path(args.out).write_text(json.dumps({'skipped': skipped, 'results': results}, indent=1))
+        Path(args.out).write_text(json.dumps({'skipped': skipped, 'results': results}, indent=1), encoding='utf-8')
     return 1 if unexpected else 0
 
 
