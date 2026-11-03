@@ -1,0 +1,285 @@
+{
+ "slug": "faraday1831",
+ "steps": 32,
+ "sections": 32,
+ "images": [
+  {
+   "line": 87,
+   "src": "img/01-orsted-1820.svg",
+   "alt": "Ørsted, 1820: žica s tokom obrne magnetno iglo počez. Črtkano: igla brez toka.",
+   "exists": true
+  },
+  {
+   "line": 120,
+   "src": "img/02-vrtenje-1821.svg",
+   "alt": "Faraday, 3.–4. september 1821: žica, ki visi prosto in sega v živo srebro, kroži okoli pola magneta.",
+   "exists": true
+  },
+  {
+   "line": 121,
+   "src": "img/03-newman-1822.svg",
+   "alt": "Naprava instrumentarja Newmana (opis januarja 1822): levo žica kroži okoli magneta, desno magnet, privezan z nitjo, kroži okoli žice.",
+   "exists": true
+  },
+  {
+   "line": 139,
+   "src": "img/04-arago-1824.svg",
+   "alt": "Arago, 1824: bakren disk se vrti, obešena magnetna igla gre za njim.",
+   "exists": true
+  },
+  {
+   "line": 163,
+   "src": "img/05-dve-zici-1825.svg",
+   "alt": "Faraday, 28. november 1825: dve vzporedni žici, ločeni s papirjem. V eni tok iz baterije, druga na galvanometru. Igla miruje.",
+   "exists": true
+  },
+  {
+   "line": 180,
+   "src": "img/06-miza-1831.svg",
+   "alt": "Miza, avgust 1831: baterija, izolirana bakrena žica, mehko železo, jekleni magneti, galvanometer.",
+   "exists": true
+  },
+  {
+   "line": 221,
+   "src": "img/07-obroc-1831.svg",
+   "alt": "29. avgust 1831: obroč iz mehkega železa, tuljava A z baterijo in stikalom, ločena tuljava B z galvanometrom.",
+   "exists": true
+  },
+  {
+   "line": 222,
+   "src": "img/08-sunka.svg",
+   "alt": "Kaj je pokazala igla: sunek ob vklopu, nič med stalnim tokom, sunek v nasprotno smer ob izklopu.",
+   "exists": true
+  },
+  {
+   "line": 261,
+   "src": "img/09-magnet-v-tuljavo-1831.svg",
+   "alt": "17. oktober 1831: magnet potisneš noter, igla v eno smer; magnet miruje, igla na ničli; izvlečeš ga, igla v drugo smer.",
+   "exists": true
+  },
+  {
+   "line": 293,
+   "src": "img/10-disk-1831.svg",
+   "alt": "28. oktober 1831: bakren disk se vrti med poloma velikega magneta, drsna stika na osi in na robu vodita tok do galvanometra.",
+   "exists": true
+  }
+ ],
+ "problems": [
+  {
+   "where": "index.html:94 s3.q",
+   "what": "game.json question differs from page question: json \"Ørstedova sila igle ne vleče k žici, ampak jo obrne počez in igla obstane. Kako bi iz te sile naredil napravo, v kateri se žica ali magnet giblje neprestano, dokler teče tok?\" / page \"Ørstedova sila igle ne vleče k žici in je ne odriva. Iglo samo obrne, potem igla obstane. Kako bi iz te sile naredil napravo, v kateri se žica ali magnet giblje ves čas, dokler teče tok?\""
+  },
+  {
+   "where": "index.html:146 s10.q",
+   "what": "game.json question differs from page question: json \"December 1824: kako bi s tem, kar imaš (baterija, žice, tuljave, jekleni magneti, galvanometer), preizkusil, ali magnetizem ali tok v eni žici ustvari tok v drugi žici? Kaj pričakuješ, da pokaže igla?\" / page \"Kako bi preizkusil, ali magnetizem, ali tok v eni žici, ustvari tok v drugi žici? Opiši postavitev in povej, kaj bo po tvojem pokazala igla, če imaš prav.\""
+  },
+  {
+   "where": "index.html:186 s16.q",
+   "what": "game.json question differs from page question: json \"Avgust 1831: kako s tem, kar je na mizi (baterija, izolirana bakrena žica, mehko železo, jekleni magneti, galvanometer), iz magnetizma dobiš tok, ki ga pokaže igla?\" / page \"Iz magnetizma dobi električni tok, ki ga lahko izmeriš.\""
+  },
+  {
+   "where": "index.html:244 s23.q",
+   "what": "game.json question differs from page question: json \"Samo paličast jeklen magnet in dolga tuljava na galvanometru, brez baterije: kako dobiš tok in kaj pokaže igla?\" / page \"Kako iz tega dobiš tok? Kaj bo po tvojem pokazala igla?\""
+  },
+  {
+   "where": "index.html:276 s28.q",
+   "what": "game.json question differs from page question: json \"Kako dobiš tok, ki teče neprekinjeno, ne le sunek? In zakaj vrteč se bakren disk (Arago, 1824) vleče magnetno iglo?\" / page \"Kako dobiš tok, ki teče ves čas, dokler hočeš, ne samo sunek? Pomisli tudi na Aragov disk: zakaj vrteč se bakren disk vleče iglo?\""
+  }
+ ],
+ "challenges": [
+  {
+   "id": "s3",
+   "title": "Izziv: sila, ki ne vleče naravnost",
+   "question": "Izziv Sila, ki ne vleče naravnost Pri ponavljanju poskusov opazuješ iglo od blizu: nad žico, ob njej in pod njo. Kaj bi naredil ti, zdaj, s tem, kar imaš? Ørstedova sila igle ne vleče k žici in je ne odriva. Iglo samo obrne, potem igla obstane. Kako bi iz te sile naredil napravo, v kateri se žica ali magnet giblje ves čas , dokler teče tok? Imaš baterijo, bakreno žico, majhne paličaste magnete, steklene posode in vse, kar ima kemijski laboratorij leta 1821. Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "Sila med polom magneta in žico deluje v krogu okoli žice: pol bi rad krožil okoli žice (in žica okoli pola)."
+    },
+    {
+     "k": "k2",
+     "text": "Pri igli se učinka obeh polov izravnata, zato se igla samo obrne; delovati mora samo en pol (drugega umakni daleč, npr. pod gladino ali v podstavek)."
+    },
+    {
+     "k": "k3",
+     "text": "Gibljivi del mora biti prosto vrtljiv in ves čas v električnem stiku, npr. konec žice v živem srebru."
+    },
+    {
+     "k": "k4",
+     "text": "Rezultat: žica kroži okoli magneta ali magnet okoli žice, neprekinjeno, dokler teče tok."
+    }
+   ],
+   "hints": [
+    {
+     "id": "s4",
+     "tier": 1,
+     "text": "Namig 1 Glej samo en konec igle, severni pol. Če ga v mislih neseš okoli žice, nad njo, ob njej in pod njo, kam ga sila potiska na vsakem mestu?",
+     "author_covers": null
+    },
+    {
+     "id": "s5",
+     "tier": 2,
+     "text": "Namig 2 Igla ima dva pola. Sila ju potiska v nasprotni smeri, zato se igla samo obrne in obstane. Kako bi dosegel, da na žico deluje samo en pol?",
+     "author_covers": null
+    },
+    {
+     "id": "s6",
+     "tier": 3,
+     "text": "Namig 3 Žica, ki se giblje, mora biti ves čas povezana z baterijo, tudi medtem ko kroži. Kateri prevodnik v tvojem laboratoriju je tekoč?",
+     "author_covers": null
+    }
+   ],
+   "reveal": "Razkritje 3. september 1821 Faraday je pri ponavljanju poskusov ugotovil, da pol magneta ob žici ne išče mesta, kjer bi miroval. Rad bi šel okoli žice. Igla se samo obrne, ker oba pola vlečeta v nasprotni smeri. V ponedeljek, 3. septembra 1821, je to izkoristil. Postavil je magnet, nalil živo srebro in nad njim obesil žico tako, da je njen spodnji konec segal v živo srebro. Ko je stekel tok, je žica začela krožiti okoli pola magneta. Krožila je, dokler je tekel tok. V dnevnik je zapisal: »revolution of the wire round the pole of the magnet«. Naslednji dan je napravo izboljšal: globoka posoda, "
+  },
+  {
+   "id": "s10",
+   "title": "Izziv: zasnuj poskus",
+   "question": "Izziv Zasnuj poskus Je december 1824. Imaš baterijo, žice, tuljave, jeklene magnete in galvanometer: magnetno iglo v tuljavi, ki pokaže tok. Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako bi preizkusil, ali magnetizem, ali tok v eni žici, ustvari tok v drugi žici? Opiši postavitev in povej, kaj bo po tvojem pokazala igla, če imaš prav. Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "Ločen tokokrog z galvanometrom brez lastne baterije: vsak tok v njem bi bil nov."
+    },
+    {
+     "k": "k2",
+     "text": "Vir magnetizma čim bliže temu tokokrogu: magnet v tuljavi ali ob njej, ali dve vzporedni žici, v eni tok iz baterije."
+    },
+    {
+     "k": "k3",
+     "text": "Pričakovanje tistega časa (tudi Faradayevo): stalen odklon igle, dokler sta magnet ali tok blizu, po zgledu Ørsteda."
+    }
+   ],
+   "hints": [
+    {
+     "id": "s11",
+     "tier": 1,
+     "text": "Namig 1 Obrni Ørstedov poskus. Ørsted je k igli postavil žico s tokom. Kaj postaviš k čemu, če iščeš pot v drugo smer?",
+     "author_covers": null
+    },
+    {
+     "id": "s12",
+     "tier": 2,
+     "text": "Namig 2 Galvanometer mora biti v tokokrogu, ki nima svoje baterije. Kaj vse lahko postaviš tik ob tak tokokrog ali vanj?",
+     "author_covers": null
+    }
+   ],
+   "reveal": "Razkritje Igla miruje (1824–1828) 28. decembra 1824 je Faraday poskusil prvič. Magnet je postavil v tuljavo, ki je bila v tokokrogu z baterijo in galvanometrom. Pričakoval je, da bo magnet tok oslabil. Učinka ni bilo. 28. novembra 1825 je položil dve žici vzporedno, ločeni le z dvema plastema papirja. Skozi eno je spustil tok iz baterije, drugo je povezal z galvanometrom. Zapisal je, da nikakor ni mogel pokazati nobenega učinka. Poskusil je še 2. decembra 1825 in 22. aprila 1828. Spet nič. Zakaj tako: Faraday je posnemal Ørsteda. Ørstedov učinek traja, dokler teče tok, zato je tudi on iskal st"
+  },
+  {
+   "id": "s16",
+   "title": "Izziv: tok iz magnetizma",
+   "question": "Izziv Tok iz magnetizma Kaj bi naredil ti, zdaj, s tem, kar imaš? Iz magnetizma dobi električni tok, ki ga lahko izmeriš. Imaš samo to, kar je bilo leta 1831. Ni elektronike in ni ojačevalnikov; edino merilo je igla. Ne veš, ali bo učinek močan ali komaj viden. Vsi poskusi do zdaj, tvoji in tuji, so pokazali iglo, ki miruje. Povej, kaj bi postavil, kaj bi naredil in kam bi gledal. Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "Močnejši vir magnetizma: tuljava s tokom na mehkem železu (elektromagnet) ali magnetizem, zbran v železu."
+    },
+    {
+     "k": "k2",
+     "text": "Občutljivejša zaznava: veliko ovojev v tuljavi, ki vodi do galvanometra, dobra izolacija, galvanometer dovolj daleč, da ga magnet ne moti, a da ga vidiš."
+    },
+    {
+     "k": "k3",
+     "text": "Iglo je treba gledati MED dogajanjem, ob vklopu, izklopu ali premiku, ne po njem: učinek je kratek."
+    },
+    {
+     "k": "k4",
+     "text": "Jedro: tok nastane ob SPREMEMBI magnetizma; stalno stanje ne da ničesar; ob vklopu in izklopu je smer nasprotna."
+    }
+   ],
+   "hints": [
+    {
+     "id": "s17",
+     "tier": 1,
+     "text": "Namig 1 Kako bi v tem laboratoriju dobil najmočnejši magnetizem, kar ga zmoreš? Na mizi nimaš samo jeklenih magnetov.",
+     "author_covers": null
+    },
+    {
+     "id": "s18",
+     "tier": 2,
+     "text": "Namig 2 Ørsted: tok naredi magnetizem, dokler teče. Kaj, če pot nazaj ne deluje v stanju, ampak v trenutku, ko se stanje spremeni? Kdaj bi moral gledati iglo?",
+     "author_covers": null
+    },
+    {
+     "id": "s19",
+     "tier": 3,
+     "text": "Namig 3 Na isti kos mehkega železa navij dve ločeni tuljavi. Prvo prek stikala poveži z baterijo, drugo z galvanometrom. Kaj vidiš v trenutku, ko stikalo vklopiš, in ko ga izklopiš?",
+     "author_covers": null
+    }
+   ],
+   "reveal": "Razkritje 29. avgust 1831 29. avgusta 1831 je Faraday začel nov dnevnik poskusov. Dal je narediti obroč iz mehkega železa, debel 7/8 palca, z zunanjim premerom 6 palcev. Na eno stran obroča, stran A, je navil tri žice, vsako dolgo približno 24 čevljev. Na drugo stran, stran B, je navil približno 60 čevljev žice. Tuljavi se nista dotikali. Uporabil je žico, kakršno so izdelovali za ženske klobučke; navijanje je po oceni Royal Institution trajalo okoli deset delovnih dni. Konca strani B je povezal z dolgo žico, ki je tri čevlje stran tekla čez magnetno iglo. Nato je stran A priklopil na baterijo"
+  },
+  {
+   "id": "s23",
+   "title": "Izziv: samo magnet in tuljava",
+   "question": "Izziv Samo magnet in tuljava Imaš paličast jeklen magnet in dolgo tuljavo, navito na papirnat valj. Konca tuljave vodita do galvanometra. Baterije ne uporabiš. Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako iz tega dobiš tok? Kaj bo po tvojem pokazala igla? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "Spremembo magnetizma v tuljavi dobiš z gibanjem: magnet hitro potisneš v tuljavo ali ga izvlečeš."
+    },
+    {
+     "k": "k2",
+     "text": "Ob potiskanju noter in vlečenju ven igla skoči v nasprotni smeri."
+    },
+    {
+     "k": "k3",
+     "text": "Ko magnet miruje, v tuljavi ali zunaj nje, igla ne kaže ničesar."
+    }
+   ],
+   "hints": [
+    {
+     "id": "s24",
+     "tier": 1,
+     "text": "Namig 1 Pri obroču je igla trznila samo ob vklopu in izklopu. Kako bi magnetizem v tuljavi »vklopil« in »izklopil«, če magneta ne moreš izklopiti?",
+     "author_covers": null
+    },
+    {
+     "id": "s25",
+     "tier": 2,
+     "text": "Namig 2 Magnetizem v tuljavi se spremeni tudi, če magnet premakneš.",
+     "author_covers": null
+    }
+   ],
+   "reveal": "Razkritje 17. oktober 1831 Prvi korak je naredil že 24. septembra. Železni valj s tuljavo je postavil med pola dveh paličastih magnetov. Vsakič, ko je magnetni stik sklenil ali prekinil, je igla trznila. V dnevnik je zapisal: »distinct conversion of magnetism into electricity«. Še vedno pa je potreboval železo in stik. 17. oktobra 1831, peti dan poskusov, je Faraday vzel valjast paličast magnet, debel 3/4 palca in dolg 8 1/2 palca, ter tuljavo z 220 čevlji žice, povezano z galvanometrom. En konec magneta je vstavil v tuljavo, nato pa ga je hitro potisnil do konca. Igla se je premaknila. Ko je "
+  },
+  {
+   "id": "s28",
+   "title": "Izziv: tok, ki teče ves čas",
+   "question": "Izziv Tok, ki teče ves čas Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako dobiš tok, ki teče ves čas, dokler hočeš, ne samo sunek? Pomisli tudi na Aragov disk: zakaj vrteč se bakren disk vleče iglo? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "Neprekinjen tok zahteva neprekinjeno spreminjanje: gibanje, ki se ne konča, na primer vrtenje."
+    },
+    {
+     "k": "k2",
+     "text": "Prevodnik se vrti med poloma magneta, tako da gre ves čas mimo pola: bakren disk med poloma."
+    },
+    {
+     "k": "k3",
+     "text": "Tok pobereš z drsnima stikoma, na osi in na robu diska."
+    },
+    {
+     "k": "k4",
+     "text": "Aragov pojav: v vrtečem se bakrenem disku pod magnetom tečejo tokovi, ki s svojim magnetizmom vlečejo iglo."
+    }
+   ],
+   "hints": [
+    {
+     "id": "s29",
+     "tier": 1,
+     "text": "Namig 1 Sunek nastane ob spremembi. Katero gibanje se nikoli ne konča, naprava pa ostane na istem mestu?",
+     "author_covers": null
+    },
+    {
+     "id": "s30",
+     "tier": 2,
+     "text": "Namig 2 Arago je bakren disk vrtel pod iglo. Kaj, če bi ga vrtel med poloma magneta in se ga z žico dotaknil na dveh mestih?",
+     "author_covers": null
+    }
+   ],
+   "reveal": "Razkritje 28. oktober 1831 28. oktobra 1831, deveti dan poskusov, je Faraday med pola velikega magneta Royal Society postavil bakren disk s premerom 12 palcev in debelino okoli 1/5 palca, na medeninasti osi. Rob in os je prevlekel z živim srebrom. Eno žico do galvanometra je ohlapno ovil okoli osi, drug prevodnik je z roko pritiskal na rob diska med poloma. Galvanometer je bil preprost: dve namagneteni šivanki na bilki suhe trave, obešeni na svileno nit. Ko se je disk hitro vrtel, je igla skočila za 90° ali več. Pri skrbnejši izvedbi je ves čas vrtenja stala odklonjena skoraj za 45°. Faraday j"
+  }
+ ]
+}

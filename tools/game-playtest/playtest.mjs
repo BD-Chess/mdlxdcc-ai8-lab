@@ -1,25 +1,32 @@
 // Requires Playwright (`require('playwright')`): preinstalled in the cloud container; elsewhere `npm i --no-save playwright`.
 // Browser playtest of a game page with the real guide handler and browser assets and a
 // deterministic mock agent. No model or network calls. Usage:
-//   node tools/game-playtest/playtest.mjs <slug> <outDir> [width=1280] [--log-fails]
+//   node tools/game-playtest/playtest.mjs <slug> <outDir> [width=1280] [--log-fails] [--g3]
 // --log-fails makes the game log start fail like the production database before the
 // slug migration (game_sessions_slug_check), so the player-facing behavior can be observed.
+// --g3 adds player moves shaped like the observed Dayton G3 replay excerpt
+// (tests/fixtures/game-r35-playtest.observed.json, moves 7/23/26 and the R3.5 hint-mention
+// cases) and records whether the server kept its rules: a question after reading, an
+// off-topic question inside a challenge, »… Namig prosim.« at the end of a question, and a
+// hint that is only mentioned. The mock answers player questions with one neutral line.
 import { createServer } from 'node:http';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { makeHandler } from '../../functions/game-guide.mjs';
-import { loadGame } from '../../functions/lib/game-guide/runtime.mjs';
+import { loadGame, playerQuestion } from '../../functions/lib/game-guide/runtime.mjs';
 
 const { chromium } = createRequire(import.meta.url)('playwright');
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const [slug = 'tesla1888', outDir = path.join(root, 'evidence', 'playtest'), widthArg = '1280'] = process.argv.slice(2).filter(a => !a.startsWith('--'));
-const width = Number(widthArg), logFails = process.argv.includes('--log-fails');
+const width = Number(widthArg), logFails = process.argv.includes('--log-fails'), g3 = process.argv.includes('--g3');
+// Runs at the same width must not overwrite each other's screenshots and JSON.
+const tag = logFails ? '-logfail' : g3 ? '-g3' : '', ANSWER = 'Tega podatka v zgodbi ni.';
 await mkdir(outDir, { recursive: true });
 const gameJson = JSON.parse(await readFile(path.join(root, 'public/game', slug, 'game.json'), 'utf8'));
 const byId = Object.fromEntries(gameJson.steps.map(s => [s.id, s]));
-const report = { slug, width, logFails, turns: [], modelRounds: 0, logEvents: 0, logStartErrors: 0, console: [], pageErrors: [], badResponses: [], screenshots: [], findings: [] };
+const report = { slug, width, logFails, g3, turns: [], g3Probes: [], shots: [], modelRounds: 0, logEvents: 0, logStartErrors: 0, console: [], pageErrors: [], badResponses: [], screenshots: [], findings: [] };
 
 const localFetch = async url => {
   const rel = new URL(url).pathname.replace(/^\/+/, '');
@@ -48,8 +55,9 @@ const handler = makeHandler({
     const message = input.filter(m => m.role === 'user' && typeof m.content === 'string')
       .map(m => { try { return JSON.parse(m.content).message; } catch { return null; } }).filter(Boolean).at(-1) || '';
     let text = '', calls = [];
+    const asked = playerQuestion(message);
     const use = (name, args) => calls.push({ name, arguments: args, call_id: `call_${++call}` });
-    if (results.some(r => r.visible === true && !r.already_open)) text = '';
+    if (results.some(r => r.visible === true && !r.already_open)) text = asked ? ANSWER : '';
     else if (last && last.ok === false) text = 'Razumem. Povej mi svojo zamisel.';
     else if (ctx.sealed_key) {
       const id = ctx.sealed_key.challenge, step = byId[id];
@@ -58,7 +66,7 @@ const handler = makeHandler({
       else if (/namig/i.test(message) && hints.length) use('open_step', { id: hints[0].id });
       else if (/^Moja zamisel/i.test(message) && !ctx.learning.asked.includes(id)) use('ask_understanding', { step: id, idea: step.key_ideas[0], question: 'Zakaj bi to delovalo?' });
       else if (/^Razlaga/i.test(message)) use('assess_challenge', { step: id, path: 'historical', achieved: step.key_ideas, why: 'Mehanizem je razložen.', advantages: [] });
-      else text = 'Kaj predlagaš?';
+      else text = asked ? `${ANSWER} Kaj predlagaš?` : 'Kaj predlagaš?';
     } else if (ctx.next) use('open_step', { id: ctx.next.id });
     else text = 'Igra je končana.';
     onText(text);
@@ -89,7 +97,18 @@ page.on('console', m => { if (m.type() === 'error') report.console.push(m.text()
 page.on('pageerror', e => report.pageErrors.push(String(e.message).slice(0, 200)));
 page.on('response', r => { if (r.status() >= 400) report.badResponses.push(`${r.status()} ${r.url().replace(base, '')}`); });
 page.on('request', r => { if (!r.url().startsWith(base) && !r.url().startsWith('data:')) report.badResponses.push('external ' + r.url()); });
-const shot = async name => { const file = path.join(outDir, `${slug}-${width}-${name}.jpg`); await page.screenshot({ path: file, type: 'jpeg', quality: 70 }); report.screenshots.push(path.basename(file)); };
+const measure = () => page.evaluate(() => {
+  const panel = document.getElementById('game-guide')?.getBoundingClientRect(), body = document.getElementById('gg-body')?.getBoundingClientRect();
+  const reply = [...document.querySelectorAll('.gg-message[data-role=assistant]')].at(-1)?.getBoundingClientRect();
+  // Share of the guide's latest reply that the player can see without scrolling inside the panel.
+  const seen = reply && body ? Math.max(0, Math.min(reply.bottom, body.bottom, innerHeight) - Math.max(reply.top, body.top, 0)) : null;
+  return { overflow: document.documentElement.scrollWidth - innerWidth, panelShare: panel && innerWidth < 900 ? Math.round(100 * Math.min(panel.height, innerHeight) / innerHeight) : null,
+    replySeenPct: seen == null ? null : Math.round(100 * seen / Math.max(1, reply.height)) };
+});
+const shot = async name => {
+  const file = path.join(outDir, `${slug}-${width}${tag}-${name}.jpg`); await page.screenshot({ path: file, type: 'jpeg', quality: 70 });
+  report.screenshots.push(path.basename(file)); report.shots.push({ name, ...(await measure()) });
+};
 const visible = () => page.evaluate(() => [...document.querySelectorAll('section.g-step')].filter(s => !s.hidden).map(s => s.id));
 const lastAssistant = () => page.evaluate(() => [...document.querySelectorAll('.gg-message[data-role=assistant]')].map(m => m.textContent.trim()).at(-1) || '');
 async function waitIdle() {
@@ -102,6 +121,12 @@ async function send(text) {
   const after = await visible();
   const turn = { send: text, opened: after.filter(id => !before.includes(id)), reply: (await lastAssistant()).slice(0, 220), ms: Date.now() - t0 };
   report.turns.push(turn); return turn;
+}
+// One G3-shaped player move: what was sent, what opened, how many model rounds it took, and whether the rule held.
+async function probe(kind, at, text, expect) {
+  const rounds = report.modelRounds, t = await send(text);
+  report.g3Probes.push({ kind, at, send: text, opened: t.opened, reply: t.reply, modelRounds: report.modelRounds - rounds, ok: expect(t) });
+  return t;
 }
 
 await page.goto(`${base}/game/${slug}/`, { waitUntil: 'load' });
@@ -116,23 +141,46 @@ report.statusAfterStart = await page.textContent('#gg-status').catch(() => null)
 await shot('02-after-start');
 
 const challenges = gameJson.steps.filter(s => s.kind === 'challenge');
-let guard = 0, shotChallenge = false;
+let guard = 0, shotChallenge = false; const probed = new Set();
 while (guard++ < 160) {
   const vis = await visible();
   if (vis.includes(gameJson.steps.at(-1).id)) break;
   const active = challenges.find(c => vis.includes(c.id) && !gameJson.steps.some(s => s.kind === 'reveal' && s.for === c.id && vis.includes(s.id)));
+  if (!active && g3 && !probed.has('S')) {
+    probed.add('S'); // G3 move 7: »Ok, prebral.« plus a question about the story; expect the next step and an answer.
+    const t = await probe('S', vis.at(-1), 'Ok, prebral. Zakaj pa tega ni odkril že kdo pred njim?', t => t.opened.length === 1 && t.reply.startsWith(ANSWER));
+    if (t.opened.length) continue;
+  }
   if (!active) { const t = await send('Naprej.'); if (!t.opened.length) { const t2 = await send('Prebral sem, odpri naslednji korak.'); if (!t2.opened.length) { report.findings.push(`stuck after ${vis.at(-1)}`); break; } } continue; }
   const hints = gameJson.steps.filter(s => s.kind === 'hint' && s.for === active.id);
   const openHints = hints.filter(h => vis.includes(h.id));
+  if (g3 && !openHints.length && !probed.has('A' + active.id)) {
+    probed.add('A' + active.id); // G3 move 23: an off-topic question inside a challenge; expect an answer and no step.
+    await probe('A', active.id, 'Zanimivo. Koliko je pa to takrat stalo?', t => !t.opened.length && t.reply.startsWith(ANSWER)); continue;
+  }
+  if (g3 && openHints.length === 1 && hints.length > 1 && !probed.has('C' + active.id)) {
+    probed.add('C' + active.id); // R3.5: a hint that is only mentioned is not a request; the mock tries anyway, the server must refuse.
+    await probe('C', active.id, 'Iz prvega namiga razumem samo del.', t => !t.opened.length); continue;
+  }
+  if (g3 && !openHints.length) {
+    // G3 move 26: »… Namig prosim.« at the end of a question opens exactly the first hint.
+    const t = await probe('B', active.id, 'Kako naj pa to naredim, saj nisem fizik? Namig prosim.', t => t.opened.join() === hints[0].id);
+    if (!t.opened.length) report.findings.push(`hint request opened nothing at ${active.id}`);
+    continue;
+  }
   if (openHints.length < hints.length) { const t = await send('Namig, prosim.'); if (!t.opened.length) { report.findings.push(`hint request opened nothing at ${active.id}`); } continue; }
   if (!shotChallenge) { await page.locator('#' + hints.at(-1).id).scrollIntoViewIfNeeded(); await shot('03-challenge-hints'); }
   const a = await send(`Moja zamisel: ${active.key_ideas[0]}`);
   const b = await send(`Razlaga: ${active.key_ideas.join(' ')}`);
   if (!shotChallenge) { await shot('04-assessed'); }
-  let r = await send('Naprej.');
-  if (!r.opened.length) r = await send('Pokaži razkritje.');
-  if (!r.opened.length) { report.findings.push(`reveal did not open for ${active.id} (replies: ${a.reply} | ${b.reply} | ${r.reply})`); break; }
-  if (!shotChallenge) { await shot('05-reveal'); shotChallenge = true; }
+  // The server may open the reveal in the assessment turn already; only then is »Naprej.« the next step,
+  // so check the reveal itself instead of "something opened".
+  const reveal = gameJson.steps.find(s => s.kind === 'reveal' && s.for === active.id).id;
+  let r = b;
+  if (!(await visible()).includes(reveal)) { r = await send('Naprej.'); if (!r.opened.includes(reveal)) r = await send('Pokaži razkritje.'); }
+  if (!(await visible()).includes(reveal)) { report.findings.push(`reveal did not open for ${active.id} (replies: ${a.reply} | ${b.reply} | ${r.reply})`); break; }
+  (report.revealOpenedBy ??= {})[active.id] = r.send.split(':')[0];
+  if (!shotChallenge) { await page.locator('#' + reveal).scrollIntoViewIfNeeded(); await shot('05-reveal'); shotChallenge = true; }
 }
 await page.waitForTimeout(300);
 const final = await visible();
@@ -142,12 +190,23 @@ report.finalReply = await lastAssistant();
 report.logInfoEnd = await page.textContent('#gg-log-info').catch(() => null);
 report.statusEnd = await page.textContent('#gg-status').catch(() => null);
 report.cardLines = (report.finalReply.match(/Kartica/g) || []).length;
-report.layout = await page.evaluate(() => ({ vw: innerWidth, sw: document.documentElement.scrollWidth,
-  brokenImages: [...document.images].filter(i => i.complete && i.naturalWidth === 0).map(i => i.getAttribute('src')),
-  imgNoAlt: [...document.images].filter(i => !i.hasAttribute('alt')).map(i => i.getAttribute('src')) }));
+// Lazy images that were never scrolled into view would pass a complete/naturalWidth check
+// unloaded; load every image first, then check.
+report.layout = await page.evaluate(async () => {
+  const images = [...document.images];
+  await Promise.all(images.map(i => { i.loading = 'eager'; return Promise.race([i.decode().catch(() => { }), new Promise(r => setTimeout(r, 8000))]); }));
+  return { vw: innerWidth, sw: document.documentElement.scrollWidth, images: images.length,
+    brokenImages: images.filter(i => !i.complete || i.naturalWidth === 0).map(i => i.getAttribute('src')),
+    imgNoAlt: images.filter(i => !(i.getAttribute('alt') || '').trim()).map(i => i.getAttribute('src')) };
+});
+const ms = report.turns.map(t => t.ms).filter(Number.isFinite).sort((a, b) => a - b);
+report.turnMs = { count: ms.length, median: ms[ms.length >> 1] ?? null, max: ms.at(-1) ?? null };
 await shot('06-end');
-await page.screenshot({ path: path.join(outDir, `${slug}-${width}-full.jpg`), type: 'jpeg', quality: 55, fullPage: true }).catch(() => { });
-await writeFile(path.join(outDir, `${slug}-${width}${logFails ? '-logfail' : ''}.json`), JSON.stringify(report, null, 1));
+await page.screenshot({ path: path.join(outDir, `${slug}-${width}${tag}-full.jpg`), type: 'jpeg', quality: 55, fullPage: true }).catch(() => { });
+await writeFile(path.join(outDir, `${slug}-${width}${tag}.json`), JSON.stringify(report, null, 1));
 console.log(JSON.stringify({ slug, width, logFails, turns: report.turns.length, modelRounds: report.modelRounds, allStepsOpened: report.allStepsOpened, missing: report.missingSteps.length,
-  cardLines: report.cardLines, findings: report.findings, console: report.console.length, pageErrors: report.pageErrors.length, bad: report.badResponses.length, overflow: report.layout.sw - report.layout.vw, logInfo: report.logInfoAfterStart }));
+  cardLines: report.cardLines, findings: report.findings, console: report.console.length, pageErrors: report.pageErrors.length, bad: report.badResponses.length,
+  overflow: Math.max(report.layout.sw - report.layout.vw, ...report.shots.map(s => s.overflow)), images: report.layout.images, broken: report.layout.brokenImages.length, noAlt: report.layout.imgNoAlt.length,
+  replySeenPct: report.shots.map(s => s.replySeenPct), panelSharePct: report.shots.some(s => s.panelShare != null) ? Math.max(...report.shots.map(s => s.panelShare ?? 0)) : null, turnMs: report.turnMs,
+  ...(g3 ? { g3: `${report.g3Probes.filter(p => p.ok).length}/${report.g3Probes.length}` } : {}), logInfo: report.logInfoAfterStart }));
 await browser.close(); server.close();

@@ -1,0 +1,343 @@
+{
+ "slug": "navierstokes1845",
+ "steps": 31,
+ "sections": 31,
+ "images": [
+  {
+   "line": 86,
+   "src": "img/euler.jpg",
+   "alt": "Portret Leonharda Eulerja v modro črtasti halji in s svetlim turbanom.",
+   "exists": true
+  },
+  {
+   "line": 115,
+   "src": "img/01-popolna-tekocina.svg",
+   "alt": "Tokovnice popolne tekočine okoli okroglega telesa so pred njim in za njim zrcalno enake; puščici tlaka spredaj in zadaj sta enako dolgi, upor je nič. Desno manjša slika resnične vode: za telesom nastane sled z vrtinci.",
+   "exists": true
+  },
+  {
+   "line": 116,
+   "src": "img/02-plasti-strig.svg",
+   "alt": "Tekočina med mirujočo spodnjo ploščo in zgornjo ploščo, ki se giblje s hitrostjo V. Puščice hitrosti enakomerno rastejo od nič ob spodnji plošči do V ob zgornji; plasti drsijo druga ob drugi.",
+   "exists": true
+  },
+  {
+   "line": 152,
+   "src": "img/03-kocka-sile.svg",
+   "alt": "Levo plasti tekočine, katerih hitrost z višino narašča vse hitreje. Desno povečana kocka vode: zgoraj jo hitrejša plast vleče naprej z daljšo puščico, spodaj jo počasnejša plast zadržuje s krajšo puščico; v kocki puščica razlike.",
+   "exists": true
+  },
+  {
+   "line": 153,
+   "src": "img/spomin-1827.jpg",
+   "alt": "Prva stran tiskanega spisa v francoščini z naslovom Mémoire sur les lois du mouvement des fluides, avtor M. Navier, in začetkom poglavja I. Notions préliminaires.",
+   "exists": true
+  },
+  {
+   "line": 163,
+   "src": "img/saint-venant.jpg",
+   "alt": "Gravura: starejši moški z belo brado v ovalnem okvirju, v uniformi z vezenino; spodaj napis Barré de Saint-Venant.",
+   "exists": true
+  },
+  {
+   "line": 186,
+   "src": "img/04-gibanje-delcka.svg",
+   "alt": "Trije prikazi majhnega kvadratka tekočine, črtkano prej, polno potem: premik brez spremembe oblike, vrtenje okoli središča in deformacija, pri kateri se kvadratek v eni diagonali raztegne, v drugi stisne.",
+   "exists": true
+  },
+  {
+   "line": 196,
+   "src": "img/stokes.jpg",
+   "alt": "Fotografija Georgea Gabriela Stokesa v temni halji, naslonjenega na mizo; spodaj njegov podpis.",
+   "exists": true
+  },
+  {
+   "line": 219,
+   "src": "img/05-profil-cev.svg",
+   "alt": "Vzdolžni prerez cevi s puščicami hitrosti: ob stenah je hitrost nič, v sredini največja, konice puščic ležijo na paraboli. Levo višji, desno nižji tlak. Spodaj: pretok je sorazmeren razliki tlakov in četrti potenci polmera.",
+   "exists": true
+  },
+  {
+   "line": 246,
+   "src": "img/06-nihalo-zrak.svg",
+   "alt": "Nihalo z majhno kroglico, ki niha v zraku, in povečava: tokovnice zraka okoli kroglice pri počasnem gibanju so spredaj in zadaj zrcalno enake. Spodaj Stokesov zakon: upor je 6 pi krat viskoznost krat polmer krat hitrost.",
+   "exists": true
+  },
+  {
+   "line": 266,
+   "src": "img/07-zogica-sled.svg",
+   "alt": "Tok z leve okoli dveh žogic. Zgoraj gladka: tok se odlepi pred najširšo točko, sled za njo je široka. Spodaj žogica z jamicami: tok se odlepi šele za najširšo točko, sled je ožja.",
+   "exists": true
+  },
+  {
+   "line": 278,
+   "src": "img/reynolds-1883.jpg",
+   "alt": "Stran iz Reynoldsovega članka z angleškim besedilom in tremi risbami steklene cevi z lijakastim vstopom: barvilo v ravni črti, barvilo, ki se naenkrat razmeša, in razmešano barvilo, razpadlo v vrtince.",
+   "exists": true
+  }
+ ],
+ "problems": [
+  {
+   "where": "index.html:253 s28.q",
+   "what": "game.json question differs from page question: json \"Zakaj hrapava žogica leti dlje kot gladka? Kaj se spremeni v toku okoli nje?\" / page \"Bonus, neobvezno: Zakaj hrapava žogica leti dlje kot gladka? Kaj se spremeni v toku okoli nje?\""
+  }
+ ],
+ "challenges": [
+  {
+   "id": "s3",
+   "title": "Izziv: upor, ki ga ni",
+   "question": "Izziv Upor, ki ga ni Ob Seni gledaš čoln, ki ga konj vleče po kanalu. Ko konj obstane, čoln upočasni in obstane. Voda ga zavira. Kaj bi naredil ti, zdaj, s tem, kar imaš? Po Eulerjevih enačbah krogla, ki se enakomerno giblje skozi mirno vodo, ne čuti nobenega upora. Vsak čolnar ve, da to ni res. Zakaj račun da nič in kaj v enačbah manjka? Odgovor je lahko z besedami. Formule niso potrebne. Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "v popolni tekočini sosednja delčka drug na drugega delujeta samo s tlakom, pravokotno na stik; sile vzdolž stika (trenja med plastmi) ni"
+    },
+    {
+     "k": "k2",
+     "text": "pri gladkem obtekanju je tok spredaj in zadaj zrcalen, zato se tlak spredaj in zadaj izniči (d'Alembertov paradoks)"
+    },
+    {
+     "k": "k3",
+     "text": "v resnični tekočini plasti, ki drsijo druga ob drugi, druga drugo vlečejo (notranje trenje, viskoznost)"
+    },
+    {
+     "k": "k4",
+     "text": "trenje je odvisno od razlike hitrosti sosednjih plasti, ne od hitrosti same: tekočina, ki se giblje kot celota, nima trenja"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s4",
+     "tier": 1,
+     "text": "Namig 1 Primerjaj med in vodo. Kaj čutiš, ko z žlico počasi vlečeš skozi enega in drugo?",
+     "author_covers": [
+      "k3"
+     ]
+    },
+    {
+     "id": "s5",
+     "tier": 2,
+     "text": "Namig 2 Nariši tokovnice okoli krogle, spredaj in zadaj. Kje je tlak večji, če so slike spredaj in zadaj zrcalne?",
+     "author_covers": [
+      "k2"
+     ]
+    },
+    {
+     "id": "s6",
+     "tier": 3,
+     "text": "Namig 3 Kakšno silo lahko po Eulerju en delček vode da sosednjemu, in v katero smer? Ali ima voda v kozarcu na enakomerno vozečem vozu kakšno trenje?",
+     "author_covers": [
+      "k1",
+      "k4"
+     ]
+    }
+   ],
+   "reveal": "Razkritje Kar Euler izpusti V popolni tekočini sosednja delčka drug na drugega delujeta samo s tlakom, ki je vedno pravokoten na stik. Sile vzdolž stika, s katero bi hitrejša plast vlekla počasnejšo, ni. Okoli telesa, ki je spredaj in zadaj enako, je zato tudi tok spredaj in zadaj zrcalen. Tlak, ki telo potiska nazaj, se natančno izniči s tlakom, ki ga potiska naprej. To je d'Alembertov paradoks. V resnični vodi plasti, ki drsijo druga ob drugi, druga drugo vlečejo. Isaac Newton je to domneval že leta 1687 v drugi knjigi Principia : upor, ki nastane, ker tekočina ni popolnoma »spolzka«, je sor"
+  },
+  {
+   "id": "s9",
+   "title": "Izziv: trenje v enačbi",
+   "question": "Izziv Trenje v enačbi Kaj bi naredil ti, zdaj, s tem, kar imaš? Imaš Eulerjevo enačbo za majhen delček vode: masa krat pospešek je enako sili tlaka in teži. Kako bi dodal silo notranjega trenja? Od česa je odvisna in kakšno obliko ima v enačbi? Lahko razmišljaš o tankih plasteh, o majhni kocki vode ali o molekulah. Vse poti so dovoljene. Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "strižna sila med plastmi je sorazmerna s tem, kako hitro se hitrost spreminja čez plasti (razlika hitrosti na razdaljo), s konstanto snovi"
+    },
+    {
+     "k": "k2",
+     "text": "na delček deluje razlika sil na nasprotnih ploskvah, zato v enačbo pride sprememba te spremembe (drugi odvodi hitrosti)"
+    },
+    {
+     "k": "k3",
+     "text": "voda nima prednostne smeri, zato se prispevki vseh treh smeri seštejejo (vsota drugih odvodov, Laplaceov člen) z isto konstanto"
+    },
+    {
+     "k": "k4",
+     "text": "konstanto je treba izmeriti; za vsako tekočino je drugačna (voda, olje, zrak)"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s10",
+     "tier": 1,
+     "text": "Namig 1 Newton je leta 1687 domneval, da je upor med plastmi sorazmeren z razliko njihovih hitrosti. Kako bi to zapisal za dve tanki plasti, ki sta blizu skupaj?",
+     "author_covers": [
+      "k1"
+     ]
+    },
+    {
+     "id": "s11",
+     "tier": 2,
+     "text": "Namig 2 Na majhno kocko vode deluje strižna sila na zgornji in na spodnji ploskvi. Kaj ostane kocki, če sta sili enaki? Kaj, če nista?",
+     "author_covers": [
+      "k2"
+     ]
+    },
+    {
+     "id": "s12",
+     "tier": 3,
+     "text": "Namig 3 Isto velja za levo in desno ter za spredaj in zadaj. Kako združiš vse tri smeri, če nobena ni posebna?",
+     "author_covers": [
+      "k3"
+     ]
+    }
+   ],
+   "reveal": "Razkritje 18. marec 1822 18. marca 1822 je Navier na Akademiji prebral razpravo Mémoire sur les lois du mouvement des fluides . Molekulam v gibajoči se tekočini je dodal silo, ki je sorazmerna z razliko njihovih hitrosti in pada z razdaljo. Ko je seštel prispevke vseh sosed okoli delčka, je v Eulerjevi enačbi dobil nov člen: konstanto, pomnoženo z vsoto drugih odvodov hitrosti v vseh treh smereh. To je enačba, ki jo danes imenujemo Navier–Stokesova, za nestisljivo tekočino. Konstanto je Navier označil z ε. Ni ji določil vrednosti in je ni razumel kot strižno napetost; zanj je bila lastnost mol"
+  },
+  {
+   "id": "s15",
+   "title": "Izziv: enačba brez molekul",
+   "question": "Izziv Enačba brez molekul Kaj bi naredil ti, zdaj, s tem, kar imaš? Navierova konstanta izhaja iz sil med molekulami, ki jih nihče ni videl. Poisson je z drugačnimi domnevami o molekulah dobil enačbo z dvema konstantama. Ali lahko enačbo za trenje dobiš brez domnev o molekulah? Katere domneve so nujne? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "gibanje majhnega delčka razstaviš na premik, vrtenje kot celota in deformacijo (raztezanje, strig); trenje povzroča samo deformacija"
+    },
+    {
+     "k": "k2",
+     "text": "napetost je sorazmerna s hitrostjo deformacije (pri počasnih spremembah), podobno kot je pri trdnini napetost sorazmerna z deformacijo"
+    },
+    {
+     "k": "k3",
+     "text": "tekočina je enaka v vseh smereh, zato ostaneta največ dve konstanti: ena za strig in ena za hitro stiskanje"
+    },
+    {
+     "k": "k4",
+     "text": "pri nestisljivi tekočini druga konstanta ne vpliva; ostane Navierova enačba, njena konstanta pa je zdaj merljiva viskoznost"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s16",
+     "tier": 1,
+     "text": "Namig 1 Kaj vse lahko počne majhna kocka vode v toku? Naštej načine, kako se giblje in spreminja.",
+     "author_covers": [
+      "k1"
+     ]
+    },
+    {
+     "id": "s17",
+     "tier": 2,
+     "text": "Namig 2 Cauchy je pri trdninah vzel napetost sorazmerno z raztezkom. Kaj, če je pri tekočini napetost sorazmerna s hitrostjo raztezanja? In koliko konstant ostane, če je tekočina v vseh smereh enaka?",
+     "author_covers": [
+      "k2",
+      "k3"
+     ]
+    }
+   ],
+   "reveal": "Razkritje Saint-Venant 1843 in Stokes 1845 Leta 1843 je Saint-Venant v zapisku za Comptes Rendus izpeljal enačbe brez molekul. Strižna napetost je sorazmerna s hitrostjo drsenja plasti, s konstanto, ki jo lahko izmeriš. Dobil je Navierove enačbe in Navierju priznal prednost. Dve leti pozneje, 14. aprila 1845, je v Cambridgeu 25-letni George Gabriel Stokes prebral razpravo o notranjem trenju tekočin. Gibanje majhnega delčka je razstavil na premik, vrtenje kot celota in deformacijo. Trenje povzroča samo deformacija; delček, ki se samo vrti kot togo telo, se ne drgne. Vzel je napetost, ki je line"
+  },
+  {
+   "id": "s20",
+   "title": "Izziv: ob steni",
+   "question": "Izziv Ob steni Kaj bi naredil ti, zdaj, s tem, kar imaš? Enačba je, a da jo rešiš, potrebuješ še pogoj ob steni cevi ali telesa. Kaj se dogaja s tekočino tik ob steni? In s katerim poskusom bi preveril, ali imaš prav? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "ob trdni steni tekočina miruje glede na steno in ne drsi (pogoj brez zdrsa)"
+    },
+    {
+     "k": "k2",
+     "text": "v ravni ozki cevi je hitrost zato največja v sredini in nič ob steni (parabolični profil)"
+    },
+    {
+     "k": "k3",
+     "text": "pretok skozi ozko cev je sorazmeren s padcem tlaka in s četrto potenco polmera; to lahko izmeriš in primerjaš"
+    },
+    {
+     "k": "k4",
+     "text": "v širokih ceveh pri večjih hitrostih se napoved ne ujema, ker tok postane nemiren in vrtinčast; to je drug način toka"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s21",
+     "tier": 1,
+     "text": "Namig 1 Prah na krilih mlina na veter ostane, čeprav krila režejo zrak. Kaj to pove o zraku tik ob krilu?",
+     "author_covers": [
+      "k1"
+     ]
+    },
+    {
+     "id": "s22",
+     "tier": 2,
+     "text": "Namig 2 Če cev zožiš na polovico, kolikokrat manj vode steče pri istem tlaku? Kaj bi pomenil odgovor 16?",
+     "author_covers": [
+      "k2",
+      "k3"
+     ]
+    }
+   ],
+   "reveal": "Razkritje Pogoj, ki ga Stokes odloži Stokes je leta 1845 preizkusil pogoj, da tekočina ob steni miruje. V ravni cevi da hitrost, ki je največja v sredini in nič ob steni, ter pretok, sorazmeren s padcem tlaka in s četrto potenco polmera. Ko je rezultat primerjal s starimi meritvami v velikih ceveh in kanalih, se ni ujemal. Pogoj je zato odložil. Razlog je danes jasen: v velikih ceveh je bil tok nemiren, vrtinčast, in enačba za gladek tok zanj ne velja. Prav takrat sta v ozkih ceveh merila Gotthilf Hagen (1839) in Jean Léonard Marie Poiseuille (1838–1846). Poiseuille, zdravnik, ki ga je zanimal"
+  },
+  {
+   "id": "s25",
+   "title": "Izziv: počasna krogla",
+   "question": "Izziv Počasna krogla Kaj bi naredil ti, zdaj, s tem, kar imaš? Natančna merjenja nihal kažejo, da zrak nihalo zavira bolj, kot napove račun s popolno tekočino. Kako bi z novo enačbo ocenil upor majhne krogle, ki se počasi giblje skozi zrak ali vodo? Od česa je odvisen? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "pri zelo počasnem gibanju lahko vztrajnost tekočine zanemariš; ostane ravnovesje tlaka in trenja, enačba postane linearna"
+    },
+    {
+     "k": "k2",
+     "text": "upor je sorazmeren z viskoznostjo, polmerom in hitrostjo, ne s kvadratom hitrosti"
+    },
+    {
+     "k": "k3",
+     "text": "natančen račun da upor 6π × viskoznost × polmer × hitrost"
+    },
+    {
+     "k": "k4",
+     "text": "majhne kapljice zato padajo zelo počasi (končna hitrost raste s kvadratom polmera); zato oblaki lebdijo"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s26",
+     "tier": 1,
+     "text": "Namig 1 Pri zelo počasnem gibanju krogla vode ne meče pred sabo. Kateri del enačbe je tedaj majhen? Iz katerih količin potem sestaviš silo, če ima viskoznost enoto sila krat čas na ploščino?",
+     "author_covers": [
+      "k1",
+      "k2"
+     ]
+    }
+   ],
+   "reveal": "Razkritje 6π · μ · a · V Stokes je razpravo o vplivu notranjega trenja na nihala prebral 9. decembra 1850, natisnjena je bila leta 1851. Pri počasnem gibanju je vztrajnost zraka zanemarljiva in enačba postane linearna. Za kroglo s polmerom a, ki se giblje s hitrostjo V skozi tekočino z viskoznostjo μ, je izračunal upor 6π · μ · a · V. Upor je sorazmeren s hitrostjo in s polmerom, ne s kvadratom hitrosti. S tem je razložil Bailyjeve številke. V istem delu je izračunal, da kapljica vode s premerom tisočinke palca pada s hitrostjo približno 1,6 palca na sekundo, kar je okoli 4 cm/s. Zapisal je, d"
+  },
+  {
+   "id": "s28",
+   "title": "Bonus: žogica za golf",
+   "question": "Izziv Bonus: žogica za golf Anglija, 1905. Golfske žogice iz gutaperče so v rabi od okoli leta 1848. Igralci so kmalu opazili, da stare, zarezane in opraskane žogice letijo dlje in bolj naravnost kot nove, gladke. Izdelovalci so jih zato začeli obdelovati s kladivom, nato pa odlivati z vzorcem. Leta 1905 ima večina žogic gumijasto jedro (patent Haskell, 1899) in površino z izboklinami. 15. septembra 1905 William Taylor prijavi patent za žogico z vdolbinicami. Bonus, neobvezno: Zakaj hrapava žogica leti dlje kot gladka? Kaj se spremeni v toku okoli nje? Tvoj odgovor → napiši ga vodniku igre v polje »Tvoje sporočilo« v panelu na levi (na telefonu spodaj). Piši s svojimi besedami, tudi pol ideje ali grobo skico je dovolj. Vodnik te bo vprašal naprej, namig pa dobiš samo, če ga prosiš.",
+   "key_ideas": [
+    {
+     "k": "k1",
+     "text": "pri hitrem toku je trenje pomembno samo v tanki plasti ob površini (mejna plast)"
+    },
+    {
+     "k": "k2",
+     "text": "upor večinoma ne izvira iz trenja ob površini, ampak iz široke sledi za žogico, kjer je tlak nizek (odtrganje toka)"
+    },
+    {
+     "k": "k3",
+     "text": "hrapavost oziroma jamice naredijo tok v mejni plasti nemiren; nemirna plast se drži površine dlje in se odtrga pozneje"
+    },
+    {
+     "k": "k4",
+     "text": "ožja sled pomeni manjši upor, zato žogica leti dlje"
+    }
+   ],
+   "hints": [
+    {
+     "id": "s29",
+     "tier": 1,
+     "text": "Namig 1 Nariši sled za žogico. Je široka ali ozka? Kje za žogico je tlak nizek in kaj to pomeni za upor?",
+     "author_covers": [
+      "k2"
+     ]
+    }
+   ],
+   "reveal": "Razkritje Jamice Ludwig Prandtl je 12. avgusta 1904 v Heidelbergu pokazal, da je pri hitrem toku trenje pomembno samo v tanki plasti ob površini, v mejni plasti. Mejna plast ob zadnji strani telesa izgubi zagon, se odlepi in za telesom pusti široko sled z nizkim tlakom. Upor krogle večinoma ne izvira iz trenja ob površini, ampak iz te sledi. Gustave Eiffel je leta 1912 izmeril, da upor krogle nad neko hitrostjo nenadoma pade. Prandtl je leta 1914 na kroglo s premerom 28 cm namestil žični obroček debeline 1 mm in upor se je zmanjšal. Žica je mejno plast naredila nemirno. Nemirna mejna plast ima"
+  }
+ ]
+}

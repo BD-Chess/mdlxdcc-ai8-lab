@@ -1,0 +1,121 @@
+{
+ "slug": "navierstokes1845",
+ "width": 360,
+ "logFails": true,
+ "g3": false,
+ "turns": [
+  {
+   "send": "(start)",
+   "opened": [
+    "s1"
+   ],
+   "reply": ""
+  },
+  {
+   "send": "Naprej.",
+   "opened": [],
+   "reply": "",
+   "ms": 558
+  },
+  {
+   "send": "Prebral sem, odpri naslednji korak.",
+   "opened": [],
+   "reply": "",
+   "ms": 533
+  }
+ ],
+ "g3Probes": [],
+ "shots": [
+  {
+   "name": "01-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null
+  },
+  {
+   "name": "02-after-start",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null
+  },
+  {
+   "name": "06-end",
+   "overflow": 0,
+   "panelShare": 42,
+   "replySeenPct": null
+  }
+ ],
+ "modelRounds": 0,
+ "logEvents": 0,
+ "logStartErrors": 3,
+ "console": [
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+ ],
+ "pageErrors": [],
+ "badResponses": [
+  "503 /.netlify/functions/game-guide",
+  "503 /.netlify/functions/game-guide",
+  "503 /.netlify/functions/game-guide"
+ ],
+ "screenshots": [
+  "navierstokes1845-360-logfail-01-start.jpg",
+  "navierstokes1845-360-logfail-02-after-start.jpg",
+  "navierstokes1845-360-logfail-06-end.jpg"
+ ],
+ "findings": [
+  "stuck after s1"
+ ],
+ "logInfoAfterStart": "Zasebno beleženje trenutno ni na voljo.",
+ "statusAfterStart": "Zasebno beleženje trenutno ni na voljo, zato vodnik ne more nadaljevati. Tvoje sporočilo je ostalo v polju.",
+ "allStepsOpened": false,
+ "missingSteps": [
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "s6",
+  "s7",
+  "s8",
+  "s9",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s14",
+  "s15",
+  "s16",
+  "s17",
+  "s18",
+  "s19",
+  "s20",
+  "s21",
+  "s22",
+  "s23",
+  "s24",
+  "s25",
+  "s26",
+  "s27",
+  "s28",
+  "s29",
+  "s30",
+  "s31"
+ ],
+ "finalReply": "",
+ "logInfoEnd": "Zasebno beleženje trenutno ni na voljo.",
+ "statusEnd": "Zasebno beleženje trenutno ni na voljo, zato vodnik ne more nadaljevati. Tvoje sporočilo je ostalo v polju.",
+ "cardLines": 0,
+ "layout": {
+  "vw": 360,
+  "sw": 360,
+  "images": 12,
+  "brokenImages": [],
+  "imgNoAlt": []
+ },
+ "turnMs": {
+  "count": 2,
+  "median": 558,
+  "max": 558
+ }
+}
