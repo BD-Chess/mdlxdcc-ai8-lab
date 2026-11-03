@@ -26,5 +26,23 @@ if isinstance(step['key'], dict):
 else:
     step['key'] = [step['key'], '_tamper']
 assert stored not in gkc.forms(tampered).values(), 'tampered key must not match'
+# Windows clone with core.autocrlf: text files arrive with CRLF. Same content -> OK, reported as eol;
+# a real content change in a CRLF file is still BAD.
+import shutil, tempfile
+with_sums = [s for s, r in results.items() if r['sums'] == 'OK']
+assert with_sums, 'at least one game has SHA256SUMS.txt'
+with tempfile.TemporaryDirectory() as tmp:
+    folder = pathlib.Path(tmp, with_sums[0])
+    shutil.copytree(ROOT / 'public/game' / with_sums[0], folder)
+    converted = []
+    for name in ('index.html', 'game.json'):
+        data = (folder / name).read_bytes()
+        assert b'\r\n' not in data
+        (folder / name).write_bytes(data.replace(b'\n', b'\r\n')); converted.append(name)
+    bad, eol = gkc.check_sums(folder)
+    assert bad == [] and sorted(eol) == sorted(converted), (bad, eol)
+    (folder / 'game.json').write_bytes((folder / 'game.json').read_bytes().replace(b'"', b"'", 1))
+    bad, eol = gkc.check_sums(folder)
+    assert bad == ['game.json'] and eol == ['index.html'], (bad, eol)
 summary = ', '.join(f"{s}:{r['status']}" for s, r in results.items())
 print(f'game key_commit tests passed: {len(slugs)} games ({summary})')
