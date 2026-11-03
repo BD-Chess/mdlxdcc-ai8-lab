@@ -1,10 +1,14 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~22:10 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~23:30 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
 ## Merge order (stacked PRs)
 
-`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17 → #27`, `#16 → #26 → (c) → #25` (being stacked), `#18`, `#10 → #14`, `#10 → #21 → #23`, `#24`, `#11 → #13 → #20`.
+`#6→#7→#8; #12,#15,#18,#24; #10→#14; #10→#21→#23; #11→#13→#20; #16→#17→#27; #16→#26→#25; #19 last.`
+
+Outside this line: `#9` (migration file only) can merge any time after #8; applying it in production is a separate BD decision. `#22` is a proposal, not in the chain. The mobile-tables PR (c), when opened, stacks on #25.
+
+Zora review fixes (2026-11-03): #16 rebased on #8 (contains the OmniCPQ cleanup), #17/#26/#27 rebased on it, #25 rebased on #26 with its `LAB_CHANGES_R11` hash recomputed; fixes on #14, #20, #21, #24, #27. Each PR has a "fixed per Zora review" comment.
 
 ## Done (draft PRs, waiting for BD)
 
@@ -28,13 +32,13 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | #22 | **PROPOSAL**: softer Tesla 1888 hints (7, each with old/new/reason), `key_commit` and SHA256SUMS recomputed with the reconstructed procedure; branches from #11 but is **not** in the merge chain | ★★ BD/author (Inventing-3-TESLA), hint by hint |
 | #23 | `browser-p0-smoke` on the current protocol: PASS (4 runs in a row), no check dropped, several stronger; portable browser path; the same rewrite applies to bd-chessdb unchanged | ★★ |
 | #24 | `tools/game_key_commit.py`: documents and verifies every game's `key_commit` and SHA256SUMS (Dayton dict form; Navier–Stokes and Tesla list form) | ★★ |
-| #25 | (a) 62 broken links with exactly one candidate fixed (209 values on 18 pages); `crp/lab.html` handled by #27 instead; pages pinned by hashes skipped; all 62 links are broken in production too | ★★ |
+| #25 | (a) 62 broken links with exactly one candidate fixed (209 values on 18 pages); `crp/lab.html` handled by #27 instead; pages pinned by hashes skipped; all 62 links are broken in production too. Stacked on #26 | ★★ |
 | #26 | (b) Critical accessibility: 65 → 8 pages, 451 → 10 nodes (labels via `for=`, zoom allowed, ARIA, button names); 8 hash-pinned pages skipped; production has the same violations | ★★★ |
 | #27 | Build: `srcset` rewritten (313 images that were broken in the lab) and forced production routes honoured (13 redirect stubs, e.g. `crp/lab.html`) | ★★★ |
 
 ## In progress (lane L1, own worktrees)
 
-- (c) Mobile overflow of wide tables (36 pages). Then stack (b) → (c) → (a) on #16 and resolve overlaps.
+- (c) Mobile overflow of wide tables (36 pages). It will stack on #25 (#16 → #26 → #25 → (c)).
 
 ## Decisions waiting for BD
 
