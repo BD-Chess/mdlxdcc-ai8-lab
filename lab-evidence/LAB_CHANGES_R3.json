@@ -1,0 +1,45 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R3",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files (Tesla 1888 playtest fixes).",
+ "files": [
+  {
+   "path": "public/assets/game-guide/errors.mjs",
+   "source_sha256": "95d803bfcf4b2ef9e5cc97f33545a3871cbf7b42675df32e09bb19464bb99a85",
+   "lab_sha256": "ecf0b58d47473d35af5f91a1e74e355226a95d0ce48a89ba485db66d39e79f09",
+   "bytes": 1575,
+   "lab_prs": [
+    "#11"
+   ],
+   "lab_commits": [
+    "8654258"
+   ]
+  },
+  {
+   "path": "functions/game-guide.mjs",
+   "source_sha256": "fc8da5dc3ea97e0c486387fd9cbfe1fcaac79a8c9714a1765d7d052d8769ddb0",
+   "lab_sha256": "6ef0354f450013bf0c678bcd6ee63d600f8f87e700c946caf1fd0f1dcda89ffa",
+   "bytes": 23904,
+   "lab_prs": [
+    "#11"
+   ],
+   "lab_commits": [
+    "f988638"
+   ]
+  },
+  {
+   "path": "public/assets/game-guide/game-guide.js",
+   "source_sha256": "f2460fe2948acf1353d3fe1d83d0ccaa68855430a716360d03f328de0b32ab9c",
+   "lab_sha256": "d7ea71aff60f6e8345cb21661c1ab776111b67c68c69ea7ead10179d20490801",
+   "bytes": 31513,
+   "lab_prs": [
+    "#11"
+   ],
+   "lab_commits": [
+    "f988638"
+   ]
+  }
+ ]
+}

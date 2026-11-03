@@ -62,9 +62,12 @@ export function makeHandler({ accessFactory = authenticate, budgetFactory = crea
     catch { return fail('INVALID_MESSAGE', 400); }
     if (request.development && actor.role !== 'owner') return fail('DEVELOPMENT_OWNER_ONLY', 403);
     if (request.operation === 'event') {
+      // A game that cannot load is not a logging failure; report each cause with its own code.
+      let game;
+      try { game = validateGame(await gameFactory(request.slug, { signal: AbortSignal.timeout(10000) }), request.slug); }
+      catch { return fail('GAME_UNAVAILABLE', 503); }
+      if (request.client_actions.some(a => a.name === 'open_step' && !game.steps.some(s => s.id === a.id))) return fail('INVALID_MESSAGE', 400);
       try {
-        const game = validateGame(await gameFactory(request.slug, { signal: AbortSignal.timeout(10000) }), request.slug);
-        if (request.client_actions.some(a => a.name === 'open_step' && !game.steps.some(s => s.id === a.id))) return fail('INVALID_MESSAGE', 400);
         const log = await logStore.start(actor, request);
         if (log) await logStore.append(log, request.client_actions.map(a => ({ kind: a.name, payload: a })));
         return json({ ok: true, game_session_id: log?.id ?? null, logging: Boolean(log) });

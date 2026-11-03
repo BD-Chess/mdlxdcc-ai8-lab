@@ -1,0 +1,98 @@
+{
+ "slug": "tesla1888",
+ "width": 360,
+ "logFails": true,
+ "turns": [
+  {
+   "send": "(start)",
+   "opened": [
+    "s1"
+   ],
+   "reply": ""
+  },
+  {
+   "send": "Naprej.",
+   "opened": [],
+   "reply": "",
+   "ms": 548
+  },
+  {
+   "send": "Prebral sem, odpri naslednji korak.",
+   "opened": [],
+   "reply": "",
+   "ms": 527
+  }
+ ],
+ "modelRounds": 0,
+ "logEvents": 0,
+ "logStartErrors": 3,
+ "console": [
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+  "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+ ],
+ "pageErrors": [],
+ "badResponses": [
+  "503 /.netlify/functions/game-guide",
+  "503 /.netlify/functions/game-guide",
+  "503 /.netlify/functions/game-guide"
+ ],
+ "screenshots": [
+  "tesla1888-360-01-start.jpg",
+  "tesla1888-360-02-after-start.jpg",
+  "tesla1888-360-06-end.jpg"
+ ],
+ "findings": [
+  "stuck after s1"
+ ],
+ "logInfoAfterStart": "Lastnikov potek se zasebno beleži; učne ocene v razvoju ne.",
+ "statusAfterStart": "Zasebno beleženje trenutno ni na voljo, zato vodnik ne more nadaljevati. Tvoje sporočilo je ostalo v polju.",
+ "allStepsOpened": false,
+ "missingSteps": [
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "s6",
+  "s7",
+  "s8",
+  "s9",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s14",
+  "s15",
+  "s16",
+  "s17",
+  "s18",
+  "s19",
+  "s20",
+  "s21",
+  "s22",
+  "s23",
+  "s24",
+  "s25",
+  "s26",
+  "s27",
+  "s28",
+  "s29",
+  "s30",
+  "s31",
+  "s32",
+  "s33",
+  "s34",
+  "s35",
+  "s36",
+  "s37",
+  "s38"
+ ],
+ "finalReply": "",
+ "cardLines": 0,
+ "layout": {
+  "vw": 360,
+  "sw": 360,
+  "brokenImages": [],
+  "imgNoAlt": []
+ }
+}
