@@ -1,4 +1,4 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~20:20 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~20:50 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
@@ -25,11 +25,11 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | #18 | Lab atlas header back to one row on phones (compact theme toggle) | ★★ |
 | #20 | Guide on phones: the latest reply is visible after every turn (0/41 → 41/41 turns at 360 px); also short desktop windows; regression test. **Production has the same bug, and the fix is ready to transfer** (the `follow()` hunk plus 2 CSS properties, without the #11 `LOG_UNAVAILABLE` line) | ★★★ BD: transfer? |
 | #21 | Lab tests runnable from a clean clone: 192 → 204/282 green, runner `tests/run_lab_suite.py` (0 unexpected failures), `tests/README.md`, `LAB_EXPECTED_FAILURES.json`; tests only | ★★ |
+| #22 | **PROPOSAL**: softer Tesla 1888 hints (7, each with old/new/reason), `key_commit` and SHA256SUMS recomputed with the reconstructed procedure; branches from #11 but is **not** in the merge chain | ★★ BD/author (Inventing-3-TESLA), hint by hint |
 
 ## In progress (lane L1, own worktrees)
 
 - Rewrite `tests/browser-p0-smoke.mjs` to the current protocol (on #21).
-- PROPOSAL: softer Tesla 1888 hints s6, s13, s20, s21, s28, s29, s36, with `key_commit` recomputed (on #11). This is a content decision for BD or the author.
 
 ## Decisions waiting for BD
 
