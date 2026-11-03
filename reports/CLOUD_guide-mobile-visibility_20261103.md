@@ -16,7 +16,7 @@ Changes, all in `public/assets/game-guide/**`:
 |---|---|---|
 | `game-guide.js` | New `follow(item)`, used by `say()` and by the `delta` handler instead of `#gg-messages.scrollTop = scrollHeight`. It still scrolls the list to the end, as before. Then, for every panel ancestor that actually scrolls, it brings the message into view at the nearest edge. A message taller than the box shows its beginning. | Works in whichever element scrolls (`#gg-messages` on wide screens, `#gg-body` on phones, both on short windows), with no breakpoint in JS. It changes only `scrollTop` of elements inside `#game-guide`, never the page, so a player reading a step keeps their place. It does nothing while the panel is collapsed or the list is hidden. |
 | `game-guide.css` | `#gg-body{…;overflow-anchor:none}` | Removes part 2. Safari has no scroll anchoring, so this makes Chrome/Android behave like iOS. |
-| `game-guide.css` | `#gg-messages{…;min-height:120px}` (was `0`) | Removes part 3. At 1280×900 the list is 407 px high (measured), so normal desktop layout does not change. At 1280×480 it is now 120 px instead of 40 px. Phones already had `min-height:110px`. |
+| `game-guide.css` | `@media(min-width:900px){#gg-messages{min-height:120px}}`; the base rule keeps `min-height:0`, as in production | Removes part 3. At 1280×900 the list is 407 px high (measured), so normal desktop layout does not change. At 1280×480 it is now 120 px instead of 40 px. Phones keep their own `min-height:110px` in the phone query. Scoped to the desktop panel after Zora's review; computed styles are the same as with the earlier global rule at every width. Moving the 120 px into the phone query instead fails the short-desktop test (reply 5 % in view). |
 
 Not changed:
 
