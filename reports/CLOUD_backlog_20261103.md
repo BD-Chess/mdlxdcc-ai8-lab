@@ -1,10 +1,10 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~19:40 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~20:20 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
 ## Merge order (stacked PRs)
 
-`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#11 → #13 → #20`.
+`#6 → #7 → #8`, then on top of #8 in any order: `#9`, `#12`, `#15`, `#16 → #17`, `#18`, `#10 → #14`, `#10 → #21`, `#11 → #13 → #20`.
 
 ## Done (draft PRs, waiting for BD)
 
@@ -24,10 +24,14 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | #17 | Fonts moved out of the Pages artifact (877.6 → 828.0 MB) | ★★ |
 | #18 | Lab atlas header back to one row on phones (compact theme toggle) | ★★ |
 | #20 | Guide on phones: the latest reply is visible after every turn (0/41 → 41/41 turns at 360 px); also short desktop windows; regression test. **Production has the same bug, and the fix is ready to transfer** (the `follow()` hunk plus 2 CSS properties, without the #11 `LOG_UNAVAILABLE` line) | ★★★ BD: transfer? |
+| #21 | Lab tests runnable from a clean clone: 192 → 204/282 green, runner `tests/run_lab_suite.py` (0 unexpected failures), `tests/README.md`, `LAB_EXPECTED_FAILURES.json`; tests only | ★★ |
 
 ## In progress (lane L1, own worktrees)
 
 - Lab tests green from a clean clone (tests only, on #10). Mechanical stale tests, `tests/README.md`, an expected-failures list.
+
+- Rewrite `tests/browser-p0-smoke.mjs` to the current protocol (on #21).
+- PROPOSAL: softer Tesla 1888 hints s6, s13, s20, s21, s28, s29, s36, with `key_commit` recomputed (on #11). This is a content decision for BD or the author.
 
 ## Decisions waiting for BD
 
@@ -50,7 +54,6 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 | 3 | Mechanical link fixes where exactly one candidate file exists (254 occurrences, e.g. `OS/BD_8Z_OS_Story1.html` → `BD/`) | ★★ | unassigned public/ | likely broken in production too |
 | 4 | Accessibility, critical: form labels in the 8ZT traders, viewport zoom on 13 pages | ★★ | unassigned public/ | axe report in #16 |
 | 5 | Wide tables on phones: `overflow-x:auto` wrappers (36 pages) | ★★ | unassigned public/ | |
-| 6 | Rewrite `tests/browser-p0-smoke.mjs` to the current protocol (or replace it with the playtest tool) | ★★ | L1 | stale since R3.3 |
 | 7 | Add `scripts/lab_404_router.js` and `scripts/lab_routes_r2.json` to the `paths` of `lab-pages.yml` | ★ | L1 | workflow change; BD |
 | 8 | A non-publishing CI check job (`verify_lab`, secret boundary, green test list) | ★★ | L1 | `.gitignore` blocks new workflows; BD |
 | 9 | Nara Daily page shows no revision notice (`scripts/nara-daily.mjs:186`), probably upstream | ★ | unassigned | |
