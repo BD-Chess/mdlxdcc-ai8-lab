@@ -11,10 +11,10 @@
    "lab_sha256": "b7d5ae73e7a1a0daf49fab2973613e668ae7d9934be15eb1f557051a2d2049cf",
    "bytes": 14503,
    "lab_prs": [
-    "cloud/p0-1-fix-20261103"
+    "#10"
    ],
    "lab_commits": [
-    "(this branch)"
+    "ec68a08"
    ]
   },
   {
@@ -23,10 +23,10 @@
    "lab_sha256": "4ae9b74cfde9b19bec233f7eb473fc5968a370f78b5c727bbfae90a18d32a0b6",
    "bytes": 14250,
    "lab_prs": [
-    "cloud/p0-1-fix-20261103"
+    "#10"
    ],
    "lab_commits": [
-    "(this branch)"
+    "ec68a08"
    ]
   },
   {
@@ -35,10 +35,10 @@
    "lab_sha256": "efe5c15825bb37aabf011c262dfe5cd44b008b80dbbcd29131194326f6db30e7",
    "bytes": 10080,
    "lab_prs": [
-    "cloud/p0-1-fix-20261103"
+    "#10"
    ],
    "lab_commits": [
-    "(this branch)"
+    "ec68a08"
    ]
   },
   {
@@ -47,10 +47,10 @@
    "lab_sha256": "9f7fedde874027f9a93d982feff78b800d5d369fdaee4dcb6f076d1c249ab854",
    "bytes": 15303,
    "lab_prs": [
-    "cloud/p0-1-fix-20261103"
+    "#10"
    ],
    "lab_commits": [
-    "(this branch)"
+    "ec68a08"
    ]
   }
  ]
