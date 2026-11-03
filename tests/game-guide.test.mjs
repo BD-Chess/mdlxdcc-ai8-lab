@@ -116,7 +116,7 @@ for (const provider of ['claude', 'gpt']) test(`${provider}: shared real provide
   } });
   const response = await handler(request({ provider, mode: 'ZGODBA' })); assert.match(response.headers.get('content-type'), /text\/event-stream/);
   const events = await completeTurn(handler, response);
-  assert.equal(events.find(e => e.type === 'action').id, 's4'); assert.match(events.find(e => e.type === 'delta').text, /Preberi in mi povej/); assert.equal(events.at(-1).type, 'done');
+  assert.equal(events.find(e => e.type === 'action').id, 's4'); assert.match(events.find(e => e.type === 'delta').text, /Preberi ga, nato napiši svojo zamisel/); assert.equal(events.at(-1).type, 'done');
   assert.deepEqual(ledger, ['reserve', 'settle', 'reserve', 'settle']); assert.equal(payloads.length, 2);
 });
 

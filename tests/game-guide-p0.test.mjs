@@ -56,7 +56,7 @@ test('P0-1: suppress claimed opening, require additional provider round, actual 
     const events = await finish(h,first); assert.equal(h.seen.length,3);
     assert.equal(events.filter(e=>e.type==='action'&&e.name==='open_step').length,1);
     const input = JSON.stringify(h.seen[2].input); assert.match(input,/opened/); assert.match(input,/visible/); assert.match(input,/true/);
-    assert.equal(textOf(events),'Na desni se je odprl nov korak. Preberi in mi povej, ko si pripravljen.');
+    assert.equal(textOf(events),'Na desni se je odprl nov korak. Preberi ga, nato napiši svojo zamisel.');
     assert.ok(events.some(e=>e.type==='done')); assert.ok(!events.some(e=>e.type==='error'));
   }
 });
