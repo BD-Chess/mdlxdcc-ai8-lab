@@ -1,0 +1,117 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R1",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported source files. verify_lab.py accepts lab_sha256 for these paths; any other hash is still a mismatch. BD confirms the changes were intended by merging this record.",
+ "pr_titles": {
+  "#1": "Lab: review six inventions and fix navigation/mobile layout",
+  "#2": "Lab: restore BD origin narrative and attribution",
+  "#5": "LAB atlas: ordered display controls and dark default"
+ },
+ "files": [
+  {
+   "path": "public/crp/APSV.html",
+   "source_sha256": "f0101f5448deb7c032fb3d89dba42004ece74fc33763959d65f79fef553a3938",
+   "lab_sha256": "24443c9187976da89f797ac399fcd04e06649c9f5f100a4522c9a240e891e5ef",
+   "bytes": 122493,
+   "lab_prs": [
+    "#1"
+   ],
+   "lab_commits": [
+    "1ab116f",
+    "f1dc545"
+   ]
+  },
+  {
+   "path": "public/crp/DGTE.html",
+   "source_sha256": "554541f8086e61fd7a8aa8924558e7f477b6d5832e38fca4d145585e527d9618",
+   "lab_sha256": "7e8133c6a83fc9a88feca72da1483f727806bed387ddb28c3ed5f56093a98dc8",
+   "bytes": 250292,
+   "lab_prs": [
+    "#1",
+    "#7 (sync merge with upstream bdaeefb)"
+   ],
+   "lab_commits": [
+    "2d8fd21",
+    "fb39acd"
+   ]
+  },
+  {
+   "path": "public/crp/HTH.html",
+   "source_sha256": "325918a07f98f736ff3129290abde831a06cb682b993c77182aeb99b5694c4e7",
+   "lab_sha256": "9b167c203cb5edd686c0618de23dfa6e0f1239bde1f9074a7fff24f53ae3a249",
+   "bytes": 36988,
+   "lab_prs": [
+    "#1",
+    "#2"
+   ],
+   "lab_commits": [
+    "1ab116f",
+    "5054c02",
+    "446a3ba",
+    "f3e2ec0"
+   ]
+  },
+  {
+   "path": "public/crp/Maglev_Assisted_Takeoff.html",
+   "source_sha256": "56ce8858aa73e5a88cb1bbcda99e3a785f2101791e5572987bd6d4af5852b288",
+   "lab_sha256": "d44532f932c08748f5a67f4ae73d6a6a0b6e8511f3f5b5aeb0363a6f883b0069",
+   "bytes": 40431,
+   "lab_prs": [
+    "#1"
+   ],
+   "lab_commits": [
+    "1ab116f",
+    "150899a",
+    "3f82687",
+    "2b2cee6"
+   ]
+  },
+  {
+   "path": "public/crp/Modular_Hydrofoils.html",
+   "source_sha256": "d8720b7ced2e90916d67cb9c709334ecddf14df19970e2679d7c62855c53c900",
+   "lab_sha256": "415a42432a0e5347ce65443a420da9fdb5651d265e325a95057a6595c8bff9d8",
+   "bytes": 39209,
+   "lab_prs": [
+    "#1",
+    "#2"
+   ],
+   "lab_commits": [
+    "1ab116f",
+    "1ad3027",
+    "f3e2ec0"
+   ]
+  },
+  {
+   "path": "public/crp/SORA.html",
+   "source_sha256": "c0482ff8d5120de7f8e31d45ad03a027bd4a7ae3d6eb42ec1719b99b7a4394b3",
+   "lab_sha256": "a4cfada7b36d9d7a9c49ee2a43c08c32ee59c66990b25b6b6e78e6d689249d95",
+   "bytes": 66957,
+   "lab_prs": [
+    "#1",
+    "#2"
+   ],
+   "lab_commits": [
+    "fbd0410",
+    "79cf6c2",
+    "f3e2ec0"
+   ]
+  },
+  {
+   "path": "public/index.html",
+   "source_sha256": "801651186eb2bc97296a5adfbc56ef72e0f6af3294162787334755929521982c",
+   "lab_sha256": "bdf7b16d97e366feb54fc075673e3089416a1784480df1172349dcd02bc0f5ec",
+   "bytes": 212576,
+   "lab_prs": [
+    "#5",
+    "#7 (sync merge with upstream 33a8d01, 135fb8a, e7e98ec)"
+   ],
+   "lab_commits": [
+    "4eafe65",
+    "d3880f4",
+    "fb39acd"
+   ]
+  }
+ ]
+}

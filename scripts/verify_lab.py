@@ -17,6 +17,11 @@ MARKERS = {
     'private key': re.compile('-----BEGIN ' + r'(?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
 }
 errors = []
+# Intentional lab changes to exported files (LAB_CHANGES_R*): path -> accepted lab sha256 values.
+accepted = {}
+for record in sorted((ROOT / 'lab-evidence').glob('LAB_CHANGES_R*.json')):
+    for row in json.loads(record.read_text(encoding='utf-8'))['files']:
+        accepted.setdefault(row['path'], set()).add(row['lab_sha256'])
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
 # Later syncs from bd-chessdb add their own exclusions and a newer source manifest; older ones stay as history.
 for record in sorted((ROOT / 'lab-evidence').glob('SYNC_R*.json'), key=lambda p: int(p.stem.split('_R')[1])):
@@ -47,7 +52,7 @@ for entry in manifest['files']:
         for chunk in iter(lambda: stream.read(1024 * 1024), b''):
             digest.update(chunk)
             checked_bytes += len(chunk)
-    if digest.hexdigest() != entry['sha256']:
+    if digest.hexdigest() != entry['sha256'] and digest.hexdigest() not in accepted.get(entry['path'], ()):
         errors.append({'path': entry['path'], 'kind': 'source hash mismatch'})
 text_count = 0
 for path in ROOT.rglob('*'):
