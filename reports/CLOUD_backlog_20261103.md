@@ -28,8 +28,6 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 
 ## In progress (lane L1, own worktrees)
 
-- Lab tests green from a clean clone (tests only, on #10). Mechanical stale tests, `tests/README.md`, an expected-failures list.
-
 - Rewrite `tests/browser-p0-smoke.mjs` to the current protocol (on #21).
 - PROPOSAL: softer Tesla 1888 hints s6, s13, s20, s21, s28, s29, s36, with `key_commit` recomputed (on #11). This is a content decision for BD or the author.
 
