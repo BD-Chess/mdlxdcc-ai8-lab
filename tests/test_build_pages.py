@@ -22,4 +22,5 @@ rx = '<script>[...h.matchAll(/href="[^"]*\\/(h_[a-f0-9]{12})"/gi)];el.innerHTML=
 out = b.rewrite(rx, 'BD/page.html', '.html')
 assert 'href="[^"]*\\/(h_[a-f0-9]{12})"' in out, out
 assert 'href="/mdlxdcc-ai8-lab/BD/x.html"' in out, out
-print('build_pages rewrite tests: 7 passed')
+assert {'.ttf', '.otf', '.woff', '.woff2'} <= bp.PASSIVE  # large fonts leave the Pages artifact (raw, CORS *)
+print('build_pages rewrite tests: 8 passed')
