@@ -1,0 +1,226 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R11",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Broken links with exactly one candidate file: only href/src values now point to the single file of that name in public/ (reports/CLOUD_lab-links-unique_20261103.md).",
+ "files": [
+  {
+   "path": "public/BD/AC_01_Flagship.html",
+   "source_sha256": "2475d4cbf53becaaa1815dd70a69edd32160f2753aef2c7a63a0cc78c0a379be",
+   "lab_sha256": "a4fe570f6c0da1ad3e9b17033097cb08a2dea6e7b2bd3260c8796752e8fd625d",
+   "bytes": 205349,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/BD/BD_8Z_ssMDL_DCC.html",
+   "source_sha256": "e63d11835dbc9a68e1dd657454e9e89f6423ba35687ad607eec6715999d517ff",
+   "lab_sha256": "168f4561ff9cd84afc1b3e6b48f5a3418ad892b2837d34af03888a308074bbad",
+   "bytes": 33016,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/BD/MDLxDCC-Arena-NAS.html",
+   "source_sha256": "cd6350f5ff6efcbe10e7cdd804d622f241c6d7469dcd74d9902627b04d87a53a",
+   "lab_sha256": "fd4cd7db44f11c1dc53eac9b1e0a868066513c2c2a66d823ef4168005225c745",
+   "bytes": 18269,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/F4M/BD_8Z_Flip4M_DCC.html",
+   "source_sha256": "9db6788055bc395163a29ed9167064bd6b2f192cb6633ed20d8379e40b6fe522",
+   "lab_sha256": "9053d42276ee12cba039310e71bb46bb5a9bcff3db6c44011f90d0f38dffc762",
+   "bytes": 57878,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/F4M/BD_8Z_Flip4M_DCC1.html",
+   "source_sha256": "9db6788055bc395163a29ed9167064bd6b2f192cb6633ed20d8379e40b6fe522",
+   "lab_sha256": "9053d42276ee12cba039310e71bb46bb5a9bcff3db6c44011f90d0f38dffc762",
+   "bytes": 57878,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/F4M/BD_8Z_Flip4M_DCC2.html",
+   "source_sha256": "7365353dbed1c79f785354d0cbbafc26702c952862ac7058d8a9c0e6d3f627c6",
+   "lab_sha256": "9e021d19b61cade8575d931a17677c89e73c47973870266c2798c76463075a03",
+   "bytes": 66282,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/F4M/f4m/document.html",
+   "source_sha256": "7365353dbed1c79f785354d0cbbafc26702c952862ac7058d8a9c0e6d3f627c6",
+   "lab_sha256": "c8bd50f257d5ec9876e37a8613430ce1d89867f19ee1efff840b49ff83db513b",
+   "bytes": 66309,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/F4M/f4m/index.html",
+   "source_sha256": "7365353dbed1c79f785354d0cbbafc26702c952862ac7058d8a9c0e6d3f627c6",
+   "lab_sha256": "c8bd50f257d5ec9876e37a8613430ce1d89867f19ee1efff840b49ff83db513b",
+   "bytes": 66309,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story1.html",
+   "source_sha256": "008b7753f24b24d73dd9243a815f5be48d825863480ba73e1d0b6a80f37a29dc",
+   "lab_sha256": "a23b2739b2ff4b14634e2f3aa9b493cf38777362f55e4183a23a830b358e8c7d",
+   "bytes": 532486,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story2.html",
+   "source_sha256": "24d6ec1ef75823118beb4b90dd2dc21d55ec5926310f219aa3fed3a732405bff",
+   "lab_sha256": "d339f5fc13d615c5025995849f5ed5a2bbb2edcc89ca288ce3f03d8d9299f0ba",
+   "bytes": 580366,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story3.html",
+   "source_sha256": "e9ebb89bbc129f7f4f809848bf56354f6ca5f3799e6e2aeed4ffbda2d82f4dd6",
+   "lab_sha256": "fbc1d96052d9ee6d3c280f4015336e025a423a1cbac46b2c6fa965cb953a74c7",
+   "bytes": 107335,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story4.html",
+   "source_sha256": "5e987c9ac61ef2a44bae67bacfa9d32bc2b7a6f06c525f8aeceb35d93d8c8634",
+   "lab_sha256": "f4afa2c4b7e7cf898445a1143f57608ee595c650e6e0fff8af7371be0a1ed354",
+   "bytes": 106214,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story5.html",
+   "source_sha256": "d12efeb9f5b249c44a6bd909918c23facd3418935ae3aef5011c778e1d693c1f",
+   "lab_sha256": "51d1bc6b7687fddbcd9ea5434437374557a77b67a4d8320491a9fd60bc5fc8f1",
+   "bytes": 106058,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/BD_8Z_OS_Story6.html",
+   "source_sha256": "433729c1c4de7a24b5af9cf71724b93e54c8e0d16cc125713eb5855e1cba9215",
+   "lab_sha256": "896952319f0cf0d94c8530a21a6d67c6f0dbd0dea8856fc147e64dd018ca5237",
+   "bytes": 106725,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/OS/index-O.html",
+   "source_sha256": "433729c1c4de7a24b5af9cf71724b93e54c8e0d16cc125713eb5855e1cba9215",
+   "lab_sha256": "896952319f0cf0d94c8530a21a6d67c6f0dbd0dea8856fc147e64dd018ca5237",
+   "bytes": 106725,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/c/MDLxDCC_Outreach.html",
+   "source_sha256": "dbfb2185d8f201d1b621d12ceb18713ed5a2afb7f81ff38cc7618e271e15cff3",
+   "lab_sha256": "08053061bd430a9a2066b02b3a1bfc0478b298bbe9f90c221b8bdd72f4a51adc",
+   "bytes": 73714,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/crp/AC.html",
+   "source_sha256": "c1738314d34f1eb5262f134c148b0764f6f0342662c67d815cd75b2f90dcd3a7",
+   "lab_sha256": "3b9ef5dff2cb99e82f914469be6432ef4c79dcb3b189f66e6fb50ed2ec4390d6",
+   "bytes": 32043,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ]
+  },
+  {
+   "path": "public/crp/How_LLMs_Actually_Work.html",
+   "source_sha256": "86bbaf3cc38f0878db9fc8f4be69762faee9b2d49dce8eaa6375777abb355786",
+   "lab_sha256": "19151f55e71b6a61ff467525db0d903dda5f278793e098eb84144c9b643c9cf1",
+   "bytes": 123624,
+   "lab_prs": [
+    "cloud/lab-links-unique-20261103"
+   ],
+   "lab_commits": [
+    "b7ae474"
+   ],
+   "note": "Stacked on #26 (LAB_CHANGES_R12, commit 787064a): lab_sha256 is the file after both the a11y (b) and the link (a) changes."
+  }
+ ]
+}
