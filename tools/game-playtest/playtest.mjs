@@ -1,7 +1,9 @@
 // Requires Playwright (`require('playwright')`): preinstalled in the cloud container; elsewhere `npm i --no-save playwright`.
 // Browser playtest of a game page with the real guide handler and browser assets and a
 // deterministic mock agent. No model or network calls. Usage:
-//   node tools/game-playtest/playtest.mjs <slug> <outDir> [width=1280] [--log-fails] [--g3]
+//   node tools/game-playtest/playtest.mjs <slug> <outDir> [width=1280] [--log-fails] [--g3] [--min-reply-seen=60]
+// Exits 1 when, after any turn, less than --min-reply-seen % of the guide's latest reply is in view (or of the
+// panel's visible message area, for a reply longer than that area).
 // --log-fails makes the game log start fail like the production database before the
 // slug migration (game_sessions_slug_check), so the player-facing behavior can be observed.
 // --g3 adds player moves shaped like the observed Dayton G3 replay excerpt
@@ -98,12 +100,23 @@ page.on('pageerror', e => report.pageErrors.push(String(e.message).slice(0, 200)
 page.on('response', r => { if (r.status() >= 400) report.badResponses.push(`${r.status()} ${r.url().replace(base, '')}`); });
 page.on('request', r => { if (!r.url().startsWith(base) && !r.url().startsWith('data:')) report.badResponses.push('external ' + r.url()); });
 const measure = () => page.evaluate(() => {
-  const panel = document.getElementById('game-guide')?.getBoundingClientRect(), body = document.getElementById('gg-body')?.getBoundingClientRect();
-  const reply = [...document.querySelectorAll('.gg-message[data-role=assistant]')].at(-1)?.getBoundingClientRect();
-  // Share of the guide's latest reply that the player can see without scrolling inside the panel.
-  const seen = reply && body ? Math.max(0, Math.min(reply.bottom, body.bottom, innerHeight) - Math.max(reply.top, body.top, 0)) : null;
+  const panel = document.getElementById('game-guide')?.getBoundingClientRect();
+  // How much of a message the player sees without scrolling. The window is the viewport cut by every ancestor
+  // that clips (#gg-messages on wide screens, #gg-body on phones, whichever scrolls). pct = share of the
+  // message; fit = share of what fits in that window (100 when a reply longer than the window fills it).
+  const seen = el => {
+    if (!el) return { pct: null, fit: null };
+    let top = 0, bottom = innerHeight;
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+      if (getComputedStyle(a).overflowY === 'visible') continue;
+      const b = a.getBoundingClientRect(); top = Math.max(top, b.top + a.clientTop); bottom = Math.min(bottom, b.top + a.clientTop + a.clientHeight);
+    }
+    const r = el.getBoundingClientRect(), px = Math.max(0, Math.min(r.bottom, bottom) - Math.max(r.top, top));
+    return { pct: Math.round(100 * px / Math.max(1, r.height)), fit: Math.round(100 * px / Math.max(1, Math.min(r.height, bottom - top))) };
+  };
+  const last = role => [...document.querySelectorAll(`.gg-message[data-role=${role}]`)].at(-1), reply = seen(last('assistant'));
   return { overflow: document.documentElement.scrollWidth - innerWidth, panelShare: panel && innerWidth < 900 ? Math.round(100 * Math.min(panel.height, innerHeight) / innerHeight) : null,
-    replySeenPct: seen == null ? null : Math.round(100 * seen / Math.max(1, reply.height)) };
+    replySeenPct: reply.pct, replyFitPct: reply.fit, replyPx: Math.round(last('assistant')?.getBoundingClientRect().height ?? 0) || null, userSeenPct: seen(last('user')).pct, pageY: Math.round(scrollY) };
 });
 const shot = async name => {
   const file = path.join(outDir, `${slug}-${width}${tag}-${name}.jpg`); await page.screenshot({ path: file, type: 'jpeg', quality: 70 });
@@ -118,8 +131,8 @@ async function waitIdle() {
 async function send(text) {
   const before = await visible(), t0 = Date.now();
   await page.fill('#gg-input', text); await page.click('#gg-send'); await page.waitForTimeout(200); await waitIdle();
-  const after = await visible();
-  const turn = { send: text, opened: after.filter(id => !before.includes(id)), reply: (await lastAssistant()).slice(0, 220), ms: Date.now() - t0 };
+  const after = await visible(), ms = Date.now() - t0, { replySeenPct, replyFitPct, userSeenPct } = await measure();
+  const turn = { send: text, opened: after.filter(id => !before.includes(id)), reply: (await lastAssistant()).slice(0, 220), ms, replySeenPct, replyFitPct, userSeenPct };
   report.turns.push(turn); return turn;
 }
 // One G3-shaped player move: what was sent, what opened, how many model rounds it took, and whether the rule held.
@@ -135,7 +148,8 @@ await shot('01-start');
 if (await page.isVisible('#gg-consent-wrap')) { await page.check('#gg-consent').catch(() => { }); report.consentChecked = true; }
 await page.click('#gg-start').catch(() => report.findings.push('start click failed'));
 await page.waitForTimeout(400); await waitIdle();
-report.turns.push({ send: '(start)', opened: await visible(), reply: (await lastAssistant()).slice(0, 220) });
+const { replySeenPct, replyFitPct, userSeenPct } = await measure();
+report.turns.push({ send: '(start)', opened: await visible(), reply: (await lastAssistant()).slice(0, 220), replySeenPct, replyFitPct, userSeenPct });
 report.logInfoAfterStart = await page.textContent('#gg-log-info').catch(() => null);
 report.statusAfterStart = await page.textContent('#gg-status').catch(() => null);
 await shot('02-after-start');
@@ -202,11 +216,20 @@ report.layout = await page.evaluate(async () => {
 const ms = report.turns.map(t => t.ms).filter(Number.isFinite).sort((a, b) => a - b);
 report.turnMs = { count: ms.length, median: ms[ms.length >> 1] ?? null, max: ms.at(-1) ?? null };
 await shot('06-end');
+// Regression check: after every turn the guide's latest reply must be on screen (or fill the visible part of
+// the panel when it is longer). On phones it was 0 % before game-guide.js also scrolled #gg-body.
+// --log-fails turns add no reply, so they are not checked.
+const minSeen = Number(process.argv.find(a => a.startsWith('--min-reply-seen='))?.split('=')[1] ?? 60);
+const fits = report.turns.map(t => t.replyFitPct).filter(Number.isFinite), low = logFails ? [] : report.turns.filter(t => Number.isFinite(t.replyFitPct) && t.replyFitPct < minSeen);
+report.replyFit = { min: fits.length ? Math.min(...fits) : null, required: logFails ? null : minSeen, turns: fits.length, below: low.length };
+for (const t of low.slice(0, 5)) report.findings.push(`latest reply ${t.replyFitPct}% in view after »${t.send.slice(0, 40)}«`);
+if (low.length > 5) report.findings.push(`… and ${low.length - 5} more turns with the latest reply out of view`);
+if (low.length) process.exitCode = 1;
 await page.screenshot({ path: path.join(outDir, `${slug}-${width}${tag}-full.jpg`), type: 'jpeg', quality: 55, fullPage: true }).catch(() => { });
 await writeFile(path.join(outDir, `${slug}-${width}${tag}.json`), JSON.stringify(report, null, 1));
 console.log(JSON.stringify({ slug, width, logFails, turns: report.turns.length, modelRounds: report.modelRounds, allStepsOpened: report.allStepsOpened, missing: report.missingSteps.length,
   cardLines: report.cardLines, findings: report.findings, console: report.console.length, pageErrors: report.pageErrors.length, bad: report.badResponses.length,
   overflow: Math.max(report.layout.sw - report.layout.vw, ...report.shots.map(s => s.overflow)), images: report.layout.images, broken: report.layout.brokenImages.length, noAlt: report.layout.imgNoAlt.length,
-  replySeenPct: report.shots.map(s => s.replySeenPct), panelSharePct: report.shots.some(s => s.panelShare != null) ? Math.max(...report.shots.map(s => s.panelShare ?? 0)) : null, turnMs: report.turnMs,
+  replySeenPct: report.shots.map(s => s.replySeenPct), replyFitMin: report.replyFit.min, replyFitBelow: report.replyFit.below, userSeenPct: report.shots.map(s => s.userSeenPct), panelSharePct: report.shots.some(s => s.panelShare != null) ? Math.max(...report.shots.map(s => s.panelShare ?? 0)) : null, turnMs: report.turnMs,
   ...(g3 ? { g3: `${report.g3Probes.filter(p => p.ok).length}/${report.g3Probes.length}` } : {}), logInfo: report.logInfoAfterStart }));
 await browser.close(); server.close();

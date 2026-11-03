@@ -144,7 +144,20 @@ export async function mountGameGuide() {
       actions.append(add, reveal); item.append(actions);
     }
   };
-  const say = (role, text) => { const item = document.createElement('div'); item.className = 'gg-message'; item.dataset.role = role; render(item, role, text); $('gg-messages').append(item); $('gg-messages').scrollTop = $('gg-messages').scrollHeight; return item; };
+  // Keep a new message in view in whichever panel element scrolls it: the list itself on wide screens,
+  // #gg-body on phones (there the list does not scroll). Only panel elements move, never the page.
+  const follow = item => {
+    const list = $('gg-messages'); list.scrollTop = list.scrollHeight;
+    if (!item.getClientRects().length) return;
+    for (let box = list.parentElement; box && box !== panel; box = box.parentElement) {
+      if (box.scrollHeight <= box.clientHeight || !/auto|scroll/.test(getComputedStyle(box).overflowY)) continue;
+      const r = item.getBoundingClientRect(), view = box.getBoundingClientRect(), top = r.top - view.top - box.clientTop;
+      const room = Math.min(box.clientHeight, view.height - box.clientTop); // clientHeight is rounded
+      // Nearest edge; a message taller than the box shows its beginning.
+      box.scrollTop += top < 0 ? Math.floor(top) : Math.ceil(Math.min(top, Math.max(0, top + r.height - room)));
+    }
+  };
+  const say = (role, text) => { const item = document.createElement('div'); item.className = 'gg-message'; item.dataset.role = role; render(item, role, text); $('gg-messages').append(item); follow(item); return item; };
   function compactTranscript(items) {
     const cards = items.filter(m => m.role === 'assistant' && game.steps.some(s => s.id === m.step && s.kind === 'reveal')).slice(-10);
     const keep = new Set(cards);
@@ -339,7 +352,7 @@ export async function mountGameGuide() {
           const data = frame.split('\n').filter(line => line.startsWith('data:')).map(line => line.slice(5).trimStart()).join('\n'); if (!data) return;
           const item = JSON.parse(data);
           if (item.type === 'session') rememberSession(item);
-          if (item.type === 'delta') { answerText += item.text; render(answer, 'assistant', answerText); $('gg-messages').scrollTop = $('gg-messages').scrollHeight; }
+          if (item.type === 'delta') { answerText += item.text; render(answer, 'assistant', answerText); follow(answer); }
           if (item.type === 'action') {
             const receipt = actionReceipt(item);
             if (item.name === 'open_step' && receipt.ok && !receipt.already_open) lastOpened = item.id;

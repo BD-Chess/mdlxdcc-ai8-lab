@@ -9,7 +9,7 @@
 #game-guide label,#game-guide summary{font-size:12px}
 #game-guide .gg-fine{font-size:10px}
 #game-guide [hidden]{display:none!important}
-#gg-body{display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto}
+#gg-body{display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto;overflow-anchor:none}
 #game-guide>#gg-collapse{flex:none;min-height:28px;border-radius:0;border-width:0 0 1px;font-size:11px;text-align:right;padding:2px 14px}
 .gg-read{flex:none;max-width:none;margin:0;padding:10px 16px;border:0;border-bottom:1px solid var(--gg-line);font:12px/1.5 system-ui,sans-serif}
 .gg-read strong{display:block;margin-bottom:6px}.gg-read-buttons{display:flex;gap:8px}.gg-read-buttons button{flex:1}
@@ -41,7 +41,7 @@
 .gg-controls{padding:10px 16px;display:grid;gap:8px;border-bottom:1px solid var(--gg-line);font-size:12px}.gg-controls label{display:flex;gap:8px;align-items:center}.gg-controls select{flex:1;min-width:0}
 .gg-log-controls{grid-template-columns:1fr 1fr;flex:none}.gg-log-controls label,.gg-log-controls #gg-log-info{grid-column:1/-1}.gg-log-controls button{font-size:11px!important;min-height:28px!important;padding:4px 6px!important}
 #gg-development{accent-color:var(--gg-accent)}#gg-dev-tools{display:flex;gap:6px;padding:8px 14px;border-bottom:1px solid var(--gg-line)}#gg-dev-tools select{min-width:0;flex:1;font-size:12px}#gg-all{flex:none;font-size:12px!important}
-#gg-messages{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:20px 18px;scrollbar-width:thin}
+#gg-messages{flex:1;min-height:120px;overflow-y:auto;overscroll-behavior:contain;padding:20px 18px;scrollbar-width:thin}
 .gg-welcome{margin:8px 0 24px}.gg-welcome span{font-size:30px;color:var(--gg-accent)}.gg-welcome h2{font-size:31px;font-weight:500;line-height:1.13;letter-spacing:-1.4px;margin:15px 0}.gg-welcome p{color:var(--gg-muted);max-width:29ch}
 .gg-message{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 18px}.gg-message[data-role=user]{background:var(--gg-surface);border:1px solid var(--gg-line);border-radius:10px 10px 2px 10px;margin-left:20px;padding:10px 12px}
 #gg-status{padding:6px 16px;color:var(--gg-muted);font-size:11px;min-height:29px}
