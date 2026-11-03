@@ -18,6 +18,11 @@ TEXT = {'.html', '.htm', '.css', '.js', '.mjs', '.json', '.webmanifest', '.svg'}
 PRODUCTION = {'mdlxdcc.org', 'www.mdlxdcc.org', 'chessbest.org', 'www.chessbest.org'}
 ATTR = re.compile(r'''(?P<p>\b(?:href|src|poster|action|data-src|data-href)\s*=\s*)(?P<q>["'])(?P<u>[^"']*)(?P=q)''', re.I)
 CSS_URL = re.compile(r'''url\(\s*(?P<q>["']?)(?P<u>[^\s)'";]+)(?P=q)\s*\)''', re.I)
+# In HTML, CSS url() is rewritten only inside <style> blocks and style="" attributes, never in scripts
+# (a case-insensitive url( match there broke URL.createObjectURL(...) and new URL(...)).
+STYLE_BLOCK = re.compile(r'(?P<open><style\b[^>]*>)(?P<body>.*?)(?P<close></style\s*>)', re.I | re.S)
+STYLE_ATTR = re.compile(r'''(?P<p>\bstyle\s*=\s*)(?P<q>["'])(?P<v>.*?)(?P=q)''', re.I | re.S)
+SCRIPT_BLOCK = re.compile(r'(<script\b[^>]*>.*?</script\s*>)', re.I | re.S)
 ROOT_LITERAL = re.compile(r'''(?P<q>["'`])(?P<u>/(?!/)[^"'`\s\\<>]+)(?P=q)''')
 
 
@@ -33,6 +38,8 @@ class Builder:
 
     def url(self, value: str, relative: str, root_only=False) -> str:
         if not value or value.startswith(('#', '//', 'data:', 'blob:', 'mailto:', 'javascript:')):
+            return value
+        if re.search(r'[\[\]\\^|]', value):  # regex syntax inside script code, not a URL
             return value
         parsed = urlsplit(html.unescape(value))
         path = parsed.path
@@ -69,11 +76,41 @@ class Builder:
     def rewrite(self, text: str, relative: str, suffix: str) -> str:
         if suffix in {'.html', '.htm', '.svg'}:
             text = ATTR.sub(lambda m: m['p'] + m['q'] + self.url(m['u'], relative) + m['q'], text)
-        if suffix in {'.html', '.htm', '.css', '.svg'}:
-            text = CSS_URL.sub(lambda m: 'url(' + m['q'] + self.url(m['u'], relative) + m['q'] + ')', text)
+        css = lambda t: CSS_URL.sub(lambda m: 'url(' + m['q'] + self.url(m['u'], relative) + m['q'] + ')', t)
+        if suffix in {'.html', '.htm'}:
+            def styles(t):
+                t = STYLE_BLOCK.sub(lambda m: m['open'] + css(m['body']) + m['close'], t)
+                return STYLE_ATTR.sub(lambda m: m['p'] + m['q'] + css(m['v']) + m['q'], t)
+            # Script blocks are skipped as a whole: '<style' or 'style=' inside JS code is not CSS.
+            text = ''.join(part if i % 2 else styles(part) for i, part in enumerate(SCRIPT_BLOCK.split(text)))
+        if suffix in {'.css', '.svg'}:
+            text = css(text)
         if suffix in {'.js', '.mjs', '.json', '.webmanifest', '.html', '.htm'}:
             text = ROOT_LITERAL.sub(lambda m: m['q'] + self.url(m['u'], relative, True) + m['q'], text)
         return text
+
+    def write_404(self, output: Path) -> None:
+        """GitHub Pages serves 404.html for every missing path: replay production routes and fix case."""
+        plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
+        excluded = sorted(e['path'][len('public/'):] for e in plan['excluded']
+                          if e['path'].startswith('public/') and e['path'].endswith(('.html', '.htm')))
+        data = {'base': self.base, 'production': 'https://www.mdlxdcc.org', 'excluded': excluded,
+                'rules': json.loads((ROOT / 'scripts/lab_routes_r2.json').read_text(encoding='utf-8'))['rules'],
+                'files': sorted(p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file())}
+        router = (ROOT / 'scripts/lab_404_router.js').read_text(encoding='utf-8')
+        payload = json.dumps(data, ensure_ascii=True, separators=(',', ':')).replace('</', '<\\/')
+        (output / '404.html').write_text(f'''<!doctype html><html lang="sl"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>AI8 Lab — stran ni najdena</title>
+<style>body{{margin:0;background:#0b1419;color:#edf3ed;font:18px/1.6 system-ui}}main{{max-width:760px;margin:10vh auto;padding:24px}}h1{{font-size:clamp(32px,7vw,56px);line-height:1.1;margin:.2em 0}}a{{color:#aaf0d1}}small,code{{color:#a4b7be}}nav{{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}}nav a{{border:1px solid #35515a;padding:10px 16px;border-radius:12px;text-decoration:none}}</style>
+<main><small>AI8 LAB · 404</small><h1 id="t">Iščem stran …</h1><p id="m">Lab poskuša najti pravo pot.</p>
+<nav><a href="{self.base}">Izvorni atlas</a><a href="{self.base}portfolio/">Portfelj</a><a href="{self.base}__lab__/">O labu</a></nav></main>
+<script>{router}</script>
+<script>(function(){{var r=labRoute(location.pathname,{payload});
+if(r.kind==='local'&&r.href!==location.pathname){{location.replace(r.href+location.search+location.hash);return;}}
+var t=document.getElementById('t'),m=document.getElementById('m');
+if(r.kind==='production'){{document.title='AI8 Lab — stran je na glavni strani';t.textContent='Ta stran je samo na glavni strani.';m.innerHTML='Lab je ne vsebuje. <a rel="noopener" href="'+r.href+'">Odpri jo na mdlxdcc.org ↗</a>';}}
+else{{t.textContent='Stran ni najdena.';m.textContent='Poti /'+r.path+' v labu ni. Lab je delovna kopija; nekatere strani so samo na glavni strani.';}}}})();</script></html>''', encoding='utf-8')
 
     def build(self, output: Path) -> dict:
         if output.exists():
@@ -88,7 +125,8 @@ class Builder:
         meta = ('<meta http-equiv="Content-Security-Policy" content="connect-src \'self\' https://raw.githubusercontent.com; '
                 'form-action \'self\'; object-src \'none\'">'
                 f'<script src="{self.base}__lab__/runtime.js"></script>')
-        badge = (f'<a href="{self.base}__lab__/" style="position:fixed;right:12px;bottom:12px;z-index:2147483647;'
+        badge = (f'<style>@media(max-width:600px){{#ai8-lab-badge{{padding:3px 8px!important;font-size:10px!important;right:6px!important;bottom:6px!important;opacity:.82}}}}</style>'
+                 f'<a id="ai8-lab-badge" href="{self.base}__lab__/" style="position:fixed;right:12px;bottom:12px;z-index:2147483647;'
                  'background:#10272c;color:#aaf0d1;border:1px solid #7bcab1;border-radius:20px;'
                  'padding:8px 13px;font:600 12px system-ui;text-decoration:none">AI8 LAB · v nastajanju ↗</a>')
         copied = 0
@@ -115,6 +153,7 @@ class Builder:
         info.mkdir(exist_ok=True)
         (info / 'runtime.js').write_text(runtime, encoding='utf-8')
         (output / '.nojekyll').write_text('', encoding='utf-8')
+        self.write_404(output)
         (output / 'robots.txt').write_text('User-agent: *\nDisallow: /\n', encoding='utf-8')
         (info / 'index.html').write_text(f'''<!doctype html><html lang="sl"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
