@@ -1,3 +1,4 @@
+// Requires Playwright (`require('playwright')`): preinstalled in the cloud container; elsewhere `npm i --no-save playwright`.
 // Browser playtest of a game page with the real guide handler and browser assets and a
 // deterministic mock agent. No model or network calls. Usage:
 //   node tools/game-playtest/playtest.mjs <slug> <outDir> [width=1280] [--log-fails]
@@ -138,6 +139,8 @@ const final = await visible();
 report.allStepsOpened = gameJson.steps.every(s => final.includes(s.id));
 report.missingSteps = gameJson.steps.filter(s => !final.includes(s.id)).map(s => s.id);
 report.finalReply = await lastAssistant();
+report.logInfoEnd = await page.textContent('#gg-log-info').catch(() => null);
+report.statusEnd = await page.textContent('#gg-status').catch(() => null);
 report.cardLines = (report.finalReply.match(/Kartica/g) || []).length;
 report.layout = await page.evaluate(() => ({ vw: innerWidth, sw: document.documentElement.scrollWidth,
   brokenImages: [...document.images].filter(i => i.complete && i.naturalWidth === 0).map(i => i.getAttribute('src')),

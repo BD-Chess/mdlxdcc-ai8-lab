@@ -372,6 +372,7 @@ export async function mountGameGuide() {
       if (['AUTH_REQUIRED', 'GAME_NOT_OPEN', 'AI_UNAVAILABLE', 'REFRESH_REQUIRED'].includes(e.message)) agentAvailable = false;
       abort.abort(); if (reader) try { await reader.cancel(); } catch {}
       if (!answer.dataset.raw) answer.remove();
+      if (e.message === 'LOG_UNAVAILABLE') $('gg-log-info').textContent = english ? 'Private logging is unavailable right now.' : 'Zasebno beleženje trenutno ni na voljo.';
       status.textContent = gameGuideError(e.message, english); input.value = message;
     } finally { clearTimeout(timer); busy = false; $('gg-send').disabled = false; $('gg-mode').disabled = false; $('gg-development').disabled = false; $('gg-consent').disabled = false; updateReadControls(); }
   }
