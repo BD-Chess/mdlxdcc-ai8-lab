@@ -1,0 +1,6827 @@
+{
+ "crawl_after_fix": {
+  "pages": 728,
+  "basics": {
+   "no <title>": {
+    "count": 19,
+    "live": 19,
+    "examples": [
+     "8ZT/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+     "8ZT/BD_trading_2026.html",
+     "BD/BBSH.pack.html",
+     "BD/BDTS.html",
+     "BD/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+     "BD/BD_trading_2026.html",
+     "Mix/MDLxDCC_Review_Claude.html",
+     "Mix/MDLxDCC_Review_GPT.html"
+    ]
+   },
+   "no h1": {
+    "count": 52,
+    "live": 48,
+    "examples": [
+     "8zS/index-o.html",
+     "BD/BD_8ZRP_qa194_map.html",
+     "BD/BD_8ZRP_qa194_map2.html",
+     "BD/BD_8z_private.html",
+     "BD/LessDescribesMore.html",
+     "BD/NCO_stats.html",
+     "BD/NCO_statsW.html",
+     "BD/NU3496_8ZRP_96934_interactive.html"
+    ]
+   },
+   "several h1": {
+    "count": 56,
+    "live": 54,
+    "examples": [
+     "AI8/AI8_Arena_Foundry.html",
+     "AI8/AI8_ArenaLoop.html",
+     "AI8/index.html",
+     "BD/8z_shield_landing.html",
+     "BD/BD_AIM3_RHPm_How_LLMs_Work_Case.html",
+     "BD/How_LLMs_Actually_Work.html",
+     "BD/How_LLMs_Actually_Work_AI8_Portal.html",
+     "BD/How_LLMs_Actually_Work_HybridOfHybrids_EN_SL.html"
+    ]
+   },
+   "no viewport meta": {
+    "count": 21,
+    "live": 21,
+    "examples": [
+     "BD/NCO_stats.html",
+     "BD/NCO_statsW.html",
+     "BD/O/med-reminder-form.html",
+     "Mix/MDLxDCC_Review_Claude.html",
+     "Mix/MDLxDCC_Review_GPT.html",
+     "Mix/MDLxDCC_Review_Gemini.html",
+     "Mix/MDLxDCC_Review_Grok.html",
+     "Mix/MDLxDCC_Review_Qwen.html"
+    ]
+   },
+   "no html lang": {
+    "count": 11,
+    "live": 11,
+    "examples": [
+     "Mix/MDLxDCC_Review_Claude.html",
+     "Mix/MDLxDCC_Review_GPT.html",
+     "Mix/MDLxDCC_Review_Gemini.html",
+     "Mix/MDLxDCC_Review_Grok.html",
+     "Mix/MDLxDCC_Review_Qwen.html",
+     "hmal/index.html",
+     "index-acp.html",
+     "index-bd.html"
+    ]
+   }
+  },
+  "theme": {
+   "always dark": 716,
+   "follows system light/dark": 9,
+   "always light": 3
+  },
+  "axe": [
+   {
+    "rule": "label",
+    "pages": 34,
+    "nodes": 224,
+    "impact": "critical",
+    "examples": [
+     "8ZT/DCC_trader.html",
+     "8ZT/ZZ_trader.html",
+     "8ZT/zz.html",
+     "BD/BD_Hedge_Separation_PiX_Strategy_Explainer_REFERENCE.html"
+    ]
+   },
+   {
+    "rule": "select-name",
+    "pages": 32,
+    "nodes": 97,
+    "impact": "critical",
+    "examples": [
+     "8ZT/DCC_trader.html",
+     "8ZT/SM_trader.html",
+     "8ZT/ZZ_trader.html",
+     "8ZT/sm.html"
+    ]
+   },
+   {
+    "rule": "meta-viewport",
+    "pages": 13,
+    "nodes": 13,
+    "impact": "critical",
+    "examples": [
+     "F4M/F4Pro.html",
+     "F4M/F4_CLA.html",
+     "F4M/F4_DSE.html",
+     "F4M/F4_GEM.html"
+    ]
+   },
+   {
+    "rule": "aria-allowed-attr",
+    "pages": 4,
+    "nodes": 89,
+    "impact": "critical",
+    "examples": [
+     "BD/Kayak.html",
+     "Trip/PWA/travel.html",
+     "Trip/new/travel.html",
+     "Trip/travel.html"
+    ]
+   },
+   {
+    "rule": "button-name",
+    "pages": 2,
+    "nodes": 26,
+    "impact": "critical",
+    "examples": [
+     "Someone/Someone.html",
+     "Someone/index.html"
+    ]
+   },
+   {
+    "rule": "aria-required-children",
+    "pages": 1,
+    "nodes": 2,
+    "impact": "critical",
+    "examples": [
+     "crp/projects-are-evidence.html"
+    ]
+   },
+   {
+    "rule": "color-contrast",
+    "pages": 186,
+    "nodes": 5480,
+    "impact": "serious",
+    "examples": [
+     "8Z/8Z_compression.html",
+     "8Z/8Z_project_files_manager.html",
+     "8ZT/8z_shield_landing.html",
+     "8ZT/BD_8Z_DCC_Trader_Book.html"
+    ]
+   },
+   {
+    "rule": "scrollable-region-focusable",
+    "pages": 87,
+    "nodes": 274,
+    "impact": "serious",
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html",
+     "8ZT/DCC_trader.html",
+     "8ZT/index.html",
+     "AC/8Z-AC_Appendix_M.html"
+    ]
+   },
+   {
+    "rule": "document-title",
+    "pages": 17,
+    "nodes": 17,
+    "impact": "serious",
+    "examples": [
+     "8ZT/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+     "8ZT/BD_trading_2026.html",
+     "BD/BBSH.pack.html",
+     "BD/BDTS.html"
+    ]
+   },
+   {
+    "rule": "link-in-text-block",
+    "pages": 11,
+    "nodes": 59,
+    "impact": "serious",
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html",
+     "8ZT/index.html",
+     "BD/BD_8Z_AI_Storm_Challenge.html",
+     "BD/BD_8Z_DCC_Recursive.html"
+    ]
+   },
+   {
+    "rule": "html-has-lang",
+    "pages": 11,
+    "nodes": 11,
+    "impact": "serious",
+    "examples": [
+     "Mix/MDLxDCC_Review_Claude.html",
+     "Mix/MDLxDCC_Review_GPT.html",
+     "Mix/MDLxDCC_Review_Gemini.html",
+     "Mix/MDLxDCC_Review_Grok.html"
+    ]
+   },
+   {
+    "rule": "nested-interactive",
+    "pages": 6,
+    "nodes": 97,
+    "impact": "serious",
+    "examples": [
+     "BD/RH.html",
+     "Mix/RH.html",
+     "acp/RealityQA.html",
+     "crp/MDLxDCC-Arena-RH.html"
+    ]
+   },
+   {
+    "rule": "aria-prohibited-attr",
+    "pages": 4,
+    "nodes": 5,
+    "impact": "serious",
+    "examples": [
+     "BD/O/izleti/andaluzija-2027.html",
+     "chess-lab/index.html",
+     "chess/PWA/index.html",
+     "chess/index.html"
+    ]
+   },
+   {
+    "rule": "aria-hidden-focus",
+    "pages": 1,
+    "nodes": 1,
+    "impact": "serious",
+    "examples": [
+     "crp/Religions.html"
+    ]
+   }
+  ],
+  "pages_with_axe_violations": 288,
+  "external_dependencies": [
+   [
+    "cdnjs.cloudflare.com",
+    22
+   ],
+   [
+    "cdn.jsdelivr.net",
+    10
+   ],
+   [
+    "www.mdlxdcc.org",
+    4
+   ],
+   [
+    "cdn.tailwindcss.com",
+    3
+   ],
+   [
+    "unpkg.com",
+    3
+   ],
+   [
+    "www.nci.org",
+    3
+   ],
+   [
+    "bd-chess.github.io",
+    2
+   ],
+   [
+    "web.archive.org",
+    1
+   ],
+   [
+    "cp-zerophishing.ts.telekom.si",
+    1
+   ],
+   [
+    "zerophishing.iaas.checkpoint.com",
+    1
+   ],
+   [
+    "www.youtube.com",
+    1
+   ],
+   [
+    "193.77.159.220",
+    1
+   ],
+   [
+    "chessbest.org",
+    1
+   ]
+  ]
+ },
+ "overflow_live": [
+  {
+   "page": "crp/MDLxDCC-Arena-ARC.html",
+   "width": "768",
+   "overflow": 1446,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 805,
+     "w": 760
+    },
+    {
+     "el": "table",
+     "right": 805,
+     "w": 760
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/MDLxDCC-Arena-RH.html",
+   "width": "768",
+   "overflow": 685,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 893,
+     "w": 852
+    },
+    {
+     "el": "table",
+     "right": 840,
+     "w": 799
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/MDLxDCC-Arena-ARC.html",
+   "width": "360",
+   "overflow": 647,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 1473,
+     "w": 1444
+    },
+    {
+     "el": "table",
+     "right": 1461,
+     "w": 1432
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8Z_Reasoning.html",
+   "width": "768",
+   "overflow": 405,
+   "offenders": [
+    {
+     "el": "table.origin-table",
+     "right": 1173,
+     "w": 1149
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/WFERA.html",
+   "width": "360",
+   "overflow": 330,
+   "offenders": [
+    {
+     "el": "div.brand",
+     "right": 367,
+     "w": 351
+    },
+    {
+     "el": "a",
+     "right": 427,
+     "w": 75
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/index1.html",
+   "width": "768",
+   "overflow": 285,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 812,
+     "w": 210
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "AC/8Z-xFLAC_Optimization_Sprint.html",
+   "width": "768",
+   "overflow": 241,
+   "offenders": [
+    {
+     "el": "div.arch-block.green",
+     "right": 1009,
+     "w": 542
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "AC/8Z-AC_BD_GEM_Story.html",
+   "width": "768",
+   "overflow": 219,
+   "offenders": [
+    {
+     "el": "main.main-content",
+     "right": 987,
+     "w": 707
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/MDLxDCC-Demon.html",
+   "width": "768",
+   "overflow": 219,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 987,
+     "w": 949
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/LessDescribesMore.html",
+   "width": "768",
+   "overflow": 216,
+   "offenders": [
+    {
+     "el": "div.banner-wrap",
+     "right": 984,
+     "w": 1200
+    },
+    {
+     "el": "div.banner-wrap",
+     "right": 924,
+     "w": 1080
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/Kayak.html",
+   "width": "360",
+   "overflow": 180,
+   "offenders": [
+    {
+     "el": "table.sortable",
+     "right": 1597,
+     "w": 1586
+    },
+    {
+     "el": "code",
+     "right": 410,
+     "w": 385
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "c/Mind-of-Minds.html",
+   "width": "768",
+   "overflow": 170,
+   "offenders": [
+    {
+     "el": "nav.nav",
+     "right": 804,
+     "w": 423
+    },
+    {
+     "el": "div.lang-switch",
+     "right": 896,
+     "w": 78
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "history/index.html",
+   "width": "768",
+   "overflow": 166,
+   "offenders": [
+    {
+     "el": "div",
+     "right": 934,
+     "w": 916
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/AC-WFP.html",
+   "width": "768",
+   "overflow": 115,
+   "offenders": [
+    {
+     "el": "code",
+     "right": 781,
+     "w": 743
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/AC-WFP_v4.html",
+   "width": "768",
+   "overflow": 115,
+   "offenders": [
+    {
+     "el": "code",
+     "right": 781,
+     "w": 743
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/MDLxDCC-Arena-AMR.html",
+   "width": "768",
+   "overflow": 95,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 863,
+     "w": 820
+    },
+    {
+     "el": "table",
+     "right": 843,
+     "w": 800
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8Z_Reasoning_Examples.html",
+   "width": "768",
+   "overflow": 87,
+   "offenders": [
+    {
+     "el": "table.pattern-table",
+     "right": 855,
+     "w": 831
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/Ukraine_Armed_Armistice_SLO.html",
+   "width": "360",
+   "overflow": 70,
+   "offenders": [
+    {
+     "el": "button#reviewMode",
+     "right": 436,
+     "w": 97
+    },
+    {
+     "el": "button#expandAll",
+     "right": 527,
+     "w": 84
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "crp/PiX.html",
+   "width": "768",
+   "overflow": 65,
+   "offenders": [
+    {
+     "el": "a",
+     "right": 877,
+     "w": 102
+    },
+    {
+     "el": "a",
+     "right": 979,
+     "w": 94
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/8zS2.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/8zS1.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/PWA/app.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/8zSudoku.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/index2.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "S/legacy.html",
+   "width": "768",
+   "overflow": 54,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 822,
+     "w": 220
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8ZRP_arena.html",
+   "width": "768",
+   "overflow": 45,
+   "offenders": [
+    {
+     "el": "div",
+     "right": 813,
+     "w": 382
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_Sudoku_Phase0.html",
+   "width": "768",
+   "overflow": 44,
+   "offenders": [
+    {
+     "el": "div.col-right",
+     "right": 812,
+     "w": 210
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BDAA.html",
+   "width": "768",
+   "overflow": 38,
+   "offenders": [
+    {
+     "el": "table",
+     "right": 837,
+     "w": 820
+    },
+    {
+     "el": "table",
+     "right": 955,
+     "w": 938
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/Ukraine_Armed_Armistice.html",
+   "width": "360",
+   "overflow": 25,
+   "offenders": [
+    {
+     "el": "button#essentialsMode",
+     "right": 379,
+     "w": 90
+    },
+    {
+     "el": "button#reviewMode",
+     "right": 476,
+     "w": 90
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8Z_Flip4M_DCC.html",
+   "width": "768",
+   "overflow": 13,
+   "offenders": [
+    {
+     "el": "div.rot-arrow",
+     "right": 781,
+     "w": 795
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "F4M/f4m/document.html",
+   "width": "768",
+   "overflow": 13,
+   "offenders": [
+    {
+     "el": "div.rot-arrow",
+     "right": 781,
+     "w": 795
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "F4M/f4m/index.html",
+   "width": "768",
+   "overflow": 13,
+   "offenders": [
+    {
+     "el": "div.rot-arrow",
+     "right": 781,
+     "w": 794
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8ZRP_nu3496_status.html",
+   "width": "768",
+   "overflow": 10,
+   "offenders": [],
+   "archive": false
+  },
+  {
+   "page": "F4M/BD_8Z_Flip4M_DCC.html",
+   "width": "768",
+   "overflow": 8,
+   "offenders": [
+    {
+     "el": "div.rot-arrow",
+     "right": 776,
+     "w": 784
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "F4M/BD_8Z_Flip4M_DCC1.html",
+   "width": "768",
+   "overflow": 8,
+   "offenders": [
+    {
+     "el": "div.rot-arrow",
+     "right": 775,
+     "w": 783
+    }
+   ],
+   "archive": false
+  },
+  {
+   "page": "BD/BD_8Z_Flip4M_DCC.html",
+   "width": "360",
+   "overflow": 6,
+   "offenders": [
+    {
+     "el": "table.eval-table",
+     "right": 639,
+     "w": 620
+    },
+    {
+     "el": "div.rot-arrow",
+     "right": 366,
+     "w": 373
+    }
+   ],
+   "archive": false
+  }
+ ],
+ "links": {
+  "pages": 735,
+  "links": 24660,
+  "fragment_missing": [
+   {
+    "target": "8ZT/BD_8Z_DCC_Trading.html#ch3-journey",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_DCC_Trading.html#ch3-result",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_DCC_Trading.html#ch4-1034m",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_DCC_Trading.html#ch4-paths",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch2-exit",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch2-presets",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch4-vwap",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch4-cooldown",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch4-volume",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch6-sizing",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch6-scenarios",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch6-hygiene",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch7-params",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/BD_8Z_Trading_Book.html#ch14-nesting",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch2-exit",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch2-presets",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch4-vwap",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch4-cooldown",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch4-volume",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch6-sizing",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch6-scenarios",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch6-hygiene",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch7-params",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8ZT/index.html#ch14-nesting",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8ZT/index.html"
+    ]
+   },
+   {
+    "target": "8zS/index.html#guide",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "8zS/index.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#overview",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#timeline",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#bench",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#arch",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#method",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#roadmap",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "AC/8Z-AC_BD_GPT_Story.html#sources",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "AC/8Z-AC_BD_GPT_Story.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_DCC_Trading.html#ch3-journey",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_DCC_Trading.html#ch3-result",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_DCC_Trading.html#ch4-1034m",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_DCC_Trading.html#ch4-paths",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_DCC_Trading.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_Trading_Book.html#ch2-exit",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_Trading_Book.html#ch2-presets",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_Trading_Book.html#ch4-vwap",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_Trading_Book.html"
+    ]
+   },
+   {
+    "target": "BD/BD_8Z_Trading_Book.html#ch4-cooldown",
+    "sources": 1,
+    "live_sources": 1,
+    "examples": [
+     "BD/BD_8Z_Trading_Book.html"
+    ]
+   }
+  ]
+ },
+ "router_check": [
+  {
+   "cls": "page excluded in R1",
+   "result": "error",
+   "target": "/mdlxdcc-ai8-lab/BD/",
+   "sources": 131
+  },
+  {
+   "cls": "page excluded in R1",
+   "result": "error",
+   "target": "/BD/",
+   "sources": 1
+  },
+  {
+   "cls": "page excluded in R1",
+   "result": "production-link",
+   "target": "/mdlxdcc-ai8-lab/bd/",
+   "sources": 13
+  },
+  {
+   "cls": "page excluded in R1",
+   "result": "production-link",
+   "target": "/mdlxdcc-ai8-lab/BD/index.html",
+   "sources": 23
+  },
+  {
+   "cls": "page excluded in R1",
+   "result": "production-link",
+   "target": "/mdlxdcc-ai8-lab/index-atlas.html",
+   "sources": 38
+  },
+  {
+   "cls": "page excluded in R1",
+   "result": "production-link",
+   "target": "/bd/",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc",
+   "sources": 13
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading",
+   "sources": 10
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_aim3_rhp",
+   "sources": 8
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading-research-atlas",
+   "sources": 10
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/seedbank",
+   "sources": 2
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_architecture",
+   "sources": 7
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/codecapsules",
+   "sources": 2
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp",
+   "sources": 5
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/ai8_arena_foundry",
+   "sources": 2
+  },
+  {
+   "cls": "production rule",
+   "result": "production-link",
+   "target": "/mdlxdcc-ai8-lab/BD/index-bd.html",
+   "sources": 2
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/model-results",
+   "sources": 2
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/talkingtoaliens",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/trip/new/",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/sora",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/trip/",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/zz_trader",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/paper-zz",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/8z_mdlxdcc",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/paper-sm",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/paper-dcc",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/neutral-lock",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/hsr-pix-protocols",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/hsr-pix-analysis",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/evidence",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/hedge-separation",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/trading/bb-surfing-hedge",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "production-link",
+   "target": "/mdlxdcc-ai8-lab/bd/index-bd",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/sm_trader",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/dcc_trader",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_trading_2026",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_hedge_separation_pix_strategy_explainer",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zc-why.html",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_aim3",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/bd_aim3_rhp",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zc-about.html",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_01_flagship",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "still-missing",
+   "target": "/ai8/omnicpq-origin/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/index-o.html",
+   "sources": 10
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_CCH_Science.html",
+   "sources": 7
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/ai8/model-results",
+   "sources": 1
+  },
+  {
+   "cls": "production rule",
+   "result": "resolved",
+   "target": "/ai8/cli-loops",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_8Z_Reasoning.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_8Z_Flip4M_DCC.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_8Z_DCC_Recursive.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_8Z_DCC7_Testbed.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_8ZRP.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/F4M_about.html",
+   "sources": 7
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+   "sources": 5
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/cdn-cgi/l/email-protection",
+   "sources": 5
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/CCH__v1.4.txt",
+   "sources": 5
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/old/",
+   "sources": 4
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_Model_Assessments.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/8Z-DCC_Flip4M.txt",
+   "sources": 4
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_CCH_Science.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_8Z_Reasoning.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_8Z_DCC_Recursive.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_8Z_DCC7_Testbed.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/BD_8ZRP.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD_Model_Assessments.html",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-11-01/S1/M03_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-11-01/S1/M02_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-11-01/S1/M01_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-29/S1/M03_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-29/S1/M01_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-29/S1/M02_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-25/S2/M03_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-25/S2/M02_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-25/S2/M01_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-24/S1/M03_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-24/S1/M02_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-24/S1/M01_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-23/S3/M03_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-23/S3/M02_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-23/S3/M01_P.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-19/S1/moment-03-P-HD-v1.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-19/S1/moment-02-P-HD-v1.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-19/S1/moment-01-P-HD-v1.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-18/S1/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-18/S1/moment-02-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-18/S1/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-17/S2/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-17/S2/moment-02-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-17/S2/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-16/S1/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-16/S1/moment-02-P-HD-handfix-r2.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-16/S1/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-15/S3/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-15/S3/moment-02-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-15/S3/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-14/S1/moment-02-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-14/S1/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-14/S1/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-13/S2/moment-03-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-13/S2/moment-02-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-13/S2/moment-01-P-HD.webp",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/bd-favicon.svg",
+   "sources": 3
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AIM3_MentalArena_mRHP_trading_benchmark_v0_6.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-28/S1/M02_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-28/S1/M03_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-28/S1/M01_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-22/S2/M01_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-22/S2/M02_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-22/S2/M03_P.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-21/S3/moment-03-P_HD-v1.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-21/S3/moment-01-P_HD-v1.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-21/S3/moment-02-P_HD-v2.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-20/S3/moment-03-P_HD-v1.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-20/S3/moment-02-P_HD-v1.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-20/S3/moment-01-P_HD-v1.webp",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_Model_Assessments.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_CCH_Science.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_8Z_Reasoning.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_8Z_DCC_Recursive.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_8Z_DCC7_Testbed.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/f4m/BD_8ZRP.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD_8Z_DCC_Trading_Governor.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD%20%C3%97%20AI%20%E2%80%94%2030%20Years%20of%20Ideas%2C%2018%20Months%20of%20Execution_files/css2",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20VMs.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8ZT/SM_BTCUSDT_1s_2026-03-08T2001.png",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8ZT/8z_shield_GRO.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8ZT/8z_shield_GPT.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8ZT/8z_shield_GEM.html",
+   "sources": 2
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/facts",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/games-info",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/v06d_full_20h30/signature_frequency_TOP250_FROM_RUN_INDEX.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/v06d_full_20h30/rank_stability_by_resource_FROM_RUN_INDEX.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/v06d_full_20h30/RouteSignal_v06b_20H30_ANALYSIS_SUMMARY.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/sitemap.xml",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/site_organization_audit.json",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/site_inventory.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v06_cases/routesignal_v06_top_review_queue.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.json",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v05_jan_review_pack.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v05_casebook.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_v05_baseline_killtest_report.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/local_runs/RouteSignal_v06b_LOCAL_5W_10K_UPLOAD_20260603_120942Z.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/local_runs/RouteSignal_v06b_LOCAL_5W_10K_NOTES.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/llms.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/llms-full.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/timeline.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/glossary.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/methodology.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/changelog.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/about.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/11_one_possible_branch_2026_2036.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/10_digital_ai_age_2000_2026.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/09_machine_age_1900_2000.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/08_industrial_age_1800_1900.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/07_early_modern_1500_1800.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/06_medieval_world_500_1500.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/04_ancient_world_3000_1000_bce.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/05_classical_world_1000_bce_500_ce.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/03_agriculture_10000_3000_bce.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/02_ice_age_transition_20000_10000_bce.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/01_deep_humanity_300000_20000_bce.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/history/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Training.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/index-crp.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Top100T.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Top100P.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Top100I.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Top100.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/TalkingToAliens.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/SeedBank.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/RouteSignal_Scout.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/SORA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/RouteSignal_Prompt_Method_Study.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Religions.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/PiX.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/RH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/PiC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Physics_CFH_MDLxDCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/People.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Origin.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Modular_Hydrofoils.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Meat_Ethics.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Maglev_Assisted_Takeoff.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MGHB.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Demon.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arenas.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-RH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-NAS.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-Poincare.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-Millennium.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-DGTE.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-ARC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/MDLxDCC-Arena-AMR.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Justice.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/Humanity.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/HTH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/GoodAndEvil.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/DNA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/DGTE.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/DGTE-HTH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AliensOnEarth.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/CodeCapsules.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/APSV.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Review.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Nothingness.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Reasoning.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Components.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_Architecture.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AI8_AGI_Positioning.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AC_AA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/AC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/crp/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/assets/dgte/dgte-render-module-r4-1536.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/arc_v04_key_bundle/task_index.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/assets/8z_NAS_arena_v19_modular_code_capsule.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/arc_v04_key_bundle/run_index.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/arc_v04_key_bundle/arc_visual_atlas.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/index-acp.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/arc_v04_key_bundle/arc_report_hub.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/RealityQA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/RealityPhysics.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/Reality.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_Kardashev.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_Atlas.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_07_Resonance_Communications.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_05_Massless_Carriers_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_06_Method_Resonance_in_Action.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_04_Zero_Framework_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_03_Discrete_Physics_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_02_Operational_Bridge.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_01_Flagship_En.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/AC_01_Flagship.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/acp/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Trip/index.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Trip/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/SLO/Krozenje_talentov.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Someone/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/SLO/Interventni_zakon_2026.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/SLO/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/S/8zSudoku-investor.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/S/8zSudoku.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/S/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/RouteSignal_v06b_OVERNIGHT_5W_20H30_SLIM_UPLOAD_20260604_083918Z.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story6.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story5.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/BD_8Z_OS_Story1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/OS/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Mix/RH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Mix/MP3_Resurrection.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Mix/Olympics2026.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-xprize.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Mix/Heroes.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-sat-smt-pace.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-p-vs-np.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-hutter.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-dream-bio.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Less%20Describes%20More%20%28formulas%29.png",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/MDLxDCC-arena-casp-protein.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/LO/8Z_FASTA_Manifest.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/LO/8Z_DNA_FASTA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/LO/8Z-FE_report.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/LO/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/How_LLMs_Actually_Work_Comparison_Report.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/index4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/index3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/index2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/imdex.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4_QWE.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4_GPT.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4_GEM.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4_DSE.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4_CLA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_rDCC_v4_Tournament.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4Pro.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_rDCC_v3_Tournament1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_rDCC_v3_Tournament.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_rDCC_Tournament.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_rDCC_v2_Tournament.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper_QWE2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper_QWE.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper_GRO2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper_GRO.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper_CLA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M_paper.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/F4M.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/CCH_AI_v1.4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/BD_8Z_Flip4M_DCC2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/BD_8Z_Flip4M_DCC1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/BD_8Z_Flip4M_DCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/F4M/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/Origin.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW_viewer.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW_v4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW_v3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW_v2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW_v1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/8z_CW.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/CW/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/wifi.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/lastovo.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/cbd3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/index-bd.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/c.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/ZZ_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/bdc4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/RouteSignal_Scout.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/SM_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/RouteSignal_Prompt_Method_Study.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/RH.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/Promo.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/NCO_statsW.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/NCO_stats.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/MDLxDCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/NCI_PL_legacy.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/NCI_PL_BD_Interactive.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/LessDescribesMore.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/Interventni_zakon_2026_Slovenija.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/F4M_rDCC_v3_Tournament1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/F4M_rDCC_v3_Tournament.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/DCC_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_trading_2026.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio_NCI4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio_OK.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio_NCI3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio_NCI2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio_NCI1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_portfolio.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_Idea_Atlas_AI_Reviews.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_Evaluation_Protocol.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_CCH_Science.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_CCH_Foundations.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_CCH_Consciousness_Field.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_ASI_Origin.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_AIM3_RHPr.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_AIM3_RHP_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_AIM3_RHP.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_AIM3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8z_publish.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8z_auth.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_ssMDL_DCC_Challenge.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_ssMDL_DCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Trading_Book.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Resonance_Hybrid_Protocol.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Reasoning_Principles.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Reasoning_Examples.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Reasoning.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Publish3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_OS_Story5.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Pact.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_OS_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Flip4M_DCC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Fifth_Mind_Asks.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Fifth_Mind.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_DCC_Trading.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_DCC_Recursive.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_DCC_Meta_Architecture.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_DCC_ActionPlan.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_DCC7_Testbed.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_Birth_of_Thought.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8Z_AI_Storm_Challenge.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_v1_1.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_v1_0.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_qa194_map2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_nu3496_status.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_qa194_map.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP_arena.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/BD_8ZRP.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AI8_Components.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AI8_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AI8_Architecture.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AC_AA.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AC4.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AC3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/AC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/8z_shield_smart.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/8z_shield_landing.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/BD/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/Art/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/mp3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/index3.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z_Audio_Master_Plan.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/index2.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-xFLAC_Optimization_Sprint.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-Audio_v.8_Master_Plan.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-Audio_Master_Plan.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_main_page.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_main.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-Audio_Benchmark.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_evolution.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_Classical_Max_Roadmap.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_BD_GRO_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_BD_GPT_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_BD_GEM_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_BD_CLA_Story.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/8Z-AC_Appendix_M.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/AC/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/zz.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/sm.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/SM_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/ZZ_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/MDL_DCC_Trading_Reference.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/MDL_DCC_Trading.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/DCC_trader.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8z_publish.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8z_auth.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_Trading_Grok_Review.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_Trading_Gemini_Review.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_Trading_ChatGPT_Review.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_Trading_Book.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_DCC_Trading_Governor.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/BD_8Z_DCC_Trading.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/8z_shield_smart.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/8z_shield_landing.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8ZT/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8Z/8Z_project_files_manager.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8Z/8Z_compression.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/crp/8Z/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "error",
+   "target": "/mdlxdcc-ai8-lab/chess/research",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/chess/research/reckless-adapter.test.cjs",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "error",
+   "target": "/mdlxdcc-ai8-lab/chess-lab/research",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/c/C/AI8_MoM_Outreach.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OmniCPQ/",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/OS/BD_portfolio.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-12/S3/R1-responsive/moment-03-P-HD-R6.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-12/S3/R1-responsive/moment-02-P-HD-R6.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-12/S3/R1-responsive/moment-01-P-HD-R6.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-11/S1/R1-responsive/moment-02-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-11/S1/R1-responsive/moment-03-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-11/S1/R1-responsive/moment-01-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-10/S2/R1-responsive/moment-03-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-10/S2/R1-responsive/moment-02-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-10/S2/R1-responsive/moment-01-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-09/S1/R1-responsive/moment-03-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-09/S1/R1-responsive/moment-02-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-09/S1/R1-responsive/moment-01-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-08/R1-responsive/moment-03-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-08/R1-responsive/moment-02-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-08/R1-responsive/moment-01-P-HD-R4.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-07/R1-responsive/moment-03-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-07/R1-responsive/moment-02-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-07/R1-responsive/moment-01-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-06/R1-responsive/moment-03-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-06/R1-responsive/moment-02-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-06/R1-responsive/moment-01-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-05/R1-responsive/moment-03-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-05/R1-responsive/moment-02-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Nara/assets/img/daily/2026-10-05/R1-responsive/moment-01-P-HD-R1.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/8Z-DCC_Flip4M.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S35_brain_anomaly_lab.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S36_raven_lock.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S34_silent_aftermath.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S32_not_thermalling.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S33_first_dive_mass_confusion.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S30_hundreds_of_wings.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S29_festival_launch.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S28_approach_geometry.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S27_neither_do_you.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S26_black_mobs_raptor.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S25_raven_waits_for_hands.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S24_black_line_loop.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S23_urban_chimney_waiting.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S22_cliff_base_observed.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S21_learning_to_steer.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S20_luka_reconstructs_route.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S19_official_pilot_error.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S18_rock_fills_camera.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S17_second_bird_escape_side.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S16_first_eagle_crosses_line.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S15_tomaz_midpoint_preparation.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S14_tomaz_perfect_wall_pass.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S13_speed_flyer_correction.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S12_black_leaves.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S11_luka_frees_black.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S09_another_bird_watches.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S10_flying_salami_meme.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S08_exploratory_strike.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/Birds/images/FS_I_S07_starving_eagle_studies_pilot.webp",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/v06d_full_20h30/signature_frequency_TOP250_FROM_RUN_INDEX.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/v06d_full_20h30/RouteSignal_v06b_20H30_ANALYSIS_SUMMARY.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/v06d_full_20h30/rank_stability_by_resource_FROM_RUN_INDEX.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v06_cases/routesignal_v06_top_review_queue.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.json",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v06_cases/routesignal_v06_ipv6_prefix_health_baseline_test.csv",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v05_casebook.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v05_jan_review_pack.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/routesignal_v05_baseline_killtest_report.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/local_runs/RouteSignal_v06b_LOCAL_5W_10K_UPLOAD_20260603_120942Z.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/bd-favicon.svg",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/assets/app.js",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/local_runs/RouteSignal_v06b_LOCAL_5W_10K_NOTES.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/assets/8z_NAS_arena_v19_modular_code_capsule.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/ZZ.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/SM_BTCUSDT_1s_2026-03-08T2001.png",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/RouteSignal_v06b_OVERNIGHT_5W_20H30_SLIM_UPLOAD_20260604_083918Z.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/NU3496_8ZRP_96793_route.svg",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/NU3496_8ZRP_96793_interactive.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/MDLxDCC-Arenas.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/MDLxDCC-Arena-AMR.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/MDLxDCC-Arena-ARC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD_8Z_Persistent_Governor.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/CCH_AI_DNA_Software_v1_5.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD-Kres.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD-Klara.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AliensOnEarth.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AIM3_MentalArena_mRHP_trading_benchmark_v0_6.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/BD-FranC.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_07_Resonance_Communications.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_06_Method_Resonance_in_Action.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_04_Zero_Framework_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_05_Massless_Carriers_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_03_Discrete_Physics_Companion.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/AC_02_Operational_Bridge.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/8z_shield_GPT.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/8z_shield_GRO.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD/8z_shield_GEM.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/BD-Sudoku.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/ARC_AGI_MDLxDCC_Arena.zip",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zc-why",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zc-pgn",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zc-about",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zSudoku-investor.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zS/BD_8z_publish.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zS/BD_8Z_Auth.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zS/8z_shield_landing.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8zS/%5B%5E",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8Z_TSP_vNext_Master_Plan.md",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/8ZT/AIM3_MentalArena_mRHP_trading_benchmark_v0_6.html",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/CCH_AD_v1.4_CSF.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/CCH_AB_v1.4.txt",
+   "sources": 1
+  },
+  {
+   "cls": "missing (also check production)",
+   "result": "still-missing",
+   "target": "/mdlxdcc-ai8-lab/F4M/CCH_AA_v1.4.txt",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/BDR.html",
+   "sources": 11
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_conscious_love_valuation",
+   "sources": 15
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/c/mind-of-minds.html",
+   "sources": 12
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/ai8_arenaloop",
+   "sources": 9
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_god_mode",
+   "sources": 8
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_aim3_rhpr",
+   "sources": 8
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/BD_8z_publish.html",
+   "sources": 7
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_aim3_rhpm",
+   "sources": 8
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/BD_8z_auth.html",
+   "sources": 7
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-reasoning-traces",
+   "sources": 6
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_reasoning",
+   "sources": 6
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/",
+   "sources": 5
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_reasoning",
+   "sources": 5
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/start/",
+   "sources": 4
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/",
+   "sources": 4
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/ai8/about/",
+   "sources": 4
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/new/",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/people",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-demon",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/aim3_mentalarena_mrhp",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/index-crp.html",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/lift_belt_propulsor",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_nu3496_status",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_publish3",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_fifth_mind",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_arena",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_dcc7_testbed",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_birth_of_thought",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_auth",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/ai8/live/",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/8z_shield_landing",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/8zcoding",
+   "sources": 3
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/nara/nara",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/nara/illuminara",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/nara/",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-nas",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arenas",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-poincare",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-arc",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/justice",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/goodandevil",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/dna",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/humanity",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/8z_postcodec_algorithmic_noise_scout",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/ai8_preparation_genesis",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_qa194_map",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.06%20p3.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.06%20p1a.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.05%20p4b.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.02-dc3.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.02-dc1.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/8Z%20OS%20v0.01.PNG",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8z/8zip",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8ZT/BD_8z_publish.html",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_sudoku_r6",
+   "sources": 2
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/slo/krozenje_talentov",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/slo/interventni_zakon_2026",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/s/8zsudoku-investor",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/s/8zsudoku",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story6",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story5",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/mix/rh",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/mix/olympics2026",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/os/bd_8z_os_story1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/lo/8z_fasta_manifest",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/mix/mp3_resurrection",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/lo/8z_dna_fasta",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/mix/heroes",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/lo/8z-fe_report",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/index4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/index3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/index2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4pro",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_rdcc_v4_tournament",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/imdex",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_rdcc_v3_tournament1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_rdcc_v3_tournament",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_rdcc_v2_tournament",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_rdcc_tournament",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper_qwe2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper_gro2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper_gro",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper_qwe",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper_cla",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4_gpt",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4_qwe",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m_paper",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4m",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4_gem",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4_dse",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/f4_cla",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/cch_ai_v1.4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/bd_8z_flip4m_dcc2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/bd_8z_flip4m_dcc1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/f4m/bd_8z_flip4m_dcc",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/origin",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw_viewer",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw_v4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw_v3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw_v2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw_v1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/cw/8z_cw",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/training",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/top100t",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/top100p",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/top100i",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/top100",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_prompt_method_study",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/routesignal_scout",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/rh",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/religions",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/pix",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/pic",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/origin",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/physics_cfh_mdlxdcc",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/modular_hydrofoils",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mghb",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-millennium",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/meat_ethics",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-rh",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-dgte",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/mdlxdcc-arena-amr",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/hth",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/maglev_assisted_takeoff",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/index-crp",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/dgte-hth",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/apsv",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/aliensonearth",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/dgte",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_review",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_nothingness",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_components",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_companion",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ai8_agi_positioning",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ac_aa",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/crp/ac",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/wifi",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/wfera",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/routesignal_scout",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/rh",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/routesignal_prompt_method_study",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/nco_statsw",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/promo",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/nci_pl_legacy",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/nco_stats",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/mdlxdcc",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/nci_pl_bd_interactive",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/lessdescribesmore",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/lastovo",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/kayak",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/interventni_zakon_2026_slovenija",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/f4m_rdcc_v3_tournament",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/cbd3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/f4m_rdcc_v3_tournament1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/c",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bdaa",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bdc4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio_ok",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio_nci4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio_nci3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio_nci2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio_nci1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_idea_atlas_ai_reviews",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_portfolio",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_evaluation_protocol",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_cch_science",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_asi_origin",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_cch_foundations",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_cch_consciousness_field",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_aim3_rhp_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_qa194_map2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_v1_1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_trading_book",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8zrp_v1_0",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_ssmdl_dcc_challenge",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_ssmdl_dcc",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_reasoning_principles",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_resonance_hybrid_protocol",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_reasoning_examples",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_pact",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_publish",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_os_story5",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_os_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_fifth_mind_asks",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_flip4m_dcc",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_dcc_trading",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_dcc_recursive",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_ai_storm_challenge",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_dcc_meta_architecture",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/bd_8z_dcc_actionplan",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ai8_components",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ai8_companion",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ac_aa",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ai8_architecture",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ac4",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/8z_shield_smart",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ac",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/ac3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/bd/8z_shield_landing",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/realityphysics",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/realityqa",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/reality",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ai8/about/",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_kardashev",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_atlas",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_07_resonance_communications",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_06_method_resonance_in_action",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_05_massless_carriers_companion",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_04_zero_framework_companion",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_03_discrete_physics_companion",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_02_operational_bridge",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/mp3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/acp/ac_01_flagship_en",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/index3",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/index2",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z_audio_master_plan",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-xflac_optimization_sprint",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-audio_v.8_master_plan",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-audio_master_plan",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-audio_benchmark",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_main_page",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_evolution",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_main",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_classical_max_roadmap",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_bd_gro_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_bd_gpt_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_bd_gem_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_bd_cla_story",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/bd_aim3_rhpr",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/ac/8z-ac_appendix_m",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/BD/bd_aim3_rhpm",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/zz_trader",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/zz",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/sm_trader",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/mdl_dcc_trading_reference",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/sm",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/mdl_dcc_trading",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_trading_grok_review",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/dcc_trader",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_trading_gemini_review",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_trading_chatgpt_review",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_dcc_trading_governor",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_dcc_trading",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_publish",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_trading_book",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/bd_8z_auth",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8zt/8z_shield_smart",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8z/8z_project_files_manager",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8z/8z_compression",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8ZT/ZZ.html",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/mdlxdcc-ai8-lab/8ZT/BD_8Z_Auth.html",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/crp/AI8_Sudoku_R6.html",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/ai8/seme-n1",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/ai8/browser-loops",
+   "sources": 1
+  },
+  {
+   "cls": "case or extension only",
+   "result": "resolved",
+   "target": "/S/",
+   "sources": 1
+  }
+ ],
+ "still_missing_top": [
+  {
+   "sources": 10,
+   "kind": "several candidates",
+   "target": "index-o.html",
+   "candidates": [
+    "OS/index-O.html",
+    "8zS/index-o.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "several candidates",
+   "target": "OS/BD_8Z_Reasoning.html",
+   "candidates": [
+    "crp/BD_8Z_Reasoning.html",
+    "BD/BD_8Z_Reasoning.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "several candidates",
+   "target": "OS/BD_8Z_Flip4M_DCC.html",
+   "candidates": [
+    "F4M/BD_8Z_Flip4M_DCC.html",
+    "BD/BD_8Z_Flip4M_DCC.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "OS/BD_CCH_Science.html",
+   "candidates": [
+    "BD/BD_CCH_Science.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "OS/BD_8Z_DCC_Recursive.html",
+   "candidates": [
+    "BD/BD_8Z_DCC_Recursive.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "OS/BD_8Z_DCC7_Testbed.html",
+   "candidates": [
+    "BD/BD_8Z_DCC7_Testbed.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "OS/BD_8ZRP.html",
+   "candidates": [
+    "BD/BD_8ZRP.html"
+   ]
+  },
+  {
+   "sources": 7,
+   "kind": "no file with that name",
+   "target": "F4M/F4M_about.html",
+   "candidates": []
+  },
+  {
+   "sources": 5,
+   "kind": "no file with that name",
+   "target": "cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+   "candidates": []
+  },
+  {
+   "sources": 5,
+   "kind": "no file with that name",
+   "target": "cdn-cgi/l/email-protection",
+   "candidates": []
+  },
+  {
+   "sources": 5,
+   "kind": "no file with that name",
+   "target": "F4M/CCH__v1.4.txt",
+   "candidates": []
+  },
+  {
+   "sources": 4,
+   "kind": "several candidates",
+   "target": "old/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 4,
+   "kind": "no file with that name",
+   "target": "F4M/8Z-DCC_Flip4M.txt",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "several candidates",
+   "target": "F4M/BD_8Z_Reasoning.html",
+   "candidates": [
+    "crp/BD_8Z_Reasoning.html",
+    "BD/BD_8Z_Reasoning.html"
+   ]
+  },
+  {
+   "sources": 3,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/BD_CCH_Science.html",
+   "candidates": [
+    "BD/BD_CCH_Science.html"
+   ]
+  },
+  {
+   "sources": 3,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/BD_8Z_DCC_Recursive.html",
+   "candidates": [
+    "BD/BD_8Z_DCC_Recursive.html"
+   ]
+  },
+  {
+   "sources": 3,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/BD_8Z_DCC7_Testbed.html",
+   "candidates": [
+    "BD/BD_8Z_DCC7_Testbed.html"
+   ]
+  },
+  {
+   "sources": 3,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/BD_8ZRP.html",
+   "candidates": [
+    "BD/BD_8ZRP.html"
+   ]
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "bd-favicon.svg",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-11-01/S1/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-11-01/S1/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-11-01/S1/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-29/S1/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-29/S1/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-29/S1/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-25/S2/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-25/S2/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-25/S2/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-24/S1/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-24/S1/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-24/S1/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-23/S3/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-23/S3/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-23/S3/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-19/S1/moment-03-P-HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-19/S1/moment-02-P-HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-19/S1/moment-01-P-HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-18/S1/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-18/S1/moment-02-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-18/S1/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-17/S2/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-17/S2/moment-02-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-17/S2/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-16/S1/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-16/S1/moment-02-P-HD-handfix-r2.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-16/S1/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-15/S3/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-15/S3/moment-02-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-15/S3/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-14/S1/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-14/S1/moment-02-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-14/S1/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-13/S2/moment-03-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-13/S2/moment-02-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-13/S2/moment-01-P-HD.webp",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "F4M/BD_Model_Assessments.html",
+   "candidates": []
+  },
+  {
+   "sources": 3,
+   "kind": "no file with that name",
+   "target": "BD/BD_Model_Assessments.html",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "several candidates",
+   "target": "F4M/f4m/BD_8Z_Reasoning.html",
+   "candidates": [
+    "crp/BD_8Z_Reasoning.html",
+    "BD/BD_8Z_Reasoning.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/f4m/BD_CCH_Science.html",
+   "candidates": [
+    "BD/BD_CCH_Science.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/f4m/BD_8Z_DCC_Recursive.html",
+   "candidates": [
+    "BD/BD_8Z_DCC_Recursive.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/f4m/BD_8Z_DCC7_Testbed.html",
+   "candidates": [
+    "BD/BD_8Z_DCC7_Testbed.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "F4M/f4m/BD_8ZRP.html",
+   "candidates": [
+    "BD/BD_8ZRP.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "same file name exists elsewhere (wrong relative path)",
+   "target": "BD/BD_8Z_DCC_Trading_Governor.html",
+   "candidates": [
+    "8ZT/BD_8Z_DCC_Trading_Governor.html"
+   ]
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "crp/AIM3_MentalArena_mRHP_trading_benchmark_v0_6.html",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-28/S1/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-28/S1/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-28/S1/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-22/S2/M03_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-22/S2/M02_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-22/S2/M01_P.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-21/S3/moment-03-P_HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-21/S3/moment-02-P_HD-v2.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-21/S3/moment-01-P_HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-20/S3/moment-03-P_HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-20/S3/moment-02-P_HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "Nara/assets/img/daily/2026-10-20/S3/moment-01-P_HD-v1.webp",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "F4M/f4m/BD_Model_Assessments.html",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "BD/BD × AI — 30 Years of Ideas, 18 Months of Execution_files/css2",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "BD/8Z OS VMs.PNG",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "8ZT/SM_BTCUSDT_1s_2026-03-08T2001.png",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "8ZT/8z_shield_GRO.html",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "8ZT/8z_shield_GPT.html",
+   "candidates": []
+  },
+  {
+   "sources": 2,
+   "kind": "no file with that name",
+   "target": "8ZT/8z_shield_GEM.html",
+   "candidates": []
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "games-info",
+   "candidates": [
+    "chess/games-info.html",
+    "chess-lab/games-info.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "facts",
+   "candidates": [
+    "chess/facts.html",
+    "chess-lab/facts.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/sitemap.xml",
+   "candidates": [
+    "sitemap.xml",
+    "chess-lab/old/sitemap.xml"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/history/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/index-crp.html",
+   "candidates": [
+    "index-crp.html",
+    "crp/index-CRP.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/RouteSignal_Scout.html",
+   "candidates": [
+    "crp/RouteSignal_Scout.html",
+    "BD/RouteSignal_Scout.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/RouteSignal_Prompt_Method_Study.html",
+   "candidates": [
+    "crp/RouteSignal_Prompt_Method_Study.html",
+    "BD/RouteSignal_Prompt_Method_Study.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/RH.html",
+   "candidates": [
+    "Mix/RH.html",
+    "crp/RH.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/Origin.html",
+   "candidates": [
+    "crp/Origin.html",
+    "CW/Origin.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/MDLxDCC.html",
+   "candidates": [
+    "crp/MDLxDCC.html",
+    "BD/MDLxDCC.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/MDLxDCC-Arena-NAS.html",
+   "candidates": [
+    "crp/MDLxDCC-Arena-NAS.html",
+    "BD/MDLxDCC-Arena-NAS.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AliensOnEarth.html",
+   "candidates": [
+    "crp/AliensOnEarth.html",
+    "BD/AliensOnEarth.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AI8_Reasoning.html",
+   "candidates": [
+    "crp/AI8_Reasoning.html",
+    "BD/AI8_Reasoning.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AI8_Components.html",
+   "candidates": [
+    "crp/AI8_Components.html",
+    "BD/AI8_Components.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AI8_Companion.html",
+   "candidates": [
+    "crp/AI8_Companion.html",
+    "BD/AI8_Companion.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AI8_Architecture.html",
+   "candidates": [
+    "crp/AI8_Architecture.html",
+    "BD/AI8_Architecture.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AC_AA.html",
+   "candidates": [
+    "crp/AC_AA.html",
+    "BD/AC_AA.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/AC.html",
+   "candidates": [
+    "crp/AC.html",
+    "BD/AC.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/crp/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/acp/index-acp.html",
+   "candidates": [
+    "index-acp.html",
+    "acp/index-acp.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/acp/AC_01_Flagship.html",
+   "candidates": [
+    "acp/AC_01_Flagship.html",
+    "BD/AC_01_Flagship.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/acp/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/Trip/index.html",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/Trip/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/Someone/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/SLO/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/S/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/OS/BD_8Z_OS_Story5.html",
+   "candidates": [
+    "OS/BD_8Z_OS_Story5.html",
+    "BD/BD_8Z_OS_Story5.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/OS/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/Mix/RH.html",
+   "candidates": [
+    "Mix/RH.html",
+    "crp/RH.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/LO/",
+   "candidates": [
+    "index.html",
+    "F4M/index.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/index3.html",
+   "candidates": [
+    "F4M/index3.html",
+    "AC/index3.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/index2.html",
+   "candidates": [
+    "F4M/index2.html",
+    "S/index2.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/F4M_rDCC_v3_Tournament1.html",
+   "candidates": [
+    "F4M/F4M_rDCC_v3_Tournament1.html",
+    "BD/F4M_rDCC_v3_Tournament1.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/F4M_rDCC_v3_Tournament.html",
+   "candidates": [
+    "F4M/F4M_rDCC_v3_Tournament.html",
+    "BD/F4M_rDCC_v3_Tournament.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/F4M_paper.html",
+   "candidates": [
+    "F4M/F4M_paper.html",
+    "F4M/old/F4M_paper.html"
+   ]
+  },
+  {
+   "sources": 1,
+   "kind": "several candidates",
+   "target": "crp/F4M/F4M.html",
+   "candidates": [
+    "F4M/F4M.html",
+    "F4M/old/F4M.html"
+   ]
+  }
+ ]
+}

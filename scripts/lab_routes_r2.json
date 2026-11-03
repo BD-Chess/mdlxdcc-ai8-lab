@@ -1,0 +1,637 @@
+{
+ "schema": "ai8.lab-routes.v1",
+ "source": "BD-Chess/bd-chessdb public/_redirects @ d9c0242 (read-only); internal targets only, OmniCPQ/TS rules dropped",
+ "meaning": "Production Netlify rewrites/redirects, replayed by the lab 404 router because GitHub Pages has no _redirects.",
+ "rules": [
+  {
+   "from": "/ai8/cli-loops",
+   "to": "/AI8/cli-loops.html",
+   "status": "200!"
+  },
+  {
+   "from": "/ai8/cli-loops/",
+   "to": "/ai8/cli-loops",
+   "status": "301!"
+  },
+  {
+   "from": "/ai8/cli-loops.html",
+   "to": "/AI8/cli-loops.html",
+   "status": "200!"
+  },
+  {
+   "from": "/ai8/model-results",
+   "to": "/AI8/model-results.html",
+   "status": "200!"
+  },
+  {
+   "from": "/ai8/model-results/",
+   "to": "/ai8/model-results",
+   "status": "301!"
+  },
+  {
+   "from": "/ai8/model-results.html",
+   "to": "/AI8/model-results.html",
+   "status": "200!"
+  },
+  {
+   "from": "/ai8/api-check",
+   "to": "/AI8/api-check.html",
+   "status": "200!"
+  },
+  {
+   "from": "/ai8/api-check.html",
+   "to": "/AI8/api-check.html",
+   "status": "200!"
+  },
+  {
+   "from": "/PWA",
+   "to": "/",
+   "status": "301!"
+  },
+  {
+   "from": "/PWA/",
+   "to": "/",
+   "status": "301!"
+  },
+  {
+   "from": "/PWA/index.html",
+   "to": "/",
+   "status": "301!"
+  },
+  {
+   "from": "/index-pwa.html",
+   "to": "/",
+   "status": "301!"
+  },
+  {
+   "from": "/wl/bd/",
+   "to": "/WL/BD/",
+   "status": "301"
+  },
+  {
+   "from": "/wl/bd",
+   "to": "/WL/BD/",
+   "status": "301"
+  },
+  {
+   "from": "/wl/",
+   "to": "/WL/",
+   "status": "301"
+  },
+  {
+   "from": "/wl",
+   "to": "/WL/",
+   "status": "301"
+  },
+  {
+   "from": "/bd/o",
+   "to": "/BD/O/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/o/",
+   "to": "/BD/O/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/o/sef",
+   "to": "/BD/O/sef.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/o/sef/",
+   "to": "/BD/O/sef.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/o/sef.html",
+   "to": "/BD/O/sef.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/O/sef",
+   "to": "/BD/O/sef.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD-work-at-a-glance.html",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/BD-work-at-a-glance",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/bd-work-at-a-glance.html",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/bd-work-at-a-glance",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/w.html",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/w/index.html",
+   "to": "/w/",
+   "status": "301!"
+  },
+  {
+   "from": "/crp/seedbank",
+   "to": "/crp/SeedBank.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/codecapsules",
+   "to": "/crp/CodeCapsules.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/talkingtoaliens",
+   "to": "/crp/TalkingToAliens.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/mdlxdcc",
+   "to": "/crp/MDLxDCC.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/ai8_architecture",
+   "to": "/crp/AI8_Architecture.html",
+   "status": "200"
+  },
+  {
+   "from": "/acp/ac_01_flagship",
+   "to": "/acp/AC_01_Flagship.html",
+   "status": "200"
+  },
+  {
+   "from": "/ai8/c_soul",
+   "to": "/AI8/C_soul.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/bd_aim3_rhp",
+   "to": "/BD/BD_AIM3_RHP.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/bd_aim3",
+   "to": "/BD/BD_AIM3.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/sora",
+   "to": "/crp/SORA.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/bd_8zrp",
+   "to": "/BD/BD_8ZRP.html",
+   "status": "200"
+  },
+  {
+   "from": "/ai8/ai8_arena_foundry",
+   "to": "/AI8/AI8_Arena_Foundry.html",
+   "status": "200"
+  },
+  {
+   "from": "/ai8/ai8_arena_foundry.html",
+   "to": "/AI8/AI8_Arena_Foundry.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading-research-atlas",
+   "to": "/BD/BD_Trading_Research_Atlas.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading-research-atlas.html",
+   "to": "/BD/BD_Trading_Research_Atlas.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading",
+   "to": "/BD/BD_Trading_Hub.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading.html",
+   "to": "/BD/BD_Trading_Hub.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/evidence",
+   "to": "/BD/private-trading/BD_trading_2026.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/hsr-pix-analysis",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/neutral-lock",
+   "to": "/BD/private-trading/BDTS.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/bb-surfing-hedge",
+   "to": "/BD/private-trading/BBSH.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/hsr-pix-protocols",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_SOL_MANUAL_PROTOCOLS.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/hedge-separation",
+   "to": "/BD/private-trading/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/paper-sm",
+   "to": "/BD/private-trading/SM_trader.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/paper-zz",
+   "to": "/BD/private-trading/ZZ_trader.html",
+   "status": "200"
+  },
+  {
+   "from": "/bd/trading/paper-dcc",
+   "to": "/BD/private-trading/DCC_trader.html",
+   "status": "200"
+  },
+  {
+   "from": "/BD/BD_trading_2026.html",
+   "to": "/BD/private-trading/BD_trading_2026.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bd_trading_2026",
+   "to": "/BD/private-trading/BD_trading_2026.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bd_hsr_pix_v1_3c_final_analysis_20260621",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_FINAL_ANALYSIS_20260621.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/BDTS.html",
+   "to": "/BD/private-trading/BDTS.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bdts",
+   "to": "/BD/private-trading/BDTS.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/BBSH.html",
+   "to": "/BD/private-trading/BBSH.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bbsh",
+   "to": "/BD/private-trading/BBSH.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/BD_HSR_PiX_v1_3c_SOL_MANUAL_PROTOCOLS.html",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_SOL_MANUAL_PROTOCOLS.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bd_hsr_pix_v1_3c_sol_manual_protocols",
+   "to": "/BD/private-trading/BD_HSR_PiX_v1_3c_SOL_MANUAL_PROTOCOLS.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+   "to": "/BD/private-trading/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/bd_hedge_separation_pix_strategy_explainer",
+   "to": "/BD/private-trading/BD_Hedge_Separation_PiX_Strategy_Explainer.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/SM_trader.html",
+   "to": "/BD/private-trading/SM_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/sm_trader",
+   "to": "/BD/private-trading/SM_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/ZZ_trader.html",
+   "to": "/BD/private-trading/ZZ_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/zz_trader",
+   "to": "/BD/private-trading/ZZ_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/BD/DCC_trader.html",
+   "to": "/BD/private-trading/DCC_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/bd/dcc_trader",
+   "to": "/BD/private-trading/DCC_trader.html",
+   "status": "200!"
+  },
+  {
+   "from": "/crp/8z_mdlxdcc",
+   "to": "/crp/8z_MDLxDCC.html",
+   "status": "200"
+  },
+  {
+   "from": "/crp/8z_mdlxdcc.html",
+   "to": "/crp/8z_MDLxDCC.html",
+   "status": "200"
+  },
+  {
+   "from": "/s/new",
+   "to": "/S/new/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/s/new/*",
+   "to": "/S/new/:splat",
+   "status": "200!"
+  },
+  {
+   "from": "/chess/new",
+   "to": "/chess-lab/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/new/*",
+   "to": "/chess-lab/:splat",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/old",
+   "to": "/chess-lab/old/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/old/*",
+   "to": "/chess-lab/old/:splat",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/lab",
+   "to": "/chess-lab/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/lab/*",
+   "to": "/chess-lab/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess-lab/lab",
+   "to": "/chess-lab/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess-lab/lab/*",
+   "to": "/chess-lab/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess-lab/old/chess.html",
+   "to": "/chess-lab/old/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess-lab/old/8zc.html",
+   "to": "/chess-lab/old/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/",
+   "to": "/chess/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/chess/chess.html",
+   "to": "/chess/",
+   "status": "301!"
+  },
+  {
+   "from": "/chess/8zc.html",
+   "to": "/chess/",
+   "status": "301!"
+  },
+  {
+   "from": "/Lichess-API.txt",
+   "to": "/chess/Lichess-API.txt",
+   "status": "301!"
+  },
+  {
+   "from": "/Games/*",
+   "to": "/chess/Games/:splat",
+   "status": "301!"
+  },
+  {
+   "from": "/config/*",
+   "to": "/chess/config/:splat",
+   "status": "301!"
+  },
+  {
+   "from": "/img/chesspieces/*",
+   "to": "/chess/img/chesspieces/:splat",
+   "status": "301!"
+  },
+  {
+   "from": "/css/chessboard-1.0.0.min.css",
+   "to": "/chess/css/chessboard-1.0.0.min.css",
+   "status": "301!"
+  },
+  {
+   "from": "/css/8zc-styles.css",
+   "to": "/chess/css/8zc-styles.css",
+   "status": "301!"
+  },
+  {
+   "from": "/js/8zc-utils.js",
+   "to": "/chess/js/8zc-utils.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/boardManager.js",
+   "to": "/chess/js/boardManager.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/chess.min.js",
+   "to": "/chess/js/chess.min.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/chessboard-1.0.0.min.js",
+   "to": "/chess/js/chessboard-1.0.0.min.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/evalOverlay.js",
+   "to": "/chess/js/evalOverlay.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/gameLoader.js",
+   "to": "/chess/js/gameLoader.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/init.js",
+   "to": "/chess/js/init.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/jquery-3.6.0.min.js",
+   "to": "/chess/js/jquery-3.6.0.min.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/pgnIO.js",
+   "to": "/chess/js/pgnIO.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/state.js",
+   "to": "/chess/js/state.js",
+   "status": "301!"
+  },
+  {
+   "from": "/js/uiSettings.js",
+   "to": "/chess/js/uiSettings.js",
+   "status": "301!"
+  },
+  {
+   "from": "/api/entry-locale",
+   "to": "/.netlify/functions/entry-locale",
+   "status": "200"
+  },
+  {
+   "from": "/crp/lab.html",
+   "to": "/lab.html",
+   "status": "301!"
+  },
+  {
+   "from": "/crp/lab",
+   "to": "/lab.html",
+   "status": "301!"
+  },
+  {
+   "from": "/BD/index-bd.html",
+   "to": "/bd/",
+   "status": "301"
+  },
+  {
+   "from": "/BD/index-bd",
+   "to": "/bd/",
+   "status": "301"
+  },
+  {
+   "from": "/bd/index-bd.html",
+   "to": "/bd/",
+   "status": "301"
+  },
+  {
+   "from": "/bd/index-bd",
+   "to": "/bd/",
+   "status": "301"
+  },
+  {
+   "from": "/trip/old/001",
+   "to": "/Trip/old/001/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old/002",
+   "to": "/Trip/old/002/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old/003",
+   "to": "/Trip/old/003/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old/004",
+   "to": "/Trip/old/004/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old/005",
+   "to": "/Trip/old/005/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old",
+   "to": "/Trip/old/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old/*",
+   "to": "/Trip/old/:splat",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old2",
+   "to": "/Trip/old2/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/old2/*",
+   "to": "/Trip/old2/:splat",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/new",
+   "to": "/Trip/new/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/new/*",
+   "to": "/Trip/new/:splat",
+   "status": "200!"
+  },
+  {
+   "from": "/trip",
+   "to": "/Trip/index.html",
+   "status": "200!"
+  },
+  {
+   "from": "/trip/*",
+   "to": "/Trip/:splat",
+   "status": "200!"
+  }
+ ]
+}
