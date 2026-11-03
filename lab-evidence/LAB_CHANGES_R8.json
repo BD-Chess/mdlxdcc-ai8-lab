@@ -1,0 +1,33 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R8",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Lab atlas phone header: compact theme toggle up to 768 px; header test counts visible controls.",
+ "files": [
+  {
+   "path": "public/index.html",
+   "source_sha256": "801651186eb2bc97296a5adfbc56ef72e0f6af3294162787334755929521982c",
+   "lab_sha256": "7c5feca3317e770b67386f7ed0ca83d2e6eb5f081f056a7fce1daf80a385f7ee",
+   "bytes": 212639,
+   "lab_prs": [
+    "cloud/lab-atlas-phone-header-20261103"
+   ],
+   "lab_commits": [
+    "230eb05"
+   ]
+  },
+  {
+   "path": "tests/landing-header-search-browser.cjs",
+   "source_sha256": "43d2f6ecc0e3aa6c76b1c441db99169cb650509408830ba544e95752262fcbb6",
+   "lab_sha256": "81440cb185a4e841764dba6d6930f2f78421d8bbe673010b19858dc54021689f",
+   "bytes": 7830,
+   "lab_prs": [
+    "cloud/lab-atlas-phone-header-20261103"
+   ],
+   "lab_commits": [
+    "230eb05"
+   ]
+  }
+ ]
+}
