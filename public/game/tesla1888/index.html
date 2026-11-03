@@ -104,7 +104,7 @@ main>footer{border-top:1px solid var(--line);padding-top:14px;font:13px/1.6 ui-m
 </section>
 <section class="g-step g-hint" id="s6" data-step="6" data-act="1" data-kind="hint" data-for="s3" data-tier="3" hidden>
 <p class="g-kind">Namig 3</p>
-<p data-ref="s6.p1">Generator v sebi proizvaja izmenični tok; komutator ga šele preoblikuje za enosmerni motor. Ali bi se dalo to samodejno menjavanje smeri izkoristiti, namesto da ga mehansko odpravljaš? Kako tok pripeljati do vrtečega se dela, ostane odprto vprašanje.</p>
+<p data-ref="s6.p1">Loči nalogo od izvedbe: kaj motor zares potrebuje in kaj je le način, kako to v tem stroju opravlja drsni stik? Nato pomisli, kakšen tok nastaja v vrtečem se navitju generatorja, še preden pride do komutatorja. Kako tok pripeljati do vrtečega se dela, ostane odprto vprašanje.</p>
 </section>
 <section class="g-step g-reveal" id="s7" data-step="7" data-act="1" data-kind="reveal" data-for="s3" hidden>
 <p class="g-kind">Razkritje</p>
@@ -151,7 +151,7 @@ main>footer{border-top:1px solid var(--line);padding-top:14px;font:13px/1.6 ui-m
 </section>
 <section class="g-step g-hint" id="s13" data-step="13" data-act="2" data-kind="hint" data-for="s10" data-tier="3" hidden>
 <p class="g-kind">Namig 3</p>
-<p data-ref="s13.p1">Največji magnetni učinek v razmaknjenih navitjih naj ne nastopi istočasno, ampak zaporedno, s časovnim zamikom. Kaj se zgodi s skupnim magnetnim učinkom, ko ga primerjaš med dvema zaporednima trenutkoma?</p>
+<p data-ref="s13.p1">Najprej v mislih preizkusi preprost primer: vsa razmaknjena navitja nihajo hkrati, v istem ritmu. Ali se smer skupnega magnetnega učinka pri tem kam premika? Nato razmisli, kaj bi moral spremeniti pri tem, kdaj posamezno navitje doseže svoj največji učinek.</p>
 </section>
 <section class="g-step g-reveal" id="s14" data-step="14" data-act="2" data-kind="reveal" data-for="s10" hidden>
 <p class="g-kind">Razkritje</p>
@@ -203,11 +203,11 @@ main>footer{border-top:1px solid var(--line);padding-top:14px;font:13px/1.6 ui-m
 </section>
 <section class="g-step g-hint" id="s20" data-step="20" data-act="3" data-kind="hint" data-for="s18" data-tier="2" hidden>
 <p class="g-kind">Namig 2</p>
-<p data-ref="s20.p1">Faraday je pokazal, da spreminjanje magnetnega vpliva lahko sproži električni tok v prevodniku. Če ima tok v rotorju sklenjeno pot, ga ni treba dovajati po žici.</p>
+<p data-ref="s20.p1">Spomni se Faradayevih poskusov: kaj lahko spreminjajoč se magnetni vpliv povzroči v kovini, na katero ni priključen noben vir? In kakšno obliko bi moral imeti prevodni del rotorja, da bi to v njem lahko delovalo brez žic od zunaj?</p>
 </section>
 <section class="g-step g-hint" id="s21" data-step="21" data-act="3" data-kind="hint" data-for="s18" data-tier="3" hidden>
 <p class="g-kind">Namig 3</p>
-<p data-ref="s21.p1">Inducirani tok ustvari magnetni odziv, zaradi katerega rotor sledi vrtečemu se polju. Če bi polje povsem dohitel, bi inducirani tok in z njim indukcijski navor izginila.</p>
+<p data-ref="s21.p1">Tok, ki nastane v rotorju, ni brez posledic: kaj ustvari vsak električni tok okoli sebe in kako bi to delovalo skupaj z vrtečim se poljem? Nato si zamisli, da rotor polje dohiti in se vrti natanko enako hitro. Kaj bi se tedaj z vidika rotorja še spreminjalo?</p>
 </section>
 <section class="g-step g-reveal" id="s22" data-step="22" data-act="3" data-kind="reveal" data-for="s18" hidden>
 <p class="g-kind">Razkritje</p>
@@ -259,11 +259,11 @@ main>footer{border-top:1px solid var(--line);padding-top:14px;font:13px/1.6 ui-m
 </section>
 <section class="g-step g-hint" id="s28" data-step="28" data-act="4" data-kind="hint" data-for="s26" data-tier="2" hidden>
 <p class="g-kind">Namig 2</p>
-<p data-ref="s28.p1">V generatorju uporabi dve električno ločeni navitji, pravokotni drugo na drugo. Ko se vrtita skozi magnetno polje, eno doseže največjo inducirano napetost takrat, ko je pri drugem trenutna inducirana napetost nič. Tako dobiš dva izhoda, zamaknjena za četrtino periode.</p>
+<p data-ref="s28.p1">Časovno razliko lahko poiščeš že tam, kjer napetost nastaja. Od česa je odvisno, v katerem trenutku obrata navitje v generatorju doseže največjo napetost? Kako bi to izkoristil, da bi iz enega stroja dobil dva izhoda, ki ne dosegata vrhov hkrati?</p>
 </section>
 <section class="g-step g-hint" id="s29" data-step="29" data-act="4" data-kind="hint" data-for="s26" data-tier="3" hidden>
 <p class="g-kind">Namig 3</p>
-<p data-ref="s29.p1">Dva neodvisna sklenjena tokokroga potrebujeta po dva vodnika, skupaj štiri. Če združiš povratni poti, zadoščajo trije, toda skupni vodnik mora prenašati vsoto obeh tokov; pri enakih sinusnih tokovih z zamikom 90 stopinj je njegov efektivni tok približno 1,41-krat večji. Če iz enega vira ustvariš drugo fazo šele pri motorju, zadoščata dva napajalna vodnika, vendar potrebuješ dodatne električne elemente.</p>
+<p data-ref="s29.p1">Za vsak tok si zamisli celotno pot od vira do motorja in nazaj. Koliko vodnikov tako potrebujeta dva ločena tokokroga? Ali bi si lahko kakšno pot delila in kaj bi tedaj moral prenašati skupni vodnik? Premisli še, ali mora drugi časovni potek nastati že pri generatorju ali šele pri motorju, in kaj te stane vsaka izbira.</p>
 </section>
 <section class="g-step g-reveal" id="s30" data-step="30" data-act="4" data-kind="reveal" data-for="s26" hidden>
 <p class="g-kind">Razkritje</p>
@@ -311,7 +311,7 @@ main>footer{border-top:1px solid var(--line);padding-top:14px;font:13px/1.6 ui-m
 </section>
 <section class="g-step g-hint" id="s36" data-step="36" data-act="5" data-kind="hint" data-for="s33" data-tier="3" hidden>
 <p class="g-kind">Namig 3</p>
-<p data-ref="s36.p1">Elektrike ni treba uporabljati pri enaki napetosti, kot jo pošiljaš po daljnovodu. Poznaš dve tuljavi, povezani s spreminjajočim se magnetnim poljem: kaj bi z njima naredil na začetku in na koncu poti?</p>
+<p data-ref="s36.p1">Ali mora napetost, ki je ugodna za dolgo pot, ostati enaka tudi tam, kjer elektriko uporabljajo ljudje? Če ne, kje na poti bi jo spreminjal? Pri izmeničnem toku ti lahko pomaga pojav, ki ga že izkoriščaš v svojem motorju: kako bi z njim spremenil napetost?</p>
 </section>
 <section class="g-step g-reveal" id="s37" data-step="37" data-act="5" data-kind="reveal" data-for="s33" hidden>
 <p class="g-kind">Razkritje</p>

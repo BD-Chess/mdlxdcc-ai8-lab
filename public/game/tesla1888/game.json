@@ -48,7 +48,7 @@
   "alg": "sha3-256",
   "rules": "PRAVILO20 v0.2",
   "release": "R1",
-  "sha3": "bf9d94e88cbd031ab55e02915a5d484bd01fb7409268ca9fb884e332e6f2e1d2"
+  "sha3": "f87a5a1d1324ae131970dd9c36c82c24db3695da53522da0580ffaf3cf75785c"
  },
  "steps": [
   {
@@ -199,7 +199,7 @@
      {
       "step_id": "s6",
       "tier": 3,
-      "besedilo": "Generator v sebi proizvaja izmenični tok; komutator ga šele preoblikuje za enosmerni motor. Ali bi se dalo to samodejno menjavanje smeri izkoristiti, namesto da ga mehansko odpravljaš? Kako tok pripeljati do vrtečega se dela, ostane odprto vprašanje.",
+      "besedilo": "Loči nalogo od izvedbe: kaj motor zares potrebuje in kaj je le način, kako to v tem stroju opravlja drsni stik? Nato pomisli, kakšen tok nastaja v vrtečem se navitju generatorja, še preden pride do komutatorja. Kako tok pripeljati do vrtečega se dela, ostane odprto vprašanje.",
       "covers": [
        "s3.k3"
       ]
@@ -329,7 +329,7 @@
     {
      "ref": "s6.p1",
      "kind": "p",
-     "label": "Generator v sebi proizvaja izmenični tok; komutator ga šele preoblikuje za enosmerni motor"
+     "label": "Loči nalogo od izvedbe: kaj motor zares potrebuje in kaj je le način, kako to v tem stroju"
     }
    ]
   },
@@ -525,7 +525,7 @@
      {
       "step_id": "s13",
       "tier": 3,
-      "besedilo": "Največji magnetni učinek v razmaknjenih navitjih naj ne nastopi istočasno, ampak zaporedno, s časovnim zamikom. Kaj se zgodi s skupnim magnetnim učinkom, ko ga primerjaš med dvema zaporednima trenutkoma?",
+      "besedilo": "Najprej v mislih preizkusi preprost primer: vsa razmaknjena navitja nihajo hkrati, v istem ritmu. Ali se smer skupnega magnetnega učinka pri tem kam premika? Nato razmisli, kaj bi moral spremeniti pri tem, kdaj posamezno navitje doseže svoj največji učinek.",
       "covers": [
        "s10.k3"
       ]
@@ -688,7 +688,7 @@
     {
      "ref": "s13.p1",
      "kind": "p",
-     "label": "Največji magnetni učinek v razmaknjenih navitjih naj ne nastopi istočasno, ampak zaporedno"
+     "label": "Najprej v mislih preizkusi preprost primer: vsa razmaknjena navitja nihajo hkrati, v istem"
     }
    ]
   },
@@ -921,7 +921,7 @@
      {
       "step_id": "s20",
       "tier": 2,
-      "besedilo": "Faraday je pokazal, da spreminjanje magnetnega vpliva lahko sproži električni tok v prevodniku. Če ima tok v rotorju sklenjeno pot, ga ni treba dovajati po žici.",
+      "besedilo": "Spomni se Faradayevih poskusov: kaj lahko spreminjajoč se magnetni vpliv povzroči v kovini, na katero ni priključen noben vir? In kakšno obliko bi moral imeti prevodni del rotorja, da bi to v njem lahko delovalo brez žic od zunaj?",
       "covers": [
        "s18.k2"
       ]
@@ -929,7 +929,7 @@
      {
       "step_id": "s21",
       "tier": 3,
-      "besedilo": "Inducirani tok ustvari magnetni odziv, zaradi katerega rotor sledi vrtečemu se polju. Če bi polje povsem dohitel, bi inducirani tok in z njim indukcijski navor izginila.",
+      "besedilo": "Tok, ki nastane v rotorju, ni brez posledic: kaj ustvari vsak električni tok okoli sebe in kako bi to delovalo skupaj z vrtečim se poljem? Nato si zamisli, da rotor polje dohiti in se vrti natanko enako hitro. Kaj bi se tedaj z vidika rotorja še spreminjalo?",
       "covers": [
        "s18.k3",
        "s18.k4"
@@ -1052,7 +1052,7 @@
     {
      "ref": "s20.p1",
      "kind": "p",
-     "label": "Faraday je pokazal, da spreminjanje magnetnega vpliva lahko sproži električni tok v prevod"
+     "label": "Spomni se Faradayevih poskusov: kaj lahko spreminjajoč se magnetni vpliv povzroči v kovini"
     }
    ]
   },
@@ -1082,7 +1082,7 @@
     {
      "ref": "s21.p1",
      "kind": "p",
-     "label": "Inducirani tok ustvari magnetni odziv, zaradi katerega rotor sledi vrtečemu se polju. Če b"
+     "label": "Tok, ki nastane v rotorju, ni brez posledic: kaj ustvari vsak električni tok okoli sebe in"
     }
    ]
   },
@@ -1330,7 +1330,7 @@
      {
       "step_id": "s28",
       "tier": 2,
-      "besedilo": "V generatorju uporabi dve električno ločeni navitji, pravokotni drugo na drugo. Ko se vrtita skozi magnetno polje, eno doseže največjo inducirano napetost takrat, ko je pri drugem trenutna inducirana napetost nič. Tako dobiš dva izhoda, zamaknjena za četrtino periode.",
+      "besedilo": "Časovno razliko lahko poiščeš že tam, kjer napetost nastaja. Od česa je odvisno, v katerem trenutku obrata navitje v generatorju doseže največjo napetost? Kako bi to izkoristil, da bi iz enega stroja dobil dva izhoda, ki ne dosegata vrhov hkrati?",
       "covers": [
        "s26.k2",
        "s26.k3"
@@ -1339,7 +1339,7 @@
      {
       "step_id": "s29",
       "tier": 3,
-      "besedilo": "Dva neodvisna sklenjena tokokroga potrebujeta po dva vodnika, skupaj štiri. Če združiš povratni poti, zadoščajo trije, toda skupni vodnik mora prenašati vsoto obeh tokov; pri enakih sinusnih tokovih z zamikom 90 stopinj je njegov efektivni tok približno 1,41-krat večji. Če iz enega vira ustvariš drugo fazo šele pri motorju, zadoščata dva napajalna vodnika, vendar potrebuješ dodatne električne elemente.",
+      "besedilo": "Za vsak tok si zamisli celotno pot od vira do motorja in nazaj. Koliko vodnikov tako potrebujeta dva ločena tokokroga? Ali bi si lahko kakšno pot delila in kaj bi tedaj moral prenašati skupni vodnik? Premisli še, ali mora drugi časovni potek nastati že pri generatorju ali šele pri motorju, in kaj te stane vsaka izbira.",
       "covers": [
        "s26.k4",
        "s26.k5"
@@ -1491,7 +1491,7 @@
     {
      "ref": "s28.p1",
      "kind": "p",
-     "label": "V generatorju uporabi dve električno ločeni navitji, pravokotni drugo na drugo. Ko se vrti"
+     "label": "Časovno razliko lahko poiščeš že tam, kjer napetost nastaja. Od česa je odvisno, v katerem"
     }
    ]
   },
@@ -1524,7 +1524,7 @@
     {
      "ref": "s29.p1",
      "kind": "p",
-     "label": "Dva neodvisna sklenjena tokokroga potrebujeta po dva vodnika, skupaj štiri. Če združiš pov"
+     "label": "Za vsak tok si zamisli celotno pot od vira do motorja in nazaj. Koliko vodnikov tako potre"
     }
    ]
   },
@@ -1736,7 +1736,7 @@
      {
       "step_id": "s36",
       "tier": 3,
-      "besedilo": "Elektrike ni treba uporabljati pri enaki napetosti, kot jo pošiljaš po daljnovodu. Poznaš dve tuljavi, povezani s spreminjajočim se magnetnim poljem: kaj bi z njima naredil na začetku in na koncu poti?",
+      "besedilo": "Ali mora napetost, ki je ugodna za dolgo pot, ostati enaka tudi tam, kjer elektriko uporabljajo ljudje? Če ne, kje na poti bi jo spreminjal? Pri izmeničnem toku ti lahko pomaga pojav, ki ga že izkoriščaš v svojem motorju: kako bi z njim spremenil napetost?",
       "covers": [
        "s33.k3",
        "s33.k4"
@@ -1873,7 +1873,7 @@
     {
      "ref": "s36.p1",
      "kind": "p",
-     "label": "Elektrike ni treba uporabljati pri enaki napetosti, kot jo pošiljaš po daljnovodu. Poznaš "
+     "label": "Ali mora napetost, ki je ugodna za dolgo pot, ostati enaka tudi tam, kjer elektriko uporab"
     }
    ]
   },
