@@ -1,0 +1,589 @@
+{
+ "schema": "ai8.lab-health.tests.v1",
+ "date": "2026-11-03",
+ "base_commit": "2547f47",
+ "node": "v22.23.4",
+ "setup": {
+  "root_dev_deps_no_save": [
+   "fake-indexeddb@6.2.7",
+   "playwright-core@1.63.0"
+  ],
+  "functions_node_modules": "linked from a checkout with functions deps installed (run2 only)",
+  "browser_env": "CHROME_PATH, ANDALUZIJA_TEST_CHROMIUM, CHESS_BROWSER_EXECUTABLE, CHESS_QA_CHROMIUM, GAME_GUIDE_BROWSER -> Chromium 153 (playwright chromium-1243)",
+  "runs": {
+   "run1": "all 282 files, one node process each, 4 workers, 300 s timeout",
+   "run2": "run1 failures again, 2 workers, with functions deps and browser env"
+  }
+ },
+ "totals": {
+  "files": 282,
+  "pass_as_is_coordinator": 164,
+  "pass_with_setup": 190,
+  "not_passing": 92
+ },
+ "counts": {
+  "STALE TEST: vm/jsdom harness lacks globals the app now uses": 16,
+  "STALE TEST: wrong relative import depth": 4,
+  "UNKNOWN: focus/modal assertions (real a11y bug or jsdom limit)": 4,
+  "STALE TEST: expectation predates an intentional behaviour change": 12,
+  "STALE TEST: fixture path does not exist upstream either": 7,
+  "STALE TEST: public/chess copy not updated (chess-lab twin updated and passes)": 9,
+  "CURRENT lags LAB: identical test passes on chess-lab code, fails on public/chess code": 4,
+  "UNKNOWN: browser waitForFunction timeout": 3,
+  "ENV: not a test (long-running server)": 1,
+  "ENV: live/production smoke (release receipts or production URLs)": 3,
+  "ENV: Playwright WebKit not installed": 7,
+  "STALE TEST: already fixed by PR #10 (not in this base)": 4,
+  "UNKNOWN: browser layout assertion (real bug or Linux font metrics)": 2,
+  "LAB EXCLUSION: needs upstream git history (lab is a history-less snapshot)": 3,
+  "LAB EXCLUSION: file excluded from the lab by design": 9,
+  "STALE TEST: test code bug": 1,
+  "ENV: needs a local preview server (passes with one)": 1,
+  "ENV: hard-coded Windows browser path": 1,
+  "REAL BUG: lab-introduced regression": 1,
+  "REAL BUG CANDIDATE (upstream)": 1
+ },
+ "passing_after_setup": {
+  "PASS after dev deps installed": [
+   "public/chess-lab/research/analysis-session.test.cjs",
+   "public/chess-lab/research/berserk-cache-cross-tab.test.cjs",
+   "public/chess-lab/research/engine-assets.test.cjs",
+   "public/chess-lab/research/full-game-resume.test.cjs",
+   "public/chess-lab/research/game-review-ui.test.cjs",
+   "public/chess-lab/research/lab-storage.test.cjs",
+   "public/chess-lab/research/p1-evidence.test.cjs",
+   "public/chess-lab/research/p4-interface.test.cjs",
+   "public/chess-lab/research/p5a-recovery.test.cjs",
+   "public/chess-lab/research/p5a-review-fix.test.cjs",
+   "public/chess-lab/research/p5bc-offline.test.cjs",
+   "public/chess-lab/research/p5bc-storage.test.cjs",
+   "public/chess-lab/research/r11-dcc-link-score.test.cjs",
+   "public/chess-lab/research/sim-store.test.cjs",
+   "public/chess/research/berserk-cache-cross-tab.test.cjs",
+   "public/chess/research/engine-assets.test.cjs",
+   "public/chess/research/lab-storage.test.cjs",
+   "tests/chess-current-promotion-storage.test.cjs",
+   "tests/chess-pwa.test.cjs",
+   "tests/dualframe-account-storage.test.mjs",
+   "tests/dualframe-gallery-order.test.mjs",
+   "tests/dualframe-lazy-storage.test.mjs",
+   "tests/dualframe-owner-storage.test.mjs",
+   "tests/dualframe-sync.test.mjs"
+  ],
+  "PASS after functions deps / browser env set": [
+   "tests/andaluzija-acceptance.mjs",
+   "tests/andaluzija-page-browser.mjs",
+   "tests/andaluzija-roads-browser.mjs",
+   "tests/dualframe-enhancement-client.test.mjs"
+  ],
+  "PASS (functions deps needed in a fresh worktree)": [
+   "tests/dfc-fixture.mjs",
+   "tests/dfc-import.test.mjs",
+   "tests/dualframe-account-runtime.test.mjs",
+   "tests/dualframe-account-usage-service.test.mjs",
+   "tests/dualframe-enhancement-backup.test.mjs",
+   "tests/dualframe-enhancement-service.test.mjs",
+   "tests/dualframe-free-provider.test.mjs",
+   "tests/dualframe-master-images.test.mjs",
+   "tests/dualframe-native-output.test.mjs",
+   "tests/dualframe-private-owner.test.mjs",
+   "tests/dualframe-sync-server.test.mjs",
+   "tests/dualframe-tenant-isolation.test.mjs",
+   "tests/dualframe-v3.test.mjs"
+  ]
+ },
+ "classes": {
+  "STALE TEST: vm/jsdom harness lacks globals the app now uses": {
+   "confidence": "confirmed",
+   "evidence": "sliced code now calls window.ChessEngineRegistry (public/chess-lab/js/8zc-utils.js:1768); harness has no window",
+   "files": [
+    {
+     "file": "public/chess-lab/research/analysis-source.test.cjs",
+     "subtests": "0/15"
+    },
+    {
+     "file": "public/chess-lab/research/cache-evidence.test.cjs",
+     "subtests": "0/3"
+    },
+    {
+     "file": "public/chess-lab/research/collection-dynamic.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "public/chess-lab/research/dcc-move-click.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "public/chess-lab/research/lab-integration.test.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "public/chess-lab/research/play-reliability.test.cjs",
+     "subtests": "8/10"
+    },
+    {
+     "file": "public/chess-lab/research/top-five.test.cjs",
+     "subtests": "7/8"
+    },
+    {
+     "file": "public/chess/research/analysis-source.test.cjs",
+     "subtests": "0/15"
+    },
+    {
+     "file": "public/chess/research/cache-evidence.test.cjs",
+     "subtests": "0/3"
+    },
+    {
+     "file": "public/chess/research/collection-dynamic.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "public/chess/research/dcc-move-click.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "public/chess/research/lab-integration.test.cjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "public/chess/research/play-reliability.test.cjs",
+     "subtests": "8/10"
+    },
+    {
+     "file": "public/chess/research/top-five.test.cjs",
+     "subtests": "7/8"
+    },
+    {
+     "file": "tests/trip-new-stops.test.mjs",
+     "subtests": "1/39"
+    },
+    {
+     "file": "tests/trip-stops.test.mjs",
+     "subtests": "0/7"
+    }
+   ]
+  },
+  "STALE TEST: wrong relative import depth": {
+   "confidence": "confirmed",
+   "evidence": "'../../../../functions/...' resolves outside the repo; needs '../../../'. Same in bd-chessdb d9c0242",
+   "files": [
+    {
+     "file": "public/chess-lab/research/gemini-endpoint.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "public/chess-lab/research/versioning.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "public/chess/research/gemini-endpoint.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "public/chess/research/versioning.test.mjs",
+     "subtests": "0/1"
+    }
+   ]
+  },
+  "UNKNOWN: focus/modal assertions (real a11y bug or jsdom limit)": {
+   "confidence": "unknown",
+   "evidence": "deterministic in 2 runs; e.g. p1-state.test.cjs:60 activeElement loses aria-selected after ArrowRight on a tab",
+   "files": [
+    {
+     "file": "public/chess-lab/research/p1-state.test.cjs",
+     "subtests": "3/4"
+    },
+    {
+     "file": "public/chess-lab/research/p3-active-analysis.test.cjs",
+     "subtests": "16/20"
+    },
+    {
+     "file": "public/chess-lab/research/p4-engine-cards.test.cjs",
+     "subtests": "5/6"
+    },
+    {
+     "file": "public/chess-lab/research/settings-workspace.test.cjs",
+     "subtests": "1/6"
+    }
+   ]
+  },
+  "STALE TEST: expectation predates an intentional behaviour change": {
+   "confidence": "confirmed/probable",
+   "evidence": "expects SF to run when the source selector changes; app shows 'ChessDB \u00b7 position data' and engines stay lazy, which the passing chess-lab analysis-session test requires",
+   "files": [
+    {
+     "file": "public/chess-lab/research/r8-time-budget.test.cjs",
+     "subtests": "3/8"
+    },
+    {
+     "file": "public/chess-lab/research/source-context-integration.test.cjs",
+     "subtests": "0/3"
+    },
+    {
+     "file": "public/chess-lab/research/study-load-integration.test.cjs",
+     "subtests": "0/6"
+    },
+    {
+     "file": "public/chess/research/r8-time-budget.test.cjs",
+     "subtests": "3/8"
+    },
+    {
+     "file": "public/chess/research/source-context-integration.test.cjs",
+     "subtests": "0/3"
+    },
+    {
+     "file": "public/chess/research/study-load-integration.test.cjs",
+     "subtests": "0/6"
+    },
+    {
+     "file": "tests/chess-lab-deep-gui.test.cjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dualframe-album.test.mjs",
+     "subtests": "12/13"
+    },
+    {
+     "file": "tests/kdosva-reader.test.mjs",
+     "subtests": "1/4"
+    },
+    {
+     "file": "tests/llms-page.test.cjs",
+     "subtests": "2/3"
+    },
+    {
+     "file": "tests/preai8-wl-static.test.mjs",
+     "subtests": "3/5"
+    },
+    {
+     "file": "tests/sudoku-picker-settings.test.cjs",
+     "subtests": "10/11"
+    }
+   ]
+  },
+  "STALE TEST: fixture path does not exist upstream either": {
+   "confidence": "confirmed",
+   "evidence": "public/js/chess.min.js, public/chess/new/..., public/S/app/old/003/app.html, public/Trip/old/003/* are absent from bd-chessdb d9c0242 (archives reduced upstream); trip-promotion also reads excluded _redirects",
+   "files": [
+    {
+     "file": "public/chess-lab/research/study-w0.test.cjs",
+     "subtests": "24/26"
+    },
+    {
+     "file": "public/chess/research/study-w0.test.cjs",
+     "subtests": "15/26"
+    },
+    {
+     "file": "tests/chess-top-picks-anchor.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/chess-top-picks-pwa.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "tests/sudoku-app-preview.test.cjs",
+     "subtests": "3/4"
+    },
+    {
+     "file": "tests/trip-deep-search.test.mjs",
+     "subtests": "7/9"
+    },
+    {
+     "file": "tests/trip-promotion.test.mjs",
+     "subtests": "1/7"
+    }
+   ]
+  },
+  "STALE TEST: public/chess copy not updated (chess-lab twin updated and passes)": {
+   "confidence": "confirmed",
+   "evidence": "e.g. qToCp(0.3): public/chess/research/eval-bar.test.cjs:17 expects 57, public/chess-lab/research/eval-bar.test.cjs:62 expects 22; 8zc-eval-bar.js identical in both trees",
+   "files": [
+    {
+     "file": "public/chess/research/analysis-session.test.cjs",
+     "subtests": "13/18"
+    },
+    {
+     "file": "public/chess/research/deep-ui.test.cjs",
+     "subtests": "6/8"
+    },
+    {
+     "file": "public/chess/research/engine-cards.test.cjs",
+     "subtests": "14/16"
+    },
+    {
+     "file": "public/chess/research/eval-bar.test.cjs",
+     "subtests": "9/10"
+    },
+    {
+     "file": "public/chess/research/evidence.test.cjs",
+     "subtests": "6/7"
+    },
+    {
+     "file": "public/chess/research/game-review-ui.test.cjs",
+     "subtests": "0/2"
+    },
+    {
+     "file": "public/chess/research/mobile-unified.test.cjs",
+     "subtests": "2/6"
+    },
+    {
+     "file": "public/chess/research/r11-neural-overlay.test.cjs",
+     "subtests": "1/4"
+    },
+    {
+     "file": "public/chess/research/tournament-core.test.cjs",
+     "subtests": "7/8"
+    }
+   ]
+  },
+  "CURRENT lags LAB: identical test passes on chess-lab code, fails on public/chess code": {
+   "confidence": "confirmed",
+   "evidence": "test files byte-identical across trees; sources differ (e.g. js/8zc-sim-store.js); owner decides: promote LAB code or move test",
+   "files": [
+    {
+     "file": "public/chess/research/r11-dcc-link-score.test.cjs",
+     "subtests": "18/19"
+    },
+    {
+     "file": "public/chess/research/sim-store.test.cjs",
+     "subtests": "9/11"
+    },
+    {
+     "file": "public/chess/research/study-ui.test.cjs",
+     "subtests": "3/5"
+    },
+    {
+     "file": "public/chess/research/workspace-clock.test.cjs",
+     "subtests": "3/4"
+    }
+   ]
+  },
+  "UNKNOWN: browser waitForFunction timeout": {
+   "confidence": "unknown",
+   "evidence": "not debugged; possibly blocked external resources in headless Chromium",
+   "files": [
+    {
+     "file": "tests/andaluzija-ai-browser.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dfc-text-browser.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dualframe-sync-browser.mjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "ENV: not a test (long-running server)": {
+   "confidence": "confirmed",
+   "evidence": "never exits; timed out at 300 s",
+   "files": [
+    {
+     "file": "tests/andaluzija-local-server.mjs",
+     "subtests": null
+    }
+   ]
+  },
+  "ENV: live/production smoke (release receipts or production URLs)": {
+   "confidence": "confirmed",
+   "evidence": "needs release receipt / release.json / scripts/published-fetch.mjs and live site",
+   "files": [
+    {
+     "file": "tests/andaluzija-roads-live-smoke.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dfc-text-live-browser.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dualframe-pwa-live-smoke.mjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "ENV: Playwright WebKit not installed": {
+   "confidence": "confirmed",
+   "evidence": "launch fails at /opt/pw-browsers/webkit-2359; download blocked by proxy",
+   "files": [
+    {
+     "file": "tests/bd-home-links-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/four-current-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/start-app-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/sudoku-app-boot-r4-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/sudoku-app-sensor-guide-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/sudoku-app-solve-playback-r5-browser.cjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/sudoku-unified-lab-browser.cjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "STALE TEST: already fixed by PR #10 (not in this base)": {
+   "confidence": "confirmed",
+   "evidence": "assistant invitation text changed in R3.6; PR #10 updates these 4 files; game-guide* pass on cloud/p0-1-fix-20261103",
+   "files": [
+    {
+     "file": "tests/browser-p0-smoke.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/game-guide-p0.test.mjs",
+     "subtests": "11/12"
+    },
+    {
+     "file": "tests/game-guide-r2.test.mjs",
+     "subtests": "7/8"
+    },
+    {
+     "file": "tests/game-guide.test.mjs",
+     "subtests": "11/13"
+    }
+   ]
+  },
+  "UNKNOWN: browser layout assertion (real bug or Linux font metrics)": {
+   "confidence": "unknown",
+   "evidence": "'520-500-14px-light-compact reachable library'; chess #main bottom 1069 > parent 925 at 375x874; pages are byte-identical to production",
+   "files": [
+    {
+     "file": "tests/chess-current-browser.cjs",
+     "subtests": "9/10"
+    },
+    {
+     "file": "tests/multiapp-preview-browser.cjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "LAB EXCLUSION: needs upstream git history (lab is a history-less snapshot)": {
+   "confidence": "confirmed",
+   "evidence": "git show/ls-tree of upstream commits 73353ef / 9ab90a8; R4_15_BASELINE_COMMIT_REQUIRED_FETCH_FULL_HISTORY",
+   "files": [
+    {
+     "file": "tests/chess-current-upgrade-browser.cjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dfc-text-layers.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dualframe-private-owner-browser.mjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "LAB EXCLUSION: file excluded from the lab by design": {
+   "confidence": "confirmed",
+   "evidence": "public/_headers, public/_redirects, public/Nara/dualframe-lab/release.json, public/chess/versions.json, scripts/dualframe-deploy-ready.mjs, scripts/published-fetch.mjs are listed in LAB_EXPORT_PLAN_R1/SYNC_R2 excluded",
+   "files": [
+    {
+     "file": "tests/chess-promotion.test.cjs",
+     "subtests": "1/3"
+    },
+    {
+     "file": "tests/dfc-cmarvel-public.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dfc-cmarvel-source-browser.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dfc-hybrid-ui.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dfc-reader-browser.mjs",
+     "subtests": "0/0"
+    },
+    {
+     "file": "tests/dualframe-deploy-ready.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/dualframe-pwa.test.mjs",
+     "subtests": "0/1"
+    },
+    {
+     "file": "tests/glance-trip.test.mjs",
+     "subtests": "3/4"
+    },
+    {
+     "file": "tests/mdlxdcc-root-pwa.test.cjs",
+     "subtests": "0/1"
+    }
+   ]
+  },
+  "STALE TEST: test code bug": {
+   "confidence": "confirmed",
+   "evidence": "tests/chess-pwa-integration.test.cjs:11 uses 'path' that is never declared (ReferenceError)",
+   "files": [
+    {
+     "file": "tests/chess-pwa-integration.test.cjs",
+     "subtests": "0/1"
+    }
+   ]
+  },
+  "ENV: needs a local preview server (passes with one)": {
+   "confidence": "confirmed",
+   "evidence": "CW_BASE_URL=http://127.0.0.1:8799/CW with scripts/serve_lab.py --port 8799: rc=0",
+   "files": [
+    {
+     "file": "tests/crosswords-unified-browser.cjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "ENV: hard-coded Windows browser path": {
+   "confidence": "confirmed",
+   "evidence": "tests/dualframe-lazy-browser.mjs:8 executablePath C:\\Program Files\\... with no env override",
+   "files": [
+    {
+     "file": "tests/dualframe-lazy-browser.mjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "REAL BUG: lab-introduced regression": {
+   "confidence": "confirmed",
+   "evidence": "Chromium 'One header row at 320' (tests/landing-header-search-browser.cjs:26) fails on lab public/ but passes on bd-chessdb d9c0242 public/ with the same server; lab-modified public/index.html (LAB_CHANGES_R1)",
+   "files": [
+    {
+     "file": "tests/landing-header-search-browser.cjs",
+     "subtests": "0/0"
+    }
+   ]
+  },
+  "REAL BUG CANDIDATE (upstream)": {
+   "confidence": "probable",
+   "evidence": "latestPage()/dailyCard (scripts/nara-daily.mjs:186) renders no revision notice; monthly, archive and log pages do (tests/nara-revisions.test.mjs:18)",
+   "files": [
+    {
+     "file": "tests/nara-revisions.test.mjs",
+     "subtests": "2/3"
+    }
+   ]
+  }
+ }
+}
