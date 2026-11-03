@@ -2,6 +2,42 @@
   "schema": "nara.daily.catalog.v1",
   "records": [
     {
+      "id": "NARA-D-2026-11-01",
+      "date": "2026-11-01",
+      "title": "THE MOURNER WHO REMEMBERED TOMORROW",
+      "file": "daily/records/2026-11-01.json",
+      "record_sha256": "591fb6d735e39ea871cf46d69db597bf27771d19b1a854659582741b88a8e853",
+      "log_file": "daily/log/2026-11-01.json",
+      "log_sha256": "03e0ae7e1dad1b40d7efb3ffe0172574c8c205193d0c1d1de753fb69ddd7d422"
+    },
+    {
+      "id": "NARA-D-2026-10-29",
+      "date": "2026-10-29",
+      "title": "THE MIDWIFE OF SECOND NAMES",
+      "file": "daily/records/2026-10-29.json",
+      "record_sha256": "101728e16aee9baeb7f94d3df52b6d9d21ee5b1f9cc4251b7105c6f562ed4dc0",
+      "log_file": "daily/log/2026-10-29.json",
+      "log_sha256": "934828b6ef738d57afa6bdc538e2dfc057c4311a74ae3d2b2f826c02bf6da04c"
+    },
+    {
+      "id": "NARA-D-2026-10-28",
+      "date": "2026-10-28",
+      "title": "THE LANDLORD WHO SOLD THE QUIET",
+      "file": "daily/records/2026-10-28.json",
+      "record_sha256": "01ddf2d1d89d6e90a6bccd2e2f2d05f0c5854c194720a24ab45680aa05edb77d",
+      "log_file": "daily/log/2026-10-28.json",
+      "log_sha256": "1cf0b7b1cafaca140d9ac853d6ecc081a17bc973b8f341966730c25fcd51ce59"
+    },
+    {
+      "id": "NARA-D-2026-10-25",
+      "date": "2026-10-25",
+      "title": "THE CHILD WHO OWNED THE EMERGENCY CHANNEL",
+      "file": "daily/records/2026-10-25.json",
+      "record_sha256": "df50f79ce583fc507408b0c6dfa05b52b82aefbe638fa79623cbb15bfb024999",
+      "log_file": "daily/log/2026-10-25.json",
+      "log_sha256": "e1321a2ae037d08a7937512e756939b33e9c054c4fc986eb606479419d69d62c"
+    },
+    {
       "id": "NARA-D-2026-10-24",
       "date": "2026-10-24",
       "title": "THE BRIDGE THAT MISSED BY NINE METRES",

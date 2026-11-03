@@ -18,7 +18,11 @@ MARKERS = {
 }
 errors = []
 plan = json.loads((ROOT / 'lab-evidence/LAB_EXPORT_PLAN_R1.json').read_text(encoding='utf-8'))
-manifest = json.loads((ROOT / 'lab-evidence/SOURCE_MANIFEST_R1.json').read_text(encoding='utf-8'))
+# Later syncs from bd-chessdb add their own exclusions and a newer source manifest; older ones stay as history.
+for record in sorted((ROOT / 'lab-evidence').glob('SYNC_R*.json'), key=lambda p: int(p.stem.split('_R')[1])):
+    plan['excluded'] += json.loads(record.read_text(encoding='utf-8'))['excluded']
+latest = max((ROOT / 'lab-evidence').glob('SOURCE_MANIFEST_R*.json'), key=lambda p: int(p.stem.split('_R')[1]))
+manifest = json.loads(latest.read_text(encoding='utf-8'))
 # Explicit, BD-decided removals after the snapshot: absent is expected, presence is an error.
 removed = set()
 for record in sorted((ROOT / 'lab-evidence').glob('REMOVALS_R*.json')):

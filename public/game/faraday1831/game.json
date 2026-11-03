@@ -1,0 +1,1342 @@
+{
+ "schema": "ai8.game.v1",
+ "slug": "faraday1831",
+ "title": "Pred izumom: Faraday 1831",
+ "year": 1831,
+ "release": "R3",
+ "language": "sl",
+ "people_ids": [
+  "michael-faraday"
+ ],
+ "modes": {
+  "story": "beri s-korake story, reveal in epilogue; challenge in hint preskoči",
+  "invent": "pred vsakim reveal najprej challenge; hint samo na zahtevo igralca"
+ },
+ "acts": [
+  {
+   "act": 1,
+   "title": "Gibanje iz toka",
+   "date": "1820–1822",
+   "place": "London, Royal Institution"
+  },
+  {
+   "act": 2,
+   "title": "Obratna pot",
+   "date": "1824–1830",
+   "place": "London; novice iz Pariza"
+  },
+  {
+   "act": 3,
+   "title": "Miza",
+   "date": "avgust 1831",
+   "place": "London, Royal Institution"
+  },
+  {
+   "act": 4,
+   "title": "Brez baterije",
+   "date": "september–oktober 1831",
+   "place": "London, Royal Institution"
+  },
+  {
+   "act": 5,
+   "title": "Tok, ki ne preneha",
+   "date": "28. oktober–24. november 1831",
+   "place": "Woolwich in London"
+  }
+ ],
+ "steps": [
+  {
+   "id": "s1",
+   "act": 1,
+   "kind": "story",
+   "title": "Prolog: vajenec knjigoveza",
+   "for_agent": "Uvod v igro. Igralec je Michael Faraday poleti 1821, star 29 let, laboratorijski pomočnik v Royal Institution. V načinu Zgodba preberi in nadaljuj; v načinu Izumljaj z njim povej, da bo na ključnih točkah dobil izziv in da lahko kadarkoli vpraša o svetu tistega časa.",
+   "sources_ref": [
+    1,
+    2
+   ],
+   "refs": [
+    {
+     "ref": "s1.title",
+     "kind": "title",
+     "label": "Prolog: vajenec knjigoveza"
+    },
+    {
+     "ref": "s1.p1",
+     "kind": "p",
+     "label": "London, poletje 1821. Ti si Michael Faraday, star 29 let. Rodil si se 22. septembra 1791 v"
+    },
+    {
+     "ref": "s1.p2",
+     "kind": "p",
+     "label": "Pri štirinajstih si šel za vajenca h knjigovezu Riebauu. Knjige, ki si jih vezal, si tudi "
+    },
+    {
+     "ref": "s1.p3",
+     "kind": "p",
+     "label": "Zdaj imaš svoje delo v laboratoriju Royal Institution na Albemarle Street. Junija si se po"
+    },
+    {
+     "ref": "s1.start",
+     "kind": "start",
+     "label": "Začniva igro"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "act": 1,
+   "kind": "story",
+   "title": "Igla, ki se obrne",
+   "for_agent": "Ozadje: Ørstedovo odkritje (1820), Ampèrovi tokovi, Wollastonovo pričakovanje vrtenja žice okoli lastne osi. Pomembno je, da igla ne gre k žici, ampak se obrne počez; tega ne razlagaj naprej, to je jedro naslednjega izziva.",
+   "sources_ref": [
+    3,
+    4,
+    5,
+    1,
+    6
+   ],
+   "refs": [
+    {
+     "ref": "s2.title",
+     "kind": "title",
+     "label": "Igla, ki se obrne"
+    },
+    {
+     "ref": "s2.p1",
+     "kind": "p",
+     "label": "Julija 1820 je danski profesor Hans Christian Ørsted v Kopenhagnu objavil kratko latinsko "
+    },
+    {
+     "ref": "s2.p2",
+     "kind": "p",
+     "label": "V Parizu je André-Marie Ampère še isto jesen pokazal, da se tudi dve žici s tokom privlači"
+    },
+    {
+     "ref": "s2.p3",
+     "kind": "p",
+     "label": "Spomladi 1821 sta v laboratorij Royal Institution prišla Davy in William Hyde Wollaston. W"
+    },
+    {
+     "ref": "s2.p4",
+     "kind": "p",
+     "label": "Poleti 1821 te urednik Richard Phillips prosi, da za njegov časopis Annals of Philosophy n"
+    },
+    {
+     "ref": "s2.fig1",
+     "kind": "fig",
+     "label": "Ørsted, 1820: žica s tokom obrne magnetno iglo počez. Črtkano: igla brez toka."
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "act": 1,
+   "kind": "challenge",
+   "title": "Izziv: sila, ki ne vleče naravnost",
+   "for_agent": "Glavni izziv 1. dejanja. Ni ene same prave naprave: vsaka zasnova, kjer en pol ali žica kroži neprekinjeno in tok teče prek tekočega ali drsnega stika, je zadetek. Če igralec predlaga vrtenje žice okoli lastne osi, povej, da je to pričakoval Wollaston in da se žica ni zavrtela; vprašaj, kaj točno počne igla. Odgovor na vprašanje o svetu (npr. ali ima laboratorij živo srebro) ni namig.",
+   "sources_ref": [
+    6,
+    7,
+    1,
+    8,
+    9
+   ],
+   "question": "Ørstedova sila igle ne vleče k žici, ampak jo obrne počez in igla obstane. Kako bi iz te sile naredil napravo, v kateri se žica ali magnet giblje neprestano, dokler teče tok?",
+   "key_ideas": [
+    "Sila med polom magneta in žico deluje v krogu okoli žice: pol bi rad krožil okoli žice (in žica okoli pola).",
+    "Pri igli se učinka obeh polov izravnata, zato se igla samo obrne; delovati mora samo en pol (drugega umakni daleč, npr. pod gladino ali v podstavek).",
+    "Gibljivi del mora biti prosto vrtljiv in ves čas v električnem stiku, npr. konec žice v živem srebru.",
+    "Rezultat: žica kroži okoli magneta ali magnet okoli žice, neprekinjeno, dokler teče tok."
+   ],
+   "alternatives_ok": [
+    "Vsaka naprava, kjer en sam pol ali žica neprekinjeno kroži in tok teče prek tekočega ali drsnega stika (npr. magnet na plovcu ali žica na vrtljivem nosilcu z drsnim stikom).",
+    "Magnet kroži okoli nepremične žice (Faraday v istih dneh, s plavajočim magnetom)."
+   ],
+   "anachronisms": [
+    "elektromotor (kot ime naprave)",
+    "rotor in stator",
+    "komutator",
+    "magnetno polje",
+    "Lorentzova sila",
+    "pravilo desne roke",
+    "elektron"
+   ],
+   "refs": [
+    {
+     "ref": "s3.title",
+     "kind": "title",
+     "label": "Sila, ki ne vleče naravnost"
+    },
+    {
+     "ref": "s3.p1",
+     "kind": "p",
+     "label": "Pri ponavljanju poskusov opazuješ iglo od blizu: nad žico, ob njej in pod njo."
+    },
+    {
+     "ref": "s3.q",
+     "kind": "q",
+     "label": "Kaj bi naredil ti, zdaj, s tem, kar imaš? Ørstedova sila igle ne vleče k žici in je ne odr"
+    },
+    {
+     "ref": "s3.p2",
+     "kind": "p",
+     "label": "Imaš baterijo, bakreno žico, majhne paličaste magnete, steklene posode in vse, kar ima kem"
+    },
+    {
+     "ref": "s3.answer",
+     "kind": "answer",
+     "label": "kam napisati odgovor"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "act": 1,
+   "kind": "hint",
+   "title": "Namig 1",
+   "for_agent": "Šibek namig: smer sile na en pol okoli žice. Po namigu vprašaj, kakšno obliko ima pot, ki jo opiše pol.",
+   "sources_ref": [
+    6,
+    7,
+    1,
+    8,
+    9
+   ],
+   "for": "s3",
+   "tier": 1,
+   "refs": [
+    {
+     "ref": "s4.p1",
+     "kind": "p",
+     "label": "Glej samo en konec igle, severni pol. Če ga v mislih neseš okoli žice, nad njo, ob njej in"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "act": 1,
+   "kind": "hint",
+   "title": "Namig 2",
+   "for_agent": "Srednji namig: en pol namesto dveh. Po namigu preveri, ali igralec vidi, da en sam pol lahko kroži brez konca.",
+   "sources_ref": [
+    6,
+    7,
+    1,
+    8,
+    9
+   ],
+   "for": "s3",
+   "tier": 2,
+   "refs": [
+    {
+     "ref": "s5.p1",
+     "kind": "p",
+     "label": "Igla ima dva pola. Sila ju potiska v nasprotni smeri, zato se igla samo obrne in obstane. "
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "act": 1,
+   "kind": "hint",
+   "title": "Namig 3",
+   "for_agent": "Močan namig: živo srebro kot gibljiv stik. Po namigu prosi igralca, naj opiše celo napravo.",
+   "sources_ref": [
+    6,
+    7,
+    1,
+    8,
+    9
+   ],
+   "for": "s3",
+   "tier": 3,
+   "refs": [
+    {
+     "ref": "s6.p1",
+     "kind": "p",
+     "label": "Žica, ki se giblje, mora biti ves čas povezana z baterijo, tudi medtem ko kroži. Kateri pr"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "act": 1,
+   "kind": "reveal",
+   "title": "Razkritje: 3. september 1821",
+   "for_agent": "Razkritje 1. dejanja: žica kroži okoli pola v živem srebru (3. 9. 1821), magnet okoli žice (isti dnevi, plavajoč magnet), Newmanova naprava (januar 1822). Primerjaj z igralčevo zasnovo po točkah: krožna sila, en pol, gibljiv stik. Druga delujoča zasnova je 'drugače, a deluje'.",
+   "sources_ref": [
+    6,
+    7,
+    1,
+    8,
+    9
+   ],
+   "for": "s3",
+   "refs": [
+    {
+     "ref": "s7.title",
+     "kind": "title",
+     "label": "3. september 1821"
+    },
+    {
+     "ref": "s7.p1",
+     "kind": "p",
+     "label": "Faraday je pri ponavljanju poskusov ugotovil, da pol magneta ob žici ne išče mesta, kjer b"
+    },
+    {
+     "ref": "s7.p2",
+     "kind": "p",
+     "label": "V ponedeljek, 3. septembra 1821, je to izkoristil. Postavil je magnet, nalil živo srebro i"
+    },
+    {
+     "ref": "s7.p3",
+     "kind": "p",
+     "label": "V istih dneh je dosegel tudi obratno. Majhen magnet, ki ga je na enem koncu obtežil s plat"
+    },
+    {
+     "ref": "s7.p4",
+     "kind": "p",
+     "label": "Zakaj tako: živo srebro je tekoč prevodnik, zato žica med gibanjem ne izgubi stika. Magnet"
+    },
+    {
+     "ref": "s7.p5",
+     "kind": "p",
+     "label": "Po izročilu, ki ga je leta 1872 zapisal John Hall Gladstone, je Faraday ob vrtečih se kovi"
+    },
+    {
+     "ref": "s7.p6",
+     "kind": "p",
+     "label": "To je bila prva naprava, ki je iz električnega toka naredila neprekinjeno gibanje. Je pred"
+    },
+    {
+     "ref": "s7.p7",
+     "kind": "p",
+     "label": "Uspeh je imel senco. Ker Faraday v članku ni omenil Wollastona, so med znanstveniki zakrož"
+    },
+    {
+     "ref": "s7.fig1",
+     "kind": "fig",
+     "label": "Faraday, 3.–4. september 1821: žica, ki visi prosto in sega v živo srebro, kroži okoli pol"
+    },
+    {
+     "ref": "s7.fig2",
+     "kind": "fig",
+     "label": "Naprava instrumentarja Newmana (opis januarja 1822): levo žica kroži okoli magneta, desno "
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "act": 1,
+   "kind": "story",
+   "title": "Stavek v zvezku, 1822",
+   "for_agent": "Most v 2. dejanje: cilj 'pretvori magnetizem v elektriko' (1822). V načinu Izumljaj z njim lahko vprašaš, kaj bi igralec poskusil najprej, a to ni izziv in se ne ocenjuje.",
+   "sources_ref": [
+    1,
+    10
+   ],
+   "refs": [
+    {
+     "ref": "s8.title",
+     "kind": "title",
+     "label": "Stavek v zvezku, 1822"
+    },
+    {
+     "ref": "s8.p1",
+     "kind": "p",
+     "label": "Leta 1822 začneš nov zvezek z naslovom Chemical Notes, Hints, Suggestions and Objects of P"
+    },
+    {
+     "ref": "s8.p2",
+     "kind": "p",
+     "label": "Med njimi je kratek stavek: »Convert magnetism into electricity.« Pretvori magnetizem v el"
+    },
+    {
+     "ref": "s8.p3",
+     "kind": "p",
+     "label": "Tok naredi magnetizem, to je pokazal Ørsted. Prepričan si, da mora iti tudi obratno. Ne ve"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "act": 2,
+   "kind": "story",
+   "title": "Disk, ki vleče iglo",
+   "for_agent": "Aragov disk je uganka, ki ostane odprta do 5. dejanja. Ne razlagaj je; če igralec vpraša, povej, da je leta 1824 nihče ni znal pojasniti.",
+   "sources_ref": [
+    11,
+    12,
+    5
+   ],
+   "refs": [
+    {
+     "ref": "s9.title",
+     "kind": "title",
+     "label": "Disk, ki vleče iglo"
+    },
+    {
+     "ref": "s9.p1",
+     "kind": "p",
+     "label": "Novembra 1824 pride iz Pariza nenavadna novica. François Arago je 22. novembra poročal Aka"
+    },
+    {
+     "ref": "s9.p2",
+     "kind": "p",
+     "label": "Baker ni magneten. Kaj torej vleče iglo? Nihče ne zna pojasniti. Leto pozneje Charles Babb"
+    },
+    {
+     "ref": "s9.p3",
+     "kind": "p",
+     "label": "Medtem Ampère uči, da so v vsakem magnetu drobni električni tokovi. Če je magnet v resnici"
+    },
+    {
+     "ref": "s9.fig1",
+     "kind": "fig",
+     "label": "Arago, 1824: bakren disk se vrti, obešena magnetna igla gre za njim."
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "act": 2,
+   "kind": "challenge",
+   "title": "Izziv: zasnuj poskus",
+   "for_agent": "Igralec je Faraday decembra 1824. Zgodovinsko so vsi taki poskusi pokazali iglo, ki miruje, zato je vsaka smiselna postavitev zadetek. Če igralec sam reče, da je treba iglo gledati v trenutku, ko magnet približaš ali vklopiš tok, je to dlje od Faradaya leta 1824: pohvali in si zapomni, a tega ne potrdi kot rešitve in ne razlagaj zakaj; to je jedro 3. dejanja.",
+   "sources_ref": [
+    1,
+    13,
+    12
+   ],
+   "question": "December 1824: kako bi s tem, kar imaš (baterija, žice, tuljave, jekleni magneti, galvanometer), preizkusil, ali magnetizem ali tok v eni žici ustvari tok v drugi žici? Kaj pričakuješ, da pokaže igla?",
+   "key_ideas": [
+    "Ločen tokokrog z galvanometrom brez lastne baterije: vsak tok v njem bi bil nov.",
+    "Vir magnetizma čim bliže temu tokokrogu: magnet v tuljavi ali ob njej, ali dve vzporedni žici, v eni tok iz baterije.",
+    "Pričakovanje tistega časa (tudi Faradayevo): stalen odklon igle, dokler sta magnet ali tok blizu, po zgledu Ørsteda."
+   ],
+   "alternatives_ok": [
+    "Dve vzporedni žici, ena z baterijo, druga z galvanometrom (Faraday, 28. 11. 1825).",
+    "Magnet v tuljavi ali ob njej, tuljava na galvanometru.",
+    "Gledanje igle ob vklopu toka ali premiku magneta je dlje od Faradaya leta 1824: pohvali, a ne potrdi kot rešitve (jedro 3. dejanja)."
+   ],
+   "anachronisms": [
+    "elektromagnetna indukcija (kot ime pojava)",
+    "inducirana napetost",
+    "magnetni pretok",
+    "ampermeter in voltmeter",
+    "volt in amper kot enoti",
+    "transformator",
+    "Faradayev zakon"
+   ],
+   "refs": [
+    {
+     "ref": "s10.title",
+     "kind": "title",
+     "label": "Zasnuj poskus"
+    },
+    {
+     "ref": "s10.p1",
+     "kind": "p",
+     "label": "Je december 1824. Imaš baterijo, žice, tuljave, jeklene magnete in galvanometer: magnetno "
+    },
+    {
+     "ref": "s10.q",
+     "kind": "q",
+     "label": "Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako bi preizkusil, ali magnetizem, ali tok v en"
+    },
+    {
+     "ref": "s10.answer",
+     "kind": "answer",
+     "label": "kam napisati odgovor"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "act": 2,
+   "kind": "hint",
+   "title": "Namig 1",
+   "for_agent": "Šibek namig: zrcaljenje Ørstedovega poskusa. Po namigu vprašaj, kje bi bil v novem poskusu galvanometer.",
+   "sources_ref": [
+    1,
+    13,
+    12
+   ],
+   "for": "s10",
+   "tier": 1,
+   "refs": [
+    {
+     "ref": "s11.p1",
+     "kind": "p",
+     "label": "Obrni Ørstedov poskus. Ørsted je k igli postavil žico s tokom. Kaj postaviš k čemu, če išč"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "act": 2,
+   "kind": "hint",
+   "title": "Namig 2",
+   "for_agent": "Srednji namig: ločen merilni tokokrog. Po namigu prosi igralca, naj pove, kaj pričakuje od igle.",
+   "sources_ref": [
+    1,
+    13,
+    12
+   ],
+   "for": "s10",
+   "tier": 2,
+   "refs": [
+    {
+     "ref": "s12.p1",
+     "kind": "p",
+     "label": "Galvanometer mora biti v tokokrogu, ki nima svoje baterije. Kaj vse lahko postaviš tik ob "
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "act": 2,
+   "kind": "reveal",
+   "title": "Razkritje: igla miruje (1824–1828)",
+   "for_agent": "Razkritje 2. dejanja: štirje neuspeli poskusi (28. 12. 1824, 28. 11. 1825, 2. 12. 1825, 22. 4. 1828). Poudari, da je bila zasnova smiselna. Ne razlagaj, zakaj ni uspelo; to odkrije 3. dejanje. Igralčeva zasnova, ki je enaka Faradayevi, je zadetek.",
+   "sources_ref": [
+    1,
+    13,
+    12
+   ],
+   "for": "s10",
+   "refs": [
+    {
+     "ref": "s13.title",
+     "kind": "title",
+     "label": "Igla miruje (1824–1828)"
+    },
+    {
+     "ref": "s13.p1",
+     "kind": "p",
+     "label": "28. decembra 1824 je Faraday poskusil prvič. Magnet je postavil v tuljavo, ki je bila v to"
+    },
+    {
+     "ref": "s13.p2",
+     "kind": "p",
+     "label": "28. novembra 1825 je položil dve žici vzporedno, ločeni le z dvema plastema papirja. Skozi"
+    },
+    {
+     "ref": "s13.p3",
+     "kind": "p",
+     "label": "Zakaj tako: Faraday je posnemal Ørsteda. Ørstedov učinek traja, dokler teče tok, zato je t"
+    },
+    {
+     "ref": "s13.fig1",
+     "kind": "fig",
+     "label": "Faraday, 28. november 1825: dve vzporedni žici, ločeni s papirjem. V eni tok iz baterije, "
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "act": 2,
+   "kind": "story",
+   "title": "Leta drugega dela",
+   "for_agent": "Premostitev 1825–1830. Kratko; v načinu Izumljaj z njim brez vprašanj.",
+   "sources_ref": [
+    1,
+    14
+   ],
+   "refs": [
+    {
+     "ref": "s14.title",
+     "kind": "title",
+     "label": "Leta drugega dela"
+    },
+    {
+     "ref": "s14.p1",
+     "kind": "p",
+     "label": "Vprašanje iz zvezka čaka, delo pa ne. 7. februarja 1825 postaneš direktor laboratorija Roy"
+    },
+    {
+     "ref": "s14.p2",
+     "kind": "p",
+     "label": "Pet let porabiš za naročilo Royal Society: izboljšati optično steklo za teleskope. Delo je"
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "act": 3,
+   "kind": "story",
+   "title": "Avgust 1831: miza",
+   "for_agent": "Prizor glavnega izziva igre. Predmete na mizi lahko opišeš podrobneje, a nikoli ne predlagaj, kako jih sestaviti.",
+   "sources_ref": [
+    13,
+    12
+   ],
+   "refs": [
+    {
+     "ref": "s15.title",
+     "kind": "title",
+     "label": "Avgust 1831: miza"
+    },
+    {
+     "ref": "s15.p1",
+     "kind": "p",
+     "label": "London, Royal Institution, avgust 1831. Star si 39 let. Od stavka v zvezku je minilo devet"
+    },
+    {
+     "ref": "s15.p2",
+     "kind": "p",
+     "label": "Pred tabo je miza. Baterija iz posod s kislino, v vsaki bakrena in cinkova plošča. Bakrena"
+    },
+    {
+     "ref": "s15.p3",
+     "kind": "p",
+     "label": "Prepričan si, da povezava obstaja v obe smeri. Narava ne dela enosmernih cest."
+    },
+    {
+     "ref": "s15.fig1",
+     "kind": "fig",
+     "label": "Miza, avgust 1831: baterija, izolirana bakrena žica, mehko železo, jekleni magneti, galvan"
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "act": 3,
+   "kind": "challenge",
+   "title": "Izziv: tok iz magnetizma",
+   "for_agent": "Glavni izziv igre; odgovor na vprašanje o svetu ni namig (npr. elektromagneti iz tuljave na mehkem železu so leta 1831 že znani: Sturgeon 1825, Henryjev magnet za Yale 1831 nosi 2063 funtov). Če igralec predlaga magnet ob tuljavi in čakanje, ga spomni na iglo, ki miruje (2. dejanje), in vprašaj, kaj bi spremenil. Šteje pot: vsak korak iz key_ideas je delni zadetek. Magnet, ki ga potiskaš v tuljavo in iz nje, je druga veljavna pot (4. dejanje): priznaj jo kot 'drugače, a deluje'.",
+   "sources_ref": [
+    13,
+    12,
+    15,
+    16,
+    17,
+    24,
+    25
+   ],
+   "question": "Avgust 1831: kako s tem, kar je na mizi (baterija, izolirana bakrena žica, mehko železo, jekleni magneti, galvanometer), iz magnetizma dobiš tok, ki ga pokaže igla?",
+   "key_ideas": [
+    "Močnejši vir magnetizma: tuljava s tokom na mehkem železu (elektromagnet) ali magnetizem, zbran v železu.",
+    "Občutljivejša zaznava: veliko ovojev v tuljavi, ki vodi do galvanometra, dobra izolacija, galvanometer dovolj daleč, da ga magnet ne moti, a da ga vidiš.",
+    "Iglo je treba gledati MED dogajanjem, ob vklopu, izklopu ali premiku, ne po njem: učinek je kratek.",
+    "Jedro: tok nastane ob SPREMEMBI magnetizma; stalno stanje ne da ničesar; ob vklopu in izklopu je smer nasprotna."
+   ],
+   "alternatives_ok": [
+    "Magnet hitro potiskaš v tuljavo in iz nje (Faraday, 17. 10. 1831; 4. dejanje).",
+    "Železo s tuljavo med poloma magnetov, sunek ob sklenitvi ali prekinitvi magnetnega stika (Faraday, 24. 9. 1831).",
+    "Žica ali tuljava, ki jo hitro premikaš mimo pola magneta.",
+    "Boljše od zgodovine: tuljavi z različnim številom ovojev kot naprava za spreminjanje jakosti toka (transformator, praktično v 1880-ih)."
+   ],
+   "anachronisms": [
+    "elektromagnetna indukcija (kot ime pojava)",
+    "Faradayev zakon",
+    "magnetni pretok ali fluks",
+    "Lenzovo pravilo (1833–1834)",
+    "transformator",
+    "izmenični tok",
+    "generator ali dinamo",
+    "volt in amper kot enoti",
+    "osciloskop",
+    "ojačevalnik"
+   ],
+   "refs": [
+    {
+     "ref": "s16.title",
+     "kind": "title",
+     "label": "Tok iz magnetizma"
+    },
+    {
+     "ref": "s16.q",
+     "kind": "q",
+     "label": "Kaj bi naredil ti, zdaj, s tem, kar imaš? Iz magnetizma dobi električni tok, ki ga lahko i"
+    },
+    {
+     "ref": "s16.list1",
+     "kind": "list",
+     "label": "Imaš samo to, kar je bilo leta 1831. Ni elektronike in ni ojačevalnikov; edino merilo je i"
+    },
+    {
+     "ref": "s16.p1",
+     "kind": "p",
+     "label": "Povej, kaj bi postavil, kaj bi naredil in kam bi gledal."
+    },
+    {
+     "ref": "s16.answer",
+     "kind": "answer",
+     "label": "kam napisati odgovor"
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "act": 3,
+   "kind": "hint",
+   "title": "Namig 1",
+   "for_agent": "Šibek namig: močnejši vir. Po namigu vprašaj, kaj bi igralec s tem močnejšim magnetizmom naredil in kam bi gledal.",
+   "sources_ref": [
+    13,
+    12,
+    15,
+    16,
+    17
+   ],
+   "for": "s16",
+   "tier": 1,
+   "refs": [
+    {
+     "ref": "s17.p1",
+     "kind": "p",
+     "label": "Kako bi v tem laboratoriju dobil najmočnejši magnetizem, kar ga zmoreš? Na mizi nimaš samo"
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "act": 3,
+   "kind": "hint",
+   "title": "Namig 2",
+   "for_agent": "Srednji namig: sprememba namesto stanja. Po namigu preveri, kateri trenutek bi igralec opazoval.",
+   "sources_ref": [
+    13,
+    12,
+    15,
+    16,
+    17
+   ],
+   "for": "s16",
+   "tier": 2,
+   "refs": [
+    {
+     "ref": "s18.p1",
+     "kind": "p",
+     "label": "Ørsted: tok naredi magnetizem, dokler teče. Kaj, če pot nazaj ne deluje v stanju, ampak v "
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "act": 3,
+   "kind": "hint",
+   "title": "Namig 3",
+   "for_agent": "Močan namig: postavitev z dvema tuljavama na železu. Po namigu naj igralec napove, kaj bo igla naredila ob vklopu, med stalnim tokom in ob izklopu.",
+   "sources_ref": [
+    13,
+    12,
+    15,
+    16,
+    17
+   ],
+   "for": "s16",
+   "tier": 3,
+   "refs": [
+    {
+     "ref": "s19.p1",
+     "kind": "p",
+     "label": "Na isti kos mehkega železa navij dve ločeni tuljavi. Prvo prek stikala poveži z baterijo, "
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "act": 3,
+   "kind": "reveal",
+   "title": "Razkritje: 29. avgust 1831",
+   "for_agent": "Razkritje glavnega izziva: obroč z dvema tuljavama, sunek ob vklopu in izklopu v nasprotnih smereh, nič med stalnim tokom. Primerjaj po točkah: močnejši vir, več ovojev, gledanje med dogajanjem, sprememba. Igralčeva druga delujoča pot je 'drugače, a deluje'. Če je igralec predlagal tuljave z različnim številom ovojev kot napravo za spreminjanje jakosti, je to 'boljše od zgodovine' (transformator, praktično v 1880-ih).",
+   "sources_ref": [
+    13,
+    12,
+    15,
+    16,
+    17
+   ],
+   "for": "s16",
+   "refs": [
+    {
+     "ref": "s20.title",
+     "kind": "title",
+     "label": "29. avgust 1831"
+    },
+    {
+     "ref": "s20.p1",
+     "kind": "p",
+     "label": "29. avgusta 1831 je Faraday začel nov dnevnik poskusov. Dal je narediti obroč iz mehkega ž"
+    },
+    {
+     "ref": "s20.p2",
+     "kind": "p",
+     "label": "Konca strani B je povezal z dolgo žico, ki je tri čevlje stran tekla čez magnetno iglo. Na"
+    },
+    {
+     "ref": "s20.p3",
+     "kind": "p",
+     "label": "Zakaj je uspelo zdaj:"
+    },
+    {
+     "ref": "s20.list1",
+     "kind": "list",
+     "label": "Železni obroč z ovoji na strani A je dal mnogo močnejši magnetizem kot jeklen magnet."
+    },
+    {
+     "ref": "s20.p4",
+     "kind": "p",
+     "label": "Tok ne nastane iz magnetizma, ki je, ampak iz magnetizma, ki se spreminja."
+    },
+    {
+     "ref": "s20.p5",
+     "kind": "p",
+     "label": "Leta 1825 je ženevski fizik Jean-Daniel Colladon poskusil nekaj podobnega. Galvanometer je"
+    },
+    {
+     "ref": "s20.p6",
+     "kind": "p",
+     "label": "Faradayev obroč se je ohranil. Danes je razstavljen v muzeju Faraday Museum v Royal Instit"
+    },
+    {
+     "ref": "s20.fig1",
+     "kind": "fig",
+     "label": "29. avgust 1831: obroč iz mehkega železa, tuljava A z baterijo in stikalom, ločena tuljava"
+    },
+    {
+     "ref": "s20.fig2",
+     "kind": "fig",
+     "label": "Kaj je pokazala igla: sunek ob vklopu, nič med stalnim tokom, sunek v nasprotno smer ob iz"
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "act": 3,
+   "kind": "story",
+   "title": "Plevel ali riba",
+   "for_agent": "Premostitev v 4. dejanje. Faradayev dvom je del zgodbe: odkritje še ni gotovo.",
+   "sources_ref": [
+    13
+   ],
+   "refs": [
+    {
+     "ref": "s21.title",
+     "kind": "title",
+     "label": "Plevel ali riba"
+    },
+    {
+     "ref": "s21.p1",
+     "kind": "p",
+     "label": "23. septembra pišeš prijatelju Richardu Phillipsu. Spet se ukvarjaš z elektromagnetizmom i"
+    },
+    {
+     "ref": "s21.p2",
+     "kind": "p",
+     "label": "Sunek imaš. Ne veš pa še, ali je za sunek nujna baterija."
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "act": 4,
+   "kind": "story",
+   "title": "Ali je baterija nujna?",
+   "for_agent": "Uvod v 4. dejanje. Vprašanje je, ali gre brez baterije, samo z jeklenim magnetom.",
+   "sources_ref": [
+    1,
+    13
+   ],
+   "refs": [
+    {
+     "ref": "s22.title",
+     "kind": "title",
+     "label": "Ali je baterija nujna?"
+    },
+    {
+     "ref": "s22.p1",
+     "kind": "p",
+     "label": "Pri obroču je magnetizem na strani A naredila baterija. Kaj pa navaden jeklen magnet? Ne m"
+    },
+    {
+     "ref": "s22.p2",
+     "kind": "p",
+     "label": "Pravkar si dopolnil 40 let. Na mizi so paličasti magneti in dolge tuljave, navite na papir"
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "act": 4,
+   "kind": "challenge",
+   "title": "Izziv: samo magnet in tuljava",
+   "for_agent": "Izziv 4. dejanja. Igralec, ki je 3. dejanje rešil, ga običajno hitro reši; prosi ga, naj napove tudi smer igle ob vstavljanju in izvleku ter kaj se zgodi, ko magnet miruje.",
+   "sources_ref": [
+    13,
+    12
+   ],
+   "question": "Samo paličast jeklen magnet in dolga tuljava na galvanometru, brez baterije: kako dobiš tok in kaj pokaže igla?",
+   "key_ideas": [
+    "Spremembo magnetizma v tuljavi dobiš z gibanjem: magnet hitro potisneš v tuljavo ali ga izvlečeš.",
+    "Ob potiskanju noter in vlečenju ven igla skoči v nasprotni smeri.",
+    "Ko magnet miruje, v tuljavi ali zunaj nje, igla ne kaže ničesar."
+   ],
+   "alternatives_ok": [
+    "Tuljavo potiskaš čez mirujoči magnet: šteje relativno gibanje.",
+    "Magnet vrtiš ali obračaš ob tuljavi (pozneje Pixii, 1832)."
+   ],
+   "anachronisms": [
+    "Lenzovo pravilo (1833–1834)",
+    "Faradayev zakon indukcije",
+    "magnetni pretok",
+    "inducirana napetost",
+    "dinamo",
+    "izmenični tok"
+   ],
+   "refs": [
+    {
+     "ref": "s23.title",
+     "kind": "title",
+     "label": "Samo magnet in tuljava"
+    },
+    {
+     "ref": "s23.p1",
+     "kind": "p",
+     "label": "Imaš paličast jeklen magnet in dolgo tuljavo, navito na papirnat valj. Konca tuljave vodit"
+    },
+    {
+     "ref": "s23.q",
+     "kind": "q",
+     "label": "Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako iz tega dobiš tok? Kaj bo po tvojem pokazal"
+    },
+    {
+     "ref": "s23.answer",
+     "kind": "answer",
+     "label": "kam napisati odgovor"
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "act": 4,
+   "kind": "hint",
+   "title": "Namig 1",
+   "for_agent": "Šibek namig: analogija z vklopom in izklopom. Po namigu vprašaj, kaj vse spremeni magnetizem v tuljavi.",
+   "sources_ref": [
+    13,
+    12
+   ],
+   "for": "s23",
+   "tier": 1,
+   "refs": [
+    {
+     "ref": "s24.p1",
+     "kind": "p",
+     "label": "Pri obroču je igla trznila samo ob vklopu in izklopu. Kako bi magnetizem v tuljavi »vklopi"
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "act": 4,
+   "kind": "hint",
+   "title": "Namig 2",
+   "for_agent": "Močan namig: gibanje je sprememba. Po namigu naj igralec opiše gib in napove iglo.",
+   "sources_ref": [
+    13,
+    12
+   ],
+   "for": "s23",
+   "tier": 2,
+   "refs": [
+    {
+     "ref": "s25.p1",
+     "kind": "p",
+     "label": "Magnetizem v tuljavi se spremeni tudi, če magnet premakneš."
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "act": 4,
+   "kind": "reveal",
+   "title": "Razkritje: 17. oktober 1831",
+   "for_agent": "Razkritje 4. dejanja. Primerjaj: gibanje kot sprememba, nasprotni smeri, nič v mirovanju.",
+   "sources_ref": [
+    13,
+    12
+   ],
+   "for": "s23",
+   "refs": [
+    {
+     "ref": "s26.title",
+     "kind": "title",
+     "label": "17. oktober 1831"
+    },
+    {
+     "ref": "s26.p1",
+     "kind": "p",
+     "label": "Prvi korak je naredil že 24. septembra. Železni valj s tuljavo je postavil med pola dveh p"
+    },
+    {
+     "ref": "s26.p2",
+     "kind": "p",
+     "label": "17. oktobra 1831, peti dan poskusov, je Faraday vzel valjast paličast magnet, debel 3/4 pa"
+    },
+    {
+     "ref": "s26.p3",
+     "kind": "p",
+     "label": "Zakaj: če tok nastane ob spremembi magnetizma, je tudi gibanje magneta sprememba. Baterija"
+    },
+    {
+     "ref": "s26.fig1",
+     "kind": "fig",
+     "label": "17. oktober 1831: magnet potisneš noter, igla v eno smer; magnet miruje, igla na ničli; iz"
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "act": 5,
+   "kind": "story",
+   "title": "Samo sunki",
+   "for_agent": "Uvod v zadnji izziv. Spomni na Aragov disk iz 2. dejanja.",
+   "sources_ref": [
+    12,
+    13
+   ],
+   "refs": [
+    {
+     "ref": "s27.title",
+     "kind": "title",
+     "label": "Samo sunki"
+    },
+    {
+     "ref": "s27.p1",
+     "kind": "p",
+     "label": "Vsak potisk magneta da en sunek. Ti pa bi rad tok, ki teče ves čas."
+    },
+    {
+     "ref": "s27.p2",
+     "kind": "p",
+     "label": "In še nekaj te muči: Aragov disk iz leta 1824. Baker ni magneten, pa vendar vleče iglo."
+    },
+    {
+     "ref": "s27.p3",
+     "kind": "p",
+     "label": "V Woolwichu, v hiši gospoda Christieja, je veliki sestavljeni magnet Royal Society. Sestav"
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "act": 5,
+   "kind": "challenge",
+   "title": "Izziv: tok, ki teče ves čas",
+   "for_agent": "Zadnji izziv. Vrtenje je bistvo; disk, valj ali kolo z žicami med poloma so vsi zadetek. Če igralec predlaga preklopnik, ki iz vrtenja da tok v eni smeri, ali namerno izmenični tok, je to 'boljše od zgodovine' (Pixii 1832, poznejši generatorji).",
+   "sources_ref": [
+    13,
+    12,
+    11
+   ],
+   "question": "Kako dobiš tok, ki teče neprekinjeno, ne le sunek? In zakaj vrteč se bakren disk (Arago, 1824) vleče magnetno iglo?",
+   "key_ideas": [
+    "Neprekinjen tok zahteva neprekinjeno spreminjanje: gibanje, ki se ne konča, na primer vrtenje.",
+    "Prevodnik se vrti med poloma magneta, tako da gre ves čas mimo pola: bakren disk med poloma.",
+    "Tok pobereš z drsnima stikoma, na osi in na robu diska.",
+    "Aragov pojav: v vrtečem se bakrenem disku pod magnetom tečejo tokovi, ki s svojim magnetizmom vlečejo iglo."
+   ],
+   "alternatives_ok": [
+    "Vrteč se valj, kolo z žicami ali žica, ki neprekinjeno teče mimo pola magneta.",
+    "Magnet, ki se vrti pred tuljavo (Pixii, 1832); preklopnik za tok v eni smeri je boljše od zgodovine 1831."
+   ],
+   "anachronisms": [
+    "komutator (Pixii, 1832)",
+    "dinamo",
+    "vrtinčni tokovi (kot izraz)",
+    "izmenični tok",
+    "turbina, elektrarna",
+    "homopolarni ali unipolarni generator (poznejše ime)"
+   ],
+   "refs": [
+    {
+     "ref": "s28.title",
+     "kind": "title",
+     "label": "Tok, ki teče ves čas"
+    },
+    {
+     "ref": "s28.q",
+     "kind": "q",
+     "label": "Kaj bi naredil ti, zdaj, s tem, kar imaš? Kako dobiš tok, ki teče ves čas, dokler hočeš, n"
+    },
+    {
+     "ref": "s28.answer",
+     "kind": "answer",
+     "label": "kam napisati odgovor"
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "act": 5,
+   "kind": "hint",
+   "title": "Namig 1",
+   "for_agent": "Šibek namig: vrtenje. Po namigu vprašaj, kaj naj se vrti in kje.",
+   "sources_ref": [
+    13,
+    12,
+    11
+   ],
+   "for": "s28",
+   "tier": 1,
+   "refs": [
+    {
+     "ref": "s29.p1",
+     "kind": "p",
+     "label": "Sunek nastane ob spremembi. Katero gibanje se nikoli ne konča, naprava pa ostane na istem "
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "act": 5,
+   "kind": "hint",
+   "title": "Namig 2",
+   "for_agent": "Močan namig: disk med poloma in dva stika. Po namigu naj igralec pove, kje bi bila stika.",
+   "sources_ref": [
+    13,
+    12,
+    11
+   ],
+   "for": "s28",
+   "tier": 2,
+   "refs": [
+    {
+     "ref": "s30.p1",
+     "kind": "p",
+     "label": "Arago je bakren disk vrtel pod iglo. Kaj, če bi ga vrtel med poloma magneta in se ga z žic"
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "act": 5,
+   "kind": "reveal",
+   "title": "Razkritje: 28. oktober 1831",
+   "for_agent": "Razkritje zadnjega izziva: Faradayev disk (28. 10. 1831), stalen tok, razlaga Aragovega diska.",
+   "sources_ref": [
+    13,
+    12,
+    11
+   ],
+   "for": "s28",
+   "refs": [
+    {
+     "ref": "s31.title",
+     "kind": "title",
+     "label": "28. oktober 1831"
+    },
+    {
+     "ref": "s31.p1",
+     "kind": "p",
+     "label": "28. oktobra 1831, deveti dan poskusov, je Faraday med pola velikega magneta Royal Society "
+    },
+    {
+     "ref": "s31.p2",
+     "kind": "p",
+     "label": "S tem je pojasnil tudi Aragov disk. V vrtečem se bakru ob magnetu tečejo tokovi, ki s svoj"
+    },
+    {
+     "ref": "s31.p3",
+     "kind": "p",
+     "label": "Zakaj: vrtenje je sprememba, ki se ne konča. Rob diska ves čas teče mimo pola, zato tok ne"
+    },
+    {
+     "ref": "s31.fig1",
+     "kind": "fig",
+     "label": "28. oktober 1831: bakren disk se vrti med poloma velikega magneta, drsna stika na osi in n"
+    }
+   ]
+  },
+  {
+   "id": "s32",
+   "act": 5,
+   "kind": "epilogue",
+   "title": "Epilog: kaj je sledilo",
+   "for_agent": "Konec igre. Povzemi pot igralca po dejanjih in jo primerjaj s Faradayevo potjo (6 let in 8 mesecev). Brez časovne ocene igralca; igra brez rešitve je tudi dober izid.",
+   "sources_ref": [
+    12,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    2
+   ],
+   "refs": [
+    {
+     "ref": "s32.title",
+     "kind": "title",
+     "label": "Kaj je sledilo"
+    },
+    {
+     "ref": "s32.p1",
+     "kind": "p",
+     "label": "24. novembra 1831 je Faraday odkritja prebral pred Royal Society kot prvo serijo svojih Ex"
+    },
+    {
+     "ref": "s32.p2",
+     "kind": "p",
+     "label": "Od prvega neuspelega poskusa (28. decembra 1824) do obroča (29. avgusta 1831) je minilo 6 "
+    },
+    {
+     "ref": "s32.p3",
+     "kind": "p",
+     "label": "Novica je potovala hitro. Joseph Henry v Albanyju je slišal za Faradayev uspeh, a ne za nj"
+    },
+    {
+     "ref": "s32.p4",
+     "kind": "p",
+     "label": "V Edinburghu se je 13. junija 1831, enajst tednov pred obročem, rodil James Clerk Maxwell."
+    },
+    {
+     "ref": "s32.p5",
+     "kind": "p",
+     "label": "Obroč z dvema tuljavama na istem železu je zgradba vsakega transformatorja; praktični tran"
+    },
+    {
+     "ref": "s32.p6",
+     "kind": "p",
+     "label": "Še ena zgodba za konec. Leta 1836 je Faraday sredi predavalnice Royal Institution zgradil "
+    },
+    {
+     "ref": "s32.p7",
+     "kind": "p",
+     "label": "Več o Faradayu: Michael Faraday na seznamu Top ljudje."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "Bence Jones, The Life and Letters of Faraday, zv. 1 (1870)",
+   "url": "https://archive.org/details/lifelettersoffar01joneiala"
+  },
+  {
+   "id": 2,
+   "title": "Science Museum Group: Michael Faraday",
+   "url": "https://collection.sciencemuseumgroup.org.uk/people/cp1072/michael-faraday"
+  },
+  {
+   "id": 3,
+   "title": "Linda Hall Library: Hans Christian Ørsted",
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/hans-christian-oersted/"
+  },
+  {
+   "id": 4,
+   "title": "Annals of Philosophy, zv. 16 (1820): angleški prevod Ørstedovega poročila",
+   "url": "https://archive.org/details/annalsofphilosop16phil"
+  },
+  {
+   "id": 5,
+   "title": "MacTutor: André-Marie Ampère",
+   "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Ampere/"
+  },
+  {
+   "id": 6,
+   "title": "Royal Institution: The birth of electric motion",
+   "url": "https://rigb.org/node/3113"
+  },
+  {
+   "id": 7,
+   "title": "M. Faraday, Experimental Researches in Electricity, zv. 2 (1844; ponatisi člankov 1821–1823)",
+   "url": "https://archive.org/details/bub_gb_EvYWAAAAYAAJ"
+  },
+  {
+   "id": 8,
+   "title": "J. H. Gladstone, Michael Faraday (1872)",
+   "url": "https://archive.org/details/michaelfaraday00gladrich"
+  },
+  {
+   "id": 9,
+   "title": "IEEE Spectrum: 200 Years Ago, Faraday Invented the Electric Motor",
+   "url": "https://spectrum.ieee.org/200-years-ago-faraday-invented-the-electric-motor"
+  },
+  {
+   "id": 10,
+   "title": "AIP / Royal Institution: katalog Faradayevih zapiskov",
+   "url": "https://history.aip.org/catalog/icos/913.html"
+  },
+  {
+   "id": 11,
+   "title": "G. Giuliani, Electromagnetic induction: physics, historical breakthroughs, epistemological issues and textbooks (arXiv:2102.11036)",
+   "url": "https://arxiv.org/abs/2102.11036"
+  },
+  {
+   "id": 12,
+   "title": "M. Faraday, Experimental Researches in Electricity, zv. 1 (Project Gutenberg)",
+   "url": "https://www.gutenberg.org/ebooks/14986"
+  },
+  {
+   "id": 13,
+   "title": "Bence Jones, The Life and Letters of Faraday, zv. 2 (1870)",
+   "url": "https://archive.org/details/lifelettersoffar02joneiala"
+  },
+  {
+   "id": 14,
+   "title": "Royal Institution: Michael Faraday's sample of benzene",
+   "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-sample-benzene"
+  },
+  {
+   "id": 15,
+   "title": "Royal Institution: Michael Faraday's ring-coil apparatus",
+   "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-ring-coil-apparatus"
+  },
+  {
+   "id": 16,
+   "title": "Musée d'histoire des sciences de Genève: Jean-Daniel Colladon (2024)",
+   "url": "https://institutions.ville-geneve.ch/fileadmin/user_upload/mhn/images/votre_visite/site_mhs/8_Colladon_2024.pdf"
+  },
+  {
+   "id": 17,
+   "title": "ETHW: Induction Ring",
+   "url": "https://ethw.org/Induction_Ring"
+  },
+  {
+   "id": 18,
+   "title": "M. Faraday, Experimental Researches in Electricity, Phil. Trans. R. Soc. 122 (1832)",
+   "url": "https://doi.org/10.1098/rstl.1832.0006"
+  },
+  {
+   "id": 19,
+   "title": "J. Henry, American Journal of Science 22 (julij 1832)",
+   "url": "https://archive.org/details/sim_american-journal-of-science_1832-07_22"
+  },
+  {
+   "id": 20,
+   "title": "Annales de chimie et de physique (1832): Pixiijev stroj in Ampèrova nota",
+   "url": "https://archive.org/details/s3id13208200"
+  },
+  {
+   "id": 21,
+   "title": "MacTutor: James Clerk Maxwell",
+   "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Maxwell/"
+  },
+  {
+   "id": 22,
+   "title": "Periodica Polytechnica: zgodovina transformatorja ZBD (1885)",
+   "url": "https://pp.bme.hu/ee/article/download/4637/3742"
+  },
+  {
+   "id": 23,
+   "title": "Royal Institution: Michael Faraday, časovnica",
+   "url": "https://rigb.org/node/3138"
+  },
+  {
+   "id": 24,
+   "title": "Linda Hall Library: William Sturgeon",
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/william-sturgeon/"
+  },
+  {
+   "id": 25,
+   "title": "J. Henry, American Journal of Science 20 (julij 1831): veliki elektromagnet",
+   "url": "https://archive.org/details/sim_american-journal-of-science_1831-07_20"
+  }
+ ]
+}
