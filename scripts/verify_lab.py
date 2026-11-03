@@ -57,7 +57,7 @@ for entry in manifest['files']:
 text_count = 0
 for path in ROOT.rglob('*'):
     rel = path.relative_to(ROOT)
-    if '.git' in rel.parts or not path.is_file() or path.suffix.lower() not in TEXT:
+    if '.git' in rel.parts or 'node_modules' in rel.parts or not path.is_file() or path.suffix.lower() not in TEXT:
         continue
     if path == Path(__file__).resolve() or rel.as_posix() == 'scripts/check_secret_boundary.py':
         continue
