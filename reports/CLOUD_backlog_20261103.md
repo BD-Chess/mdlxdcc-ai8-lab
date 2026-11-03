@@ -4,9 +4,9 @@ This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude
 
 ## Merge order (stacked PRs)
 
-`#6→#7→#8; #12,#15,#18,#24; #10→#14; #10→#21→#23; #11→#13→#20; #16→#17→#27; #16→#26→#25; #19 last.`
+`#6→#7→#8; #8→#9 (migration file only; Supabase apply = BD decision); #12,#15,#18,#24; #10→#14; #10→#21→#23; #11→#13→#20; #16→#17→#27; #16→#26→#25; #19 last.`
 
-Outside this line: `#9` (migration file only) can merge any time after #8; applying it in production is a separate BD decision. `#22` is a proposal, not in the chain. The mobile-tables PR (c), when opened, stacks on #25.
+Outside this line: `#22` is a proposal, not in the chain. The mobile-tables PR (c), when opened, stacks on #25.
 
 Zora review fixes (2026-11-03): #16 rebased on #8 (contains the OmniCPQ cleanup), #17/#26/#27 rebased on it, #25 rebased on #26 with its `LAB_CHANGES_R11` hash recomputed; fixes on #14, #20, #21, #24, #27. Each PR has a "fixed per Zora review" comment.
 
