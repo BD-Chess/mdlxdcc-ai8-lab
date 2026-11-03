@@ -112,6 +112,54 @@
     "d3880f4",
     "fb39acd"
    ]
+  },
+  {
+   "path": "public/AI8/about/index.html",
+   "source_sha256": "e7ee029e1b714d7e34deb40638e9732119dfdeda254e0e1b905e33615074f7bd",
+   "lab_sha256": "30247a69f147e31e1576fb56a2dbaeb5e5bd8c405241099887e429120fce6c60",
+   "bytes": 110467,
+   "lab_prs": [
+    "#7 (post-sync OmniCPQ content cleanup, Zora review)"
+   ],
+   "lab_commits": [
+    "0a10249"
+   ]
+  },
+  {
+   "path": "public/Start/app.js",
+   "source_sha256": "2d1c142a0dbfdf45e96181bdf0f24f08d1f676bcff144750e54998266cbc38ba",
+   "lab_sha256": "d84c1e4a0f4f3dae3a104d4ab209d61fb7278d895ef5fe9e0b20fa0afea2d763",
+   "bytes": 53612,
+   "lab_prs": [
+    "#7 (post-sync OmniCPQ content cleanup, Zora review)"
+   ],
+   "lab_commits": [
+    "0a10249"
+   ]
+  },
+  {
+   "path": "public/Start/index.html",
+   "source_sha256": "41c3da5b4035fa9db186765862aed99e73de5e1fad3a36039da02e31d306dd6e",
+   "lab_sha256": "09135ae2e3673d6548a01d2e007fb8dd423653a6c3ec607815fbdcfd91060ee5",
+   "bytes": 34823,
+   "lab_prs": [
+    "#7 (post-sync OmniCPQ content cleanup, Zora review)"
+   ],
+   "lab_commits": [
+    "0a10249"
+   ]
+  },
+  {
+   "path": "tests/start-app-browser.cjs",
+   "source_sha256": "e3702ab5a88588db82576d6a47eb9df9611cdcef07bc12098758429224b5e69d",
+   "lab_sha256": "e3db27f8156c239931a2a8669b9d73278e7bacb99ba2753323bc92e44ff2f957",
+   "bytes": 20125,
+   "lab_prs": [
+    "#7 (post-sync OmniCPQ content cleanup, Zora review)"
+   ],
+   "lab_commits": [
+    "0a10249"
+   ]
   }
  ]
 }
