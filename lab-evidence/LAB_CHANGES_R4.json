@@ -8,13 +8,14 @@
   {
    "path": "functions/game-guide.mjs",
    "source_sha256": "fc8da5dc3ea97e0c486387fd9cbfe1fcaac79a8c9714a1765d7d052d8769ddb0",
-   "lab_sha256": "5ae7eca7f19d287db8e65e39c0c17304fea1a99efeff3b9c717f0c3820bbf7ba",
-   "bytes": 24043,
+   "lab_sha256": "48a02c5eebaa4b07d6712869f266fdd98021f6007e91a7c0450f1cdefca06432",
+   "bytes": 24055,
    "lab_prs": [
     "cloud/guide-cost-r4-20261103"
    ],
    "lab_commits": [
-    "(this branch)"
+    "864ecad",
+    "eb96f70"
    ]
   },
   {
