@@ -15,7 +15,7 @@ import {signToken} from '../functions/lib/dualframe/auth.mjs';
 
 const root=path.resolve(fileURLToPath(new URL('..',import.meta.url)));
 const sharp=createRequire(new URL('../functions/package.json',import.meta.url))('sharp');
-const evidence=path.join(root,'browser-evidence','sync');
+const evidence=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence','sync');
 await mkdir(evidence,{recursive:true});
 const profiles=await mkdtemp(path.join(tmpdir(),'dualframe-sync-smoke-'));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');

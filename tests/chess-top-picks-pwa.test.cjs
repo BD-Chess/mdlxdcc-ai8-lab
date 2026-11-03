@@ -11,7 +11,7 @@ const tcecAnchor = '8/5p2/4p3/kb2P3/1b6/p2p4/R5P1/1R1K4 w - - 0 49';
 
 for (const lane of [
   { name: 'CURRENT', base: chessRoot, suffix: '/chess/' },
-  { name: 'LAB', base: path.join(chessRoot, 'new'), suffix: '/chess/new/' }
+  { name: 'LAB', base: path.resolve(__dirname, '../public/chess-lab'), suffix: '/chess-lab/' }
 ]) test(`${lane.name} installed board opens curated Top Picks and retains the full game on next move`, { timeout: 15000 }, async t => {
   const { name, base, suffix } = lane;
   const key = `ChessBest:${name}:v2:`;

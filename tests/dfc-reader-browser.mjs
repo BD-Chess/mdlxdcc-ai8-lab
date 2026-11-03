@@ -9,7 +9,7 @@ import {chromium} from 'playwright-core';
 import {pairFixture} from './dfc-fixture.mjs';
 import {sha} from '../scripts/dfc-build-overviews.mjs';
 import {validatePairImport} from '../scripts/dfc-import-pairs.mjs';
-const root=fileURLToPath(new URL('..',import.meta.url)),prefix='/Nara/dualframe-lab/',content='public'+prefix+'content/illuminara/',out=path.join(root,'browser-evidence/dfc');await mkdir(out,{recursive:true});
+const root=fileURLToPath(new URL('..',import.meta.url)),prefix='/Nara/dualframe-lab/',content='public'+prefix+'content/illuminara/',out=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence/dfc');await mkdir(out,{recursive:true});
 const real=JSON.parse(await readFile(path.join(root,content+'edition.json'))),release=JSON.parse(await readFile(path.join(root,'public'+prefix+'release.json'))),fixture=await pairFixture(),validated=await validatePairImport(fixture),synthetic=structuredClone(real),p=validated.imported[0];
 Object.assign(synthetic.panels[0],{P:p.P,L:p.L,overlays:p.overlays,qa_status:'PASS',readiness:{overview_ready:true,source_zoom_ready:true,pair_ready:true}});synthetic.pair_count=synthetic.panels.filter(p=>p.readiness.pair_ready).length;const syntheticBytes=Buffer.from(JSON.stringify(synthetic));
 // Keep the source-view branch exercised using a separate valid edition even

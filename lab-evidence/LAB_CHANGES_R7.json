@@ -1,0 +1,381 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R7",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab changes to exported test files (lab-tests-green): stale import depths, fixture paths and harness stubs fixed, five public/chess research tests aligned with their chess-lab twins, CHROME_PATH override, and AI8_TEST_EVIDENCE_DIR for test evidence output. No application code changed.",
+ "files": [
+  {
+   "path": "public/chess-lab/research/gemini-endpoint.test.mjs",
+   "source_sha256": "02af00ae24fb7993cb3ad53845dee058824c3c7d52fb4b3705dee1d4f04b4850",
+   "lab_sha256": "604d2dba9ec0430c108e938e7b134cfaec5bd7da3de3948ab12eb8a34184ddd8",
+   "bytes": 3184,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess-lab/research/versioning.test.mjs",
+   "source_sha256": "d785027c88d0760001fcba7c11dd8acb44c90e6e15a08cd24612247c5ef34d10",
+   "lab_sha256": "d5cd36f4b9c7d060515418c5783bb4d77d18216b3b08dec17b11a31164709d52",
+   "bytes": 3962,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/deep-ui.test.cjs",
+   "source_sha256": "6ad3f0d8e424ff4e50e6f72c40928662c12d458e4ee56f4d549692008a2a9c32",
+   "lab_sha256": "b53cc283b92d0312d799437ec9a3e4684f4b17d9e20a0bc6dcb19438b1210dfa",
+   "bytes": 25742,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/engine-cards.test.cjs",
+   "source_sha256": "8c514992ce3c6b1afe154db93a0440d4ec890d1cf773be80f40ab2432d2c9a19",
+   "lab_sha256": "137544079442b354cb8ee726e2887c25fb7758c4f935e8fe6ae8f63dfc549221",
+   "bytes": 12476,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/eval-bar.test.cjs",
+   "source_sha256": "dc60a00fe4d57f84cdc3db8b574e6a44ab5b6e1816459be884216cd24e1e2b00",
+   "lab_sha256": "ebb12af69eb851295b667cdd1736bcf508f7c3879c8907003cf4ae7b9d94d422",
+   "bytes": 21785,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/gemini-endpoint.test.mjs",
+   "source_sha256": "02af00ae24fb7993cb3ad53845dee058824c3c7d52fb4b3705dee1d4f04b4850",
+   "lab_sha256": "604d2dba9ec0430c108e938e7b134cfaec5bd7da3de3948ab12eb8a34184ddd8",
+   "bytes": 3184,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/r11-neural-overlay.test.cjs",
+   "source_sha256": "001debb3285dc3f1222f805c687d3ba723e1ebc3188c8363cb607d467ea8feb8",
+   "lab_sha256": "aa5ed1f8dce6ad679dab3eebbbcd8dfc10e7ef2ccb0a5076c9ceb10bb30590a7",
+   "bytes": 5753,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/tournament-core.test.cjs",
+   "source_sha256": "03d746005ecbbeb2b2b39e8376f877d15b9131754c71483f8c6b620925a9db03",
+   "lab_sha256": "11456b9cc243f34bca364abe217a489c780ca9262fb55f20c70e35d9143c6ab9",
+   "bytes": 7128,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "public/chess/research/versioning.test.mjs",
+   "source_sha256": "d785027c88d0760001fcba7c11dd8acb44c90e6e15a08cd24612247c5ef34d10",
+   "lab_sha256": "d5cd36f4b9c7d060515418c5783bb4d77d18216b3b08dec17b11a31164709d52",
+   "bytes": 3962,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/andaluzija-portrait-corrections-browser.mjs",
+   "source_sha256": "7d06fb3a027ab4c09224471f7fd20dbf3c3b9f74c05988532a334bde47c6e274",
+   "lab_sha256": "792f79f3134bd2d22e82c451f8ec1354b4f3050b396df8994e6642d4ec8480f2",
+   "bytes": 5385,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/andaluzija-roads-live-smoke.mjs",
+   "source_sha256": "b9e7ddfb262cd263f9422d32ff5254c530a73134d81db9ddb26b81d12a48ec24",
+   "lab_sha256": "e1821e2387f2e54e43f1e9911e829fad1874fc286030574617f1327db3743774",
+   "bytes": 5166,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/bd-home-links-browser.cjs",
+   "source_sha256": "ebe35ec6b5f18c519775128c1c69b2e5020dd919c019e7a3efad1368a65da251",
+   "lab_sha256": "e878ca3919c9da99606ed610d2d2c5b3a11fb497389f2a9654984349cd7f5cb9",
+   "bytes": 6635,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/browser-p0-smoke.mjs",
+   "source_sha256": "46d55a0500ed18c391ba8ad813bc040dd0564fa143f38fbe9f72c0ab876a9be4",
+   "lab_sha256": "1928d0fbf311ba56509b5fd63dcfe0b6d42dbcc44cb516287aba1497cc533157",
+   "bytes": 15338,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/chess-pwa-integration.test.cjs",
+   "source_sha256": "3bae3da3164ddbe38989058bed38647927236058edb4bcb7873ac98577ed3e62",
+   "lab_sha256": "d83e99eb60bcd96e996ee4dd2be512e12ae197cf9b19d2e1b432fe1ed2c86dc5",
+   "bytes": 18904,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/chess-top-picks-anchor.test.mjs",
+   "source_sha256": "7115d97b8e8ea15aa59e8ff7551b3d542a79bb5abf8f1b29b51501b4c7dcc748",
+   "lab_sha256": "4647d7e52173bc794725b96e7118f38a21d9f43bb64f8644d0110a9f80a5a592",
+   "bytes": 8646,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/chess-top-picks-pwa.test.cjs",
+   "source_sha256": "8c15787d32ba69213184ad276b52dccd494cbd24ac0c87bd66134140d0df6987",
+   "lab_sha256": "caff74bcc3c0a65211fcc3cfa57becd21ad31638a37d632e352bdbab769f9047",
+   "bytes": 5769,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dfc-cmarvel-source-browser.mjs",
+   "source_sha256": "98a9a701184c4faec7d8ad5c9b9bd7d3242d25c376fa0548f4ba871a7f91c896",
+   "lab_sha256": "7d1253018c43d324efa971c2a494f25499849ebed32b0477ecba94af0f2eccfb",
+   "bytes": 8455,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dfc-reader-browser.mjs",
+   "source_sha256": "253eb8bc28777d1e1a239a78af33b1022c6f76b7821656e7856909dacd544c29",
+   "lab_sha256": "0337b4595a8986a03046635289230753af5102816d767572f61e8ed370c75619",
+   "bytes": 21269,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dfc-text-browser.mjs",
+   "source_sha256": "88a9aba585ab599bb1001a19fe31571aa82e4887f1e7919ece12fbe17952d741",
+   "lab_sha256": "baed45bea0cfb7aa8041568dad97ad412a9ace60a33a9ed0205b5e3474127938",
+   "bytes": 16847,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dfc-text-live-browser.mjs",
+   "source_sha256": "2166db444fb0cdc3ee7b51a031d534065ac9623f5d662ca6a8139a970147cb21",
+   "lab_sha256": "67dede1af36921078c4c364a3b2a988b1a00552f9dd87cf4e554d34eaa9b14af",
+   "bytes": 9937,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dualframe-lazy-browser.mjs",
+   "source_sha256": "a6056194c8fec16d1e9e7383a86e7ce89dbd523ec855360069deac893900de6d",
+   "lab_sha256": "276b62f078ae6b2dba0cb6ba8533498a1a3d79af0eb519f097eaa0b95b4700cf",
+   "bytes": 7529,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dualframe-private-owner-browser.mjs",
+   "source_sha256": "f1a13e08aa5390082c79a631c06f8c67bd3d9c475e94699d6fb0d933c7cbc411",
+   "lab_sha256": "3e5f59ccfeba02309e9f4495587ed259c5a051494de212b8e3c866739dd003b3",
+   "bytes": 38763,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/dualframe-sync-browser.mjs",
+   "source_sha256": "68db8867dcdf56e1506559f6da89fdbf3152a93fa188294ef7e2e3a524efc9ad",
+   "lab_sha256": "77717e077cbb8f0d36ccabda795562584dceb7f2261f86d8fce952cee0c638b0",
+   "bytes": 43340,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/four-current-browser.cjs",
+   "source_sha256": "4f60cfd605e67d3cfc64edcb837fed9243a8ee92ec834f2a194b438a97f77595",
+   "lab_sha256": "cbfee91136c580176329d43d16f1d03114e19cdf6e76d53d6bab952ca77a8888",
+   "bytes": 7631,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/llms-page.test.cjs",
+   "source_sha256": "3557e44687f6583d43716f38532ae0097573072eec297826d24b1803132359b5",
+   "lab_sha256": "9e6265ca6a99054313ff1ee09b499dab4d267f9e5df5711faf00c188e4436725",
+   "bytes": 7522,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/multiapp-preview-browser.cjs",
+   "source_sha256": "be03ba1ae0475b68c4950f5b2ad891792e051d119c41463e246f4512fc1946ae",
+   "lab_sha256": "1f7744f023250e48e32884077c00d46c94229ac8164c2906f5358c6b36c315e2",
+   "bytes": 20275,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/start-app-browser.cjs",
+   "source_sha256": "e3702ab5a88588db82576d6a47eb9df9611cdcef07bc12098758429224b5e69d",
+   "lab_sha256": "737dd7bb229473606df8f028bbf47fc5e607327cacc193bef8b8130258003b41",
+   "bytes": 20311,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/sudoku-app-boot-r4-browser.cjs",
+   "source_sha256": "6b5142bd1bcdfe3dc0ed3a97914978cae76738e36379a41513280cae96bed1e6",
+   "lab_sha256": "7641a01ef04512b4da1b78c5dcf89c360fa9dbea4857889e002d37d6100b88d7",
+   "bytes": 9008,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/sudoku-app-solve-playback-r5-browser.cjs",
+   "source_sha256": "858e3c84c46d3636194b730eeb1daed7acb1e4212e8fc387df6ae95ccd619bab",
+   "lab_sha256": "42eda57d2b88e10f501c517ab91fd8a620bebfe4a741c355cd6ee9afd887a2e7",
+   "bytes": 15401,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/trip-new-stops.test.mjs",
+   "source_sha256": "09a1e5a6d1844fc4143a02d1406b2c774bbcb80840de5ac06040686d2f932ce5",
+   "lab_sha256": "b0d4d21cedeca7d7f59e4fb89f7ec21fb73b76845febf007071cfc5a3ec15177",
+   "bytes": 46221,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  },
+  {
+   "path": "tests/trip-stops.test.mjs",
+   "source_sha256": "9421585cd5d9049e8e990fceb23e4c9a71bf5c686f5ea9da170fc61da7612b33",
+   "lab_sha256": "ce8a77e6ca0e9a572941dfd0f2309d6b8750b0c5917f92816fcb8103d9c0ec99",
+   "bytes": 8280,
+   "lab_prs": [
+    "#21"
+   ],
+   "lab_commits": [
+    "76c10d2"
+   ]
+  }
+ ]
+}

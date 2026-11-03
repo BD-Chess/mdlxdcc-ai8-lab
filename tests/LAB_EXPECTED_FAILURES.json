@@ -1,0 +1,422 @@
+{
+ "schema": "ai8.lab-expected-failures.v1",
+ "recorded_on": "2026-11-03",
+ "base": "cloud/lab-tests-green-20261103 (on cloud/p0-1-fix-20261103)",
+ "how_measured": "one node process per file (node --test for *.test.*), 4 workers, 300 s timeout; root dev deps fake-indexeddb + playwright-core installed with --no-save, functions/node_modules present, browser path variables set to Chromium 153, CW_BASE_URL served by scripts/serve_lab.py, Playwright WebKit not installed",
+ "note": "Files here fail in the lab for the stated reason. tests/run_lab_suite.py reports any other failure as unexpected. Remove an entry once its file passes.",
+ "counts": {
+  "stale-harness": 14,
+  "unknown": 10,
+  "flaky": 1,
+  "stale-expectation": 16,
+  "fixture-removed-upstream": 4,
+  "current-lags-lab": 8,
+  "not-a-test": 1,
+  "live-smoke": 3,
+  "webkit": 7,
+  "needs-upstream-history": 3,
+  "lab-exclusion": 10,
+  "real-bug": 2
+ },
+ "files": [
+  {
+   "file": "public/chess-lab/research/analysis-source.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice now calls window.ChessEngineRegistry (8zc-utils.js) and the tests expect SF to auto-run; engines are lazy now, so a window stub alone does not fix them"
+  },
+  {
+   "file": "public/chess-lab/research/cache-evidence.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice no longer contains dccMemoKey (moved in 8zc-utils.js)"
+  },
+  {
+   "file": "public/chess-lab/research/collection-dynamic.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom fixture of the library no longer matches the page: #popularGamesSelect is null after load"
+  },
+  {
+   "file": "public/chess-lab/research/dcc-move-click.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom page boot no longer matches the app: the CURRENT lane calls w.initAll, which the page no longer exposes at that point ('w.initAll is not a function')"
+  },
+  {
+   "file": "public/chess-lab/research/lab-integration.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom full-page boot no longer matches the app: public/chess copy fails where btnGames no longer opens popularGamesPanel (desktop view model); chess-lab copy never settles (pending promise)"
+  },
+  {
+   "file": "public/chess-lab/research/p1-state.test.cjs",
+   "class": "unknown",
+   "reason": "focus/modal assertions in jsdom (e.g. p1-state.test.cjs:60 activeElement loses aria-selected after ArrowRight); real a11y bug or jsdom limit"
+  },
+  {
+   "file": "public/chess-lab/research/p3-active-analysis.test.cjs",
+   "class": "unknown",
+   "reason": "focus/modal assertions in jsdom (e.g. p1-state.test.cjs:60 activeElement loses aria-selected after ArrowRight); real a11y bug or jsdom limit"
+  },
+  {
+   "file": "public/chess-lab/research/p4-engine-cards.test.cjs",
+   "class": "unknown",
+   "reason": "focus/modal assertions in jsdom (e.g. p1-state.test.cjs:60 activeElement loses aria-selected after ArrowRight); real a11y bug or jsdom limit"
+  },
+  {
+   "file": "public/chess-lab/research/play-reliability.test.cjs",
+   "class": "stale-harness",
+   "reason": "tests 9-10: replay/DCC records no longer carry the fields the harness reads (.raw, .isDCC1 undefined); 8 of 10 pass"
+  },
+  {
+   "file": "public/chess-lab/research/r11-dcc-link-score.test.cjs",
+   "class": "flaky",
+   "reason": "passes alone; under load a jsdom timer fires after the window closed (\"Cannot read properties of undefined (reading 'getElementById')\")"
+  },
+  {
+   "file": "public/chess-lab/research/r8-time-budget.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess-lab/research/settings-workspace.test.cjs",
+   "class": "unknown",
+   "reason": "focus/modal assertions in jsdom (e.g. p1-state.test.cjs:60 activeElement loses aria-selected after ArrowRight); real a11y bug or jsdom limit"
+  },
+  {
+   "file": "public/chess-lab/research/source-context-integration.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess-lab/research/study-load-integration.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess-lab/research/study-w0.test.cjs",
+   "class": "fixture-removed-upstream",
+   "reason": "legacy-reader tests read public/js/*.js (path.resolve(base,'../js')), written when LAB lived at public/chess/new; the 20-Study legacy reader they need no longer exists in either tree or upstream; the public/chess copy also runs on the older public/chess/js/8zc-study-ui.js"
+  },
+  {
+   "file": "public/chess-lab/research/top-five.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice now calls window.ChessEngineRegistry (8zc-utils.js) and the tests expect SF to auto-run; engines are lazy now, so a window stub alone does not fix them"
+  },
+  {
+   "file": "public/chess-lab/research/versioning.test.mjs",
+   "class": "stale-expectation",
+   "reason": "import depth fixed; the test is now obsolete: tools/chess-versioning.mjs no longer exports nextArchive and public/chess/{old,new} no longer exist; superseded by tests/chess-versioning.test.mjs"
+  },
+  {
+   "file": "public/chess/research/analysis-session.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "older copy of a passing chess-lab test, but the code under test differs between the trees (traced: 8zc-analysis-session.js / 8zc-evidence.js / whole page / app-mobile); left unchanged"
+  },
+  {
+   "file": "public/chess/research/analysis-source.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice now calls window.ChessEngineRegistry (8zc-utils.js) and the tests expect SF to auto-run; engines are lazy now, so a window stub alone does not fix them"
+  },
+  {
+   "file": "public/chess/research/cache-evidence.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice no longer contains dccMemoKey (moved in 8zc-utils.js)"
+  },
+  {
+   "file": "public/chess/research/collection-dynamic.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom fixture of the library no longer matches the page: #popularGamesSelect is null after load"
+  },
+  {
+   "file": "public/chess/research/dcc-move-click.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom page boot no longer matches the app: the CURRENT lane calls w.initAll, which the page no longer exposes at that point ('w.initAll is not a function')"
+  },
+  {
+   "file": "public/chess/research/evidence.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "older copy of a passing chess-lab test, but the code under test differs between the trees (traced: 8zc-analysis-session.js / 8zc-evidence.js / whole page / app-mobile); left unchanged"
+  },
+  {
+   "file": "public/chess/research/game-review-ui.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "older copy of a passing chess-lab test, but the code under test differs between the trees (traced: 8zc-analysis-session.js / 8zc-evidence.js / whole page / app-mobile); left unchanged"
+  },
+  {
+   "file": "public/chess/research/lab-integration.test.cjs",
+   "class": "stale-harness",
+   "reason": "jsdom full-page boot no longer matches the app: public/chess copy fails where btnGames no longer opens popularGamesPanel (desktop view model); chess-lab copy never settles (pending promise)"
+  },
+  {
+   "file": "public/chess/research/mobile-unified.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "older copy of a passing chess-lab test, but the code under test differs between the trees (traced: 8zc-analysis-session.js / 8zc-evidence.js / whole page / app-mobile); left unchanged"
+  },
+  {
+   "file": "public/chess/research/play-reliability.test.cjs",
+   "class": "stale-harness",
+   "reason": "tests 9-10: replay/DCC records no longer carry the fields the harness reads (.raw, .isDCC1 undefined); 8 of 10 pass"
+  },
+  {
+   "file": "public/chess/research/r11-dcc-link-score.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "test file is byte-identical to the chess-lab copy, which passes; public/chess/js code is older (e.g. 8zc-sim-store.js)"
+  },
+  {
+   "file": "public/chess/research/r8-time-budget.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess/research/sim-store.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "test file is byte-identical to the chess-lab copy, which passes; public/chess/js code is older (e.g. 8zc-sim-store.js)"
+  },
+  {
+   "file": "public/chess/research/source-context-integration.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess/research/study-load-integration.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects SF to run when the source selector changes; the app shows 'ChessDB · position data' and keeps engines lazy (required by the passing chess-lab analysis-session test)"
+  },
+  {
+   "file": "public/chess/research/study-ui.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "test file is byte-identical to the chess-lab copy, which passes; public/chess/js code is older (e.g. 8zc-sim-store.js)"
+  },
+  {
+   "file": "public/chess/research/study-w0.test.cjs",
+   "class": "fixture-removed-upstream",
+   "reason": "legacy-reader tests read public/js/*.js (path.resolve(base,'../js')), written when LAB lived at public/chess/new; the 20-Study legacy reader they need no longer exists in either tree or upstream; the public/chess copy also runs on the older public/chess/js/8zc-study-ui.js"
+  },
+  {
+   "file": "public/chess/research/top-five.test.cjs",
+   "class": "stale-harness",
+   "reason": "source slice now calls window.ChessEngineRegistry (8zc-utils.js) and the tests expect SF to auto-run; engines are lazy now, so a window stub alone does not fix them"
+  },
+  {
+   "file": "public/chess/research/versioning.test.mjs",
+   "class": "stale-expectation",
+   "reason": "import depth fixed; the test is now obsolete: tools/chess-versioning.mjs no longer exports nextArchive and public/chess/{old,new} no longer exist; superseded by tests/chess-versioning.test.mjs"
+  },
+  {
+   "file": "public/chess/research/workspace-clock.test.cjs",
+   "class": "current-lags-lab",
+   "reason": "test file is byte-identical to the chess-lab copy, which passes; public/chess/js code is older (e.g. 8zc-sim-store.js)"
+  },
+  {
+   "file": "tests/andaluzija-ai-browser.mjs",
+   "class": "unknown",
+   "reason": "browser waitForFunction timeout, not debugged"
+  },
+  {
+   "file": "tests/andaluzija-local-server.mjs",
+   "class": "not-a-test",
+   "reason": "local preview server that never exits",
+   "skip": true
+  },
+  {
+   "file": "tests/andaluzija-roads-live-smoke.mjs",
+   "class": "live-smoke",
+   "reason": "contacts the production site and needs a release receipt",
+   "skip": true
+  },
+  {
+   "file": "tests/bd-home-links-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/browser-p0-smoke.mjs",
+   "class": "stale-expectation",
+   "reason": "scripted mock model predates the R3.3+ guide protocol (PR #10 notes this): it keeps calling ask_understanding after the handler answers UNKNOWN_IDEA ('call assess_challenge now'), hits ROUND_LIMIT, so r1 stays hidden"
+  },
+  {
+   "file": "tests/chess-current-browser.cjs",
+   "class": "unknown",
+   "reason": "layout check '520-500-14px-light-compact reachable library'; real bug or Linux font metrics"
+  },
+  {
+   "file": "tests/chess-current-upgrade-browser.cjs",
+   "class": "needs-upstream-history",
+   "reason": "runs git show / ls-tree on bd-chessdb commits (73353ef, 9ab90a8); the lab has no upstream history"
+  },
+  {
+   "file": "tests/chess-lab-deep-gui.test.cjs",
+   "class": "stale-expectation",
+   "reason": "markup regex predates the current Deep GUI markup"
+  },
+  {
+   "file": "tests/chess-promotion.test.cjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/chess/versions.json, excluded from the lab"
+  },
+  {
+   "file": "tests/chess-pwa-integration.test.cjs",
+   "class": "stale-expectation",
+   "reason": "undeclared 'path' fixed; CURRENT lane now fails at btnGames (the Games panel moved to the desktop view model, 8zc-lab-layout.js); LAB lane never settles (pending promise)"
+  },
+  {
+   "file": "tests/chess-top-picks-pwa.test.cjs",
+   "class": "stale-expectation",
+   "reason": "LAB lane now reads public/chess-lab (was public/chess/new); both lanes fail because the catalog gained 'Dreev-Kasparov: whole-game review (V4)', so TCEC S27 is result 9, not 6"
+  },
+  {
+   "file": "tests/dfc-cmarvel-public.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/Nara/dualframe-lab/release.json, excluded from the lab"
+  },
+  {
+   "file": "tests/dfc-cmarvel-source-browser.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/Nara/dualframe-lab/release.json, excluded from the lab"
+  },
+  {
+   "file": "tests/dfc-hybrid-ui.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/Nara/dualframe-lab/release.json, excluded from the lab"
+  },
+  {
+   "file": "tests/dfc-reader-browser.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/Nara/dualframe-lab/release.json, excluded from the lab"
+  },
+  {
+   "file": "tests/dfc-text-browser.mjs",
+   "class": "unknown",
+   "reason": "browser waitForFunction timeout, not debugged"
+  },
+  {
+   "file": "tests/dfc-text-layers.test.mjs",
+   "class": "needs-upstream-history",
+   "reason": "runs git show / ls-tree on bd-chessdb commits (73353ef, 9ab90a8); the lab has no upstream history"
+  },
+  {
+   "file": "tests/dfc-text-live-browser.mjs",
+   "class": "live-smoke",
+   "reason": "contacts the production site and needs a release receipt",
+   "skip": true
+  },
+  {
+   "file": "tests/dualframe-album.test.mjs",
+   "class": "stale-expectation",
+   "reason": "pins the sha256 of a file that was re-encrypted upstream"
+  },
+  {
+   "file": "tests/dualframe-deploy-ready.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "imports scripts/dualframe-deploy-ready.mjs, excluded from the lab"
+  },
+  {
+   "file": "tests/dualframe-lazy-browser.mjs",
+   "class": "unknown",
+   "reason": "now honours CHROME_PATH (was a hard-coded Windows path); times out waiting for #own-gallery .gallery-artwork, like the other DualFrame browser tests"
+  },
+  {
+   "file": "tests/dualframe-private-owner-browser.mjs",
+   "class": "needs-upstream-history",
+   "reason": "runs git show / ls-tree on bd-chessdb commits (73353ef, 9ab90a8); the lab has no upstream history"
+  },
+  {
+   "file": "tests/dualframe-pwa-live-smoke.mjs",
+   "class": "live-smoke",
+   "reason": "contacts the production site and needs a release receipt",
+   "skip": true
+  },
+  {
+   "file": "tests/dualframe-pwa.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "imports scripts/published-fetch.mjs, excluded from the lab"
+  },
+  {
+   "file": "tests/dualframe-sync-browser.mjs",
+   "class": "unknown",
+   "reason": "browser waitForFunction timeout, not debugged"
+  },
+  {
+   "file": "tests/four-current-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/glance-trip.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/_headers, excluded from the lab"
+  },
+  {
+   "file": "tests/kdosva-reader.test.mjs",
+   "class": "stale-expectation",
+   "reason": "expects 16 highlights; the shipped data has 23"
+  },
+  {
+   "file": "tests/landing-header-search-browser.cjs",
+   "class": "real-bug",
+   "reason": "lab-introduced: 'One header row at 320' fails on lab public/index.html (9 utility controls wrap to 2 rows), passes on bd-chessdb d9c0242 (PR #15 finding 1)"
+  },
+  {
+   "file": "tests/mdlxdcc-root-pwa.test.cjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/_redirects, excluded from the lab"
+  },
+  {
+   "file": "tests/multiapp-preview-browser.cjs",
+   "class": "unknown",
+   "reason": "chess #main overflows its parent at 375x874; real bug or Linux font metrics"
+  },
+  {
+   "file": "tests/nara-revisions.test.mjs",
+   "class": "real-bug",
+   "reason": "probable upstream bug: Nara Daily (scripts/nara-daily.mjs dailyCard) shows no revision notice; monthly, archive and log pages do"
+  },
+  {
+   "file": "tests/preai8-wl-static.test.mjs",
+   "class": "stale-expectation",
+   "reason": "API path moved to public/WL/reader.js"
+  },
+  {
+   "file": "tests/start-app-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/sudoku-app-boot-r4-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/sudoku-app-preview.test.cjs",
+   "class": "fixture-removed-upstream",
+   "reason": "pins public/S/app/old/003/app.html + release.json; upstream old/003 keeps only index.html"
+  },
+  {
+   "file": "tests/sudoku-app-sensor-guide-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/sudoku-app-solve-playback-r5-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/sudoku-picker-settings.test.cjs",
+   "class": "stale-expectation",
+   "reason": "expects lane separation that public/S/new/presentation/bootstrap.js:3 removes on purpose (namespace unification)"
+  },
+  {
+   "file": "tests/sudoku-unified-lab-browser.cjs",
+   "class": "webkit",
+   "reason": "launches Playwright WebKit after its Chromium part; install with npx playwright install webkit"
+  },
+  {
+   "file": "tests/trip-deep-search.test.mjs",
+   "class": "fixture-removed-upstream",
+   "reason": "compares Trip/new solver with public/Trip/old/003/*.js; upstream old/003 keeps only index.html"
+  },
+  {
+   "file": "tests/trip-promotion.test.mjs",
+   "class": "lab-exclusion",
+   "reason": "reads public/_redirects (excluded) and public/Trip/old/00{2,3}/API-Gemini.png (upstream keeps only index.html in those archives)"
+  }
+ ]
+}

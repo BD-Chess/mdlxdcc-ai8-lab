@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 const {chromium}=createRequire(import.meta.url)('playwright');
-await mkdir('roads-release-evidence',{recursive:true});
+const output=(process.env.AI8_TEST_EVIDENCE_DIR?process.env.AI8_TEST_EVIDENCE_DIR+'/':'')+'roads-release-evidence';await mkdir(output,{recursive:true});
 const receipt=process.env.ANDALUZIJA_AUDIT_DEPLOY?{deploy_id:process.env.ANDALUZIJA_AUDIT_DEPLOY,url:'https://www.mdlxdcc.org/bd/o/izleti/andaluzija-2027',googleRoadSmokeVerifiedOn:'6ad8f264d12d64595e64eca4'}:JSON.parse(await readFile('roads-release-evidence/receipt.json','utf8'));
 const browser=await chromium.launch({headless:true,executablePath:process.env.ANDALUZIJA_TEST_CHROMIUM||'/usr/bin/google-chrome',args:['--no-sandbox','--disable-dev-shm-usage']});
 const result={deploy_id:receipt.deploy_id,anonymous:true,modelCalls:0,privateWrites:0,roadDrawAttempts:0,errors:[],csp:[],mapErrors:[]};
@@ -34,4 +34,4 @@ try{
  result.csp=await page.evaluate(()=>window.cspViolations);assert.deepEqual(result.errors,[]);assert.deepEqual(result.mapErrors,[]);assert.deepEqual(result.csp,[]);
  result.status='PRODUCTION_SMOKE_PASSED';
 }catch(e){result.status='PRODUCTION_SMOKE_FAILED';result.failure=String(e.message).replace(/https?:\/\/\S+/g,'[URL]').slice(0,600);process.exitCode=1;}
-finally{await browser.close();await writeFile('roads-release-evidence/live-smoke.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}
+finally{await browser.close();await writeFile(output+'/live-smoke.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}

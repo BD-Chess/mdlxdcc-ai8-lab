@@ -5,7 +5,7 @@
  */
 const {chromium,webkit}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
-const root=path.resolve('public'),out=path.resolve(process.env.BD_HOME_TEST_EVIDENCE||'bd-home-evidence');
+const root=path.resolve('public'),out=path.resolve(process.env.BD_HOME_TEST_EVIDENCE||path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','bd-home-evidence'));
 fs.mkdirSync(out,{recursive:true});
 const cases=[
   {

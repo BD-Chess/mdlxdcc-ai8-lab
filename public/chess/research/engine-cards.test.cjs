@@ -2,10 +2,10 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const Cards=require('../js/8zc-engine-cards.js');
 function setup(t,mobile=false,extra={}){
-  let fen='position-a',positionHistory=null,canAnalyze=true;const calls=[],engines=[],published=[];
+  let fen='position-a',positionHistory=null,canAnalyze=true,contextReads=0;const calls=[],engines=[],published=[];
   const settings={sfAnalysisDepth:11,sfCardMode:'sf-lite',topN:3};
   const session={capabilities:()=>({mobile,hardwareConcurrency:8}),getSettings:()=>({sfFullThreadsRequested:1})};
-  const cards=Cards.create({session,teardownGraceMs:0,...extra,getContext:()=>({fen,positionHistory,canAnalyze,settings}),
+  const cards=Cards.create({session,teardownGraceMs:0,...extra,getContext:()=>{contextReads++;return {fen,positionHistory,canAnalyze,settings};},
     backendFor:mode=>({create(){
       const engine={prepare:async()=>{},analyze(options){const call={mode,options};calls.push(call);engine.options=options;return new Promise(r=>{call.resolve=r;engine.resolve=r;});},
         stop(){engine.resolve?.({fen,lines:[],stopped:true});},destroy(){engine.destroyed=true;}};
@@ -14,8 +14,18 @@ function setup(t,mobile=false,extra={}){
   t.after(()=>cards.destroy());
   const tick=()=>new Promise(r=>setImmediate(r));
   const complete=(index,depth=11)=>calls[index].resolve({fen,lines:[{depth,pv:['e2e4'],score:{type:'cp',white:27}}],stopped:false});
-  return {cards,calls,engines,published,settings,tick,complete,changeFen(value){fen=value;cards.positionChanged();},changeHistory(value){positionHistory=value;cards.positionChanged();},setAvailable(value){canAnalyze=value;cards.positionChanged();}};
+  return {cards,calls,engines,published,settings,tick,complete,contextReads:()=>contextReads,changeFen(value){fen=value;cards.positionChanged();},changeHistory(value){positionHistory=value;cards.positionChanged();},setAvailable(value){canAnalyze=value;cards.positionChanged();}};
 }
+test('card paints read the position context once and retain repetition-history isolation',t=>{
+  const x=setup(t),history={startFen:'root',moves:['g1f3','g8f6']};x.changeHistory(history);
+  x.cards.ingest({fen:'position-a',mode:'sf-lite',positionHistory:history,lines:[{depth:12,pv:['e2e4']}],depth:12});
+  let before=x.contextReads();assert.match(x.cards.state('SF').note,/Depth 12/);
+  assert.equal(x.contextReads()-before,1,'a badge paint must not rebuild the same history repeatedly');
+  before=x.contextReads();assert.ok(x.cards.get('sf-lite'));assert.equal(x.contextReads()-before,1);
+  x.changeHistory({startFen:'root',moves:['b1c3','b8c6']});
+  before=x.contextReads();assert.equal(x.cards.state('SF').note,null);
+  assert.equal(x.contextReads()-before,1);assert.equal(x.cards.get('sf-lite'),null,'same FEN with changed history cannot display old analysis');
+});
 test('each card owns its timed budget and result, and a completed repeat adds search time',async t=>{
   const x=setup(t),first=x.cards.analyze('sf-lite');await x.tick();assert.equal(x.calls[0].options.movetime,15000);assert.equal(x.calls[0].options.depth,undefined);
   x.complete(0);await first;
@@ -40,10 +50,10 @@ test('per-move analysis is opt-in, uses the card variant, and cancels stale posi
   assert.equal(x.cards.isFollowing(),false);
 });
 
-test('mobile automatic analysis stays sequential and respects unavailable/locked contexts',async t=>{
+test('mobile automatic All analysis is concurrent and respects unavailable/locked contexts',async t=>{
   const x=setup(t,true),wait=()=>new Promise(r=>setTimeout(r,130));
   x.setAvailable(false);x.cards.setFollowing(true);await wait();assert.equal(x.calls.length,0);
-  x.setAvailable(true);await wait();assert.equal(x.calls.length,1);assert.match(x.cards.state('BER').note,/Queued/);
+  x.setAvailable(true);await wait();assert.equal(x.calls.length,2);assert.equal(x.cards.state('BER').working,true);
   x.complete(0);await x.tick();assert.equal(x.calls.length,2);
   x.cards.setFollowing(false);await wait();assert.equal(x.cards.isRunning(),false);
   assert.equal(x.engines[1].destroyed,true);
@@ -62,13 +72,13 @@ test('desktop Analyze all runs actual engines concurrently and retains separate 
   assert.equal(x.cards.get('sf-lite').lines[0].score.white,27);assert.equal(x.cards.get('berserk').lines[0].score.white,12);
   assert.equal(x.cards.isAllRunning(),false);assert.equal(x.cards.get('reckless'),null);
 });
-test('mobile Analyze all queues the second engine and Stop cancels both active and queued work',async t=>{
-  const x=setup(t,true),run=x.cards.analyzeAll();await x.tick();assert.equal(x.calls.length,1);
-  assert.match(x.cards.state('BER').note,/Queued/);x.cards.stopAll();await run;await x.tick();assert.equal(x.calls.length,1);
+test('mobile Analyze all starts both engines and Stop cancels all active work',async t=>{
+  const x=setup(t,true),run=x.cards.analyzeAll();await x.tick();assert.equal(x.calls.length,2);
+  assert.equal(x.cards.state('BER').working,true);x.cards.stopAll();await run;await x.tick();assert.equal(x.calls.length,2);
   assert.equal(x.cards.isRunning(),false);assert.equal(x.engines[0].destroyed,true);
 });
-test('mobile starts its next engine only after the first completes',async t=>{
-  const x=setup(t,true),run=x.cards.analyzeAll();await x.tick();x.complete(0);await x.tick();assert.equal(x.calls.length,2);
+test('mobile All keeps the second engine searching after the first completes',async t=>{
+  const x=setup(t,true),run=x.cards.analyzeAll();await x.tick();assert.equal(x.calls.length,2);x.complete(0);await x.tick();assert.equal(x.cards.state('BER').working,true);
   x.complete(1);await run;
 });
 test('position changes destroy old workers and late callbacks cannot publish another position',async t=>{

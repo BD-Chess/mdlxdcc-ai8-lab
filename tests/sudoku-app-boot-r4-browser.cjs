@@ -3,7 +3,7 @@
 // verifies deployed bytes; default serves the exact checkout on localhost.
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium,webkit}=require('playwright');
-const out=process.env.SUDOKU_EVIDENCE_DIR||'sudoku-r4-evidence';fs.mkdirSync(out,{recursive:true});
+const out=process.env.SUDOKU_EVIDENCE_DIR||path.join(process.env.AI8_TEST_EVIDENCE_DIR||'.','sudoku-r4-evidence');fs.mkdirSync(out,{recursive:true});
 const root=path.resolve('public');
 const fixture={schema:'AI8_SUDOKU_NAV_SESSION_V1',version:'0.2.0',gameId:'boot-r4-fixture',diff:'easy',puzzle:[...'530070000600195000098000060800060003400803001700020006060000280000419005000080079'].map(Number),notes:Array.from({length:81},()=>[]),time:0,rows:[],assistance:[],history:[],settings:{policy:'REAL',goal:'FLOW',target:1,deep:false}};fixture.board=fixture.puzzle;fixture.lineage={base:fixture.puzzle,ops:[]};
 const report={cases:[],errors:[],navigation:[]};let server;

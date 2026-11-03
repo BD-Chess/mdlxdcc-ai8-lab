@@ -14,7 +14,7 @@ import {createService} from '../functions/lib/dualframe/service.mjs';
 import {passwordVerifier} from '../functions/lib/dualframe/auth.mjs';
 import {createPrivateOwnerPolicy,routeOwnerPolicy} from '../functions/lib/dualframe/private-owner-policy.mjs';
 const root=path.resolve(fileURLToPath(new URL('..',import.meta.url))),sharp=createRequire(new URL('../functions/package.json',import.meta.url))('sharp');
-const evidence=path.join(root,'browser-evidence','owner');await mkdir(evidence,{recursive:true});
+const evidence=path.join(process.env.AI8_TEST_EVIDENCE_DIR||root,'browser-evidence','owner');await mkdir(evidence,{recursive:true});
 const profiles=await mkdtemp(path.join(tmpdir(),'dualframe-owner-')),contexts=new Set(),hash=data=>createHash('sha256').update(data).digest('hex');
 // Exercise the real released package before the working-tree update. CI must
 // retain this immutable commit (checkout fetch-depth: 0), rather than inventing
