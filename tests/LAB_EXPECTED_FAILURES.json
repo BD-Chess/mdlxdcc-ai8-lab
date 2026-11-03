@@ -254,7 +254,7 @@
   {
    "file": "tests/chess-pwa-integration.test.cjs",
    "class": "stale-expectation",
-   "reason": "undeclared 'path' fixed; both lanes now boot and then fail at btnGames: the Games panel moved to the desktop view model (8zc-lab-layout.js)"
+   "reason": "undeclared 'path' fixed; CURRENT lane now fails at btnGames (the Games panel moved to the desktop view model, 8zc-lab-layout.js); LAB lane never settles (pending promise)"
   },
   {
    "file": "tests/chess-top-picks-pwa.test.cjs",
