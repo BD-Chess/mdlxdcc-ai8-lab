@@ -172,14 +172,14 @@ em{color:var(--gold);font-style:normal}
   <h2>Finish the TSP tests & refine the categories</h2>
   <p>The TSP arena is your strongest empirical weapon. Let's finish the runs, analyse the results, and reorganise the <code>--cat</code> flags so every category earns its keep.</p>
   <ul class="task-list" id="tsp-tasks">
-    <li><input type="checkbox" data-key="tsp-1"><span>Finish <code>kb_build_dev_allcats_cpu10.bat</code> (currently running — wait for completion).</span></li>
-    <li><input type="checkbox" data-key="tsp-2"><span>Run <code>kb_build_dev_allcats_bigbudget_cpu10.bat</code> (launch after the first batch).</span></li>
-    <li><input type="checkbox" data-key="tsp-3"><span>Run <code>kb_build_dev_gpu_serial.bat</code> (GPU verification).</span></li>
-    <li><input type="checkbox" data-key="tsp-4"><span>Collect all <code>arena_summary.txt</code> and <code>arena_best.json</code> files.</span></li>
-    <li><input type="checkbox" data-key="tsp-5"><span>Create a master CSV with instance × category × best-gap × best-sensor.</span></li>
-    <li><input type="checkbox" data-key="tsp-6"><span>Identify which categories consistently win and which are dead weight.</span></li>
-    <li><input type="checkbox" data-key="tsp-7"><span>Refactor <code>--cat</code> documentation — rename, merge, or remove categories based on data.</span></li>
-    <li><input type="checkbox" data-key="tsp-8"><span>Write the TSP arena pre‑print paper (architecture + results).</span></li>
+    <li><input type="checkbox" data-key="tsp-1" aria-labelledby="tsp-1-text"><span id="tsp-1-text">Finish <code>kb_build_dev_allcats_cpu10.bat</code> (currently running — wait for completion).</span></li>
+    <li><input type="checkbox" data-key="tsp-2" aria-labelledby="tsp-2-text"><span id="tsp-2-text">Run <code>kb_build_dev_allcats_bigbudget_cpu10.bat</code> (launch after the first batch).</span></li>
+    <li><input type="checkbox" data-key="tsp-3" aria-labelledby="tsp-3-text"><span id="tsp-3-text">Run <code>kb_build_dev_gpu_serial.bat</code> (GPU verification).</span></li>
+    <li><input type="checkbox" data-key="tsp-4" aria-labelledby="tsp-4-text"><span id="tsp-4-text">Collect all <code>arena_summary.txt</code> and <code>arena_best.json</code> files.</span></li>
+    <li><input type="checkbox" data-key="tsp-5" aria-labelledby="tsp-5-text"><span id="tsp-5-text">Create a master CSV with instance × category × best-gap × best-sensor.</span></li>
+    <li><input type="checkbox" data-key="tsp-6" aria-labelledby="tsp-6-text"><span id="tsp-6-text">Identify which categories consistently win and which are dead weight.</span></li>
+    <li><input type="checkbox" data-key="tsp-7" aria-labelledby="tsp-7-text"><span id="tsp-7-text">Refactor <code>--cat</code> documentation — rename, merge, or remove categories based on data.</span></li>
+    <li><input type="checkbox" data-key="tsp-8" aria-labelledby="tsp-8-text"><span id="tsp-8-text">Write the TSP arena pre‑print paper (architecture + results).</span></li>
   </ul>
   <div class="callout green">
     <div class="callout-title">Why this matters</div>
@@ -194,14 +194,14 @@ em{color:var(--gold);font-style:normal}
   <h2>Publish the code and the results</h2>
   <p>Your code is clean, short, and proves what you claim. Hiding it only makes sceptics more suspicious. Let's open almost everything and protect only the truly sensitive parts.</p>
   <ul class="task-list" id="code-tasks">
-    <li><input type="checkbox" data-key="code-1"><span><strong>Open immediately:</strong> TSP arena (all <code>az_*.py</code> + <code>8zrp.py</code> + Rust extension).</span></li>
-    <li><input type="checkbox" data-key="code-2"><span><strong>Open immediately:</strong> Sudoku HTML + JS (one file, already self‑contained).</span></li>
-    <li><input type="checkbox" data-key="code-3"><span><strong>Open immediately:</strong> 8Z image encoder (<code>8Z_encoder_v2.1.py</code>).</span></li>
-    <li><input type="checkbox" data-key="code-4"><span><strong>Open immediately:</strong> Pi Hunter (<code>Pi_hunter_v2.3.py</code>).</span></li>
-    <li><input type="checkbox" data-key="code-5"><span><strong>Open with password riddle:</strong> DNA pipeline (large, domain‑specific, contains the deepest signals).</span></li>
-    <li><input type="checkbox" data-key="code-6"><span><strong>Keep private:</strong> Trading engine (financial alpha — never open‑source live strategies).</span></li>
-    <li><input type="checkbox" data-key="code-7"><span>Create <code>chessbest.org/8z/</code> page that links to GitHub repos.</span></li>
-    <li><input type="checkbox" data-key="code-8"><span>Add a <code>README.md</code> to every repo with build instructions and a link to the paper.</span></li>
+    <li><input type="checkbox" data-key="code-1" aria-labelledby="code-1-text"><span id="code-1-text"><strong>Open immediately:</strong> TSP arena (all <code>az_*.py</code> + <code>8zrp.py</code> + Rust extension).</span></li>
+    <li><input type="checkbox" data-key="code-2" aria-labelledby="code-2-text"><span id="code-2-text"><strong>Open immediately:</strong> Sudoku HTML + JS (one file, already self‑contained).</span></li>
+    <li><input type="checkbox" data-key="code-3" aria-labelledby="code-3-text"><span id="code-3-text"><strong>Open immediately:</strong> 8Z image encoder (<code>8Z_encoder_v2.1.py</code>).</span></li>
+    <li><input type="checkbox" data-key="code-4" aria-labelledby="code-4-text"><span id="code-4-text"><strong>Open immediately:</strong> Pi Hunter (<code>Pi_hunter_v2.3.py</code>).</span></li>
+    <li><input type="checkbox" data-key="code-5" aria-labelledby="code-5-text"><span id="code-5-text"><strong>Open with password riddle:</strong> DNA pipeline (large, domain‑specific, contains the deepest signals).</span></li>
+    <li><input type="checkbox" data-key="code-6" aria-labelledby="code-6-text"><span id="code-6-text"><strong>Keep private:</strong> Trading engine (financial alpha — never open‑source live strategies).</span></li>
+    <li><input type="checkbox" data-key="code-7" aria-labelledby="code-7-text"><span id="code-7-text">Create <code>chessbest.org/8z/</code> page that links to GitHub repos.</span></li>
+    <li><input type="checkbox" data-key="code-8" aria-labelledby="code-8-text"><span id="code-8-text">Add a <code>README.md</code> to every repo with build instructions and a link to the paper.</span></li>
   </ul>
   <div class="callout gold">
     <div class="callout-title">Password riddle — the right way</div>
@@ -216,13 +216,13 @@ em{color:var(--gold);font-style:normal}
   <h2>Let the money work for you</h2>
   <p>The DCC trader has already demonstrated 6.8× efficiency over grid search. Now it needs to run live. Start with pocket money, skim profits, and let the system prove itself. If it works, it funds everything else.</p>
   <ul class="task-list" id="trading-tasks">
-    <li><input type="checkbox" data-key="trade-1"><span>Connect the DCC trader to a live exchange (Binance / Bybit testnet first).</span></li>
-    <li><input type="checkbox" data-key="trade-2"><span>Run paper‑trading for 2‑4 weeks — log every decision.</span></li>
-    <li><input type="checkbox" data-key="trade-3"><span>Deposit €200‑500 <strong>you are prepared to lose entirely</strong>.</span></li>
-    <li><input type="checkbox" data-key="trade-4"><span>Go live with the smallest position sizes allowed.</span></li>
-    <li><input type="checkbox" data-key="trade-5"><span>Skim profits weekly — never increase risk past the initial bankroll until it doubles.</span></li>
-    <li><input type="checkbox" data-key="trade-6"><span>After 3 consecutive profitable months, increase capital gradually.</span></li>
-    <li><input type="checkbox" data-key="trade-7"><span>Write a <strong>private</strong> trading log — what worked, what broke, what you learned.</span></li>
+    <li><input type="checkbox" data-key="trade-1" aria-labelledby="trade-1-text"><span id="trade-1-text">Connect the DCC trader to a live exchange (Binance / Bybit testnet first).</span></li>
+    <li><input type="checkbox" data-key="trade-2" aria-labelledby="trade-2-text"><span id="trade-2-text">Run paper‑trading for 2‑4 weeks — log every decision.</span></li>
+    <li><input type="checkbox" data-key="trade-3" aria-labelledby="trade-3-text"><span id="trade-3-text">Deposit €200‑500 <strong>you are prepared to lose entirely</strong>.</span></li>
+    <li><input type="checkbox" data-key="trade-4" aria-labelledby="trade-4-text"><span id="trade-4-text">Go live with the smallest position sizes allowed.</span></li>
+    <li><input type="checkbox" data-key="trade-5" aria-labelledby="trade-5-text"><span id="trade-5-text">Skim profits weekly — never increase risk past the initial bankroll until it doubles.</span></li>
+    <li><input type="checkbox" data-key="trade-6" aria-labelledby="trade-6-text"><span id="trade-6-text">After 3 consecutive profitable months, increase capital gradually.</span></li>
+    <li><input type="checkbox" data-key="trade-7" aria-labelledby="trade-7-text"><span id="trade-7-text">Write a <strong>private</strong> trading log — what worked, what broke, what you learned.</span></li>
   </ul>
   <div class="callout rose">
     <div class="callout-title">Risk warning</div>
@@ -239,42 +239,42 @@ em{color:var(--gold);font-style:normal}
 
   <h3 style="color:var(--gold)">TSP & Optimisation (Computer Science)</h3>
   <ul class="task-list" id="out-tsp">
-    <li><input type="checkbox" data-key="out-tsp-1"><span><strong>arXiv.org</strong> — Pre‑print of the TSP arena paper (cs.AI or math.OC).</span></li>
-    <li><input type="checkbox" data-key="out-tsp-2"><span><strong>ResearchGate</strong> — Upload the paper and link to GitHub.</span></li>
-    <li><input type="checkbox" data-key="out-tsp-3"><span><strong>Hacker News</strong> — "Show HN" post with link to the live Sudoku demo + TSP results.</span></li>
-    <li><input type="checkbox" data-key="out-tsp-4"><span><strong>Reddit:</strong> r/compsci, r/MachineLearning, r/optimization — post the paper and ask for feedback.</span></li>
-    <li><input type="checkbox" data-key="out-tsp-5"><span><strong>TSPLIB community</strong> — Contact Gerhard Reinelt (Uni Heidelberg) and share your qa194 exact-optimal results.</span></li>
-    <li><input type="checkbox" data-key="out-tsp-6"><span><strong>INFORMS / SIAM conferences</strong> — Submit an abstract to the optimisation track.</span></li>
+    <li><input type="checkbox" data-key="out-tsp-1" aria-labelledby="out-tsp-1-text"><span id="out-tsp-1-text"><strong>arXiv.org</strong> — Pre‑print of the TSP arena paper (cs.AI or math.OC).</span></li>
+    <li><input type="checkbox" data-key="out-tsp-2" aria-labelledby="out-tsp-2-text"><span id="out-tsp-2-text"><strong>ResearchGate</strong> — Upload the paper and link to GitHub.</span></li>
+    <li><input type="checkbox" data-key="out-tsp-3" aria-labelledby="out-tsp-3-text"><span id="out-tsp-3-text"><strong>Hacker News</strong> — "Show HN" post with link to the live Sudoku demo + TSP results.</span></li>
+    <li><input type="checkbox" data-key="out-tsp-4" aria-labelledby="out-tsp-4-text"><span id="out-tsp-4-text"><strong>Reddit:</strong> r/compsci, r/MachineLearning, r/optimization — post the paper and ask for feedback.</span></li>
+    <li><input type="checkbox" data-key="out-tsp-5" aria-labelledby="out-tsp-5-text"><span id="out-tsp-5-text"><strong>TSPLIB community</strong> — Contact Gerhard Reinelt (Uni Heidelberg) and share your qa194 exact-optimal results.</span></li>
+    <li><input type="checkbox" data-key="out-tsp-6" aria-labelledby="out-tsp-6-text"><span id="out-tsp-6-text"><strong>INFORMS / SIAM conferences</strong> — Submit an abstract to the optimisation track.</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">Biology & Genomics</h3>
   <ul class="task-list" id="out-dna">
-    <li><input type="checkbox" data-key="out-dna-1"><span><strong>bioRxiv.org</strong> — Pre‑print of the DNA paper (bioinformatics section).</span></li>
-    <li><input type="checkbox" data-key="out-dna-2"><span><strong>NCBI / GenBank</strong> — Researchers there will be sceptical but curious. Send the paper to the bioinformatics mailing list.</span></li>
-    <li><input type="checkbox" data-key="out-dna-3"><span><strong>Reddit:</strong> r/bioinformatics, r/genetics — post the main findings (Z=74) and ask for replication.</span></li>
-    <li><input type="checkbox" data-key="out-dna-4"><span><strong>Contact synthetic biology labs</strong> — The Synthia result is your hook: "Synthetic DNA and natural DNA share Rule 200."</span></li>
+    <li><input type="checkbox" data-key="out-dna-1" aria-labelledby="out-dna-1-text"><span id="out-dna-1-text"><strong>bioRxiv.org</strong> — Pre‑print of the DNA paper (bioinformatics section).</span></li>
+    <li><input type="checkbox" data-key="out-dna-2" aria-labelledby="out-dna-2-text"><span id="out-dna-2-text"><strong>NCBI / GenBank</strong> — Researchers there will be sceptical but curious. Send the paper to the bioinformatics mailing list.</span></li>
+    <li><input type="checkbox" data-key="out-dna-3" aria-labelledby="out-dna-3-text"><span id="out-dna-3-text"><strong>Reddit:</strong> r/bioinformatics, r/genetics — post the main findings (Z=74) and ask for replication.</span></li>
+    <li><input type="checkbox" data-key="out-dna-4" aria-labelledby="out-dna-4-text"><span id="out-dna-4-text"><strong>Contact synthetic biology labs</strong> — The Synthia result is your hook: "Synthetic DNA and natural DNA share Rule 200."</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">Consciousness & Philosophy of Mind</h3>
   <ul class="task-list" id="out-cons">
-    <li><input type="checkbox" data-key="out-cons-1"><span><strong>PhilPapers / PhilSci-Archive</strong> — Pre‑print of the CCH/CFH paper.</span></li>
-    <li><input type="checkbox" data-key="out-cons-2"><span><strong>The Science of Consciousness conference</strong> (Tucson) — Submit an abstract.</span></li>
-    <li><input type="checkbox" data-key="out-cons-3"><span><strong>LessWrong / AI Alignment Forum</strong> — Post about the Digital Claustrum as an AGI safety architecture.</span></li>
-    <li><input type="checkbox" data-key="out-cons-4"><span><strong>Reddit:</strong> r/philosophy, r/consciousness — post the CFH paper with the empirical evidence.</span></li>
+    <li><input type="checkbox" data-key="out-cons-1" aria-labelledby="out-cons-1-text"><span id="out-cons-1-text"><strong>PhilPapers / PhilSci-Archive</strong> — Pre‑print of the CCH/CFH paper.</span></li>
+    <li><input type="checkbox" data-key="out-cons-2" aria-labelledby="out-cons-2-text"><span id="out-cons-2-text"><strong>The Science of Consciousness conference</strong> (Tucson) — Submit an abstract.</span></li>
+    <li><input type="checkbox" data-key="out-cons-3" aria-labelledby="out-cons-3-text"><span id="out-cons-3-text"><strong>LessWrong / AI Alignment Forum</strong> — Post about the Digital Claustrum as an AGI safety architecture.</span></li>
+    <li><input type="checkbox" data-key="out-cons-4" aria-labelledby="out-cons-4-text"><span id="out-cons-4-text"><strong>Reddit:</strong> r/philosophy, r/consciousness — post the CFH paper with the empirical evidence.</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">AI & LLM Community</h3>
   <ul class="task-list" id="out-ai">
-    <li><input type="checkbox" data-key="out-ai-1"><span><strong>Hacker News</strong> — "Three AI models review a human's research" — this story is unique and will generate discussion.</span></li>
-    <li><input type="checkbox" data-key="out-ai-2"><span><strong>r/singularity, r/artificial</strong> — Post the AI‑review page and the AI8 family concept.</span></li>
-    <li><input type="checkbox" data-key="out-ai-3"><span><strong>Contact AI researchers</strong> — Andrej Karpathy, Yann LeCun, Geoffrey Hinton — send a short email with the Sudoku/TSP results. They read cold emails if the subject line is good.</span></li>
+    <li><input type="checkbox" data-key="out-ai-1" aria-labelledby="out-ai-1-text"><span id="out-ai-1-text"><strong>Hacker News</strong> — "Three AI models review a human's research" — this story is unique and will generate discussion.</span></li>
+    <li><input type="checkbox" data-key="out-ai-2" aria-labelledby="out-ai-2-text"><span id="out-ai-2-text"><strong>r/singularity, r/artificial</strong> — Post the AI‑review page and the AI8 family concept.</span></li>
+    <li><input type="checkbox" data-key="out-ai-3" aria-labelledby="out-ai-3-text"><span id="out-ai-3-text"><strong>Contact AI researchers</strong> — Andrej Karpathy, Yann LeCun, Geoffrey Hinton — send a short email with the Sudoku/TSP results. They read cold emails if the subject line is good.</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">Energy & Engineering</h3>
   <ul class="task-list" id="out-eng">
-    <li><input type="checkbox" data-key="out-eng-1"><span><strong>Reddit:</strong> r/energy, r/engineering — post the DGTE/HTH concepts with the parametric simulator results.</span></li>
-    <li><input type="checkbox" data-key="out-eng-2"><span><strong>Instructables / Hackaday</strong> — Build a small desktop HTH prototype and document it. A working physical device is worth 100 papers.</span></li>
-    <li><input type="checkbox" data-key="out-eng-3"><span><strong>Contact marine energy labs</strong> — The MGHB breakwater concept is genuinely novel. Send it to coastal engineering groups.</span></li>
+    <li><input type="checkbox" data-key="out-eng-1" aria-labelledby="out-eng-1-text"><span id="out-eng-1-text"><strong>Reddit:</strong> r/energy, r/engineering — post the DGTE/HTH concepts with the parametric simulator results.</span></li>
+    <li><input type="checkbox" data-key="out-eng-2" aria-labelledby="out-eng-2-text"><span id="out-eng-2-text"><strong>Instructables / Hackaday</strong> — Build a small desktop HTH prototype and document it. A working physical device is worth 100 papers.</span></li>
+    <li><input type="checkbox" data-key="out-eng-3" aria-labelledby="out-eng-3-text"><span id="out-eng-3-text"><strong>Contact marine energy labs</strong> — The MGHB breakwater concept is genuinely novel. Send it to coastal engineering groups.</span></li>
   </ul>
   <textarea class="notes" id="notes-outreach" placeholder="Notes — outreach…"></textarea>
 </section>
@@ -286,26 +286,26 @@ em{color:var(--gold);font-style:normal}
 
   <h3 style="color:var(--gold)">TSP / Optimisation Researchers</h3>
   <ul class="task-list" id="con-tsp">
-    <li><input type="checkbox" data-key="con-tsp-1"><span><strong>Gerhard Reinelt</strong> (Uni Heidelberg, TSPLIB maintainer).<br><em>Email:</em> gerhard.reinelt@informatik.uni-heidelberg.de<br><em>Pitch:</em> "My MDL‑based solver found exact optimal on qa194. I'd like to submit my results for your TSPLIB verification. Code is open‑source."</span></li>
-    <li><input type="checkbox" data-key="con-tsp-2"><span><strong>William Cook</strong> (Concorde TSP solver co‑author).<br><em>Pitch:</em> "I built a GPU‑accelerated DCC‑based solver that scales where Concorde cannot. I'd be honoured if you'd review the architecture."</span></li>
+    <li><input type="checkbox" data-key="con-tsp-1" aria-labelledby="con-tsp-1-text"><span id="con-tsp-1-text"><strong>Gerhard Reinelt</strong> (Uni Heidelberg, TSPLIB maintainer).<br><em>Email:</em> gerhard.reinelt@informatik.uni-heidelberg.de<br><em>Pitch:</em> "My MDL‑based solver found exact optimal on qa194. I'd like to submit my results for your TSPLIB verification. Code is open‑source."</span></li>
+    <li><input type="checkbox" data-key="con-tsp-2" aria-labelledby="con-tsp-2-text"><span id="con-tsp-2-text"><strong>William Cook</strong> (Concorde TSP solver co‑author).<br><em>Pitch:</em> "I built a GPU‑accelerated DCC‑based solver that scales where Concorde cannot. I'd be honoured if you'd review the architecture."</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">Biology / DNA</h3>
   <ul class="task-list" id="con-dna">
-    <li><input type="checkbox" data-key="con-dna-1"><span><strong>Craig Venter Institute</strong> — Synthia team. They created artificial life with encoded watermarks. Tell them your scanner detected both the watermarks AND identical Rule 200 in natural human DNA.</span></li>
-    <li><input type="checkbox" data-key="con-dna-2"><span><strong>ENCODE Project</strong> — They study "junk DNA." Your scanner says it is mathematically structured. This is a direct empirical challenge.</span></li>
+    <li><input type="checkbox" data-key="con-dna-1" aria-labelledby="con-dna-1-text"><span id="con-dna-1-text"><strong>Craig Venter Institute</strong> — Synthia team. They created artificial life with encoded watermarks. Tell them your scanner detected both the watermarks AND identical Rule 200 in natural human DNA.</span></li>
+    <li><input type="checkbox" data-key="con-dna-2" aria-labelledby="con-dna-2-text"><span id="con-dna-2-text"><strong>ENCODE Project</strong> — They study "junk DNA." Your scanner says it is mathematically structured. This is a direct empirical challenge.</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">AI / AGI Researchers</h3>
   <ul class="task-list" id="con-ai">
-    <li><input type="checkbox" data-key="con-ai-1"><span><strong>Andrej Karpathy</strong> — Reads cold emails. Subject: "MDL × DCC — a universal governance architecture that works across 8+ domains."</span></li>
-    <li><input type="checkbox" data-key="con-ai-2"><span><strong>Christof Koch</strong> (Allen Institute) — Leading consciousness researcher. Send him CCH + the claustrum control framework.</span></li>
+    <li><input type="checkbox" data-key="con-ai-1" aria-labelledby="con-ai-1-text"><span id="con-ai-1-text"><strong>Andrej Karpathy</strong> — Reads cold emails. Subject: "MDL × DCC — a universal governance architecture that works across 8+ domains."</span></li>
+    <li><input type="checkbox" data-key="con-ai-2" aria-labelledby="con-ai-2-text"><span id="con-ai-2-text"><strong>Christof Koch</strong> (Allen Institute) — Leading consciousness researcher. Send him CCH + the claustrum control framework.</span></li>
   </ul>
 
   <h3 style="color:var(--gold)">Energy / Engineering</h3>
   <ul class="task-list" id="con-eng">
-    <li><input type="checkbox" data-key="con-eng-1"><span><strong>TU Delft / DTU Wind & Wave Energy</strong> — European leaders in marine energy. Send the MGHB concept.</span></li>
-    <li><input type="checkbox" data-key="con-eng-2"><span><strong>Ocean Energy Europe</strong> — Industry association. Submit the MGHB abstract to their next conference.</span></li>
+    <li><input type="checkbox" data-key="con-eng-1" aria-labelledby="con-eng-1-text"><span id="con-eng-1-text"><strong>TU Delft / DTU Wind & Wave Energy</strong> — European leaders in marine energy. Send the MGHB concept.</span></li>
+    <li><input type="checkbox" data-key="con-eng-2" aria-labelledby="con-eng-2-text"><span id="con-eng-2-text"><strong>Ocean Energy Europe</strong> — Industry association. Submit the MGHB abstract to their next conference.</span></li>
   </ul>
 
   <div class="callout cyan">
@@ -331,10 +331,10 @@ em{color:var(--gold);font-style:normal}
   <h2>Don't forget why you started</h2>
   <p>While you execute this plan, keep these three layers in mind. They are your compass.</p>
   <ul class="task-list" id="long-tasks">
-    <li><input type="checkbox" data-key="long-1"><span><strong>Empirical core:</strong> TSP, Sudoku, Chess, Trading, Compression — your fortress. Keep building it.</span></li>
-    <li><input type="checkbox" data-key="long-2"><span><strong>Prototypes:</strong> DNA pipeline, DGTE, HTH, MGHB — your bridges. One of them might open a whole new field.</span></li>
-    <li><input type="checkbox" data-key="long-3"><span><strong>Speculative core:</strong> CCH/CFH, AI8, AC ontology — your vision. It becomes credible because the empirical core is solid.</span></li>
-    <li><input type="checkbox" data-key="long-4"><span><strong>Build the HTH desktop prototype.</strong> A working, physical device that anyone can see and touch is the ultimate proof.</span></li>
+    <li><input type="checkbox" data-key="long-1" aria-labelledby="long-1-text"><span id="long-1-text"><strong>Empirical core:</strong> TSP, Sudoku, Chess, Trading, Compression — your fortress. Keep building it.</span></li>
+    <li><input type="checkbox" data-key="long-2" aria-labelledby="long-2-text"><span id="long-2-text"><strong>Prototypes:</strong> DNA pipeline, DGTE, HTH, MGHB — your bridges. One of them might open a whole new field.</span></li>
+    <li><input type="checkbox" data-key="long-3" aria-labelledby="long-3-text"><span id="long-3-text"><strong>Speculative core:</strong> CCH/CFH, AI8, AC ontology — your vision. It becomes credible because the empirical core is solid.</span></li>
+    <li><input type="checkbox" data-key="long-4" aria-labelledby="long-4-text"><span id="long-4-text"><strong>Build the HTH desktop prototype.</strong> A working, physical device that anyone can see and touch is the ultimate proof.</span></li>
   </ul>
   <div class="callout gold">
     <div class="callout-title">GPT's triage — always separate these three</div>

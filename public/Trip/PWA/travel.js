@@ -134,7 +134,7 @@
     document.documentElement.lang = language;
     document.title = `8Z Trip · ${t('title')}`;
     document.querySelectorAll('[data-t]').forEach(element => { element.textContent = t(element.dataset.t); });
-    document.querySelectorAll('[data-lang]').forEach(button => {
+    document.querySelectorAll('button[data-lang]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.lang === language));
     });
     if (!$('saveWarning').hidden) $('saveWarning').textContent = t('saveWarning');

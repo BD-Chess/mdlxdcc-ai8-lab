@@ -121,7 +121,7 @@ body::after{width:38vw;height:38vw;right:-10vw;bottom:-18vh;background:radial-gr
       <a class="channel-link" data-channel="app" href="new/?view=app">APP</a>
     </nav>
   <div class="header-right">
-    <select class="lang-sel" id="langSel" onchange="switchLang(this.value)">
+    <select class="lang-sel" id="langSel" aria-label="Language / Jezik" onchange="switchLang(this.value)">
       <option value="sl">Slovenščina</option>
       <option value="en" selected>English</option>
     </select>
@@ -151,7 +151,7 @@ body::after{width:38vw;height:38vw;right:-10vw;bottom:-18vh;background:radial-gr
     <div class="panel-title" id="packTitle">Prepared Puzzles</div>
     <div class="pack-row">
       <button class="btn" onclick="prevPackPuzzle()" id="btnPrevPack">◀ Prev</button>
-      <select class="pack-select" id="packSelect" onchange="loadPackSelection()">
+      <select class="pack-select" id="packSelect" aria-labelledby="packTitle" onchange="loadPackSelection()">
         <option value="">Autoload pack…</option>
       </select>
       <button class="btn" onclick="nextPackPuzzle()" id="btnNextPack">Next ▶</button>

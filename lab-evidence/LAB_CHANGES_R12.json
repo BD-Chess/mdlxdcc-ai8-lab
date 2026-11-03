@@ -1,0 +1,669 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R12",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Lab accessibility fix set (b): attribute-level fixes for axe critical violations (labels, select names, viewport zoom, ARIA attributes, icon button names).",
+ "files": [
+  {
+   "path": "public/8ZT/DCC_trader.html",
+   "source_sha256": "6f3854d57c025190c4983b30c4ae5942b4230123784bf3e39efee7056785c009",
+   "lab_sha256": "9b89fe615921724cebefa908ba30a2bf4a62243c25f1c9705ef05b841b73e4f8",
+   "bytes": 36646,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/8ZT/SM_trader.html",
+   "source_sha256": "2e0fabe751c9fb3683bb7ce0f52fa21da323834f8388beefe2504d982b4d1def",
+   "lab_sha256": "93f251c0a76fae983a0570bc2bcac28413ddd2d5268c61bf8ce582ec13a87e67",
+   "bytes": 66129,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/8ZT/ZZ_trader.html",
+   "source_sha256": "dbc30f9544ceb1b66ce916bc1d4881221f1bcbca316bcfeaabc98c93468c3f67",
+   "lab_sha256": "9b7047d0a2b95398fec8eb029ce06b1bfe81c6bc7a82e96d0da79c58b32f76de",
+   "bytes": 86184,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/BD_Hedge_Separation_PiX_Strategy_Explainer_REFERENCE.html",
+   "source_sha256": "c8f467a2db471eabe7af624e9c6e0d6c6a96c8be0a1e91d14d26b60aba54e9df",
+   "lab_sha256": "8b6ab47e69fdc4bd983de67f4eff6339933200ea3548fa89f48bf6a2b153f62d",
+   "bytes": 46813,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/BD_Sudoku_Phase0.html",
+   "source_sha256": "6ff91a244c307348c81e0341b721b61d0fa36541f6615417134b9de3e83b6de7",
+   "lab_sha256": "aec0271205d834b3b67a375e41d240c36f1ad34b185eb144b7ab054bd53065cf",
+   "bytes": 26819,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/DCC_trader.html",
+   "source_sha256": "6f3854d57c025190c4983b30c4ae5942b4230123784bf3e39efee7056785c009",
+   "lab_sha256": "9b89fe615921724cebefa908ba30a2bf4a62243c25f1c9705ef05b841b73e4f8",
+   "bytes": 36646,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/F4M_rDCC_v3_Tournament.html",
+   "source_sha256": "9980e75d328a1c5689b89902acd040921c0d366813ad1e4d095b092f09ff7b56",
+   "lab_sha256": "d6876bd85aaa2437d5520644057b52c11958727d2b5e2a1945dc41fc56e6868c",
+   "bytes": 57756,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/F4M_rDCC_v3_Tournament1.html",
+   "source_sha256": "9980e75d328a1c5689b89902acd040921c0d366813ad1e4d095b092f09ff7b56",
+   "lab_sha256": "d6876bd85aaa2437d5520644057b52c11958727d2b5e2a1945dc41fc56e6868c",
+   "bytes": 57756,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/How_LLMs_Actually_Work.html",
+   "source_sha256": "6ade088a4854be3bd54186604beb0a20dac1f6ed9dc1823730c106a86d19fbbb",
+   "lab_sha256": "41f2ddc29388f5be37ba2631502b29af81cbc5590fc09525eb69241d4986ff62",
+   "bytes": 126994,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/How_LLMs_Actually_Work_v1_2_workflow_evidence.html",
+   "source_sha256": "383606e960f47a585a673519df143434daf91e9cbd7675fa2ec0129e6915d02b",
+   "lab_sha256": "0f951d75f005c7f5ff12c2b4cbeb33a4faafcea7202a964ddc442d8a2df97eca",
+   "bytes": 108640,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/How_LLMs_Actually_Work_v1_3_2_NAS_evidence.html",
+   "source_sha256": "3517b1a877a359f0ce68877576944815bcd1c523b93d6428a99ef4344969700e",
+   "lab_sha256": "27b859fca45306ee6d81289a95da0c78628ef9d3a188203a206c5e8fd0d9b174",
+   "bytes": 113353,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/Kayak.html",
+   "source_sha256": "cf4e6d5b2ad10eef0bdc468dc12d3566447bb7ff563c179500350b5f76a1398f",
+   "lab_sha256": "8f1545b7b75d52ae8cfb08d2c10fceac9263804b931aef534451f47666bbb39b",
+   "bytes": 152722,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/Promo.html",
+   "source_sha256": "2cb4746b8d3ba3509c1f5d011363a447b1e4d831f3e9cda7cc7ffb0225104f67",
+   "lab_sha256": "97bbf1a9ab18adaafd474b09312a504de4d8b832dac1759a2d5ae8facaebc445",
+   "bytes": 26118,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/SM_trader.html",
+   "source_sha256": "5507f24ed97f1944d4c5160738eae191ac3e0851d042aa46601b29cff2d4e0d2",
+   "lab_sha256": "2cd45df626349c21a5154466c1f44e317ee9c8a7b7aee4fc30b2a79cf492facf",
+   "bytes": 66127,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/ZZ_trader.html",
+   "source_sha256": "7da7f81413c342d55b1e50d4db320df867ef79f69eb403a223ed1b9e6c5dc25f",
+   "lab_sha256": "6256f9d6b82d40ba6535dc27e343a3b79050ae6ae7eeb8083ffacffce7f576c4",
+   "bytes": 86182,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/op.html",
+   "source_sha256": "d8b62790c2444cdaeca6a744682ec9aa412e524579f1a88bfd5c66c3e98b0fc1",
+   "lab_sha256": "3ee76b3a79a8f3f8f3f4b1116d820365606ba05a02755f9562b3759c45f7e3d1",
+   "bytes": 27167,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/BD/wifi.html",
+   "source_sha256": "75b12c29d76fb227c6773064d487abcec2a8ae28284313bc919bdb99f4fbdba1",
+   "lab_sha256": "666666fb154a28a3294cf2eb3ba06deb8a115cac651d0df1fbea229feaf9db09",
+   "bytes": 74563,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/8z_CW.html",
+   "source_sha256": "87408679614fdea07a36659fd958abd6b4ec7f13734354f582711d27e449c5ea",
+   "lab_sha256": "ba044bd34530cbef7bb5b33332876f906702e78030877af0664b87e0077f0f27",
+   "bytes": 48692,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/8z_CW_v1.html",
+   "source_sha256": "818fcaa38319c6062b67171ef473a5d30f3feab29126a37a812a116bd5dfe472",
+   "lab_sha256": "534c737e915754366da86595897da6bfff1675c1f7a65a2af10b4978849ef0cd",
+   "bytes": 38602,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/8z_CW_v2.html",
+   "source_sha256": "b7395bcc366037478d22ba645ace9f008730d36de2982d8b33b392602374c12f",
+   "lab_sha256": "cfa9a6e1c7e23ec71350dc71ff9236caf9c5458aa56a26096242e80d5abda28c",
+   "bytes": 41484,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/8z_CW_v3.html",
+   "source_sha256": "ddfb4f0ef23e3f9f28ec31478eb0165680f9c82f10cc8aa8200a63d9776a4fab",
+   "lab_sha256": "969a45ecb3729b1b75e5a70bd376329452c2fa8b876d4e9c087425d2c0a431eb",
+   "bytes": 38791,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/8z_CW_viewer.html",
+   "source_sha256": "5626c6634584d2ec22ebb0ae97db50ea8c45d2c022c40292d2651d65e8d414a6",
+   "lab_sha256": "e9e3a1c9547620bdc9b9ac59093ebb00da61e6451aefdb442708762e2ae82aea",
+   "bytes": 20981,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/index.html",
+   "source_sha256": "f5f503a3e0632dc20c8b9d5e3d368834ebb2d65dbdcd82170041968fd6834970",
+   "lab_sha256": "c9a59fc383f14b98081780f80a6195ca835ecc38e49bd2b9331ebb5d88050759",
+   "bytes": 46730,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/CW/old/index.html",
+   "source_sha256": "2dbd9cab8b94f4fae06f768e1f2c0a265123076bc25fe35a7ab02b9f73ac4d76",
+   "lab_sha256": "8cc7a3761f52f7973489efa7711a4bfc57503731c6be25b7a7008f9523707302",
+   "bytes": 39607,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4M_rDCC_Tournament.html",
+   "source_sha256": "ebdd73d0e617c118a034df8d6efc48687408541f19d8c1102f193f0de36fe9cf",
+   "lab_sha256": "90647dc5e49574414cca19162c82983736cbae7237ae426ca3bf9d3334ff93aa",
+   "bytes": 47811,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4M_rDCC_v2_Tournament.html",
+   "source_sha256": "8e08d9e5ee7baeb8dae54888bb4da5e335c9d28e3795702ce3ba7333546f81cf",
+   "lab_sha256": "27c72bbe9dbfc4d76b96bddf801ba3c76bbc5bd458a94e31f2a7704e833c505a",
+   "bytes": 51897,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4M_rDCC_v3_Tournament.html",
+   "source_sha256": "9980e75d328a1c5689b89902acd040921c0d366813ad1e4d095b092f09ff7b56",
+   "lab_sha256": "d6876bd85aaa2437d5520644057b52c11958727d2b5e2a1945dc41fc56e6868c",
+   "bytes": 57756,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4M_rDCC_v3_Tournament1.html",
+   "source_sha256": "9980e75d328a1c5689b89902acd040921c0d366813ad1e4d095b092f09ff7b56",
+   "lab_sha256": "d6876bd85aaa2437d5520644057b52c11958727d2b5e2a1945dc41fc56e6868c",
+   "bytes": 57756,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4M_rDCC_v4_Tournament.html",
+   "source_sha256": "b9f8e166bd49d5de73c53dc7bed4a7ac240b0e26b506e0c8c95a2336f4a34b90",
+   "lab_sha256": "40f29850c22484e92cf6235d2db83be29653870d1b1694f3d620c72e265810b5",
+   "bytes": 61381,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4Pro.html",
+   "source_sha256": "aa775cb068b0de8f54699cc27a843c8a4107ccc33e11d7638fb25c0397ae8f44",
+   "lab_sha256": "7e0a511110775cb5231b9e70487c5366fb3590c53f39dbed949bee03dac58b7d",
+   "bytes": 56881,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4_CLA.html",
+   "source_sha256": "bab6118db778431a7bb6bde31f1b719691ae3854c1d5f540b7540c58be82447e",
+   "lab_sha256": "a05ab79d7357ea5fe08077c4f0a0ec1c21a77eeb88c6735fd06b00a5540e240c",
+   "bytes": 52654,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4_DSE.html",
+   "source_sha256": "b9561203168d4058b8fa6976d72d4360af5c92822e9c1b1e534bc5aee5d67fe7",
+   "lab_sha256": "4d174d5538aed33bb7851265e77cf38ad4a8d990bec04a43e11342fdf3c98057",
+   "bytes": 70099,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4_GEM.html",
+   "source_sha256": "e40372b3e501395d3dd4a08466de87c69b27f901ebdfed74cae20dd20c427eb5",
+   "lab_sha256": "9f972eeba9e73a7ed506418e0f47ecf75c06b0e7de6f1445ff369372b1f8b4e1",
+   "bytes": 57245,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4_GPT.html",
+   "source_sha256": "682967c8a08e634f7093f8e04f9df8ee12b84fd24527873724b7e3515ff9f47c",
+   "lab_sha256": "e3cc7fb188c088fcdfad4c3565d64e6280597daf4635e81ffa83e782ecd06c2c",
+   "bytes": 60928,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/F4_QWE.html",
+   "source_sha256": "fb341cd70fae8b99a73065aa8e7986d8cbc2ca2e48954c5ac34079a296bfa6c7",
+   "lab_sha256": "ba20922628321c60286d1c4503e73f31f2155d5ee04bab512a35d8e8ae61f885",
+   "bytes": 53565,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/index2.html",
+   "source_sha256": "55cc43ad0af7bfdb048c9fb1bd2bc6762d346fc509537f2b6f1b520b92904a01",
+   "lab_sha256": "4b3952473022ee1007d8f8cd9def5d0d9a5638dbb0f9b3367abb833661b1f3fb",
+   "bytes": 57735,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/index3.html",
+   "source_sha256": "a1ef9cb8edf6283e7b906dab1b043a495f413591677738878538faf898e1338b",
+   "lab_sha256": "5870b80457656f3a85521c388ee53845adfc33581e8df7176a5d52a843db985b",
+   "bytes": 58018,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/F4M/index4.html",
+   "source_sha256": "706d57b4ab1e7b2fea7d7271f3ce9e0bbf28ed4e0ea3aabe9dd5a005dcdbfd51",
+   "lab_sha256": "0ff49c018f8e1e1574dc82f5df26fa9e1fe26fb30a07ea3bc2f4ab2fe91245f3",
+   "bytes": 58333,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/8zS1.html",
+   "source_sha256": "b1a5777a6c176b6eb897db99b3cc4587ed1c909c6f39c871e9af86fa1992c1bc",
+   "lab_sha256": "254b8922973b36017d6956eeac28a8dc6a559b0d2cfb062ff62f09d45b6be97f",
+   "bytes": 67506,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/8zS2.html",
+   "source_sha256": "8d69dcf6489aac5274508e2dbf25fdc99635c97e0e0830e795eed5285a3a6b00",
+   "lab_sha256": "289c0ca7e18fad037153c26599344e316c9a975720ec297ec8560e6120864152",
+   "bytes": 118346,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/8zSudoku.html",
+   "source_sha256": "aa56444ccad8b66846c3ee7afd42e9176c0a0f47045cd72b29eec77a53b669ae",
+   "lab_sha256": "c87cb64ddd1c42784041ce510782314679074daa9050fa94ef0ac9a01deafc69",
+   "bytes": 67507,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/index1.html",
+   "source_sha256": "00fcdbc330331fd9b878457c18143920fbe1e8718f86dc9ef84e91372350c4e2",
+   "lab_sha256": "b4962b7cda1fb0895ddbb8c5ae38f7ca2ca83f1d61125ed9c4251f2a9bfabca7",
+   "bytes": 48212,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/index2.html",
+   "source_sha256": "8d69dcf6489aac5274508e2dbf25fdc99635c97e0e0830e795eed5285a3a6b00",
+   "lab_sha256": "289c0ca7e18fad037153c26599344e316c9a975720ec297ec8560e6120864152",
+   "bytes": 118346,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/S/legacy.html",
+   "source_sha256": "657cd9de42b6a6226babab55f038d0356e7190b532aebbe0097c907ffabeb72b",
+   "lab_sha256": "d54bf36a7204b7c101eab4318e56e0338e9ccb5851d1d9aa997debf7e7ec9230",
+   "bytes": 119623,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/Someone/Someone.html",
+   "source_sha256": "36eeedacf225c3eddc780b5defcf30d5515c942f36075dd73ee375eadaed3d49",
+   "lab_sha256": "ef102ef9f7b95618ccd2bf37d7c4134151dd75b525c674d4584f2afbee1df7aa",
+   "bytes": 52242,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/Someone/index.html",
+   "source_sha256": "36eeedacf225c3eddc780b5defcf30d5515c942f36075dd73ee375eadaed3d49",
+   "lab_sha256": "ef102ef9f7b95618ccd2bf37d7c4134151dd75b525c674d4584f2afbee1df7aa",
+   "bytes": 52242,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/Trip/PWA/travel.js",
+   "source_sha256": "9d6452730a9f1dd91fea4e1a69089c2ed2199facac74f707cc45208b69dd0a2e",
+   "lab_sha256": "233d9e3732d81b615aa7e2656fa7ac3a4e9933f4b4f50f2cd970dd2f0bf1a0e9",
+   "bytes": 11380,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/Trip/new/travel.js",
+   "source_sha256": "100387bb98531aa8942b53bdf14d343037301971574fbe85da0f59ea95bbbfac",
+   "lab_sha256": "4f56c8d6d1a8a04efb86a5cae13eaeeeb92a99b3608bb90252243e675d1df29a",
+   "bytes": 11412,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/Trip/travel.js",
+   "source_sha256": "100387bb98531aa8942b53bdf14d343037301971574fbe85da0f59ea95bbbfac",
+   "lab_sha256": "4f56c8d6d1a8a04efb86a5cae13eaeeeb92a99b3608bb90252243e675d1df29a",
+   "bytes": 11412,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/AIM3_MentalArena_Lab.html",
+   "source_sha256": "1f88c971115398054ed441ed742f319ea2b3b7be5bcc26cfedfa754e52108d62",
+   "lab_sha256": "0ccb25b42c4e5f835855eb4e9582e40dc982502e2b3a9d95ce533d4a5025c6ef",
+   "bytes": 43239,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/How_LLMs_Actually_Work.html",
+   "source_sha256": "86bbaf3cc38f0878db9fc8f4be69762faee9b2d49dce8eaa6375777abb355786",
+   "lab_sha256": "12b8980b530e4095f100f36b878aca756c7dac61cbe9374abad6825bfe95e3eb",
+   "bytes": 123588,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/PiX.html",
+   "source_sha256": "6b4d90eb45d2eec578f2e2519541ad3e208695db6cc288fbc23c9e3cb41d9bd2",
+   "lab_sha256": "d7367ee272b4d911a5f2d3bdfa59e39bb637ebd57f60352bdc28130f7c1571b1",
+   "bytes": 90765,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/Top100P.html",
+   "source_sha256": "137ac85aae442bf30dce24abce876a8fdf9dc06f4837f9ef1f848b890b0cc718",
+   "lab_sha256": "392f5dc5ff09bfb6652ca337013dae1533d4c5a22ef673394eec69f6e53645e1",
+   "bytes": 213185,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/Top100T.html",
+   "source_sha256": "784abab0ec4b7bbcfd317de0d44e4c1dfe7f43e744505fd10910d312b36c158e",
+   "lab_sha256": "55c481046714cf2c28546f2f412fd3ee1c5b089192c1c1d6cbeb84e327ca7b43",
+   "bytes": 167072,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  },
+  {
+   "path": "public/crp/projects-are-evidence.html",
+   "source_sha256": "5c988b1b6a284a5296a69636491f9a4ec4eeacc1316b370c52cc404a5867a456",
+   "lab_sha256": "c55248feec38650a4b57d5e269845bbc0487909660dbe432fbb014467682d23f",
+   "bytes": 50287,
+   "lab_prs": [
+    "cloud/lab-a11y-critical-20261103"
+   ],
+   "lab_commits": [
+    "787064a"
+   ]
+  }
+ ]
+}

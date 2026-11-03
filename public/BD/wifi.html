@@ -260,10 +260,10 @@ html[data-theme="light"] .reader-controls{
   <div class="settings" id="settings">
     <div class="mini-label" style="color:var(--gold);margin-bottom:10px"><span class="lang-inline sl">Moji podatki za ukaze</span><span class="lang-inline hr">Moji podaci za naredbe</span></div>
     <div class="settings-grid">
-      <div class="field"><label><span class="lang-inline sl">SSID za šotor</span><span class="lang-inline hr">SSID za šator</span></label><input data-setting="tentSsid" value="TentWiFi-BD" autocomplete="off"></div>
-      <div class="field"><label><span class="lang-inline sl">Geslo za šotor</span><span class="lang-inline hr">Lozinka za šator</span></label><input data-setting="tentPass" value="ZAMENJAJ-MOCNO-GESLO" autocomplete="off"></div>
-      <div class="field"><label><span class="lang-inline sl">Alfa vmesnik</span><span class="lang-inline hr">Alfa sučelje</span></label><input data-setting="wifiIf" value="wlan0" autocomplete="off"></div>
-      <div class="field"><label><span class="lang-inline sl">Kanal 2.4 GHz</span><span class="lang-inline hr">Kanal 2.4 GHz</span></label><select data-setting="channel"><option>1</option><option selected>6</option><option>11</option></select></div>
+      <div class="field"><label for="setting-tentSsid"><span class="lang-inline sl">SSID za šotor</span><span class="lang-inline hr">SSID za šator</span></label><input id="setting-tentSsid" data-setting="tentSsid" value="TentWiFi-BD" autocomplete="off"></div>
+      <div class="field"><label for="setting-tentPass"><span class="lang-inline sl">Geslo za šotor</span><span class="lang-inline hr">Lozinka za šator</span></label><input id="setting-tentPass" data-setting="tentPass" value="ZAMENJAJ-MOCNO-GESLO" autocomplete="off"></div>
+      <div class="field"><label for="setting-wifiIf"><span class="lang-inline sl">Alfa vmesnik</span><span class="lang-inline hr">Alfa sučelje</span></label><input id="setting-wifiIf" data-setting="wifiIf" value="wlan0" autocomplete="off"></div>
+      <div class="field"><label for="setting-channel"><span class="lang-inline sl">Kanal 2.4 GHz</span><span class="lang-inline hr">Kanal 2.4 GHz</span></label><select id="setting-channel" data-setting="channel"><option>1</option><option selected>6</option><option>11</option></select></div>
     </div>
     <p class="hint"><span class="lang-inline sl">Če Alfa ni <span class="inline-code">wlan0</span>, najprej poglej z <span class="inline-code">nmcli dev status</span> in popravi polje “Alfa vmesnik”. Ukazi spodaj se samodejno osvežijo.</span><span class="lang-inline hr">Ako Alfa nije <span class="inline-code">wlan0</span>, prvo provjeri s <span class="inline-code">nmcli dev status</span> i promijeni polje “Alfa sučelje”. Naredbe ispod se automatski osvježe.</span></p>
   </div>

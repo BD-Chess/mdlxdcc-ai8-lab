@@ -284,7 +284,7 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
       </div>
       <div class="case-shell">
         <div class="case-head"><div><h3>The valuation exchange · July 2026</h3><p>BD asked for the value of the projects. The models answered closer to “what might a buyer or investor pay today?”—then discounted uncertainty, founder dependence, and open distribution.</p></div><span class="case-badge">Anti-lock case 001</span></div>
-        <div class="model-table" role="table" aria-label="Comparison of initial LLM valuation errors">
+        <div class="model-table" role="group" aria-label="Comparison of initial LLM valuation errors">
           <div class="cell head">Question</div><div class="cell head">Claude Fable 5 · Max</div><div class="cell head">ChatGPT 5.6 Pro</div>
           <div class="cell rowhead">Initial realistic frame</div><div class="cell">Approximately <strong>$1M maximum</strong>, effectively an unfinished-portfolio / sale frame.</div><div class="cell">Approximately <strong>€7M</strong>, explicitly a venture/IP-platform frame.</div>
           <div class="cell rowhead">What was missed</div><div class="cell">The method as a non-rival generator of future applications; public-benefit value; acceleration; unknown downstream domains.</div><div class="cell">The same category error. It corrected sooner, but its first repair still treated the existing project family as most of the horizon.</div>
@@ -307,7 +307,7 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
       </div>
       <div class="case-shell">
         <div class="case-head"><div><h3>Pogovor o vrednosti · julij 2026</h3><p>BD je vprašal po vrednosti projektov. Modela sta odgovorila bližje vprašanju »koliko bi danes plačal kupec ali investitor?« in nato odštela negotovost, odvisnost od ustanovitelja ter odprto delitev.</p></div><span class="case-badge">Anti-lock primer 001</span></div>
-        <div class="model-table" role="table" aria-label="Primerjava začetnih napak vrednotenja">
+        <div class="model-table" role="group" aria-label="Primerjava začetnih napak vrednotenja">
           <div class="cell head">Vprašanje</div><div class="cell head">Claude Fable 5 · Max</div><div class="cell head">ChatGPT 5.6 Pro</div>
           <div class="cell rowhead">Začetni realistični okvir</div><div class="cell">Približno <strong>$1M največ</strong>—dejansko okvir prodaje nedokončanega portfelja.</div><div class="cell">Približno <strong>€7M</strong>—izrecno okvir venture/IP platforme.</div>
           <div class="cell rowhead">Kaj je manjkalo</div><div class="cell">Metoda kot ne-rivalski generator prihodnjih uporab, javna korist, časovni pospešek in še neznane domene.</div><div class="cell">Ista kategorijska napaka. Popravek je prišel prej, vendar je prva korekcija še vedno obravnavala obstoječe projekte kot večino horizonta.</div>
@@ -334,11 +334,11 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
         <p class="section-intro">A first test can sit outside an existing model. No new pretraining run is required. The governor watches the reasoning process, selects among candidate sensors and control laws, and decides when to branch, reflect, switch, stop, or retrieve another perspective.</p>
       </div>
       <div class="test-table" role="table" aria-label="Proposed matched-budget experiment">
-        <div class="test-row head"><div>Condition</div><div>System</div><div>Purpose</div></div>
-        <div class="test-row"><div><b>B0</b></div><div>Base model or agent</div><div>Measure ordinary task quality, repetition, correction uptake, tokens, latency, and stopping.</div></div>
-        <div class="test-row"><div><b>B1</b></div><div>Base + standard reflection / critique</div><div>Control for the benefit of simply asking the model to reconsider.</div></div>
-        <div class="test-row"><div><b>D1</b></div><div>Fixed DCC governor</div><div>Test whether a declared sensor and control law improve search under the same budget.</div></div>
-        <div class="test-row"><div><b>SS</b></div><div>Self-selecting MDL×DCC</div><div>Let sensor, law, representation, and intervention policy compete. Charge all added complexity and compute to the score.</div></div>
+        <div class="test-row head" role="row"><div role="columnheader">Condition</div><div role="columnheader">System</div><div role="columnheader">Purpose</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>B0</b></div><div role="cell">Base model or agent</div><div role="cell">Measure ordinary task quality, repetition, correction uptake, tokens, latency, and stopping.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>B1</b></div><div role="cell">Base + standard reflection / critique</div><div role="cell">Control for the benefit of simply asking the model to reconsider.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>D1</b></div><div role="cell">Fixed DCC governor</div><div role="cell">Test whether a declared sensor and control law improve search under the same budget.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>SS</b></div><div role="cell">Self-selecting MDL×DCC</div><div role="cell">Let sensor, law, representation, and intervention policy compete. Charge all added complexity and compute to the score.</div></div>
       </div>
       <div class="metric-list" aria-label="Suggested metrics"><span class="metric">task score / token</span><span class="metric">time to integrate correction</span><span class="metric">semantic repetition</span><span class="metric">contradiction repair</span><span class="metric">new bridge rate</span><span class="metric">false scatter rate</span><span class="metric">stopping calibration</span><span class="metric">held-out transfer</span></div>
       <div class="grid two" style="margin-top:18px">
@@ -352,11 +352,11 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
         <p class="section-intro">Prvi test lahko stoji zunaj obstoječega modela. Nov pretraining ni potreben. Governor opazuje proces sklepanja, izbira med senzorji in kontrolnimi zakoni ter odloča, kdaj razvejati, reflektirati, preklopiti, ustaviti ali priklicati drugo perspektivo.</p>
       </div>
       <div class="test-table" role="table" aria-label="Predlagan matched-budget eksperiment">
-        <div class="test-row head"><div>Pogoj</div><div>Sistem</div><div>Namen</div></div>
-        <div class="test-row"><div><b>B0</b></div><div>Osnovni model ali agent</div><div>Izmeri običajno kakovost, ponavljanje, sprejem popravkov, tokene, latenco in ustavljanje.</div></div>
-        <div class="test-row"><div><b>B1</b></div><div>Osnova + standardna refleksija / kritika</div><div>Kontrola za korist preprostega poziva, naj model premisli še enkrat.</div></div>
-        <div class="test-row"><div><b>D1</b></div><div>Fiksni DCC governor</div><div>Preveri, ali deklariran senzor in kontrolni zakon izboljšata iskanje pri istem proračunu.</div></div>
-        <div class="test-row"><div><b>SS</b></div><div>Samoselektivni MDL×DCC</div><div>Senzor, zakon, reprezentacija in politika intervencij tekmujejo. Vsa dodatna kompleksnost in compute se zaračunata rezultatu.</div></div>
+        <div class="test-row head" role="row"><div role="columnheader">Pogoj</div><div role="columnheader">Sistem</div><div role="columnheader">Namen</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>B0</b></div><div role="cell">Osnovni model ali agent</div><div role="cell">Izmeri običajno kakovost, ponavljanje, sprejem popravkov, tokene, latenco in ustavljanje.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>B1</b></div><div role="cell">Osnova + standardna refleksija / kritika</div><div role="cell">Kontrola za korist preprostega poziva, naj model premisli še enkrat.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>D1</b></div><div role="cell">Fiksni DCC governor</div><div role="cell">Preveri, ali deklariran senzor in kontrolni zakon izboljšata iskanje pri istem proračunu.</div></div>
+        <div class="test-row" role="row"><div role="cell"><b>SS</b></div><div role="cell">Samoselektivni MDL×DCC</div><div role="cell">Senzor, zakon, reprezentacija in politika intervencij tekmujejo. Vsa dodatna kompleksnost in compute se zaračunata rezultatu.</div></div>
       </div>
       <div class="metric-list" aria-label="Predlagane metrike"><span class="metric">rezultat / token</span><span class="metric">čas do sprejema popravka</span><span class="metric">semantično ponavljanje</span><span class="metric">popravilo protislovij</span><span class="metric">novi mostovi</span><span class="metric">lažni scatter</span><span class="metric">kalibracija ustavljanja</span><span class="metric">held-out prenos</span></div>
       <div class="grid two" style="margin-top:18px">

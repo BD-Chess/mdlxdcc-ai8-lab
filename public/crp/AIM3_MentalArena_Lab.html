@@ -41,13 +41,13 @@
     <div class="stephead"><div class="stepnum">1</div><div><h2>Task seed</h2><p>Define the problem once. MentalArena expands it into the working prompt.</p></div></div>
     <div class="two">
       <div>
-        <label>Title</label><input id="title" value="MentalArena council test">
-        <label>BD seed / problem</label><textarea id="seed">Build the next MentalArena step: split public architecture page from private local lab, then add a council engine that automates BD's manual multi-LLM RHP/RHPr/RHPm workflow.</textarea>
+        <label for="title">Title</label><input id="title" value="MentalArena council test">
+        <label for="seed">BD seed / problem</label><textarea id="seed">Build the next MentalArena step: split public architecture page from private local lab, then add a council engine that automates BD's manual multi-LLM RHP/RHPr/RHPm workflow.</textarea>
       </div>
       <div>
         <div class="two">
-          <div><label>Protocol profile</label><select id="profile"><option>MentalArena-Council</option><option>RHPm</option><option>RHPr</option><option>RHP</option><option>Plain</option></select></div>
-          <div><label>Output type</label><select id="outputType"><option>analysis_report</option><option>builder_prompt</option><option>paper_upgrade</option><option>code_spec</option><option>html_update</option><option>experiment_plan</option><option>decision_memo</option></select></div>
+          <div><label for="profile">Protocol profile</label><select id="profile"><option>MentalArena-Council</option><option>RHPm</option><option>RHPr</option><option>RHP</option><option>Plain</option></select></div>
+          <div><label for="outputType">Output type</label><select id="outputType"><option>analysis_report</option><option>builder_prompt</option><option>paper_upgrade</option><option>code_spec</option><option>html_update</option><option>experiment_plan</option><option>decision_memo</option></select></div>
         </div>
         <div class="buttonbar"><button class="green" onclick="startRun()">Start council run</button><button onclick="listRuns()">List runs</button><button onclick="checkHealth()">Check health</button></div>
         <p class="small">Start here. After a run starts, the expanded prompt appears in Step 2.</p>
@@ -61,20 +61,20 @@
       <div id="top5Status"><span class="pill warn">loading provider status…</span></div>
       <p id="councilStatus" class="statusline">Provider status not checked yet.</p>
       <div class="two">
-        <div><label>Council target group</label><select id="targetGroup"><option value="top5" selected>Default Top 5: ChatGPT + Claude + DeepSeek + Gemini + Grok</option><option value="top10">All loaded Top 10 providers</option><option value="single">Selected single provider only</option></select></div>
-        <div><label>Active stage (auto)</label><input id="activeStageDisplay" class="readonly" value="Round 1" readonly><select id="batchStage" class="hiddenCompat"><option value="round1">round1</option><option value="round2">round2</option><option value="judge">judge</option><option value="final_synthesis">final_synthesis</option><option value="direct">direct</option></select><p class="small">You no longer need to change Batch stage manually. Buttons below switch it automatically.</p></div>
+        <div><label for="targetGroup">Council target group</label><select id="targetGroup"><option value="top5" selected>Default Top 5: ChatGPT + Claude + DeepSeek + Gemini + Grok</option><option value="top10">All loaded Top 10 providers</option><option value="single">Selected single provider only</option></select></div>
+        <div><label for="activeStageDisplay">Active stage (auto)</label><input id="activeStageDisplay" class="readonly" value="Round 1" readonly><select id="batchStage" class="hiddenCompat"><option value="round1">round1</option><option value="round2">round2</option><option value="judge">judge</option><option value="final_synthesis">final_synthesis</option><option value="direct">direct</option></select><p class="small">You no longer need to change Batch stage manually. Buttons below switch it automatically.</p></div>
       </div>
       <div class="stagebanner"><div>Current send target: <strong id="sendStageLabel">Round 1</strong></div><span class="pill warn" id="stageGuardPill">stage guard on</span></div>
       <label>Round prompt / editable prompt</label><textarea id="promptBox" style="min-height:240px" placeholder="Expanded prompt appears after Start council run."></textarea>
       <div class="buttonbar"><button id="sendTop5Btn" class="green" onclick="sendTop5Council()">Send Round 1 prompt to default Top 5 Council</button><button id="sendSelectedBtn" class="gold" onclick="sendSelectedCouncil()">Send Round 1 prompt to selected target group</button><button onclick="copyPrompt()">Copy prompt</button></div>
-      <details class="advancedStage"><summary>Advanced: manual stage override</summary><div><p class="small">Only use this for recovery/debug. Main workflow changes stage automatically.</p><label>Manual stage</label><select id="manualStageOverride" onchange="setStage(this.value, true)"><option value="round1">round1</option><option value="round2">round2</option><option value="judge">judge</option><option value="final_synthesis">final_synthesis</option><option value="direct">direct</option></select></div></details>
+      <details class="advancedStage"><summary>Advanced: manual stage override</summary><div><p class="small">Only use this for recovery/debug. Main workflow changes stage automatically.</p><label for="manualStageOverride">Manual stage</label><select id="manualStageOverride" onchange="setStage(this.value, true)"><option value="round1">round1</option><option value="round2">round2</option><option value="judge">judge</option><option value="final_synthesis">final_synthesis</option><option value="direct">direct</option></select></div></details>
       <pre id="batchOutput">Batch results will appear here after a council send.</pre>
     </div>
     <details>
       <summary>Single-provider debug / smoke test</summary>
       <div class="debugbox">
         <p class="small">Use this only to test one API key/model at a time. It is not the main MentalArena workflow.</p>
-        <div class="three"><div><label>Provider</label><select id="provider" onchange="syncProviderDefaults()"></select></div><div><label>Model</label><input id="model"></div><div><label>Endpoint</label><input id="endpoint"></div></div>
+        <div class="three"><div><label for="provider">Provider</label><select id="provider" onchange="syncProviderDefaults()"></select></div><div><label for="model">Model</label><input id="model"></div><div><label for="endpoint">Endpoint</label><input id="endpoint"></div></div>
         <label class="small"><input type="checkbox" id="allowModelOverride"> Allow manual model/endpoint override for this debug call. Leave off unless you intentionally want a custom model.</label>
         <label>Direct prompt</label><textarea id="directPrompt" placeholder="Optional direct prompt to selected provider."></textarea>
         <div class="buttonbar"><button class="green" onclick="directCall()">Send direct prompt</button><button onclick="fillSmokePrompt()">Fill route-smoke prompt</button><button onclick="listGeminiModels()">Gemini: list available models</button></div>
@@ -102,7 +102,7 @@
 
   <section class="card">
     <h2>Manual import</h2>
-    <div class="two"><div><label>Provider/name</label><input id="manualProvider" value="GPT-manual"></div><div><label>Paste answer</label><textarea id="manualAnswer" placeholder="Paste GPT/Claude/Gemini answer here if API not connected yet."></textarea></div></div>
+    <div class="two"><div><label for="manualProvider">Provider/name</label><input id="manualProvider" value="GPT-manual"></div><div><label>Paste answer</label><textarea id="manualAnswer" placeholder="Paste GPT/Claude/Gemini answer here if API not connected yet."></textarea></div></div>
     <button onclick="manualImport()">Save manual answer</button>
   </section>
 
