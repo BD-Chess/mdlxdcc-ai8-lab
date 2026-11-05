@@ -1,0 +1,21 @@
+{
+ "schema": "ai8.lab-changes.v1",
+ "record_id": "LAB_CHANGES_R9",
+ "recorded_on": "2026-11-03",
+ "source_manifest": "SOURCE_MANIFEST_R2.json",
+ "meaning": "Intentional lab change to an exported test file (browser-smoke-r36): tests/browser-p0-smoke.mjs rewritten to the game-guide r3.6 tool protocol (R3.3 assess_challenge arguments, R3.4 ask_understanding idea, R3.5 held reveal, R3.6 reveal on the player's choice) with a portable browser path. No application code changed.",
+ "files": [
+  {
+   "path": "tests/browser-p0-smoke.mjs",
+   "source_sha256": "46d55a0500ed18c391ba8ad813bc040dd0564fa143f38fbe9f72c0ab876a9be4",
+   "lab_sha256": "a184f7d2ecb2639aef62415d525448a4d3fdb817ef36e56f01de654613091fba",
+   "bytes": 20262,
+   "lab_prs": [
+    "#23"
+   ],
+   "lab_commits": [
+    "0bebf57"
+   ]
+  }
+ ]
+}
