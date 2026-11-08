@@ -1,4 +1,4 @@
-# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-03 ~23:30 UTC
+# CLOUD backlog (lane L1, Claude cloud), updated 2026-11-08 ~18:30 UTC
 
 This is a living list for BD, Zarja, Zora and the next writer (GPT/Lan or Claude). Rules: one branch, one PR and one short report per improvement; draft PRs only; **merge = BD**, because a merge into `lab/bootstrap-r1` republishes the lab. Value: ★★★ high · ★★ medium · ★ low.
 
@@ -38,7 +38,7 @@ Zora review fixes (2026-11-03): #16 rebased on #8 (contains the OmniCPQ cleanup)
 
 ## In progress (lane L1, own worktrees)
 
-- (c) Mobile overflow of wide tables (36 pages). It will stack on #25 (#16 → #26 → #25 → (c)).
+- (c) Mobile overflow, **paused unfinished (WIP, no PR)**. Branch `cloud/lab-mobile-tables-20261103` at `4e77d9a`, on #25. The first background agent died without writing any files, so the work was redone directly. On 9 pages with wide tables or code (Reasoning, Reasoning_Examples, Demon, Arena ARC/RH/AMR, BDAA, xFLAC sprint, 8ZRP_arena), page overflow at 360/768 px dropped to 0 (e.g. ARC 1727 → 0, Reasoning 782 → 0). Each page gets one `<style>` and the shared `public/assets/ai8-xscroll.js`. That measurement used the previous script version, which added axe `scrollable-region-focusable` nodes on 4 pages and changed 1280 px rendering on 4. The last script edit is meant to fix both but is **not verified**. Still open: a verification run, `LAB_CHANGES_R13` (until it exists, `verify_lab` fails on this branch), the report and the draft PR. Skipped: PiX (callout width), and AC-WFP and AC-WFP_v4 (MathJax, which cannot be measured offline). Paused because the bonus window ended (5.11) and Zora asked to stay idle; finishing it needs BD's agreement.
 
 ## Decisions waiting for BD
 
